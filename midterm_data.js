@@ -1,13 +1,3 @@
-// ============================================================================
-// 六年級上學期英語期中考特訓資料庫 (midterm_data.js)
-// 包含 4 套教材、11 個單元 + 岱崙 3C 考卷真題特訓：
-// 1. 句子級 (Sentence-by-Sentence) 點擊朗讀庫 (含地道繁體中文翻譯)
-// 2. 零打字點詞抓錯 (Mistake Buster) — 100% 精準單詞索引定位
-// 3. 紙筆手寫對答案 / 語音作答測驗題庫 (聽寫、填空、選擇、改寫)
-// 4. 核心單字與容器計量片語庫 (附音標、音節、例句與拼寫防呆提醒)
-// 更新日期: 2026-10-20
-// ============================================================================
-
 window.MIDTERM_DATABASE = [
   {
     "id": "ODG3_U13",
@@ -482,785 +472,347 @@ window.MIDTERM_DATABASE = [
     ],
     "quizzes": [
       {
-        "id": "ODG3_U13_LIST_1",
-        "type": "spelling_listen",
-        "category_tag": "listening",
-        "question": "請聽電腦發音，在紙上拼寫出這個核心單字或片語：",
-        "hint": "詞性與中文：n. 發明；發明物",
-        "audio_word": "invention",
-        "phonetic": "/ɪnˈvɛnʃən/",
-        "syllables": "in-ven-tion",
-        "answer": "invention",
-        "explanation": {
-          "concept": "【Unit 13: Making History】核心字彙：invention /ɪnˈvɛnʃən/ (n. 發明；發明物)",
-          "formula": "課文例句：On February 14, 1876, Gray's invention was ready.",
-          "trap": "拼寫與用法關鍵：字尾為 -tion，動詞原形為 invent。"
-        }
-      },
-      {
-        "id": "ODG3_U13_LIST_2",
-        "type": "spelling_listen",
-        "category_tag": "listening",
-        "question": "請聽電腦發音，在紙上拼寫出這個核心單字或片語：",
-        "hint": "詞性與中文：n. 科學家",
-        "audio_word": "scientist",
-        "phonetic": "/ˈsaɪəntɪst/",
-        "syllables": "sci-en-tist",
-        "answer": "scientist",
-        "explanation": {
-          "concept": "【Unit 13: Making History】核心字彙：scientist /ˈsaɪəntɪst/ (n. 科學家)",
-          "formula": "課文例句：Other scientists were trying to invent telephones, too.",
-          "trap": "拼寫與用法關鍵：注意開頭 sci- 的 c 不發音，切勿漏寫 c。"
-        }
-      },
-      {
-        "id": "ODG3_U13_LIST_3",
-        "type": "spelling_listen",
-        "category_tag": "listening",
-        "question": "請聽電腦發音，在紙上拼寫出這個核心單字或片語：",
-        "hint": "詞性與中文：n. 專利；專利權",
-        "audio_word": "patent",
-        "phonetic": "/ˈpætənt/",
-        "syllables": "pat-ent",
-        "answer": "patent",
-        "explanation": {
-          "concept": "【Unit 13: Making History】核心字彙：patent /ˈpætənt/ (n. 專利；專利權)",
-          "formula": "課文例句：Swan got a patent for his invention.",
-          "trap": "拼寫與用法關鍵：搭配 get a patent for... (取得...的專利)。"
-        }
-      },
-      {
-        "id": "ODG3_U13_LIST_4",
-        "type": "spelling_listen",
-        "category_tag": "listening",
-        "question": "請聽電腦發音，在紙上拼寫出這個核心單字或片語：",
-        "hint": "詞性與中文：n. 許可證；執照",
-        "audio_word": "licence",
-        "phonetic": "/ˈlaɪsəns/",
-        "syllables": "li-cence",
-        "answer": "licence",
-        "explanation": {
-          "concept": "【Unit 13: Making History】核心字彙：licence /ˈlaɪsəns/ (n. 許可證；執照)",
-          "formula": "課文例句：Gray hurried to get a licence for his invention.",
-          "trap": "拼寫與用法關鍵：英式拼法為 licence，美式常拼作 license。"
-        }
-      },
-      {
-        "id": "ODG3_U13_LIST_5",
-        "type": "spelling_listen",
-        "category_tag": "listening",
-        "question": "請聽電腦發音，在紙上拼寫出這個核心單字或片語：",
-        "hint": "詞性與中文：v./n. 做實驗；實驗",
-        "audio_word": "experiment",
-        "phonetic": "/ɪkˈspɛrɪmənt/",
-        "syllables": "ex-per-i-ment",
-        "answer": "experiment",
-        "explanation": {
-          "concept": "【Unit 13: Making History】核心字彙：experiment /ɪkˈspɛrɪmənt/ (v./n. 做實驗；實驗)",
-          "formula": "課文例句：Other scientists were experimenting with light bulbs, too.",
-          "trap": "拼寫與用法關鍵：搭配介系詞 experiment with (用...做實驗)。"
-        }
-      },
-      {
-        "id": "ODG3_U13_LIST_6",
-        "type": "spelling_listen",
-        "category_tag": "listening",
-        "question": "請聽電腦發音，在紙上拼寫出這個核心單字或片語：",
-        "hint": "詞性與中文：n. 電燈泡",
-        "audio_word": "light bulb",
-        "phonetic": "/ˈlaɪt ˌbʌlb/",
-        "syllables": "light bulb",
-        "answer": "light bulb",
-        "explanation": {
-          "concept": "【Unit 13: Making History】核心字彙：light bulb /ˈlaɪt ˌbʌlb/ (n. 電燈泡)",
-          "formula": "課文例句：Thomas Edison was trying to invent a light bulb.",
-          "trap": "拼寫與用法關鍵：light 中的 gh 不發音；bulb 尾音為 b。"
-        }
-      },
-      {
-        "id": "ODG3_U13_LIST_7",
-        "type": "spelling_listen",
-        "category_tag": "listening",
-        "question": "請聽電腦發音，在紙上拼寫出這個核心單字或片語：",
-        "hint": "詞性與中文：adj. 著名的；出名的",
-        "audio_word": "famous",
-        "phonetic": "/ˈfeɪməs/",
-        "syllables": "fa-mous",
-        "answer": "famous",
-        "explanation": {
-          "concept": "【Unit 13: Making History】核心字彙：famous /ˈfeɪməs/ (adj. 著名的；出名的)",
-          "formula": "課文例句：Gray did not become rich and famous.",
-          "trap": "拼寫與用法關鍵：字尾為 -ous，勿拼成 famus。"
-        }
-      },
-      {
-        "id": "ODG3_U13_LIST_8",
-        "type": "spelling_listen",
-        "category_tag": "listening",
-        "question": "請聽電腦發音，在紙上拼寫出這個核心單字或片語：",
-        "hint": "詞性與中文：n. 歷史",
-        "audio_word": "history",
-        "phonetic": "/ˈhɪstəri/",
-        "syllables": "his-to-ry",
-        "answer": "history",
-        "explanation": {
-          "concept": "【Unit 13: Making History】核心字彙：history /ˈhɪstəri/ (n. 歷史)",
-          "formula": "課文例句：They are important people in the history of the telephone.",
-          "trap": "拼寫與用法關鍵：in the history of... (在...的歷史上)。"
-        }
-      },
-      {
-        "id": "ODG3_U13_LIST_9",
-        "type": "spelling_listen",
-        "category_tag": "listening",
-        "question": "請聽電腦發音，在紙上拼寫出這個核心單字或片語：",
-        "hint": "詞性與中文：adv. 也不（用於否定句尾）",
-        "audio_word": "either",
-        "phonetic": "/ˈiːðər/",
-        "syllables": "ei-ther",
-        "answer": "either",
-        "explanation": {
-          "concept": "【Unit 13: Making History】核心字彙：either /ˈiːðər/ (adv. 也不（用於否定句尾）)",
-          "formula": "課文例句：Meucci didn't become rich and famous, either.",
-          "trap": "拼寫與用法關鍵：用於否定句尾，前面通常加逗號。"
-        }
-      },
-      {
-        "id": "ODG3_U13_LIST_10",
-        "type": "spelling_listen",
-        "category_tag": "listening",
-        "question": "請聽電腦發音，在紙上拼寫出這個核心單字或片語：",
-        "hint": "詞性與中文：adv. 也不（用於否定倒裝句首）",
-        "audio_word": "neither",
-        "phonetic": "/ˈniːðər/",
-        "syllables": "nei-ther",
-        "answer": "neither",
-        "explanation": {
-          "concept": "【Unit 13: Making History】核心字彙：neither /ˈniːðər/ (adv. 也不（用於否定倒裝句首）)",
-          "formula": "課文例句：Meucci didn't become rich. Neither did Reis.",
-          "trap": "拼寫與用法關鍵：n + either，放在句首時後面必須倒裝（Neither + 助動詞/be + 主詞）。"
-        }
-      },
-      {
-        "id": "ODG3_U13_FILL_11",
-        "type": "fill",
-        "category_tag": "fill",
-        "question": "Bell was a scientist. Meucci was a scientist ( too / **so )",
-        "answer": "too",
-        "hint": "二選一填空：請判斷應填入 too 還是 **so",
-        "explanation": {
-          "concept": "Unit 13 附和句核心文法（Too / Either / So / Neither 助動詞與 Be 動詞對齊）",
-          "formula": "正確完整句：Bell was a scientist. Meucci was a scientist too. （正解：too，淘汰干擾項：**so）",
-          "trap": "必考陷阱：① 前句是 be 動詞 (was/were)，附和句必用 was/were，禁用 did；② 否定句尾必用 either，禁用 too；③ Neither 本身已否定，後面助動詞必用肯定形 (Neither did Reis)！"
-        }
-      },
-      {
-        "id": "ODG3_U13_FILL_12",
-        "type": "fill",
-        "category_tag": "fill",
-        "question": "Bell invented a telephone. ** ( So / Too** )",
-        "answer": "So",
-        "hint": "二選一填空：請判斷應填入 So 還是 Too**",
-        "explanation": {
-          "concept": "Unit 13 附和句核心文法（Too / Either / So / Neither 助動詞與 Be 動詞對齊）",
-          "formula": "正確完整句：Bell invented a telephone. ** So. （正解：So，淘汰干擾項：Too**）",
-          "trap": "必考陷阱：① 前句是 be 動詞 (was/were)，附和句必用 was/were，禁用 did；② 否定句尾必用 either，禁用 too；③ Neither 本身已否定，後面助動詞必用肯定形 (Neither did Reis)！"
-        }
-      },
-      {
-        "id": "ODG3_U13_FILL_13",
-        "type": "fill",
-        "category_tag": "fill",
-        "question": "Meucci didn't go to the Patent Office. ( Neither / **Either )",
-        "answer": "Neither",
-        "hint": "二選一填空：請判斷應填入 Neither 還是 **Either",
-        "explanation": {
-          "concept": "Unit 13 附和句核心文法（Too / Either / So / Neither 助動詞與 Be 動詞對齊）",
-          "formula": "正確完整句：Meucci didn't go to the Patent Office. Neither. （正解：Neither，淘汰干擾項：**Either）",
-          "trap": "必考陷阱：① 前句是 be 動詞 (was/were)，附和句必用 was/were，禁用 did；② 否定句尾必用 either，禁用 too；③ Neither 本身已否定，後面助動詞必用肯定形 (Neither did Reis)！"
-        }
-      },
-      {
-        "id": "ODG3_U13_FILL_14",
-        "type": "fill",
-        "category_tag": "fill",
-        "question": "Gray didn't become rich from his invention. Reis didn't become rich, ** ( either / neither** )",
-        "answer": "either",
-        "hint": "二選一填空：請判斷應填入 either 還是 neither**",
-        "explanation": {
-          "concept": "Unit 13 附和句核心文法（Too / Either / So / Neither 助動詞與 Be 動詞對齊）",
-          "formula": "正確完整句：Gray didn't become rich from his invention. Reis didn't become rich, ** either. （正解：either，淘汰干擾項：neither**）",
-          "trap": "必考陷阱：① 前句是 be 動詞 (was/were)，附和句必用 was/were，禁用 did；② 否定句尾必用 either，禁用 too；③ Neither 本身已否定，後面助動詞必用肯定形 (Neither did Reis)！"
-        }
-      },
-      {
-        "id": "ODG3_U13_NB_15",
-        "type": "fill",
-        "category_tag": "fill",
-        "question": "His father helped deaf people, ______.",
-        "answer": "too",
-        "hint": "請填入正確的連接副詞或語法詞彙",
-        "explanation": {
-          "concept": "Unit 13 附和句核心文法（Too / Either / So / Neither 助動詞與 Be 動詞對齊）",
-          "formula": "空格應填入『too』。",
-          "trap": "必考陷阱：① 前句是 be 動詞 (was/were)，附和句必用 was/were，禁用 did；② 否定句尾必用 either，禁用 too；③ Neither 本身已否定，後面助動詞必用肯定形 (Neither did Reis)！"
-        }
-      },
-      {
-        "id": "ODG3_U13_NB_16",
-        "type": "fill",
-        "category_tag": "fill",
-        "question": "______ was his wife.",
-        "answer": "So",
-        "hint": "請填入正確的連接副詞或語法詞彙",
-        "explanation": {
-          "concept": "Unit 13 附和句核心文法（Too / Either / So / Neither 助動詞與 Be 動詞對齊）",
-          "formula": "空格應填入『So』。",
-          "trap": "必考陷阱：① 前句是 be 動詞 (was/were)，附和句必用 was/were，禁用 did；② 否定句尾必用 either，禁用 too；③ Neither 本身已否定，後面助動詞必用肯定形 (Neither did Reis)！"
-        }
-      },
-      {
-        "id": "ODG3_U13_NB_17",
-        "type": "fill",
-        "category_tag": "fill",
-        "question": "His father was a teacher, ______.",
-        "answer": "too",
-        "hint": "請填入正確的連接副詞或語法詞彙",
-        "explanation": {
-          "concept": "Unit 13 附和句核心文法（Too / Either / So / Neither 助動詞與 Be 動詞對齊）",
-          "formula": "空格應填入『too』。",
-          "trap": "必考陷阱：① 前句是 be 動詞 (was/were)，附和句必用 was/were，禁用 did；② 否定句尾必用 either，禁用 too；③ Neither 本身已否定，後面助動詞必用肯定形 (Neither did Reis)！"
-        }
-      },
-      {
-        "id": "ODG3_U13_NB_18",
-        "type": "fill",
-        "category_tag": "fill",
-        "question": "______ did his parents.",
-        "answer": "So",
-        "hint": "請填入正確的連接副詞或語法詞彙",
-        "explanation": {
-          "concept": "Unit 13 附和句核心文法（Too / Either / So / Neither 助動詞與 Be 動詞對齊）",
-          "formula": "空格應填入『So』。",
-          "trap": "必考陷阱：① 前句是 be 動詞 (was/were)，附和句必用 was/were，禁用 did；② 否定句尾必用 either，禁用 too；③ Neither 本身已否定，後面助動詞必用肯定形 (Neither did Reis)！"
-        }
-      },
-      {
-        "id": "ODG3_U13_NB_19",
-        "type": "fill",
-        "category_tag": "fill",
-        "question": "They didn't have computers, ______.",
-        "answer": "either",
-        "hint": "請填入正確的連接副詞或語法詞彙",
-        "explanation": {
-          "concept": "Unit 13 附和句核心文法（Too / Either / So / Neither 助動詞與 Be 動詞對齊）",
-          "formula": "空格應填入『either』。",
-          "trap": "必考陷阱：① 前句是 be 動詞 (was/were)，附和句必用 was/were，禁用 did；② 否定句尾必用 either，禁用 too；③ Neither 本身已否定，後面助動詞必用肯定形 (Neither did Reis)！"
-        }
-      },
-      {
-        "id": "ODG3_U13_NB_20",
-        "type": "fill",
-        "category_tag": "fill",
-        "question": "______ did offices.",
-        "answer": "Neither",
-        "hint": "請填入正確的連接副詞或語法詞彙",
-        "explanation": {
-          "concept": "Unit 13 附和句核心文法（Too / Either / So / Neither 助動詞與 Be 動詞對齊）",
-          "formula": "空格應填入『Neither』。",
-          "trap": "必考陷阱：① 前句是 be 動詞 (was/were)，附和句必用 was/were，禁用 did；② 否定句尾必用 either，禁用 too；③ Neither 本身已否定，後面助動詞必用肯定形 (Neither did Reis)！"
-        }
-      },
-      {
-        "id": "ODG3_U13_MC_21",
+        "id": "ODG3_U13_Q01",
         "type": "choice",
-        "category_tag": "choice",
-        "question": "Antonio Meucci was an inventor. Johann Philipp Reis was an inventor, _______.",
+        "difficulty": "★☆☆☆☆",
+        "question": "Bell was a scientist. Meucci was a scientist ( ______ ).",
         "options": [
+          "too",
           "so",
           "either",
-          "too"
+          "neither"
         ],
         "answer": "too",
-        "hint": "三選一選擇題：請看選項在紙上寫下正確答案或代號",
         "explanation": {
-          "concept": "Unit 13 附和句核心文法（Too / Either / So / Neither 助動詞與 Be 動詞對齊）",
-          "formula": "題幹語境對應正解為『too』（選項：so / either / too）。",
-          "trap": "必考陷阱：① 前句是 be 動詞 (was/were)，附和句必用 was/were，禁用 did；② 否定句尾必用 either，禁用 too；③ Neither 本身已否定，後面助動詞必用肯定形 (Neither did Reis)！"
+          "point": "肯定句句尾附和，逗號後必用 too。",
+          "trap": "so 須放句首引導倒裝，不能放在句尾。",
+          "note": "課本 p.67 核心句：Bell was a scientist. Meucci was a scientist, too."
         }
       },
       {
-        "id": "ODG3_U13_MC_22",
+        "id": "ODG3_U13_Q02",
         "type": "choice",
-        "category_tag": "choice",
-        "question": "Alexander Graham Bell didn't invent the television. He didn't invent the computer, _______.",
-        "options": [
-          "neither",
-          "either",
-          "so"
-        ],
-        "answer": "either",
-        "hint": "三選一選擇題：請看選項在紙上寫下正確答案或代號",
-        "explanation": {
-          "concept": "Unit 13 附和句核心文法（Too / Either / So / Neither 助動詞與 Be 動詞對齊）",
-          "formula": "題幹語境對應正解為『either』（選項：neither / either / so）。",
-          "trap": "必考陷阱：① 前句是 be 動詞 (was/were)，附和句必用 was/were，禁用 did；② 否定句尾必用 either，禁用 too；③ Neither 本身已否定，後面助動詞必用肯定形 (Neither did Reis)！"
-        }
-      },
-      {
-        "id": "ODG3_U13_MC_23",
-        "type": "choice",
-        "category_tag": "choice",
-        "question": "Elisha Gray did lots of experiments with telephone machines. _______ did Alexander Graham Bell.",
+        "difficulty": "★☆☆☆☆",
+        "question": "Bell invented a telephone. ( ______ ) did Gray.",
         "options": [
           "So",
+          "Too",
           "Either",
           "Neither"
         ],
         "answer": "So",
-        "hint": "三選一選擇題：請看選項在紙上寫下正確答案或代號",
         "explanation": {
-          "concept": "Unit 13 附和句核心文法（Too / Either / So / Neither 助動詞與 Be 動詞對齊）",
-          "formula": "題幹語境對應正解為『So』（選項：So / Either / Neither）。",
-          "trap": "必考陷阱：① 前句是 be 動詞 (was/were)，附和句必用 was/were，禁用 did；② 否定句尾必用 either，禁用 too；③ Neither 本身已否定，後面助動詞必用肯定形 (Neither did Reis)！"
+          "point": "肯定句句首倒裝附和：So + 助動詞/be動詞 + 主詞。",
+          "trap": "前面 invented 是肯定句，不能用 Neither；Too 不能放句首。",
+          "note": "課本 p.67 原文：Bell invented a telephone. So did Gray."
         }
       },
       {
-        "id": "ODG3_U13_MC_24",
+        "id": "ODG3_U13_Q03",
         "type": "choice",
-        "category_tag": "choice",
-        "question": "Johann Philipp Reis lived in the 19th century. Antonio Meucci lived in the 19th century, _______.",
+        "difficulty": "★★☆☆☆",
+        "question": "Meucci didn't go to the Patent Office. ( ______ ) did Reis.",
         "options": [
-          "so",
-          "neither",
-          "too"
-        ],
-        "answer": "too",
-        "hint": "三選一選擇題：請看選項在紙上寫下正確答案或代號",
-        "explanation": {
-          "concept": "Unit 13 附和句核心文法（Too / Either / So / Neither 助動詞與 Be 動詞對齊）",
-          "formula": "題幹語境對應正解為『too』（選項：so / neither / too）。",
-          "trap": "必考陷阱：① 前句是 be 動詞 (was/were)，附和句必用 was/were，禁用 did；② 否定句尾必用 either，禁用 too；③ Neither 本身已否定，後面助動詞必用肯定形 (Neither did Reis)！"
-        }
-      },
-      {
-        "id": "ODG3_U13_MC_25",
-        "type": "choice",
-        "category_tag": "choice",
-        "question": "Antonio Meucci wasn't from the U.K. _______ was Johann Philipp Reis.",
-        "options": [
-          "Too",
           "Neither",
-          "So"
+          "Either",
+          "So",
+          "Too"
         ],
         "answer": "Neither",
-        "hint": "三選一選擇題：請看選項在紙上寫下正確答案或代號",
         "explanation": {
-          "concept": "Unit 13 附和句核心文法（Too / Either / So / Neither 助動詞與 Be 動詞對齊）",
-          "formula": "題幹語境對應正解為『Neither』（選項：Too / Neither / So）。",
-          "trap": "必考陷阱：① 前句是 be 動詞 (was/were)，附和句必用 was/were，禁用 did；② 否定句尾必用 either，禁用 too；③ Neither 本身已否定，後面助動詞必用肯定形 (Neither did Reis)！"
+          "point": "否定句句首倒裝附和：Neither + 助動詞/be動詞 + 主詞。",
+          "trap": "Neither 本身已含否定 (not)，助動詞 did 必須用肯定形，不可寫 Neither didn't。",
+          "note": "課本 p.67 原文：Neither did Reis."
         }
       },
       {
-        "id": "ODG3_U13_MC_26",
+        "id": "ODG3_U13_Q04",
         "type": "choice",
-        "category_tag": "choice",
-        "question": "Elisha Gray invented other machines. _______ did Antonio Meucci.",
+        "difficulty": "★★☆☆☆",
+        "question": "Gray didn't become rich from his invention. Reis didn't become rich, ( ______ ).",
+        "options": [
+          "either",
+          "neither",
+          "too",
+          "so"
+        ],
+        "answer": "either",
+        "explanation": {
+          "point": "否定句句尾附和，逗號後用 either。",
+          "trap": "句尾已經有 didn't，若再用 neither 就形成雙重否定錯誤。",
+          "note": "課本 p.67 原文：Reis didn't become rich, either."
+        }
+      },
+      {
+        "id": "ODG3_U13_Q05",
+        "type": "choice",
+        "difficulty": "★★☆☆☆",
+        "question": "Antonio Meucci was an inventor. Johann Philipp Reis was an inventor, ( ______ ).",
+        "options": [
+          "too",
+          "either",
+          "so",
+          "neither"
+        ],
+        "answer": "too",
+        "explanation": {
+          "point": "肯定句尾附和，用 too。",
+          "trap": "前句是肯定句 was an inventor，不能選否定詞 either。",
+          "note": "課本 p.68 B 大題第 1 題。"
+        }
+      },
+      {
+        "id": "ODG3_U13_Q06",
+        "type": "choice",
+        "difficulty": "★★☆☆☆",
+        "question": "Alexander Graham Bell didn't invent the television. He didn't invent the computer, ( ______ ).",
+        "options": [
+          "either",
+          "neither",
+          "too",
+          "so"
+        ],
+        "answer": "either",
+        "explanation": {
+          "point": "否定句尾附和，用 either。",
+          "trap": "注意前句 didn't invent 為否定式，肯定詞 too 不適用。",
+          "note": "課本 p.68 B 大題第 2 題。"
+        }
+      },
+      {
+        "id": "ODG3_U13_Q07",
+        "type": "choice",
+        "difficulty": "★★☆☆☆",
+        "question": "Elisha Gray did lots of experiments with telephone machines. ( ______ ) did Alexander Graham Bell.",
         "options": [
           "So",
           "Either",
+          "Neither",
           "Too"
         ],
         "answer": "So",
-        "hint": "三選一選擇題：請看選項在紙上寫下正確答案或代號",
         "explanation": {
-          "concept": "Unit 13 附和句核心文法（Too / Either / So / Neither 助動詞與 Be 動詞對齊）",
-          "formula": "題幹語境對應正解為『So』（選項：So / Either / Too）。",
-          "trap": "必考陷阱：① 前句是 be 動詞 (was/were)，附和句必用 was/were，禁用 did；② 否定句尾必用 either，禁用 too；③ Neither 本身已否定，後面助動詞必用肯定形 (Neither did Reis)！"
+          "point": "肯定句首倒裝：So did + 主詞。",
+          "trap": "句首大寫 So，表達『...也是』。",
+          "note": "課本 p.68 B 大題第 3 題。"
         }
       },
       {
-        "id": "ODG3_U13_BFILL_27",
-        "type": "fill",
-        "category_tag": "fill",
-        "question": "Bell was a scientist. Meucci was a scientist ______.",
-        "answer": "so / [too]",
-        "hint": "課文重點句填空：請在紙上寫出空格處的單字",
+        "id": "ODG3_U13_Q08",
+        "type": "choice",
+        "difficulty": "★★☆☆☆",
+        "question": "Johann Philipp Reis lived in the 19th century. Antonio Meucci lived in the 19th century, ( ______ ).",
+        "options": [
+          "too",
+          "neither",
+          "so",
+          "either"
+        ],
+        "answer": "too",
         "explanation": {
-          "concept": "Unit 13 附和句核心文法（Too / Either / So / Neither 助動詞與 Be 動詞對齊）",
-          "formula": "完整原句：Bell was a scientist. Meucci was a scientist so / [too].",
-          "trap": "必考陷阱：① 前句是 be 動詞 (was/were)，附和句必用 was/were，禁用 did；② 否定句尾必用 either，禁用 too；③ Neither 本身已否定，後面助動詞必用肯定形 (Neither did Reis)！"
+          "point": "肯定句尾附和，用 too。",
+          "trap": "lived 為肯定式過去式，句尾附和選 too。",
+          "note": "課本 p.68 B 大題第 4 題。"
         }
       },
       {
-        "id": "ODG3_U13_BFILL_28",
-        "type": "fill",
-        "category_tag": "fill",
-        "question": "Bell invented a telephone. ______ did Gray.",
-        "answer": "[So] / Too",
-        "hint": "課文重點句填空：請在紙上寫出空格處的單字",
-        "explanation": {
-          "concept": "Unit 13 附和句核心文法（Too / Either / So / Neither 助動詞與 Be 動詞對齊）",
-          "formula": "完整原句：Bell invented a telephone. [So] / Too did Gray.",
-          "trap": "必考陷阱：① 前句是 be 動詞 (was/were)，附和句必用 was/were，禁用 did；② 否定句尾必用 either，禁用 too；③ Neither 本身已否定，後面助動詞必用肯定形 (Neither did Reis)！"
-        }
-      },
-      {
-        "id": "ODG3_U13_BFILL_29",
-        "type": "fill",
-        "category_tag": "fill",
-        "question": "Meucci didn't go to the Patent Office. ______ did Reis.",
-        "answer": "Either / [Neither]",
-        "hint": "課文重點句填空：請在紙上寫出空格處的單字",
-        "explanation": {
-          "concept": "Unit 13 附和句核心文法（Too / Either / So / Neither 助動詞與 Be 動詞對齊）",
-          "formula": "完整原句：Meucci didn't go to the Patent Office. Either / [Neither] did Reis.",
-          "trap": "必考陷阱：① 前句是 be 動詞 (was/were)，附和句必用 was/were，禁用 did；② 否定句尾必用 either，禁用 too；③ Neither 本身已否定，後面助動詞必用肯定形 (Neither did Reis)！"
-        }
-      },
-      {
-        "id": "ODG3_U13_BFILL_30",
-        "type": "fill",
-        "category_tag": "fill",
-        "question": "Gray didn't become rich from his invention. Reis didn't become rich, ______.",
-        "answer": "[either] / neither",
-        "hint": "課文重點句填空：請在紙上寫出空格處的單字",
-        "explanation": {
-          "concept": "Unit 13 附和句核心文法（Too / Either / So / Neither 助動詞與 Be 動詞對齊）",
-          "formula": "完整原句：Gray didn't become rich from his invention. Reis didn't become rich, [either] / neither.",
-          "trap": "必考陷阱：① 前句是 be 動詞 (was/were)，附和句必用 was/were，禁用 did；② 否定句尾必用 either，禁用 too；③ Neither 本身已否定，後面助動詞必用肯定形 (Neither did Reis)！"
-        }
-      },
-      {
-        "id": "ODG3_U13_BFILL_31",
-        "type": "fill",
-        "category_tag": "fill",
-        "question": "Alexander Graham Bell was a teacher. ______",
+        "id": "ODG3_U13_Q09",
+        "type": "choice",
+        "difficulty": "★★★☆☆",
+        "question": "Bell was a teacher. His father was a teacher, too. ➔ 改寫為 So 開頭的倒裝句：",
+        "options": [
+          "So was his father.",
+          "So did his father.",
+          "So his father was.",
+          "So is his father."
+        ],
         "answer": "So was his father.",
-        "hint": "課文重點句填空：請在紙上寫出空格處的單字",
         "explanation": {
-          "concept": "Unit 13 附和句核心文法（Too / Either / So / Neither 助動詞與 Be 動詞對齊）",
-          "formula": "完整原句：Alexander Graham Bell was a teacher. So was his father.",
-          "trap": "必考陷阱：① 前句是 be 動詞 (was/were)，附和句必用 was/were，禁用 did；② 否定句尾必用 either，禁用 too；③ Neither 本身已否定，後面助動詞必用肯定形 (Neither did Reis)！"
+          "point": "前句動詞為 was (be動詞過去式)，倒裝句助動詞必須完全對應為 was，絕不能用 did。",
+          "trap": "小朋友最常失分誤選 So did his father！",
+          "note": "課本 p.69 F 大題核心改寫題。"
         }
       },
       {
-        "id": "ODG3_U13_BFILL_32",
-        "type": "fill",
-        "category_tag": "fill",
-        "question": "Houses didn't have telephones in the 1870s. ______",
-        "answer": "Offices didn't, either.",
-        "hint": "課文重點句填空：請在紙上寫出空格處的單字",
-        "explanation": {
-          "concept": "Unit 13 附和句核心文法（Too / Either / So / Neither 助動詞與 Be 動詞對齊）",
-          "formula": "完整原句：Houses didn't have telephones in the 1870s. Offices didn't, either.",
-          "trap": "必考陷阱：① 前句是 be 動詞 (was/were)，附和句必用 was/were，禁用 did；② 否定句尾必用 either，禁用 too；③ Neither 本身已否定，後面助動詞必用肯定形 (Neither did Reis)！"
-        }
-      },
-      {
-        "id": "ODG3_U13_BFILL_33",
-        "type": "fill",
-        "category_tag": "fill",
-        "question": "Alexander Graham Bell's wife was deaf. ______",
-        "answer": "His mother was, too.",
-        "hint": "課文重點句填空：請在紙上寫出空格處的單字",
-        "explanation": {
-          "concept": "Unit 13 附和句核心文法（Too / Either / So / Neither 助動詞與 Be 動詞對齊）",
-          "formula": "完整原句：Alexander Graham Bell's wife was deaf. His mother was, too.",
-          "trap": "必考陷阱：① 前句是 be 動詞 (was/were)，附和句必用 was/were，禁用 did；② 否定句尾必用 either，禁用 too；③ Neither 本身已否定，後面助動詞必用肯定形 (Neither did Reis)！"
-        }
-      },
-      {
-        "id": "ODG3_U13_BFILL_34",
-        "type": "fill",
-        "category_tag": "fill",
-        "question": "Alexander Graham Bell didn't move to Australia. ______",
-        "answer": "Neither did his parents.",
-        "hint": "課文重點句填空：請在紙上寫出空格處的單字",
-        "explanation": {
-          "concept": "Unit 13 附和句核心文法（Too / Either / So / Neither 助動詞與 Be 動詞對齊）",
-          "formula": "完整原句：Alexander Graham Bell didn't move to Australia. Neither did his parents.",
-          "trap": "必考陷阱：① 前句是 be 動詞 (was/were)，附和句必用 was/were，禁用 did；② 否定句尾必用 either，禁用 too；③ Neither 本身已否定，後面助動詞必用肯定形 (Neither did Reis)！"
-        }
-      },
-      {
-        "id": "ODG3_U13_BFILL_35",
-        "type": "fill",
-        "category_tag": "fill",
-        "question": "Alexander Graham Bell wasn't a doctor. ______",
-        "answer": "His father wasn't, either.",
-        "hint": "課文重點句填空：請在紙上寫出空格處的單字",
-        "explanation": {
-          "concept": "Unit 13 附和句核心文法（Too / Either / So / Neither 助動詞與 Be 動詞對齊）",
-          "formula": "完整原句：Alexander Graham Bell wasn't a doctor. His father wasn't, either.",
-          "trap": "必考陷阱：① 前句是 be 動詞 (was/were)，附和句必用 was/were，禁用 did；② 否定句尾必用 either，禁用 too；③ Neither 本身已否定，後面助動詞必用肯定形 (Neither did Reis)！"
-        }
-      },
-      {
-        "id": "ODG3_U13_BFILL_36",
-        "type": "fill",
-        "category_tag": "fill",
-        "question": "Alexander Graham Bell was interested in language. ______",
-        "answer": "So was his father.",
-        "hint": "課文重點句填空：請在紙上寫出空格處的單字",
-        "explanation": {
-          "concept": "Unit 13 附和句核心文法（Too / Either / So / Neither 助動詞與 Be 動詞對齊）",
-          "formula": "完整原句：Alexander Graham Bell was interested in language. So was his father.",
-          "trap": "必考陷阱：① 前句是 be 動詞 (was/were)，附和句必用 was/were，禁用 did；② 否定句尾必用 either，禁用 too；③ Neither 本身已否定，後面助動詞必用肯定形 (Neither did Reis)！"
-        }
-      },
-      {
-        "id": "ODG3_U13_BFILL_37",
-        "type": "fill",
-        "category_tag": "fill",
-        "question": "Alexander Graham Bell wasn't from Canada. ______",
-        "answer": "Neither were his parents.",
-        "hint": "課文重點句填空：請在紙上寫出空格處的單字",
-        "explanation": {
-          "concept": "Unit 13 附和句核心文法（Too / Either / So / Neither 助動詞與 Be 動詞對齊）",
-          "formula": "完整原句：Alexander Graham Bell wasn't from Canada. Neither were his parents.",
-          "trap": "必考陷阱：① 前句是 be 動詞 (was/were)，附和句必用 was/were，禁用 did；② 否定句尾必用 either，禁用 too；③ Neither 本身已否定，後面助動詞必用肯定形 (Neither did Reis)！"
-        }
-      },
-      {
-        "id": "ODG3_U13_BFILL_38",
-        "type": "fill",
-        "category_tag": "fill",
-        "question": "Alexander Graham Bell helped deaf people. ______",
+        "id": "ODG3_U13_Q10",
+        "type": "choice",
+        "difficulty": "★★★☆☆",
+        "question": "Bell helped deaf people. His father helped deaf people, too. ➔ 改寫為簡短附和句：",
+        "options": [
+          "His father did, too.",
+          "His father was, too.",
+          "His father does, too.",
+          "So was his father."
+        ],
         "answer": "His father did, too.",
-        "hint": "課文重點句填空：請在紙上寫出空格處的單字",
         "explanation": {
-          "concept": "Unit 13 附和句核心文法（Too / Either / So / Neither 助動詞與 Be 動詞對齊）",
-          "formula": "完整原句：Alexander Graham Bell helped deaf people. His father did, too.",
-          "trap": "必考陷阱：① 前句是 be 動詞 (was/were)，附和句必用 was/were，禁用 did；② 否定句尾必用 either，禁用 too；③ Neither 本身已否定，後面助動詞必用肯定形 (Neither did Reis)！"
+          "point": "helped 是一般動詞過去式，簡短句以 did 替代，後接 too。",
+          "trap": "不能誤用 be動詞 was！因為 helped 是動作動詞。",
+          "note": "課本 p.69 F 大題核心改寫題。"
         }
       },
       {
-        "id": "ODG3_U13_RW_39",
-        "type": "paper_rewrite",
-        "category_tag": "rewrite",
-        "question": "句型改寫與造句：Alexander Graham Bell's wife was deaf. His mother was, too.",
-        "answer": "So was his mother.",
-        "hint": "請在紙上寫出完整英文句子，再按「翻牌核對答案」",
+        "id": "ODG3_U13_Q11",
+        "type": "choice",
+        "difficulty": "★★★☆☆",
+        "question": "Bell didn't move to Australia. ➔ 改寫為 Neither 開頭的倒裝否定附和句：",
+        "options": [
+          "Neither did his parents.",
+          "Neither his parents moved.",
+          "Neither didn't his parents.",
+          "His parents didn't, neither."
+        ],
+        "answer": "Neither did his parents.",
         "explanation": {
-          "concept": "Unit 13 附和句核心文法（Too / Either / So / Neither 助動詞與 Be 動詞對齊）",
-          "formula": "標準改寫句：So was his mother.",
-          "trap": "必考陷阱：① 前句是 be 動詞 (was/were)，附和句必用 was/were，禁用 did；② 否定句尾必用 either，禁用 too；③ Neither 本身已否定，後面助動詞必用肯定形 (Neither did Reis)！"
+          "point": "Neither + 助動詞 did + 主詞 his parents。",
+          "trap": "切勿重複寫 didn't (Neither didn't 雙重否定是大忌)。",
+          "note": "課本 p.69 對話填空核心題。"
         }
       },
       {
-        "id": "ODG3_U13_RW_40",
-        "type": "paper_rewrite",
-        "category_tag": "rewrite",
-        "question": "句型改寫與造句：Alexander Graham Bell didn't move to Australia. Neither did his parents.",
-        "answer": "His parents didn't, either.",
-        "hint": "請在紙上寫出完整英文句子，再按「翻牌核對答案」",
+        "id": "ODG3_U13_Q12",
+        "type": "choice",
+        "difficulty": "★★★☆☆",
+        "question": "Houses didn't have telephones in the 1870s. ➔ 改寫為以 Offices 開頭的否定附和句：",
+        "options": [
+          "Offices didn't, either.",
+          "Offices did, too.",
+          "Neither didn't offices.",
+          "Offices weren't, either."
+        ],
+        "answer": "Offices didn't, either.",
         "explanation": {
-          "concept": "Unit 13 附和句核心文法（Too / Either / So / Neither 助動詞與 Be 動詞對齊）",
-          "formula": "標準改寫句：His parents didn't, either.",
-          "trap": "必考陷阱：① 前句是 be 動詞 (was/were)，附和句必用 was/were，禁用 did；② 否定句尾必用 either，禁用 too；③ Neither 本身已否定，後面助動詞必用肯定形 (Neither did Reis)！"
+          "point": "否定簡短附和：主詞 + didn't, either。",
+          "trap": "原句 didn't have 是一般動詞，不可改寫成 weren't！",
+          "note": "課本 p.69 F 大題第 2 題。"
         }
       },
       {
-        "id": "ODG3_U13_RW_41",
-        "type": "paper_rewrite",
-        "category_tag": "rewrite",
-        "question": "句型改寫與造句：Alexander Graham Bell wasn't a doctor. His father wasn't, either.",
-        "answer": "Neither was his father.",
-        "hint": "請在紙上寫出完整英文句子，再按「翻牌核對答案」",
+        "id": "ODG3_U13_Q13",
+        "type": "choice",
+        "difficulty": "★★★☆☆",
+        "passage_context": "In 1878, an English scientist named Joseph Swan invented an electric light bulb. In 1879, Thomas Edison invented a light bulb, too. Swan wanted to sell his invention. 【13】 So did Edison. But they didn't want to fight in court. Swan didn't want to go to court, and 【14】 neither did Edison. Swan wasn't angry, and Edison 【15】 wasn't, either. Finally, they started a company together. Edison made a lot of money, and 【16】 so did Swan.",
+        "cloze_index": 13,
+        "question": "【短文克漏字 第 13 空】Swan wanted to sell his invention. ( ______ )",
+        "options": [
+          "So did Edison.",
+          "Edison did, either.",
+          "Neither was Edison.",
+          "So was Edison."
+        ],
+        "answer": "So did Edison.",
         "explanation": {
-          "concept": "Unit 13 附和句核心文法（Too / Either / So / Neither 助動詞與 Be 動詞對齊）",
-          "formula": "標準改寫句：Neither was his father.",
-          "trap": "必考陷阱：① 前句是 be 動詞 (was/were)，附和句必用 was/were，禁用 did；② 否定句尾必用 either，禁用 too；③ Neither 本身已否定，後面助動詞必用肯定形 (Neither did Reis)！"
+          "point": "前句 wanted 為肯定過去式，且為一般動詞，故用 So did Edison。",
+          "trap": "wanted 是動作動詞，不可用 So was Edison。",
+          "note": "課本 p.70 G 大題短文原題。"
         }
       },
       {
-        "id": "ODG3_U13_RW_42",
-        "type": "paper_rewrite",
-        "category_tag": "rewrite",
-        "question": "句型改寫與造句：Alexander Graham Bell was interested in language. So was his father.",
-        "answer": "His father was, too.",
-        "hint": "請在紙上寫出完整英文句子，再按「翻牌核對答案」",
+        "id": "ODG3_U13_Q14",
+        "type": "choice",
+        "difficulty": "★★★☆☆",
+        "passage_context": "In 1878, an English scientist named Joseph Swan invented an electric light bulb. In 1879, Thomas Edison invented a light bulb, too. Swan wanted to sell his invention. 【13】 So did Edison. But they didn't want to fight in court. Swan didn't want to go to court, and 【14】 neither did Edison. Swan wasn't angry, and Edison 【15】 wasn't, either. Finally, they started a company together. Edison made a lot of money, and 【16】 so did Swan.",
+        "cloze_index": 14,
+        "question": "【短文克漏字 第 14 空】Swan didn't want to go to court, and ( ______ ).",
+        "options": [
+          "neither did Edison",
+          "so did Edison",
+          "Edison didn't, too",
+          "neither was Edison"
+        ],
+        "answer": "neither did Edison",
         "explanation": {
-          "concept": "Unit 13 附和句核心文法（Too / Either / So / Neither 助動詞與 Be 動詞對齊）",
-          "formula": "標準改寫句：His father was, too.",
-          "trap": "必考陷阱：① 前句是 be 動詞 (was/were)，附和句必用 was/were，禁用 did；② 否定句尾必用 either，禁用 too；③ Neither 本身已否定，後面助動詞必用肯定形 (Neither did Reis)！"
+          "point": "前句 didn't want 是否定，接倒裝否定 neither did Edison。",
+          "trap": "前有 didn't，不能用肯定附和 so did。",
+          "note": "課本 p.70 G 大題短文原題。"
         }
       },
       {
-        "id": "ODG3_U13_RW_43",
-        "type": "paper_rewrite",
-        "category_tag": "rewrite",
-        "question": "句型改寫與造句：Alexander Graham Bell wasn't from Canada. Neither were his parents.",
-        "answer": "His parents weren't, either.",
-        "hint": "請在紙上寫出完整英文句子，再按「翻牌核對答案」",
+        "id": "ODG3_U13_Q15",
+        "type": "choice",
+        "difficulty": "★★★☆☆",
+        "passage_context": "In 1878, an English scientist named Joseph Swan invented an electric light bulb. In 1879, Thomas Edison invented a light bulb, too. Swan wanted to sell his invention. 【13】 So did Edison. But they didn't want to fight in court. Swan didn't want to go to court, and 【14】 neither did Edison. Swan wasn't angry, and Edison 【15】 wasn't, either. Finally, they started a company together. Edison made a lot of money, and 【16】 so did Swan.",
+        "cloze_index": 15,
+        "question": "【短文克漏字 第 15 空】Swan wasn't angry, and Edison ( ______ ).",
+        "options": [
+          "wasn't, either",
+          "didn't, either",
+          "was, too",
+          "neither was"
+        ],
+        "answer": "wasn't, either",
         "explanation": {
-          "concept": "Unit 13 附和句核心文法（Too / Either / So / Neither 助動詞與 Be 動詞對齊）",
-          "formula": "標準改寫句：His parents weren't, either.",
-          "trap": "必考陷阱：① 前句是 be 動詞 (was/were)，附和句必用 was/were，禁用 did；② 否定句尾必用 either，禁用 too；③ Neither 本身已否定，後面助動詞必用肯定形 (Neither did Reis)！"
+          "point": "前句是 be動詞 wasn't angry，後句句尾附和必須維持 wasn't, either。",
+          "trap": "不能換成 didn't, either！be動詞與助動詞不能混淆。",
+          "note": "課本 p.70 G 大題短文原題。"
         }
       },
       {
-        "id": "ODG3_U13_RW_44",
-        "type": "paper_rewrite",
-        "category_tag": "rewrite",
-        "question": "句型改寫與造句：Alexander Graham Bell helped deaf people. His father did, too.",
-        "answer": "So did his father.",
-        "hint": "請在紙上寫出完整英文句子，再按「翻牌核對答案」",
+        "id": "ODG3_U13_Q16",
+        "type": "choice",
+        "difficulty": "★★★☆☆",
+        "passage_context": "In 1878, an English scientist named Joseph Swan invented an electric light bulb. In 1879, Thomas Edison invented a light bulb, too. Swan wanted to sell his invention. 【13】 So did Edison. But they didn't want to fight in court. Swan didn't want to go to court, and 【14】 neither did Edison. Swan wasn't angry, and Edison 【15】 wasn't, either. Finally, they started a company together. Edison made a lot of money, and 【16】 so did Swan.",
+        "cloze_index": 16,
+        "question": "【短文克漏字 第 16 空】Edison made a lot of money, and ( ______ ).",
+        "options": [
+          "so did Swan",
+          "so was Swan",
+          "Swan did, either",
+          "neither did Swan"
+        ],
+        "answer": "so did Swan",
         "explanation": {
-          "concept": "Unit 13 附和句核心文法（Too / Either / So / Neither 助動詞與 Be 動詞對齊）",
-          "formula": "標準改寫句：So did his father.",
-          "trap": "必考陷阱：① 前句是 be 動詞 (was/were)，附和句必用 was/were，禁用 did；② 否定句尾必用 either，禁用 too；③ Neither 本身已否定，後面助動詞必用肯定形 (Neither did Reis)！"
+          "point": "made 為肯定動作動詞過去式，肯定倒裝用 so did Swan。",
+          "trap": "不可用 so was Swan。",
+          "note": "課本 p.70 G 大題短文原題。"
         }
       },
       {
-        "id": "ODG3_U13_EX_45",
+        "id": "ODG3_U13_Q17",
         "type": "paper_rewrite",
-        "category_tag": "rewrite",
-        "question": "【岱崙考券題型】[Olivia, Penny - 100% on quiz / so]（提示：使用過去簡單式，切勿漏寫動詞 got！）",
-        "options": [],
+        "difficulty": "★★★★☆",
+        "question": "【岱崙小考實戰改寫】1. [Olivia, Penny – 100% on quiz / so]",
         "answer": "Olivia got 100% on her quiz, and so did Penny.",
-        "hint": "公式：主詞 A + got 100% on her quiz, and so did + 主詞 B.",
         "explanation": {
-          "concept": "Unit 13 肯定倒裝附和長句合成（so + did + 主詞）",
-          "formula": "Olivia got 100% on her quiz, and so did Penny.",
-          "trap": "考場真實失分：① 看到 100% on quiz 忘了補動詞 got；② 誤寫成 100% did Penny 或 Penny was so did ❌！"
+          "point": "考卷真實題型：使用過去式動詞 got，後接 and so did Penny。",
+          "trap": "切勿漏掉動詞 got，也不要寫成 so was Penny (got 是動作動詞)。",
+          "note": "岱崙真卷 Week 2 核心大題第 1 題。"
         }
       },
       {
-        "id": "ODG3_U13_EX_46",
+        "id": "ODG3_U13_Q18",
         "type": "paper_rewrite",
-        "category_tag": "rewrite",
-        "question": "【岱崙考券題型】[Ryan, Michael - 95% on quiz / too]（提示：使用過去簡單式，注意後句助動詞！）",
-        "options": [],
-        "answer": "Ryan got 95% on his quiz, and Michael did, too.",
-        "hint": "公式：主詞 A + got 95% on his quiz, and + 主詞 B + did, too.",
+        "difficulty": "★★★★☆",
+        "question": "【岱崙小考實戰改寫】2. [me, my sister – go to bed early last night / too]",
+        "answer": "I went to bed early last night, and my sister did, too.",
         "explanation": {
-          "concept": "Unit 13 肯定句尾附和長句合成（主詞 + did, too）",
-          "formula": "Ryan got 95% on his quiz, and Michael did, too.",
-          "trap": "考場真實失分：前句動詞是過去式一般動詞 got，後句必須用『Michael did, too』，絕對不可寫 Michael are too ❌！"
+          "point": "主詞 me 在句首主格須轉為 I，動詞 go 依時間 last night 須改為過去式 went。",
+          "trap": "後句用 did, too 附和，也可以寫 and my sister went to bed early, too。",
+          "note": "岱崙真卷 Week 7 核心大題第 2 題。"
         }
       },
       {
-        "id": "ODG3_U13_EX_47",
+        "id": "ODG3_U13_Q19",
         "type": "paper_rewrite",
-        "category_tag": "rewrite",
-        "question": "【岱崙考券題型】[Brad, Lisa - did not play baseball / either]（提示：否定句尾附和）",
-        "options": [],
-        "answer": "Brad did not play baseball, and Lisa didn't, either.",
-        "hint": "公式：主詞 A + did not V..., and + 主詞 B + didn't, either.",
+        "difficulty": "★★★★☆",
+        "question": "【岱崙小考實戰改寫】3. [Rachel, Nicole – not learn to play the piano / either]",
+        "answer": "Rachel doesn't learn to play the piano, and Nicole doesn't, either.",
         "explanation": {
-          "concept": "Unit 13 否定句尾附和長句合成（主詞 + didn't, either）",
-          "formula": "Brad did not play baseball, and Lisa didn't, either.",
-          "trap": "否定句尾必須搭配『didn't, either』，不可用 too 或 did, either！"
+          "point": "第三人稱單數現在式否定用 doesn't，句尾否定附和接 doesn't, either。",
+          "trap": "Rex 在小考曾寫 do not，第三人稱單數必用 doesn't！",
+          "note": "岱崙真卷 Week 7 核心大題第 3 題。"
         }
       },
       {
-        "id": "ODG3_U13_EX_48",
+        "id": "ODG3_U13_Q20",
         "type": "paper_rewrite",
-        "category_tag": "rewrite",
-        "question": "【岱崙考券題型】[Ray, Jim - not pass quiz / either]（提示：過去式否定必用 didn't pass！）",
-        "options": [],
-        "answer": "Ray didn't pass the quiz, and Jim didn't, either.",
-        "hint": "過去式一般動詞否定：Ray didn't pass the quiz（不可寫 Ray are not pass）",
+        "difficulty": "★★★★☆",
+        "question": "【岱崙小考實戰改寫】4. [penguins, ostriches – can't fly / neither]",
+        "answer": "Penguins can't fly, and neither can ostriches.",
         "explanation": {
-          "concept": "Unit 13 過去簡單式否定與 either 附和",
-          "formula": "Ray didn't pass the quiz, and Jim didn't, either.",
-          "trap": "考場真實失分：看到題幹給 not pass quiz，誤寫成 Ray are not pass quiz ❌！一般動詞過去式否定必須請出 didn't！"
-        }
-      },
-      {
-        "id": "ODG3_U13_EX_49",
-        "type": "paper_rewrite",
-        "category_tag": "rewrite",
-        "question": "【岱崙變式題型】[Ray, Jim - not pass quiz / neither]（提示：改用 neither 倒裝附和！）",
-        "options": [],
-        "answer": "Ray didn't pass the quiz, and neither did Jim.",
-        "hint": "公式：Ray didn't pass the quiz, and neither did Jim.（neither 後接肯定助動詞 did）",
-        "explanation": {
-          "concept": "Unit 13 否定倒裝附和長句合成（neither + did + 主詞）",
-          "formula": "Ray didn't pass the quiz, and neither did Jim.",
-          "trap": "neither 本身已含 not，後面助動詞必須用肯定形『did』，嚴禁寫成 neither didn't Jim ❌！"
-        }
-      },
-      {
-        "id": "ODG3_U13_EX_50",
-        "type": "paper_rewrite",
-        "category_tag": "rewrite",
-        "question": "【岱崙變式題型】[Edison, Swan - a famous inventor / so]（提示：名詞身分無動作動詞，需用 be 動詞 was！）",
-        "options": [],
-        "answer": "Edison was a famous inventor, and so was Swan.",
-        "hint": "「是...發明家」用過去式 be 動詞 was，後句倒裝也必須用 so was Swan！",
-        "explanation": {
-          "concept": "Unit 13 Be 動詞過去式肯定倒裝（so + was/were + 主詞）",
-          "formula": "Edison was a famous inventor, and so was Swan.",
-          "trap": "前句是『was a famous inventor』，後句必須對齊 be 動詞寫『so was Swan』，不可慣性寫成 so did Swan ❌！"
-        }
-      },
-      {
-        "id": "ODG3_U13_EX_51",
-        "type": "paper_rewrite",
-        "category_tag": "rewrite",
-        "question": "【岱崙變式題型】[Meucci, Reis - not rich and famous / neither]（提示：形容詞狀態需用 wasn't，後句用 neither was！）",
-        "options": [],
-        "answer": "Meucci wasn't rich and famous, and neither was Reis.",
-        "hint": "rich and famous 是形容詞，前面動詞用 wasn't，倒裝用 neither was Reis",
-        "explanation": {
-          "concept": "Unit 13 Be 動詞過去式否定倒裝（neither + was/were + 主詞）",
-          "formula": "Meucci wasn't rich and famous, and neither was Reis.",
-          "trap": "形容詞 rich 前面沒有一般動詞，必須用 be 動詞 wasn't，後句倒裝對應寫 neither was Reis！"
-        }
-      },
-      {
-        "id": "ODG3_U13_EX_52",
-        "type": "paper_rewrite",
-        "category_tag": "rewrite",
-        "question": "【岱崙變式題型】[Swan, Edison - got a patent for his invention / too]（提示：一般動詞過去式 got，句尾用 did, too）",
-        "options": [],
-        "answer": "Swan got a patent for his invention, and Edison did, too.",
-        "hint": "前句動詞為 got，後句精簡附和為 and Edison did, too.",
-        "explanation": {
-          "concept": "Unit 13 一般動詞過去式肯定句尾附和",
-          "formula": "Swan got a patent for his invention, and Edison did, too.",
-          "trap": "切勿把 got 當成 be 動詞，後句必須用 Edison did, too。"
-        }
-      },
-      {
-        "id": "ODG3_U13_EX_53",
-        "type": "choice",
-        "category_tag": "choice",
-        "question": "Olivia got 100% on her quiz, and ( ______ ).",
-        "options": [
-          "so did Penny",
-          "Penny was, too",
-          "100% did Penny",
-          "so was Penny"
-        ],
-        "answer": "so did Penny",
-        "hint": "前句動詞是過去式一般動詞 got，肯定倒裝用 so did + 主詞",
-        "explanation": {
-          "concept": "Unit 13 倒裝附和助動詞判斷",
-          "formula": "got (一般動詞過去式) ➔ so did Penny / Penny did, too。",
-          "trap": "不可選 so was Penny 或 100% did Penny。"
-        }
-      },
-      {
-        "id": "ODG3_U13_EX_54",
-        "type": "choice",
-        "category_tag": "choice",
-        "question": "Bell's mother was deaf, and ( ______ ).",
-        "options": [
-          "so was his wife",
-          "so did his wife",
-          "his wife did, too",
-          "neither was his wife"
-        ],
-        "answer": "so was his wife",
-        "hint": "前句是肯定的 was deaf (be動詞)，附和必須沿用 was",
-        "explanation": {
-          "concept": "Unit 13 Be 動詞與一般動詞附和辨析",
-          "formula": "was deaf ➔ so was his wife / his wife was, too。",
-          "trap": "看到前句是 was，後句絕對不能選 did！"
+          "point": "情態助動詞 can't 的倒裝附和：neither + can (肯定式) + ostriches。",
+          "trap": "neither 後面不能再加 not (不能寫 neither can't)！",
+          "note": "岱崙真卷 Week 7 核心大題第 4 題。"
         }
       }
     ]
@@ -1743,720 +1295,312 @@ window.MIDTERM_DATABASE = [
     ],
     "quizzes": [
       {
-        "id": "ODG3_U14_LIST_1",
-        "type": "spelling_listen",
-        "category_tag": "listening",
-        "question": "請聽電腦發音，在紙上拼寫出這個核心單字或片語：",
-        "hint": "詞性與中文：n. 滑翔機",
-        "audio_word": "glider",
-        "phonetic": "/ˈɡlaɪdər/",
-        "syllables": "glid-er",
-        "answer": "glider",
-        "explanation": {
-          "concept": "【Unit 14: Success Stories】核心字彙：glider /ˈɡlaɪdər/ (n. 滑翔機)",
-          "formula": "課文例句：In 1900, the Wright brothers built a glider.",
-          "trap": "拼寫與用法關鍵：源自動詞 glide (滑翔) + r。"
-        }
-      },
-      {
-        "id": "ODG3_U14_LIST_2",
-        "type": "spelling_listen",
-        "category_tag": "listening",
-        "question": "請聽電腦發音，在紙上拼寫出這個核心單字或片語：",
-        "hint": "詞性與中文：n. 望遠鏡",
-        "audio_word": "telescope",
-        "phonetic": "/ˈtɛlɪˌskoʊp/",
-        "syllables": "tel-e-scope",
-        "answer": "telescope",
-        "explanation": {
-          "concept": "【Unit 14: Success Stories】核心字彙：telescope /ˈtɛlɪˌskoʊp/ (n. 望遠鏡)",
-          "formula": "課文例句：Hans Lippershey invented the first telescope in 1608.",
-          "trap": "拼寫與用法關鍵：tele- (遠距離) + scope (觀測鏡)。"
-        }
-      },
-      {
-        "id": "ODG3_U14_LIST_3",
-        "type": "spelling_listen",
-        "category_tag": "listening",
-        "question": "請聽電腦發音，在紙上拼寫出這個核心單字或片語：",
-        "hint": "詞性與中文：n. 表面",
-        "audio_word": "surface",
-        "phonetic": "/ˈsɜːrfɪs/",
-        "syllables": "sur-face",
-        "answer": "surface",
-        "explanation": {
-          "concept": "【Unit 14: Success Stories】核心字彙：surface /ˈsɜːrfɪs/ (n. 表面)",
-          "formula": "課文例句：Galileo could see the surface of the moon!",
-          "trap": "拼寫與用法關鍵：sur- + face，指物體或星球的表面。"
-        }
-      },
-      {
-        "id": "ODG3_U14_LIST_4",
-        "type": "spelling_listen",
-        "category_tag": "listening",
-        "question": "請聽電腦發音，在紙上拼寫出這個核心單字或片語：",
-        "hint": "詞性與中文：adv. 快速地",
-        "audio_word": "quickly",
-        "phonetic": "/ˈkwɪkli/",
-        "syllables": "quick-ly",
-        "answer": "quickly",
-        "explanation": {
-          "concept": "【Unit 14: Success Stories】核心字彙：quickly /ˈkwɪkli/ (adv. 快速地)",
-          "formula": "課文例句：Their plane flew more quickly than the glider.",
-          "trap": "拼寫與用法關鍵：比較級 more quickly，最高級 the most quickly。"
-        }
-      },
-      {
-        "id": "ODG3_U14_LIST_5",
-        "type": "spelling_listen",
-        "category_tag": "listening",
-        "question": "請聽電腦發音，在紙上拼寫出這個核心單字或片語：",
-        "hint": "詞性與中文：adv. 清楚地；清晰地",
-        "audio_word": "clearly",
-        "phonetic": "/ˈklɪrli/",
-        "syllables": "clear-ly",
-        "answer": "clearly",
-        "explanation": {
-          "concept": "【Unit 14: Success Stories】核心字彙：clearly /ˈklɪrli/ (adv. 清楚地；清晰地)",
-          "formula": "課文例句：Galileo could see things more clearly with his telescope.",
-          "trap": "拼寫與用法關鍵：clear + ly，比較級為 more clearly。"
-        }
-      },
-      {
-        "id": "ODG3_U14_LIST_6",
-        "type": "spelling_listen",
-        "category_tag": "listening",
-        "question": "請聽電腦發音，在紙上拼寫出這個核心單字或片語：",
-        "hint": "詞性與中文：adv. 容易地；輕鬆地",
-        "audio_word": "easily",
-        "phonetic": "/ˈiːzəli/",
-        "syllables": "eas-i-ly",
-        "answer": "easily",
-        "explanation": {
-          "concept": "【Unit 14: Success Stories】核心字彙：easily /ˈiːzəli/ (adv. 容易地；輕鬆地)",
-          "formula": "課文例句：Today we can communicate more easily than in the past.",
-          "trap": "拼寫與用法關鍵：easy 去 y 改 i 加 -ly，比較級為 more easily。"
-        }
-      },
-      {
-        "id": "ODG3_U14_LIST_7",
-        "type": "spelling_listen",
-        "category_tag": "listening",
-        "question": "請聽電腦發音，在紙上拼寫出這個核心單字或片語：",
-        "hint": "詞性與中文：adv. 仔細地；小心地",
-        "audio_word": "carefully",
-        "phonetic": "/ˈkɛrfəli/",
-        "syllables": "care-ful-ly",
-        "answer": "carefully",
-        "explanation": {
-          "concept": "【Unit 14: Success Stories】核心字彙：carefully /ˈkɛrfəli/ (adv. 仔細地；小心地)",
-          "formula": "課文例句：She painted the picture more carefully than her brother.",
-          "trap": "拼寫與用法關鍵：careful + ly（有兩個 l），比較級為 more carefully。"
-        }
-      },
-      {
-        "id": "ODG3_U14_LIST_8",
-        "type": "spelling_listen",
-        "category_tag": "listening",
-        "question": "請聽電腦發音，在紙上拼寫出這個核心單字或片語：",
-        "hint": "詞性與中文：adv. 快樂地；開心地",
-        "audio_word": "happily",
-        "phonetic": "/ˈhæpɪli/",
-        "syllables": "hap-pi-ly",
-        "answer": "happily",
-        "explanation": {
-          "concept": "【Unit 14: Success Stories】核心字彙：happily /ˈhæpɪli/ (adv. 快樂地；開心地)",
-          "formula": "課文例句：The children played happily in the park.",
-          "trap": "拼寫與用法關鍵：happy 去 y 改 i 加 -ly。"
-        }
-      },
-      {
-        "id": "ODG3_U14_LIST_9",
-        "type": "spelling_listen",
-        "category_tag": "listening",
-        "question": "請聽電腦發音，在紙上拼寫出這個核心單字或片語：",
-        "hint": "詞性與中文：adv. 更遠地（far 的不規則比較級）",
-        "audio_word": "further",
-        "phonetic": "/ˈfɜːrðər/",
-        "syllables": "fur-ther",
-        "answer": "further",
-        "explanation": {
-          "concept": "【Unit 14: Success Stories】核心字彙：further /ˈfɜːrðər/ (adv. 更遠地（far 的不規則比較級）)",
-          "formula": "課文例句：Their plane flew further than the glider.",
-          "trap": "拼寫與用法關鍵：far 的比較級可寫作 further 或 farther，不可加 more！"
-        }
-      },
-      {
-        "id": "ODG3_U14_LIST_10",
-        "type": "spelling_listen",
-        "category_tag": "listening",
-        "question": "請聽電腦發音，在紙上拼寫出這個核心單字或片語：",
-        "hint": "詞性與中文：adv. 最遠地（far 的不規則最高級）",
-        "audio_word": "furthest",
-        "phonetic": "/ˈfɜːrðɪst/",
-        "syllables": "fur-thest",
-        "answer": "furthest",
-        "explanation": {
-          "concept": "【Unit 14: Success Stories】核心字彙：furthest /ˈfɜːrðɪst/ (adv. 最遠地（far 的不規則最高級）)",
-          "formula": "課文例句：With Newton's telescope, he could see the furthest of all.",
-          "trap": "拼寫與用法關鍵：far 的最高級為 the furthest 或 the farthest。"
-        }
-      },
-      {
-        "id": "ODG3_U14_NB_11",
+        "id": "ODG3_U14_Q01",
         "type": "fill",
-        "category_tag": "fill",
+        "difficulty": "★☆☆☆☆",
         "question": "They shook hands ______ (nervous) as Orville got into the plane.",
         "answer": "nervously",
-        "hint": "提示詞：(nervous)",
         "explanation": {
-          "concept": "Unit 14 副詞比較級與最高級（Comparative & Superlative Adverbs）",
-          "formula": "空格應填入『nervously』。",
-          "trap": "必考陷阱：① 字尾 -ly 多音節副詞比較級加 more / the most (more clearly)；② 單音節 fast/hard 直接加 -er/-est；③ far 的不規則變化為 further / the furthest，絕不可加 more！"
+          "point": "一般形容詞直接加 -ly：nervous ➔ nervously。",
+          "trap": "修飾動詞 shook hands 必須用副詞，不能保留形容詞。",
+          "note": "課本 p.72 B 大題第 1 題。"
         }
       },
       {
-        "id": "ODG3_U14_NB_12",
+        "id": "ODG3_U14_Q02",
         "type": "fill",
-        "category_tag": "fill",
+        "difficulty": "★☆☆☆☆",
         "question": "The plane started to move ______ (slow) along the ground.",
         "answer": "slowly",
-        "hint": "提示詞：(slow)",
         "explanation": {
-          "concept": "Unit 14 副詞比較級與最高級（Comparative & Superlative Adverbs）",
-          "formula": "空格應填入『slowly』。",
-          "trap": "必考陷阱：① 字尾 -ly 多音節副詞比較級加 more / the most (more clearly)；② 單音節 fast/hard 直接加 -er/-est；③ far 的不規則變化為 further / the furthest，絕不可加 more！"
+          "point": "形容詞 slow 轉副詞 ➔ slowly。",
+          "trap": "修飾動作 move，必須使用副詞 slowly。",
+          "note": "課本 p.72 B 大題第 2 題。"
         }
       },
       {
-        "id": "ODG3_U14_NB_13",
+        "id": "ODG3_U14_Q03",
         "type": "fill",
-        "category_tag": "fill",
-        "question": "Then the plane started to move quickly (quick) and after a moment, it ______ (sudden) lifted up into the air.",
-        "answer": "suddenly",
-        "hint": "提示詞：(sudden)",
+        "difficulty": "★☆☆☆☆",
+        "question": "Then the plane started to move ______ (quick) and took off into the sky.",
+        "answer": "quickly",
         "explanation": {
-          "concept": "Unit 14 副詞比較級與最高級（Comparative & Superlative Adverbs）",
-          "formula": "空格應填入『suddenly』。",
-          "trap": "必考陷阱：① 字尾 -ly 多音節副詞比較級加 more / the most (more clearly)；② 單音節 fast/hard 直接加 -er/-est；③ far 的不規則變化為 further / the furthest，絕不可加 more！"
+          "point": "形容詞 quick 轉副詞 ➔ quickly。",
+          "trap": "快步/快速移動修飾動詞 move 用 quickly。",
+          "note": "課本 p.72 B 大題第 3 題。"
         }
       },
       {
-        "id": "ODG3_U14_NB_14",
+        "id": "ODG3_U14_Q04",
         "type": "fill",
-        "category_tag": "fill",
-        "question": "He was holding onto the plane ______ (tight) and he was watching the people on the ground.",
+        "difficulty": "★☆☆☆☆",
+        "question": "He was holding onto the plane ______ (tight) as it lifted into the air.",
         "answer": "tightly",
-        "hint": "提示詞：(tight)",
         "explanation": {
-          "concept": "Unit 14 副詞比較級與最高級（Comparative & Superlative Adverbs）",
-          "formula": "空格應填入『tightly』。",
-          "trap": "必考陷阱：① 字尾 -ly 多音節副詞比較級加 more / the most (more clearly)；② 單音節 fast/hard 直接加 -er/-est；③ far 的不規則變化為 further / the furthest，絕不可加 more！"
+          "point": "形容詞 tight 轉副詞 ➔ tightly (緊緊地抓著)。",
+          "trap": "修飾動作 was holding onto。",
+          "note": "課本 p.72 B 大題第 4 題。"
         }
       },
       {
-        "id": "ODG3_U14_NB_15",
+        "id": "ODG3_U14_Q05",
         "type": "fill",
-        "category_tag": "fill",
-        "question": "The people were cheering loudly (loud) and waving at Orville ______ (excited).",
-        "answer": "excitedly",
-        "hint": "提示詞：(excited)",
+        "difficulty": "★☆☆☆☆",
+        "question": "The people were cheering ______ (loud) and waving enthusiastically.",
+        "answer": "loudly",
         "explanation": {
-          "concept": "Unit 14 副詞比較級與最高級（Comparative & Superlative Adverbs）",
-          "formula": "空格應填入『excitedly』。",
-          "trap": "必考陷阱：① 字尾 -ly 多音節副詞比較級加 more / the most (more clearly)；② 單音節 fast/hard 直接加 -er/-est；③ far 的不規則變化為 further / the furthest，絕不可加 more！"
+          "point": "形容詞 loud 轉副詞 ➔ loudly (大聲地歡呼)。",
+          "trap": "修飾動詞 were cheering。",
+          "note": "課本 p.72 B 大題第 5 題。"
         }
       },
       {
-        "id": "ODG3_U14_NB_16",
+        "id": "ODG3_U14_Q06",
         "type": "fill",
-        "category_tag": "fill",
-        "question": "Orville stood up ______ (proud) and Wilbur ran to him.",
+        "difficulty": "★☆☆☆☆",
+        "question": "Orville stood up ______ (proud) after the historic flight.",
         "answer": "proudly",
-        "hint": "提示詞：(proud)",
         "explanation": {
-          "concept": "Unit 14 副詞比較級與最高級（Comparative & Superlative Adverbs）",
-          "formula": "空格應填入『proudly』。",
-          "trap": "必考陷阱：① 字尾 -ly 多音節副詞比較級加 more / the most (more clearly)；② 單音節 fast/hard 直接加 -er/-est；③ far 的不規則變化為 further / the furthest，絕不可加 more！"
+          "point": "形容詞 proud 轉副詞 ➔ proudly (自豪地站起來)。",
+          "trap": "修飾動詞 stood up。",
+          "note": "課本 p.72 B 大題第 6 題。"
         }
       },
       {
-        "id": "ODG3_U14_NB_17",
+        "id": "ODG3_U14_Q07",
         "type": "fill",
-        "category_tag": "fill",
-        "question": "He couldn't see very far with his telescope, but he could see things quite ______.",
-        "answer": "clearly",
-        "hint": "請填入正確的連接副詞或語法詞彙",
+        "difficulty": "★★☆☆☆",
+        "question": "Galileo could see things ______ (well) with his telescope than with his eyes.",
+        "answer": "better",
         "explanation": {
-          "concept": "Unit 14 副詞比較級與最高級（Comparative & Superlative Adverbs）",
-          "formula": "空格應填入『clearly』。",
-          "trap": "必考陷阱：① 字尾 -ly 多音節副詞比較級加 more / the most (more clearly)；② 單音節 fast/hard 直接加 -er/-est；③ far 的不規則變化為 further / the furthest，絕不可加 more！"
+          "point": "well 的比較級是不規則變化：better (比...看得更好)。",
+          "trap": "不可寫 more well 或 gooder！",
+          "note": "課本 p.72 規則框。"
         }
       },
       {
-        "id": "ODG3_U14_NB_18",
+        "id": "ODG3_U14_Q08",
         "type": "fill",
-        "category_tag": "fill",
-        "question": "Galileo could see things ______ with his telescope than he could with Lippershey's telescope.",
-        "answer": "more clearly",
-        "hint": "請填入正確的連接副詞或語法詞彙",
+        "difficulty": "★★☆☆☆",
+        "question": "With his new telescope, he could see the ______ (far) of all into deep space.",
+        "answer": "farthest",
         "explanation": {
-          "concept": "Unit 14 副詞比較級與最高級（Comparative & Superlative Adverbs）",
-          "formula": "空格應填入『more clearly』。",
-          "trap": "必考陷阱：① 字尾 -ly 多音節副詞比較級加 more / the most (more clearly)；② 單音節 fast/hard 直接加 -er/-est；③ far 的不規則變化為 further / the furthest，絕不可加 more！"
+          "point": "far 的最高級是 farthest (或 furthest)。",
+          "trap": "最高級前方通常搭配 the。",
+          "note": "課本 p.72 規則框。"
         }
       },
       {
-        "id": "ODG3_U14_NB_19",
-        "type": "fill",
-        "category_tag": "fill",
-        "question": "Galileo could see ______ with his telescope, too.",
-        "answer": "further",
-        "hint": "請填入正確的連接副詞或語法詞彙",
-        "explanation": {
-          "concept": "Unit 14 副詞比較級與最高級（Comparative & Superlative Adverbs）",
-          "formula": "空格應填入『further』。",
-          "trap": "必考陷阱：① 字尾 -ly 多音節副詞比較級加 more / the most (more clearly)；② 單音節 fast/hard 直接加 -er/-est；③ far 的不規則變化為 further / the furthest，絕不可加 more！"
-        }
-      },
-      {
-        "id": "ODG3_U14_NB_20",
-        "type": "fill",
-        "category_tag": "fill",
-        "question": "With his new telescope, he could see the furthest of all, and he could see things ______.",
-        "answer": "the most clearly",
-        "hint": "請填入正確的連接副詞或語法詞彙",
-        "explanation": {
-          "concept": "Unit 14 副詞比較級與最高級（Comparative & Superlative Adverbs）",
-          "formula": "空格應填入『the most clearly』。",
-          "trap": "必考陷阱：① 字尾 -ly 多音節副詞比較級加 more / the most (more clearly)；② 單音節 fast/hard 直接加 -er/-est；③ far 的不規則變化為 further / the furthest，絕不可加 more！"
-        }
-      },
-      {
-        "id": "ODG3_U14_CLOZE_21",
+        "id": "ODG3_U14_Q09",
         "type": "choice",
-        "category_tag": "choice",
-        "question": "克漏字第 1 題：請選出正確的語法形式填入空格",
+        "difficulty": "★★☆☆☆",
+        "question": "Which of the three runners ran the ( ______ ) in the 100m race?",
         "options": [
-          "most easier",
-          "more than easily",
-          "more easily"
+          "fastest",
+          "faster",
+          "most fastly",
+          "fastly"
         ],
-        "answer": "more easily",
-        "hint": "克漏字三選一：比較各選項的詞性、比較級/最高級或量詞搭配",
+        "answer": "fastest",
         "explanation": {
-          "concept": "Unit 14 副詞比較級與最高級（Comparative & Superlative Adverbs）",
-          "formula": "空格填入『more easily』使全句結構完整：克漏字第 1 題：請選出正確的語法形式填入空格",
-          "trap": "必考陷阱：① 字尾 -ly 多音節副詞比較級加 more / the most (more clearly)；② 單音節 fast/hard 直接加 -er/-est；③ far 的不規則變化為 further / the furthest，絕不可加 more！"
+          "point": "三者比較用最高級 fastest (fast 的副詞同形，最高級為 fastest)。",
+          "trap": "英語中沒有 fastly 這個字！",
+          "note": "國小與私中常考易錯題。"
         }
       },
       {
-        "id": "ODG3_U14_CLOZE_22",
+        "id": "ODG3_U14_Q10",
+        "type": "fill",
+        "difficulty": "★★☆☆☆",
+        "question": "Caroline got up ______ (early) than Melanie this morning.",
+        "answer": "earlier",
+        "explanation": {
+          "point": "字尾子音 + y 時，去 y 改 -ier：early ➔ earlier than。",
+          "trap": "不可寫 more early！",
+          "note": "岱崙真卷 Week 7 考點。"
+        }
+      },
+      {
+        "id": "ODG3_U14_Q11",
         "type": "choice",
-        "category_tag": "choice",
-        "question": "克漏字第 2 題：請選出正確的語法形式填入空格",
+        "difficulty": "★★☆☆☆",
+        "question": "Bill played guitar badly, Ted played worse, but Fred played the ( ______ ) of all.",
         "options": [
-          "more slowly",
-          "more slower",
-          "most slowly"
-        ],
-        "answer": "more slowly",
-        "hint": "克漏字三選一：比較各選項的詞性、比較級/最高級或量詞搭配",
-        "explanation": {
-          "concept": "Unit 14 副詞比較級與最高級（Comparative & Superlative Adverbs）",
-          "formula": "空格填入『more slowly』使全句結構完整：克漏字第 2 題：請選出正確的語法形式填入空格",
-          "trap": "必考陷阱：① 字尾 -ly 多音節副詞比較級加 more / the most (more clearly)；② 單音節 fast/hard 直接加 -er/-est；③ far 的不規則變化為 further / the furthest，絕不可加 more！"
-        }
-      },
-      {
-        "id": "ODG3_U14_CLOZE_23",
-        "type": "choice",
-        "category_tag": "choice",
-        "question": "克漏字第 3 題：請選出正確的語法形式填入空格",
-        "options": [
-          "most quickly",
-          "more quicker",
-          "more quickly"
-        ],
-        "answer": "more quickly",
-        "hint": "克漏字三選一：比較各選項的詞性、比較級/最高級或量詞搭配",
-        "explanation": {
-          "concept": "Unit 14 副詞比較級與最高級（Comparative & Superlative Adverbs）",
-          "formula": "空格填入『more quickly』使全句結構完整：克漏字第 3 題：請選出正確的語法形式填入空格",
-          "trap": "必考陷阱：① 字尾 -ly 多音節副詞比較級加 more / the most (more clearly)；② 單音節 fast/hard 直接加 -er/-est；③ far 的不規則變化為 further / the furthest，絕不可加 more！"
-        }
-      },
-      {
-        "id": "ODG3_U14_CLOZE_24",
-        "type": "choice",
-        "category_tag": "choice",
-        "question": "克漏字第 4 題：請選出正確的語法形式填入空格",
-        "options": [
-          "more regularly",
-          "most regularly",
-          "more regular"
-        ],
-        "answer": "more regularly",
-        "hint": "克漏字三選一：比較各選項的詞性、比較級/最高級或量詞搭配",
-        "explanation": {
-          "concept": "Unit 14 副詞比較級與最高級（Comparative & Superlative Adverbs）",
-          "formula": "空格填入『more regularly』使全句結構完整：克漏字第 4 題：請選出正確的語法形式填入空格",
-          "trap": "必考陷阱：① 字尾 -ly 多音節副詞比較級加 more / the most (more clearly)；② 單音節 fast/hard 直接加 -er/-est；③ far 的不規則變化為 further / the furthest，絕不可加 more！"
-        }
-      },
-      {
-        "id": "ODG3_U14_CLOZE_25",
-        "type": "choice",
-        "category_tag": "choice",
-        "question": "克漏字第 5 題：請選出正確的語法形式填入空格",
-        "options": [
-          "the more regularly",
-          "the most regularly",
-          "most regularly than"
-        ],
-        "answer": "the most regularly",
-        "hint": "克漏字三選一：比較各選項的詞性、比較級/最高級或量詞搭配",
-        "explanation": {
-          "concept": "Unit 14 副詞比較級與最高級（Comparative & Superlative Adverbs）",
-          "formula": "空格填入『the most regularly』使全句結構完整：克漏字第 5 題：請選出正確的語法形式填入空格",
-          "trap": "必考陷阱：① 字尾 -ly 多音節副詞比較級加 more / the most (more clearly)；② 單音節 fast/hard 直接加 -er/-est；③ far 的不規則變化為 further / the furthest，絕不可加 more！"
-        }
-      },
-      {
-        "id": "ODG3_U14_CLOZE_26",
-        "type": "choice",
-        "category_tag": "choice",
-        "question": "克漏字第 6 題：請選出正確的語法形式填入空格",
-        "options": [
-          "the fastest",
-          "faster than",
-          "the faster"
-        ],
-        "answer": "the fastest",
-        "hint": "克漏字三選一：比較各選項的詞性、比較級/最高級或量詞搭配",
-        "explanation": {
-          "concept": "Unit 14 副詞比較級與最高級（Comparative & Superlative Adverbs）",
-          "formula": "空格填入『the fastest』使全句結構完整：克漏字第 6 題：請選出正確的語法形式填入空格",
-          "trap": "必考陷阱：① 字尾 -ly 多音節副詞比較級加 more / the most (more clearly)；② 單音節 fast/hard 直接加 -er/-est；③ far 的不規則變化為 further / the furthest，絕不可加 more！"
-        }
-      },
-      {
-        "id": "ODG3_U14_BFILL_27",
-        "type": "fill",
-        "category_tag": "fill",
-        "question": "a most easier / b more than easily / ______ *(正解：c)*",
-        "answer": "c more easily",
-        "hint": "課文重點句填空：請在紙上寫出空格處的單字",
-        "explanation": {
-          "concept": "Unit 14 副詞比較級與最高級（Comparative & Superlative Adverbs）",
-          "formula": "完整原句：a most easier / b more than easily / c more easily *(正解：c)*",
-          "trap": "必考陷阱：① 字尾 -ly 多音節副詞比較級加 more / the most (more clearly)；② 單音節 fast/hard 直接加 -er/-est；③ far 的不規則變化為 further / the furthest，絕不可加 more！"
-        }
-      },
-      {
-        "id": "ODG3_U14_BFILL_28",
-        "type": "fill",
-        "category_tag": "fill",
-        "question": "a most quickly / b more quicker / ______ *(正解：c)*",
-        "answer": "c more quickly",
-        "hint": "課文重點句填空：請在紙上寫出空格處的單字",
-        "explanation": {
-          "concept": "Unit 14 副詞比較級與最高級（Comparative & Superlative Adverbs）",
-          "formula": "完整原句：a most quickly / b more quicker / c more quickly *(正解：c)*",
-          "trap": "必考陷阱：① 字尾 -ly 多音節副詞比較級加 more / the most (more clearly)；② 單音節 fast/hard 直接加 -er/-est；③ far 的不規則變化為 further / the furthest，絕不可加 more！"
-        }
-      },
-      {
-        "id": "ODG3_U14_BFILL_29",
-        "type": "fill",
-        "category_tag": "fill",
-        "question": "a the more regularly / ______ / c most regularly than *(正解：b)*",
-        "answer": "b the most regularly",
-        "hint": "課文重點句填空：請在紙上寫出空格處的單字",
-        "explanation": {
-          "concept": "Unit 14 副詞比較級與最高級（Comparative & Superlative Adverbs）",
-          "formula": "完整原句：a the more regularly / b the most regularly / c most regularly than *(正解：b)*",
-          "trap": "必考陷阱：① 字尾 -ly 多音節副詞比較級加 more / the most (more clearly)；② 單音節 fast/hard 直接加 -er/-est；③ far 的不規則變化為 further / the furthest，絕不可加 more！"
-        }
-      },
-      {
-        "id": "ODG3_U14_BFILL_30",
-        "type": "fill",
-        "category_tag": "fill",
-        "question": "You can carry a tablet ______ than a PC. *(範例)*",
-        "answer": "more easily",
-        "hint": "課文重點句填空：請在紙上寫出空格處的單字",
-        "explanation": {
-          "concept": "Unit 14 副詞比較級與最高級（Comparative & Superlative Adverbs）",
-          "formula": "完整原句：You can carry a tablet more easily than a PC. *(範例)*",
-          "trap": "必考陷阱：① 字尾 -ly 多音節副詞比較級加 more / the most (more clearly)；② 單音節 fast/hard 直接加 -er/-est；③ far 的不規則變化為 further / the furthest，絕不可加 more！"
-        }
-      },
-      {
-        "id": "ODG3_U14_BFILL_31",
-        "type": "fill",
-        "category_tag": "fill",
-        "question": "You can buy a smartphone ______ than a PC.",
-        "answer": "more cheaply",
-        "hint": "課文重點句填空：請在紙上寫出空格處的單字",
-        "explanation": {
-          "concept": "Unit 14 副詞比較級與最高級（Comparative & Superlative Adverbs）",
-          "formula": "完整原句：You can buy a smartphone more cheaply than a PC.",
-          "trap": "必考陷阱：① 字尾 -ly 多音節副詞比較級加 more / the most (more clearly)；② 單音節 fast/hard 直接加 -er/-est；③ far 的不規則變化為 further / the furthest，絕不可加 more！"
-        }
-      },
-      {
-        "id": "ODG3_U14_BFILL_32",
-        "type": "fill",
-        "category_tag": "fill",
-        "question": "You can read books ______ on a tablet than on a smartphone.",
-        "answer": "more clearly",
-        "hint": "課文重點句填空：請在紙上寫出空格處的單字",
-        "explanation": {
-          "concept": "Unit 14 副詞比較級與最高級（Comparative & Superlative Adverbs）",
-          "formula": "完整原句：You can read books more clearly on a tablet than on a smartphone.",
-          "trap": "必考陷阱：① 字尾 -ly 多音節副詞比較級加 more / the most (more clearly)；② 單音節 fast/hard 直接加 -er/-est；③ far 的不規則變化為 further / the furthest，絕不可加 more！"
-        }
-      },
-      {
-        "id": "ODG3_U14_BFILL_33",
-        "type": "fill",
-        "category_tag": "fill",
-        "question": "You can send messages ______ with a smartphone.",
-        "answer": "the most quickly",
-        "hint": "課文重點句填空：請在紙上寫出空格處的單字",
-        "explanation": {
-          "concept": "Unit 14 副詞比較級與最高級（Comparative & Superlative Adverbs）",
-          "formula": "完整原句：You can send messages the most quickly with a smartphone.",
-          "trap": "必考陷阱：① 字尾 -ly 多音節副詞比較級加 more / the most (more clearly)；② 單音節 fast/hard 直接加 -er/-est；③ far 的不規則變化為 further / the furthest，絕不可加 more！"
-        }
-      },
-      {
-        "id": "ODG3_U14_BFILL_34",
-        "type": "fill",
-        "category_tag": "fill",
-        "question": "You can get online ______ with a PC.",
-        "answer": "the fastest",
-        "hint": "課文重點句填空：請在紙上寫出空格處的單字",
-        "explanation": {
-          "concept": "Unit 14 副詞比較級與最高級（Comparative & Superlative Adverbs）",
-          "formula": "完整原句：You can get online the fastest with a PC.",
-          "trap": "必考陷阱：① 字尾 -ly 多音節副詞比較級加 more / the most (more clearly)；② 單音節 fast/hard 直接加 -er/-est；③ far 的不規則變化為 further / the furthest，絕不可加 more！"
-        }
-      },
-      {
-        "id": "ODG3_U14_RW_35",
-        "type": "paper_rewrite",
-        "category_tag": "rewrite",
-        "question": "句型改寫與造句：quickly / plane",
-        "answer": "You can travel the most quickly by plane.",
-        "hint": "請在紙上寫出完整英文句子，再按「翻牌核對答案」",
-        "explanation": {
-          "concept": "Unit 14 副詞比較級與最高級（Comparative & Superlative Adverbs）",
-          "formula": "標準改寫句：You can travel the most quickly by plane.",
-          "trap": "必考陷阱：① 字尾 -ly 多音節副詞比較級加 more / the most (more clearly)；② 單音節 fast/hard 直接加 -er/-est；③ far 的不規則變化為 further / the furthest，絕不可加 more！"
-        }
-      },
-      {
-        "id": "ODG3_U14_RW_36",
-        "type": "paper_rewrite",
-        "category_tag": "rewrite",
-        "question": "句型改寫與造句：far / plane",
-        "answer": "You can travel the furthest by plane.",
-        "hint": "請在紙上寫出完整英文句子，再按「翻牌核對答案」",
-        "explanation": {
-          "concept": "Unit 14 副詞比較級與最高級（Comparative & Superlative Adverbs）",
-          "formula": "標準改寫句：You can travel the furthest by plane.",
-          "trap": "必考陷阱：① 字尾 -ly 多音節副詞比較級加 more / the most (more clearly)；② 單音節 fast/hard 直接加 -er/-est；③ far 的不規則變化為 further / the furthest，絕不可加 more！"
-        }
-      },
-      {
-        "id": "ODG3_U14_RW_37",
-        "type": "paper_rewrite",
-        "category_tag": "rewrite",
-        "question": "句型改寫與造句：cheaply / car / plane",
-        "answer": "You can travel more cheaply by car than by plane.",
-        "hint": "請在紙上寫出完整英文句子，再按「翻牌核對答案」",
-        "explanation": {
-          "concept": "Unit 14 副詞比較級與最高級（Comparative & Superlative Adverbs）",
-          "formula": "標準改寫句：You can travel more cheaply by car than by plane.",
-          "trap": "必考陷阱：① 字尾 -ly 多音節副詞比較級加 more / the most (more clearly)；② 單音節 fast/hard 直接加 -er/-est；③ far 的不規則變化為 further / the furthest，絕不可加 more！"
-        }
-      },
-      {
-        "id": "ODG3_U14_RW_38",
-        "type": "paper_rewrite",
-        "category_tag": "rewrite",
-        "question": "句型改寫與造句：cheaply / bike",
-        "answer": "You can travel the most cheaply by bike.",
-        "hint": "請在紙上寫出完整英文句子，再按「翻牌核對答案」",
-        "explanation": {
-          "concept": "Unit 14 副詞比較級與最高級（Comparative & Superlative Adverbs）",
-          "formula": "標準改寫句：You can travel the most cheaply by bike.",
-          "trap": "必考陷阱：① 字尾 -ly 多音節副詞比較級加 more / the most (more clearly)；② 單音節 fast/hard 直接加 -er/-est；③ far 的不規則變化為 further / the furthest，絕不可加 more！"
-        }
-      },
-      {
-        "id": "ODG3_U14_RW_39",
-        "type": "paper_rewrite",
-        "category_tag": "rewrite",
-        "question": "句型改寫與造句：far / car / bike",
-        "answer": "You can travel further by car than by bike.",
-        "hint": "請在紙上寫出完整英文句子，再按「翻牌核對答案」",
-        "explanation": {
-          "concept": "Unit 14 副詞比較級與最高級（Comparative & Superlative Adverbs）",
-          "formula": "標準改寫句：You can travel further by car than by bike.",
-          "trap": "必考陷阱：① 字尾 -ly 多音節副詞比較級加 more / the most (more clearly)；② 單音節 fast/hard 直接加 -er/-est；③ far 的不規則變化為 further / the furthest，絕不可加 more！"
-        }
-      },
-      {
-        "id": "ODG3_U14_EX_40",
-        "type": "paper_rewrite",
-        "category_tag": "rewrite",
-        "question": "【岱崙 W4 真題】How did they do in their quiz? Anne: 100%, Penny: 95% & Eric: 90%（用 well 寫出三級比較長句，注意從 90% 的 Eric 寫起！）",
-        "options": [],
-        "answer": "Eric did well in his quiz, Penny did better than Eric, but Anne did the best.",
-        "hint": "三段式公式：<原級子句>, <比較級子句>, but <最高級子句>. (well ➔ better ➔ the best)",
-        "explanation": {
-          "concept": "Unit 14 不規則副詞三級比較長句合成（well ➔ better ➔ the best）",
-          "formula": "Eric did well in his quiz, Penny did better than Eric, but Anne did the best.",
-          "trap": "考場 0 分慘痛陷阱：① 絕對不能漏掉第一句原級（Eric did well in his quiz,）；② 因為比較 well（好 ➔ 更好 ➔ 最好），順序必須從 90% (Eric) ➔ 95% (Penny) ➔ 100% (Anne)！"
-        }
-      },
-      {
-        "id": "ODG3_U14_EX_41",
-        "type": "paper_rewrite",
-        "category_tag": "rewrite",
-        "question": "【岱崙 W4 真題】How did they do in their quiz? Jerome: 65%, Ivan: 55% & Nate: 45%（用 badly 寫出三級比較長句，注意 badly ➔ worse ➔ the worst！）",
-        "options": [],
-        "answer": "Jerome did badly in his quiz, Ivan did worse than Jerome, but Nate did the worst.",
-        "hint": "因為比較 badly（差 ➔ 更差 ➔ 最差），從 65% (Jerome) ➔ 55% (Ivan) ➔ 45% (Nate)！",
-        "explanation": {
-          "concept": "Unit 14 不規則副詞三級比較長句合成（badly ➔ worse ➔ the worst）",
-          "formula": "Jerome did badly in his quiz, Ivan did worse than Jerome, but Nate did the worst.",
-          "trap": "考場真實失分：第一句原級『Jerome did badly in his quiz,』不可漏寫；Ivan did worse 後方不可漏寫『than Jerome』！"
-        }
-      },
-      {
-        "id": "ODG3_U14_EX_42",
-        "type": "paper_rewrite",
-        "category_tag": "rewrite",
-        "question": "【岱崙 W4 真題】The distance they flew: eagle: 41km, duck: 91km & pigeon: 282km（用過去式 flew 與 far 寫出三級比較長句）",
-        "options": [],
-        "answer": "An eagle flew far, a duck flew farther than an eagle, but a pigeon flew the farthest.",
-        "hint": "注意 eagle 母音開頭用 An eagle；far ➔ farther (或 further) than ➔ the farthest (或 the furthest)",
-        "explanation": {
-          "concept": "Unit 14 距離副詞三級比較長句合成（far ➔ farther/further ➔ the farthest/furthest）",
-          "formula": "An eagle flew far, a duck flew farther than an eagle, but a pigeon flew the farthest.",
-          "trap": "考場真實失分：① 切勿漏寫第一句『An eagle flew far,』；② eagle 前冠詞必須用 an；③ flew 拼寫是 f-l-e-w 不是 frew！"
-        }
-      },
-      {
-        "id": "ODG3_U14_EX_43",
-        "type": "paper_rewrite",
-        "category_tag": "rewrite",
-        "question": "【岱崙 W4 真題】How do they laugh? witch, vampire & zombie（用 horribly 寫出三級比較長句，注意現在式 do ➔ laughs！）",
-        "options": [],
-        "answer": "A witch laughs horribly, a vampire laughs more horribly than a witch, but a zombie laughs the most horribly.",
-        "hint": "問句是 How do they laugh (現在式)！三單主詞動詞必加 -s (laughs)，比較級必加 more！",
-        "explanation": {
-          "concept": "Unit 14 多音節副詞三級比較 + 現在簡單式第三人稱單數動詞 (-s)",
-          "formula": "A witch laughs horribly, a vampire laughs more horribly than a witch, but a zombie laughs the most horribly.",
-          "trap": "考場 4 重陷阱：① 必寫第一句 A witch laughs horribly；② 現在式必加 -s (laughs，不可寫 laughed)；③ 比較級必加 more (more horribly than)；④ zombie 勿拼成 zoobie！"
-        }
-      },
-      {
-        "id": "ODG3_U14_EX_44",
-        "type": "paper_rewrite",
-        "category_tag": "rewrite",
-        "question": "【岱崙 W4 真題】How did they move? snail, tortoise & the old man（用過去式 moved 與 slowly 寫出三級比較長句，從 the old man 寫起！）",
-        "options": [],
-        "answer": "The old man moved slowly, a tortoise moved more slowly than the old man, but a snail moved the most slowly.",
-        "hint": "比誰移動得「更慢 (more slowly)」，順序：the old man (慢) ➔ a tortoise (更慢) ➔ a snail (最慢)",
-        "explanation": {
-          "concept": "Unit 14 多音節副詞三級比較 + 常識邏輯排序（slowly ➔ more slowly ➔ the most slowly）",
-          "formula": "The old man moved slowly, a tortoise moved more slowly than the old man, but a snail moved the most slowly.",
-          "trap": "注意題目雖然把 snail 寫在第一個，但因為要比「誰更慢、誰最慢」，必須把最慢的 a snail 放在最後壓軸（the most slowly）！"
-        }
-      },
-      {
-        "id": "ODG3_U14_EX_45",
-        "type": "paper_rewrite",
-        "category_tag": "rewrite",
-        "question": "【岱崙 W5 真題】How fast do they run? person, dog & lion（注意題幹是現在式 do they run，單數名詞記得加 a，最高級加 the！）",
-        "options": [],
-        "answer": "A person runs fast, a dog runs faster than a person, but a lion runs the fastest.",
-        "hint": "現在式三單動詞 runs；fast ➔ faster than ➔ the fastest",
-        "explanation": {
-          "concept": "Unit 14 單音節副詞三級比較（fast ➔ faster ➔ the fastest）",
-          "formula": "A person runs fast, a dog runs faster than a person, but a lion runs the fastest.",
-          "trap": "考場真實失分：① 漏寫第一句 A person runs fast；② lion 前面漏寫 a；③ fastest 前面漏寫 the；④ 題幹問 do they run，不要自己亂加 can！"
-        }
-      },
-      {
-        "id": "ODG3_U14_EX_46",
-        "type": "paper_rewrite",
-        "category_tag": "rewrite",
-        "question": "【岱崙 W5 真題】How quickly can they walk? five year old, eight year old & adult（注意 eight 與 adult 前面冠詞用 an！）",
-        "options": [],
-        "answer": "A five year old can walk quickly, an eight year old can walk more quickly than a five year old, but an adult can walk the most quickly.",
-        "hint": "比較級必須寫完整：can walk more quickly than（不可漏掉 quickly！）",
-        "explanation": {
-          "concept": "Unit 14 助動詞 can + 多音節副詞三級比較（quickly ➔ more quickly ➔ the most quickly）",
-          "formula": "A five year old can walk quickly, an eight year old can walk more quickly than a five year old, but an adult can walk the most quickly.",
-          "trap": "考場真實失分：中間句誤寫成 can walk more than ❌（漏了 quickly）；且 eight 與 adult 為母音開頭，冠詞必須用 an！"
-        }
-      },
-      {
-        "id": "ODG3_U14_EX_47",
-        "type": "paper_rewrite",
-        "category_tag": "rewrite",
-        "question": "【岱崙 W5 真題】How far can they jump? frog, rabbit & kangaroo（注意 a kangaroo 冠詞與 the farthest 最高級！）",
-        "options": [],
-        "answer": "A frog can jump far, a rabbit can jump farther than a frog, but a kangaroo can jump the farthest.",
-        "hint": "far ➔ farther (或 further) than ➔ the farthest (或 the furthest)",
-        "explanation": {
-          "concept": "Unit 14 助動詞 can + 不規則副詞三級比較",
-          "formula": "A frog can jump far, a rabbit can jump farther than a frog, but a kangaroo can jump the farthest.",
-          "trap": "考場真實失分：but 後面的單數名詞『a kangaroo』千萬別漏掉冠詞 a，最高級別漏掉 the！"
-        }
-      },
-      {
-        "id": "ODG3_U14_EX_48",
-        "type": "choice",
-        "category_tag": "choice",
-        "question": "A witch laughs horribly, a vampire laughs ( ______ ) than a witch, but a zombie laughs the most horribly.",
-        "options": [
-          "more horribly",
-          "horribly",
-          "horriblier",
-          "most horribly"
-        ],
-        "answer": "more horribly",
-        "hint": "後面有 than，多音節副詞 horribly 比較級前面必須加 more",
-        "explanation": {
-          "concept": "Unit 14 多音節副詞比較級",
-          "formula": "more + 多音節副詞 (horribly) + than。",
-          "trap": "考場真實失分：漏寫 more 直接寫 horribly than ❌。"
-        }
-      },
-      {
-        "id": "ODG3_U14_EX_49",
-        "type": "choice",
-        "category_tag": "choice",
-        "question": "Jerome did badly in his quiz, Ivan did ( ______ ) than Jerome, but Nate did the worst.",
-        "options": [
+          "worst",
+          "baddest",
           "worse",
-          "more badly",
-          "badlier",
-          "worst"
+          "most badly"
         ],
-        "answer": "worse",
-        "hint": "badly 的不規則比較級是 worse",
+        "answer": "worst",
         "explanation": {
-          "concept": "Unit 14 不規則副詞比較級（badly ➔ worse ➔ the worst）",
-          "formula": "did badly ➔ did worse than ➔ did the worst。",
-          "trap": "badly 是不規則變化，不可選 more badly 或 badlier！"
+          "point": "badly ➔ worse ➔ worst 不規則三級比較。",
+          "trap": "不可寫 baddest 或 most badly！",
+          "note": "岱崙真卷 Week 7 核心副詞考點。"
+        }
+      },
+      {
+        "id": "ODG3_U14_Q12",
+        "type": "choice",
+        "difficulty": "★★★☆☆",
+        "passage_context": "On December 17, 1903, the Wright brothers made history. Orville flew their plane 【12】 successfully for twelve seconds. Later that day, Wilbur flew 【13】 farther than Orville—he stayed in the air for 59 seconds! In 1905, they built a new plane. It flew 【14】 better than their first plane and could turn in circles. Of all their early flights, the third plane flew the 【15】 best and stayed up the longest.",
+        "cloze_index": 12,
+        "question": "【短文克漏字 第 12 空】Orville flew their plane ( ______ ) for twelve seconds.",
+        "options": [
+          "successfully",
+          "successful",
+          "success",
+          "more successfully"
+        ],
+        "answer": "successfully",
+        "explanation": {
+          "point": "修飾動詞 flew 用副詞 successfully (成功地)。",
+          "trap": "此處無比較對象，用原級副詞即可。",
+          "note": "課本 p.73 F 大題短文原題。"
+        }
+      },
+      {
+        "id": "ODG3_U14_Q13",
+        "type": "choice",
+        "difficulty": "★★★☆☆",
+        "passage_context": "On December 17, 1903, the Wright brothers made history. Orville flew their plane 【12】 successfully for twelve seconds. Later that day, Wilbur flew 【13】 farther than Orville—he stayed in the air for 59 seconds! In 1905, they built a new plane. It flew 【14】 better than their first plane and could turn in circles. Of all their early flights, the third plane flew the 【15】 best and stayed up the longest.",
+        "cloze_index": 13,
+        "question": "【短文克漏字 第 13 空】Wilbur flew ( ______ ) than Orville—he stayed in the air for 59 seconds!",
+        "options": [
+          "farther",
+          "far",
+          "farthest",
+          "more far"
+        ],
+        "answer": "farther",
+        "explanation": {
+          "point": "後方有 than Orville，故用比較級 farther (飛得更遠/更久)。",
+          "trap": "不可寫 more far。",
+          "note": "課本 p.73 F 大題短文原題。"
+        }
+      },
+      {
+        "id": "ODG3_U14_Q14",
+        "type": "choice",
+        "difficulty": "★★★☆☆",
+        "passage_context": "On December 17, 1903, the Wright brothers made history. Orville flew their plane 【12】 successfully for twelve seconds. Later that day, Wilbur flew 【13】 farther than Orville—he stayed in the air for 59 seconds! In 1905, they built a new plane. It flew 【14】 better than their first plane and could turn in circles. Of all their early flights, the third plane flew the 【15】 best and stayed up the longest.",
+        "cloze_index": 14,
+        "question": "【短文克漏字 第 14 空】It flew ( ______ ) than their first plane and could turn in circles.",
+        "options": [
+          "better",
+          "good",
+          "well",
+          "best"
+        ],
+        "answer": "better",
+        "explanation": {
+          "point": "修飾動詞 flew 且有 than 比較級標誌，well 轉比較級為 better。",
+          "trap": "不能用形容詞 better 修飾動詞時要牢記其原形是 well。",
+          "note": "課本 p.73 F 大題短文原題。"
+        }
+      },
+      {
+        "id": "ODG3_U14_Q15",
+        "type": "choice",
+        "difficulty": "★★★☆☆",
+        "passage_context": "On December 17, 1903, the Wright brothers made history. Orville flew their plane 【12】 successfully for twelve seconds. Later that day, Wilbur flew 【13】 farther than Orville—he stayed in the air for 59 seconds! In 1905, they built a new plane. It flew 【14】 better than their first plane and could turn in circles. Of all their early flights, the third plane flew the 【15】 best and stayed up the longest.",
+        "cloze_index": 15,
+        "question": "【短文克漏字 第 15 空】Of all their early flights, the third plane flew the ( ______ ).",
+        "options": [
+          "best",
+          "better",
+          "well",
+          "good"
+        ],
+        "answer": "best",
+        "explanation": {
+          "point": "Of all their early flights (在所有的飛行中) 表示三者以上，前方又有 the，必用最高級 best。",
+          "trap": "最高級標誌 the + best。",
+          "note": "課本 p.73 F 大題短文原題。"
+        }
+      },
+      {
+        "id": "ODG3_U14_Q16",
+        "type": "paper_rewrite",
+        "difficulty": "★★★★☆",
+        "part": "Part C",
+        "part_title": "Grammar 3 (Unit 14) : 副詞三級比較長句合成",
+        "part_instructions": "C. Answer the question to compare the three given items by writing a sentence with an adverb clause, a comparative adverb clause, and a superlative adverb clause. (The verb tense of your answer should match that of the question):",
+        "word_bank": "[well, horribly, badly, quickly, far, fast, slowly]",
+        "sentence_form": "<adverb clause> , + <comparative clause> , + but + <superlative clause> .",
+        "question": "【W4 歷史真卷·Grammar 3 (Unit 14)】1. How did they do in their quiz? Anne: 100%, Penny: 95% & Eric: 90%",
+        "answer": "Eric did well in his quiz, Penny did better than Eric, but Anne did the best.",
+        "explanation": {
+          "point": "公式：原級子句 + 比較級子句 + but + 最高級子句。動詞時態 match question 用過去式 did。",
+          "trap": "低分者先寫原級，中分者比較級，最高分者最高級。注意 well ➔ better ➔ best。",
+          "note": "岱崙真卷 Week 4 實體考卷第 1 題。"
+        }
+      },
+      {
+        "id": "ODG3_U14_Q17",
+        "type": "paper_rewrite",
+        "difficulty": "★★★★☆",
+        "part": "Part C",
+        "part_title": "Grammar 3 (Unit 14) : 副詞三級比較長句合成",
+        "part_instructions": "C. Answer the question to compare the three given items by writing a sentence with an adverb clause, a comparative adverb clause, and a superlative adverb clause. (The verb tense of your answer should match that of the question):",
+        "word_bank": "[well, horribly, badly, quickly, far, fast, slowly]",
+        "sentence_form": "<adverb clause> , + <comparative clause> , + but + <superlative clause> .",
+        "question": "【W4 歷史真卷·Grammar 3 (Unit 14)】2. How did they do in their quiz? Jerome: 65%, Ivan: 55% & Nate: 45%",
+        "answer": "Jerome did badly in the quiz, Ivan did worse than Jerome, but Nate did the worst.",
+        "explanation": {
+          "point": "考 badly ➔ worse ➔ worst 不規則變化。最低分 45% 考最差 did the worst。",
+          "trap": "Nate 是 45% (最差)，所以 Nate did the worst 放最後！",
+          "note": "岱崙真卷 Week 4 實體考卷第 2 題。"
+        }
+      },
+      {
+        "id": "ODG3_U14_Q18",
+        "type": "paper_rewrite",
+        "difficulty": "★★★★☆",
+        "part": "Part C",
+        "part_title": "Grammar 3 (Unit 14) : 副詞三級比較長句合成",
+        "part_instructions": "C. Answer the question to compare the three given items by writing a sentence with an adverb clause, a comparative adverb clause, and a superlative adverb clause. (The verb tense of your answer should match that of the question):",
+        "word_bank": "[well, horribly, badly, quickly, far, fast, slowly]",
+        "sentence_form": "<adverb clause> , + <comparative clause> , + but + <superlative clause> .",
+        "question": "【W4 歷史真卷·Grammar 3 (Unit 14)】3. The distance they flew: eagle: 41km, duck: 91km & pigeon: 282km",
+        "answer": "An eagle flew far, a duck flew farther than an eagle, but a pigeon flew the farthest.",
+        "explanation": {
+          "point": "距離長短用 far ➔ farther ➔ farthest。動詞 fly 過去式為 flew。",
+          "trap": "主詞前加不定冠詞 An eagle / a duck / a pigeon。",
+          "note": "岱崙真卷 Week 4 實體考卷第 3 題。"
+        }
+      },
+      {
+        "id": "ODG3_U14_Q19",
+        "type": "paper_rewrite",
+        "difficulty": "★★★★☆",
+        "part": "Part C",
+        "part_title": "Grammar 3 (Unit 14) : 副詞三級比較長句合成",
+        "part_instructions": "C. Answer the question to compare the three given items by writing a sentence with an adverb clause, a comparative adverb clause, and a superlative adverb clause. (The verb tense of your answer should match that of the question):",
+        "word_bank": "[well, horribly, badly, quickly, far, fast, slowly]",
+        "sentence_form": "<adverb clause> , + <comparative clause> , + but + <superlative clause> .",
+        "question": "【W4 歷史真卷·Grammar 3 (Unit 14)】4. How do they laugh? witch, vampire & zombie",
+        "answer": "A witch laughs horribly, a vampire laughs more horribly than a witch, but a zombie laughs the most horribly.",
+        "explanation": {
+          "point": "多音節副詞 horribly ➔ more horribly ➔ the most horribly。題目時態為 do 現在式，動詞加 s (laughs)。",
+          "trap": "注意現在式單數動詞加 s！",
+          "note": "岱崙真卷 Week 4 實體考卷第 4 題。"
+        }
+      },
+      {
+        "id": "ODG3_U14_Q20",
+        "type": "paper_rewrite",
+        "difficulty": "★★★★☆",
+        "part": "Part C",
+        "part_title": "Grammar 3 (Unit 14) : 副詞三級比較長句合成",
+        "part_instructions": "C. Answer the question to compare the three given items by writing a sentence with an adverb clause, a comparative adverb clause, and a superlative adverb clause. (The verb tense of your answer should match that of the question):",
+        "word_bank": "[well, horribly, badly, quickly, far, fast, slowly]",
+        "sentence_form": "<adverb clause> , + <comparative clause> , + but + <superlative clause> .",
+        "question": "【W4 歷史真卷·Grammar 3 (Unit 14)】5. How did they move? snail, tortoise & the old man",
+        "answer": "An old man moved slowly, a tortoise moved more slowly than an old man, but a snail moved the most slowly.",
+        "explanation": {
+          "point": "慢的排序：老人 ➔ 烏龜 ➔ 蝸牛 (最慢)。題目是 did，動詞用 moved 過去式。",
+          "trap": "slowly 比較級是 more slowly，最高級是 the most slowly。",
+          "note": "岱崙真卷 Week 4 實體考卷第 5 題。"
         }
       }
     ]
@@ -2754,708 +1898,337 @@ window.MIDTERM_DATABASE = [
     ],
     "quizzes": [
       {
-        "id": "ODG3_U15_LIST_1",
-        "type": "spelling_listen",
-        "category_tag": "listening",
-        "question": "請聽電腦發音，在紙上拼寫出這個核心單字或片語：",
-        "hint": "詞性與中文：n. 麵團（不可數名詞）",
-        "audio_word": "dough",
-        "phonetic": "/doʊ/",
-        "syllables": "dough",
-        "answer": "dough",
-        "explanation": {
-          "concept": "【Unit 15: Tasty Treats】核心字彙：dough /doʊ/ (n. 麵團（不可數名詞）)",
-          "formula": "課文例句：People in Naples started to put tomatoes on their dough.",
-          "trap": "拼寫與用法關鍵：結尾 gh 不發音，發 /doʊ/，屬於不可數名詞。"
-        }
-      },
-      {
-        "id": "ODG3_U15_LIST_2",
-        "type": "spelling_listen",
-        "category_tag": "listening",
-        "question": "請聽電腦發音，在紙上拼寫出這個核心單字或片語：",
-        "hint": "詞性與中文：n. 麵粉（不可數名詞）",
-        "audio_word": "flour",
-        "phonetic": "/ˈflaʊər/",
-        "syllables": "flour",
-        "answer": "flour",
-        "explanation": {
-          "concept": "【Unit 15: Tasty Treats】核心字彙：flour /ˈflaʊər/ (n. 麵粉（不可數名詞）)",
-          "formula": "課文例句：There is a bag of flour in the cupboard.",
-          "trap": "拼寫與用法關鍵：發音與 flower 相同，通常搭配 a bag of flour。"
-        }
-      },
-      {
-        "id": "ODG3_U15_LIST_3",
-        "type": "spelling_listen",
-        "category_tag": "listening",
-        "question": "請聽電腦發音，在紙上拼寫出這個核心單字或片語：",
-        "hint": "詞性與中文：n. 橄欖油（不可數名詞）",
-        "audio_word": "olive oil",
-        "phonetic": "/ˈɑːlɪv ˌɔɪl/",
-        "syllables": "ol-ive oil",
-        "answer": "olive oil",
-        "explanation": {
-          "concept": "【Unit 15: Tasty Treats】核心字彙：olive oil /ˈɑːlɪv ˌɔɪl/ (n. 橄欖油（不可數名詞）)",
-          "formula": "課文例句：People ate flat bread with olive oil and herbs.",
-          "trap": "拼寫與用法關鍵：液體為不可數名詞，搭配 a bottle of olive oil。"
-        }
-      },
-      {
-        "id": "ODG3_U15_LIST_4",
-        "type": "spelling_listen",
-        "category_tag": "listening",
-        "question": "請聽電腦發音，在紙上拼寫出這個核心單字或片語：",
-        "hint": "詞性與中文：phrase 一條（麵包）",
-        "audio_word": "a loaf of",
-        "phonetic": "/ə ˈloʊf əv/",
-        "syllables": "a loaf of",
-        "answer": "a loaf of",
-        "explanation": {
-          "concept": "【Unit 15: Tasty Treats】核心字彙：a loaf of /ə ˈloʊf əv/ (phrase 一條（麵包）)",
-          "formula": "課文例句：My mom bought a loaf of bread at the bakery.",
-          "trap": "拼寫與用法關鍵：複數時 loaf 去 f 改 ves：two loaves of bread！"
-        }
-      },
-      {
-        "id": "ODG3_U15_LIST_5",
-        "type": "spelling_listen",
-        "category_tag": "listening",
-        "question": "請聽電腦發音，在紙上拼寫出這個核心單字或片語：",
-        "hint": "詞性與中文：phrase 一片（披薩、起司、麵包、肉）",
-        "audio_word": "a slice of",
-        "phonetic": "/ə ˈslaɪs əv/",
-        "syllables": "a slice of",
-        "answer": "a slice of",
-        "explanation": {
-          "concept": "【Unit 15: Tasty Treats】核心字彙：a slice of /ə ˈslaɪs əv/ (phrase 一片（披薩、起司、麵包、肉）)",
-          "formula": "課文例句：There are some slices of bread on a plate.",
-          "trap": "拼寫與用法關鍵：專門搭配薄片狀食物：bread, pizza, cheese, meat。"
-        }
-      },
-      {
-        "id": "ODG3_U15_LIST_6",
-        "type": "spelling_listen",
-        "category_tag": "listening",
-        "question": "請聽電腦發音，在紙上拼寫出這個核心單字或片語：",
-        "hint": "詞性與中文：phrase 一罐（廣口玻璃罐：果醬、蜂蜜、橄欖）",
-        "audio_word": "a jar of",
-        "phonetic": "/ə ˈdʒɑːr əv/",
-        "syllables": "a jar of",
-        "answer": "a jar of",
-        "explanation": {
-          "concept": "【Unit 15: Tasty Treats】核心字彙：a jar of /ə ˈdʒɑːr əv/ (phrase 一罐（廣口玻璃罐：果醬、蜂蜜、橄欖）)",
-          "formula": "課文例句：There is a jar of honey in the cupboard.",
-          "trap": "拼寫與用法關鍵：搭配黏稠或醃漬物：jam, honey, olives, peanut butter。"
-        }
-      },
-      {
-        "id": "ODG3_U15_LIST_7",
-        "type": "spelling_listen",
-        "category_tag": "listening",
-        "question": "請聽電腦發音，在紙上拼寫出這個核心單字或片語：",
-        "hint": "詞性與中文：phrase 一紙盒（牛奶、果汁、雞蛋）",
-        "audio_word": "a carton of",
-        "phonetic": "/ə ˈkɑːrtən əv/",
-        "syllables": "a car-ton of",
-        "answer": "a carton of",
-        "explanation": {
-          "concept": "【Unit 15: Tasty Treats】核心字彙：a carton of /ə ˈkɑːrtən əv/ (phrase 一紙盒（牛奶、果汁、雞蛋）)",
-          "formula": "課文例句：There is a carton of milk in the fridge.",
-          "trap": "拼寫與用法關鍵：指紙盒或塑膠盒裝：a carton of milk / juice / eggs。"
-        }
-      },
-      {
-        "id": "ODG3_U15_LIST_8",
-        "type": "spelling_listen",
-        "category_tag": "listening",
-        "question": "請聽電腦發音，在紙上拼寫出這個核心單字或片語：",
-        "hint": "詞性與中文：phrase 一塊／一條（巧克力、肥皂）",
-        "audio_word": "a bar of",
-        "phonetic": "/ə ˈbɑːr əv/",
-        "syllables": "a bar of",
-        "answer": "a bar of",
-        "explanation": {
-          "concept": "【Unit 15: Tasty Treats】核心字彙：a bar of /ə ˈbɑːr əv/ (phrase 一塊／一條（巧克力、肥皂）)",
-          "formula": "課文例句：There is a bar of chocolate on the table.",
-          "trap": "拼寫與用法關鍵：專門搭配塊狀硬物：a bar of chocolate / soap。"
-        }
-      },
-      {
-        "id": "ODG3_U15_LIST_9",
-        "type": "spelling_listen",
-        "category_tag": "listening",
-        "question": "請聽電腦發音，在紙上拼寫出這個核心單字或片語：",
-        "hint": "詞性與中文：phrase 一碗（湯、米飯、麥片、義大利麵、蘋果）",
-        "audio_word": "a bowl of",
-        "phonetic": "/ə ˈboʊl əv/",
-        "syllables": "a bowl of",
-        "answer": "a bowl of",
-        "explanation": {
-          "concept": "【Unit 15: Tasty Treats】核心字彙：a bowl of /ə ˈboʊl əv/ (phrase 一碗（湯、米飯、麥片、義大利麵、蘋果）)",
-          "formula": "課文例句：There is a bowl of apples on the table.",
-          "trap": "拼寫與用法關鍵：可搭配不可數飲食 (soup, rice) 或可數複數名詞 (apples, strawberries)。"
-        }
-      },
-      {
-        "id": "ODG3_U15_LIST_10",
-        "type": "spelling_listen",
-        "category_tag": "listening",
-        "question": "請聽電腦發音，在紙上拼寫出這個核心單字或片語：",
-        "hint": "詞性與中文：phrase 一玻璃杯（水、牛奶、果汁）",
-        "audio_word": "a glass of",
-        "phonetic": "/ə ˈɡlæs əv/",
-        "syllables": "a glass of",
-        "answer": "a glass of",
-        "explanation": {
-          "concept": "【Unit 15: Tasty Treats】核心字彙：a glass of /ə ˈɡlæs əv/ (phrase 一玻璃杯（水、牛奶、果汁）)",
-          "formula": "課文例句：Emily drinks a glass of milk before she starts cooking.",
-          "trap": "拼寫與用法關鍵：複數加 es：two glasses of water / juice / milk。"
-        }
-      },
-      {
-        "id": "ODG3_U15_NB_11",
-        "type": "fill",
-        "category_tag": "fill",
-        "question": "There's a bowl of apples on the table and there's a ______ of chocolate on the table, too.",
-        "answer": "bar",
-        "hint": "請填入正確的連接副詞或語法詞彙",
-        "explanation": {
-          "concept": "Unit 15 可數與不可數名詞及容器計量片語（Measure Words & How much/many）",
-          "formula": "空格應填入『bar』。",
-          "trap": "必考陷阱：① 液體/粉末/麵團 (milk, water, flour, dough, olive oil) 為不可數，訊問用 How much；② 複數加在容器上 (two loaves of bread)，不可數名詞本身絕不可加 -s！"
-        }
-      },
-      {
-        "id": "ODG3_U15_NB_12",
-        "type": "fill",
-        "category_tag": "fill",
-        "question": "There are some ______ of bread on a plate.",
-        "answer": "slices",
-        "hint": "請填入正確的連接副詞或語法詞彙",
-        "explanation": {
-          "concept": "Unit 15 可數與不可數名詞及容器計量片語（Measure Words & How much/many）",
-          "formula": "空格應填入『slices』。",
-          "trap": "必考陷阱：① 液體/粉末/麵團 (milk, water, flour, dough, olive oil) 為不可數，訊問用 How much；② 複數加在容器上 (two loaves of bread)，不可數名詞本身絕不可加 -s！"
-        }
-      },
-      {
-        "id": "ODG3_U15_NB_13",
-        "type": "fill",
-        "category_tag": "fill",
-        "question": "There's a bag of flour and a ______ of honey in the cupboard.",
-        "answer": "jar",
-        "hint": "請填入正確的連接副詞或語法詞彙",
-        "explanation": {
-          "concept": "Unit 15 可數與不可數名詞及容器計量片語（Measure Words & How much/many）",
-          "formula": "空格應填入『jar』。",
-          "trap": "必考陷阱：① 液體/粉末/麵團 (milk, water, flour, dough, olive oil) 為不可數，訊問用 How much；② 複數加在容器上 (two loaves of bread)，不可數名詞本身絕不可加 -s！"
-        }
-      },
-      {
-        "id": "ODG3_U15_NB_14",
-        "type": "fill",
-        "category_tag": "fill",
-        "question": "There's a bottle of water in the fridge and there's a ______ of milk in the fridge, too.",
-        "answer": "carton",
-        "hint": "請填入正確的連接副詞或語法詞彙",
-        "explanation": {
-          "concept": "Unit 15 可數與不可數名詞及容器計量片語（Measure Words & How much/many）",
-          "formula": "空格應填入『carton』。",
-          "trap": "必考陷阱：① 液體/粉末/麵團 (milk, water, flour, dough, olive oil) 為不可數，訊問用 How much；② 複數加在容器上 (two loaves of bread)，不可數名詞本身絕不可加 -s！"
-        }
-      },
-      {
-        "id": "ODG3_U15_NB_15",
-        "type": "fill",
-        "category_tag": "fill",
-        "question": "Emily is drinking a ______ of milk because she's thirsty.",
-        "answer": "glass",
-        "hint": "請填入正確的連接副詞或語法詞彙",
-        "explanation": {
-          "concept": "Unit 15 可數與不可數名詞及容器計量片語（Measure Words & How much/many）",
-          "formula": "空格應填入『glass』。",
-          "trap": "必考陷阱：① 液體/粉末/麵團 (milk, water, flour, dough, olive oil) 為不可數，訊問用 How much；② 複數加在容器上 (two loaves of bread)，不可數名詞本身絕不可加 -s！"
-        }
-      },
-      {
-        "id": "ODG3_U15_CLOZE_16",
+        "id": "ODG3_U15_Q01",
         "type": "choice",
-        "category_tag": "choice",
-        "question": "克漏字第 1 題：請選出正確的語法形式填入空格",
+        "is_count_noncount": true,
+        "difficulty": "★☆☆☆☆",
+        "question": "判斷名詞類別：【 bread (麵包) 】",
         "options": [
-          "carton",
-          "jar",
-          "bottle"
+          "Noncount (不可數)",
+          "Count (可數)"
         ],
-        "answer": "carton",
-        "hint": "克漏字三選一：比較各選項的詞性、比較級/最高級或量詞搭配",
+        "answer": "Noncount (不可數)",
         "explanation": {
-          "concept": "Unit 15 可數與不可數名詞及容器計量片語（Measure Words & How much/many）",
-          "formula": "空格填入『carton』使全句結構完整：克漏字第 1 題：請選出正確的語法形式填入空格",
-          "trap": "必考陷阱：① 液體/粉末/麵團 (milk, water, flour, dough, olive oil) 為不可數，訊問用 How much；② 複數加在容器上 (two loaves of bread)，不可數名詞本身絕不可加 -s！"
+          "point": "bread 在英文中為不可數名詞 (Noncount)，計算數量時必須用量詞 a slice of bread 或 a loaf of bread。",
+          "trap": "中文習慣說『一個麵包』，常誤判為可數！小學生常錯榜首！",
+          "note": "課本 p.77 B 大題第 9 題。"
         }
       },
       {
-        "id": "ODG3_U15_CLOZE_17",
+        "id": "ODG3_U15_Q02",
         "type": "choice",
-        "category_tag": "choice",
-        "question": "克漏字第 2 題：請選出正確的語法形式填入空格",
+        "is_count_noncount": true,
+        "difficulty": "★☆☆☆☆",
+        "question": "判斷名詞類別：【 apple (蘋果) 】",
         "options": [
-          "bag",
-          "bar",
-          "jar"
+          "Count (可數)",
+          "Noncount (不可數)"
         ],
-        "answer": "bag",
-        "hint": "克漏字三選一：比較各選項的詞性、比較級/最高級或量詞搭配",
+        "answer": "Count (可數)",
         "explanation": {
-          "concept": "Unit 15 可數與不可數名詞及容器計量片語（Measure Words & How much/many）",
-          "formula": "空格填入『bag』使全句結構完整：克漏字第 2 題：請選出正確的語法形式填入空格",
-          "trap": "必考陷阱：① 液體/粉末/麵團 (milk, water, flour, dough, olive oil) 為不可數，訊問用 How much；② 複數加在容器上 (two loaves of bread)，不可數名詞本身絕不可加 -s！"
+          "point": "apple 可以單顆計數 (an apple / two apples)，為可數名詞 (Count)。",
+          "trap": "水果中 apple、banana、orange 皆為可數。",
+          "note": "課本 p.77 B 大題第 1 題。"
         }
       },
       {
-        "id": "ODG3_U15_CLOZE_18",
+        "id": "ODG3_U15_Q03",
         "type": "choice",
-        "category_tag": "choice",
-        "question": "克漏字第 3 題：請選出正確的語法形式填入空格",
+        "is_count_noncount": true,
+        "difficulty": "★☆☆☆☆",
+        "question": "判斷名詞類別：【 water (水) 】",
         "options": [
-          "jar",
+          "Noncount (不可數)",
+          "Count (可數)"
+        ],
+        "answer": "Noncount (不可數)",
+        "explanation": {
+          "point": "液體類名詞 (water, milk, juice) 皆為不可數名詞 (Noncount)。",
+          "trap": "需要透過容器 (a glass of water, a bottle of water) 計量。",
+          "note": "課本 p.77 B 大題第 5 題。"
+        }
+      },
+      {
+        "id": "ODG3_U15_Q04",
+        "type": "choice",
+        "is_count_noncount": true,
+        "difficulty": "★☆☆☆☆",
+        "question": "判斷名詞類別：【 cheese (起司/乳酪) 】",
+        "options": [
+          "Noncount (不可數)",
+          "Count (可數)"
+        ],
+        "answer": "Noncount (不可數)",
+        "explanation": {
+          "point": "cheese 屬於固體塊狀食品，為不可數名詞 (Noncount)。",
+          "trap": "計量需用 a piece of cheese 或 a slice of cheese。",
+          "note": "課本 p.77 B 大題第 4 題。"
+        }
+      },
+      {
+        "id": "ODG3_U15_Q05",
+        "type": "choice",
+        "is_count_noncount": true,
+        "difficulty": "★☆☆☆☆",
+        "question": "判斷名詞類別：【 sandwich (三明治) 】",
+        "options": [
+          "Count (可數)",
+          "Noncount (不可數)"
+        ],
+        "answer": "Count (可數)",
+        "explanation": {
+          "point": "sandwich 為可數名詞 (Count)，複數為 sandwiches。",
+          "trap": "雖然 bread 不可數，但做成 sandwich 是可數的！",
+          "note": "課本 p.77 C 大題核心對比。"
+        }
+      },
+      {
+        "id": "ODG3_U15_Q06",
+        "type": "choice",
+        "is_count_noncount": true,
+        "difficulty": "★☆☆☆☆",
+        "question": "判斷名詞類別：【 honey (蜂蜜) 】",
+        "options": [
+          "Noncount (不可數)",
+          "Count (可數)"
+        ],
+        "answer": "Noncount (不可數)",
+        "explanation": {
+          "point": "黏稠流體與糖類 (honey, jam, sugar) 為不可數名詞 (Noncount)。",
+          "trap": "計量用 a jar of honey (一罐蜂蜜)。",
+          "note": "課本 p.77 B 大題第 8 題。"
+        }
+      },
+      {
+        "id": "ODG3_U15_Q07",
+        "type": "choice",
+        "difficulty": "★★☆☆☆",
+        "question": "( ______ ) butter do we need for the cake?",
+        "options": [
+          "How much",
+          "How many",
+          "How often",
+          "How long"
+        ],
+        "answer": "How much",
+        "explanation": {
+          "point": "butter (奶油) 為不可數名詞，詢問數量必用 How much。",
+          "trap": "可數名詞才用 How many。",
+          "note": "課本 p.77 C 大題第 1 題。"
+        }
+      },
+      {
+        "id": "ODG3_U15_Q08",
+        "type": "choice",
+        "difficulty": "★★☆☆☆",
+        "question": "( ______ ) apples are in the bag?",
+        "options": [
+          "How many",
+          "How much",
+          "How big",
+          "How old"
+        ],
+        "answer": "How many",
+        "explanation": {
+          "point": "apples 為可數名詞複數，詢問數量必用 How many。",
+          "trap": "不可數才用 How much。",
+          "note": "課本 p.77 C 大題第 2 題。"
+        }
+      },
+      {
+        "id": "ODG3_U15_Q09",
+        "type": "choice",
+        "difficulty": "★★☆☆☆",
+        "question": "( ______ ) sugar is in this cup of tea?",
+        "options": [
+          "How much",
+          "How many",
+          "How few",
+          "How little"
+        ],
+        "answer": "How much",
+        "explanation": {
+          "point": "sugar (糖) 為顆粒微細不可數名詞，必用 How much。",
+          "trap": "不可寫 How many sugar。",
+          "note": "課本 p.77 C 大題第 3 題。"
+        }
+      },
+      {
+        "id": "ODG3_U15_Q10",
+        "type": "choice",
+        "difficulty": "★★☆☆☆",
+        "question": "( ______ ) pizzas should we make for the party?",
+        "options": [
+          "How many",
+          "How much",
+          "How often",
+          "How far"
+        ],
+        "answer": "How many",
+        "explanation": {
+          "point": "pizzas 帶有複數 s，指整個披薩，為可數名詞，用 How many。",
+          "trap": "若是 a slice of pizza 是量詞片語，但 pizzas 是可數複數。",
+          "note": "課本 p.77 C 大題第 6 題。"
+        }
+      },
+      {
+        "id": "ODG3_U15_Q11",
+        "type": "choice",
+        "difficulty": "★★★☆☆",
+        "passage_context": "Emily is in the kitchen. There's a 【11】 bowl of apples on the table and there's a 【12】 bar of chocolate on the table, too. There are some 【13】 slices of bread on a plate. There's a 【14】 bag of flour and a 【15】 jar of honey in the cupboard. There's a bottle of water in the fridge and a carton of milk, too.",
+        "cloze_index": 11,
+        "question": "【短文克漏字 第 11 空】There is a ( ______ ) of apples on the table.",
+        "options": [
+          "bowl",
           "bar",
+          "bottle",
           "can"
         ],
-        "answer": "bar",
-        "hint": "克漏字三選一：比較各選項的詞性、比較級/最高級或量詞搭配",
+        "answer": "bowl",
         "explanation": {
-          "concept": "Unit 15 可數與不可數名詞及容器計量片語（Measure Words & How much/many）",
-          "formula": "空格填入『bar』使全句結構完整：克漏字第 3 題：請選出正確的語法形式填入空格",
-          "trap": "必考陷阱：① 液體/粉末/麵團 (milk, water, flour, dough, olive oil) 為不可數，訊問用 How much；② 複數加在容器上 (two loaves of bread)，不可數名詞本身絕不可加 -s！"
+          "point": "盛裝一碗蘋果，容器用 a bowl of apples。",
+          "trap": "bar 是長條狀 (chocolate/soap)，bottle 是瓶子。",
+          "note": "課本 p.78 E 大題第 1 題。"
         }
       },
       {
-        "id": "ODG3_U15_CLOZE_19",
+        "id": "ODG3_U15_Q12",
         "type": "choice",
-        "category_tag": "choice",
-        "question": "克漏字第 4 題：請選出正確的語法形式填入空格",
+        "difficulty": "★★★☆☆",
+        "passage_context": "Emily is in the kitchen. There's a 【11】 bowl of apples on the table and there's a 【12】 bar of chocolate on the table, too. There are some 【13】 slices of bread on a plate. There's a 【14】 bag of flour and a 【15】 jar of honey in the cupboard. There's a bottle of water in the fridge and a carton of milk, too.",
+        "cloze_index": 12,
+        "question": "【短文克漏字 第 12 空】There's a ( ______ ) of chocolate on the table, too.",
         "options": [
-          "pound",
-          "box",
-          "carton"
+          "bar",
+          "bowl",
+          "carton",
+          "slice"
         ],
-        "answer": "carton",
-        "hint": "克漏字三選一：比較各選項的詞性、比較級/最高級或量詞搭配",
+        "answer": "bar",
         "explanation": {
-          "concept": "Unit 15 可數與不可數名詞及容器計量片語（Measure Words & How much/many）",
-          "formula": "空格填入『carton』使全句結構完整：克漏字第 4 題：請選出正確的語法形式填入空格",
-          "trap": "必考陷阱：① 液體/粉末/麵團 (milk, water, flour, dough, olive oil) 為不可數，訊問用 How much；② 複數加在容器上 (two loaves of bread)，不可數名詞本身絕不可加 -s！"
+          "point": "一條/一塊巧克力用 a bar of chocolate。",
+          "trap": "不能用 carton (紙盒牛奶) 或 slice (切片)。",
+          "note": "課本 p.78 E 大題第 2 題。"
         }
       },
       {
-        "id": "ODG3_U15_CLOZE_20",
+        "id": "ODG3_U15_Q13",
         "type": "choice",
-        "category_tag": "choice",
-        "question": "克漏字第 5 題：請選出正確的語法形式填入空格",
+        "difficulty": "★★★☆☆",
+        "passage_context": "Emily is in the kitchen. There's a 【11】 bowl of apples on the table and there's a 【12】 bar of chocolate on the table, too. There are some 【13】 slices of bread on a plate. There's a 【14】 bag of flour and a 【15】 jar of honey in the cupboard. There's a bottle of water in the fridge and a carton of milk, too.",
+        "cloze_index": 13,
+        "question": "【短文克漏字 第 13 空】There are some ( ______ ) of bread on a plate.",
+        "options": [
+          "slices",
+          "bottles",
+          "bars",
+          "cartons"
+        ],
+        "answer": "slices",
+        "explanation": {
+          "point": "切片吐司麵包用 slices of bread。前方為 There are some 故用複數 slices。",
+          "trap": "bread 不可數，量詞加 s：slices of bread。",
+          "note": "課本 p.78 E 大題第 3 題。"
+        }
+      },
+      {
+        "id": "ODG3_U15_Q14",
+        "type": "choice",
+        "difficulty": "★★★☆☆",
+        "passage_context": "Emily is in the kitchen. There's a 【11】 bowl of apples on the table and there's a 【12】 bar of chocolate on the table, too. There are some 【13】 slices of bread on a plate. There's a 【14】 bag of flour and a 【15】 jar of honey in the cupboard. There's a bottle of water in the fridge and a carton of milk, too.",
+        "cloze_index": 14,
+        "question": "【短文克漏字 第 14 空】There's a ( ______ ) of flour in the cupboard.",
         "options": [
           "bag",
-          "bottle",
+          "glass",
+          "bar",
           "cup"
         ],
-        "answer": "cup",
-        "hint": "克漏字三選一：比較各選項的詞性、比較級/最高級或量詞搭配",
+        "answer": "bag",
         "explanation": {
-          "concept": "Unit 15 可數與不可數名詞及容器計量片語（Measure Words & How much/many）",
-          "formula": "空格填入『cup』使全句結構完整：克漏字第 5 題：請選出正確的語法形式填入空格",
-          "trap": "必考陷阱：① 液體/粉末/麵團 (milk, water, flour, dough, olive oil) 為不可數，訊問用 How much；② 複數加在容器上 (two loaves of bread)，不可數名詞本身絕不可加 -s！"
+          "point": "一袋麵粉用 a bag of flour。",
+          "trap": "不可用 glass (玻璃杯)。",
+          "note": "課本 p.78 E 大題第 4 題。"
         }
       },
       {
-        "id": "ODG3_U15_CLOZE_21",
+        "id": "ODG3_U15_Q15",
         "type": "choice",
-        "category_tag": "choice",
-        "question": "克漏字第 6 題：請選出正確的語法形式填入空格",
+        "difficulty": "★★★☆☆",
+        "passage_context": "Emily is in the kitchen. There's a 【11】 bowl of apples on the table and there's a 【12】 bar of chocolate on the table, too. There are some 【13】 slices of bread on a plate. There's a 【14】 bag of flour and a 【15】 jar of honey in the cupboard. There's a bottle of water in the fridge and a carton of milk, too.",
+        "cloze_index": 15,
+        "question": "【短文克漏字 第 15 空】There's a ( ______ ) of honey in the cupboard, too.",
         "options": [
-          "piece",
+          "jar",
+          "packet",
           "bowl",
-          "glass"
+          "slice"
         ],
-        "answer": "piece",
-        "hint": "克漏字三選一：比較各選項的詞性、比較級/最高級或量詞搭配",
+        "answer": "jar",
         "explanation": {
-          "concept": "Unit 15 可數與不可數名詞及容器計量片語（Measure Words & How much/many）",
-          "formula": "空格填入『piece』使全句結構完整：克漏字第 6 題：請選出正確的語法形式填入空格",
-          "trap": "必考陷阱：① 液體/粉末/麵團 (milk, water, flour, dough, olive oil) 為不可數，訊問用 How much；② 複數加在容器上 (two loaves of bread)，不可數名詞本身絕不可加 -s！"
+          "point": "廣口玻璃罐裝的蜂蜜/果醬用 a jar of honey。",
+          "trap": "packet 是紙包/小包。",
+          "note": "課本 p.78 E 大題第 5 題。"
         }
       },
       {
-        "id": "ODG3_U15_CN_22",
-        "type": "choice",
-        "category_tag": "choice",
-        "question": "判斷可數 (C: Count) 或不可數 (N: Noncount)：【 paper 】",
-        "options": [
-          "C (可數名詞)",
-          "N (不可數名詞)"
-        ],
-        "answer": "N (不可數名詞)",
-        "hint": "提示：紙張",
-        "explanation": {
-          "concept": "名詞可數性辨析：Count (可數名詞) vs. Noncount (不可數名詞)",
-          "formula": "名詞『paper』屬於【N (不可數名詞)】（紙張）。",
-          "trap": "液體 (water, milk, olive oil, juice)、粉末 (flour)、麵團 (dough) 與肉類起司麵包 (meat, cheese, bread) 皆為不可數名詞！"
-        }
-      },
-      {
-        "id": "ODG3_U15_CN_23",
-        "type": "choice",
-        "category_tag": "choice",
-        "question": "判斷可數 (C: Count) 或不可數 (N: Noncount)：【 cheese 】",
-        "options": [
-          "C (可數名詞)",
-          "N (不可數名詞)"
-        ],
-        "answer": "N (不可數名詞)",
-        "hint": "提示：起司",
-        "explanation": {
-          "concept": "名詞可數性辨析：Count (可數名詞) vs. Noncount (不可數名詞)",
-          "formula": "名詞『cheese』屬於【N (不可數名詞)】（起司）。",
-          "trap": "液體 (water, milk, olive oil, juice)、粉末 (flour)、麵團 (dough) 與肉類起司麵包 (meat, cheese, bread) 皆為不可數名詞！"
-        }
-      },
-      {
-        "id": "ODG3_U15_CN_24",
-        "type": "choice",
-        "category_tag": "choice",
-        "question": "判斷可數 (C: Count) 或不可數 (N: Noncount)：【 tomato 】",
-        "options": [
-          "C (可數名詞)",
-          "N (不可數名詞)"
-        ],
-        "answer": "C (可數名詞)",
-        "hint": "提示：番茄",
-        "explanation": {
-          "concept": "名詞可數性辨析：Count (可數名詞) vs. Noncount (不可數名詞)",
-          "formula": "名詞『tomato』屬於【C (可數名詞)】（番茄）。",
-          "trap": "液體 (water, milk, olive oil, juice)、粉末 (flour)、麵團 (dough) 與肉類起司麵包 (meat, cheese, bread) 皆為不可數名詞！"
-        }
-      },
-      {
-        "id": "ODG3_U15_CN_25",
-        "type": "choice",
-        "category_tag": "choice",
-        "question": "判斷可數 (C: Count) 或不可數 (N: Noncount)：【 water 】",
-        "options": [
-          "C (可數名詞)",
-          "N (不可數名詞)"
-        ],
-        "answer": "N (不可數名詞)",
-        "hint": "提示：水",
-        "explanation": {
-          "concept": "名詞可數性辨析：Count (可數名詞) vs. Noncount (不可數名詞)",
-          "formula": "名詞『water』屬於【N (不可數名詞)】（水）。",
-          "trap": "液體 (water, milk, olive oil, juice)、粉末 (flour)、麵團 (dough) 與肉類起司麵包 (meat, cheese, bread) 皆為不可數名詞！"
-        }
-      },
-      {
-        "id": "ODG3_U15_CN_26",
-        "type": "choice",
-        "category_tag": "choice",
-        "question": "判斷可數 (C: Count) 或不可數 (N: Noncount)：【 juice 】",
-        "options": [
-          "C (可數名詞)",
-          "N (不可數名詞)"
-        ],
-        "answer": "N (不可數名詞)",
-        "hint": "提示：果汁",
-        "explanation": {
-          "concept": "名詞可數性辨析：Count (可數名詞) vs. Noncount (不可數名詞)",
-          "formula": "名詞『juice』屬於【N (不可數名詞)】（果汁）。",
-          "trap": "液體 (water, milk, olive oil, juice)、粉末 (flour)、麵團 (dough) 與肉類起司麵包 (meat, cheese, bread) 皆為不可數名詞！"
-        }
-      },
-      {
-        "id": "ODG3_U15_CN_27",
-        "type": "choice",
-        "category_tag": "choice",
-        "question": "判斷可數 (C: Count) 或不可數 (N: Noncount)：【 lemon 】",
-        "options": [
-          "C (可數名詞)",
-          "N (不可數名詞)"
-        ],
-        "answer": "C (可數名詞)",
-        "hint": "提示：檸檬",
-        "explanation": {
-          "concept": "名詞可數性辨析：Count (可數名詞) vs. Noncount (不可數名詞)",
-          "formula": "名詞『lemon』屬於【C (可數名詞)】（檸檬）。",
-          "trap": "液體 (water, milk, olive oil, juice)、粉末 (flour)、麵團 (dough) 與肉類起司麵包 (meat, cheese, bread) 皆為不可數名詞！"
-        }
-      },
-      {
-        "id": "ODG3_U15_CN_28",
-        "type": "choice",
-        "category_tag": "choice",
-        "question": "判斷可數 (C: Count) 或不可數 (N: Noncount)：【 honey 】",
-        "options": [
-          "C (可數名詞)",
-          "N (不可數名詞)"
-        ],
-        "answer": "N (不可數名詞)",
-        "hint": "提示：蜂蜜",
-        "explanation": {
-          "concept": "名詞可數性辨析：Count (可數名詞) vs. Noncount (不可數名詞)",
-          "formula": "名詞『honey』屬於【N (不可數名詞)】（蜂蜜）。",
-          "trap": "液體 (water, milk, olive oil, juice)、粉末 (flour)、麵團 (dough) 與肉類起司麵包 (meat, cheese, bread) 皆為不可數名詞！"
-        }
-      },
-      {
-        "id": "ODG3_U15_CN_29",
-        "type": "choice",
-        "category_tag": "choice",
-        "question": "判斷可數 (C: Count) 或不可數 (N: Noncount)：【 bread 】",
-        "options": [
-          "C (可數名詞)",
-          "N (不可數名詞)"
-        ],
-        "answer": "N (不可數名詞)",
-        "hint": "提示：麵包，小學生最常錯之不可數名詞",
-        "explanation": {
-          "concept": "名詞可數性辨析：Count (可數名詞) vs. Noncount (不可數名詞)",
-          "formula": "名詞『bread』屬於【N (不可數名詞)】（麵包，小學生最常錯之不可數名詞）。",
-          "trap": "液體 (water, milk, olive oil, juice)、粉末 (flour)、麵團 (dough) 與肉類起司麵包 (meat, cheese, bread) 皆為不可數名詞！"
-        }
-      },
-      {
-        "id": "ODG3_U15_CN_30",
-        "type": "choice",
-        "category_tag": "choice",
-        "question": "判斷可數 (C: Count) 或不可數 (N: Noncount)：【 cookie 】",
-        "options": [
-          "C (可數名詞)",
-          "N (不可數名詞)"
-        ],
-        "answer": "C (可數名詞)",
-        "hint": "提示：餅乾",
-        "explanation": {
-          "concept": "名詞可數性辨析：Count (可數名詞) vs. Noncount (不可數名詞)",
-          "formula": "名詞『cookie』屬於【C (可數名詞)】（餅乾）。",
-          "trap": "液體 (water, milk, olive oil, juice)、粉末 (flour)、麵團 (dough) 與肉類起司麵包 (meat, cheese, bread) 皆為不可數名詞！"
-        }
-      },
-      {
-        "id": "ODG3_U15_CN_31",
-        "type": "choice",
-        "category_tag": "choice",
-        "question": "判斷可數 (C: Count) 或不可數 (N: Noncount)：【 milk 】",
-        "options": [
-          "C (可數名詞)",
-          "N (不可數名詞)"
-        ],
-        "answer": "N (不可數名詞)",
-        "hint": "提示：牛奶",
-        "explanation": {
-          "concept": "名詞可數性辨析：Count (可數名詞) vs. Noncount (不可數名詞)",
-          "formula": "名詞『milk』屬於【N (不可數名詞)】（牛奶）。",
-          "trap": "液體 (water, milk, olive oil, juice)、粉末 (flour)、麵團 (dough) 與肉類起司麵包 (meat, cheese, bread) 皆為不可數名詞！"
-        }
-      },
-      {
-        "id": "ODG3_U15_CN_32",
-        "type": "choice",
-        "category_tag": "choice",
-        "question": "判斷可數 (C: Count) 或不可數 (N: Noncount)：【 carrot 】",
-        "options": [
-          "C (可數名詞)",
-          "N (不可數名詞)"
-        ],
-        "answer": "C (可數名詞)",
-        "hint": "提示：胡蘿蔔",
-        "explanation": {
-          "concept": "名詞可數性辨析：Count (可數名詞) vs. Noncount (不可數名詞)",
-          "formula": "名詞『carrot』屬於【C (可數名詞)】（胡蘿蔔）。",
-          "trap": "液體 (water, milk, olive oil, juice)、粉末 (flour)、麵團 (dough) 與肉類起司麵包 (meat, cheese, bread) 皆為不可數名詞！"
-        }
-      },
-      {
-        "id": "ODG3_U15_HOW_33",
-        "type": "fill",
-        "category_tag": "fill",
-        "question": "_______ butter do we need? (請填入 How much 或 How many)",
-        "answer": "How much",
-        "hint": "觀察後面緊接的名詞是「可數複數名詞 (-s)」還是「不可數名詞」",
-        "explanation": {
-          "concept": "數量疑問詞：How many + 可數複數名詞 vs. How much + 不可數名詞",
-          "formula": "完整問句：How much butter do we need?",
-          "trap": "即使詢問不可數名詞，若加上複數容器（如 How many loaves of bread），則要改用 How many！"
-        }
-      },
-      {
-        "id": "ODG3_U15_HOW_34",
-        "type": "fill",
-        "category_tag": "fill",
-        "question": "_______ apples are in the bag? (請填入 How much 或 How many)",
-        "answer": "How many",
-        "hint": "觀察後面緊接的名詞是「可數複數名詞 (-s)」還是「不可數名詞」",
-        "explanation": {
-          "concept": "數量疑問詞：How many + 可數複數名詞 vs. How much + 不可數名詞",
-          "formula": "完整問句：How many apples are in the bag?",
-          "trap": "即使詢問不可數名詞，若加上複數容器（如 How many loaves of bread），則要改用 How many！"
-        }
-      },
-      {
-        "id": "ODG3_U15_HOW_35",
-        "type": "fill",
-        "category_tag": "fill",
-        "question": "_______ sugar is in this cake? (請填入 How much 或 How many)",
-        "answer": "How much",
-        "hint": "觀察後面緊接的名詞是「可數複數名詞 (-s)」還是「不可數名詞」",
-        "explanation": {
-          "concept": "數量疑問詞：How many + 可數複數名詞 vs. How much + 不可數名詞",
-          "formula": "完整問句：How much sugar is in this cake?",
-          "trap": "即使詢問不可數名詞，若加上複數容器（如 How many loaves of bread），則要改用 How many！"
-        }
-      },
-      {
-        "id": "ODG3_U15_HOW_36",
-        "type": "fill",
-        "category_tag": "fill",
-        "question": "_______ sandwiches do you want? (請填入 How much 或 How many)",
-        "answer": "How many",
-        "hint": "觀察後面緊接的名詞是「可數複數名詞 (-s)」還是「不可數名詞」",
-        "explanation": {
-          "concept": "數量疑問詞：How many + 可數複數名詞 vs. How much + 不可數名詞",
-          "formula": "完整問句：How many sandwiches do you want?",
-          "trap": "即使詢問不可數名詞，若加上複數容器（如 How many loaves of bread），則要改用 How many！"
-        }
-      },
-      {
-        "id": "ODG3_U15_HOW_37",
-        "type": "fill",
-        "category_tag": "fill",
-        "question": "_______ cola do you drink? (請填入 How much 或 How many)",
-        "answer": "How much",
-        "hint": "觀察後面緊接的名詞是「可數複數名詞 (-s)」還是「不可數名詞」",
-        "explanation": {
-          "concept": "數量疑問詞：How many + 可數複數名詞 vs. How much + 不可數名詞",
-          "formula": "完整問句：How much cola do you drink?",
-          "trap": "即使詢問不可數名詞，若加上複數容器（如 How many loaves of bread），則要改用 How many！"
-        }
-      },
-      {
-        "id": "ODG3_U15_HOW_38",
-        "type": "fill",
-        "category_tag": "fill",
-        "question": "_______ pizzas should we make? (請填入 How much 或 How many)",
-        "answer": "How many",
-        "hint": "觀察後面緊接的名詞是「可數複數名詞 (-s)」還是「不可數名詞」",
-        "explanation": {
-          "concept": "數量疑問詞：How many + 可數複數名詞 vs. How much + 不可數名詞",
-          "formula": "完整問句：How many pizzas should we make?",
-          "trap": "即使詢問不可數名詞，若加上複數容器（如 How many loaves of bread），則要改用 How many！"
-        }
-      },
-      {
-        "id": "ODG3_U15_HOW_39",
-        "type": "fill",
-        "category_tag": "fill",
-        "question": "_______ olive oil do we have? (請填入 How much 或 How many)",
-        "answer": "How much",
-        "hint": "觀察後面緊接的名詞是「可數複數名詞 (-s)」還是「不可數名詞」",
-        "explanation": {
-          "concept": "數量疑問詞：How many + 可數複數名詞 vs. How much + 不可數名詞",
-          "formula": "完整問句：How much olive oil do we have?",
-          "trap": "即使詢問不可數名詞，若加上複數容器（如 How many loaves of bread），則要改用 How many！"
-        }
-      },
-      {
-        "id": "ODG3_U15_HOW_40",
-        "type": "fill",
-        "category_tag": "fill",
-        "question": "_______ olives are in the bowl? (請填入 How much 或 How many)",
-        "answer": "How many",
-        "hint": "觀察後面緊接的名詞是「可數複數名詞 (-s)」還是「不可數名詞」",
-        "explanation": {
-          "concept": "數量疑問詞：How many + 可數複數名詞 vs. How much + 不可數名詞",
-          "formula": "完整問句：How many olives are in the bowl?",
-          "trap": "即使詢問不可數名詞，若加上複數容器（如 How many loaves of bread），則要改用 How many！"
-        }
-      },
-      {
-        "id": "ODG3_U15_BFILL_41",
-        "type": "fill",
-        "category_tag": "fill",
-        "question": "a jar / ______ / c can *(正解：b)*",
-        "answer": "b bar",
-        "hint": "課文重點句填空：請在紙上寫出空格處的單字",
-        "explanation": {
-          "concept": "Unit 15 可數與不可數名詞及容器計量片語（Measure Words & How much/many）",
-          "formula": "完整原句：a jar / b bar / c can *(正解：b)*",
-          "trap": "必考陷阱：① 液體/粉末/麵團 (milk, water, flour, dough, olive oil) 為不可數，訊問用 How much；② 複數加在容器上 (two loaves of bread)，不可數名詞本身絕不可加 -s！"
-        }
-      },
-      {
-        "id": "ODG3_U15_BFILL_42",
-        "type": "fill",
-        "category_tag": "fill",
-        "question": "a pound / b box / ______ *(正解：c)*",
-        "answer": "c carton",
-        "hint": "課文重點句填空：請在紙上寫出空格處的單字",
-        "explanation": {
-          "concept": "Unit 15 可數與不可數名詞及容器計量片語（Measure Words & How much/many）",
-          "formula": "完整原句：a pound / b box / c carton *(正解：c)*",
-          "trap": "必考陷阱：① 液體/粉末/麵團 (milk, water, flour, dough, olive oil) 為不可數，訊問用 How much；② 複數加在容器上 (two loaves of bread)，不可數名詞本身絕不可加 -s！"
-        }
-      },
-      {
-        "id": "ODG3_U15_BFILL_43",
-        "type": "fill",
-        "category_tag": "fill",
-        "question": "a bag / b bottle / ______ *(正解：c)*",
-        "answer": "c cup",
-        "hint": "課文重點句填空：請在紙上寫出空格處的單字",
-        "explanation": {
-          "concept": "Unit 15 可數與不可數名詞及容器計量片語（Measure Words & How much/many）",
-          "formula": "完整原句：a bag / b bottle / c cup *(正解：c)*",
-          "trap": "必考陷阱：① 液體/粉末/麵團 (milk, water, flour, dough, olive oil) 為不可數，訊問用 How much；② 複數加在容器上 (two loaves of bread)，不可數名詞本身絕不可加 -s！"
-        }
-      },
-      {
-        "id": "ODG3_U15_EX_44",
+        "id": "ODG3_U15_Q16",
         "type": "paper_rewrite",
-        "category_tag": "rewrite",
-        "question": "句型造句：用 How much 與 olive oil 造出詢問數量的疑問句（need / for the pizza）",
-        "options": [],
-        "answer": "How much olive oil do we need for the pizza?",
-        "hint": "olive oil 為不可數名詞，疑問詞用 How much",
+        "difficulty": "★★★★☆",
+        "question": "【W7 歷史真卷·Grammar 3 (Unit 15)】1. pizza (1 片披薩)",
+        "answer": "There is a slice of pizza.",
         "explanation": {
-          "concept": "Unit 15 可數與不可數名詞及容器計量片語（Measure Words & How much/many）",
-          "formula": "標準解答：How much olive oil do we need for the pizza?",
-          "trap": "必考陷阱：① 液體/粉末/麵團 (milk, water, flour, dough, olive oil) 為不可數，訊問用 How much；② 複數加在容器上 (two loaves of bread)，不可數名詞本身絕不可加 -s！"
+          "point": "單數片狀食物句型：There is a slice of + 名詞。",
+          "trap": "單數用 There is，一片用 a slice of，不可忘記 of！",
+          "note": "岱崙真卷 Week 7 Page 11 Part A 第 1 題。"
         }
       },
       {
-        "id": "ODG3_U15_EX_45",
+        "id": "ODG3_U15_Q17",
         "type": "paper_rewrite",
-        "category_tag": "rewrite",
-        "question": "句型改寫：There is one loaf of bread on the table.（將 one 改為 three 並改寫全句）",
-        "options": [],
-        "answer": "There are three loaves of bread on the table.",
-        "hint": "注意 is 改為 are，loaf 複數去 f 改 ves (loaves)，bread 不可加 s！",
+        "difficulty": "★★★★☆",
+        "question": "【W7 歷史真卷·Grammar 3 (Unit 15)】2. water (6 瓶礦泉水)",
+        "answer": "There are six bottles of water.",
         "explanation": {
-          "concept": "Unit 15 可數與不可數名詞及容器計量片語（Measure Words & How much/many）",
-          "formula": "標準解答：There are three loaves of bread on the table.",
-          "trap": "必考陷阱：① 液體/粉末/麵團 (milk, water, flour, dough, olive oil) 為不可數，訊問用 How much；② 複數加在容器上 (two loaves of bread)，不可數名詞本身絕不可加 -s！"
+          "point": "複數容器量詞句型：There are + 數字英文 + bottles of water。",
+          "trap": "數字必須用英文 six 寫出，bottle 必須加 s (bottles)！",
+          "note": "岱崙真卷 Week 7 Page 11 Part A 第 2 題。"
         }
       },
       {
-        "id": "ODG3_U15_EX_46",
+        "id": "ODG3_U15_Q18",
         "type": "paper_rewrite",
-        "category_tag": "rewrite",
-        "question": "看圖造句：用 Emily / drink / a glass of milk / before cooking 造出完整現在簡單式句子",
-        "options": [],
-        "answer": "Emily drinks a glass of milk before cooking.",
-        "hint": "主詞 Emily 為第三人稱單數，動詞 drink 記得加 -s",
+        "difficulty": "★★★★☆",
+        "question": "【W7 歷史真卷·Grammar 3 (Unit 15)】3. tomatoes (2 罐番茄罐頭)",
+        "answer": "There are two cans of tomatoes.",
         "explanation": {
-          "concept": "Unit 15 可數與不可數名詞及容器計量片語（Measure Words & How much/many）",
-          "formula": "標準解答：Emily drinks a glass of milk before cooking.",
-          "trap": "必考陷阱：① 液體/粉末/麵團 (milk, water, flour, dough, olive oil) 為不可數，訊問用 How much；② 複數加在容器上 (two loaves of bread)，不可數名詞本身絕不可加 -s！"
+          "point": "複數罐頭：There are two cans of tomatoes。",
+          "trap": "can 須加 s (cans)，字跡要清晰切勿寫成 caks (老師紅筆曾批改扣分)。",
+          "note": "岱崙真卷 Week 7 Page 11 Part A 第 3 題。"
+        }
+      },
+      {
+        "id": "ODG3_U15_Q19",
+        "type": "paper_rewrite",
+        "difficulty": "★★★★☆",
+        "question": "【W7 歷史真卷·Grammar 3 (Unit 15)】5. milk (1 紙盒牛奶)",
+        "answer": "There is a carton of milk.",
+        "explanation": {
+          "point": "紙盒包裝用 carton：There is a carton of milk。",
+          "trap": "單數用 There is a carton of...",
+          "note": "岱崙真卷 Week 7 Page 11 Part A 第 5 題。"
+        }
+      },
+      {
+        "id": "ODG3_U15_Q20",
+        "type": "paper_rewrite",
+        "difficulty": "★★★★☆",
+        "question": "【W7 歷史真卷·Grammar 3 (Unit 15)】6. bread (7 片吐司)",
+        "answer": "There are seven slices of bread.",
+        "explanation": {
+          "point": "複數片狀：There are seven slices of bread。",
+          "trap": "注意 bread 不可數，絕不能加 s (不能寫 breads)！",
+          "note": "岱崙真卷 Week 7 Page 11 Part A 第 6 題。"
         }
       }
     ]
@@ -9014,7 +7787,7 @@ window.MIDTERM_DATABASE = [
     "category": "歷史考券",
     "category_icon": "📝",
     "cefr": "A2+",
-    "pages": "Week 2, 4, 5, 6, 7 (共 10 頁歷史考券)",
+    "pages": "Week 2, 4, 5, 6, 7 全真考卷共 10 頁 (全真收錄 218 道真題 + 75 關抓錯)",
     "passages": [
       {
         "section_title": "尋寶定向運動長篇聽寫 (Orienteering - W5 Dictation p.40 滿分篇章)",
@@ -9412,1408 +8185,5304 @@ window.MIDTERM_DATABASE = [
     ],
     "mistake_buster": [
       {
-        "trap_id": "W02_TRAP_AUXILIARY_TOO",
-        "sentence": "Ryan got 95% on his quiz, and Michael are too.",
-        "tokens": [
-          "Ryan",
-          "got",
-          "95%",
-          "on",
-          "his",
-          "quiz,",
-          "and",
-          "Michael",
-          "are",
-          "too."
-        ],
-        "wrong_index": 8,
-        "wrong_word": "are",
-        "correct_word": "did,",
-        "fixed_sentence": "Ryan got 95% on his quiz, and Michael did, too.",
-        "reason": "【時態與助動詞混淆】前句動詞是過去式一般動詞 got，附和句必須使用助動詞 did，不可用現在式 be 動詞 are！"
+        "id": "MB_TEA_W2_P01_A_3",
+        "week": "W2",
+        "point": "W2 實體考券 Discover 3 (Unit 13) : Spelling 核心考點",
+        "sentence": "In the test, student wrote 'wadge' instead of 'wedge'.",
+        "error_token_index": 5,
+        "correction": "wedge",
+        "correct_text": "wedge",
+        "explanation": "【Rex 當年筆記】：學生原始作答「wadge」。TRAP_PHONETIC_SPELLING_E_VS_A（母音 /e/ 與 /æ/ 混淆）"
       },
       {
-        "trap_id": "W02_TRAP_SO_INVERSION",
-        "sentence": "Olivia got 100% on her quiz, and 100% did Penny.",
-        "tokens": [
-          "Olivia",
-          "got",
-          "100%",
-          "on",
-          "her",
-          "quiz,",
-          "and",
-          "100%",
-          "did",
-          "Penny."
-        ],
-        "wrong_index": 7,
-        "wrong_word": "100%",
-        "correct_word": "so",
-        "fixed_sentence": "Olivia got 100% on her quiz, and so did Penny.",
-        "reason": "【倒裝附和句連詞錯誤】肯定附和句公式為『so + did + 主詞』，不可將名詞 100% 放在倒裝開頭。"
+        "id": "MB_TEA_W2_P01_A_14",
+        "week": "W2",
+        "point": "W2 實體考券 Discover 3 (Unit 13) : Spelling 核心考點",
+        "sentence": "In the test, student wrote 'Knif' instead of 'knife'.",
+        "error_token_index": 5,
+        "correction": "knife",
+        "correct_text": "knife",
+        "explanation": "【Rex 當年筆記】：學生原始作答「Knif」。TRAP_SILENT_E_OMISSION（漏寫靜音不發音 e，首字母誤大寫）"
       },
       {
-        "trap_id": "W02_TRAP_NEGATIVE_PAST",
-        "sentence": "Ray are not pass the quiz, and Jim didn't either.",
-        "tokens": [
-          "Ray",
-          "are not",
-          "pass",
-          "the",
-          "quiz,",
-          "and",
-          "Jim",
-          "didn't",
-          "either."
-        ],
-        "wrong_index": 1,
-        "wrong_word": "are not",
-        "correct_word": "didn't",
-        "fixed_sentence": "Ray didn't pass the quiz, and Jim didn't either.",
-        "reason": "【過去式否定句混淆】過去式一般動詞否定必須用助動詞 didn't + 原形動詞 pass，不可寫成 are not pass！"
+        "id": "MB_TEA_W2_P01_A_16",
+        "week": "W2",
+        "point": "W2 實體考券 Discover 3 (Unit 13) : Spelling 核心考點",
+        "sentence": "In the test, student wrote 'mountion' instead of 'mountain'.",
+        "error_token_index": 5,
+        "correction": "mountain",
+        "correct_text": "mountain",
+        "explanation": "【Rex 當年筆記】：學生原始作答「mountion」。TRAP_SUFFIX_AIN_VS_ION（詞尾 /tən/ 誤拼為 -tion）"
       },
       {
-        "trap_id": "W02_TRAP_VERY_CLOSER",
-        "sentence": "The convenience store and the bus stop are very closer, too.",
-        "tokens": [
-          "The",
-          "convenience",
-          "store",
-          "and",
-          "the",
-          "bus",
-          "stop",
-          "are",
-          "very",
-          "closer,",
-          "too."
-        ],
-        "wrong_index": 9,
-        "wrong_word": "closer,",
-        "correct_word": "close,",
-        "fixed_sentence": "The convenience store and the bus stop are very close, too.",
-        "reason": "【副詞 very 後接原級】受到 very 修飾時必須使用原級形容詞 close，不可誤加 -er 變成比較級 closer。"
+        "id": "MB_TEA_W2_P01_A_17",
+        "week": "W2",
+        "point": "W2 實體考券 Discover 3 (Unit 13) : Spelling 核心考點",
+        "sentence": "In the test, student wrote 'whillchair' instead of 'wheelchair'.",
+        "error_token_index": 5,
+        "correction": "wheelchair",
+        "correct_text": "wheelchair",
+        "explanation": "【Rex 當年筆記】：學生原始作答「whillchair」。TRAP_DOUBLE_VOWEL_EE_VS_I（雙母音 ee 誤拼為 i）"
       },
       {
-        "trap_id": "W02_TRAP_SPELLING_WEDGE",
-        "sentence": "He hammered a wooden wadge into the log.",
-        "tokens": [
-          "He",
-          "hammered",
-          "a",
-          "wooden",
-          "wadge",
-          "into",
-          "the",
-          "log."
-        ],
-        "wrong_index": 4,
-        "wrong_word": "wadge",
-        "correct_word": "wedge",
-        "fixed_sentence": "He hammered a wooden wedge into the log.",
-        "reason": "【楔子拼寫盲點】wedge 的短母音是 /e/，拼寫為 -edg-，不可拼成 wadge。"
+        "id": "MB_TEA_W2_P01_B_Q1",
+        "week": "W2",
+        "point": "W2 實體考券 Grammar 3 (Unit 13) : 倒裝附和句改寫 (Sentence Writing)",
+        "sentence": "Olivia 100% on her quiz, 100% did Penny.",
+        "error_token_index": 0,
+        "correction": "Olivia got 100% on her quiz, and so did Penny.",
+        "correct_text": "Olivia got 100% on her quiz, and so did Penny.",
+        "explanation": "【Rex 當年失分盲點】：學生作答寫「Olivia 100% on her quiz, 100% did Penny.」。- `TRAP_VERB_OMISSION`：直接將題幹名詞片語 `100% on quiz` 當成述語，漏掉核心動詞 `got`。   - `TRAP_SO_INVERSION_CORRUPTION`：倒裝副詞誤用，將先行詞 `100%` 當成倒裝連詞置於首位，未掌握 `so + did + Subject` 公式。"
       },
       {
-        "trap_id": "W04_TRAP_SPELLING_FURNACE",
-        "sentence": "A glassblower melts glass inside a giant furnes.",
-        "tokens": [
-          "A",
-          "glassblower",
-          "melts",
-          "glass",
-          "inside",
-          "a",
-          "giant",
-          "furnes."
-        ],
-        "wrong_index": 7,
-        "wrong_word": "furnes.",
-        "correct_word": "furnace.",
-        "fixed_sentence": "A glassblower melts glass inside a giant furnace.",
-        "reason": "【熔爐拼寫盲點】furnace 字尾發音為 /ɪs/，拼寫是 -ace 而不是 -es。"
+        "id": "MB_TEA_W2_P01_B_Q2",
+        "week": "W2",
+        "point": "W2 實體考券 Grammar 3 (Unit 13) : 倒裝附和句改寫 (Sentence Writing)",
+        "sentence": "Ryan 95% on quiz, Michael are too",
+        "error_token_index": 0,
+        "correction": "Ryan got 95% on his quiz, and Michael got 95% on his quiz, too.",
+        "correct_text": "Ryan got 95% on his quiz, and Michael got 95% on his quiz, too.",
+        "explanation": "【Rex 當年失分盲點】：學生作答寫「Ryan 95% on quiz, Michael are too」。- `TRAP_VERB_OMISSION`：前半句漏動詞 `got`（直接寫 `Ryan 95% on quiz`）。   - `TRAP_BE_VERB_MISUSE`：後半句嚴重文法錯誤 `Michael are too`，時態（現在式 are vs 過去式 did）與動詞種類（be 動詞 vs 一般動詞助動詞）雙重混淆。"
       },
       {
-        "trap_id": "W04_TRAP_HOMOPHONE_FRAMES",
-        "sentence": "He bought a pair of eyeglasses with metal france.",
-        "tokens": [
-          "He",
-          "bought",
-          "a",
-          "pair",
-          "of",
-          "eyeglasses",
-          "with",
-          "metal",
-          "france."
-        ],
-        "wrong_index": 8,
-        "wrong_word": "france.",
-        "correct_word": "frames.",
-        "fixed_sentence": "He bought a pair of eyeglasses with metal frames.",
-        "reason": "【音近名詞混淆】眼鏡鏡框是 frames /freɪmz/，首字母大寫的 France 是國家法國。"
+        "id": "MB_TEA_W2_P01_B_Q3",
+        "week": "W2",
+        "point": "W2 實體考券 Grammar 3 (Unit 13) : 倒裝附和句改寫 (Sentence Writing)",
+        "sentence": "Ray are not pass quiz, Jim are either.",
+        "error_token_index": 0,
+        "correction": "Ray didn't pass the quiz, and Jim didn't pass the quiz, either.",
+        "correct_text": "Ray didn't pass the quiz, and Jim didn't pass the quiz, either.",
+        "explanation": "【Rex 當年失分盲點】：學生作答寫「Ray are not pass quiz, Jim are either.」。- `TRAP_NEGATIVE_PAST_BE_VS_DID`：過去簡單式否定句嚴重混淆，寫成 `are not pass`（正確應為 `didn't pass`）。   - `TRAP_EITHER_AFFORDANCE`：附和句助動詞錯誤，寫成 `Jim are either`（正確應為 `Jim didn't, either`）。"
       },
       {
-        "trap_id": "W04_TRAP_IN_FRONT_OF",
-        "sentence": "The cat was sleeping infront off the door.",
-        "tokens": [
-          "The",
-          "cat",
-          "was",
-          "sleeping",
-          "infront off",
-          "the",
-          "door."
-        ],
-        "wrong_index": 4,
-        "wrong_word": "infront off",
-        "correct_word": "in front of",
-        "fixed_sentence": "The cat was sleeping in front of the door.",
-        "reason": "【介系詞片語連寫與錯字】in front of 是三個獨立單字，介系詞是 of（非雙 f 的 off）。"
+        "id": "MB_TEA_W2_P01_B_Q4",
+        "week": "W2",
+        "point": "W2 實體考券 Grammar 3 (Unit 13) : 倒裝附和句改寫 (Sentence Writing)",
+        "sentence": "Jim are not pass quiz, neither did Jim.",
+        "error_token_index": 0,
+        "correction": "Ray didn't pass the quiz, and neither did Jim.",
+        "correct_text": "Ray didn't pass the quiz, and neither did Jim.",
+        "explanation": "【Rex 當年失分盲點】：學生作答寫「Jim are not pass quiz, neither did Jim.」。- `TRAP_NEGATIVE_PAST_BE_VS_DID`：前半句依然延續第 3 題之錯誤結構 `are not pass`。   - `SUCCESS_NEITHER_INVERSION`：學生精準掌握 `neither + did + Subject` 倒裝結構，因而獲紅勾給分。"
       },
       {
-        "trap_id": "W04_TRAP_DOUBLE_COMPARATIVE",
-        "sentence": "A dog runs more faster than a person.",
-        "tokens": [
-          "A",
-          "dog",
-          "runs",
-          "more faster",
-          "than",
-          "a",
-          "person."
-        ],
-        "wrong_index": 3,
-        "wrong_word": "more faster",
-        "correct_word": "faster",
-        "fixed_sentence": "A dog runs faster than a person.",
-        "reason": "【雙重比較級錯誤】fast 是單音節副詞，比較級直接加 -er (faster)，不可重複加 more！"
+        "id": "MB_TEA_W2_P02_C_Q2",
+        "week": "W2",
+        "point": "W2 實體考券 Write Right 3 (Unit 4) 提綱擴寫作文",
+        "sentence": "in my neighborhood for three years",
+        "error_token_index": 0,
+        "correction": "I have lived in my neighborhood for four years.",
+        "correct_text": "I have lived in my neighborhood for four years.",
+        "explanation": "【Rex 當年失分盲點】：學生作答寫「in my neighborhood for three years」。- `TRAP_OUTLINE_MISREAD_NUMBER`：審題疏漏，提綱明確給定 `four years`，學生因筆誤或記憶慣性寫成 `three years`。  ---"
       },
       {
-        "trap_id": "W04_TRAP_SUBJECT_REPEAT",
-        "sentence": "A dog runs faster than a dog in the race.",
-        "tokens": [
-          "A",
-          "dog",
-          "runs",
-          "faster",
-          "than",
-          "a",
-          "dog",
-          "in",
-          "the",
-          "race."
-        ],
-        "wrong_index": 6,
-        "wrong_word": "dog",
-        "correct_word": "person",
-        "fixed_sentence": "A dog runs faster than a person in the race.",
-        "reason": "【比較對象失誤】兩者比較必須是不同主體（dog vs person），不可重複寫成 a dog。"
+        "id": "MB_TEA_W2_P02_C_Q3",
+        "week": "W2",
+        "point": "W2 實體考券 Write Right 3 (Unit 4) 提綱擴寫作文",
+        "sentence": "- 第一格：",
+        "error_token_index": 0,
+        "correction": "It is very close to my school. I can get to school in under ten minutes on foot.",
+        "correct_text": "It is very close to my school. I can get to school in under ten minutes on foot.",
+        "explanation": "【Rex 當年失分盲點】：學生作答寫「- 第一格：」。- `TRAP_PREPOSITION_UNDER_OMISSION`：遺漏提綱中的關鍵介系詞 `under`（表「在……時間以內」）。  ---"
       },
       {
-        "trap_id": "W04_TRAP_SUPERLATIVE_THE",
-        "sentence": "A lion runs fastest of all three animals.",
-        "tokens": [
-          "A",
-          "lion",
-          "runs",
-          "fastest",
-          "of",
-          "all",
-          "three",
-          "animals."
-        ],
-        "wrong_index": 3,
-        "wrong_word": "fastest",
-        "correct_word": "the fastest",
-        "fixed_sentence": "A lion runs the fastest of all three animals.",
-        "reason": "【最高級漏加 the】最高級副詞或形容詞前面必須加上定冠詞 the (the fastest)。"
+        "id": "MB_TEA_W2_P02_C_Q4",
+        "week": "W2",
+        "point": "W2 實體考券 Write Right 3 (Unit 4) 提綱擴寫作文",
+        "sentence": "- 第一格：",
+        "error_token_index": 0,
+        "correction": "The convenience store and the bus stop are very close, too.",
+        "correct_text": "The convenience store and the bus stop are very close, too.",
+        "explanation": "【Rex 當年失分盲點】：學生作答寫「- 第一格：」。- `TRAP_COMPARATIVE_DEGREE_OVERUSE`：平級同等描述語境中誤用比較級形式 `closer`（受上方 very 修飾時必須使用原級形容詞 `very close`）。  ---"
       },
       {
-        "trap_id": "W04_TRAP_ADVERB_LY_DROP",
-        "sentence": "Peter laughed loud when he heard the joke.",
-        "tokens": [
-          "Peter",
-          "laughed",
-          "loud",
-          "when",
-          "he",
-          "heard",
-          "the",
-          "joke."
-        ],
-        "wrong_index": 2,
-        "wrong_word": "loud",
-        "correct_word": "loudly",
-        "fixed_sentence": "Peter laughed loudly when he heard the joke.",
-        "reason": "【形容詞副詞混淆】修飾動詞 laughed 必須使用副詞 loudly，不能使用形容詞 loud。"
+        "id": "MB_TEA_W2_P02_C_Q6",
+        "week": "W2",
+        "point": "W2 實體考券 Write Right 3 (Unit 4) 提綱擴寫作文",
+        "sentence": "- 填答內容：",
+        "error_token_index": 0,
+        "correction": "The coffee shop is two blocks away from my house. Across the street from the coffee shop, there is a stationery store and a pharmacy.",
+        "correct_text": "The coffee shop is two blocks away from my house. Across the street from the coffee shop, there is a stationery store and a pharmacy.",
+        "explanation": "【Rex 當年失分盲點】：學生作答寫「- 填答內容：」。- `TRAP_SUBJECT_VERB_AGREEMENT`：學生寫 `coffee shop are`（主詞為單數 coffee shop，be 動詞應為 `is`）。  ---"
       },
       {
-        "trap_id": "W05_TRAP_THIRD_PERSON_S",
-        "sentence": "A witch laugh horribly at midnight.",
-        "tokens": [
-          "A",
-          "witch",
-          "laugh",
-          "horribly",
-          "at",
-          "midnight."
-        ],
-        "wrong_index": 2,
-        "wrong_word": "laugh",
-        "correct_word": "laughs",
-        "fixed_sentence": "A witch laughs horribly at midnight.",
-        "reason": "【第三人稱單數動詞漏 s】主詞 A witch 是第三人稱單數，現在式動詞必須加 -s (laughs)。"
+        "id": "MB_TEA_W2_P02_C_Q7",
+        "week": "W2",
+        "point": "W2 實體考券 Write Right 3 (Unit 4) 提綱擴寫作文",
+        "sentence": "- 第一格：",
+        "error_token_index": 0,
+        "correction": "Best of all, my favorite place is the park. My friends and I often play and ride our bikes in the park.",
+        "correct_text": "Best of all, my favorite place is the park. My friends and I often play and ride our bikes in the park.",
+        "explanation": "【Rex 當年失分盲點】：學生作答寫「- 第一格：」。- `TRAP_SENTENCE_FRAGMENT_AND_RUN_ON`：學生將動詞片語斷句錯誤（寫成 `play in the park. and ride`），老師及時修正為平行對稱結構 `play and ride our bikes`。  ---"
       },
       {
-        "trap_id": "W05_TRAP_COMPARATIVE_CONJUNCTION",
-        "sentence": "A duck flew farther then an eagle in the sky.",
-        "tokens": [
-          "A",
-          "duck",
-          "flew",
-          "farther",
-          "then",
-          "an",
-          "eagle",
-          "in",
-          "the",
-          "sky."
-        ],
-        "wrong_index": 4,
-        "wrong_word": "then",
-        "correct_word": "than",
-        "fixed_sentence": "A duck flew farther than an eagle in the sky.",
-        "reason": "【比較連詞混淆】比較級介系詞是 than（比），then 是副詞（然後、當時），兩者發音與用法完全不同！"
+        "id": "MB_TEA_W2_P02_C_Q8",
+        "week": "W2",
+        "point": "W2 實體考券 Write Right 3 (Unit 4) 提綱擴寫作文",
+        "sentence": "like living in my neighborhood",
+        "error_token_index": 0,
+        "correction": "I really like living in my neighborhood.",
+        "correct_text": "I really like living in my neighborhood.",
+        "explanation": "【Rex 當年失分盲點】：學生作答寫「like living in my neighborhood」。`OK_CORRECT`（like + V-ing living 結構精準）。  ---  ## 頁尾資訊 (Footer) - `TIGER ENGLISH ACADEMY © 2022 COPYRIGHT RESERVED`  ================================================================================ 🤖 【AI 考券教研與變式出題增強區塊 (AI_SPEC)】 ================================================================================ ```yaml AI_SPEC:   exam_id: \"TEA_3C_QUIZ_W02_P02\"   grade_level: \"Grade 6 (Age 12)\"   cefr_alignment: \"A2\"   target_skills:     - \"Guided Writing (Write Right 3 Unit 4 - Neighborhood & Community)\"     - \"Present Perfect (have lived for / since)\"     - \"Prepositions of Location (across the street from, two blocks away)\"   error_analysis_matrix:     - trap_id: \"TRAP_OUTLINE_MISREAD_NUMBER\"       title: \"提綱關鍵資訊對應粗心\"       student_error: \"for three years (提綱給定 four years)\"       correction: \"for four years\"     - trap_id: \"TRAP_COMPARATIVE_DEGREE_OVERUSE\"       title: \"平級敘述句誤加比較級字尾 -er\"       student_error: \"are very closer\"       correction: \"are very close\"     - trap_id: \"TRAP_SENTENCE_FRAGMENT_AND_RUN_ON\"       title: \"動詞平行結構斷句破碎\"       student_error: \"play in the park. and ride\"       correction: \"play and ride our bikes in the park\"   writing_prompt_generator:     template_name: \"Community & Neighborhood Expansion\"     outline_variables:       time_period: [\"two years\", \"five years\", \"since I was born\"]       facilities: [\"bakery\", \"supermarket\", \"library\", \"sports center\"]       favorite_spot: [\"botanical garden\", \"playground\", \"community library\"] ```"
       },
       {
-        "trap_id": "W05_TRAP_CONDITIONAL_WOULD",
-        "sentence": "If I had 6000 dollars, I will buy a car.",
-        "tokens": [
-          "If",
-          "I",
-          "had",
-          "6000",
-          "dollars,",
-          "I",
-          "will",
-          "buy",
-          "a",
-          "car."
-        ],
-        "wrong_index": 6,
-        "wrong_word": "will",
-        "correct_word": "would",
-        "fixed_sentence": "If I had 6000 dollars, I would buy a car.",
-        "reason": "【與現在事實相反假設語氣】條件句為 If + had (過去式)，主要子句必須使用 would + 原形動詞，不可用 will！"
+        "id": "MB_TEA_W4_P05_A_20",
+        "week": "W4",
+        "point": "W4 實體考券 Discover 3 (Unit 14) : Spelling 核心考點",
+        "sentence": "In the test, student wrote 'france' instead of 'frames'.",
+        "error_token_index": 5,
+        "correction": "frames",
+        "correct_text": "frames",
+        "explanation": "【Rex 當年筆記】：學生原始作答「france」。TRAP_WORD_HOMOPHONE_SLIP（將眼鏡鏡框 frames /freɪmz/ 誤寫為法國 France）"
       },
       {
-        "trap_id": "W06_TRAP_GO_TO_GAME",
-        "sentence": "First, my family loves baseball, so I would go a baseball game with them.",
-        "tokens": [
-          "First,",
-          "my",
-          "family",
-          "loves",
-          "baseball,",
-          "so",
-          "I",
-          "would",
-          "go",
-          "a",
-          "baseball",
-          "game",
-          "with",
-          "them."
-        ],
-        "wrong_index": 8,
-        "wrong_word": "go",
-        "correct_word": "go to",
-        "fixed_sentence": "First, my family loves baseball, so I would go to a baseball game with them.",
-        "reason": "【W6 真題漏抓：不及物動詞 go 漏介系詞 to】go 後接活動或地點名詞 (a baseball game) 必須加介系詞 to！"
+        "id": "MB_TEA_W4_P05_B_13",
+        "week": "W4",
+        "point": "W4 實體考券 Reading with Writing 6 (Units 5 & 6) : Spelling 核心考點",
+        "sentence": "In the test, student wrote 'infront off' instead of 'in front of'.",
+        "error_token_index": 5,
+        "correction": "in front of",
+        "correct_text": "in front of",
+        "explanation": "【Rex 當年筆記】：學生原始作答「infront off」。TRAP_PHRASE_SPACE_AND_PREPOSITION_OF（單詞間漏空格寫成 infront，介系詞 of 誤寫為 off）"
       },
       {
-        "trap_id": "W06_TRAP_WOULD_BY_BUY",
-        "sentence": "I would by some comic books at the bookstore.",
-        "tokens": [
-          "I",
-          "would",
-          "by",
-          "some",
-          "comic",
-          "books",
-          "at",
-          "the",
-          "bookstore."
-        ],
-        "wrong_index": 2,
-        "wrong_word": "by",
-        "correct_word": "buy",
-        "fixed_sentence": "I would buy some comic books at the bookstore.",
-        "reason": "【W6 真題漏抓：同音異字 by vs. buy】助動詞 would 後面必須接原形動詞 buy（購買），by 是介系詞！"
+        "id": "MB_TEA_W4_P06_C_Q1",
+        "week": "W4",
+        "point": "W4 實體考券 Grammar 3 (Unit 14) : 副詞三級比較長句合成",
+        "sentence": "Penny did better than Eric, but Anne did the best.",
+        "error_token_index": 0,
+        "correction": "Eric did well in his quiz, Penny did better than Eric, but Anne did the best.",
+        "correct_text": "Eric did well in his quiz, Penny did better than Eric, but Anne did the best.",
+        "explanation": "【Rex 當年失分盲點】：學生作答寫「Penny did better than Eric, but Anne did the best.」。- `TRAP_MISSING_BASE_ADVERB_CLAUSE`：學生未遵循 Sentence form 的三段式要求，完全漏掉了第一段原級副詞子句（`<adverb clause>`），直接跳寫比較級。"
       },
       {
-        "trap_id": "W06_TRAP_REST_OF_MONEY",
-        "sentence": "With rest of the money, I would treat my friends to lunch.",
-        "tokens": [
-          "With",
-          "rest",
-          "of",
-          "the",
-          "money,",
-          "I",
-          "would",
-          "treat",
-          "my",
-          "friends",
-          "to",
-          "lunch."
-        ],
-        "wrong_index": 1,
-        "wrong_word": "rest",
-        "correct_word": "the rest",
-        "fixed_sentence": "With the rest of the money, I would treat my friends to lunch.",
-        "reason": "【W6 真題失分：With the rest of the money 漏 the】表示『用剩下的錢』固定片語前後都需要定冠詞 the！"
+        "id": "MB_TEA_W4_P06_C_Q2",
+        "week": "W4",
+        "point": "W4 實體考券 Grammar 3 (Unit 14) : 副詞三級比較長句合成",
+        "sentence": "Ivan did worse than Jerome, but Nate did the worst.",
+        "error_token_index": 0,
+        "correction": "Jerome did badly in the quiz, Ivan did worse than Jerome, but Nate did the worst.",
+        "correct_text": "Jerome did badly in the quiz, Ivan did worse than Jerome, but Nate did the worst.",
+        "explanation": "【Rex 當年失分盲點】：學生作答寫「Ivan did worse than Jerome, but Nate did the worst.」。- `TRAP_MISSING_BASE_ADVERB_CLAUSE`：漏寫 `Jerome did badly...`。   - `SUCCESS_IRREGULAR_ADVERB`：學生已掌握 `badly → worse → the worst` 不規則三級變化，但因公式缺項失分。"
       },
       {
-        "trap_id": "W06_TRAP_US_CLASSROOM",
-        "sentence": "I think a new fish tank would brighten up us's classroom.",
-        "tokens": [
-          "I",
-          "think",
-          "a",
-          "new",
-          "fish",
-          "tank",
-          "would",
-          "brighten",
-          "up",
-          "us's",
-          "classroom."
-        ],
-        "wrong_index": 9,
-        "wrong_word": "us's",
-        "correct_word": "our",
-        "fixed_sentence": "I think a new fish tank would brighten up our classroom.",
-        "reason": "【W6 真題代名詞所有格】修飾名詞 classroom 必須用所有格代名詞 our（我們的），英文沒有 us's 或 our's！"
+        "id": "MB_TEA_W4_P06_C_Q3",
+        "week": "W4",
+        "point": "W4 實體考券 Grammar 3 (Unit 14) : 副詞三級比較長句合成",
+        "sentence": "A duck flew farther than an eagle, but a pigeon flew the farthest.",
+        "error_token_index": 0,
+        "correction": "An eagle flew far, a duck flew farther than an eagle, but a pigeon flew the farthest.",
+        "correct_text": "An eagle flew far, a duck flew farther than an eagle, but a pigeon flew the farthest.",
+        "explanation": "【Rex 當年失分盲點】：學生作答寫「A duck flew farther than an eagle, but a pigeon flew the farthest.」。- `TRAP_MISSING_BASE_ADVERB_CLAUSE`：漏寫 `An eagle flew far,`。   - `TRAP_PHONETIC_CONFUSION_L_R`：筆跡顯示曾出現 frew（/l/ 與 /r/ 拼寫混淆）。"
       },
       {
-        "trap_id": "W07_TRAP_SEVEN_SLICE_BREAD",
-        "sentence": "There are seven packet of breads on the table.",
-        "tokens": [
-          "There",
-          "are",
-          "seven",
-          "packet of breads",
-          "on",
-          "the",
-          "table."
-        ],
-        "wrong_index": 3,
-        "wrong_word": "packet of breads",
-        "correct_word": "slices of bread",
-        "fixed_sentence": "There are seven slices of bread on the table.",
-        "reason": "【W7 真題三連錯】① 切片吐司量詞用 slice；② seven 後量詞加 -s (slices)；③ 不可數名詞 bread 永遠不可加 -s！"
+        "id": "MB_TEA_W4_P06_C_Q4",
+        "week": "W4",
+        "point": "W4 實體考券 Grammar 3 (Unit 14) : 副詞三級比較長句合成",
+        "sentence": "A vampire laughed horribly than a witch, but a zoobie laughed the most horribly.",
+        "error_token_index": 0,
+        "correction": "A witch laughs horribly, a vampire laughs more horribly than a witch, but a zombie laughs the most horribly.",
+        "correct_text": "A witch laughs horribly, a vampire laughs more horribly than a witch, but a zombie laughs the most horribly.",
+        "explanation": "【Rex 當年失分盲點】：學生作答寫「A vampire laughed horribly than a witch, but a zoobie laughed the most horribly.」。- `TRAP_TENSE_MISMATCH_PRESENT_VS_PAST`：審題重大失誤！題幹是 `How do they laugh?`（現在簡單式），題幹特別備註 `The verb tense of your answer should match that of the question`，學生卻全寫成過去式 `laughed`。   - `TRAP_COMPARATIVE_MORE_OMISSION`：多音節副詞比較級漏寫 `more`（寫成 `horribly than` 而非 `more horribly than`）。   - `TRAP_SPELLING_ZOOBIE`：單字拼寫錯誤，將 zombie 寫成 `zoobie`。   - `TRAP_MISSING_BASE_ADVERB_CLAUSE`：漏寫第一段原級子句 `A witch laughs horribly,`。"
       },
       {
-        "trap_id": "W07_TRAP_FUTURE_SO_WILL",
-        "sentence": "Roger will see a new movie tomorrow, and so do Sean.",
-        "tokens": [
-          "Roger",
-          "will",
-          "see",
-          "a",
-          "new",
-          "movie",
-          "tomorrow,",
-          "and",
-          "so",
-          "do",
-          "Sean."
-        ],
-        "wrong_index": 9,
-        "wrong_word": "do",
-        "correct_word": "will",
-        "fixed_sentence": "Roger will see a new movie tomorrow, and so will Sean.",
-        "reason": "【W7 真題未來式倒裝附和】前句含有時間 tomorrow 為未來式 will see，倒裝附和必須對齊助動詞 so will Sean！"
+        "id": "MB_TEA_W4_P06_C_Q5",
+        "week": "W4",
+        "point": "W4 實體考券 Grammar 3 (Unit 14) : 副詞三級比較長句合成",
+        "sentence": "A tortoise moved more slowly than an old man, but a snail moved the most slowly",
+        "error_token_index": 0,
+        "correction": "An old man moved slowly, a tortoise moved more slowly than an old man, but a snail moved the most slowly.",
+        "correct_text": "An old man moved slowly, a tortoise moved more slowly than an old man, but a snail moved the most slowly.",
+        "explanation": "【Rex 當年失分盲點】：學生作答寫「A tortoise moved more slowly than an old man, but a snail moved the most slowly」。- `SUCCESS_COMPARATIVE_AND_SUPERLATIVE`：本題成功寫出 `more slowly than` 與 `the most slowly`，並正確配對過去式時態 `moved`。   - `TRAP_ARTICLE_AN_HANDWRITING`：不定冠詞 an 字跡潦草。"
       },
       {
-        "trap_id": "W07_TRAP_3RD_PERSON_DOESNT",
-        "sentence": "Rachel do not learn to play the piano, and Nicole doesn't, either.",
-        "tokens": [
-          "Rachel",
-          "do not",
-          "learn",
-          "to",
-          "play",
-          "the",
-          "piano,",
-          "and",
-          "Nicole",
-          "doesn't,",
-          "either."
-        ],
-        "wrong_index": 1,
-        "wrong_word": "do not",
-        "correct_word": "doesn't",
-        "fixed_sentence": "Rachel doesn't learn to play the piano, and Nicole doesn't, either.",
-        "reason": "【W7 真題單三否定助動詞】Rachel 是第三人稱單數，現在式否定必須用 doesn't (does not)，不可用 do not！"
+        "id": "MB_TEA_W5_P08_B_Q1",
+        "week": "W5",
+        "point": "W5 實體考券 Grammar 3 (Unit 14) : 副詞三級比較長句合成",
+        "sentence": "A dog runs faster than a person, but lion can run fastest.",
+        "error_token_index": 0,
+        "correction": "A person runs fast, a dog runs faster than a person, but a lion runs the fastest.",
+        "correct_text": "A person runs fast, a dog runs faster than a person, but a lion runs the fastest.",
+        "explanation": "【Rex 當年失分盲點】：學生作答寫「A dog runs faster than a person, but lion can run fastest.」。- `TRAP_ARTICLE_OMISSION_A`：單數可數名詞 lion 漏加不定冠詞 a。   - `TRAP_SUPERLATIVE_THE_OMISSION`：最高級副詞 fastest 前漏加定冠詞 the（學生雖在頂部草稿寫了 the est，答題時仍漏掉）。   - `TRAP_MODAL_VERB_INSERTION`：題幹問 `do they run`，學生後半句突然多出情態助動詞 `can run`。"
       },
       {
-        "trap_id": "W07_TRAP_MODAL_NEITHER_CAN",
-        "sentence": "Penguins can't fly in the sky, and neither do ostriches.",
-        "tokens": [
-          "Penguins",
-          "can't",
-          "fly",
-          "in",
-          "the",
-          "sky,",
-          "and",
-          "neither",
-          "do",
-          "ostriches."
-        ],
-        "wrong_index": 8,
-        "wrong_word": "do",
-        "correct_word": "can",
-        "fixed_sentence": "Penguins can't fly in the sky, and neither can ostriches.",
-        "reason": "【W7 真題情態助動詞附和】前句是情態助動詞 can't，倒裝附和必須沿用 can (neither can ostriches)，不可慣性寫 do！"
+        "id": "MB_TEA_W5_P08_B_Q2",
+        "week": "W5",
+        "point": "W5 實體考券 Grammar 3 (Unit 14) : 副詞三級比較長句合成",
+        "sentence": "An eight year old can walk more than a five year old, but an adult can walk the most quickly.",
+        "error_token_index": 0,
+        "correction": "A five year old can walk quickly, an eight year old can walk more quickly than a five year old, but an adult can walk the most quickly.",
+        "correct_text": "A five year old can walk quickly, an eight year old can walk more quickly than a five year old, but an adult can walk the most quickly.",
+        "explanation": "【Rex 當年失分盲點】：學生作答寫「An eight year old can walk more than a five year old, but an adult can walk the most quickly.」。- `TRAP_ADVERB_OMISSION_IN_COMPARATIVE`：多音節副詞比較級漏寫副詞本體，誤寫為 `more than`（正確應為 `more quickly than`）。   - `SUCCESS_SUPERLATIVE_STRUCTURE`：後半句 `the most quickly` 結構完整正確。"
       },
       {
-        "trap_id": "W07_TRAP_SUPERLATIVE_VERB_IS",
-        "sentence": "Penny sings more beautifully than Eric, but Anne is the most beautifully.",
-        "tokens": [
-          "Penny",
-          "sings",
-          "more",
-          "beautifully",
-          "than",
-          "Eric,",
-          "but",
-          "Anne",
-          "is",
-          "the",
-          "most",
-          "beautifully."
-        ],
-        "wrong_index": 8,
-        "wrong_word": "is",
-        "correct_word": "sings",
-        "fixed_sentence": "Penny sings more beautifully than Eric, but Anne sings the most beautifully.",
-        "reason": "【W7 真題高頻失分：最高級子句把一般動詞換成 is】修飾唱歌 beautifully 必須搭配一般動詞 sings (Anne sings the most beautifully)，絕不能寫 Anne is！"
+        "id": "MB_TEA_W5_P08_B_Q3",
+        "week": "W5",
+        "point": "W5 實體考券 Grammar 3 (Unit 14) : 副詞三級比較長句合成",
+        "sentence": "A rabbit can jump further than a frog, but kangaroo can jump the furthest.",
+        "error_token_index": 0,
+        "correction": "A frog can jump far, a rabbit can jump farther than a frog, but a kangaroo can jump the farthest.",
+        "correct_text": "A frog can jump far, a rabbit can jump farther than a frog, but a kangaroo can jump the farthest.",
+        "explanation": "【Rex 當年失分盲點】：學生作答寫「A rabbit can jump further than a frog, but kangaroo can jump the furthest.」。- `TRAP_ARTICLE_OMISSION_A`：袋鼠 kangaroo 前漏加不定冠詞 a。   - `SUCCESS_IRREGULAR_FAR`：成功寫出 `further / farthest`（或 farther / farthest）不規則變化。"
       },
       {
-        "trap_id": "W07_TRAP_WELL_BETTER_WILL",
-        "sentence": "Ingrid did will on her homework than Hank, but Jeremy did the best.",
-        "tokens": [
-          "Ingrid",
-          "did",
-          "will",
-          "on",
-          "her",
-          "homework",
-          "than",
-          "Hank,",
-          "but",
-          "Jeremy",
-          "did",
-          "the",
-          "best."
-        ],
-        "wrong_index": 2,
-        "wrong_word": "will",
-        "correct_word": "better",
-        "fixed_sentence": "Ingrid did better on her homework than Hank, but Jeremy did the best.",
-        "reason": "【W7 真題不規則副詞 well】well 的比較級是不規則變化 better（well ➔ better ➔ the best），不可寫成 will！"
+        "id": "MB_TEA_W5_P08_C_Q2",
+        "week": "W5",
+        "point": "W5 實體考券 Write Right 3 (Unit 5) 假設語氣與預算分配作文",
+        "sentence": "- 第一格：",
+        "error_token_index": 0,
+        "correction": "First, I love fair rides, so I would go to an amusement park with my friends.",
+        "correct_text": "First, I love fair rides, so I would go to an amusement park with my friends.",
+        "explanation": "【Rex 當年失分盲點】：學生作答寫「- 第一格：」。- `TRAP_ARTICLE_AN_OMISSION`：amusement 為母音 /ə/ 開頭，漏加不定冠詞 an（寫成 go to amusement park）。  ---"
       },
       {
-        "trap_id": "W07_TRAP_EASILY_EASILIER",
-        "sentence": "I can learn science easilier than maths, but I learn Chinese the most easily.",
-        "tokens": [
-          "I",
-          "can",
-          "learn",
-          "science",
-          "easilier",
-          "than",
-          "maths,",
-          "but",
-          "I",
-          "learn",
-          "Chinese",
-          "the",
-          "most",
-          "easily."
-        ],
-        "wrong_index": 4,
-        "wrong_word": "easilier",
-        "correct_word": "more easily",
-        "fixed_sentence": "I can learn science more easily than maths, but I learn Chinese the most easily.",
-        "reason": "【W7 真題自創字錯誤】副詞 easily 以 -ly 結尾，比較級與最高級必須用 more easily / the most easily，沒有 easilier 這個字！"
+        "id": "MB_TEA_W5_P08_C_Q3",
+        "week": "W5",
+        "point": "W5 實體考券 Write Right 3 (Unit 5) 假設語氣與預算分配作文",
+        "sentence": "I would share some with sister.",
+        "error_token_index": 0,
+        "correction": "Next, I would share some of the money with my sister.",
+        "correct_text": "Next, I would share some of the money with my sister.",
+        "explanation": "【Rex 當年失分盲點】：學生作答寫「I would share some with sister.」。- `TRAP_POSSESSIVE_PRONOUN_OMISSION`：稱呼家庭成員漏加所有格代名詞 my（寫成 with sister 而非 with my sister）。  ---"
       },
       {
-        "trap_id": "W07_TRAP_BADLY_WORSE_WORST",
-        "sentence": "Ted plays the electric guitar badly than Fred, but Bill plays the worst.",
-        "tokens": [
-          "Ted",
-          "plays",
-          "the",
-          "electric",
-          "guitar",
-          "badly",
-          "than",
-          "Fred,",
-          "but",
-          "Bill",
-          "plays",
-          "the",
-          "worst."
-        ],
-        "wrong_index": 5,
-        "wrong_word": "badly",
-        "correct_word": "worse",
-        "fixed_sentence": "Ted plays the electric guitar worse than Fred, but Bill plays the worst.",
-        "reason": "【W7 真題不規則副詞 badly】badly 的三級變化為 badly ➔ worse ➔ the worst，看到後方有 than 必須用比較級 worse！"
+        "id": "MB_TEA_W5_P08_C_Q4",
+        "week": "W5",
+        "point": "W5 實體考券 Write Right 3 (Unit 5) 假設語氣與預算分配作文",
+        "sentence": "share money with my family.",
+        "error_token_index": 0,
+        "correction": "I think it is important to share money with your family.",
+        "correct_text": "I think it is important to share money with your family.",
+        "explanation": "【Rex 當年失分盲點】：學生作答寫「share money with my family.」。- `TRAP_CLAUSE_STRUCTURE_IT_IS_IMPORTANT`：提綱中給定 `important to share → family`，學生未轉換為虛主詞名詞子句 `it is important to + V`，直接寫 `share money...`，喪失句子結構完整性。  ---"
+      },
+      {
+        "id": "MB_TEA_W5_P08_C_Q7",
+        "week": "W5",
+        "point": "W5 實體考券 Write Right 3 (Unit 5) 假設語氣與預算分配作文",
+        "sentence": "be great to have 6000 dollars.",
+        "error_token_index": 0,
+        "correction": "Wouldn't it be great to have 6000 dollars?",
+        "correct_text": "Wouldn't it be great to have 6000 dollars?",
+        "explanation": "【Rex 當年失分盲點】：學生作答寫「be great to have 6000 dollars.」。`OK_EXCELLENT`（否定反問句 Wouldn't it be great to... 掌握完美）。  ---  ## 頁尾資訊 (Footer) - `TIGER ENGLISH ACADEMY © 2022 COPYRIGHT RESERVED` - 頁碼：`- 8 -`  ================================================================================ 🤖 【AI 考券教研與變式出題增強區塊 (AI_SPEC)】 ================================================================================ ```yaml AI_SPEC:   exam_id: \"TEA_3C_QUIZ_W05_P08\"   grade_level: \"Grade 6 (Age 12)\"   cefr_alignment: \"A2\"   target_skills:     - \"Adverb Clause Comparison (How fast / quickly / far)\"     - \"Conditional Sentences (If I had... I would...)\"     - \"Financial Allocation & Budgeting Vocabulary\"   error_analysis_matrix:     - trap_id: \"TRAP_ARTICLE_OMISSION_A\"       title: \"可數單數名詞漏加冠詞 a / an\"       student_error: \"lion can run / with sister / amusement park\"       correction: \"a lion / my sister / an amusement park\"       pedagogical_remedy: \"強調可數名詞單數絕不可裸奔，前面必須有 a/an、the 或所有格 my。\"     - trap_id: \"TRAP_CLAUSE_STRUCTURE_IT_IS_IMPORTANT\"       title: \"think 後引導之子句遺漏虛主詞結構\"       student_error: \"I think share money with my family\"       correction: \"I think it is important to share money with my family\"       pedagogical_remedy: \"動詞 think 後面需接完整子句，看到形容詞 important 時必須聯動 'it is important to + V'。\"   writing_prompt_generator:     template_name: \"Hypothetical Budget Allocation ($10,000)\"     sentence_stems:       - \"If I had 10,000 dollars, I would do three things:\"       - \"First, I would [Action 1], because [Reason].\"       - \"Next, I would share some of the money with [Family Member].\"       - \"Finally, I would spend [Amount] on myself to buy [Item].\"       - \"With the rest of the money, I would [Action 2].\"       - \"Wouldn't it be great to have 10,000 dollars?\" ```"
+      },
+      {
+        "id": "MB_TEA_W6_P09_A_7",
+        "week": "W6",
+        "point": "W6 實體考券 Discover 3 (Unit 15) : Spelling 核心考點",
+        "sentence": "In the test, student wrote 'nector' instead of 'nectar'.",
+        "error_token_index": 5,
+        "correction": "nectar",
+        "correct_text": "nectar",
+        "explanation": "【Rex 當年筆記】：學生原始作答「nector」。TRAP_SCHWA_ENDING_AR_VS_OR（花蜜 nectar 字尾弱讀音 /ər/ 誤拼為 -or）"
+      },
+      {
+        "id": "MB_TEA_W6_P09_A_8",
+        "week": "W6",
+        "point": "W6 實體考券 Discover 3 (Unit 15) : Spelling 核心考點",
+        "sentence": "In the test, student wrote 'patels' instead of 'petals'.",
+        "error_token_index": 5,
+        "correction": "petals",
+        "correct_text": "petals",
+        "explanation": "【Rex 當年筆記】：學生原始作答「patels」。TRAP_VOWEL_SWAP_E_AND_A（花瓣 petals 的 e 與 a 位置對調誤寫為 patels）"
+      },
+      {
+        "id": "MB_TEA_W6_P09_A_16",
+        "week": "W6",
+        "point": "W6 實體考券 Discover 3 (Unit 15) : Spelling 核心考點",
+        "sentence": "In the test, student wrote 'secend' instead of 'second'.",
+        "error_token_index": 5,
+        "correction": "second",
+        "correct_text": "second",
+        "explanation": "【Rex 當年筆記】：學生原始作答「secend」。TRAP_SCHWA_VOWEL_O_TO_E（second 第二音節為 o，誤寫為 secend）"
+      },
+      {
+        "id": "MB_TEA_W6_P09_B_1",
+        "week": "W6",
+        "point": "W6 實體考券 Reading with Writing 6 (Units 7 & 8) : Spelling 核心考點",
+        "sentence": "In the test, student wrote 'Maxican' instead of 'Mexican'.",
+        "error_token_index": 5,
+        "correction": "Mexican",
+        "correct_text": "Mexican",
+        "explanation": "【Rex 當年筆記】：學生原始作答「Maxican」。TRAP_PROPER_NOUN_VOWEL_E_VS_A（墨西哥人/語 Mexican 首音節為 Mex- 而非 Max-）"
+      },
+      {
+        "id": "MB_TEA_W6_P09_B_2",
+        "week": "W6",
+        "point": "W6 實體考券 Reading with Writing 6 (Units 7 & 8) : Spelling 核心考點",
+        "sentence": "In the test, student wrote 'langauges' instead of 'language'.",
+        "error_token_index": 5,
+        "correction": "language",
+        "correct_text": "language",
+        "explanation": "【Rex 當年筆記】：學生原始作答「langauges」。TRAP_DIPHTHONG_UA_VS_AU（language 的 -gua- 誤倒置為 -gau-，且誤加複數 s）"
+      },
+      {
+        "id": "MB_TEA_W6_P09_B_3",
+        "week": "W6",
+        "point": "W6 實體考券 Reading with Writing 6 (Units 7 & 8) : Spelling 核心考點",
+        "sentence": "In the test, student wrote 'offical' instead of 'official'.",
+        "error_token_index": 5,
+        "correction": "official",
+        "correct_text": "official",
+        "explanation": "【Rex 當年筆記】：學生原始作答「offical」。TRAP_SUFFIX_CIAL_MISSING_I（official 字尾為 -cial 發 /ʃəl/，漏寫 i 變成 offical）"
+      },
+      {
+        "id": "MB_TEA_W6_P09_B_6",
+        "week": "W6",
+        "point": "W6 實體考券 Reading with Writing 6 (Units 7 & 8) : Spelling 核心考點",
+        "sentence": "In the test, student wrote 'goverment' instead of 'government'.",
+        "error_token_index": 5,
+        "correction": "government",
+        "correct_text": "government",
+        "explanation": "【Rex 當年筆記】：學生原始作答「goverment」。TRAP_SILENT_N_IN_GOVERNMENT（govern + ment 中間的 n 常因口語連音被漏寫）"
+      },
+      {
+        "id": "MB_TEA_W6_P09_B_7",
+        "week": "W6",
+        "point": "W6 實體考券 Reading with Writing 6 (Units 7 & 8) : Spelling 核心考點",
+        "sentence": "In the test, student wrote 'franch' instead of 'French'.",
+        "error_token_index": 5,
+        "correction": "French",
+        "correct_text": "French",
+        "explanation": "【Rex 當年筆記】：學生原始作答「franch」。TRAP_LANGUAGE_CAPITALIZATION_AND_VOWEL（語言專有名詞 F 未大寫，且短母音 e 誤寫為 a）"
+      },
+      {
+        "id": "MB_TEA_W6_P09_B_10",
+        "week": "W6",
+        "point": "W6 實體考券 Reading with Writing 6 (Units 7 & 8) : Spelling 核心考點",
+        "sentence": "In the test, student wrote 'contries' instead of 'countries'.",
+        "error_token_index": 5,
+        "correction": "countries",
+        "correct_text": "countries",
+        "explanation": "【Rex 當年筆記】：學生原始作答「contries」。TRAP_OU_VOWEL_OMISSION（country / countries 漏寫 u 變成 contries）"
+      },
+      {
+        "id": "MB_TEA_W6_P09_B_11",
+        "week": "W6",
+        "point": "W6 實體考券 Reading with Writing 6 (Units 7 & 8) : Spelling 核心考點",
+        "sentence": "In the test, student wrote 'exemple' instead of 'example'.",
+        "error_token_index": 5,
+        "correction": "example",
+        "correct_text": "example",
+        "explanation": "【Rex 當年筆記】：學生原始作答「exemple」。TRAP_VOWEL_A_TO_E_CONFUSION（example 第二音節 /zæm/ 誤拼為 exem-）"
+      },
+      {
+        "id": "MB_TEA_W6_P09_B_12",
+        "week": "W6",
+        "point": "W6 實體考券 Reading with Writing 6 (Units 7 & 8) : Spelling 核心考點",
+        "sentence": "In the test, student wrote 'manderin' instead of 'Mandarin'.",
+        "error_token_index": 5,
+        "correction": "Mandarin",
+        "correct_text": "Mandarin",
+        "explanation": "【Rex 當年筆記】：學生原始作答「manderin」。TRAP_PROPER_NOUN_MANDARIN（中文普通話 Mandarin 首字母 M 需大寫，且第二音節為 -da- 非 -de-）"
+      },
+      {
+        "id": "MB_TEA_W6_P09_B_13",
+        "week": "W6",
+        "point": "W6 實體考券 Reading with Writing 6 (Units 7 & 8) : Spelling 核心考點",
+        "sentence": "In the test, student wrote 'thoudnd' instead of 'thousand'.",
+        "error_token_index": 5,
+        "correction": "thousand",
+        "correct_text": "thousand",
+        "explanation": "【Rex 當年筆記】：學生原始作答「thoudnd」。TRAP_THOUSAND_SPELLING_COLLAPSE（thousand = thou + sand，漏寫 sa 變成 thoudnd）"
+      },
+      {
+        "id": "MB_TEA_W6_P09_B_14",
+        "week": "W6",
+        "point": "W6 實體考券 Reading with Writing 6 (Units 7 & 8) : Spelling 核心考點",
+        "sentence": "In the test, student wrote 'infecte' instead of 'in fact'.",
+        "error_token_index": 5,
+        "correction": "in fact",
+        "correct_text": "in fact",
+        "explanation": "【Rex 當年筆記】：學生原始作答「infecte」。TRAP_PHRASE_HEARD_AS_SINGLE_WORD（將雙字轉折片語 in fact「事實上」誤聽為單字 infecte）"
+      },
+      {
+        "id": "MB_TEA_W6_P10_C_1",
+        "week": "W6",
+        "point": "W6 實體考券 Write Right 3 (Unit 5) — 14 Errors Proofreading 核心考點",
+        "sentence": "In the test, student wrote '劃掉 Have 改寫 Had' instead of 'Had'.",
+        "error_token_index": 5,
+        "correction": "Had",
+        "correct_text": "Had",
+        "explanation": "【Rex 當年筆記】：學生原始作答「劃掉 Have 改寫 Had」。與現在事實相反假設語氣標題用 If I Had..."
+      },
+      {
+        "id": "MB_TEA_W6_P10_C_2",
+        "week": "W6",
+        "point": "W6 實體考券 Write Right 3 (Unit 5) — 14 Errors Proofreading 核心考點",
+        "sentence": "In the test, student wrote '劃掉 dollar 改寫 dollars' instead of 'dollars'.",
+        "error_token_index": 5,
+        "correction": "dollars",
+        "correct_text": "dollars",
+        "explanation": "【Rex 當年筆記】：學生原始作答「劃掉 dollar 改寫 dollars」。3000 後方複數名詞加 -s"
+      },
+      {
+        "id": "MB_TEA_W6_P10_C_3",
+        "week": "W6",
+        "point": "W6 實體考券 Write Right 3 (Unit 5) — 14 Errors Proofreading 核心考點",
+        "sentence": "In the test, student wrote '劃掉 thing 改寫 things' instead of 'things'.",
+        "error_token_index": 5,
+        "correction": "things",
+        "correct_text": "things",
+        "explanation": "【Rex 當年筆記】：學生原始作答「劃掉 thing 改寫 things」。three 後方複數名詞加 -s"
+      },
+      {
+        "id": "MB_TEA_W6_P10_C_4",
+        "week": "W6",
+        "point": "W6 實體考券 Write Right 3 (Unit 5) — 14 Errors Proofreading 核心考點",
+        "sentence": "In the test, student wrote '❌ **未發現漏字**' instead of 'go to a baseball game'.",
+        "error_token_index": 5,
+        "correction": "go to a baseball game",
+        "correct_text": "go to a baseball game",
+        "explanation": "【Rex 當年筆記】：學生原始作答「❌ **未發現漏字**」。go 為不及物動詞，接地點/活動名詞必須加介系詞 to"
+      },
+      {
+        "id": "MB_TEA_W6_P10_C_5",
+        "week": "W6",
+        "point": "W6 實體考券 Write Right 3 (Unit 5) — 14 Errors Proofreading 核心考點",
+        "sentence": "In the test, student wrote '劃掉 him 改寫 them' instead of 'them'.",
+        "error_token_index": 5,
+        "correction": "them",
+        "correct_text": "them",
+        "explanation": "【Rex 當年筆記】：學生原始作答「劃掉 him 改寫 them」。指代家人們 (my family 成員) 受格用 them"
+      },
+      {
+        "id": "MB_TEA_W6_P10_C_6",
+        "week": "W6",
+        "point": "W6 實體考券 Write Right 3 (Unit 5) — 14 Errors Proofreading 核心考點",
+        "sentence": "In the test, student wrote '在 I 與 buy 間插入 would' instead of 'Next, I would buy'.",
+        "error_token_index": 5,
+        "correction": "Next, I would buy",
+        "correct_text": "Next, I would buy",
+        "explanation": "【Rex 當年筆記】：學生原始作答「在 I 與 buy 間插入 would」。假設語氣全文主要子句皆須維持 would + V"
+      },
+      {
+        "id": "MB_TEA_W6_P10_C_7",
+        "week": "W6",
+        "point": "W6 實體考券 Write Right 3 (Unit 5) — 14 Errors Proofreading 核心考點",
+        "sentence": "In the test, student wrote '❌ 誤將正確的 it 改成 you' instead of 'it (原字正確)'.",
+        "error_token_index": 5,
+        "correction": "it (原字正確)",
+        "correct_text": "it (原字正確)",
+        "explanation": "【Rex 當年筆記】：學生原始作答「❌ 誤將正確的 it 改成 you」。it 指代前句的 a fish tank，本來就是對的"
+      },
+      {
+        "id": "MB_TEA_W6_P10_C_8",
+        "week": "W6",
+        "point": "W6 實體考券 Write Right 3 (Unit 5) — 14 Errors Proofreading 核心考點",
+        "sentence": "In the test, student wrote '先寫 our's 後改寫 our' instead of 'our classroom'.",
+        "error_token_index": 5,
+        "correction": "our classroom",
+        "correct_text": "our classroom",
+        "explanation": "【Rex 當年筆記】：學生原始作答「先寫 our's 後改寫 our」。形容詞性所有格為 our，絕對沒有 us's 或 our's"
+      },
+      {
+        "id": "MB_TEA_W6_P10_C_9",
+        "week": "W6",
+        "point": "W6 實體考券 Write Right 3 (Unit 5) — 14 Errors Proofreading 核心考點",
+        "sentence": "In the test, student wrote '劃掉 First 改寫 Finally' instead of 'Finally,'.",
+        "error_token_index": 5,
+        "correction": "Finally,",
+        "correct_text": "Finally,",
+        "explanation": "【Rex 當年筆記】：學生原始作答「劃掉 First 改寫 Finally」。順序轉折詞：First ➔ Next ➔ Finally"
+      },
+      {
+        "id": "MB_TEA_W6_P10_C_10",
+        "week": "W6",
+        "point": "W6 實體考券 Write Right 3 (Unit 5) — 14 Errors Proofreading 核心考點",
+        "sentence": "In the test, student wrote '劃掉 meself 改寫 myself' instead of 'myself'.",
+        "error_token_index": 5,
+        "correction": "myself",
+        "correct_text": "myself",
+        "explanation": "【Rex 當年筆記】：學生原始作答「劃掉 meself 改寫 myself」。第一人稱反身代名詞為 myself"
+      },
+      {
+        "id": "MB_TEA_W6_P10_C_11",
+        "week": "W6",
+        "point": "W6 實體考券 Write Right 3 (Unit 5) — 14 Errors Proofreading 核心考點",
+        "sentence": "In the test, student wrote '❌ **未發現同音異字錯誤**' instead of 'I would buy'.",
+        "error_token_index": 5,
+        "correction": "I would buy",
+        "correct_text": "I would buy",
+        "explanation": "【Rex 當年筆記】：學生原始作答「❌ **未發現同音異字錯誤**」。介系詞 by 與動詞 buy (購買) 同音異字混淆"
+      },
+      {
+        "id": "MB_TEA_W6_P10_C_12",
+        "week": "W6",
+        "point": "W6 實體考券 Write Right 3 (Unit 5) — 14 Errors Proofreading 核心考點",
+        "sentence": "In the test, student wrote '劃掉 book 改寫 books' instead of 'books'.",
+        "error_token_index": 5,
+        "correction": "books",
+        "correct_text": "books",
+        "explanation": "【Rex 當年筆記】：學生原始作答「劃掉 book 改寫 books」。some 後接可數名詞複數 comic books"
+      },
+      {
+        "id": "MB_TEA_W6_P10_C_13",
+        "week": "W6",
+        "point": "W6 實體考券 Write Right 3 (Unit 5) — 14 Errors Proofreading 核心考點",
+        "sentence": "In the test, student wrote '劃掉 spend 改寫 cost（另誤將 They 改 It's 與句尾加 dollars）' instead of 'They would cost me'.",
+        "error_token_index": 5,
+        "correction": "They would cost me",
+        "correct_text": "They would cost me",
+        "explanation": "【Rex 當年筆記】：學生原始作答「劃掉 spend 改寫 cost（另誤將 They 改 It's 與句尾加 dollars）」。物品當主詞時花費動詞用 cost 不用 spend；已有 $ 符號不必再寫 dollars"
+      },
+      {
+        "id": "MB_TEA_W6_P10_C_14",
+        "week": "W6",
+        "point": "W6 實體考券 Write Right 3 (Unit 5) — 14 Errors Proofreading 核心考點",
+        "sentence": "In the test, student wrote '僅在 of 後補 the (rest of the money)' instead of 'With the rest of the money'.",
+        "error_token_index": 5,
+        "correction": "With the rest of the money",
+        "correct_text": "With the rest of the money",
+        "explanation": "【Rex 當年筆記】：學生原始作答「僅在 of 後補 the (rest of the money)」。固定片語『用剩下的錢』必須有兩個定冠詞：With the rest of the money"
+      },
+      {
+        "id": "MB_TEA_W7_P11_A_3",
+        "week": "W7",
+        "point": "W7 實體考券 Grammar 3 (Unit 15) — Measure Words (Containers) 核心考點",
+        "sentence": "In the test, student wrote 'There are two cans of tomatoes. (cans 字跡略像 caks)' instead of 'There are two cans of tomatoes.'.",
+        "error_token_index": 5,
+        "correction": "There are two cans of tomatoes.",
+        "correct_text": "There are two cans of tomatoes.",
+        "explanation": "【Rex 當年筆記】：學生原始作答「There are two cans of tomatoes. (cans 字跡略像 caks)」。TRAP_HANDWRITING_N_VS_K"
+      },
+      {
+        "id": "MB_TEA_W7_P11_A_4",
+        "week": "W7",
+        "point": "W7 實體考券 Grammar 3 (Unit 15) — Measure Words (Containers) 核心考點",
+        "sentence": "In the test, student wrote 'There is a bar of chocolatet.' instead of 'There is a bar of chocolate.'.",
+        "error_token_index": 5,
+        "correction": "There is a bar of chocolate.",
+        "correct_text": "There is a bar of chocolate.",
+        "explanation": "【Rex 當年筆記】：學生原始作答「There is a bar of chocolatet.」。TRAP_SPELLING_EXTRA_T（題幹左方已印有 chocolate，抄寫時字尾多寫 t）"
+      },
+      {
+        "id": "MB_TEA_W7_P11_A_6",
+        "week": "W7",
+        "point": "W7 實體考券 Grammar 3 (Unit 15) — Measure Words (Containers) 核心考點",
+        "sentence": "In the test, student wrote 'There are seven packet of breads.' instead of 'There are seven slices of bread.'.",
+        "error_token_index": 5,
+        "correction": "There are seven slices of bread.",
+        "correct_text": "There are seven slices of bread.",
+        "explanation": "【Rex 當年筆記】：學生原始作答「There are seven packet of breads.」。TRAP_SLICE_OF_BREAD_TRIPLE_ERROR（① 切片吐司應用 slice 非 packet；② seven 後量詞漏加 s；③ 不可數名詞 bread 誤加 s）"
       }
     ],
     "quizzes": [
       {
-        "id": "TEA_LIST_01",
+        "id": "TEA_W2_P01_A_1",
+        "week": "W2",
+        "page": 1,
+        "part": "Part A",
+        "part_title": "Discover 3 (Unit 13) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
         "type": "spelling_listen",
-        "category_tag": "listening",
-        "question": "請聽電腦發音，在紙上拼寫出這個核心單字：",
-        "hint": "簡單機械工具：槓桿",
-        "audio_word": "lever",
-        "phonetic": "/ˈliːvər/",
-        "syllables": "le · ver",
+        "question": "【W2 歷史真卷·Discover 3 (Unit 13) : Spelling】第 1 題：請聽音並在紙上拼寫出單字",
         "answer": "lever",
+        "ipa": "/lever/",
+        "vocab_card": {
+          "word": "lever",
+          "pos": "名詞 (Noun)",
+          "chi": "槓桿（簡單機械）",
+          "ipa": "/lever/",
+          "breakdown": "源自法語 lever (抬起/舉起) -> 用支點撬動重物的桿子。",
+          "trick": "諧音「拉吧」。用力「拉吧 (lever)」，槓桿就能把大石頭撬起來！",
+          "collocation": "搭配: pull the lever (拉動槓桿)｜例: A seesaw is a lever.",
+          "context_eng": "A seesaw on the playground is a kind of lever.",
+          "context_chi": "遊樂場裡的蹺蹺板是一種槓桿。",
+          "compare": "lever (槓桿) vs. clever (聰明的) vs. never (從不) — 拼寫超像三兄弟！"
+        },
+        "difficulty": "★★★☆☆",
         "explanation": {
-          "concept": "ODG3 U13 / W02 小考核心單字：槓桿",
-          "formula": "雙音節詞 le-ver，母音為 /iː/ 與 /ər/。",
-          "trap": "注意字尾為 -er，不要寫成 -or。"
+          "point": "W2 實體考券 Discover 3 (Unit 13) : Spelling 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：lever"
         }
       },
       {
-        "id": "TEA_LIST_02",
+        "id": "TEA_W2_P01_A_2",
+        "week": "W2",
+        "page": 1,
+        "part": "Part A",
+        "part_title": "Discover 3 (Unit 13) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
         "type": "spelling_listen",
-        "category_tag": "listening",
-        "question": "請聽電腦發音，在紙上拼寫出這個核心單字：",
-        "hint": "簡單機械工具：斜坡道",
-        "audio_word": "ramp",
-        "phonetic": "/ræmp/",
-        "syllables": "ramp",
+        "question": "【W2 歷史真卷·Discover 3 (Unit 13) : Spelling】第 2 題：請聽音並在紙上拼寫出單字",
         "answer": "ramp",
+        "ipa": "/ræmp/",
+        "vocab_card": {
+          "pos": "n.",
+          "chi": "斜面；斜坡道（簡單機械）",
+          "ipa": "/ræmp/",
+          "breakdown": "ramp (傾斜支撐面)",
+          "trick": "推推車上「浪（ramp）板斜坡」比較省力！",
+          "collocation": "wheelchair ramp (輪椅斜坡道)",
+          "context_eng": "He pushed the heavy box up the ramp into the truck.",
+          "context_chi": "他將沉重的箱子沿著斜面推進卡車裡。",
+          "compare": "斜面 (inclined plane) 的生活常用口語詞",
+          "word": "ramp"
+        },
+        "difficulty": "★★★☆☆",
         "explanation": {
-          "concept": "ODG3 U13 / W02 小考核心單字：斜坡",
-          "formula": "單音節詞，/æ/ 母音 + 子音群 -mp。",
-          "trap": "發音注意不要與 lamp (檯燈) 混淆，首字母是 r。"
+          "point": "W2 實體考券 Discover 3 (Unit 13) : Spelling 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：ramp"
         }
       },
       {
-        "id": "TEA_LIST_03",
+        "id": "TEA_W2_P01_A_3",
+        "week": "W2",
+        "page": 1,
+        "part": "Part A",
+        "part_title": "Discover 3 (Unit 13) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
         "type": "spelling_listen",
-        "category_tag": "listening",
-        "question": "請聽電腦發音，在紙上拼寫出這個核心單字：",
-        "hint": "簡單機械工具：楔子，三角木",
-        "audio_word": "wedge",
-        "phonetic": "/wedʒ/",
-        "syllables": "wedge",
+        "question": "【W2 歷史真卷·Discover 3 (Unit 13) : Spelling】第 3 題：請聽音並在紙上拼寫出單字",
         "answer": "wedge",
+        "ipa": "/wedge/",
+        "vocab_card": {
+          "word": "wedge",
+          "pos": "名詞 (Noun)",
+          "chi": "楔子 / 三角木（簡單機械）",
+          "ipa": "/wedge/",
+          "breakdown": "古英語 wecg -> 一端厚、一端薄呈三角形，用來劈開木頭或卡住門的簡單機械。",
+          "trick": "⚠️ 岱崙 W2 考卷真實失分字！Rex 曾拼成『wadge ❌』！口訣：跟 edge (邊緣)、bed (床) 一樣，中間是短母音 e，絕對不是 a！",
+          "collocation": "搭配: a wooden wedge (木楔子)｜同類機械: lever, ramp, screw, wheel and axle",
+          "context_eng": "He hammered a wooden wedge into the log.",
+          "context_chi": "他把一塊木楔子敲進原木裡。",
+          "compare": "wedge (楔子 - 母音 e) vs. ❌wadge (錯誤拼法)。"
+        },
+        "difficulty": "★★★☆☆",
         "explanation": {
-          "concept": "ODG3 U13 / W02 小考高頻失分詞：楔子",
-          "formula": "短母音 /e/ + dge 發 /dʒ/ 音（如 bridge, edge, wedge）。",
-          "trap": "考場真實失分：孩子曾誤寫為 wadge ❌！切記母音為 e。"
+          "point": "W2 實體考券 Discover 3 (Unit 13) : Spelling 核心考點",
+          "trap": "【Rex 當年筆記】：學生原始作答「wadge」。TRAP_PHONETIC_SPELLING_E_VS_A（母音 /e/ 與 /æ/ 混淆）",
+          "note": "標準官方批改：wedge"
         }
       },
       {
-        "id": "TEA_LIST_04",
+        "id": "TEA_W2_P01_A_4",
+        "week": "W2",
+        "page": 1,
+        "part": "Part A",
+        "part_title": "Discover 3 (Unit 13) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
         "type": "spelling_listen",
-        "category_tag": "listening",
-        "question": "請聽電腦發音，在紙上拼寫出這個核心單字：",
-        "hint": "廚房與切割工具：小刀",
-        "audio_word": "knife",
-        "phonetic": "/naɪf/",
-        "syllables": "knife",
+        "question": "【W2 歷史真卷·Discover 3 (Unit 13) : Spelling】第 4 題：請聽音並在紙上拼寫出單字",
+        "answer": "screw",
+        "ipa": "/screw/",
+        "vocab_card": {
+          "word": "screw",
+          "pos": "n.",
+          "chi": "考券核心字彙",
+          "ipa": "/screw/",
+          "breakdown": "單字拼寫記憶：screw",
+          "trick": "熟記發音音節以精準拼寫 screw",
+          "collocation": "screw",
+          "context_eng": "Rex practiced writing screw in the 3C quiz.",
+          "context_chi": "Rex 在小考中精準默寫出 screw。",
+          "compare": "注意大小寫與字母順序"
+        },
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W2 實體考券 Discover 3 (Unit 13) : Spelling 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：screw"
+        }
+      },
+      {
+        "id": "TEA_W2_P01_A_5",
+        "week": "W2",
+        "page": 1,
+        "part": "Part A",
+        "part_title": "Discover 3 (Unit 13) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "spelling_listen",
+        "question": "【W2 歷史真卷·Discover 3 (Unit 13) : Spelling】第 5 題：請聽音並在紙上拼寫出單字",
+        "answer": "lightbulb",
+        "ipa": "/lightbulb/",
+        "vocab_card": {
+          "word": "lightbulb",
+          "pos": "n.",
+          "chi": "考券核心字彙",
+          "ipa": "/lightbulb/",
+          "breakdown": "單字拼寫記憶：lightbulb",
+          "trick": "熟記發音音節以精準拼寫 lightbulb",
+          "collocation": "lightbulb",
+          "context_eng": "Rex practiced writing lightbulb in the 3C quiz.",
+          "context_chi": "Rex 在小考中精準默寫出 lightbulb。",
+          "compare": "注意大小寫與字母順序"
+        },
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W2 實體考券 Discover 3 (Unit 13) : Spelling 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：lightbulb"
+        }
+      },
+      {
+        "id": "TEA_W2_P01_A_6",
+        "week": "W2",
+        "page": 1,
+        "part": "Part A",
+        "part_title": "Discover 3 (Unit 13) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "spelling_listen",
+        "question": "【W2 歷史真卷·Discover 3 (Unit 13) : Spelling】第 6 題：請聽音並在紙上拼寫出單字",
+        "answer": "seesaw",
+        "ipa": "/ˈsiːsɔː/",
+        "vocab_card": {
+          "pos": "n.",
+          "chi": "蹺蹺板（簡單機械/槓桿）",
+          "ipa": "/ˈsiːsɔː/",
+          "breakdown": "see (看見) + saw (看見過去式) ➔ 一上一下忽見忽不見",
+          "trick": "玩蹺蹺板時，一下子看見（see）一下子看到（saw）！",
+          "collocation": "play on the seesaw (玩蹺蹺板)",
+          "context_eng": "A seesaw is a simple machine that uses a lever.",
+          "context_chi": "蹺蹺板是一種應用槓桿原理的簡單機械。",
+          "compare": "複合名詞中間無空格，過去式 saw 不可混淆",
+          "word": "seesaw"
+        },
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W2 實體考券 Discover 3 (Unit 13) : Spelling 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：seesaw"
+        }
+      },
+      {
+        "id": "TEA_W2_P01_A_7",
+        "week": "W2",
+        "page": 1,
+        "part": "Part A",
+        "part_title": "Discover 3 (Unit 13) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "spelling_listen",
+        "question": "【W2 歷史真卷·Discover 3 (Unit 13) : Spelling】第 7 題：請聽音並在紙上拼寫出單字",
+        "answer": "slide",
+        "ipa": "/slaɪd/",
+        "vocab_card": {
+          "pos": "n. / v.",
+          "chi": "滑梯；滑動；滑行",
+          "ipa": "/slaɪd/",
+          "breakdown": "sl- (平滑移動) + -ide ➔ 在平滑表面滑行",
+          "trick": "下雨天鞋底很「死賴（slide）」，容易滑倒！",
+          "collocation": "playground slide (遊樂場滑梯) / slide down (滑下)",
+          "context_eng": "The children love to play on the tall slide in the park.",
+          "context_chi": "孩子們喜歡在公園的高滑梯上玩耍。",
+          "compare": "名詞為溜滑梯，動詞過去式為不規則 slid（切勿寫 slided）",
+          "word": "slide"
+        },
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W2 實體考券 Discover 3 (Unit 13) : Spelling 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：slide"
+        }
+      },
+      {
+        "id": "TEA_W2_P01_A_8",
+        "week": "W2",
+        "page": 1,
+        "part": "Part A",
+        "part_title": "Discover 3 (Unit 13) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "spelling_listen",
+        "question": "【W2 歷史真卷·Discover 3 (Unit 13) : Spelling】第 8 題：請聽音並在紙上拼寫出單字",
+        "answer": "axe",
+        "ipa": "/axe/",
+        "vocab_card": {
+          "word": "axe",
+          "pos": "n.",
+          "chi": "考券核心字彙",
+          "ipa": "/axe/",
+          "breakdown": "單字拼寫記憶：axe",
+          "trick": "熟記發音音節以精準拼寫 axe",
+          "collocation": "axe",
+          "context_eng": "Rex practiced writing axe in the 3C quiz.",
+          "context_chi": "Rex 在小考中精準默寫出 axe。",
+          "compare": "注意大小寫與字母順序"
+        },
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W2 實體考券 Discover 3 (Unit 13) : Spelling 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：axe"
+        }
+      },
+      {
+        "id": "TEA_W2_P01_A_9",
+        "week": "W2",
+        "page": 1,
+        "part": "Part A",
+        "part_title": "Discover 3 (Unit 13) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "spelling_listen",
+        "question": "【W2 歷史真卷·Discover 3 (Unit 13) : Spelling】第 9 題：請聽音並在紙上拼寫出單字",
+        "answer": "wheel and axle",
+        "ipa": "/wheel and axle/",
+        "vocab_card": {
+          "word": "wheel and axle",
+          "pos": "名詞片語 (Noun Phrase)",
+          "chi": "輪軸（簡單機械）",
+          "ipa": "/wheel and axle/",
+          "breakdown": "wheel (大輪子) + and + axle (中間穿過的轉軸 a-x-l-e)。",
+          "trick": "注意軸心是 a-x-l-e (先 l 再 e)，不要跟斧頭 axe 搞混！",
+          "collocation": "考卷必考拼寫: wheel and axle (三個字全小寫)",
+          "context_eng": "A doorknob is an example of a wheel and axle.",
+          "context_chi": "門把就是輪軸的一個例子。",
+          "compare": "axle (輪軸的軸心 a-x-l-e) vs. axe (斧頭 a-x-e)。"
+        },
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W2 實體考券 Discover 3 (Unit 13) : Spelling 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：wheel and axle"
+        }
+      },
+      {
+        "id": "TEA_W2_P01_A_10",
+        "week": "W2",
+        "page": 1,
+        "part": "Part A",
+        "part_title": "Discover 3 (Unit 13) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "spelling_listen",
+        "question": "【W2 歷史真卷·Discover 3 (Unit 13) : Spelling】第 10 題：請聽音並在紙上拼寫出單字",
+        "answer": "doorknob",
+        "ipa": "/ˈdɔːrnɑːb/",
+        "vocab_card": {
+          "pos": "n.",
+          "chi": "門把手（輪軸機械）",
+          "ipa": "/ˈdɔːrnɑːb/",
+          "breakdown": "door (門) + knob (球形把手) ➔ 門上的球形握把",
+          "trick": "「叩門（knob）」的把手，注意 k 不發音！",
+          "collocation": "turn the doorknob (轉動門把)",
+          "context_eng": "Turn the doorknob clockwise to open the door.",
+          "context_chi": "順時針轉動門把即可開門。",
+          "compare": "注意 k 靜音，字母 b 結尾",
+          "word": "doorknob"
+        },
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W2 實體考券 Discover 3 (Unit 13) : Spelling 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：doorknob"
+        }
+      },
+      {
+        "id": "TEA_W2_P01_A_11",
+        "week": "W2",
+        "page": 1,
+        "part": "Part A",
+        "part_title": "Discover 3 (Unit 13) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "spelling_listen",
+        "question": "【W2 歷史真卷·Discover 3 (Unit 13) : Spelling】第 11 題：請聽音並在紙上拼寫出單字",
+        "answer": "inventions",
+        "ipa": "/inventions/",
+        "vocab_card": {
+          "word": "inventions",
+          "pos": "n.",
+          "chi": "考券核心字彙",
+          "ipa": "/inventions/",
+          "breakdown": "單字拼寫記憶：inventions",
+          "trick": "熟記發音音節以精準拼寫 inventions",
+          "collocation": "inventions",
+          "context_eng": "Rex practiced writing inventions in the 3C quiz.",
+          "context_chi": "Rex 在小考中精準默寫出 inventions。",
+          "compare": "注意大小寫與字母順序"
+        },
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W2 實體考券 Discover 3 (Unit 13) : Spelling 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：inventions"
+        }
+      },
+      {
+        "id": "TEA_W2_P01_A_12",
+        "week": "W2",
+        "page": 1,
+        "part": "Part A",
+        "part_title": "Discover 3 (Unit 13) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "spelling_listen",
+        "question": "【W2 歷史真卷·Discover 3 (Unit 13) : Spelling】第 12 題：請聽音並在紙上拼寫出單字",
+        "answer": "modern",
+        "ipa": "/modern/",
+        "vocab_card": {
+          "word": "modern",
+          "pos": "形容詞 (Adj)",
+          "chi": "現代的",
+          "ipa": "/modern/",
+          "breakdown": "來自拉丁文 modo (剛剛/現在)。",
+          "trick": "諧音「馬登」。聯想：「馬登」上了太空船，這真是一個「現代的」奇蹟！",
+          "collocation": "modern music (現代音樂), modern technology (現代科技)",
+          "context_eng": "Modern instruments aren't as easy to play.",
+          "context_chi": "現代樂器不容易演奏。",
+          "compare": "Model (模型/模特兒)。發音相似，注意結尾是 -rn。"
+        },
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W2 實體考券 Discover 3 (Unit 13) : Spelling 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：modern"
+        }
+      },
+      {
+        "id": "TEA_W2_P01_A_13",
+        "week": "W2",
+        "page": 1,
+        "part": "Part A",
+        "part_title": "Discover 3 (Unit 13) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "spelling_listen",
+        "question": "【W2 歷史真卷·Discover 3 (Unit 13) : Spelling】第 13 題：請聽音並在紙上拼寫出單字",
+        "answer": "machines",
+        "ipa": "/machines/",
+        "vocab_card": {
+          "word": "machines",
+          "pos": "n.",
+          "chi": "考券核心字彙",
+          "ipa": "/machines/",
+          "breakdown": "單字拼寫記憶：machines",
+          "trick": "熟記發音音節以精準拼寫 machines",
+          "collocation": "machines",
+          "context_eng": "Rex practiced writing machines in the 3C quiz.",
+          "context_chi": "Rex 在小考中精準默寫出 machines。",
+          "compare": "注意大小寫與字母順序"
+        },
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W2 實體考券 Discover 3 (Unit 13) : Spelling 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：machines"
+        }
+      },
+      {
+        "id": "TEA_W2_P01_A_14",
+        "week": "W2",
+        "page": 1,
+        "part": "Part A",
+        "part_title": "Discover 3 (Unit 13) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "spelling_listen",
+        "question": "【W2 歷史真卷·Discover 3 (Unit 13) : Spelling】第 14 題：請聽音並在紙上拼寫出單字",
         "answer": "knife",
+        "ipa": "/knife/",
+        "vocab_card": {
+          "word": "knife",
+          "pos": "名詞 (Noun)｜複數 knives",
+          "chi": "小刀 / 餐刀",
+          "ipa": "/knife/",
+          "breakdown": "古諾斯語 knifr -> 切東西的刀刃本身就是一種 wedge (楔子)。",
+          "trick": "⚠️ 岱崙 W2 考卷真實失分字！Rex 曾寫成『Knif ❌』（首字母誤大寫且漏掉字尾不發音 e）！口訣：K 隱形不發音，字尾 e 幫 i 發長音 /aɪ/！",
+          "collocation": "複數變化: knife -> knives (去 fe 改 ves)｜搭配: a sharp knife",
+          "context_eng": "The blade of a knife is a kind of wedge.",
+          "context_chi": "小刀的刀刃是一種楔子。",
+          "compare": "knife (單數：一把小刀) vs. knives (複數：多把小刀)。"
+        },
+        "difficulty": "★★★☆☆",
         "explanation": {
-          "concept": "W02 小考基礎字彙：小刀",
-          "formula": "k 不發音 (silent k)，字尾不發音 e 使 i 發長母音 /aɪ/。",
-          "trap": "考場真實失分：孩子漏寫字尾 e 寫成 Knif ❌！"
+          "point": "W2 實體考券 Discover 3 (Unit 13) : Spelling 核心考點",
+          "trap": "【Rex 當年筆記】：學生原始作答「Knif」。TRAP_SILENT_E_OMISSION（漏寫靜音不發音 e，首字母誤大寫）",
+          "note": "標準官方批改：knife"
         }
       },
       {
-        "id": "TEA_LIST_05",
+        "id": "TEA_W2_P01_A_15",
+        "week": "W2",
+        "page": 1,
+        "part": "Part A",
+        "part_title": "Discover 3 (Unit 13) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
         "type": "spelling_listen",
-        "category_tag": "listening",
-        "question": "請聽電腦發音，在紙上拼寫出這個核心單字：",
-        "hint": "自然地理名詞：山脈",
-        "audio_word": "mountain",
-        "phonetic": "/ˈmaʊntɪn/",
-        "syllables": "moun · tain",
+        "question": "【W2 歷史真卷·Discover 3 (Unit 13) : Spelling】第 15 題：請聽音並在紙上拼寫出單字",
+        "answer": "hill",
+        "ipa": "/hill/",
+        "vocab_card": {
+          "word": "hill",
+          "pos": "n.",
+          "chi": "考券核心字彙",
+          "ipa": "/hill/",
+          "breakdown": "單字拼寫記憶：hill",
+          "trick": "熟記發音音節以精準拼寫 hill",
+          "collocation": "hill",
+          "context_eng": "Rex practiced writing hill in the 3C quiz.",
+          "context_chi": "Rex 在小考中精準默寫出 hill。",
+          "compare": "注意大小寫與字母順序"
+        },
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W2 實體考券 Discover 3 (Unit 13) : Spelling 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：hill"
+        }
+      },
+      {
+        "id": "TEA_W2_P01_A_16",
+        "week": "W2",
+        "page": 1,
+        "part": "Part A",
+        "part_title": "Discover 3 (Unit 13) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "spelling_listen",
+        "question": "【W2 歷史真卷·Discover 3 (Unit 13) : Spelling】第 16 題：請聽音並在紙上拼寫出單字",
         "answer": "mountain",
+        "ipa": "/mountain/",
+        "vocab_card": {
+          "word": "mountain",
+          "pos": "名詞 (Noun)",
+          "chi": "高山 / 山脈",
+          "ipa": "/mountain/",
+          "breakdown": "源自拉丁文 mons (山) -> 法語 montaigne -> 英語 mountain。",
+          "trick": "⚠️ 岱崙 W2 考卷真實失分字！Rex 曾拼成『mountion ❌』！口訣：山上有下「雨 (rain)」，所以字尾是 -tain (a-i-n)，絕對不是 -tion！",
+          "collocation": "同尾詞族: fountain (噴泉), captain (隊長), curtain (窗簾) 全部都是 -tain！",
+          "context_eng": "Climbing a steep mountain takes a lot of energy.",
+          "context_chi": "攀登陡峭的高山需要消耗大量體力。",
+          "compare": "mountain (高山 - 字尾 -tain) vs. hill (小山丘)。"
+        },
+        "difficulty": "★★★☆☆",
         "explanation": {
-          "concept": "W02 小考基礎名詞：山脈",
-          "formula": "雙音節 moun-tain，第二音節字尾是 -tain 發 /tɪn/ 音（如 fountain, captain）。",
-          "trap": "考場真實失分：孩子曾誤寫為 mountion ❌！"
+          "point": "W2 實體考券 Discover 3 (Unit 13) : Spelling 核心考點",
+          "trap": "【Rex 當年筆記】：學生原始作答「mountion」。TRAP_SUFFIX_AIN_VS_ION（詞尾 /tən/ 誤拼為 -tion）",
+          "note": "標準官方批改：mountain"
         }
       },
       {
-        "id": "TEA_LIST_06",
+        "id": "TEA_W2_P01_A_17",
+        "week": "W2",
+        "page": 1,
+        "part": "Part A",
+        "part_title": "Discover 3 (Unit 13) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
         "type": "spelling_listen",
-        "category_tag": "listening",
-        "question": "請聽電腦發音，在紙上拼寫出這個核心單字：",
-        "hint": "行動輔助工具：輪椅",
-        "audio_word": "wheelchair",
-        "phonetic": "/ˈwiːltʃer/",
-        "syllables": "wheel · chair",
+        "question": "【W2 歷史真卷·Discover 3 (Unit 13) : Spelling】第 17 題：請聽音並在紙上拼寫出單字",
         "answer": "wheelchair",
+        "ipa": "/wheelchair/",
+        "vocab_card": {
+          "word": "wheelchair",
+          "pos": "名詞 (Noun)",
+          "chi": "輪椅",
+          "ipa": "/wheelchair/",
+          "breakdown": "wheel (輪子) + chair (椅子) -> 裝有輪子的行動輔助椅。",
+          "trick": "⚠️ 岱崙 W2 考卷真實失分字！Rex 曾寫成『whillchair ❌』！口訣：輪子 wheel 中間是兩個圓圓的車輪『e-e』，不是 i-l-l！",
+          "collocation": "拆字記憶: wheel (w-h-e-e-l) + chair (c-h-a-i-r)",
+          "context_eng": "A ramp helps a person in a wheelchair enter a building.",
+          "context_chi": "斜坡道幫助坐輪椅的人進入建築物。",
+          "compare": "wheel (輪子 - ee) vs. will (將會 / 意志 - ill)。"
+        },
+        "difficulty": "★★★☆☆",
         "explanation": {
-          "concept": "W02 複合名詞：wheel (輪子) + chair (椅子)",
-          "formula": "wheel 是 ee 雙母音，chair 是 air 三字母組合。",
-          "trap": "考場真實失分：孩子曾誤寫為 whillchair ❌！"
+          "point": "W2 實體考券 Discover 3 (Unit 13) : Spelling 核心考點",
+          "trap": "【Rex 當年筆記】：學生原始作答「whillchair」。TRAP_DOUBLE_VOWEL_EE_VS_I（雙母音 ee 誤拼為 i）",
+          "note": "標準官方批改：wheelchair"
         }
       },
       {
-        "id": "TEA_LIST_07",
+        "id": "TEA_W2_P01_A_18",
+        "week": "W2",
+        "page": 1,
+        "part": "Part A",
+        "part_title": "Discover 3 (Unit 13) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
         "type": "spelling_listen",
-        "category_tag": "listening",
-        "question": "請聽電腦發音，在紙上拼寫出這個核心單字：",
-        "hint": "高溫加熱金屬或礦石的封閉結構：熔爐",
-        "audio_word": "furnace",
-        "phonetic": "/ˈfɜːrnɪs/",
-        "syllables": "fur · nace",
-        "answer": "furnace",
+        "question": "【W2 歷史真卷·Discover 3 (Unit 13) : Spelling】第 18 題：請聽音並在紙上拼寫出單字",
+        "answer": "simple",
+        "ipa": "/simple/",
+        "vocab_card": {
+          "word": "simple",
+          "pos": "n.",
+          "chi": "考券核心字彙",
+          "ipa": "/simple/",
+          "breakdown": "單字拼寫記憶：simple",
+          "trick": "熟記發音音節以精準拼寫 simple",
+          "collocation": "simple",
+          "context_eng": "Rex practiced writing simple in the 3C quiz.",
+          "context_chi": "Rex 在小考中精準默寫出 simple。",
+          "compare": "注意大小寫與字母順序"
+        },
+        "difficulty": "★★★☆☆",
         "explanation": {
-          "concept": "ODG3 U14 / W04 小考高頻失分詞：熔爐",
-          "formula": "雙音節 fur-nace，第二音節 -nace 發 /nɪs/ 音（如 palace, surface, furnace）。",
-          "trap": "考場真實失分：孩子曾誤寫為 furnes ❌，扣 2 分！字尾是 -ace 不是 -es。"
+          "point": "W2 實體考券 Discover 3 (Unit 13) : Spelling 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：simple"
         }
       },
       {
-        "id": "TEA_LIST_08",
+        "id": "TEA_W2_P01_A_19",
+        "week": "W2",
+        "page": 1,
+        "part": "Part A",
+        "part_title": "Discover 3 (Unit 13) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
         "type": "spelling_listen",
-        "category_tag": "listening",
-        "question": "請聽電腦發音，在紙上拼寫出這個核心單字：",
-        "hint": "眼鏡鏡片外圍固定支撐物：鏡框",
-        "audio_word": "frames",
-        "phonetic": "/freɪmz/",
-        "syllables": "frames",
-        "answer": "frames",
+        "question": "【W2 歷史真卷·Discover 3 (Unit 13) : Spelling】第 19 題：請聽音並在紙上拼寫出單字",
+        "answer": "bicycle",
+        "ipa": "/bicycle/",
+        "vocab_card": {
+          "word": "bicycle",
+          "pos": "n.",
+          "chi": "考券核心字彙",
+          "ipa": "/bicycle/",
+          "breakdown": "單字拼寫記憶：bicycle",
+          "trick": "熟記發音音節以精準拼寫 bicycle",
+          "collocation": "bicycle",
+          "context_eng": "Rex practiced writing bicycle in the 3C quiz.",
+          "context_chi": "Rex 在小考中精準默寫出 bicycle。",
+          "compare": "注意大小寫與字母順序"
+        },
+        "difficulty": "★★★☆☆",
         "explanation": {
-          "concept": "ODG3 U14 / W04 小考高頻失分詞：鏡框",
-          "formula": "單音節長母音 a_e (frame)，眼鏡兩側鏡框固定用複數 frames。",
-          "trap": "考場真實失分：孩子曾誤寫成國家法國 France ❌！"
+          "point": "W2 實體考券 Discover 3 (Unit 13) : Spelling 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：bicycle"
         }
       },
       {
-        "id": "TEA_LIST_09",
+        "id": "TEA_W2_P01_A_20",
+        "week": "W2",
+        "page": 1,
+        "part": "Part A",
+        "part_title": "Discover 3 (Unit 13) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
         "type": "spelling_listen",
-        "category_tag": "listening",
-        "question": "請聽電腦發音，在紙上拼寫出這個核心單字：",
-        "hint": "野外尋寶競賽運動：定向越野",
-        "audio_word": "orienteering",
-        "phonetic": "/ˌɔːriənˈtɪrɪŋ/",
-        "syllables": "o · ri · en · teer · ing",
-        "answer": "orienteering",
+        "question": "【W2 歷史真卷·Discover 3 (Unit 13) : Spelling】第 20 題：請聽音並在紙上拼寫出單字",
+        "answer": "jar lid",
+        "ipa": "/jar lid/",
+        "vocab_card": {
+          "word": "jar lid",
+          "pos": "n.",
+          "chi": "考券核心字彙",
+          "ipa": "/jar lid/",
+          "breakdown": "單字拼寫記憶：jar lid",
+          "trick": "熟記發音音節以精準拼寫 jar lid",
+          "collocation": "jar lid",
+          "context_eng": "Rex practiced writing jar lid in the 3C quiz.",
+          "context_chi": "Rex 在小考中精準默寫出 jar lid。",
+          "compare": "注意大小寫與字母順序"
+        },
+        "difficulty": "★★★☆☆",
         "explanation": {
-          "concept": "RWW6 U6 / W05 聽寫 25 分滿分核心篇章詞彙",
-          "formula": "字根 orient (定位) + -eer + -ing 動名詞，雙 e 發長音 /ɪr/。",
-          "trap": "長單字切忌漏寫中間的 -en- 或字尾的雙 e。"
+          "point": "W2 實體考券 Discover 3 (Unit 13) : Spelling 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：jar lid"
         }
       },
       {
-        "id": "TEA_LIST_10",
-        "type": "spelling_listen",
-        "category_tag": "listening",
-        "question": "請聽電腦發音，在紙上拼寫出這個核心單字：",
-        "hint": "定向運動必備儀器：指北針，羅盤",
-        "audio_word": "compass",
-        "phonetic": "/ˈkʌmpəs/",
-        "syllables": "com · pass",
-        "answer": "compass",
-        "explanation": {
-          "concept": "RWW6 U6 核心名詞：羅盤",
-          "formula": "雙音節 com-pass，字尾雙寫 ss。",
-          "trap": "發音第一個 o 發 /ʌ/ 音，字尾雙寫 s 不要漏掉。"
-        }
-      },
-      {
-        "id": "TEA_RW_01",
+        "id": "TEA_W2_P01_B_Q1",
+        "week": "W2",
+        "page": 1,
+        "part": "Part B",
+        "part_title": "Grammar 3 (Unit 13) : 倒裝附和句改寫 (Sentence Writing)",
+        "part_instructions": "> **大題得分**：",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "The verb tense of your answer should match that of the question!",
         "type": "paper_rewrite",
-        "category_tag": "rewrite",
-        "question": "【Week 2 真題】[Ryan, Michael - 95% on quiz / too]（使用指定連接詞改寫為附和句）",
-        "answer": "Ryan got 95% on his quiz, and Michael did, too.",
-        "hint": "提示：前句補回動詞 got，後句一般動詞過去式附和使用助動詞 did + too",
-        "explanation": {
-          "concept": "Grammar 3 Unit 13: 肯定附和句 (too)",
-          "formula": "前半句：主詞 + 一般動詞過去式 (got 95% on his quiz)；後半句：and + 主詞 + did, too。",
-          "trap": "考場真實失分：孩子寫成 Ryan 95% on quiz, Michael are too ❌。漏補動詞 got，且一般動詞不可用 be 動詞 are！"
-        }
-      },
-      {
-        "id": "TEA_RW_02",
-        "type": "paper_rewrite",
-        "category_tag": "rewrite",
-        "question": "【Week 2 真題】[Brad, Lisa - did not play baseball / either]（使用指定連接詞改寫為附和句）",
-        "answer": "Brad did not play baseball, and Lisa didn't either.",
-        "hint": "提示：否定附和句公式為『S + didn't + either』",
-        "explanation": {
-          "concept": "Grammar 3 Unit 13: 否定附和句 (either)",
-          "formula": "前半句：S + did not + V；後半句：and + S + didn't + either。",
-          "trap": "考場滿分表現：此題學生作答完全正確！注意 either 用於否定句末尾，不可與 neither 混淆。"
-        }
-      },
-      {
-        "id": "TEA_RW_03",
-        "type": "paper_rewrite",
-        "category_tag": "rewrite",
-        "question": "【Week 2 真題】[Olivia, Penny - 100% on quiz / so]（使用指定連接詞改寫為倒裝附和句）",
+        "question": "【W2 歷史真卷·Grammar 3 (Unit 13) : 倒裝附和句改寫 (Sentence Writing)】1. [Olivia, Penny - 100% on quiz / so] ________________________________________",
         "answer": "Olivia got 100% on her quiz, and so did Penny.",
-        "hint": "提示：肯定倒裝附和句公式為『so + 助動詞 (did) + 主詞』",
+        "ipa": "",
+        "vocab_card": null,
+        "difficulty": "★★★★☆",
         "explanation": {
-          "concept": "Grammar 3 Unit 13: 倒裝附和句 (so)",
-          "formula": "倒裝公式：and + so + 助動詞 (did) + 第二個主詞 (Penny)。",
-          "trap": "考場真實失分：孩子寫成 Penny was so did ❌，把名詞 100% 放在倒裝開頭。切記是 so did Penny！"
+          "point": "W2 實體考券 Grammar 3 (Unit 13) : 倒裝附和句改寫 (Sentence Writing)",
+          "trap": "【Rex 當年失分盲點】：學生作答寫「Olivia 100% on her quiz, 100% did Penny.」。- `TRAP_VERB_OMISSION`：直接將題幹名詞片語 `100% on quiz` 當成述語，漏掉核心動詞 `got`。   - `TRAP_SO_INVERSION_CORRUPTION`：倒裝副詞誤用，將先行詞 `100%` 當成倒裝連詞置於首位，未掌握 `so + did + Subject` 公式。",
+          "note": "出題公式與要求：> **大題得分**："
         }
       },
       {
-        "id": "TEA_RW_04",
+        "id": "TEA_W2_P01_B_Q2",
+        "week": "W2",
+        "page": 1,
+        "part": "Part B",
+        "part_title": "Grammar 3 (Unit 13) : 倒裝附和句改寫 (Sentence Writing)",
+        "part_instructions": "> **大題得分**：",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "The verb tense of your answer should match that of the question!",
         "type": "paper_rewrite",
-        "category_tag": "rewrite",
-        "question": "【Week 2 真題】[Ray, Jim - not pass quiz / either]（使用指定連接詞改寫為否定附和句）",
-        "answer": "Ray didn't pass the quiz, and Jim didn't either.",
-        "hint": "提示：過去式一般動詞否定必須使用助動詞 didn't + 原形動詞",
+        "question": "【W2 歷史真卷·Grammar 3 (Unit 13) : 倒裝附和句改寫 (Sentence Writing)】2. [Ryan, Michael - 95% on quiz / too] ________________________________________",
+        "answer": "Ryan got 95% on his quiz, and Michael got 95% on his quiz, too.",
+        "ipa": "",
+        "vocab_card": null,
+        "difficulty": "★★★★☆",
         "explanation": {
-          "concept": "Grammar 3 Unit 13: 過去式一般動詞否定句",
-          "formula": "一般動詞過去式否定句公式：主詞 + didn't + 原形動詞 (pass)。",
-          "trap": "考場真實失分：孩子寫成 Ray are not pass quiz ❌。中文『不是通過』直譯成 are not，被扣 3 分！"
+          "point": "W2 實體考券 Grammar 3 (Unit 13) : 倒裝附和句改寫 (Sentence Writing)",
+          "trap": "【Rex 當年失分盲點】：學生作答寫「Ryan 95% on quiz, Michael are too」。- `TRAP_VERB_OMISSION`：前半句漏動詞 `got`（直接寫 `Ryan 95% on quiz`）。   - `TRAP_BE_VERB_MISUSE`：後半句嚴重文法錯誤 `Michael are too`，時態（現在式 are vs 過去式 did）與動詞種類（be 動詞 vs 一般動詞助動詞）雙重混淆。",
+          "note": "出題公式與要求：> **大題得分**："
         }
       },
       {
-        "id": "TEA_RW_05",
+        "id": "TEA_W2_P01_B_Q3",
+        "week": "W2",
+        "page": 1,
+        "part": "Part B",
+        "part_title": "Grammar 3 (Unit 13) : 倒裝附和句改寫 (Sentence Writing)",
+        "part_instructions": "> **大題得分**：",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "The verb tense of your answer should match that of the question!",
         "type": "paper_rewrite",
-        "category_tag": "rewrite",
-        "question": "【Week 4 真題】How fast do they run? person, dog & lion（寫出三級副詞長句，注意單音節比較級）",
-        "answer": "A person runs fast, a dog runs faster than a person, but a lion runs the fastest.",
-        "hint": "三段式架構：原級逗號 ➔ 比較級逗號 ➔ but + 最高級句",
+        "question": "【W2 歷史真卷·Grammar 3 (Unit 13) : 倒裝附和句改寫 (Sentence Writing)】3. [Ray, Jim - not pass quiz / either] ________________________________________",
+        "answer": "Ray didn't pass the quiz, and Jim didn't pass the quiz, either.",
+        "ipa": "",
+        "vocab_card": null,
+        "difficulty": "★★★★☆",
         "explanation": {
-          "concept": "Grammar 3 Unit 14: 單音節副詞三級長句合成",
-          "formula": "原級 fast ➔ 比較級 faster than a person ➔ 轉折 but a lion runs the fastest。",
-          "trap": "考場三大失分坑：① fast 誤加 more 寫成 more fast；② 比較對象重複寫成 a dog；③ 最高級漏加 the。"
+          "point": "W2 實體考券 Grammar 3 (Unit 13) : 倒裝附和句改寫 (Sentence Writing)",
+          "trap": "【Rex 當年失分盲點】：學生作答寫「Ray are not pass quiz, Jim are either.」。- `TRAP_NEGATIVE_PAST_BE_VS_DID`：過去簡單式否定句嚴重混淆，寫成 `are not pass`（正確應為 `didn't pass`）。   - `TRAP_EITHER_AFFORDANCE`：附和句助動詞錯誤，寫成 `Jim are either`（正確應為 `Jim didn't, either`）。",
+          "note": "出題公式與要求：> **大題得分**："
         }
       },
       {
-        "id": "TEA_RW_06",
+        "id": "TEA_W2_P01_B_Q4",
+        "week": "W2",
+        "page": 1,
+        "part": "Part B",
+        "part_title": "Grammar 3 (Unit 13) : 倒裝附和句改寫 (Sentence Writing)",
+        "part_instructions": "> **大題得分**：",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "The verb tense of your answer should match that of the question!",
         "type": "paper_rewrite",
-        "category_tag": "rewrite",
-        "question": "【Week 4 真題】How quickly can they walk? five year old, eight year old & adult（寫出三級副詞長句）",
-        "answer": "A five year old can walk quickly, an eight year old can walk more quickly than a five year old, but an adult can walk the most quickly.",
-        "hint": "多音節副詞比較級為 more quickly than，最高級為 the most quickly",
+        "question": "【W2 歷史真卷·Grammar 3 (Unit 13) : 倒裝附和句改寫 (Sentence Writing)】4. [Ray, Jim - not pass quiz / neither] ________________________________________",
+        "answer": "Ray didn't pass the quiz, and neither did Jim.",
+        "ipa": "",
+        "vocab_card": null,
+        "difficulty": "★★★★☆",
         "explanation": {
-          "concept": "Grammar 3 Unit 14: 多音節副詞三級比較長句",
-          "formula": "多音節副詞以 -ly 結尾：原級 quickly ➔ more quickly than ➔ but ... the most quickly。",
-          "trap": "考場失分：孩子直接寫 quicker / fastest ❌！quickly 必須用 more 和 the most 修飾。"
+          "point": "W2 實體考券 Grammar 3 (Unit 13) : 倒裝附和句改寫 (Sentence Writing)",
+          "trap": "【Rex 當年失分盲點】：學生作答寫「Jim are not pass quiz, neither did Jim.」。- `TRAP_NEGATIVE_PAST_BE_VS_DID`：前半句依然延續第 3 題之錯誤結構 `are not pass`。   - `SUCCESS_NEITHER_INVERSION`：學生精準掌握 `neither + did + Subject` 倒裝結構，因而獲紅勾給分。",
+          "note": "出題公式與要求：> **大題得分**："
         }
       },
       {
-        "id": "TEA_RW_07",
+        "id": "TEA_W2_P02_C_QTitle",
+        "week": "W2",
+        "page": 2,
+        "part": "Part C",
+        "part_title": "Write Right 3 (Unit 4) 提綱擴寫作文",
+        "part_instructions": "C. Michelle wrote the following outline. Help her to write her story in full down below.",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
         "type": "paper_rewrite",
-        "category_tag": "rewrite",
-        "question": "【Week 5 真題】How far can they jump? frog, rabbit & kangaroo（寫出三級副詞長句）",
-        "answer": "A frog can jump far, a rabbit can jump farther than a frog, but a kangaroo can jump the farthest.",
-        "hint": "不規則副詞變化：far ➔ farther than ➔ the farthest",
+        "question": "【W2 歷史真卷·Write Right 3 (Unit 4) 提綱擴寫作文】________________________________________",
+        "answer": "My Neighborhood",
+        "ipa": "",
+        "vocab_card": null,
+        "difficulty": "★★★★☆",
         "explanation": {
-          "concept": "Grammar 3 Unit 14: 不規則副詞三級比較 (far)",
-          "formula": "原級 far ➔ 比較級 farther than ➔ 最高級 the farthest。主詞前面均需不定冠詞 a。",
-          "trap": "考場失分：孩子最高級寫成 jump farthest 漏寫 the ❌！最高級務必加上 the。"
+          "point": "W2 實體考券 Write Right 3 (Unit 4) 提綱擴寫作文",
+          "trap": "本題當年作答正確無失分！",
+          "note": "出題公式與要求：C. Michelle wrote the following outline. Help her to write her story in full down below."
         }
       },
       {
-        "id": "TEA_RW_08",
+        "id": "TEA_W2_P02_C_Q1",
+        "week": "W2",
+        "page": 2,
+        "part": "Part C",
+        "part_title": "Write Right 3 (Unit 4) 提綱擴寫作文",
+        "part_instructions": "C. Michelle wrote the following outline. Help her to write her story in full down below.",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
         "type": "paper_rewrite",
-        "category_tag": "rewrite",
-        "question": "【Week 4 真題】How do they laugh? witch, vampire & zombie（用 horribly 寫出三級長句，注意主詞三單動詞）",
-        "answer": "A witch laughs horribly, a vampire laughs more horribly than a witch, but a zombie laughs the most horribly.",
-        "hint": "問句是 How do they laugh，時態為現在式，主詞第三人稱單數動詞需加 -s (laughs)",
+        "question": "【W2 歷史真卷·Write Right 3 (Unit 4) 提綱擴寫作文】Have you ever ________________ ?",
+        "answer": "Have you ever been to my neighborhood?",
+        "ipa": "",
+        "vocab_card": null,
+        "difficulty": "★★★★☆",
         "explanation": {
-          "concept": "Grammar 3 Unit 14: 主詞動詞一致性與多音節副詞比較級",
-          "formula": "A witch laughs horribly ➔ laughs more horribly than ... ➔ but a zombie laughs the most horribly。",
-          "trap": "考場失分：孩子寫成 laugh horribly than ❌，既漏了動詞三單 -s，又把 more 漏掉！"
+          "point": "W2 實體考券 Write Right 3 (Unit 4) 提綱擴寫作文",
+          "trap": "本題當年作答正確無失分！",
+          "note": "出題公式與要求：C. Michelle wrote the following outline. Help her to write her story in full down below."
         }
       },
       {
-        "id": "TEA_FILL_01",
-        "type": "fill",
-        "category_tag": "fill",
-        "question": "【方位片語填空】There is a beautiful fountain right ( ____________ ) the museum.",
-        "answer": "in front of",
-        "hint": "提示：在...前面（三個單字分開）",
+        "id": "TEA_W2_P02_C_Q2",
+        "week": "W2",
+        "page": 2,
+        "part": "Part C",
+        "part_title": "Write Right 3 (Unit 4) 提綱擴寫作文",
+        "part_instructions": "C. Michelle wrote the following outline. Help her to write her story in full down below.",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "paper_rewrite",
+        "question": "【W2 歷史真卷·Write Right 3 (Unit 4) 提綱擴寫作文】I have lived ________________ .",
+        "answer": "I have lived in my neighborhood for four years.",
+        "ipa": "",
+        "vocab_card": null,
+        "difficulty": "★★★★☆",
         "explanation": {
-          "concept": "Write Right 3 Unit 4: 方位介系詞片語",
-          "formula": "固定搭配片語：in front of（在...前面）。",
-          "trap": "考場真實失分：孩子連寫成 infront off ❌。必須分成三個單字，且介系詞是單 f 的 of。"
+          "point": "W2 實體考券 Write Right 3 (Unit 4) 提綱擴寫作文",
+          "trap": "【Rex 當年失分盲點】：學生作答寫「in my neighborhood for three years」。- `TRAP_OUTLINE_MISREAD_NUMBER`：審題疏漏，提綱明確給定 `four years`，學生因筆誤或記憶慣性寫成 `three years`。  ---",
+          "note": "出題公式與要求：C. Michelle wrote the following outline. Help her to write her story in full down below."
         }
       },
       {
-        "id": "TEA_FILL_02",
-        "type": "fill",
-        "category_tag": "fill",
-        "question": "【方位片語填空】The bakery is right ( ____________ ) the street from the bookstore.",
-        "answer": "across",
-        "hint": "提示：在街道的對面 (across the street from)",
+        "id": "TEA_W2_P02_C_Q3",
+        "week": "W2",
+        "page": 2,
+        "part": "Part C",
+        "part_title": "Write Right 3 (Unit 4) 提綱擴寫作文",
+        "part_instructions": "C. Michelle wrote the following outline. Help her to write her story in full down below.",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "paper_rewrite",
+        "question": "【W2 歷史真卷·Write Right 3 (Unit 4) 提綱擴寫作文】It is ________________ . I can get ________________ ten minutes on foot .",
+        "answer": "It is very close to my school. I can get to school in under ten minutes on foot.",
+        "ipa": "",
+        "vocab_card": null,
+        "difficulty": "★★★★☆",
         "explanation": {
-          "concept": "Write Right 3 Unit 4: 方位介系詞 across from",
-          "formula": "across the street from 表示『在隔著街的對面』。",
-          "trap": "注意不要拼成 a cross 或 cross，介系詞是 across。"
+          "point": "W2 實體考券 Write Right 3 (Unit 4) 提綱擴寫作文",
+          "trap": "【Rex 當年失分盲點】：學生作答寫「- 第一格：」。- `TRAP_PREPOSITION_UNDER_OMISSION`：遺漏提綱中的關鍵介系詞 `under`（表「在……時間以內」）。  ---",
+          "note": "出題公式與要求：C. Michelle wrote the following outline. Help her to write her story in full down below."
         }
       },
       {
-        "id": "TEA_FILL_03",
-        "type": "fill",
-        "category_tag": "fill",
-        "question": "【課文填空】Racers use a map and a ( ____________ ) to find stations in orienteering.",
-        "answer": "compass",
-        "hint": "提示：指北針，羅盤",
+        "id": "TEA_W2_P02_C_Q4",
+        "week": "W2",
+        "page": 2,
+        "part": "Part C",
+        "part_title": "Write Right 3 (Unit 4) 提綱擴寫作文",
+        "part_instructions": "C. Michelle wrote the following outline. Help her to write her story in full down below.",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "paper_rewrite",
+        "question": "【W2 歷史真卷·Write Right 3 (Unit 4) 提綱擴寫作文】The ________________ and the bus stop are very ________________ , too.",
+        "answer": "The convenience store and the bus stop are very close, too.",
+        "ipa": "",
+        "vocab_card": null,
+        "difficulty": "★★★★☆",
         "explanation": {
-          "concept": "RWW6 Unit 6: 定向越野長篇課文聽寫",
-          "formula": "定向越野兩大必備工具：a map and a compass。",
-          "trap": "雙音節詞 com-pass，字尾雙寫 ss。"
+          "point": "W2 實體考券 Write Right 3 (Unit 4) 提綱擴寫作文",
+          "trap": "【Rex 當年失分盲點】：學生作答寫「- 第一格：」。- `TRAP_COMPARATIVE_DEGREE_OVERUSE`：平級同等描述語境中誤用比較級形式 `closer`（受上方 very 修飾時必須使用原級形容詞 `very close`）。  ---",
+          "note": "出題公式與要求：C. Michelle wrote the following outline. Help her to write her story in full down below."
         }
       },
       {
-        "id": "TEA_FILL_04",
-        "type": "fill",
-        "category_tag": "fill",
-        "question": "【課文填空】Controls are placed in tricky locations to challenge racers' ( ____________ ) skills.",
-        "answer": "navigation",
-        "hint": "提示：導航技巧 (nav-i-ga-tion)",
+        "id": "TEA_W2_P02_C_Q5",
+        "week": "W2",
+        "page": 2,
+        "part": "Part C",
+        "part_title": "Write Right 3 (Unit 4) 提綱擴寫作文",
+        "part_instructions": "C. Michelle wrote the following outline. Help her to write her story in full down below.",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "paper_rewrite",
+        "question": "【W2 歷史真卷·Write Right 3 (Unit 4) 提綱擴寫作文】There are ________________ .",
+        "answer": "There are many stores in my neighborhood.",
+        "ipa": "",
+        "vocab_card": null,
+        "difficulty": "★★★★☆",
         "explanation": {
-          "concept": "RWW6 Unit 6: 專有名詞名詞修飾語",
-          "formula": "動詞 navigate ➔ 名詞 navigation (導航)。",
-          "trap": "長字拼寫盲點：音節為 na-vi-ga-tion，字尾為 -tion。"
+          "point": "W2 實體考券 Write Right 3 (Unit 4) 提綱擴寫作文",
+          "trap": "本題當年作答正確無失分！",
+          "note": "出題公式與要求：C. Michelle wrote the following outline. Help her to write her story in full down below."
         }
       },
       {
-        "id": "TEA_FILL_05",
-        "type": "fill",
-        "category_tag": "fill",
-        "question": "【課文填空】Racers must ( ____________ ) their cards at every station to prove they visited it.",
-        "answer": "punch",
-        "hint": "提示：打卡、打孔 (punch the card)",
+        "id": "TEA_W2_P02_C_Q6",
+        "week": "W2",
+        "page": 2,
+        "part": "Part C",
+        "part_title": "Write Right 3 (Unit 4) 提綱擴寫作文",
+        "part_instructions": "C. Michelle wrote the following outline. Help her to write her story in full down below.",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "paper_rewrite",
+        "question": "【W2 歷史真卷·Write Right 3 (Unit 4) 提綱擴寫作文】The ________________ across the street from the coffee shop ________________ , there is ________________ .",
+        "answer": "The coffee shop is two blocks away from my house. Across the street from the coffee shop, there is a stationery store and a pharmacy.",
+        "ipa": "",
+        "vocab_card": null,
+        "difficulty": "★★★★☆",
         "explanation": {
-          "concept": "RWW6 Unit 6: 動作動詞 punch",
-          "formula": "punch cards 是定向運動的專有動作（在打卡紙上打孔）。",
-          "trap": "動詞原形 punch，必須加在 must 助動詞之後。"
+          "point": "W2 實體考券 Write Right 3 (Unit 4) 提綱擴寫作文",
+          "trap": "【Rex 當年失分盲點】：學生作答寫「- 填答內容：」。- `TRAP_SUBJECT_VERB_AGREEMENT`：學生寫 `coffee shop are`（主詞為單數 coffee shop，be 動詞應為 `is`）。  ---",
+          "note": "出題公式與要求：C. Michelle wrote the following outline. Help her to write her story in full down below."
         }
       },
       {
-        "id": "TEA_FILL_06",
-        "type": "fill",
-        "category_tag": "fill",
-        "question": "【課文填空】The person who finishes the course in the ( ____________ ) time wins the race.",
-        "answer": "fastest",
-        "hint": "提示：以最快時間（最高級 fastest）",
+        "id": "TEA_W2_P02_C_Q7",
+        "week": "W2",
+        "page": 2,
+        "part": "Part C",
+        "part_title": "Write Right 3 (Unit 4) 提綱擴寫作文",
+        "part_instructions": "C. Michelle wrote the following outline. Help her to write her story in full down below.",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "paper_rewrite",
+        "question": "【W2 歷史真卷·Write Right 3 (Unit 4) 提綱擴寫作文】Best of all, my ________________ . My friends and I often play ________________ .",
+        "answer": "Best of all, my favorite place is the park. My friends and I often play and ride our bikes in the park.",
+        "ipa": "",
+        "vocab_card": null,
+        "difficulty": "★★★★☆",
         "explanation": {
-          "concept": "RWW6 Unit 6: 最高級修飾名詞 time",
-          "formula": "in the fastest time（以最快時間）。前面有 the，fast 加 -est。",
-          "trap": "注意題幹已有 the，空格只填 fastest。"
+          "point": "W2 實體考券 Write Right 3 (Unit 4) 提綱擴寫作文",
+          "trap": "【Rex 當年失分盲點】：學生作答寫「- 第一格：」。- `TRAP_SENTENCE_FRAGMENT_AND_RUN_ON`：學生將動詞片語斷句錯誤（寫成 `play in the park. and ride`），老師及時修正為平行對稱結構 `play and ride our bikes`。  ---",
+          "note": "出題公式與要求：C. Michelle wrote the following outline. Help her to write her story in full down below."
         }
       },
       {
-        "id": "TEA_MC_01",
-        "type": "choice",
-        "category_tag": "choice",
-        "question": "【寫作時態】I have lived in my neighborhood ( ______ ) four years.",
-        "options": [
-          "for",
-          "since",
-          "during",
-          "at"
-        ],
-        "answer": "for",
-        "hint": "一段時間前面介系詞用 for",
+        "id": "TEA_W2_P02_C_Q8",
+        "week": "W2",
+        "page": 2,
+        "part": "Part C",
+        "part_title": "Write Right 3 (Unit 4) 提綱擴寫作文",
+        "part_instructions": "C. Michelle wrote the following outline. Help her to write her story in full down below.",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "paper_rewrite",
+        "question": "【W2 歷史真卷·Write Right 3 (Unit 4) 提綱擴寫作文】I really ________________ .",
+        "answer": "I really like living in my neighborhood.",
+        "ipa": "",
+        "vocab_card": null,
+        "difficulty": "★★★★☆",
         "explanation": {
-          "concept": "Write Right 3 Unit 4: 現在完成式時間介系詞",
-          "formula": "for + 一段時間長度（如 for four years）；since + 過去時間點（如 since 2020）。",
-          "trap": "four years 是整段持續的時間長度，絕不能用 since！"
+          "point": "W2 實體考券 Write Right 3 (Unit 4) 提綱擴寫作文",
+          "trap": "【Rex 當年失分盲點】：學生作答寫「like living in my neighborhood」。`OK_CORRECT`（like + V-ing living 結構精準）。  ---  ## 頁尾資訊 (Footer) - `TIGER ENGLISH ACADEMY © 2022 COPYRIGHT RESERVED`  ================================================================================ 🤖 【AI 考券教研與變式出題增強區塊 (AI_SPEC)】 ================================================================================ ```yaml AI_SPEC:   exam_id: \"TEA_3C_QUIZ_W02_P02\"   grade_level: \"Grade 6 (Age 12)\"   cefr_alignment: \"A2\"   target_skills:     - \"Guided Writing (Write Right 3 Unit 4 - Neighborhood & Community)\"     - \"Present Perfect (have lived for / since)\"     - \"Prepositions of Location (across the street from, two blocks away)\"   error_analysis_matrix:     - trap_id: \"TRAP_OUTLINE_MISREAD_NUMBER\"       title: \"提綱關鍵資訊對應粗心\"       student_error: \"for three years (提綱給定 four years)\"       correction: \"for four years\"     - trap_id: \"TRAP_COMPARATIVE_DEGREE_OVERUSE\"       title: \"平級敘述句誤加比較級字尾 -er\"       student_error: \"are very closer\"       correction: \"are very close\"     - trap_id: \"TRAP_SENTENCE_FRAGMENT_AND_RUN_ON\"       title: \"動詞平行結構斷句破碎\"       student_error: \"play in the park. and ride\"       correction: \"play and ride our bikes in the park\"   writing_prompt_generator:     template_name: \"Community & Neighborhood Expansion\"     outline_variables:       time_period: [\"two years\", \"five years\", \"since I was born\"]       facilities: [\"bakery\", \"supermarket\", \"library\", \"sports center\"]       favorite_spot: [\"botanical garden\", \"playground\", \"community library\"] ```",
+          "note": "出題公式與要求：C. Michelle wrote the following outline. Help her to write her story in full down below."
         }
       },
       {
-        "id": "TEA_MC_02",
-        "type": "choice",
-        "category_tag": "choice",
-        "question": "【寫作句型】If I had 6000 dollars, I ( ______ ) buy a new computer.",
-        "options": [
-          "would",
-          "will",
-          "can",
-          "am going to"
-        ],
-        "answer": "would",
-        "hint": "與現在事實相反的假設語氣：If S + had..., S + would + V",
+        "id": "TEA_W4_P05_A_1",
+        "week": "W4",
+        "page": 5,
+        "part": "Part A",
+        "part_title": "Discover 3 (Unit 14) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "spelling_listen",
+        "question": "【W4 歷史真卷·Discover 3 (Unit 14) : Spelling】第 1 題：請聽音並在紙上拼寫出單字",
+        "answer": "slide",
+        "ipa": "/slaɪd/",
+        "vocab_card": {
+          "pos": "n. / v.",
+          "chi": "滑梯；滑動；滑行",
+          "ipa": "/slaɪd/",
+          "breakdown": "sl- (平滑移動) + -ide ➔ 在平滑表面滑行",
+          "trick": "下雨天鞋底很「死賴（slide）」，容易滑倒！",
+          "collocation": "playground slide (遊樂場滑梯) / slide down (滑下)",
+          "context_eng": "The children love to play on the tall slide in the park.",
+          "context_chi": "孩子們喜歡在公園的高滑梯上玩耍。",
+          "compare": "名詞為溜滑梯，動詞過去式為不規則 slid（切勿寫 slided）",
+          "word": "slide"
+        },
+        "difficulty": "★★★☆☆",
         "explanation": {
-          "concept": "Write Right 3 Unit 5: 虛擬假設語氣",
-          "formula": "If 子句使用過去式動詞 (had)，主要子句必須使用 would / could + 原形動詞。",
-          "trap": "考場常見錯誤：直覺選 will。因條件句是 had，時態必須倒退一步用 would！"
+          "point": "W4 實體考券 Discover 3 (Unit 14) : Spelling 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：slide"
         }
       },
       {
-        "id": "TEA_MC_03",
-        "type": "choice",
-        "category_tag": "choice",
-        "question": "【花費動詞句型】A new jacket would cost ( ______ ) 750 dollars.",
-        "options": [
-          "me",
-          "to me",
-          "for me",
-          "with me"
-        ],
-        "answer": "me",
-        "hint": "花費句型：cost + 受格 (me) + 金額",
+        "id": "TEA_W4_P05_A_2",
+        "week": "W4",
+        "page": 5,
+        "part": "Part A",
+        "part_title": "Discover 3 (Unit 14) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "spelling_listen",
+        "question": "【W4 歷史真卷·Discover 3 (Unit 14) : Spelling】第 2 題：請聽音並在紙上拼寫出單字",
+        "answer": "seesaw",
+        "ipa": "/ˈsiːsɔː/",
+        "vocab_card": {
+          "pos": "n.",
+          "chi": "蹺蹺板（簡單機械/槓桿）",
+          "ipa": "/ˈsiːsɔː/",
+          "breakdown": "see (看見) + saw (看見過去式) ➔ 一上一下忽見忽不見",
+          "trick": "玩蹺蹺板時，一下子看見（see）一下子看到（saw）！",
+          "collocation": "play on the seesaw (玩蹺蹺板)",
+          "context_eng": "A seesaw is a simple machine that uses a lever.",
+          "context_chi": "蹺蹺板是一種應用槓桿原理的簡單機械。",
+          "compare": "複合名詞中間無空格，過去式 saw 不可混淆",
+          "word": "seesaw"
+        },
+        "difficulty": "★★★☆☆",
         "explanation": {
-          "concept": "Write Right 3 Unit 5: 花費動詞 cost 句型結構",
-          "formula": "事物 (A new jacket) + cost + 人 (受格 me) + 金額 (750 dollars)。",
-          "trap": "受到中文『對我花費』影響容易誤選 to me 或 for me。cost 後面直接接受格！"
+          "point": "W4 實體考券 Discover 3 (Unit 14) : Spelling 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：seesaw"
         }
       },
       {
-        "id": "TEA_MC_04",
-        "type": "choice",
-        "category_tag": "choice",
-        "question": "【副詞比較選擇】Helen laughs ( ______ ) than Peter when watching comedies.",
-        "options": [
-          "more loudly",
-          "louder",
-          "more loud",
-          "loudest"
-        ],
-        "answer": "more loudly",
-        "hint": "修飾動詞 laugh 用副詞 loudly，比較級加 more",
-        "explanation": {
-          "concept": "Grammar 3 Unit 14: 多音節副詞比較級",
-          "formula": "修飾動詞 laugh 必須使用副詞 loudly；多音節副詞的比較級為 more loudly + than。",
-          "trap": "考場真實失分：孩子誤選 more loud ❌。loud 是形容詞，修飾動詞必須有 -ly！"
-        }
-      },
-      {
-        "id": "TEA_MC_05",
-        "type": "choice",
-        "category_tag": "choice",
-        "question": "【附和句倒裝選擇】Brad did not play baseball, and ( ______ ).",
-        "options": [
-          "Lisa didn't, either",
-          "neither didn't Lisa",
-          "Lisa did, too",
-          "so did Lisa"
-        ],
-        "answer": "Lisa didn't, either",
-        "hint": "前句是否定句，後句附和必須也是否定附和（注意 neither 後不可用 didn't）",
-        "explanation": {
-          "concept": "Grammar 3 Unit 13: 否定附和句",
-          "formula": "否定句附和標準形式：① Lisa didn't, either；② neither did Lisa（助動詞必須為肯定形 did）。",
-          "trap": "neither didn't Lisa 犯了雙重否定錯誤 ❌；too 與 so did 則是肯定附和 ❌。"
-        }
-      },
-      {
-        "id": "TEA_MC_06",
-        "type": "choice",
-        "category_tag": "choice",
-        "question": "【機械單字選擇】A piece of wood or metal with one thick end and one thin edge is a ( ______ ).",
-        "options": [
-          "wedge",
-          "ramp",
-          "lever",
-          "furnace"
-        ],
+        "id": "TEA_W4_P05_A_3",
+        "week": "W4",
+        "page": 5,
+        "part": "Part A",
+        "part_title": "Discover 3 (Unit 14) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "spelling_listen",
+        "question": "【W4 歷史真卷·Discover 3 (Unit 14) : Spelling】第 3 題：請聽音並在紙上拼寫出單字",
         "answer": "wedge",
-        "hint": "一頭厚、一頭薄的三角形工具：楔子",
+        "ipa": "/wedge/",
+        "vocab_card": {
+          "word": "wedge",
+          "pos": "名詞 (Noun)",
+          "chi": "楔子 / 三角木（簡單機械）",
+          "ipa": "/wedge/",
+          "breakdown": "古英語 wecg -> 一端厚、一端薄呈三角形，用來劈開木頭或卡住門的簡單機械。",
+          "trick": "⚠️ 岱崙 W2 考卷真實失分字！Rex 曾拼成『wadge ❌』！口訣：跟 edge (邊緣)、bed (床) 一樣，中間是短母音 e，絕對不是 a！",
+          "collocation": "搭配: a wooden wedge (木楔子)｜同類機械: lever, ramp, screw, wheel and axle",
+          "context_eng": "He hammered a wooden wedge into the log.",
+          "context_chi": "他把一塊木楔子敲進原木裡。",
+          "compare": "wedge (楔子 - 母音 e) vs. ❌wadge (錯誤拼法)。"
+        },
+        "difficulty": "★★★☆☆",
         "explanation": {
-          "concept": "Oxford Discover 3 Unit 13 簡單機械定義",
-          "formula": "wedge 的英英字典定義：thick end (厚端) + thin edge (薄刃)。",
-          "trap": "ramp 是斜坡（sloping surface），lever 是槓桿（rigid bar pivoting on a fulcrum）。"
+          "point": "W4 實體考券 Discover 3 (Unit 14) : Spelling 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：wedge"
         }
       },
       {
-        "id": "TEA_LIST_11",
+        "id": "TEA_W4_P05_A_4",
+        "week": "W4",
+        "page": 5,
+        "part": "Part A",
+        "part_title": "Discover 3 (Unit 14) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
         "type": "spelling_listen",
-        "category_tag": "listening",
-        "question": "【W6 真題錯字重測】請聽電腦發音，拼寫出這個植物單字：",
-        "hint": "花朵吸引蜜蜂的甜液：花蜜",
-        "audio_word": "nectar",
-        "phonetic": "/ˈnektər/",
-        "syllables": "nec · tar",
+        "question": "【W4 歷史真卷·Discover 3 (Unit 14) : Spelling】第 4 題：請聽音並在紙上拼寫出單字",
+        "answer": "ramp",
+        "ipa": "/ræmp/",
+        "vocab_card": {
+          "pos": "n.",
+          "chi": "斜面；斜坡道（簡單機械）",
+          "ipa": "/ræmp/",
+          "breakdown": "ramp (傾斜支撐面)",
+          "trick": "推推車上「浪（ramp）板斜坡」比較省力！",
+          "collocation": "wheelchair ramp (輪椅斜坡道)",
+          "context_eng": "He pushed the heavy box up the ramp into the truck.",
+          "context_chi": "他將沉重的箱子沿著斜面推進卡車裡。",
+          "compare": "斜面 (inclined plane) 的生活常用口語詞",
+          "word": "ramp"
+        },
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W4 實體考券 Discover 3 (Unit 14) : Spelling 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：ramp"
+        }
+      },
+      {
+        "id": "TEA_W4_P05_A_5",
+        "week": "W4",
+        "page": 5,
+        "part": "Part A",
+        "part_title": "Discover 3 (Unit 14) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "spelling_listen",
+        "question": "【W4 歷史真卷·Discover 3 (Unit 14) : Spelling】第 5 題：請聽音並在紙上拼寫出單字",
+        "answer": "doorknob",
+        "ipa": "/ˈdɔːrnɑːb/",
+        "vocab_card": {
+          "pos": "n.",
+          "chi": "門把手（輪軸機械）",
+          "ipa": "/ˈdɔːrnɑːb/",
+          "breakdown": "door (門) + knob (球形把手) ➔ 門上的球形握把",
+          "trick": "「叩門（knob）」的把手，注意 k 不發音！",
+          "collocation": "turn the doorknob (轉動門把)",
+          "context_eng": "Turn the doorknob clockwise to open the door.",
+          "context_chi": "順時針轉動門把即可開門。",
+          "compare": "注意 k 靜音，字母 b 結尾",
+          "word": "doorknob"
+        },
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W4 實體考券 Discover 3 (Unit 14) : Spelling 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：doorknob"
+        }
+      },
+      {
+        "id": "TEA_W4_P05_A_6",
+        "week": "W4",
+        "page": 5,
+        "part": "Part A",
+        "part_title": "Discover 3 (Unit 14) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "spelling_listen",
+        "question": "【W4 歷史真卷·Discover 3 (Unit 14) : Spelling】第 6 題：請聽音並在紙上拼寫出單字",
+        "answer": "lever",
+        "ipa": "/lever/",
+        "vocab_card": {
+          "word": "lever",
+          "pos": "名詞 (Noun)",
+          "chi": "槓桿（簡單機械）",
+          "ipa": "/lever/",
+          "breakdown": "源自法語 lever (抬起/舉起) -> 用支點撬動重物的桿子。",
+          "trick": "諧音「拉吧」。用力「拉吧 (lever)」，槓桿就能把大石頭撬起來！",
+          "collocation": "搭配: pull the lever (拉動槓桿)｜例: A seesaw is a lever.",
+          "context_eng": "A seesaw on the playground is a kind of lever.",
+          "context_chi": "遊樂場裡的蹺蹺板是一種槓桿。",
+          "compare": "lever (槓桿) vs. clever (聰明的) vs. never (從不) — 拼寫超像三兄弟！"
+        },
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W4 實體考券 Discover 3 (Unit 14) : Spelling 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：lever"
+        }
+      },
+      {
+        "id": "TEA_W4_P05_A_7",
+        "week": "W4",
+        "page": 5,
+        "part": "Part A",
+        "part_title": "Discover 3 (Unit 14) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "spelling_listen",
+        "question": "【W4 歷史真卷·Discover 3 (Unit 14) : Spelling】第 7 題：請聽音並在紙上拼寫出單字",
+        "answer": "screw",
+        "ipa": "/screw/",
+        "vocab_card": {
+          "word": "screw",
+          "pos": "n.",
+          "chi": "考券核心字彙",
+          "ipa": "/screw/",
+          "breakdown": "單字拼寫記憶：screw",
+          "trick": "熟記發音音節以精準拼寫 screw",
+          "collocation": "screw",
+          "context_eng": "Rex practiced writing screw in the 3C quiz.",
+          "context_chi": "Rex 在小考中精準默寫出 screw。",
+          "compare": "注意大小寫與字母順序"
+        },
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W4 實體考券 Discover 3 (Unit 14) : Spelling 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：screw"
+        }
+      },
+      {
+        "id": "TEA_W4_P05_A_8",
+        "week": "W4",
+        "page": 5,
+        "part": "Part A",
+        "part_title": "Discover 3 (Unit 14) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "spelling_listen",
+        "question": "【W4 歷史真卷·Discover 3 (Unit 14) : Spelling】第 8 題：請聽音並在紙上拼寫出單字",
+        "answer": "wheel and axle",
+        "ipa": "/wheel and axle/",
+        "vocab_card": {
+          "word": "wheel and axle",
+          "pos": "名詞片語 (Noun Phrase)",
+          "chi": "輪軸（簡單機械）",
+          "ipa": "/wheel and axle/",
+          "breakdown": "wheel (大輪子) + and + axle (中間穿過的轉軸 a-x-l-e)。",
+          "trick": "注意軸心是 a-x-l-e (先 l 再 e)，不要跟斧頭 axe 搞混！",
+          "collocation": "考卷必考拼寫: wheel and axle (三個字全小寫)",
+          "context_eng": "A doorknob is an example of a wheel and axle.",
+          "context_chi": "門把就是輪軸的一個例子。",
+          "compare": "axle (輪軸的軸心 a-x-l-e) vs. axe (斧頭 a-x-e)。"
+        },
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W4 實體考券 Discover 3 (Unit 14) : Spelling 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：wheel and axle"
+        }
+      },
+      {
+        "id": "TEA_W4_P05_A_9",
+        "week": "W4",
+        "page": 5,
+        "part": "Part A",
+        "part_title": "Discover 3 (Unit 14) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "spelling_listen",
+        "question": "【W4 歷史真卷·Discover 3 (Unit 14) : Spelling】第 9 題：請聽音並在紙上拼寫出單字",
+        "answer": "invention",
+        "ipa": "/invention/",
+        "vocab_card": {
+          "word": "invention",
+          "pos": "名詞 (Noun)。由動詞 invent 衍生。",
+          "chi": "發明 / 發明物",
+          "ipa": "/invention/",
+          "breakdown": "字首 in- (into 進入) + 字根 vent (come 來到/發生) + 名詞字尾 -tion (狀態) -> 腦中「走進來」的新事物。源自拉丁文 invenire (發現)。",
+          "trick": "諧音「銀面線」。聯想：我「發明」了一種會發光的「銀面線」，吃下去會變聰明！",
+          "collocation": "詞族: invent (動詞), inventor (發明家)。同義詞: creation, device。搭配: a useful invention (一個有用的發明)。",
+          "context_eng": "The telephone was an amazing invention.",
+          "context_chi": "電話是一個驚人的發明。",
+          "compare": "Invention (發明-從無到有) vs. Discovery (發現-本來就存在，只是被找到) vs. Invitation (邀請)。"
+        },
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W4 實體考券 Discover 3 (Unit 14) : Spelling 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：invention"
+        }
+      },
+      {
+        "id": "TEA_W4_P05_A_10",
+        "week": "W4",
+        "page": 5,
+        "part": "Part A",
+        "part_title": "Discover 3 (Unit 14) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "spelling_listen",
+        "question": "【W4 歷史真卷·Discover 3 (Unit 14) : Spelling】第 10 題：請聽音並在紙上拼寫出單字",
+        "answer": "hammer",
+        "ipa": "/ˈhæmər/",
+        "vocab_card": {
+          "pos": "n. / v.",
+          "chi": "鐵鎚；鎚打",
+          "ipa": "/ˈhæmər/",
+          "breakdown": "hamm- (重擊敲打)",
+          "trick": "用力敲下去「好猛（hammer）」！",
+          "collocation": "hammer and nails (鐵鎚與釘子)",
+          "context_eng": "He used a heavy hammer to knock the wedge into the wood.",
+          "context_chi": "他用一把重鐵鎚把楔子敲進木頭裡。",
+          "compare": "雙寫 mm，母音為短母音 /æ/",
+          "word": "hammer"
+        },
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W4 實體考券 Discover 3 (Unit 14) : Spelling 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：hammer"
+        }
+      },
+      {
+        "id": "TEA_W4_P05_A_11",
+        "week": "W4",
+        "page": 5,
+        "part": "Part A",
+        "part_title": "Discover 3 (Unit 14) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "spelling_listen",
+        "question": "【W4 歷史真卷·Discover 3 (Unit 14) : Spelling】第 11 題：請聽音並在紙上拼寫出單字",
+        "answer": "jar lid",
+        "ipa": "/jar lid/",
+        "vocab_card": {
+          "word": "jar lid",
+          "pos": "n.",
+          "chi": "考券核心字彙",
+          "ipa": "/jar lid/",
+          "breakdown": "單字拼寫記憶：jar lid",
+          "trick": "熟記發音音節以精準拼寫 jar lid",
+          "collocation": "jar lid",
+          "context_eng": "Rex practiced writing jar lid in the 3C quiz.",
+          "context_chi": "Rex 在小考中精準默寫出 jar lid。",
+          "compare": "注意大小寫與字母順序"
+        },
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W4 實體考券 Discover 3 (Unit 14) : Spelling 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：jar lid"
+        }
+      },
+      {
+        "id": "TEA_W4_P05_A_12",
+        "week": "W4",
+        "page": 5,
+        "part": "Part A",
+        "part_title": "Discover 3 (Unit 14) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "spelling_listen",
+        "question": "【W4 歷史真卷·Discover 3 (Unit 14) : Spelling】第 12 題：請聽音並在紙上拼寫出單字",
+        "answer": "wire",
+        "ipa": "/ˈwaɪər/",
+        "vocab_card": {
+          "pos": "n.",
+          "chi": "金屬線；鐵絲；電線",
+          "ipa": "/ˈwaɪər/",
+          "breakdown": "wir- (纏繞、金屬絲)",
+          "trick": "外（wire）面很多電線桿掛滿金屬線！",
+          "collocation": "copper wire (銅線) / wire cutters (剪線鉗)",
+          "context_eng": "The bird was resting on the telephone wire.",
+          "context_chi": "鳥兒停在電話線上休息。",
+          "compare": "單音節長母音 /aɪ/，字尾 e 靜音",
+          "word": "wire"
+        },
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W4 實體考券 Discover 3 (Unit 14) : Spelling 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：wire"
+        }
+      },
+      {
+        "id": "TEA_W4_P05_A_13",
+        "week": "W4",
+        "page": 5,
+        "part": "Part A",
+        "part_title": "Discover 3 (Unit 14) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "spelling_listen",
+        "question": "【W4 歷史真卷·Discover 3 (Unit 14) : Spelling】第 13 題：請聽音並在紙上拼寫出單字",
+        "answer": "eyeglasses",
+        "ipa": "/eyeglasses/",
+        "vocab_card": {
+          "word": "eyeglasses",
+          "pos": "n.",
+          "chi": "考券核心字彙",
+          "ipa": "/eyeglasses/",
+          "breakdown": "單字拼寫記憶：eyeglasses",
+          "trick": "熟記發音音節以精準拼寫 eyeglasses",
+          "collocation": "eyeglasses",
+          "context_eng": "Rex practiced writing eyeglasses in the 3C quiz.",
+          "context_chi": "Rex 在小考中精準默寫出 eyeglasses。",
+          "compare": "注意大小寫與字母順序"
+        },
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W4 實體考券 Discover 3 (Unit 14) : Spelling 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：eyeglasses"
+        }
+      },
+      {
+        "id": "TEA_W4_P05_A_14",
+        "week": "W4",
+        "page": 5,
+        "part": "Part A",
+        "part_title": "Discover 3 (Unit 14) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "spelling_listen",
+        "question": "【W4 歷史真卷·Discover 3 (Unit 14) : Spelling】第 14 題：請聽音並在紙上拼寫出單字",
+        "answer": "vase",
+        "ipa": "/vase/",
+        "vocab_card": {
+          "word": "vase",
+          "pos": "n.",
+          "chi": "考券核心字彙",
+          "ipa": "/vase/",
+          "breakdown": "單字拼寫記憶：vase",
+          "trick": "熟記發音音節以精準拼寫 vase",
+          "collocation": "vase",
+          "context_eng": "Rex practiced writing vase in the 3C quiz.",
+          "context_chi": "Rex 在小考中精準默寫出 vase。",
+          "compare": "注意大小寫與字母順序"
+        },
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W4 實體考券 Discover 3 (Unit 14) : Spelling 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：vase"
+        }
+      },
+      {
+        "id": "TEA_W4_P05_A_15",
+        "week": "W4",
+        "page": 5,
+        "part": "Part A",
+        "part_title": "Discover 3 (Unit 14) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "spelling_listen",
+        "question": "【W4 歷史真卷·Discover 3 (Unit 14) : Spelling】第 15 題：請聽音並在紙上拼寫出單字",
+        "answer": "glassblower",
+        "ipa": "/glassblower/",
+        "vocab_card": {
+          "word": "glassblower",
+          "pos": "名詞 (Noun)",
+          "chi": "吹玻璃工匠",
+          "ipa": "/glassblower/",
+          "breakdown": "glass (玻璃) + blow (吹) + -er (從事...的人) -> 吹製玻璃藝術品的工匠。",
+          "trick": "三個熟字合體：glass (玻璃) + blow (吹) + er (人) = glassblower（中間不空格）！",
+          "collocation": "相關詞族: glassware (玻璃器皿), eyeglasses (眼鏡), vase (花瓶), pitcher (水壺)",
+          "context_eng": "The glassblower made a beautiful blue vase and a pitcher.",
+          "context_chi": "吹玻璃工匠製作了一個美麗的藍色花瓶與一個水壺。",
+          "compare": "glassblower (吹玻璃工匠-人) vs. glassware (玻璃器皿-物品總稱)。"
+        },
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W4 實體考券 Discover 3 (Unit 14) : Spelling 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：glassblower"
+        }
+      },
+      {
+        "id": "TEA_W4_P05_A_16",
+        "week": "W4",
+        "page": 5,
+        "part": "Part A",
+        "part_title": "Discover 3 (Unit 14) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "spelling_listen",
+        "question": "【W4 歷史真卷·Discover 3 (Unit 14) : Spelling】第 16 題：請聽音並在紙上拼寫出單字",
+        "answer": "pitcher",
+        "ipa": "/ˈpɪtʃər/",
+        "vocab_card": {
+          "pos": "n.",
+          "chi": "大水罐；有柄水壺",
+          "ipa": "/ˈpɪtʃər/",
+          "breakdown": "pitch (投、傾倒容器) + -er (器具)",
+          "trick": "棒球投手（pitcher）在休息室喝大水罐（pitcher）的水！",
+          "collocation": "a pitcher of water (一壺水)",
+          "context_eng": "She poured lemonade from the glass pitcher into our cups.",
+          "context_chi": "她從玻璃水壺將檸檬汁倒入我們的杯子裡。",
+          "compare": "既指棒球投手，也指廣口水壺",
+          "word": "pitcher"
+        },
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W4 實體考券 Discover 3 (Unit 14) : Spelling 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：pitcher"
+        }
+      },
+      {
+        "id": "TEA_W4_P05_A_17",
+        "week": "W4",
+        "page": 5,
+        "part": "Part A",
+        "part_title": "Discover 3 (Unit 14) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "spelling_listen",
+        "question": "【W4 歷史真卷·Discover 3 (Unit 14) : Spelling】第 17 題：請聽音並在紙上拼寫出單字",
+        "answer": "furnace",
+        "ipa": "/furnace/",
+        "vocab_card": {
+          "word": "furnace",
+          "pos": "名詞 (Noun)",
+          "chi": "熔爐 / 火爐",
+          "ipa": "/furnace/",
+          "breakdown": "源自拉丁文 fornax (高溫烤爐) -> 用來高溫熔化玻璃或金屬的封閉巨爐。",
+          "trick": "⚠️ 岱崙 W4 考卷真實失分字！Rex 曾拼成『furnes ❌』！口訣：熔爐裡面熱得像「王宮 (palace)」的「表面 (surface)」，字尾是 -ace (a-c-e)！",
+          "collocation": "同尾詞族: furnace (熔爐), surface (表面), palace (宮殿), necklace (項鍊) 全是 -ace！",
+          "context_eng": "A glassblower melts glass inside a giant furnace.",
+          "context_chi": "吹玻璃工匠在巨大的熔爐裡熔化玻璃。",
+          "compare": "furnace (熔爐 - 字尾 -ace) vs. ❌furnes (錯誤拼法)。"
+        },
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W4 實體考券 Discover 3 (Unit 14) : Spelling 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：furnace"
+        }
+      },
+      {
+        "id": "TEA_W4_P05_A_18",
+        "week": "W4",
+        "page": 5,
+        "part": "Part A",
+        "part_title": "Discover 3 (Unit 14) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "spelling_listen",
+        "question": "【W4 歷史真卷·Discover 3 (Unit 14) : Spelling】第 18 題：請聽音並在紙上拼寫出單字",
+        "answer": "workshop",
+        "ipa": "/ˈwɜːrkʃɑːp/",
+        "vocab_card": {
+          "pos": "n.",
+          "chi": "工作坊；車間；工坊",
+          "ipa": "/ˈwɜːrkʃɑːp/",
+          "breakdown": "work (工作) + shop (場所/店鋪) ➔ 進行手作工作的場所",
+          "trick": "工匠在工坊（workshop）裡努力工作（work）！",
+          "collocation": "glassblower's workshop (吹玻璃工坊)",
+          "context_eng": "The glassblower melted the sand inside his hot workshop.",
+          "context_chi": "吹玻璃工匠在炙熱的工作坊裡熔化沙子。",
+          "compare": "複合名詞無空格",
+          "word": "workshop"
+        },
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W4 實體考券 Discover 3 (Unit 14) : Spelling 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：workshop"
+        }
+      },
+      {
+        "id": "TEA_W4_P05_A_19",
+        "week": "W4",
+        "page": 5,
+        "part": "Part A",
+        "part_title": "Discover 3 (Unit 14) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "spelling_listen",
+        "question": "【W4 歷史真卷·Discover 3 (Unit 14) : Spelling】第 19 題：請聽音並在紙上拼寫出單字",
+        "answer": "glassware",
+        "ipa": "/ˈɡlæswer/",
+        "vocab_card": {
+          "pos": "n.",
+          "chi": "玻璃器皿（總稱，不可數）",
+          "ipa": "/ˈɡlæswer/",
+          "breakdown": "glass (玻璃) + -ware (製品/器皿) ➔ 玻璃製造的器皿總稱",
+          "trick": "廚房櫃子裡陳列著各種高檔玻璃器皿（glassware）！",
+          "collocation": "fragile glassware (易碎玻璃器皿)",
+          "context_eng": "Be careful when handling glassware because it breaks easily.",
+          "context_chi": "拿取玻璃器皿時要小心，因為它很容易破碎。",
+          "compare": "字尾 -ware 表示集合名詞，不可數（不能加 s）",
+          "word": "glassware"
+        },
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W4 實體考券 Discover 3 (Unit 14) : Spelling 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：glassware"
+        }
+      },
+      {
+        "id": "TEA_W4_P05_A_20",
+        "week": "W4",
+        "page": 5,
+        "part": "Part A",
+        "part_title": "Discover 3 (Unit 14) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "spelling_listen",
+        "question": "【W4 歷史真卷·Discover 3 (Unit 14) : Spelling】第 20 題：請聽音並在紙上拼寫出單字",
+        "answer": "frames",
+        "ipa": "/frames/",
+        "vocab_card": {
+          "word": "frames",
+          "pos": "名詞 (Noun, 複數)",
+          "chi": "（眼鏡的）鏡框 / 框架",
+          "ipa": "/frames/",
+          "breakdown": "frame (框/結構) + s (一副眼鏡有左右兩個鏡框，常以複數 frames 出現)。",
+          "trick": "⚠️ 岱崙 W4 考卷真實失分字！Rex 曾寫成『france ❌（法國）』！口訣：f-r-a-m-e-s 閉嘴音 /m/，不是法國 France 的 /n/！",
+          "collocation": "搭配: eyeglasses with metal frames (金屬鏡框的眼鏡), picture frame (相框)",
+          "context_eng": "He bought a pair of eyeglasses with metal frames.",
+          "context_chi": "他買了一副金屬鏡框的眼鏡。",
+          "compare": "frames (鏡框 /freɪmz/) vs. France (法國 /fræns/)。"
+        },
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W4 實體考券 Discover 3 (Unit 14) : Spelling 核心考點",
+          "trap": "【Rex 當年筆記】：學生原始作答「france」。TRAP_WORD_HOMOPHONE_SLIP（將眼鏡鏡框 frames /freɪmz/ 誤寫為法國 France）",
+          "note": "標準官方批改：frames"
+        }
+      },
+      {
+        "id": "TEA_W4_P05_B_1",
+        "week": "W4",
+        "page": 5,
+        "part": "Part B",
+        "part_title": "Reading with Writing 6 (Units 5 & 6) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "spelling_listen",
+        "question": "【W4 歷史真卷·Reading with Writing 6 (Units 5 & 6) : Spelling】第 1 題：請聽音並在紙上拼寫出單字",
+        "answer": "turned right",
+        "ipa": "/turned right/",
+        "vocab_card": {
+          "word": "turned right",
+          "pos": "動詞片語 (Phrase)｜原形 turn right",
+          "chi": "右轉",
+          "ipa": "/turned right/",
+          "breakdown": "turn (轉動/轉彎) + right (右邊)。考卷聽寫常考過去式 turned right。",
+          "trick": "諧音「吞ไร」。聯想：吞一口飯往「右轉」。注意過去式 turn 要加 -ed！",
+          "collocation": "搭配: turn right at the corner (在轉角右轉)｜反義: turn left (左轉)",
+          "context_eng": "There's a place we should have turned right, but we went straight.",
+          "context_chi": "有一個地方我們本來應該右轉，但我們卻直走了。",
+          "compare": "turn right (右轉-動作) vs. on the right (在右邊-位置)。"
+        },
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W4 實體考券 Reading with Writing 6 (Units 5 & 6) : Spelling 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：turned right"
+        }
+      },
+      {
+        "id": "TEA_W4_P05_B_2",
+        "week": "W4",
+        "page": 5,
+        "part": "Part B",
+        "part_title": "Reading with Writing 6 (Units 5 & 6) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "spelling_listen",
+        "question": "【W4 歷史真卷·Reading with Writing 6 (Units 5 & 6) : Spelling】第 2 題：請聽音並在紙上拼寫出單字",
+        "answer": "went straight",
+        "ipa": "/went straight/",
+        "vocab_card": {
+          "word": "went straight",
+          "pos": "動詞片語 (Phrase)｜原形 go straight",
+          "chi": "直走",
+          "ipa": "/went straight/",
+          "breakdown": "went (go 的過去式) + straight (筆直地，gh 不發音)。",
+          "trick": "straight 諧音「死墜特」：筆直往下墜！gh 完全不發音但拼字絕不能漏！",
+          "collocation": "搭配: go straight for two blocks (直走兩個街區)｜同義: walk straight ahead",
+          "context_eng": "We should have turned right, but I think we went straight.",
+          "context_chi": "我們本來應該右轉，但我想我們卻直走了。",
+          "compare": "straight (筆直地/直的) vs. strange (奇怪的)。"
+        },
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W4 實體考券 Reading with Writing 6 (Units 5 & 6) : Spelling 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：went straight"
+        }
+      },
+      {
+        "id": "TEA_W4_P05_B_3",
+        "week": "W4",
+        "page": 5,
+        "part": "Part B",
+        "part_title": "Reading with Writing 6 (Units 5 & 6) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "spelling_listen",
+        "question": "【W4 歷史真卷·Reading with Writing 6 (Units 5 & 6) : Spelling】第 3 題：請聽音並在紙上拼寫出單字",
+        "answer": "on the left",
+        "ipa": "/on the left/",
+        "vocab_card": {
+          "word": "on the left",
+          "pos": "介系詞片語 (Prep. Phrase)",
+          "chi": "在左邊 / 在左側",
+          "ipa": "/on the left/",
+          "breakdown": "on (在...接觸面上) + the + left (左邊)。固定使用介系詞 on！",
+          "trick": "口訣：「左邊右邊貼著路，介系詞用 on 記清楚！」(on the left / on the right)。",
+          "collocation": "完整片語: on the left side of the trail (在步道左側)｜反義: on the right",
+          "context_eng": "She pointed to a log bench on the left side of the trail.",
+          "context_chi": "她指著步道左側的一張原木長凳。",
+          "compare": "on the left (在左邊-靜態位置) vs. turn left (左轉-動態轉向，不加 the)。"
+        },
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W4 實體考券 Reading with Writing 6 (Units 5 & 6) : Spelling 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：on the left"
+        }
+      },
+      {
+        "id": "TEA_W4_P05_B_4",
+        "week": "W4",
+        "page": 5,
+        "part": "Part B",
+        "part_title": "Reading with Writing 6 (Units 5 & 6) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "spelling_listen",
+        "question": "【W4 歷史真卷·Reading with Writing 6 (Units 5 & 6) : Spelling】第 4 題：請聽音並在紙上拼寫出單字",
+        "answer": "next to",
+        "ipa": "/next to/",
+        "vocab_card": {
+          "word": "next to",
+          "pos": "介系詞片語 (Prep. Phrase)",
+          "chi": "在...旁邊 / 緊鄰著",
+          "ipa": "/next to/",
+          "breakdown": "next (下一個/緊接著) + to (指向) -> 緊挨在旁邊。",
+          "trick": "注意 next 字尾有 t，後面再接 to，連音時不要漏掉 t！",
+          "collocation": "同義詞: beside, by｜搭配: sit next to my sister (坐在我姊姊旁邊)",
+          "context_eng": "Jaya realized they were next to a different, smaller hill.",
+          "context_chi": "佳雅意識到他們正位於另一座較小的山丘旁邊。",
+          "compare": "next to (緊鄰在旁) vs. near (在附近，不一定緊貼)。"
+        },
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W4 實體考券 Reading with Writing 6 (Units 5 & 6) : Spelling 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：next to"
+        }
+      },
+      {
+        "id": "TEA_W4_P05_B_5",
+        "week": "W4",
+        "page": 5,
+        "part": "Part B",
+        "part_title": "Reading with Writing 6 (Units 5 & 6) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "spelling_listen",
+        "question": "【W4 歷史真卷·Reading with Writing 6 (Units 5 & 6) : Spelling】第 5 題：請聽音並在紙上拼寫出單字",
+        "answer": "go back",
+        "ipa": "/go back/",
+        "vocab_card": {
+          "word": "go back",
+          "pos": "動詞片語 (Phrase)",
+          "chi": "折返 / 回去",
+          "ipa": "/go back/",
+          "breakdown": "go (走) + back (後面/返回) -> 往回走、折返原路。",
+          "trick": "發現走錯路時，先別急著 go back (回頭)，可以先爬上高處看地圖！",
+          "collocation": "搭配: go back down the trail (沿步道折返下山), go back home (回家)",
+          "context_eng": "Before we go back down the trail, we should hike up the hill!",
+          "context_chi": "在我們沿著步道折返下山前，我們應該爬上山丘看看！",
+          "compare": "go back (回去那裡) vs. come back (回來這裡)。"
+        },
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W4 實體考券 Reading with Writing 6 (Units 5 & 6) : Spelling 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：go back"
+        }
+      },
+      {
+        "id": "TEA_W4_P05_B_6",
+        "week": "W4",
+        "page": 5,
+        "part": "Part B",
+        "part_title": "Reading with Writing 6 (Units 5 & 6) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "spelling_listen",
+        "question": "【W4 歷史真卷·Reading with Writing 6 (Units 5 & 6) : Spelling】第 6 題：請聽音並在紙上拼寫出單字",
+        "answer": "up the hill",
+        "ipa": "/up the hill/",
+        "vocab_card": {
+          "word": "up the hill",
+          "pos": "介系詞片語 (Prep. Phrase)",
+          "chi": "往山丘上 / 上山",
+          "ipa": "/up the hill/",
+          "breakdown": "up (往上) + the hill (山丘)。下山則是 down the hill。",
+          "trick": "hike up the hill 爬上山丘，山頂就能高過濃霧 (above the fog)！",
+          "collocation": "搭配: hike up the hill (健行上山), walk up the hill｜反義: down the hill",
+          "context_eng": "We should hike up the hill and take a look around!",
+          "context_chi": "我們應該爬上山丘並四處看看！",
+          "compare": "hill (山丘/小山) vs. mountain (高大山脈)。"
+        },
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W4 實體考券 Reading with Writing 6 (Units 5 & 6) : Spelling 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：up the hill"
+        }
+      },
+      {
+        "id": "TEA_W4_P05_B_7",
+        "week": "W4",
+        "page": 5,
+        "part": "Part B",
+        "part_title": "Reading with Writing 6 (Units 5 & 6) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "spelling_listen",
+        "question": "【W4 歷史真卷·Reading with Writing 6 (Units 5 & 6) : Spelling】第 7 題：請聽音並在紙上拼寫出單字",
+        "answer": "read a map",
+        "ipa": "/read a map/",
+        "vocab_card": {
+          "word": "read a map",
+          "pos": "動詞片語 (Phrase)",
+          "chi": "看地圖 / 判讀地圖",
+          "ipa": "/read a map/",
+          "breakdown": "read (閱讀/判讀) + a map (一張地圖)。英文「看地圖」必用動詞 read，不用 look！",
+          "trick": "地圖上有文字、符號與方位，需要像讀書一樣「判讀」，所以用 read a map！",
+          "collocation": "搭配: know how to read a map (懂得如何看地圖), use a compass with a map",
+          "context_eng": "We know how to read a map, so let's look.",
+          "context_chi": "我們懂得如何看地圖，所以我們來看看吧。",
+          "compare": "read a map (看懂/判讀地圖) vs. look at the map (視線看向地圖)。"
+        },
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W4 實體考券 Reading with Writing 6 (Units 5 & 6) : Spelling 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：read a map"
+        }
+      },
+      {
+        "id": "TEA_W4_P05_B_8",
+        "week": "W4",
+        "page": 5,
+        "part": "Part B",
+        "part_title": "Reading with Writing 6 (Units 5 & 6) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "spelling_listen",
+        "question": "【W4 歷史真卷·Reading with Writing 6 (Units 5 & 6) : Spelling】第 8 題：請聽音並在紙上拼寫出單字",
+        "answer": "between",
+        "ipa": "/between/",
+        "vocab_card": {
+          "word": "between",
+          "pos": "介系詞 (Prep.)",
+          "chi": "在...（兩者）之間",
+          "ipa": "/between/",
+          "breakdown": "be- (by) + twain (古英語 two 兩個) -> 夾在「兩個」事物中間！",
+          "trick": "看到字根裡的 tw- 就想到 two (二)！夾在 A 和 B 兩個中間必用 between A and B！",
+          "collocation": "必考公式: between A and B (在 A 與 B 之間)｜例: between Mars and Jupiter",
+          "context_eng": "We're on a hill between the lighthouse and our usual picnic spot.",
+          "context_chi": "我們所在的山丘介於燈塔與我們平常野餐地點之間。",
+          "compare": "between (兩者之間) vs. among (三者以上之中)。"
+        },
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W4 實體考券 Reading with Writing 6 (Units 5 & 6) : Spelling 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：between"
+        }
+      },
+      {
+        "id": "TEA_W4_P05_B_9",
+        "week": "W4",
+        "page": 5,
+        "part": "Part B",
+        "part_title": "Reading with Writing 6 (Units 5 & 6) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "spelling_listen",
+        "question": "【W4 歷史真卷·Reading with Writing 6 (Units 5 & 6) : Spelling】第 9 題：請聽音並在紙上拼寫出單字",
+        "answer": "corner",
+        "ipa": "/corner/",
+        "vocab_card": {
+          "word": "corner",
+          "pos": "名詞 (Noun)",
+          "chi": "街角 / 轉角 / 角落",
+          "ipa": "/corner/",
+          "breakdown": "源自拉丁文 cornu (角/號角) + -er -> 兩條街道交會形成的角 (a place where two roads meet)。",
+          "trick": "諧音「摳呢」。站在「街角 (corner)」摳著腦袋問路人商店怎麼走。",
+          "collocation": "課本英英定義: a place where two roads meet｜搭配: standing on a corner (站在街角)",
+          "context_eng": "Standing on a corner, you ask someone how to get to a store.",
+          "context_chi": "站在街角，你向某人詢問如何前往一家商店。",
+          "compare": "on a corner (在戶外街角) vs. around the corner (即將到來/在轉角處)。"
+        },
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W4 實體考券 Reading with Writing 6 (Units 5 & 6) : Spelling 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：corner"
+        }
+      },
+      {
+        "id": "TEA_W4_P05_B_10",
+        "week": "W4",
+        "page": 5,
+        "part": "Part B",
+        "part_title": "Reading with Writing 6 (Units 5 & 6) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "spelling_listen",
+        "question": "【W4 歷史真卷·Reading with Writing 6 (Units 5 & 6) : Spelling】第 10 題：請聽音並在紙上拼寫出單字",
+        "answer": "go two blocks",
+        "ipa": "/go two blocks/",
+        "vocab_card": {
+          "word": "go two blocks",
+          "pos": "動詞片語 (Phrase)",
+          "chi": "走兩個街區",
+          "ipa": "/go two blocks/",
+          "breakdown": "go (走) + two blocks (兩個街區，超過一個街區 block 必加 s)。",
+          "trick": "課本英英定義題：『Go two blocks』means『move this far (移動這麼遠的距離)』！",
+          "collocation": "延伸搭配: go two blocks north (往北走兩個街區), two blocks from my house",
+          "context_eng": "They tell you to \"go two blocks north, turn left.\"",
+          "context_chi": "他們告訴你：「往北走兩個街區，然後左轉。」",
+          "compare": "block (名詞：街區/積木；動詞：阻擋)。"
+        },
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W4 實體考券 Reading with Writing 6 (Units 5 & 6) : Spelling 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：go two blocks"
+        }
+      },
+      {
+        "id": "TEA_W4_P05_B_11",
+        "week": "W4",
+        "page": 5,
+        "part": "Part B",
+        "part_title": "Reading with Writing 6 (Units 5 & 6) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "spelling_listen",
+        "question": "【W4 歷史真卷·Reading with Writing 6 (Units 5 & 6) : Spelling】第 11 題：請聽音並在紙上拼寫出單字",
+        "answer": "across from",
+        "ipa": "/across from/",
+        "vocab_card": {
+          "word": "across from",
+          "pos": "介系詞片語 (Prep. Phrase)",
+          "chi": "在...對面 / 在...對街",
+          "ipa": "/across from/",
+          "breakdown": "across (橫越到對面) + from (從...算起) -> 在馬路或空間的正對面。",
+          "trick": "課本英英定義：『across the street from』means『on the other side (在另一側/對面)』！",
+          "collocation": "同義片語: across the street from｜搭配: live across from the park (住在公園對面)",
+          "context_eng": "You'll be across the street from the bookstore.",
+          "context_chi": "你就會在書店的對街（對面）。",
+          "compare": "across from (介系詞：在...對面) vs. cross the street (動詞：過馬路)。"
+        },
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W4 實體考券 Reading with Writing 6 (Units 5 & 6) : Spelling 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：across from"
+        }
+      },
+      {
+        "id": "TEA_W4_P05_B_12",
+        "week": "W4",
+        "page": 5,
+        "part": "Part B",
+        "part_title": "Reading with Writing 6 (Units 5 & 6) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "spelling_listen",
+        "question": "【W4 歷史真卷·Reading with Writing 6 (Units 5 & 6) : Spelling】第 12 題：請聽音並在紙上拼寫出單字",
+        "answer": "around",
+        "ipa": "/around/",
+        "vocab_card": {
+          "word": "around",
+          "pos": "n.",
+          "chi": "考券核心字彙",
+          "ipa": "/around/",
+          "breakdown": "單字拼寫記憶：around",
+          "trick": "熟記發音音節以精準拼寫 around",
+          "collocation": "around",
+          "context_eng": "Rex practiced writing around in the 3C quiz.",
+          "context_chi": "Rex 在小考中精準默寫出 around。",
+          "compare": "注意大小寫與字母順序"
+        },
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W4 實體考券 Reading with Writing 6 (Units 5 & 6) : Spelling 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：around"
+        }
+      },
+      {
+        "id": "TEA_W4_P05_B_13",
+        "week": "W4",
+        "page": 5,
+        "part": "Part B",
+        "part_title": "Reading with Writing 6 (Units 5 & 6) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "spelling_listen",
+        "question": "【W4 歷史真卷·Reading with Writing 6 (Units 5 & 6) : Spelling】第 13 題：請聽音並在紙上拼寫出單字",
+        "answer": "in front of",
+        "ipa": "/in front of/",
+        "vocab_card": {
+          "word": "in front of",
+          "pos": "介系詞片語 (Prep. Phrase)",
+          "chi": "在...（外部）正前方",
+          "ipa": "/in front of/",
+          "breakdown": "in + front (正面/前部) + of -> 三個獨立單字組成的方位介系詞！",
+          "trick": "⚠️ 岱崙 W4 小考真實失分王！Rex 曾寫成『infront off ❌』！切記：① in 與 front 中間要空格；② 最後是單 f 的 of！",
+          "collocation": "反義詞: behind (在...後面)｜搭配: in front of a big rock (在巨石前面)",
+          "context_eng": "They may be in front of a big rock or behind a tree.",
+          "context_chi": "它們可能位於巨石前方或大樹後面。",
+          "compare": "in front of (在物體外部前方) vs. in the front of (在車廂/教室內部前排)。"
+        },
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W4 實體考券 Reading with Writing 6 (Units 5 & 6) : Spelling 核心考點",
+          "trap": "【Rex 當年筆記】：學生原始作答「infront off」。TRAP_PHRASE_SPACE_AND_PREPOSITION_OF（單詞間漏空格寫成 infront，介系詞 of 誤寫為 off）",
+          "note": "標準官方批改：in front of"
+        }
+      },
+      {
+        "id": "TEA_W4_P05_B_14",
+        "week": "W4",
+        "page": 5,
+        "part": "Part B",
+        "part_title": "Reading with Writing 6 (Units 5 & 6) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "spelling_listen",
+        "question": "【W4 歷史真卷·Reading with Writing 6 (Units 5 & 6) : Spelling】第 14 題：請聽音並在紙上拼寫出單字",
+        "answer": "behind",
+        "ipa": "/behind/",
+        "vocab_card": {
+          "word": "behind",
+          "pos": "介系詞 (Prep.)",
+          "chi": "在...後面",
+          "ipa": "/behind/",
+          "breakdown": "be- (在) + hind (後方的) -> 藏在某物的背後。",
+          "trick": "諧音「比害羞」。因為比別人害羞，所以躲在大樹「後面 (behind)」！",
+          "collocation": "反義詞: in front of (在...前面)｜搭配: behind a tree (在樹後面)",
+          "context_eng": "Controls may be in front of a big rock or behind a tree.",
+          "context_chi": "控制點可能位於巨石前方或大樹後面。",
+          "compare": "behind (在...後面-位置) vs. go back (往回走-動作)。"
+        },
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W4 實體考券 Reading with Writing 6 (Units 5 & 6) : Spelling 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：behind"
+        }
+      },
+      {
+        "id": "TEA_W4_P05_B_15",
+        "week": "W4",
+        "page": 5,
+        "part": "Part B",
+        "part_title": "Reading with Writing 6 (Units 5 & 6) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "spelling_listen",
+        "question": "【W4 歷史真卷·Reading with Writing 6 (Units 5 & 6) : Spelling】第 15 題：請聽音並在紙上拼寫出單字",
+        "answer": "along a river",
+        "ipa": "/along a river/",
+        "vocab_card": {
+          "word": "along a river",
+          "pos": "介系詞片語 (Prep. Phrase)",
+          "chi": "沿著一條河",
+          "ipa": "/along a river/",
+          "breakdown": "along (順著長條形物體的邊緣往前) + a river (河流)。",
+          "trick": "a + long (長長的) -> 順著「長長的」河岸或步道一路跑就是 along！",
+          "collocation": "搭配: run along a river (沿著河邊跑), walk along the street (沿著街走)",
+          "context_eng": "In orienteering, you will likely run along a river, climb over rocks, and go up and down hills.",
+          "context_chi": "在定向越野中，你很可能會沿著河邊奔跑、爬過岩石，並在山丘間上下穿梭。",
+          "compare": "along (沿著邊緣線條) vs. across (橫越到對岸)。"
+        },
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W4 實體考券 Reading with Writing 6 (Units 5 & 6) : Spelling 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：along a river"
+        }
+      },
+      {
+        "id": "TEA_W4_P05_B_16",
+        "week": "W4",
+        "page": 5,
+        "part": "Part B",
+        "part_title": "Reading with Writing 6 (Units 5 & 6) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "spelling_listen",
+        "question": "【W4 歷史真卷·Reading with Writing 6 (Units 5 & 6) : Spelling】第 16 題：請聽音並在紙上拼寫出單字",
+        "answer": "cross the street",
+        "ipa": "/cross the street/",
+        "vocab_card": {
+          "word": "cross the street",
+          "pos": "動詞片語 (Phrase)",
+          "chi": "過馬路 / 穿越街道",
+          "ipa": "/cross the street/",
+          "breakdown": "cross (動詞：穿越/橫渡) + the street (街道)。",
+          "trick": "課本英英定義：『cross the street』means『go to the other side (走到對面去)』！",
+          "collocation": "注意詞性：cross 是動詞（過馬路），across 是介系詞（在對面）！",
+          "context_eng": "In a race in a city, you might only need to cross the street to get to the finish line.",
+          "context_chi": "在城市裡的比賽，你計算也許只需要過馬路就能抵達終點線。",
+          "compare": "cross the street (= go across the street)。"
+        },
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W4 實體考券 Reading with Writing 6 (Units 5 & 6) : Spelling 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：cross the street"
+        }
+      },
+      {
+        "id": "TEA_W4_P06_C_Q1",
+        "week": "W4",
+        "page": 6,
+        "part": "Part C",
+        "part_title": "Grammar 3 (Unit 14) : 副詞三級比較長句合成",
+        "part_instructions": "C. Answer the question to compare the three given items by writing a sentence with an adverb clause, a comparative adverb clause, and a superlative adverb clause. (The verb tense of your answer should match that of the question):",
+        "word_bank": "[well, horribly, badly, quickly, far, fast, slowly]",
+        "sentence_form": "<adverb clause> , + <comparative clause> , + but + <superlative clause> .",
+        "tense_hint": "The verb tense of your answer should match that of the question!",
+        "type": "paper_rewrite",
+        "question": "【W4 歷史真卷·Grammar 3 (Unit 14) : 副詞三級比較長句合成】1. How did they do in their quiz? Anne: 100%, Penny: 95% & Eric: 90%",
+        "answer": "Eric did well in his quiz, Penny did better than Eric, but Anne did the best.",
+        "ipa": "",
+        "vocab_card": null,
+        "difficulty": "★★★★☆",
+        "explanation": {
+          "point": "W4 實體考券 Grammar 3 (Unit 14) : 副詞三級比較長句合成",
+          "trap": "【Rex 當年失分盲點】：學生作答寫「Penny did better than Eric, but Anne did the best.」。- `TRAP_MISSING_BASE_ADVERB_CLAUSE`：學生未遵循 Sentence form 的三段式要求，完全漏掉了第一段原級副詞子句（`<adverb clause>`），直接跳寫比較級。",
+          "note": "出題公式與要求：<adverb clause> , + <comparative clause> , + but + <superlative clause> ."
+        }
+      },
+      {
+        "id": "TEA_W4_P06_C_Q2",
+        "week": "W4",
+        "page": 6,
+        "part": "Part C",
+        "part_title": "Grammar 3 (Unit 14) : 副詞三級比較長句合成",
+        "part_instructions": "C. Answer the question to compare the three given items by writing a sentence with an adverb clause, a comparative adverb clause, and a superlative adverb clause. (The verb tense of your answer should match that of the question):",
+        "word_bank": "[well, horribly, badly, quickly, far, fast, slowly]",
+        "sentence_form": "<adverb clause> , + <comparative clause> , + but + <superlative clause> .",
+        "tense_hint": "The verb tense of your answer should match that of the question!",
+        "type": "paper_rewrite",
+        "question": "【W4 歷史真卷·Grammar 3 (Unit 14) : 副詞三級比較長句合成】2. How did they do in their quiz? Jerome: 65%, Ivan: 55% & Nate: 45%",
+        "answer": "Jerome did badly in the quiz, Ivan did worse than Jerome, but Nate did the worst.",
+        "ipa": "",
+        "vocab_card": null,
+        "difficulty": "★★★★☆",
+        "explanation": {
+          "point": "W4 實體考券 Grammar 3 (Unit 14) : 副詞三級比較長句合成",
+          "trap": "【Rex 當年失分盲點】：學生作答寫「Ivan did worse than Jerome, but Nate did the worst.」。- `TRAP_MISSING_BASE_ADVERB_CLAUSE`：漏寫 `Jerome did badly...`。   - `SUCCESS_IRREGULAR_ADVERB`：學生已掌握 `badly → worse → the worst` 不規則三級變化，但因公式缺項失分。",
+          "note": "出題公式與要求：<adverb clause> , + <comparative clause> , + but + <superlative clause> ."
+        }
+      },
+      {
+        "id": "TEA_W4_P06_C_Q3",
+        "week": "W4",
+        "page": 6,
+        "part": "Part C",
+        "part_title": "Grammar 3 (Unit 14) : 副詞三級比較長句合成",
+        "part_instructions": "C. Answer the question to compare the three given items by writing a sentence with an adverb clause, a comparative adverb clause, and a superlative adverb clause. (The verb tense of your answer should match that of the question):",
+        "word_bank": "[well, horribly, badly, quickly, far, fast, slowly]",
+        "sentence_form": "<adverb clause> , + <comparative clause> , + but + <superlative clause> .",
+        "tense_hint": "The verb tense of your answer should match that of the question!",
+        "type": "paper_rewrite",
+        "question": "【W4 歷史真卷·Grammar 3 (Unit 14) : 副詞三級比較長句合成】3. The distance they flew: eagle: 41km, duck: 91km & pigeon: 282km",
+        "answer": "An eagle flew far, a duck flew farther than an eagle, but a pigeon flew the farthest.",
+        "ipa": "",
+        "vocab_card": null,
+        "difficulty": "★★★★☆",
+        "explanation": {
+          "point": "W4 實體考券 Grammar 3 (Unit 14) : 副詞三級比較長句合成",
+          "trap": "【Rex 當年失分盲點】：學生作答寫「A duck flew farther than an eagle, but a pigeon flew the farthest.」。- `TRAP_MISSING_BASE_ADVERB_CLAUSE`：漏寫 `An eagle flew far,`。   - `TRAP_PHONETIC_CONFUSION_L_R`：筆跡顯示曾出現 frew（/l/ 與 /r/ 拼寫混淆）。",
+          "note": "出題公式與要求：<adverb clause> , + <comparative clause> , + but + <superlative clause> ."
+        }
+      },
+      {
+        "id": "TEA_W4_P06_C_Q4",
+        "week": "W4",
+        "page": 6,
+        "part": "Part C",
+        "part_title": "Grammar 3 (Unit 14) : 副詞三級比較長句合成",
+        "part_instructions": "C. Answer the question to compare the three given items by writing a sentence with an adverb clause, a comparative adverb clause, and a superlative adverb clause. (The verb tense of your answer should match that of the question):",
+        "word_bank": "[well, horribly, badly, quickly, far, fast, slowly]",
+        "sentence_form": "<adverb clause> , + <comparative clause> , + but + <superlative clause> .",
+        "tense_hint": "The verb tense of your answer should match that of the question!",
+        "type": "paper_rewrite",
+        "question": "【W4 歷史真卷·Grammar 3 (Unit 14) : 副詞三級比較長句合成】4. How do they laugh? witch, vampire & zombie",
+        "answer": "A witch laughs horribly, a vampire laughs more horribly than a witch, but a zombie laughs the most horribly.",
+        "ipa": "",
+        "vocab_card": null,
+        "difficulty": "★★★★☆",
+        "explanation": {
+          "point": "W4 實體考券 Grammar 3 (Unit 14) : 副詞三級比較長句合成",
+          "trap": "【Rex 當年失分盲點】：學生作答寫「A vampire laughed horribly than a witch, but a zoobie laughed the most horribly.」。- `TRAP_TENSE_MISMATCH_PRESENT_VS_PAST`：審題重大失誤！題幹是 `How do they laugh?`（現在簡單式），題幹特別備註 `The verb tense of your answer should match that of the question`，學生卻全寫成過去式 `laughed`。   - `TRAP_COMPARATIVE_MORE_OMISSION`：多音節副詞比較級漏寫 `more`（寫成 `horribly than` 而非 `more horribly than`）。   - `TRAP_SPELLING_ZOOBIE`：單字拼寫錯誤，將 zombie 寫成 `zoobie`。   - `TRAP_MISSING_BASE_ADVERB_CLAUSE`：漏寫第一段原級子句 `A witch laughs horribly,`。",
+          "note": "出題公式與要求：<adverb clause> , + <comparative clause> , + but + <superlative clause> ."
+        }
+      },
+      {
+        "id": "TEA_W4_P06_C_Q5",
+        "week": "W4",
+        "page": 6,
+        "part": "Part C",
+        "part_title": "Grammar 3 (Unit 14) : 副詞三級比較長句合成",
+        "part_instructions": "C. Answer the question to compare the three given items by writing a sentence with an adverb clause, a comparative adverb clause, and a superlative adverb clause. (The verb tense of your answer should match that of the question):",
+        "word_bank": "[well, horribly, badly, quickly, far, fast, slowly]",
+        "sentence_form": "<adverb clause> , + <comparative clause> , + but + <superlative clause> .",
+        "tense_hint": "The verb tense of your answer should match that of the question!",
+        "type": "paper_rewrite",
+        "question": "【W4 歷史真卷·Grammar 3 (Unit 14) : 副詞三級比較長句合成】5. How did they move? snail, tortoise & the old man",
+        "answer": "An old man moved slowly, a tortoise moved more slowly than an old man, but a snail moved the most slowly.",
+        "ipa": "",
+        "vocab_card": null,
+        "difficulty": "★★★★☆",
+        "explanation": {
+          "point": "W4 實體考券 Grammar 3 (Unit 14) : 副詞三級比較長句合成",
+          "trap": "【Rex 當年失分盲點】：學生作答寫「A tortoise moved more slowly than an old man, but a snail moved the most slowly」。- `SUCCESS_COMPARATIVE_AND_SUPERLATIVE`：本題成功寫出 `more slowly than` 與 `the most slowly`，並正確配對過去式時態 `moved`。   - `TRAP_ARTICLE_AN_HANDWRITING`：不定冠詞 an 字跡潦草。",
+          "note": "出題公式與要求：<adverb clause> , + <comparative clause> , + but + <superlative clause> ."
+        }
+      },
+      {
+        "id": "TEA_W5_P07_A_Sent01",
+        "week": "W5",
+        "page": 7,
+        "part": "Part A",
+        "part_title": "Reading with Writing 6 (Unit 6) : DICTATION",
+        "part_instructions": "A. Listen to your teacher and write the paragraph using the correct punctuation:",
+        "word_bank": "",
+        "sentence_form": "連續篇章自然停頓聽寫默寫",
+        "tense_hint": "嚴格還原雙引號對話與自然標點符號",
+        "type": "spelling_listen",
+        "question": "【W5 歷史真卷·定向越野長篇聽寫 第 1 句】請聽音並在紙上拼寫出單字",
+        "answer": "Imagine you are in a new city.",
+        "ipa": "",
+        "vocab_card": null,
+        "difficulty": "★★★★☆",
+        "explanation": {
+          "point": "RWW6 Unit 6 尋寶定向運動原生課文連續聽寫默寫",
+          "trap": "注意句首大寫、城市名稱與專有名詞，雙引號對話前後標點與逗號停頓！",
+          "note": "Rex 當年在考場此大題榮獲 25/25 滿分！標準句型：Imagine you are in a new city."
+        }
+      },
+      {
+        "id": "TEA_W5_P07_A_Sent02",
+        "week": "W5",
+        "page": 7,
+        "part": "Part A",
+        "part_title": "Reading with Writing 6 (Unit 6) : DICTATION",
+        "part_instructions": "A. Listen to your teacher and write the paragraph using the correct punctuation:",
+        "word_bank": "",
+        "sentence_form": "連續篇章自然停頓聽寫默寫",
+        "tense_hint": "嚴格還原雙引號對話與自然標點符號",
+        "type": "spelling_listen",
+        "question": "【W5 歷史真卷·定向越野長篇聽寫 第 2 句】請聽音並在紙上拼寫出單字",
+        "answer": "Standing on a corner, you ask someone how to get to a store.",
+        "ipa": "",
+        "vocab_card": null,
+        "difficulty": "★★★★☆",
+        "explanation": {
+          "point": "RWW6 Unit 6 尋寶定向運動原生課文連續聽寫默寫",
+          "trap": "注意句首大寫、城市名稱與專有名詞，雙引號對話前後標點與逗號停頓！",
+          "note": "Rex 當年在考場此大題榮獲 25/25 滿分！標準句型：Standing on a corner, you ask someone how to get to a store."
+        }
+      },
+      {
+        "id": "TEA_W5_P07_A_Sent03",
+        "week": "W5",
+        "page": 7,
+        "part": "Part A",
+        "part_title": "Reading with Writing 6 (Unit 6) : DICTATION",
+        "part_instructions": "A. Listen to your teacher and write the paragraph using the correct punctuation:",
+        "word_bank": "",
+        "sentence_form": "連續篇章自然停頓聽寫默寫",
+        "tense_hint": "嚴格還原雙引號對話與自然標點符號",
+        "type": "spelling_listen",
+        "question": "【W5 歷史真卷·定向越野長篇聽寫 第 3 句】請聽音並在紙上拼寫出單字",
+        "answer": "They tell you to \"go two blocks north, turn left, and you'll be across the street from the bookstore.\" Now imagine you are in an outdoor race.",
+        "ipa": "",
+        "vocab_card": null,
+        "difficulty": "★★★★☆",
+        "explanation": {
+          "point": "RWW6 Unit 6 尋寶定向運動原生課文連續聽寫默寫",
+          "trap": "注意句首大寫、城市名稱與專有名詞，雙引號對話前後標點與逗號停頓！",
+          "note": "Rex 當年在考場此大題榮獲 25/25 滿分！標準句型：They tell you to \"go two blocks north, turn left, and you'll be across the street from the bookstore.\" Now imagine you are in an outdoor race."
+        }
+      },
+      {
+        "id": "TEA_W5_P07_A_Sent04",
+        "week": "W5",
+        "page": 7,
+        "part": "Part A",
+        "part_title": "Reading with Writing 6 (Unit 6) : DICTATION",
+        "part_instructions": "A. Listen to your teacher and write the paragraph using the correct punctuation:",
+        "word_bank": "",
+        "sentence_form": "連續篇章自然停頓聽寫默寫",
+        "tense_hint": "嚴格還原雙引號對話與自然標點符號",
+        "type": "spelling_listen",
+        "question": "【W5 歷史真卷·定向越野長篇聽寫 第 4 句】請聽音並在紙上拼寫出單字",
+        "answer": "Instead of directiones, you have only a map and a comepass, and instead of running down a marked road, you run around in the woods.",
+        "ipa": "",
+        "vocab_card": null,
+        "difficulty": "★★★★☆",
+        "explanation": {
+          "point": "RWW6 Unit 6 尋寶定向運動原生課文連續聽寫默寫",
+          "trap": "注意句首大寫、城市名稱與專有名詞，雙引號對話前後標點與逗號停頓！",
+          "note": "Rex 當年在考場此大題榮獲 25/25 滿分！標準句型：Instead of directiones, you have only a map and a comepass, and instead of running down a marked road, you run around in the woods."
+        }
+      },
+      {
+        "id": "TEA_W5_P07_A_Sent05",
+        "week": "W5",
+        "page": 7,
+        "part": "Part A",
+        "part_title": "Reading with Writing 6 (Unit 6) : DICTATION",
+        "part_instructions": "A. Listen to your teacher and write the paragraph using the correct punctuation:",
+        "word_bank": "",
+        "sentence_form": "連續篇章自然停頓聽寫默寫",
+        "tense_hint": "嚴格還原雙引號對話與自然標點符號",
+        "type": "spelling_listen",
+        "question": "【W5 歷史真卷·定向越野長篇聽寫 第 5 句】請聽音並在紙上拼寫出單字",
+        "answer": "Welcome to orienteering!",
+        "ipa": "",
+        "vocab_card": null,
+        "difficulty": "★★★★☆",
+        "explanation": {
+          "point": "RWW6 Unit 6 尋寶定向運動原生課文連續聽寫默寫",
+          "trap": "注意句首大寫、城市名稱與專有名詞，雙引號對話前後標點與逗號停頓！",
+          "note": "Rex 當年在考場此大題榮獲 25/25 滿分！標準句型：Welcome to orienteering!"
+        }
+      },
+      {
+        "id": "TEA_W5_P07_A_Sent06",
+        "week": "W5",
+        "page": 7,
+        "part": "Part A",
+        "part_title": "Reading with Writing 6 (Unit 6) : DICTATION",
+        "part_instructions": "A. Listen to your teacher and write the paragraph using the correct punctuation:",
+        "word_bank": "",
+        "sentence_form": "連續篇章自然停頓聽寫默寫",
+        "tense_hint": "嚴格還原雙引號對話與自然標點符號",
+        "type": "spelling_listen",
+        "question": "【W5 歷史真卷·定向越野長篇聽寫 第 6 句】請聽音並在紙上拼寫出單字",
+        "answer": "In the sport of orienteering, racers use a map and compass to find stations, which are called controls.",
+        "ipa": "",
+        "vocab_card": null,
+        "difficulty": "★★★★☆",
+        "explanation": {
+          "point": "RWW6 Unit 6 尋寶定向運動原生課文連續聽寫默寫",
+          "trap": "注意句首大寫、城市名稱與專有名詞，雙引號對話前後標點與逗號停頓！",
+          "note": "Rex 當年在考場此大題榮獲 25/25 滿分！標準句型：In the sport of orienteering, racers use a map and compass to find stations, which are called controls."
+        }
+      },
+      {
+        "id": "TEA_W5_P07_A_Sent07",
+        "week": "W5",
+        "page": 7,
+        "part": "Part A",
+        "part_title": "Reading with Writing 6 (Unit 6) : DICTATION",
+        "part_instructions": "A. Listen to your teacher and write the paragraph using the correct punctuation:",
+        "word_bank": "",
+        "sentence_form": "連續篇章自然停頓聽寫默寫",
+        "tense_hint": "嚴格還原雙引號對話與自然標點符號",
+        "type": "spelling_listen",
+        "question": "【W5 歷史真卷·定向越野長篇聽寫 第 7 句】請聽音並在紙上拼寫出單字",
+        "answer": "A special flag marks each control (see Figure 1).",
+        "ipa": "",
+        "vocab_card": null,
+        "difficulty": "★★★★☆",
+        "explanation": {
+          "point": "RWW6 Unit 6 尋寶定向運動原生課文連續聽寫默寫",
+          "trap": "注意句首大寫、城市名稱與專有名詞，雙引號對話前後標點與逗號停頓！",
+          "note": "Rex 當年在考場此大題榮獲 25/25 滿分！標準句型：A special flag marks each control (see Figure 1)."
+        }
+      },
+      {
+        "id": "TEA_W5_P07_A_Sent08",
+        "week": "W5",
+        "page": 7,
+        "part": "Part A",
+        "part_title": "Reading with Writing 6 (Unit 6) : DICTATION",
+        "part_instructions": "A. Listen to your teacher and write the paragraph using the correct punctuation:",
+        "word_bank": "",
+        "sentence_form": "連續篇章自然停頓聽寫默寫",
+        "tense_hint": "嚴格還原雙引號對話與自然標點符號",
+        "type": "spelling_listen",
+        "question": "【W5 歷史真卷·定向越野長篇聽寫 第 8 句】請聽音並在紙上拼寫出單字",
+        "answer": "Controls are placed.",
+        "ipa": "",
+        "vocab_card": null,
+        "difficulty": "★★★★☆",
+        "explanation": {
+          "point": "RWW6 Unit 6 尋寶定向運動原生課文連續聽寫默寫",
+          "trap": "注意句首大寫、城市名稱與專有名詞，雙引號對話前後標點與逗號停頓！",
+          "note": "Rex 當年在考場此大題榮獲 25/25 滿分！標準句型：Controls are placed."
+        }
+      },
+      {
+        "id": "TEA_W5_P08_B_Q1",
+        "week": "W5",
+        "page": 8,
+        "part": "Part B",
+        "part_title": "Grammar 3 (Unit 14) : 副詞三級比較長句合成",
+        "part_instructions": "B. Answer the question to compare the three given items by writing a sentence with an adverb clause, a comparative adverb clause, and a superlative adverb clause. (The verb tense of your answer should match that of the question):",
+        "word_bank": "",
+        "sentence_form": "<adverb clause> , + <comparative clause> , + but + <superlative clause> .",
+        "tense_hint": "The verb tense of your answer should match that of the question!",
+        "type": "paper_rewrite",
+        "question": "【W5 歷史真卷·Grammar 3 (Unit 14) : 副詞三級比較長句合成】1. How fast do they run? person, dog & lion",
+        "answer": "A person runs fast, a dog runs faster than a person, but a lion runs the fastest.",
+        "ipa": "",
+        "vocab_card": null,
+        "difficulty": "★★★★☆",
+        "explanation": {
+          "point": "W5 實體考券 Grammar 3 (Unit 14) : 副詞三級比較長句合成",
+          "trap": "【Rex 當年失分盲點】：學生作答寫「A dog runs faster than a person, but lion can run fastest.」。- `TRAP_ARTICLE_OMISSION_A`：單數可數名詞 lion 漏加不定冠詞 a。   - `TRAP_SUPERLATIVE_THE_OMISSION`：最高級副詞 fastest 前漏加定冠詞 the（學生雖在頂部草稿寫了 the est，答題時仍漏掉）。   - `TRAP_MODAL_VERB_INSERTION`：題幹問 `do they run`，學生後半句突然多出情態助動詞 `can run`。",
+          "note": "出題公式與要求：<adverb clause> , + <comparative clause> , + but + <superlative clause> ."
+        }
+      },
+      {
+        "id": "TEA_W5_P08_B_Q2",
+        "week": "W5",
+        "page": 8,
+        "part": "Part B",
+        "part_title": "Grammar 3 (Unit 14) : 副詞三級比較長句合成",
+        "part_instructions": "B. Answer the question to compare the three given items by writing a sentence with an adverb clause, a comparative adverb clause, and a superlative adverb clause. (The verb tense of your answer should match that of the question):",
+        "word_bank": "",
+        "sentence_form": "<adverb clause> , + <comparative clause> , + but + <superlative clause> .",
+        "tense_hint": "The verb tense of your answer should match that of the question!",
+        "type": "paper_rewrite",
+        "question": "【W5 歷史真卷·Grammar 3 (Unit 14) : 副詞三級比較長句合成】2. How quickly can they walk? five year old, eight year old & adult",
+        "answer": "A five year old can walk quickly, an eight year old can walk more quickly than a five year old, but an adult can walk the most quickly.",
+        "ipa": "",
+        "vocab_card": null,
+        "difficulty": "★★★★☆",
+        "explanation": {
+          "point": "W5 實體考券 Grammar 3 (Unit 14) : 副詞三級比較長句合成",
+          "trap": "【Rex 當年失分盲點】：學生作答寫「An eight year old can walk more than a five year old, but an adult can walk the most quickly.」。- `TRAP_ADVERB_OMISSION_IN_COMPARATIVE`：多音節副詞比較級漏寫副詞本體，誤寫為 `more than`（正確應為 `more quickly than`）。   - `SUCCESS_SUPERLATIVE_STRUCTURE`：後半句 `the most quickly` 結構完整正確。",
+          "note": "出題公式與要求：<adverb clause> , + <comparative clause> , + but + <superlative clause> ."
+        }
+      },
+      {
+        "id": "TEA_W5_P08_B_Q3",
+        "week": "W5",
+        "page": 8,
+        "part": "Part B",
+        "part_title": "Grammar 3 (Unit 14) : 副詞三級比較長句合成",
+        "part_instructions": "B. Answer the question to compare the three given items by writing a sentence with an adverb clause, a comparative adverb clause, and a superlative adverb clause. (The verb tense of your answer should match that of the question):",
+        "word_bank": "",
+        "sentence_form": "<adverb clause> , + <comparative clause> , + but + <superlative clause> .",
+        "tense_hint": "The verb tense of your answer should match that of the question!",
+        "type": "paper_rewrite",
+        "question": "【W5 歷史真卷·Grammar 3 (Unit 14) : 副詞三級比較長句合成】3. How far can they jump? frog, rabbit & kangaroo",
+        "answer": "A frog can jump far, a rabbit can jump farther than a frog, but a kangaroo can jump the farthest.",
+        "ipa": "",
+        "vocab_card": null,
+        "difficulty": "★★★★☆",
+        "explanation": {
+          "point": "W5 實體考券 Grammar 3 (Unit 14) : 副詞三級比較長句合成",
+          "trap": "【Rex 當年失分盲點】：學生作答寫「A rabbit can jump further than a frog, but kangaroo can jump the furthest.」。- `TRAP_ARTICLE_OMISSION_A`：袋鼠 kangaroo 前漏加不定冠詞 a。   - `SUCCESS_IRREGULAR_FAR`：成功寫出 `further / farthest`（或 farther / farthest）不規則變化。",
+          "note": "出題公式與要求：<adverb clause> , + <comparative clause> , + but + <superlative clause> ."
+        }
+      },
+      {
+        "id": "TEA_W5_P08_C_QTitle",
+        "week": "W5",
+        "page": 8,
+        "part": "Part C",
+        "part_title": "Write Right 3 (Unit 5) 假設語氣與預算分配作文",
+        "part_instructions": "C. Nathaniel wrote the following outline. Help him to write his story in full down below.",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "paper_rewrite",
+        "question": "【W5 歷史真卷·Write Right 3 (Unit 5) 假設語氣與預算分配作文】________________________________________",
+        "answer": "If I Had 6000 Dollars",
+        "ipa": "",
+        "vocab_card": null,
+        "difficulty": "★★★★☆",
+        "explanation": {
+          "point": "W5 實體考券 Write Right 3 (Unit 5) 假設語氣與預算分配作文",
+          "trap": "本題當年作答正確無失分！",
+          "note": "出題公式與要求：C. Nathaniel wrote the following outline. Help him to write his story in full down below."
+        }
+      },
+      {
+        "id": "TEA_W5_P08_C_Q1",
+        "week": "W5",
+        "page": 8,
+        "part": "Part C",
+        "part_title": "Write Right 3 (Unit 5) 假設語氣與預算分配作文",
+        "part_instructions": "C. Nathaniel wrote the following outline. Help him to write his story in full down below.",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "paper_rewrite",
+        "question": "【W5 歷史真卷·Write Right 3 (Unit 5) 假設語氣與預算分配作文】If I had ________________ , I would ________________ things:",
+        "answer": "If I had 6000 dollars, I would do three things:",
+        "ipa": "",
+        "vocab_card": null,
+        "difficulty": "★★★★☆",
+        "explanation": {
+          "point": "W5 實體考券 Write Right 3 (Unit 5) 假設語氣與預算分配作文",
+          "trap": "本題當年作答正確無失分！",
+          "note": "出題公式與要求：C. Nathaniel wrote the following outline. Help him to write his story in full down below."
+        }
+      },
+      {
+        "id": "TEA_W5_P08_C_Q2",
+        "week": "W5",
+        "page": 8,
+        "part": "Part C",
+        "part_title": "Write Right 3 (Unit 5) 假設語氣與預算分配作文",
+        "part_instructions": "C. Nathaniel wrote the following outline. Help him to write his story in full down below.",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "paper_rewrite",
+        "question": "【W5 歷史真卷·Write Right 3 (Unit 5) 假設語氣與預算分配作文】First, ________________ , so I ________________ amusement park with my friends.",
+        "answer": "First, I love fair rides, so I would go to an amusement park with my friends.",
+        "ipa": "",
+        "vocab_card": null,
+        "difficulty": "★★★★☆",
+        "explanation": {
+          "point": "W5 實體考券 Write Right 3 (Unit 5) 假設語氣與預算分配作文",
+          "trap": "【Rex 當年失分盲點】：學生作答寫「- 第一格：」。- `TRAP_ARTICLE_AN_OMISSION`：amusement 為母音 /ə/ 開頭，漏加不定冠詞 an（寫成 go to amusement park）。  ---",
+          "note": "出題公式與要求：C. Nathaniel wrote the following outline. Help him to write his story in full down below."
+        }
+      },
+      {
+        "id": "TEA_W5_P08_C_Q3",
+        "week": "W5",
+        "page": 8,
+        "part": "Part C",
+        "part_title": "Write Right 3 (Unit 5) 假設語氣與預算分配作文",
+        "part_instructions": "C. Nathaniel wrote the following outline. Help him to write his story in full down below.",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "paper_rewrite",
+        "question": "【W5 歷史真卷·Write Right 3 (Unit 5) 假設語氣與預算分配作文】Next, ________________ .",
+        "answer": "Next, I would share some of the money with my sister.",
+        "ipa": "",
+        "vocab_card": null,
+        "difficulty": "★★★★☆",
+        "explanation": {
+          "point": "W5 實體考券 Write Right 3 (Unit 5) 假設語氣與預算分配作文",
+          "trap": "【Rex 當年失分盲點】：學生作答寫「I would share some with sister.」。- `TRAP_POSSESSIVE_PRONOUN_OMISSION`：稱呼家庭成員漏加所有格代名詞 my（寫成 with sister 而非 with my sister）。  ---",
+          "note": "出題公式與要求：C. Nathaniel wrote the following outline. Help him to write his story in full down below."
+        }
+      },
+      {
+        "id": "TEA_W5_P08_C_Q4",
+        "week": "W5",
+        "page": 8,
+        "part": "Part C",
+        "part_title": "Write Right 3 (Unit 5) 假設語氣與預算分配作文",
+        "part_instructions": "C. Nathaniel wrote the following outline. Help him to write his story in full down below.",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "paper_rewrite",
+        "question": "【W5 歷史真卷·Write Right 3 (Unit 5) 假設語氣與預算分配作文】I think ________________ .",
+        "answer": "I think it is important to share money with your family.",
+        "ipa": "",
+        "vocab_card": null,
+        "difficulty": "★★★★☆",
+        "explanation": {
+          "point": "W5 實體考券 Write Right 3 (Unit 5) 假設語氣與預算分配作文",
+          "trap": "【Rex 當年失分盲點】：學生作答寫「share money with my family.」。- `TRAP_CLAUSE_STRUCTURE_IT_IS_IMPORTANT`：提綱中給定 `important to share → family`，學生未轉換為虛主詞名詞子句 `it is important to + V`，直接寫 `share money...`，喪失句子結構完整性。  ---",
+          "note": "出題公式與要求：C. Nathaniel wrote the following outline. Help him to write his story in full down below."
+        }
+      },
+      {
+        "id": "TEA_W5_P08_C_Q5",
+        "week": "W5",
+        "page": 8,
+        "part": "Part C",
+        "part_title": "Write Right 3 (Unit 5) 假設語氣與預算分配作文",
+        "part_instructions": "C. Nathaniel wrote the following outline. Help him to write his story in full down below.",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "paper_rewrite",
+        "question": "【W5 歷史真卷·Write Right 3 (Unit 5) 假設語氣與預算分配作文】Finally, ________________ . A new jacket would ________________ me ________________ .",
+        "answer": "Finally, I would spend some money on myself. A new jacket would cost me about 750 dollars.",
+        "ipa": "",
+        "vocab_card": null,
+        "difficulty": "★★★★☆",
+        "explanation": {
+          "point": "W5 實體考券 Write Right 3 (Unit 5) 假設語氣與預算分配作文",
+          "trap": "本題當年作答正確無失分！",
+          "note": "出題公式與要求：C. Nathaniel wrote the following outline. Help him to write his story in full down below."
+        }
+      },
+      {
+        "id": "TEA_W5_P08_C_Q6",
+        "week": "W5",
+        "page": 8,
+        "part": "Part C",
+        "part_title": "Write Right 3 (Unit 5) 假設語氣與預算分配作文",
+        "part_instructions": "C. Nathaniel wrote the following outline. Help him to write his story in full down below.",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "paper_rewrite",
+        "question": "【W5 歷史真卷·Write Right 3 (Unit 5) 假設語氣與預算分配作文】With the rest of ________________ .",
+        "answer": "With the rest of the money, I would treat my friends to a movie.",
+        "ipa": "",
+        "vocab_card": null,
+        "difficulty": "★★★★☆",
+        "explanation": {
+          "point": "W5 實體考券 Write Right 3 (Unit 5) 假設語氣與預算分配作文",
+          "trap": "本題當年作答正確無失分！",
+          "note": "出題公式與要求：C. Nathaniel wrote the following outline. Help him to write his story in full down below."
+        }
+      },
+      {
+        "id": "TEA_W5_P08_C_Q7",
+        "week": "W5",
+        "page": 8,
+        "part": "Part C",
+        "part_title": "Write Right 3 (Unit 5) 假設語氣與預算分配作文",
+        "part_instructions": "C. Nathaniel wrote the following outline. Help him to write his story in full down below.",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "paper_rewrite",
+        "question": "【W5 歷史真卷·Write Right 3 (Unit 5) 假設語氣與預算分配作文】Wouldn't it ________________ ?",
+        "answer": "Wouldn't it be great to have 6000 dollars?",
+        "ipa": "",
+        "vocab_card": null,
+        "difficulty": "★★★★☆",
+        "explanation": {
+          "point": "W5 實體考券 Write Right 3 (Unit 5) 假設語氣與預算分配作文",
+          "trap": "【Rex 當年失分盲點】：學生作答寫「be great to have 6000 dollars.」。`OK_EXCELLENT`（否定反問句 Wouldn't it be great to... 掌握完美）。  ---  ## 頁尾資訊 (Footer) - `TIGER ENGLISH ACADEMY © 2022 COPYRIGHT RESERVED` - 頁碼：`- 8 -`  ================================================================================ 🤖 【AI 考券教研與變式出題增強區塊 (AI_SPEC)】 ================================================================================ ```yaml AI_SPEC:   exam_id: \"TEA_3C_QUIZ_W05_P08\"   grade_level: \"Grade 6 (Age 12)\"   cefr_alignment: \"A2\"   target_skills:     - \"Adverb Clause Comparison (How fast / quickly / far)\"     - \"Conditional Sentences (If I had... I would...)\"     - \"Financial Allocation & Budgeting Vocabulary\"   error_analysis_matrix:     - trap_id: \"TRAP_ARTICLE_OMISSION_A\"       title: \"可數單數名詞漏加冠詞 a / an\"       student_error: \"lion can run / with sister / amusement park\"       correction: \"a lion / my sister / an amusement park\"       pedagogical_remedy: \"強調可數名詞單數絕不可裸奔，前面必須有 a/an、the 或所有格 my。\"     - trap_id: \"TRAP_CLAUSE_STRUCTURE_IT_IS_IMPORTANT\"       title: \"think 後引導之子句遺漏虛主詞結構\"       student_error: \"I think share money with my family\"       correction: \"I think it is important to share money with my family\"       pedagogical_remedy: \"動詞 think 後面需接完整子句，看到形容詞 important 時必須聯動 'it is important to + V'。\"   writing_prompt_generator:     template_name: \"Hypothetical Budget Allocation ($10,000)\"     sentence_stems:       - \"If I had 10,000 dollars, I would do three things:\"       - \"First, I would [Action 1], because [Reason].\"       - \"Next, I would share some of the money with [Family Member].\"       - \"Finally, I would spend [Amount] on myself to buy [Item].\"       - \"With the rest of the money, I would [Action 2].\"       - \"Wouldn't it be great to have 10,000 dollars?\" ```",
+          "note": "出題公式與要求：C. Nathaniel wrote the following outline. Help him to write his story in full down below."
+        }
+      },
+      {
+        "id": "TEA_W6_P09_A_1",
+        "week": "W6",
+        "page": 9,
+        "part": "Part A",
+        "part_title": "Discover 3 (Unit 15) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "spelling_listen",
+        "question": "【W6 歷史真卷·Discover 3 (Unit 15) : Spelling】第 1 題：請聽音並在紙上拼寫出單字",
+        "answer": "oxygen",
+        "ipa": "/oxygen/",
+        "vocab_card": {
+          "word": "oxygen",
+          "pos": "名詞 (Noun, 不可數)",
+          "chi": "氧氣",
+          "ipa": "/oxygen/",
+          "breakdown": "oxy- (酸/銳利) + -gen (產生) -> 植物光合作用產生、供人類與動物呼吸的生命氣體。",
+          "trick": "o-x-y-g-e-n（注意中間是 y 不是 i）！沒有植物綠葉製造 oxygen，人類 (humans) 就無法呼吸！",
+          "collocation": "搭配: make oxygen (製造氧氣), breathe oxygen (呼吸氧氣)",
+          "context_eng": "Green leaves make oxygen for humans and animals to breathe.",
+          "context_chi": "綠葉製造氧氣供人類與動物呼吸。",
+          "compare": "oxygen (氧氣) vs. carbon dioxide (二氧化碳)。"
+        },
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W6 實體考券 Discover 3 (Unit 15) : Spelling 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：oxygen"
+        }
+      },
+      {
+        "id": "TEA_W6_P09_A_2",
+        "week": "W6",
+        "page": 9,
+        "part": "Part A",
+        "part_title": "Discover 3 (Unit 15) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "spelling_listen",
+        "question": "【W6 歷史真卷·Discover 3 (Unit 15) : Spelling】第 2 題：請聽音並在紙上拼寫出單字",
+        "answer": "roots",
+        "ipa": "/roots/",
+        "vocab_card": {
+          "word": "roots",
+          "pos": "n.",
+          "chi": "考券核心字彙",
+          "ipa": "/roots/",
+          "breakdown": "單字拼寫記憶：roots",
+          "trick": "熟記發音音節以精準拼寫 roots",
+          "collocation": "roots",
+          "context_eng": "Rex practiced writing roots in the 3C quiz.",
+          "context_chi": "Rex 在小考中精準默寫出 roots。",
+          "compare": "注意大小寫與字母順序"
+        },
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W6 實體考券 Discover 3 (Unit 15) : Spelling 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：roots"
+        }
+      },
+      {
+        "id": "TEA_W6_P09_A_3",
+        "week": "W6",
+        "page": 9,
+        "part": "Part A",
+        "part_title": "Discover 3 (Unit 15) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "spelling_listen",
+        "question": "【W6 歷史真卷·Discover 3 (Unit 15) : Spelling】第 3 題：請聽音並在紙上拼寫出單字",
+        "answer": "leaves",
+        "ipa": "/leaves/",
+        "vocab_card": {
+          "word": "leaves",
+          "pos": "n.",
+          "chi": "考券核心字彙",
+          "ipa": "/leaves/",
+          "breakdown": "單字拼寫記憶：leaves",
+          "trick": "熟記發音音節以精準拼寫 leaves",
+          "collocation": "leaves",
+          "context_eng": "Rex practiced writing leaves in the 3C quiz.",
+          "context_chi": "Rex 在小考中精準默寫出 leaves。",
+          "compare": "注意大小寫與字母順序"
+        },
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W6 實體考券 Discover 3 (Unit 15) : Spelling 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：leaves"
+        }
+      },
+      {
+        "id": "TEA_W6_P09_A_4",
+        "week": "W6",
+        "page": 9,
+        "part": "Part A",
+        "part_title": "Discover 3 (Unit 15) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "spelling_listen",
+        "question": "【W6 歷史真卷·Discover 3 (Unit 15) : Spelling】第 4 題：請聽音並在紙上拼寫出單字",
+        "answer": "soil",
+        "ipa": "/soil/",
+        "vocab_card": {
+          "word": "soil",
+          "pos": "名詞 (Noun)",
+          "chi": "土壤 / 泥土",
+          "ipa": "/soil/",
+          "breakdown": "來自拉丁文 solium (座位/底座)，後來演變為地面的泥土。",
+          "trick": "諧音「搜油」。聯想：在黑色的「泥土/土壤」裡「搜」尋是否有石「油」。",
+          "collocation": "rich soil, red soil",
+          "context_eng": "Chemicals make the soil red on Mars.",
+          "context_chi": "某些化學物質使火星的土壤呈現紅色。",
+          "compare": "Soil (可種植的土壤) vs. Dirt (灰塵/髒土)。"
+        },
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W6 實體考券 Discover 3 (Unit 15) : Spelling 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：soil"
+        }
+      },
+      {
+        "id": "TEA_W6_P09_A_5",
+        "week": "W6",
+        "page": 9,
+        "part": "Part A",
+        "part_title": "Discover 3 (Unit 15) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "spelling_listen",
+        "question": "【W6 歷史真卷·Discover 3 (Unit 15) : Spelling】第 5 題：請聽音並在紙上拼寫出單字",
+        "answer": "seeds",
+        "ipa": "/seeds/",
+        "vocab_card": {
+          "word": "seeds",
+          "pos": "n.",
+          "chi": "考券核心字彙",
+          "ipa": "/seeds/",
+          "breakdown": "單字拼寫記憶：seeds",
+          "trick": "熟記發音音節以精準拼寫 seeds",
+          "collocation": "seeds",
+          "context_eng": "Rex practiced writing seeds in the 3C quiz.",
+          "context_chi": "Rex 在小考中精準默寫出 seeds。",
+          "compare": "注意大小寫與字母順序"
+        },
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W6 實體考券 Discover 3 (Unit 15) : Spelling 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：seeds"
+        }
+      },
+      {
+        "id": "TEA_W6_P09_A_6",
+        "week": "W6",
+        "page": 9,
+        "part": "Part A",
+        "part_title": "Discover 3 (Unit 15) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "spelling_listen",
+        "question": "【W6 歷史真卷·Discover 3 (Unit 15) : Spelling】第 6 題：請聽音並在紙上拼寫出單字",
+        "answer": "humans",
+        "ipa": "/humans/",
+        "vocab_card": {
+          "word": "humans",
+          "pos": "n.",
+          "chi": "考券核心字彙",
+          "ipa": "/humans/",
+          "breakdown": "單字拼寫記憶：humans",
+          "trick": "熟記發音音節以精準拼寫 humans",
+          "collocation": "humans",
+          "context_eng": "Rex practiced writing humans in the 3C quiz.",
+          "context_chi": "Rex 在小考中精準默寫出 humans。",
+          "compare": "注意大小寫與字母順序"
+        },
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W6 實體考券 Discover 3 (Unit 15) : Spelling 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：humans"
+        }
+      },
+      {
+        "id": "TEA_W6_P09_A_7",
+        "week": "W6",
+        "page": 9,
+        "part": "Part A",
+        "part_title": "Discover 3 (Unit 15) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "spelling_listen",
+        "question": "【W6 歷史真卷·Discover 3 (Unit 15) : Spelling】第 7 題：請聽音並在紙上拼寫出單字",
         "answer": "nectar",
+        "ipa": "/nectar/",
+        "vocab_card": {
+          "word": "nectar",
+          "pos": "名詞 (Noun, 不可數)",
+          "chi": "花蜜",
+          "ipa": "/nectar/",
+          "breakdown": "源自希臘神話中眾神飲用的瓊漿玉液 nektar -> 花朵內部吸引昆蟲的甜美汁液。",
+          "trick": "⚠️ 岱崙 W6 考卷真實失分字！Rex 曾拼成『nector ❌』！口訣：花蜜甜得像一顆大「星星 (star)」，字尾是 -tar (t-a-r)，不是 -tor！",
+          "collocation": "搭配: sweet nectar (甜美的花蜜), drink nectar (吸食花蜜)",
+          "context_eng": "Bees fly to bright flowers to drink sweet nectar.",
+          "context_chi": "蜜蜂飛向鮮豔的花朵吸食甜美的花蜜。",
+          "compare": "nectar (花蜜 n-e-c-t-a-r) vs. ❌nector (錯誤拼法)。"
+        },
+        "difficulty": "★★★☆☆",
         "explanation": {
-          "concept": "Discover 3 Unit 15 / Week 6 單字聽寫",
-          "formula": "nec-tar，注意字尾是 -tar 而非 -tor。",
-          "trap": "Rex 考場原答寫成 nector ❌！切記字尾母音為 a (nectar)。"
+          "point": "W6 實體考券 Discover 3 (Unit 15) : Spelling 核心考點",
+          "trap": "【Rex 當年筆記】：學生原始作答「nector」。TRAP_SCHWA_ENDING_AR_VS_OR（花蜜 nectar 字尾弱讀音 /ər/ 誤拼為 -or）",
+          "note": "標準官方批改：nectar"
         }
       },
       {
-        "id": "TEA_LIST_12",
+        "id": "TEA_W6_P09_A_8",
+        "week": "W6",
+        "page": 9,
+        "part": "Part A",
+        "part_title": "Discover 3 (Unit 15) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
         "type": "spelling_listen",
-        "category_tag": "listening",
-        "question": "【W6 真題錯字重測】請聽電腦發音，拼寫出這個植物單字：",
-        "hint": "花朵色彩鮮豔的部分：花瓣 (複數)",
-        "audio_word": "petals",
-        "phonetic": "/ˈpetlz/",
-        "syllables": "pet · als",
+        "question": "【W6 歷史真卷·Discover 3 (Unit 15) : Spelling】第 8 題：請聽音並在紙上拼寫出單字",
         "answer": "petals",
+        "ipa": "/petals/",
+        "vocab_card": {
+          "word": "petals",
+          "pos": "名詞 (Noun, 複數)｜單數 petal",
+          "chi": "花瓣",
+          "ipa": "/petals/",
+          "breakdown": "源自希臘文 petalon (薄片/葉片) -> 環繞花蕊的彩色花瓣。",
+          "trick": "⚠️ 岱崙 W6 考卷真實失分字！Rex 曾把 e 和 a 寫反成『patels ❌』！口訣：花瓣是花朵最心愛的「寵物 (pet: p-e-t)」，所以開頭是 pet-als！",
+          "collocation": "記憶拆解: pet (寵物 p-e-t) + als = petals",
+          "context_eng": "Finally, a colorful flower opens its bright petals!",
+          "context_chi": "最後，色彩繽紛的花朵綻放它鮮豔的花瓣！",
+          "compare": "petals (花瓣 p-e-t-a-l-s) vs. ❌patels (母音顛倒錯字)。"
+        },
+        "difficulty": "★★★☆☆",
         "explanation": {
-          "concept": "Discover 3 Unit 15 / Week 6 單字聽寫",
-          "formula": "第一音節為短母音 /e/ (pet-)，第二音節為 -als。",
-          "trap": "Rex 考場原答把 e 跟 a 對調寫成 patels ❌！"
+          "point": "W6 實體考券 Discover 3 (Unit 15) : Spelling 核心考點",
+          "trap": "【Rex 當年筆記】：學生原始作答「patels」。TRAP_VOWEL_SWAP_E_AND_A（花瓣 petals 的 e 與 a 位置對調誤寫為 patels）",
+          "note": "標準官方批改：petals"
         }
       },
       {
-        "id": "TEA_LIST_13",
+        "id": "TEA_W6_P09_A_9",
+        "week": "W6",
+        "page": 9,
+        "part": "Part A",
+        "part_title": "Discover 3 (Unit 15) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
         "type": "spelling_listen",
-        "category_tag": "listening",
-        "question": "【W6 真題錯字重測】請聽電腦發音，拼寫出這個核心單字：",
-        "hint": "人類溝通使用的：語言",
-        "audio_word": "language",
-        "phonetic": "/ˈlæŋɡwɪdʒ/",
-        "syllables": "lan · guage",
+        "question": "【W6 歷史真卷·Discover 3 (Unit 15) : Spelling】第 9 題：請聽音並在紙上拼寫出單字",
+        "answer": "stem",
+        "ipa": "/stem/",
+        "vocab_card": {
+          "word": "stem",
+          "pos": "n.",
+          "chi": "考券核心字彙",
+          "ipa": "/stem/",
+          "breakdown": "單字拼寫記憶：stem",
+          "trick": "熟記發音音節以精準拼寫 stem",
+          "collocation": "stem",
+          "context_eng": "Rex practiced writing stem in the 3C quiz.",
+          "context_chi": "Rex 在小考中精準默寫出 stem。",
+          "compare": "注意大小寫與字母順序"
+        },
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W6 實體考券 Discover 3 (Unit 15) : Spelling 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：stem"
+        }
+      },
+      {
+        "id": "TEA_W6_P09_A_10",
+        "week": "W6",
+        "page": 9,
+        "part": "Part A",
+        "part_title": "Discover 3 (Unit 15) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "spelling_listen",
+        "question": "【W6 歷史真卷·Discover 3 (Unit 15) : Spelling】第 10 題：請聽音並在紙上拼寫出單字",
+        "answer": "pollen",
+        "ipa": "/pollen/",
+        "vocab_card": {
+          "word": "pollen",
+          "pos": "名詞 (Noun, 不可數)",
+          "chi": "花粉",
+          "ipa": "/pollen/",
+          "breakdown": "源自拉丁文 pollen (細粉/微塵) -> 花朵雄蕊產生的黃色細微粉末。",
+          "trick": "poll (p-o-l-l) + en (e-n)！蜜蜂吸花蜜 (nectar) 時，腳上會沾滿黃色的花粉 (pollen) 幫植物授粉！",
+          "collocation": "搭配: yellow pollen (黃色花粉), carry pollen (傳播花粉)",
+          "context_eng": "Inside the flower, there is yellow pollen and sweet liquid called nectar.",
+          "context_chi": "在花朵內部，有黃色的花粉以及稱為花蜜的甜美汁液。",
+          "compare": "pollen (花粉 - 不可數) vs. petals (花瓣 - 可數)。"
+        },
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W6 實體考券 Discover 3 (Unit 15) : Spelling 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：pollen"
+        }
+      },
+      {
+        "id": "TEA_W6_P09_A_11",
+        "week": "W6",
+        "page": 9,
+        "part": "Part A",
+        "part_title": "Discover 3 (Unit 15) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "spelling_listen",
+        "question": "【W6 歷史真卷·Discover 3 (Unit 15) : Spelling】第 11 題：請聽音並在紙上拼寫出單字",
+        "answer": "important",
+        "ipa": "/important/",
+        "vocab_card": {
+          "word": "important",
+          "pos": "n.",
+          "chi": "考券核心字彙",
+          "ipa": "/important/",
+          "breakdown": "單字拼寫記憶：important",
+          "trick": "熟記發音音節以精準拼寫 important",
+          "collocation": "important",
+          "context_eng": "Rex practiced writing important in the 3C quiz.",
+          "context_chi": "Rex 在小考中精準默寫出 important。",
+          "compare": "注意大小寫與字母順序"
+        },
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W6 實體考券 Discover 3 (Unit 15) : Spelling 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：important"
+        }
+      },
+      {
+        "id": "TEA_W6_P09_A_12",
+        "week": "W6",
+        "page": 9,
+        "part": "Part A",
+        "part_title": "Discover 3 (Unit 15) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "spelling_listen",
+        "question": "【W6 歷史真卷·Discover 3 (Unit 15) : Spelling】第 12 題：請聽音並在紙上拼寫出單字",
+        "answer": "first",
+        "ipa": "/first/",
+        "vocab_card": {
+          "word": "first",
+          "pos": "n.",
+          "chi": "考券核心字彙",
+          "ipa": "/first/",
+          "breakdown": "單字拼寫記憶：first",
+          "trick": "熟記發音音節以精準拼寫 first",
+          "collocation": "first",
+          "context_eng": "Rex practiced writing first in the 3C quiz.",
+          "context_chi": "Rex 在小考中精準默寫出 first。",
+          "compare": "注意大小寫與字母順序"
+        },
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W6 實體考券 Discover 3 (Unit 15) : Spelling 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：first"
+        }
+      },
+      {
+        "id": "TEA_W6_P09_A_13",
+        "week": "W6",
+        "page": 9,
+        "part": "Part A",
+        "part_title": "Discover 3 (Unit 15) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "spelling_listen",
+        "question": "【W6 歷史真卷·Discover 3 (Unit 15) : Spelling】第 13 題：請聽音並在紙上拼寫出單字",
+        "answer": "finally",
+        "ipa": "/finally/",
+        "vocab_card": {
+          "word": "finally",
+          "pos": "n.",
+          "chi": "考券核心字彙",
+          "ipa": "/finally/",
+          "breakdown": "單字拼寫記憶：finally",
+          "trick": "熟記發音音節以精準拼寫 finally",
+          "collocation": "finally",
+          "context_eng": "Rex practiced writing finally in the 3C quiz.",
+          "context_chi": "Rex 在小考中精準默寫出 finally。",
+          "compare": "注意大小寫與字母順序"
+        },
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W6 實體考券 Discover 3 (Unit 15) : Spelling 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：finally"
+        }
+      },
+      {
+        "id": "TEA_W6_P09_A_14",
+        "week": "W6",
+        "page": 9,
+        "part": "Part A",
+        "part_title": "Discover 3 (Unit 15) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "spelling_listen",
+        "question": "【W6 歷史真卷·Discover 3 (Unit 15) : Spelling】第 14 題：請聽音並在紙上拼寫出單字",
+        "answer": "warmth",
+        "ipa": "/warmth/",
+        "vocab_card": {
+          "word": "warmth",
+          "pos": "名詞 (Noun, 不可數)",
+          "chi": "溫暖 / 暖意",
+          "ipa": "/warmth/",
+          "breakdown": "warm (形容詞：溫暖的) + -th (抽象名詞字尾) -> 溫暖、熱度。",
+          "trick": "Discover 3 U15 必考『-th 抽象名詞四兄弟』之一：warm 直接加 th 變成 warmth！",
+          "collocation": "-th 名詞四兄弟: warmth (溫暖), length (長度), strength (力量/強度), width (寬度)",
+          "context_eng": "A strong stem pushes up toward the sunlight and warmth.",
+          "context_chi": "強壯的莖朝著陽光與溫暖向上生長。",
+          "compare": "warm (形容詞：溫暖的) vs. warmth (名詞：溫暖)。"
+        },
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W6 實體考券 Discover 3 (Unit 15) : Spelling 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：warmth"
+        }
+      },
+      {
+        "id": "TEA_W6_P09_A_15",
+        "week": "W6",
+        "page": 9,
+        "part": "Part A",
+        "part_title": "Discover 3 (Unit 15) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "spelling_listen",
+        "question": "【W6 歷史真卷·Discover 3 (Unit 15) : Spelling】第 15 題：請聽音並在紙上拼寫出單字",
+        "answer": "third",
+        "ipa": "/third/",
+        "vocab_card": {
+          "word": "third",
+          "pos": "n.",
+          "chi": "考券核心字彙",
+          "ipa": "/third/",
+          "breakdown": "單字拼寫記憶：third",
+          "trick": "熟記發音音節以精準拼寫 third",
+          "collocation": "third",
+          "context_eng": "Rex practiced writing third in the 3C quiz.",
+          "context_chi": "Rex 在小考中精準默寫出 third。",
+          "compare": "注意大小寫與字母順序"
+        },
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W6 實體考券 Discover 3 (Unit 15) : Spelling 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：third"
+        }
+      },
+      {
+        "id": "TEA_W6_P09_A_16",
+        "week": "W6",
+        "page": 9,
+        "part": "Part A",
+        "part_title": "Discover 3 (Unit 15) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "spelling_listen",
+        "question": "【W6 歷史真卷·Discover 3 (Unit 15) : Spelling】第 16 題：請聽音並在紙上拼寫出單字",
+        "answer": "second",
+        "ipa": "/second/",
+        "vocab_card": {
+          "word": "second",
+          "pos": "名詞 (Noun)",
+          "chi": "秒",
+          "ipa": "/second/",
+          "breakdown": "sec (跟隨) -> 分鐘之後跟隨的更小單位。",
+          "trick": "諧音「塞肯」，一秒鐘內可以塞進去一口肯德基。",
+          "collocation": "a split second, minute, hour",
+          "context_eng": "There are 60 seconds in a minute.",
+          "context_chi": "一分鐘有60秒。",
+          "compare": "Second (秒/第二) vs. Minute (分鐘)。"
+        },
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W6 實體考券 Discover 3 (Unit 15) : Spelling 核心考點",
+          "trap": "【Rex 當年筆記】：學生原始作答「secend」。TRAP_SCHWA_VOWEL_O_TO_E（second 第二音節為 o，誤寫為 secend）",
+          "note": "標準官方批改：second"
+        }
+      },
+      {
+        "id": "TEA_W6_P09_A_17",
+        "week": "W6",
+        "page": 9,
+        "part": "Part A",
+        "part_title": "Discover 3 (Unit 15) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "spelling_listen",
+        "question": "【W6 歷史真卷·Discover 3 (Unit 15) : Spelling】第 17 題：請聽音並在紙上拼寫出單字",
+        "answer": "flower",
+        "ipa": "/flower/",
+        "vocab_card": {
+          "word": "flower",
+          "pos": "n.",
+          "chi": "考券核心字彙",
+          "ipa": "/flower/",
+          "breakdown": "單字拼寫記憶：flower",
+          "trick": "熟記發音音節以精準拼寫 flower",
+          "collocation": "flower",
+          "context_eng": "Rex practiced writing flower in the 3C quiz.",
+          "context_chi": "Rex 在小考中精準默寫出 flower。",
+          "compare": "注意大小寫與字母順序"
+        },
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W6 實體考券 Discover 3 (Unit 15) : Spelling 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：flower"
+        }
+      },
+      {
+        "id": "TEA_W6_P09_A_18",
+        "week": "W6",
+        "page": 9,
+        "part": "Part A",
+        "part_title": "Discover 3 (Unit 15) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "spelling_listen",
+        "question": "【W6 歷史真卷·Discover 3 (Unit 15) : Spelling】第 18 題：請聽音並在紙上拼寫出單字",
+        "answer": "length",
+        "ipa": "/length/",
+        "vocab_card": {
+          "word": "length",
+          "pos": "n.",
+          "chi": "考券核心字彙",
+          "ipa": "/length/",
+          "breakdown": "單字拼寫記憶：length",
+          "trick": "熟記發音音節以精準拼寫 length",
+          "collocation": "length",
+          "context_eng": "Rex practiced writing length in the 3C quiz.",
+          "context_chi": "Rex 在小考中精準默寫出 length。",
+          "compare": "注意大小寫與字母順序"
+        },
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W6 實體考券 Discover 3 (Unit 15) : Spelling 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：length"
+        }
+      },
+      {
+        "id": "TEA_W6_P09_A_19",
+        "week": "W6",
+        "page": 9,
+        "part": "Part A",
+        "part_title": "Discover 3 (Unit 15) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "spelling_listen",
+        "question": "【W6 歷史真卷·Discover 3 (Unit 15) : Spelling】第 19 題：請聽音並在紙上拼寫出單字",
+        "answer": "strength",
+        "ipa": "/strength/",
+        "vocab_card": {
+          "word": "strength",
+          "pos": "名詞 (Noun)",
+          "chi": "力量 / 強度 / 體力",
+          "ipa": "/strength/",
+          "breakdown": "strong (強壯的) 母音 o 變 e + -th -> strength (力量/強度)。",
+          "trick": "注意拼寫變化：strong ➔ str-e-n-g-t-h（o 變成 e，且後面有 g 再加 th）！跟 long ➔ length 完全同規律！",
+          "collocation": "同規律變化: long (長的) ➔ length (長度)；strong (強的) ➔ strength (強度)；wide (寬的) ➔ width (寬度)",
+          "context_eng": "Scientists can measure the length of its stem, the width of its leaves, and the strength of its roots.",
+          "context_chi": "科學家可以測量它莖的長度、葉子的寬度以及根部的強度。",
+          "compare": "strong (形容詞：強壯的) vs. strength (名詞：力量/強度)。"
+        },
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W6 實體考券 Discover 3 (Unit 15) : Spelling 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：strength"
+        }
+      },
+      {
+        "id": "TEA_W6_P09_A_20",
+        "week": "W6",
+        "page": 9,
+        "part": "Part A",
+        "part_title": "Discover 3 (Unit 15) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "spelling_listen",
+        "question": "【W6 歷史真卷·Discover 3 (Unit 15) : Spelling】第 20 題：請聽音並在紙上拼寫出單字",
+        "answer": "width",
+        "ipa": "/width/",
+        "vocab_card": {
+          "word": "width",
+          "pos": "n.",
+          "chi": "考券核心字彙",
+          "ipa": "/width/",
+          "breakdown": "單字拼寫記憶：width",
+          "trick": "熟記發音音節以精準拼寫 width",
+          "collocation": "width",
+          "context_eng": "Rex practiced writing width in the 3C quiz.",
+          "context_chi": "Rex 在小考中精準默寫出 width。",
+          "compare": "注意大小寫與字母順序"
+        },
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W6 實體考券 Discover 3 (Unit 15) : Spelling 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：width"
+        }
+      },
+      {
+        "id": "TEA_W6_P09_B_1",
+        "week": "W6",
+        "page": 9,
+        "part": "Part B",
+        "part_title": "Reading with Writing 6 (Units 7 & 8) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "spelling_listen",
+        "question": "【W6 歷史真卷·Reading with Writing 6 (Units 7 & 8) : Spelling】第 1 題：請聽音並在紙上拼寫出單字",
+        "answer": "Mexican",
+        "ipa": "/mexican/",
+        "vocab_card": {
+          "word": "Mexican",
+          "pos": "專有名詞 / 形容詞 (N. / Adj.)",
+          "chi": "墨西哥人 / 墨西哥的",
+          "ipa": "/mexican/",
+          "breakdown": "Mexico (墨西哥) 去 o + -an -> 墨西哥人、墨西哥的。",
+          "trick": "⚠️ 岱崙 W6 考卷真實失分字！Rex 曾拼成『Maxican ❌』！口訣：墨西哥是 M-e-x-i-c-o，第二個字母是 e 不是 a！",
+          "collocation": "搭配: Mexican people (墨西哥人), Mexican food (墨西哥菜)",
+          "context_eng": "Many Mexican people speak native languages, too.",
+          "context_chi": "許多墨西哥人也說當地原住民母語。",
+          "compare": "Mexico (國家：墨西哥) vs. Mexican (墨西哥人/的)。"
+        },
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W6 實體考券 Reading with Writing 6 (Units 7 & 8) : Spelling 核心考點",
+          "trap": "【Rex 當年筆記】：學生原始作答「Maxican」。TRAP_PROPER_NOUN_VOWEL_E_VS_A（墨西哥人/語 Mexican 首音節為 Mex- 而非 Max-）",
+          "note": "標準官方批改：Mexican"
+        }
+      },
+      {
+        "id": "TEA_W6_P09_B_2",
+        "week": "W6",
+        "page": 9,
+        "part": "Part B",
+        "part_title": "Reading with Writing 6 (Units 7 & 8) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "spelling_listen",
+        "question": "【W6 歷史真卷·Reading with Writing 6 (Units 7 & 8) : Spelling】第 2 題：請聽音並在紙上拼寫出單字",
         "answer": "language",
+        "ipa": "/language/",
+        "vocab_card": {
+          "word": "language",
+          "pos": "名詞 (Noun)",
+          "chi": "語言",
+          "ipa": "/language/",
+          "breakdown": "源自拉丁文 lingua (舌頭/說話) + -age (名詞字尾) -> 人類溝通的語言。",
+          "trick": "⚠️ 岱崙 W6 考卷真實失分字！Rex 曾拼成『langauges ❌』（把 ua 寫顛倒成 au 且多加 s）！口訣：先寫瓜 (gua: g-u-a)，再寫 ge！",
+          "collocation": "搭配: native language (母語), official language (官方語言), sign language (手語)",
+          "context_eng": "Everyone is a native speaker of their first language.",
+          "context_chi": "每個人都是自己第一語言的母語使用者。",
+          "compare": "language (單數：l-a-n-g-u-a-g-e) vs. ❌langauge (順序顛倒錯字)。"
+        },
+        "difficulty": "★★★☆☆",
         "explanation": {
-          "concept": "RWW6 Unit 7 / Week 6 單字聽寫失分題",
-          "formula": "lan + gua + ge，g 後面固定接 ua 發 /ɡwɪ/。",
-          "trap": "Rex 考場原答寫成 langauges ❌（把 ua 寫反成 au 且多加 s）！"
+          "point": "W6 實體考券 Reading with Writing 6 (Units 7 & 8) : Spelling 核心考點",
+          "trap": "【Rex 當年筆記】：學生原始作答「langauges」。TRAP_DIPHTHONG_UA_VS_AU（language 的 -gua- 誤倒置為 -gau-，且誤加複數 s）",
+          "note": "標準官方批改：language"
         }
       },
       {
-        "id": "TEA_LIST_14",
+        "id": "TEA_W6_P09_B_3",
+        "week": "W6",
+        "page": 9,
+        "part": "Part B",
+        "part_title": "Reading with Writing 6 (Units 7 & 8) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
         "type": "spelling_listen",
-        "category_tag": "listening",
-        "question": "【W6 真題錯字重測】請聽電腦發音，拼寫出這個核心單字：",
-        "hint": "政府或國家認定的：官方的、正式的",
-        "audio_word": "official",
-        "phonetic": "/əˈfɪʃl/",
-        "syllables": "of · fi · cial",
+        "question": "【W6 歷史真卷·Reading with Writing 6 (Units 7 & 8) : Spelling】第 3 題：請聽音並在紙上拼寫出單字",
         "answer": "official",
+        "ipa": "/official/",
+        "vocab_card": {
+          "word": "official",
+          "pos": "形容詞 (Adjective)",
+          "chi": "官方的 / 正式的",
+          "ipa": "/official/",
+          "breakdown": "office (辦公室/政府機關) 去 e + -ial (形容詞字尾，發 /ʃəl/ 音)。",
+          "trick": "⚠️ 岱崙 W6 考卷真實失分字！Rex 曾拼成『offical ❌』（漏了 c 後面的 i）！口訣：office 去 e 加 i-a-l，c 後面一定要有 i 才會發 /ʃ/ 的音！",
+          "collocation": "同尾詞族: official (官方的 -cial), special (特別的 -cial), social (社會的 -cial)",
+          "context_eng": "A country has to pass a law to make a language official.",
+          "context_chi": "一個國家必須通過法律，才能使一種語言成為官方語言。",
+          "compare": "official (o-f-f-i-c-i-a-l) vs. ❌offical (漏 i 錯字)。"
+        },
+        "difficulty": "★★★☆☆",
         "explanation": {
-          "concept": "RWW6 Unit 7 / Week 6 單字聽寫失分題",
-          "formula": "office (辦公室) 去 e + ial = official，字尾 -cial 發 /ʃəl/。",
-          "trap": "Rex 考場原答漏寫 i 寫成 offical ❌！"
+          "point": "W6 實體考券 Reading with Writing 6 (Units 7 & 8) : Spelling 核心考點",
+          "trap": "【Rex 當年筆記】：學生原始作答「offical」。TRAP_SUFFIX_CIAL_MISSING_I（official 字尾為 -cial 發 /ʃəl/，漏寫 i 變成 offical）",
+          "note": "標準官方批改：official"
         }
       },
       {
-        "id": "TEA_LIST_15",
+        "id": "TEA_W6_P09_B_4",
+        "week": "W6",
+        "page": 9,
+        "part": "Part B",
+        "part_title": "Reading with Writing 6 (Units 7 & 8) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
         "type": "spelling_listen",
-        "category_tag": "listening",
-        "question": "【W6 真題錯字重測】請聽電腦發音，拼寫出這個核心單字：",
-        "hint": "治理國家的機構：政府",
-        "audio_word": "government",
-        "phonetic": "/ˈɡʌvərnmənt/",
-        "syllables": "gov · ern · ment",
+        "question": "【W6 歷史真卷·Reading with Writing 6 (Units 7 & 8) : Spelling】第 4 題：請聽音並在紙上拼寫出單字",
+        "answer": "Chinese",
+        "ipa": "/chinese/",
+        "vocab_card": {
+          "word": "Chinese",
+          "pos": "n.",
+          "chi": "考券核心字彙",
+          "ipa": "/chinese/",
+          "breakdown": "單字拼寫記憶：Chinese",
+          "trick": "熟記發音音節以精準拼寫 Chinese",
+          "collocation": "Chinese",
+          "context_eng": "Rex practiced writing Chinese in the 3C quiz.",
+          "context_chi": "Rex 在小考中精準默寫出 Chinese。",
+          "compare": "注意大小寫與字母順序"
+        },
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W6 實體考券 Reading with Writing 6 (Units 7 & 8) : Spelling 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：Chinese"
+        }
+      },
+      {
+        "id": "TEA_W6_P09_B_5",
+        "week": "W6",
+        "page": 9,
+        "part": "Part B",
+        "part_title": "Reading with Writing 6 (Units 7 & 8) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "spelling_listen",
+        "question": "【W6 歷史真卷·Reading with Writing 6 (Units 7 & 8) : Spelling】第 5 題：請聽音並在紙上拼寫出單字",
+        "answer": "travel",
+        "ipa": "/travel/",
+        "vocab_card": {
+          "word": "travel",
+          "pos": "動詞/名詞 (Verb/Noun) travel, traveled, traveled",
+          "chi": "旅行",
+          "ipa": "/travel/",
+          "breakdown": "來自古法語 travail (辛苦的工作)。古代旅行是很危險辛苦的！",
+          "trick": "諧音「踹佛」。聯想：「旅行」到深山裡，不小心「踹」到了大「佛」像。",
+          "collocation": "travel around the world (環遊世界), space travel (太空旅行)",
+          "context_eng": "I want to travel to many different countries.",
+          "context_chi": "我想要去很多不同的國家旅行。",
+          "compare": "Travel (長途旅行) vs. Trip (短途旅行/名詞)。"
+        },
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W6 實體考券 Reading with Writing 6 (Units 7 & 8) : Spelling 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：travel"
+        }
+      },
+      {
+        "id": "TEA_W6_P09_B_6",
+        "week": "W6",
+        "page": 9,
+        "part": "Part B",
+        "part_title": "Reading with Writing 6 (Units 7 & 8) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "spelling_listen",
+        "question": "【W6 歷史真卷·Reading with Writing 6 (Units 7 & 8) : Spelling】第 6 題：請聽音並在紙上拼寫出單字",
         "answer": "government",
+        "ipa": "/government/",
+        "vocab_card": {
+          "word": "government",
+          "pos": "名詞 (Noun)",
+          "chi": "政府",
+          "ipa": "/government/",
+          "breakdown": "govern (統治/管理) + -ment (名詞字尾) -> 治理國家的政府機構。",
+          "trick": "⚠️ 岱崙 W6 考卷真實失分字！Rex 曾寫成『goverment ❌』（漏了中間的 n）！口訣：govern (統治 g-o-v-e-r-n) + ment，中間有個 n 絕對不能吃掉！",
+          "collocation": "搭配: used by the government of a country (由一國政府所使用)",
+          "context_eng": "An official language is the one used by the government of a country.",
+          "context_chi": "官方語言是一國政府所使用的語言。",
+          "compare": "government (g-o-v-e-r-n-m-e-n-t) vs. ❌goverment (漏 n 錯字)。"
+        },
+        "difficulty": "★★★☆☆",
         "explanation": {
-          "concept": "RWW6 Unit 7 / Week 6 單字聽寫必考陷阱",
-          "formula": "動詞 govern (統治) + 名詞字尾 -ment = government。",
-          "trap": "Rex 考場原答漏掉中間的 n 寫成 goverment ❌！務必記住 govern 有 n。"
+          "point": "W6 實體考券 Reading with Writing 6 (Units 7 & 8) : Spelling 核心考點",
+          "trap": "【Rex 當年筆記】：學生原始作答「goverment」。TRAP_SILENT_N_IN_GOVERNMENT（govern + ment 中間的 n 常因口語連音被漏寫）",
+          "note": "標準官方批改：government"
         }
       },
       {
-        "id": "TEA_LIST_16",
+        "id": "TEA_W6_P09_B_7",
+        "week": "W6",
+        "page": 9,
+        "part": "Part B",
+        "part_title": "Reading with Writing 6 (Units 7 & 8) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
         "type": "spelling_listen",
-        "category_tag": "listening",
-        "question": "【W6 真題錯字重測】請聽電腦發音，拼寫出這個語言名稱：",
-        "hint": "法國人說的語言：法語（注意首字母大小寫）",
-        "audio_word": "French",
-        "phonetic": "/frentʃ/",
-        "syllables": "French",
+        "question": "【W6 歷史真卷·Reading with Writing 6 (Units 7 & 8) : Spelling】第 7 題：請聽音並在紙上拼寫出單字",
         "answer": "French",
+        "ipa": "/french/",
+        "vocab_card": {
+          "word": "French",
+          "pos": "專有名詞 / 形容詞 (N. / Adj.)",
+          "chi": "法語 / 法國的 / 法國人",
+          "ipa": "/french/",
+          "breakdown": "源自國家名 France (法國) -> 轉為語言與形容詞 French。",
+          "trick": "⚠️ 岱崙 W6 考卷真實失分字！Rex 曾寫成『franch ❌』（忘記大寫且把 e 寫成 a）！口訣：國家 France 是 a，但語言 French 中間變 e，且首字母 F 必大寫！",
+          "collocation": "國家 vs. 語言: France (法國 - a) ➔ French (法語 - e)",
+          "context_eng": "Most people in France speak French as their native language.",
+          "context_chi": "法國大多數人以法語作為他們的母語。",
+          "compare": "French (法語 F-r-e-n-c-h) vs. France (法國 F-r-a-n-c-e)。"
+        },
+        "difficulty": "★★★☆☆",
         "explanation": {
-          "concept": "RWW6 Unit 7 / Week 6 專有名詞聽寫",
-          "formula": "國家與語言名稱屬於專有名詞，首字母 F 永遠大寫，母音為 e。",
-          "trap": "Rex 考場原答寫成小寫 franch ❌！"
+          "point": "W6 實體考券 Reading with Writing 6 (Units 7 & 8) : Spelling 核心考點",
+          "trap": "【Rex 當年筆記】：學生原始作答「franch」。TRAP_LANGUAGE_CAPITALIZATION_AND_VOWEL（語言專有名詞 F 未大寫，且短母音 e 誤寫為 a）",
+          "note": "標準官方批改：French"
         }
       },
       {
-        "id": "TEA_LIST_17",
+        "id": "TEA_W6_P09_B_8",
+        "week": "W6",
+        "page": 9,
+        "part": "Part B",
+        "part_title": "Reading with Writing 6 (Units 7 & 8) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
         "type": "spelling_listen",
-        "category_tag": "listening",
-        "question": "【W6 真題錯字重測】請聽電腦發音，拼寫出這個名詞複數：",
-        "hint": "世界上的許多：國家（複數）",
-        "audio_word": "countries",
-        "phonetic": "/ˈkʌntriz/",
-        "syllables": "coun · tries",
+        "question": "【W6 歷史真卷·Reading with Writing 6 (Units 7 & 8) : Spelling】第 8 題：請聽音並在紙上拼寫出單字",
+        "answer": "native speaker",
+        "ipa": "/native speaker/",
+        "vocab_card": {
+          "word": "native speaker",
+          "pos": "名詞片語 (Noun Phrase)",
+          "chi": "母語使用者",
+          "ipa": "/native speaker/",
+          "breakdown": "native (天生的/本土的，源自拉丁文 nasci 出生) + speaker (說話者)。",
+          "trick": "從一出生 (native) 在家裡跟爸媽學的第一種語言，你就是它的 native speaker！",
+          "collocation": "課本定義: the first language you learned and speak at home",
+          "context_eng": "Everyone is a native speaker of their first language.",
+          "context_chi": "每個人都是自己第一語言的母語使用者。",
+          "compare": "native language (母語-在家學) vs. official language (官方語言-政府立法、學校學)。"
+        },
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W6 實體考券 Reading with Writing 6 (Units 7 & 8) : Spelling 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：native speaker"
+        }
+      },
+      {
+        "id": "TEA_W6_P09_B_9",
+        "week": "W6",
+        "page": 9,
+        "part": "Part B",
+        "part_title": "Reading with Writing 6 (Units 7 & 8) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "spelling_listen",
+        "question": "【W6 歷史真卷·Reading with Writing 6 (Units 7 & 8) : Spelling】第 9 題：請聽音並在紙上拼寫出單字",
+        "answer": "speak",
+        "ipa": "/speak/",
+        "vocab_card": {
+          "word": "speak",
+          "pos": "n.",
+          "chi": "考券核心字彙",
+          "ipa": "/speak/",
+          "breakdown": "單字拼寫記憶：speak",
+          "trick": "熟記發音音節以精準拼寫 speak",
+          "collocation": "speak",
+          "context_eng": "Rex practiced writing speak in the 3C quiz.",
+          "context_chi": "Rex 在小考中精準默寫出 speak。",
+          "compare": "注意大小寫與字母順序"
+        },
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W6 實體考券 Reading with Writing 6 (Units 7 & 8) : Spelling 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：speak"
+        }
+      },
+      {
+        "id": "TEA_W6_P09_B_10",
+        "week": "W6",
+        "page": 9,
+        "part": "Part B",
+        "part_title": "Reading with Writing 6 (Units 7 & 8) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "spelling_listen",
+        "question": "【W6 歷史真卷·Reading with Writing 6 (Units 7 & 8) : Spelling】第 10 題：請聽音並在紙上拼寫出單字",
         "answer": "countries",
+        "ipa": "/countries/",
+        "vocab_card": {
+          "word": "countries",
+          "pos": "名詞 (Noun, 複數)｜單數 country",
+          "chi": "國家（複數）",
+          "ipa": "/countries/",
+          "breakdown": "country (單數國家：c-o-u-n-t-r-y) 去 y 變 i + es -> countries。",
+          "trick": "⚠️ 岱崙 W6 考卷真實失分字！Rex 曾拼成『contries ❌』（漏了 o 後面的 u）！口訣：先寫數數的 count (c-o-u-n-t)，再加上 ries！",
+          "collocation": "記憶拆解: count (計算 c-o-u-n-t) + ries = countries",
+          "context_eng": "Some countries have no official language.",
+          "context_chi": "有些國家沒有官方語言。",
+          "compare": "country (單數) ➔ countries (複數 c-o-u-n-t-r-i-e-s)。"
+        },
+        "difficulty": "★★★☆☆",
         "explanation": {
-          "concept": "RWW6 Unit 7 / Week 6 單字聽寫失分題",
-          "formula": "coun-try 去 y 加 ies ➔ countries，首音節為 coun- (ou)。",
-          "trap": "Rex 考場原答漏寫 u 寫成 contries ❌！"
+          "point": "W6 實體考券 Reading with Writing 6 (Units 7 & 8) : Spelling 核心考點",
+          "trap": "【Rex 當年筆記】：學生原始作答「contries」。TRAP_OU_VOWEL_OMISSION（country / countries 漏寫 u 變成 contries）",
+          "note": "標準官方批改：countries"
         }
       },
       {
-        "id": "TEA_LIST_18",
+        "id": "TEA_W6_P09_B_11",
+        "week": "W6",
+        "page": 9,
+        "part": "Part B",
+        "part_title": "Reading with Writing 6 (Units 7 & 8) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
         "type": "spelling_listen",
-        "category_tag": "listening",
-        "question": "【W6 真題錯字重測】請聽電腦發音，拼寫出這個核心單字：",
-        "hint": "用來說明的：例子、範例",
-        "audio_word": "example",
-        "phonetic": "/ɪɡˈzæmpl/",
-        "syllables": "ex · am · ple",
+        "question": "【W6 歷史真卷·Reading with Writing 6 (Units 7 & 8) : Spelling】第 11 題：請聽音並在紙上拼寫出單字",
         "answer": "example",
+        "ipa": "/example/",
+        "vocab_card": {
+          "word": "example",
+          "pos": "名詞 (Noun)",
+          "chi": "例子 / 範例",
+          "ipa": "/example/",
+          "breakdown": "ex- (out 出來) + ample (拿出來展示的樣本) -> 舉出來的例子。",
+          "trick": "⚠️ 岱崙 W6 考卷真實失分字！Rex 曾受法語影響拼成『exemple ❌』！口訣：ex + am (我是 a-m) + ple = example！",
+          "collocation": "必背片語: for example (例如)",
+          "context_eng": "Some countries have no official language. Mexico is one example.",
+          "context_chi": "有些國家沒有官方語言。墨西哥就是一個例子。",
+          "compare": "example (e-x-a-m-p-l-e) vs. ❌exemple (錯把 a 寫成 e)。"
+        },
+        "difficulty": "★★★☆☆",
         "explanation": {
-          "concept": "RWW6 Unit 7 / Week 6 單字聽寫失分題",
-          "formula": "ex + am + ple，第二音節為短母音 /æ/ (am)。",
-          "trap": "Rex 考場原答寫成 exemple ❌！"
+          "point": "W6 實體考券 Reading with Writing 6 (Units 7 & 8) : Spelling 核心考點",
+          "trap": "【Rex 當年筆記】：學生原始作答「exemple」。TRAP_VOWEL_A_TO_E_CONFUSION（example 第二音節 /zæm/ 誤拼為 exem-）",
+          "note": "標準官方批改：example"
         }
       },
       {
-        "id": "TEA_LIST_19",
+        "id": "TEA_W6_P09_B_12",
+        "week": "W6",
+        "page": 9,
+        "part": "Part B",
+        "part_title": "Reading with Writing 6 (Units 7 & 8) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
         "type": "spelling_listen",
-        "category_tag": "listening",
-        "question": "【W6 真題錯字重測】請聽電腦發音，拼寫出這個語言名稱：",
-        "hint": "世界上最多母語人士說的：中文普通話、國語（注意首字母）",
-        "audio_word": "Mandarin",
-        "phonetic": "/ˈmændərɪn/",
-        "syllables": "Man · da · rin",
+        "question": "【W6 歷史真卷·Reading with Writing 6 (Units 7 & 8) : Spelling】第 12 題：請聽音並在紙上拼寫出單字",
         "answer": "Mandarin",
+        "ipa": "/mandarin/",
+        "vocab_card": {
+          "word": "Mandarin",
+          "pos": "專有名詞 (Proper Noun)",
+          "chi": "華語 / 普通話 / 國語",
+          "ipa": "/mandarin/",
+          "breakdown": "源自梵語 mantrin (官員)，指中文裡全國通用的標準官方話（華語）。",
+          "trick": "⚠️ 岱崙 W6 考卷真實失分字！Rex 曾寫成『manderin ❌』（忘記大寫且把 da 寫成 de）！口訣：Man (男人) + da (打) + rin (林)，首字母 M 必大寫！",
+          "collocation": "搭配: speak Mandarin (說華語)",
+          "context_eng": "Most people just use one Chinese language to talk with each other. It's called Mandarin.",
+          "context_chi": "大多數人只使用一種中文來彼此交談，稱為華語。",
+          "compare": "Mandarin (大寫：華語) vs. ❌manderin (錯誤拼法)。"
+        },
+        "difficulty": "★★★☆☆",
         "explanation": {
-          "concept": "RWW6 Unit 7 / Week 6 專有名詞聽寫",
-          "formula": "Man-da-rin，首字母 M 大寫，前兩個音節母音都是 a！",
-          "trap": "Rex 考場原答寫成小寫 manderin ❌！"
+          "point": "W6 實體考券 Reading with Writing 6 (Units 7 & 8) : Spelling 核心考點",
+          "trap": "【Rex 當年筆記】：學生原始作答「manderin」。TRAP_PROPER_NOUN_MANDARIN（中文普通話 Mandarin 首字母 M 需大寫，且第二音節為 -da- 非 -de-）",
+          "note": "標準官方批改：Mandarin"
         }
       },
       {
-        "id": "TEA_LIST_20",
+        "id": "TEA_W6_P09_B_13",
+        "week": "W6",
+        "page": 9,
+        "part": "Part B",
+        "part_title": "Reading with Writing 6 (Units 7 & 8) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
         "type": "spelling_listen",
-        "category_tag": "listening",
-        "question": "【W6 真題錯字重測】請聽電腦發音，拼寫出這個數字單位：",
-        "hint": "十個一百：一千 (1,000)",
-        "audio_word": "thousand",
-        "phonetic": "/ˈθaʊznd/",
-        "syllables": "thou · sand",
+        "question": "【W6 歷史真卷·Reading with Writing 6 (Units 7 & 8) : Spelling】第 13 題：請聽音並在紙上拼寫出單字",
         "answer": "thousand",
+        "ipa": "/thousand/",
+        "vocab_card": {
+          "word": "thousand",
+          "pos": "數字名詞 (Number)",
+          "chi": "千（1,000）",
+          "ipa": "/thousand/",
+          "breakdown": "thou (th-o-u) + sand (沙子 s-a-n-d) -> 像沙子一樣多的一千個！",
+          "trick": "⚠️ 岱崙 W6 考卷真實失分字！Rex 曾拼成『thoudnd ❌』！口訣：thou + 沙灘上的沙子 sand (s-a-n-d) = thousand！",
+          "collocation": "搭配: a thousand languages (一千種語言), thousands of (數以千計的)",
+          "context_eng": "In fact, people in India speak more than a thousand native languages in all!",
+          "context_chi": "事實上，印度人總共說著超過一千種以上的母語！",
+          "compare": "thousand (1,000) vs. hundred (100) vs. million (1,000,000)。"
+        },
+        "difficulty": "★★★☆☆",
         "explanation": {
-          "concept": "RWW6 Unit 7 / Week 6 單字聽寫失分題",
-          "formula": "拆字記憶法：thou + sand (沙子) = thousand。",
-          "trap": "Rex 考場原答漏寫 sa 寫成 thoudnd ❌！"
+          "point": "W6 實體考券 Reading with Writing 6 (Units 7 & 8) : Spelling 核心考點",
+          "trap": "【Rex 當年筆記】：學生原始作答「thoudnd」。TRAP_THOUSAND_SPELLING_COLLAPSE（thousand = thou + sand，漏寫 sa 變成 thoudnd）",
+          "note": "標準官方批改：thousand"
         }
       },
       {
-        "id": "TEA_LIST_21",
+        "id": "TEA_W6_P09_B_14",
+        "week": "W6",
+        "page": 9,
+        "part": "Part B",
+        "part_title": "Reading with Writing 6 (Units 7 & 8) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
         "type": "spelling_listen",
-        "category_tag": "listening",
-        "question": "【W6 真題錯字重測】請聽電腦發音，拼寫出這個雙字轉折片語：",
-        "hint": "用來補充真實情況：事實上（兩個單字）",
-        "audio_word": "in fact",
-        "phonetic": "/ɪn fækt/",
-        "syllables": "in · fact",
+        "question": "【W6 歷史真卷·Reading with Writing 6 (Units 7 & 8) : Spelling】第 14 題：請聽音並在紙上拼寫出單字",
         "answer": "in fact",
+        "ipa": "/in fact/",
+        "vocab_card": {
+          "word": "in fact",
+          "pos": "轉折片語 (Phrase)",
+          "chi": "事實上 / 其實",
+          "ipa": "/in fact/",
+          "breakdown": "in (在...之中) + fact (事實 f-a-c-t) -> 講出更驚人的真實情況。",
+          "trick": "⚠️ 岱崙 W6 考卷真實失分字！Rex 曾連在一起誤寫成『infecte ❌（感染）』！口訣：兩個字一定要分開寫！in + fact (事實 f-a-c-t)！",
+          "collocation": "放在句首後常接逗號: In fact, ...",
+          "context_eng": "In fact, people in India speak more than a thousand native languages in all!",
+          "context_chi": "事實上，印度人總共說著超過一千種以上的母語！",
+          "compare": "in fact (事實上 - 兩字) vs. infect (動詞：感染)。"
+        },
+        "difficulty": "★★★☆☆",
         "explanation": {
-          "concept": "RWW6 Unit 8 / Week 6 片語聽寫失分題",
-          "formula": "介系詞 in + 名詞 fact (事實) = in fact（事實上）。",
-          "trap": "Rex 考場原答把兩個字連起來聽音硬拼成 infecte ❌！"
+          "point": "W6 實體考券 Reading with Writing 6 (Units 7 & 8) : Spelling 核心考點",
+          "trap": "【Rex 當年筆記】：學生原始作答「infecte」。TRAP_PHRASE_HEARD_AS_SINGLE_WORD（將雙字轉折片語 in fact「事實上」誤聽為單字 infecte）",
+          "note": "標準官方批改：in fact"
         }
       },
       {
-        "id": "TEA_RW_09",
+        "id": "TEA_W6_P09_B_15",
+        "week": "W6",
+        "page": 9,
+        "part": "Part B",
+        "part_title": "Reading with Writing 6 (Units 7 & 8) : Spelling",
+        "part_instructions": ">",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "spelling_listen",
+        "question": "【W6 歷史真卷·Reading with Writing 6 (Units 7 & 8) : Spelling】第 15 題：請聽音並在紙上拼寫出單字",
+        "answer": "hundred",
+        "ipa": "/hundred/",
+        "vocab_card": {
+          "word": "hundred",
+          "pos": "n.",
+          "chi": "考券核心字彙",
+          "ipa": "/hundred/",
+          "breakdown": "單字拼寫記憶：hundred",
+          "trick": "熟記發音音節以精準拼寫 hundred",
+          "collocation": "hundred",
+          "context_eng": "Rex practiced writing hundred in the 3C quiz.",
+          "context_chi": "Rex 在小考中精準默寫出 hundred。",
+          "compare": "注意大小寫與字母順序"
+        },
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W6 實體考券 Reading with Writing 6 (Units 7 & 8) : Spelling 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：hundred"
+        }
+      },
+      {
+        "id": "TEA_W6_P10_C_1",
+        "week": "W6",
+        "page": 10,
+        "part": "Part C",
+        "part_title": "Write Right 3 (Unit 5) : 短文抓錯改寫 (14 Errors Proofreading)",
+        "part_instructions": "C. Find and correct the 14 errors in the passage below:",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "The verb tense of your answer should match that of the question!",
         "type": "paper_rewrite",
-        "category_tag": "rewrite",
-        "question": "【Week 7 真題】[Roger, Sean – see new Iron Man movie tomorrow / so]（注意時間副詞 tomorrow 的時態！）",
+        "question": "【W6 歷史真卷·Write Right 3 (Unit 5) — 14 Errors Proofreading 第 1 題】請修正待改錯短文中的錯誤片段：標題 If I Have 3000 Dollars",
+        "answer": "Had",
+        "ipa": "",
+        "vocab_card": null,
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W6 實體考券 Write Right 3 (Unit 5) — 14 Errors Proofreading 核心考點",
+          "trap": "【Rex 當年筆記】：學生原始作答「劃掉 Have 改寫 Had」。與現在事實相反假設語氣標題用 If I Had...",
+          "note": "標準官方批改：Had"
+        }
+      },
+      {
+        "id": "TEA_W6_P10_C_2",
+        "week": "W6",
+        "page": 10,
+        "part": "Part C",
+        "part_title": "Write Right 3 (Unit 5) : 短文抓錯改寫 (14 Errors Proofreading)",
+        "part_instructions": "C. Find and correct the 14 errors in the passage below:",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "The verb tense of your answer should match that of the question!",
+        "type": "paper_rewrite",
+        "question": "【W6 歷史真卷·Write Right 3 (Unit 5) — 14 Errors Proofreading 第 2 題】請修正待改錯短文中的錯誤片段：3000 dollar",
+        "answer": "dollars",
+        "ipa": "",
+        "vocab_card": null,
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W6 實體考券 Write Right 3 (Unit 5) — 14 Errors Proofreading 核心考點",
+          "trap": "【Rex 當年筆記】：學生原始作答「劃掉 dollar 改寫 dollars」。3000 後方複數名詞加 -s",
+          "note": "標準官方批改：dollars"
+        }
+      },
+      {
+        "id": "TEA_W6_P10_C_3",
+        "week": "W6",
+        "page": 10,
+        "part": "Part C",
+        "part_title": "Write Right 3 (Unit 5) : 短文抓錯改寫 (14 Errors Proofreading)",
+        "part_instructions": "C. Find and correct the 14 errors in the passage below:",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "The verb tense of your answer should match that of the question!",
+        "type": "paper_rewrite",
+        "question": "【W6 歷史真卷·Write Right 3 (Unit 5) — 14 Errors Proofreading 第 3 題】請修正待改錯短文中的錯誤片段：three thing",
+        "answer": "things",
+        "ipa": "",
+        "vocab_card": null,
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W6 實體考券 Write Right 3 (Unit 5) — 14 Errors Proofreading 核心考點",
+          "trap": "【Rex 當年筆記】：學生原始作答「劃掉 thing 改寫 things」。three 後方複數名詞加 -s",
+          "note": "標準官方批改：things"
+        }
+      },
+      {
+        "id": "TEA_W6_P10_C_4",
+        "week": "W6",
+        "page": 10,
+        "part": "Part C",
+        "part_title": "Write Right 3 (Unit 5) : 短文抓錯改寫 (14 Errors Proofreading)",
+        "part_instructions": "C. Find and correct the 14 errors in the passage below:",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "The verb tense of your answer should match that of the question!",
+        "type": "paper_rewrite",
+        "question": "【W6 歷史真卷·Write Right 3 (Unit 5) — 14 Errors Proofreading 第 4 題】請修正待改錯短文中的錯誤片段：go a baseball game",
+        "answer": "go to a baseball game",
+        "ipa": "",
+        "vocab_card": null,
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W6 實體考券 Write Right 3 (Unit 5) — 14 Errors Proofreading 核心考點",
+          "trap": "【Rex 當年筆記】：學生原始作答「❌ **未發現漏字**」。go 為不及物動詞，接地點/活動名詞必須加介系詞 to",
+          "note": "標準官方批改：go to a baseball game"
+        }
+      },
+      {
+        "id": "TEA_W6_P10_C_5",
+        "week": "W6",
+        "page": 10,
+        "part": "Part C",
+        "part_title": "Write Right 3 (Unit 5) : 短文抓錯改寫 (14 Errors Proofreading)",
+        "part_instructions": "C. Find and correct the 14 errors in the passage below:",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "The verb tense of your answer should match that of the question!",
+        "type": "paper_rewrite",
+        "question": "【W6 歷史真卷·Write Right 3 (Unit 5) — 14 Errors Proofreading 第 5 題】請修正待改錯短文中的錯誤片段：with him (指 family)",
+        "answer": "them",
+        "ipa": "",
+        "vocab_card": null,
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W6 實體考券 Write Right 3 (Unit 5) — 14 Errors Proofreading 核心考點",
+          "trap": "【Rex 當年筆記】：學生原始作答「劃掉 him 改寫 them」。指代家人們 (my family 成員) 受格用 them",
+          "note": "標準官方批改：them"
+        }
+      },
+      {
+        "id": "TEA_W6_P10_C_6",
+        "week": "W6",
+        "page": 10,
+        "part": "Part C",
+        "part_title": "Write Right 3 (Unit 5) : 短文抓錯改寫 (14 Errors Proofreading)",
+        "part_instructions": "C. Find and correct the 14 errors in the passage below:",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "The verb tense of your answer should match that of the question!",
+        "type": "paper_rewrite",
+        "question": "【W6 歷史真卷·Write Right 3 (Unit 5) — 14 Errors Proofreading 第 6 題】請修正待改錯短文中的錯誤片段：Next, I buy",
+        "answer": "Next, I would buy",
+        "ipa": "",
+        "vocab_card": null,
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W6 實體考券 Write Right 3 (Unit 5) — 14 Errors Proofreading 核心考點",
+          "trap": "【Rex 當年筆記】：學生原始作答「在 I 與 buy 間插入 would」。假設語氣全文主要子句皆須維持 would + V",
+          "note": "標準官方批改：Next, I would buy"
+        }
+      },
+      {
+        "id": "TEA_W6_P10_C_7",
+        "week": "W6",
+        "page": 10,
+        "part": "Part C",
+        "part_title": "Write Right 3 (Unit 5) : 短文抓錯改寫 (14 Errors Proofreading)",
+        "part_instructions": "C. Find and correct the 14 errors in the passage below:",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "The verb tense of your answer should match that of the question!",
+        "type": "paper_rewrite",
+        "question": "【W6 歷史真卷·Write Right 3 (Unit 5) — 14 Errors Proofreading 第 7 題】請修正待改錯短文中的錯誤片段：I think it would",
+        "answer": "it (原字正確)",
+        "ipa": "",
+        "vocab_card": null,
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W6 實體考券 Write Right 3 (Unit 5) — 14 Errors Proofreading 核心考點",
+          "trap": "【Rex 當年筆記】：學生原始作答「❌ 誤將正確的 it 改成 you」。it 指代前句的 a fish tank，本來就是對的",
+          "note": "標準官方批改：it (原字正確)"
+        }
+      },
+      {
+        "id": "TEA_W6_P10_C_8",
+        "week": "W6",
+        "page": 10,
+        "part": "Part C",
+        "part_title": "Write Right 3 (Unit 5) : 短文抓錯改寫 (14 Errors Proofreading)",
+        "part_instructions": "C. Find and correct the 14 errors in the passage below:",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "The verb tense of your answer should match that of the question!",
+        "type": "paper_rewrite",
+        "question": "【W6 歷史真卷·Write Right 3 (Unit 5) — 14 Errors Proofreading 第 8 題】請修正待改錯短文中的錯誤片段：us's classroom",
+        "answer": "our classroom",
+        "ipa": "",
+        "vocab_card": null,
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W6 實體考券 Write Right 3 (Unit 5) — 14 Errors Proofreading 核心考點",
+          "trap": "【Rex 當年筆記】：學生原始作答「先寫 our's 後改寫 our」。形容詞性所有格為 our，絕對沒有 us's 或 our's",
+          "note": "標準官方批改：our classroom"
+        }
+      },
+      {
+        "id": "TEA_W6_P10_C_9",
+        "week": "W6",
+        "page": 10,
+        "part": "Part C",
+        "part_title": "Write Right 3 (Unit 5) : 短文抓錯改寫 (14 Errors Proofreading)",
+        "part_instructions": "C. Find and correct the 14 errors in the passage below:",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "The verb tense of your answer should match that of the question!",
+        "type": "paper_rewrite",
+        "question": "【W6 歷史真卷·Write Right 3 (Unit 5) — 14 Errors Proofreading 第 9 題】請修正待改錯短文中的錯誤片段：第二個 First,",
+        "answer": "Finally,",
+        "ipa": "",
+        "vocab_card": null,
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W6 實體考券 Write Right 3 (Unit 5) — 14 Errors Proofreading 核心考點",
+          "trap": "【Rex 當年筆記】：學生原始作答「劃掉 First 改寫 Finally」。順序轉折詞：First ➔ Next ➔ Finally",
+          "note": "標準官方批改：Finally,"
+        }
+      },
+      {
+        "id": "TEA_W6_P10_C_10",
+        "week": "W6",
+        "page": 10,
+        "part": "Part C",
+        "part_title": "Write Right 3 (Unit 5) : 短文抓錯改寫 (14 Errors Proofreading)",
+        "part_instructions": "C. Find and correct the 14 errors in the passage below:",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "The verb tense of your answer should match that of the question!",
+        "type": "paper_rewrite",
+        "question": "【W6 歷史真卷·Write Right 3 (Unit 5) — 14 Errors Proofreading 第 10 題】請修正待改錯短文中的錯誤片段：on meself",
+        "answer": "myself",
+        "ipa": "",
+        "vocab_card": null,
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W6 實體考券 Write Right 3 (Unit 5) — 14 Errors Proofreading 核心考點",
+          "trap": "【Rex 當年筆記】：學生原始作答「劃掉 meself 改寫 myself」。第一人稱反身代名詞為 myself",
+          "note": "標準官方批改：myself"
+        }
+      },
+      {
+        "id": "TEA_W6_P10_C_11",
+        "week": "W6",
+        "page": 10,
+        "part": "Part C",
+        "part_title": "Write Right 3 (Unit 5) : 短文抓錯改寫 (14 Errors Proofreading)",
+        "part_instructions": "C. Find and correct the 14 errors in the passage below:",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "The verb tense of your answer should match that of the question!",
+        "type": "paper_rewrite",
+        "question": "【W6 歷史真卷·Write Right 3 (Unit 5) — 14 Errors Proofreading 第 11 題】請修正待改錯短文中的錯誤片段：I would by",
+        "answer": "I would buy",
+        "ipa": "",
+        "vocab_card": null,
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W6 實體考券 Write Right 3 (Unit 5) — 14 Errors Proofreading 核心考點",
+          "trap": "【Rex 當年筆記】：學生原始作答「❌ **未發現同音異字錯誤**」。介系詞 by 與動詞 buy (購買) 同音異字混淆",
+          "note": "標準官方批改：I would buy"
+        }
+      },
+      {
+        "id": "TEA_W6_P10_C_12",
+        "week": "W6",
+        "page": 10,
+        "part": "Part C",
+        "part_title": "Write Right 3 (Unit 5) : 短文抓錯改寫 (14 Errors Proofreading)",
+        "part_instructions": "C. Find and correct the 14 errors in the passage below:",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "The verb tense of your answer should match that of the question!",
+        "type": "paper_rewrite",
+        "question": "【W6 歷史真卷·Write Right 3 (Unit 5) — 14 Errors Proofreading 第 12 題】請修正待改錯短文中的錯誤片段：some comic book",
+        "answer": "books",
+        "ipa": "",
+        "vocab_card": null,
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W6 實體考券 Write Right 3 (Unit 5) — 14 Errors Proofreading 核心考點",
+          "trap": "【Rex 當年筆記】：學生原始作答「劃掉 book 改寫 books」。some 後接可數名詞複數 comic books",
+          "note": "標準官方批改：books"
+        }
+      },
+      {
+        "id": "TEA_W6_P10_C_13",
+        "week": "W6",
+        "page": 10,
+        "part": "Part C",
+        "part_title": "Write Right 3 (Unit 5) : 短文抓錯改寫 (14 Errors Proofreading)",
+        "part_instructions": "C. Find and correct the 14 errors in the passage below:",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "The verb tense of your answer should match that of the question!",
+        "type": "paper_rewrite",
+        "question": "【W6 歷史真卷·Write Right 3 (Unit 5) — 14 Errors Proofreading 第 13 題】請修正待改錯短文中的錯誤片段：They would spend me",
+        "answer": "They would cost me",
+        "ipa": "",
+        "vocab_card": null,
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W6 實體考券 Write Right 3 (Unit 5) — 14 Errors Proofreading 核心考點",
+          "trap": "【Rex 當年筆記】：學生原始作答「劃掉 spend 改寫 cost（另誤將 They 改 It's 與句尾加 dollars）」。物品當主詞時花費動詞用 cost 不用 spend；已有 $ 符號不必再寫 dollars",
+          "note": "標準官方批改：They would cost me"
+        }
+      },
+      {
+        "id": "TEA_W6_P10_C_14",
+        "week": "W6",
+        "page": 10,
+        "part": "Part C",
+        "part_title": "Write Right 3 (Unit 5) : 短文抓錯改寫 (14 Errors Proofreading)",
+        "part_instructions": "C. Find and correct the 14 errors in the passage below:",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "The verb tense of your answer should match that of the question!",
+        "type": "paper_rewrite",
+        "question": "【W6 歷史真卷·Write Right 3 (Unit 5) — 14 Errors Proofreading 第 14 題】請修正待改錯短文中的錯誤片段：With rest of money",
+        "answer": "With the rest of the money",
+        "ipa": "",
+        "vocab_card": null,
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W6 實體考券 Write Right 3 (Unit 5) — 14 Errors Proofreading 核心考點",
+          "trap": "【Rex 當年筆記】：學生原始作答「僅在 of 後補 the (rest of the money)」。固定片語『用剩下的錢』必須有兩個定冠詞：With the rest of the money",
+          "note": "標準官方批改：With the rest of the money"
+        }
+      },
+      {
+        "id": "TEA_W6_P10_D_1",
+        "week": "W6",
+        "page": 10,
+        "part": "Part D",
+        "part_title": "Grammar 3 (Unit 10 / 15) : 量詞綜合造句 (Quantifiers Review)",
+        "part_instructions": "D. Look at the prompts and write sentences using quantifiers (a lot of / some / a few / a little / a pile of / a bin of ...):",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "paper_rewrite",
+        "question": "【W6 歷史真卷·Grammar 3 (Unit 10 / 15) : 量詞造句】1. trash (滿滿一桶垃圾，不可數)",
+        "answer": "✅ 滿分",
+        "ipa": "",
+        "vocab_card": null,
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W6 實體考券 Grammar 3 (Unit 10 / Unit 15 Quantifiers Review) 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：✅ 滿分"
+        }
+      },
+      {
+        "id": "TEA_W6_P10_D_2",
+        "week": "W6",
+        "page": 10,
+        "part": "Part D",
+        "part_title": "Grammar 3 (Unit 10 / 15) : 量詞綜合造句 (Quantifiers Review)",
+        "part_instructions": "D. Look at the prompts and write sentences using quantifiers (a lot of / some / a few / a little / a pile of / a bin of ...):",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "paper_rewrite",
+        "question": "【W6 歷史真卷·Grammar 3 (Unit 10 / 15) : 量詞造句】2. plastic bottle (3 個寶特瓶，可數)",
+        "answer": "✅ 滿分",
+        "ipa": "",
+        "vocab_card": null,
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W6 實體考券 Grammar 3 (Unit 10 / Unit 15 Quantifiers Review) 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：✅ 滿分"
+        }
+      },
+      {
+        "id": "TEA_W6_P10_D_3",
+        "week": "W6",
+        "page": 10,
+        "part": "Part D",
+        "part_title": "Grammar 3 (Unit 10 / 15) : 量詞綜合造句 (Quantifiers Review)",
+        "part_instructions": "D. Look at the prompts and write sentences using quantifiers (a lot of / some / a few / a little / a pile of / a bin of ...):",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "",
+        "type": "paper_rewrite",
+        "question": "【W6 歷史真卷·Grammar 3 (Unit 10 / 15) : 量詞造句】3. metal (一大堆廢金屬，不可數)",
+        "answer": "✅ 滿分",
+        "ipa": "",
+        "vocab_card": null,
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W6 實體考券 Grammar 3 (Unit 10 / Unit 15 Quantifiers Review) 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：✅ 滿分"
+        }
+      },
+      {
+        "id": "TEA_W7_P11_A_1",
+        "week": "W7",
+        "page": 11,
+        "part": "Part A",
+        "part_title": "Grammar 3 (Unit 15) : 量詞容器句型造句 (Measure Words)",
+        "part_instructions": "A. How many are there? Using the measure words (containers) in the box below, write a sentence for each picture to answer the question (Use words for the numbers.):",
+        "word_bank": "[bottle, packet, bag, carton, cup, bar, glass, can, bowl, box, jar, slice, piece]",
+        "sentence_form": "There is / are + [數字英文] + [量詞 containers] + of + [名詞] .",
+        "tense_hint": "",
+        "type": "paper_rewrite",
+        "question": "【W7 歷史真卷·Grammar 3 (Unit 15) : Measure Words】1. pizza (1 片披薩)",
+        "answer": "There is a slice of pizza.",
+        "ipa": "/there is a slice of pizza./",
+        "vocab_card": {
+          "word": "There is a slice of pizza.",
+          "pos": "n.",
+          "chi": "考券核心字彙",
+          "ipa": "/there is a slice of pizza./",
+          "breakdown": "單字拼寫記憶：There is a slice of pizza.",
+          "trick": "熟記發音音節以精準拼寫 There is a slice of pizza.",
+          "collocation": "There is a slice of pizza.",
+          "context_eng": "Rex practiced writing There is a slice of pizza. in the 3C quiz.",
+          "context_chi": "Rex 在小考中精準默寫出 There is a slice of pizza.。",
+          "compare": "注意大小寫與字母順序"
+        },
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W7 實體考券 Grammar 3 (Unit 15) — Measure Words (Containers) 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：There is a slice of pizza."
+        }
+      },
+      {
+        "id": "TEA_W7_P11_A_2",
+        "week": "W7",
+        "page": 11,
+        "part": "Part A",
+        "part_title": "Grammar 3 (Unit 15) : 量詞容器句型造句 (Measure Words)",
+        "part_instructions": "A. How many are there? Using the measure words (containers) in the box below, write a sentence for each picture to answer the question (Use words for the numbers.):",
+        "word_bank": "[bottle, packet, bag, carton, cup, bar, glass, can, bowl, box, jar, slice, piece]",
+        "sentence_form": "There is / are + [數字英文] + [量詞 containers] + of + [名詞] .",
+        "tense_hint": "",
+        "type": "paper_rewrite",
+        "question": "【W7 歷史真卷·Grammar 3 (Unit 15) : Measure Words】2. water (6 瓶礦泉水)",
+        "answer": "There are six bottles of water.",
+        "ipa": "/there are six bottles of water./",
+        "vocab_card": {
+          "word": "There are six bottles of water.",
+          "pos": "n.",
+          "chi": "考券核心字彙",
+          "ipa": "/there are six bottles of water./",
+          "breakdown": "單字拼寫記憶：There are six bottles of water.",
+          "trick": "熟記發音音節以精準拼寫 There are six bottles of water.",
+          "collocation": "There are six bottles of water.",
+          "context_eng": "Rex practiced writing There are six bottles of water. in the 3C quiz.",
+          "context_chi": "Rex 在小考中精準默寫出 There are six bottles of water.。",
+          "compare": "注意大小寫與字母順序"
+        },
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W7 實體考券 Grammar 3 (Unit 15) — Measure Words (Containers) 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：There are six bottles of water."
+        }
+      },
+      {
+        "id": "TEA_W7_P11_A_3",
+        "week": "W7",
+        "page": 11,
+        "part": "Part A",
+        "part_title": "Grammar 3 (Unit 15) : 量詞容器句型造句 (Measure Words)",
+        "part_instructions": "A. How many are there? Using the measure words (containers) in the box below, write a sentence for each picture to answer the question (Use words for the numbers.):",
+        "word_bank": "[bottle, packet, bag, carton, cup, bar, glass, can, bowl, box, jar, slice, piece]",
+        "sentence_form": "There is / are + [數字英文] + [量詞 containers] + of + [名詞] .",
+        "tense_hint": "",
+        "type": "paper_rewrite",
+        "question": "【W7 歷史真卷·Grammar 3 (Unit 15) : Measure Words】3. tomatoes (2 罐番茄罐頭)",
+        "answer": "There are two cans of tomatoes.",
+        "ipa": "/there are two cans of tomatoes./",
+        "vocab_card": {
+          "word": "There are two cans of tomatoes.",
+          "pos": "n.",
+          "chi": "考券核心字彙",
+          "ipa": "/there are two cans of tomatoes./",
+          "breakdown": "單字拼寫記憶：There are two cans of tomatoes.",
+          "trick": "熟記發音音節以精準拼寫 There are two cans of tomatoes.",
+          "collocation": "There are two cans of tomatoes.",
+          "context_eng": "Rex practiced writing There are two cans of tomatoes. in the 3C quiz.",
+          "context_chi": "Rex 在小考中精準默寫出 There are two cans of tomatoes.。",
+          "compare": "注意大小寫與字母順序"
+        },
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W7 實體考券 Grammar 3 (Unit 15) — Measure Words (Containers) 核心考點",
+          "trap": "【Rex 當年筆記】：學生原始作答「There are two cans of tomatoes. (cans 字跡略像 caks)」。TRAP_HANDWRITING_N_VS_K",
+          "note": "標準官方批改：There are two cans of tomatoes."
+        }
+      },
+      {
+        "id": "TEA_W7_P11_A_4",
+        "week": "W7",
+        "page": 11,
+        "part": "Part A",
+        "part_title": "Grammar 3 (Unit 15) : 量詞容器句型造句 (Measure Words)",
+        "part_instructions": "A. How many are there? Using the measure words (containers) in the box below, write a sentence for each picture to answer the question (Use words for the numbers.):",
+        "word_bank": "[bottle, packet, bag, carton, cup, bar, glass, can, bowl, box, jar, slice, piece]",
+        "sentence_form": "There is / are + [數字英文] + [量詞 containers] + of + [名詞] .",
+        "tense_hint": "",
+        "type": "paper_rewrite",
+        "question": "【W7 歷史真卷·Grammar 3 (Unit 15) : Measure Words】4. chocolate (1 條巧克力)",
+        "answer": "There is a bar of chocolate.",
+        "ipa": "/there is a bar of chocolate./",
+        "vocab_card": {
+          "word": "There is a bar of chocolate.",
+          "pos": "n.",
+          "chi": "考券核心字彙",
+          "ipa": "/there is a bar of chocolate./",
+          "breakdown": "單字拼寫記憶：There is a bar of chocolate.",
+          "trick": "熟記發音音節以精準拼寫 There is a bar of chocolate.",
+          "collocation": "There is a bar of chocolate.",
+          "context_eng": "Rex practiced writing There is a bar of chocolate. in the 3C quiz.",
+          "context_chi": "Rex 在小考中精準默寫出 There is a bar of chocolate.。",
+          "compare": "注意大小寫與字母順序"
+        },
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W7 實體考券 Grammar 3 (Unit 15) — Measure Words (Containers) 核心考點",
+          "trap": "【Rex 當年筆記】：學生原始作答「There is a bar of chocolatet.」。TRAP_SPELLING_EXTRA_T（題幹左方已印有 chocolate，抄寫時字尾多寫 t）",
+          "note": "標準官方批改：There is a bar of chocolate."
+        }
+      },
+      {
+        "id": "TEA_W7_P11_A_5",
+        "week": "W7",
+        "page": 11,
+        "part": "Part A",
+        "part_title": "Grammar 3 (Unit 15) : 量詞容器句型造句 (Measure Words)",
+        "part_instructions": "A. How many are there? Using the measure words (containers) in the box below, write a sentence for each picture to answer the question (Use words for the numbers.):",
+        "word_bank": "[bottle, packet, bag, carton, cup, bar, glass, can, bowl, box, jar, slice, piece]",
+        "sentence_form": "There is / are + [數字英文] + [量詞 containers] + of + [名詞] .",
+        "tense_hint": "",
+        "type": "paper_rewrite",
+        "question": "【W7 歷史真卷·Grammar 3 (Unit 15) : Measure Words】5. milk (1 紙盒牛奶)",
+        "answer": "There is a carton of milk.",
+        "ipa": "/there is a carton of milk./",
+        "vocab_card": {
+          "word": "There is a carton of milk.",
+          "pos": "n.",
+          "chi": "考券核心字彙",
+          "ipa": "/there is a carton of milk./",
+          "breakdown": "單字拼寫記憶：There is a carton of milk.",
+          "trick": "熟記發音音節以精準拼寫 There is a carton of milk.",
+          "collocation": "There is a carton of milk.",
+          "context_eng": "Rex practiced writing There is a carton of milk. in the 3C quiz.",
+          "context_chi": "Rex 在小考中精準默寫出 There is a carton of milk.。",
+          "compare": "注意大小寫與字母順序"
+        },
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W7 實體考券 Grammar 3 (Unit 15) — Measure Words (Containers) 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：There is a carton of milk."
+        }
+      },
+      {
+        "id": "TEA_W7_P11_A_6",
+        "week": "W7",
+        "page": 11,
+        "part": "Part A",
+        "part_title": "Grammar 3 (Unit 15) : 量詞容器句型造句 (Measure Words)",
+        "part_instructions": "A. How many are there? Using the measure words (containers) in the box below, write a sentence for each picture to answer the question (Use words for the numbers.):",
+        "word_bank": "[bottle, packet, bag, carton, cup, bar, glass, can, bowl, box, jar, slice, piece]",
+        "sentence_form": "There is / are + [數字英文] + [量詞 containers] + of + [名詞] .",
+        "tense_hint": "",
+        "type": "paper_rewrite",
+        "question": "【W7 歷史真卷·Grammar 3 (Unit 15) : Measure Words】6. bread (7 片吐司)",
+        "answer": "There are seven slices of bread.",
+        "ipa": "/there are seven slices of bread./",
+        "vocab_card": {
+          "word": "There are seven slices of bread.",
+          "pos": "n.",
+          "chi": "考券核心字彙",
+          "ipa": "/there are seven slices of bread./",
+          "breakdown": "單字拼寫記憶：There are seven slices of bread.",
+          "trick": "熟記發音音節以精準拼寫 There are seven slices of bread.",
+          "collocation": "There are seven slices of bread.",
+          "context_eng": "Rex practiced writing There are seven slices of bread. in the 3C quiz.",
+          "context_chi": "Rex 在小考中精準默寫出 There are seven slices of bread.。",
+          "compare": "注意大小寫與字母順序"
+        },
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W7 實體考券 Grammar 3 (Unit 15) — Measure Words (Containers) 核心考點",
+          "trap": "【Rex 當年筆記】：學生原始作答「There are seven packet of breads.」。TRAP_SLICE_OF_BREAD_TRIPLE_ERROR（① 切片吐司應用 slice 非 packet；② seven 後量詞漏加 s；③ 不可數名詞 bread 誤加 s）",
+          "note": "標準官方批改：There are seven slices of bread."
+        }
+      },
+      {
+        "id": "TEA_W7_P11_A_7",
+        "week": "W7",
+        "page": 11,
+        "part": "Part A",
+        "part_title": "Grammar 3 (Unit 15) : 量詞容器句型造句 (Measure Words)",
+        "part_instructions": "A. How many are there? Using the measure words (containers) in the box below, write a sentence for each picture to answer the question (Use words for the numbers.):",
+        "word_bank": "[bottle, packet, bag, carton, cup, bar, glass, can, bowl, box, jar, slice, piece]",
+        "sentence_form": "There is / are + [數字英文] + [量詞 containers] + of + [名詞] .",
+        "tense_hint": "",
+        "type": "paper_rewrite",
+        "question": "【W7 歷史真卷·Grammar 3 (Unit 15) : Measure Words】7. soup (1 碗湯)",
+        "answer": "There is a bowl of soup.",
+        "ipa": "/there is a bowl of soup./",
+        "vocab_card": {
+          "word": "There is a bowl of soup.",
+          "pos": "n.",
+          "chi": "考券核心字彙",
+          "ipa": "/there is a bowl of soup./",
+          "breakdown": "單字拼寫記憶：There is a bowl of soup.",
+          "trick": "熟記發音音節以精準拼寫 There is a bowl of soup.",
+          "collocation": "There is a bowl of soup.",
+          "context_eng": "Rex practiced writing There is a bowl of soup. in the 3C quiz.",
+          "context_chi": "Rex 在小考中精準默寫出 There is a bowl of soup.。",
+          "compare": "注意大小寫與字母順序"
+        },
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W7 實體考券 Grammar 3 (Unit 15) — Measure Words (Containers) 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：There is a bowl of soup."
+        }
+      },
+      {
+        "id": "TEA_W7_P11_A_8",
+        "week": "W7",
+        "page": 11,
+        "part": "Part A",
+        "part_title": "Grammar 3 (Unit 15) : 量詞容器句型造句 (Measure Words)",
+        "part_instructions": "A. How many are there? Using the measure words (containers) in the box below, write a sentence for each picture to answer the question (Use words for the numbers.):",
+        "word_bank": "[bottle, packet, bag, carton, cup, bar, glass, can, bowl, box, jar, slice, piece]",
+        "sentence_form": "There is / are + [數字英文] + [量詞 containers] + of + [名詞] .",
+        "tense_hint": "",
+        "type": "paper_rewrite",
+        "question": "【W7 歷史真卷·Grammar 3 (Unit 15) : Measure Words】8. tea (2 杯茶)",
+        "answer": "There are two cups of tea.",
+        "ipa": "/there are two cups of tea./",
+        "vocab_card": {
+          "word": "There are two cups of tea.",
+          "pos": "n.",
+          "chi": "考券核心字彙",
+          "ipa": "/there are two cups of tea./",
+          "breakdown": "單字拼寫記憶：There are two cups of tea.",
+          "trick": "熟記發音音節以精準拼寫 There are two cups of tea.",
+          "collocation": "There are two cups of tea.",
+          "context_eng": "Rex practiced writing There are two cups of tea. in the 3C quiz.",
+          "context_chi": "Rex 在小考中精準默寫出 There are two cups of tea.。",
+          "compare": "注意大小寫與字母順序"
+        },
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W7 實體考券 Grammar 3 (Unit 15) — Measure Words (Containers) 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：There are two cups of tea."
+        }
+      },
+      {
+        "id": "TEA_W7_P11_A_9",
+        "week": "W7",
+        "page": 11,
+        "part": "Part A",
+        "part_title": "Grammar 3 (Unit 15) : 量詞容器句型造句 (Measure Words)",
+        "part_instructions": "A. How many are there? Using the measure words (containers) in the box below, write a sentence for each picture to answer the question (Use words for the numbers.):",
+        "word_bank": "[bottle, packet, bag, carton, cup, bar, glass, can, bowl, box, jar, slice, piece]",
+        "sentence_form": "There is / are + [數字英文] + [量詞 containers] + of + [名詞] .",
+        "tense_hint": "",
+        "type": "paper_rewrite",
+        "question": "【W7 歷史真卷·Grammar 3 (Unit 15) : Measure Words】9. honey (1 罐蜂蜜)",
+        "answer": "There is a jar of honey.",
+        "ipa": "/there is a jar of honey./",
+        "vocab_card": {
+          "word": "There is a jar of honey.",
+          "pos": "n.",
+          "chi": "考券核心字彙",
+          "ipa": "/there is a jar of honey./",
+          "breakdown": "單字拼寫記憶：There is a jar of honey.",
+          "trick": "熟記發音音節以精準拼寫 There is a jar of honey.",
+          "collocation": "There is a jar of honey.",
+          "context_eng": "Rex practiced writing There is a jar of honey. in the 3C quiz.",
+          "context_chi": "Rex 在小考中精準默寫出 There is a jar of honey.。",
+          "compare": "注意大小寫與字母順序"
+        },
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W7 實體考券 Grammar 3 (Unit 15) — Measure Words (Containers) 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：There is a jar of honey."
+        }
+      },
+      {
+        "id": "TEA_W7_P11_A_10",
+        "week": "W7",
+        "page": 11,
+        "part": "Part A",
+        "part_title": "Grammar 3 (Unit 15) : 量詞容器句型造句 (Measure Words)",
+        "part_instructions": "A. How many are there? Using the measure words (containers) in the box below, write a sentence for each picture to answer the question (Use words for the numbers.):",
+        "word_bank": "[bottle, packet, bag, carton, cup, bar, glass, can, bowl, box, jar, slice, piece]",
+        "sentence_form": "There is / are + [數字英文] + [量詞 containers] + of + [名詞] .",
+        "tense_hint": "",
+        "type": "paper_rewrite",
+        "question": "【W7 歷史真卷·Grammar 3 (Unit 15) : Measure Words】10. water (1 杯水)",
+        "answer": "There is a glass of water.",
+        "ipa": "/there is a glass of water./",
+        "vocab_card": {
+          "word": "There is a glass of water.",
+          "pos": "n.",
+          "chi": "考券核心字彙",
+          "ipa": "/there is a glass of water./",
+          "breakdown": "單字拼寫記憶：There is a glass of water.",
+          "trick": "熟記發音音節以精準拼寫 There is a glass of water.",
+          "collocation": "There is a glass of water.",
+          "context_eng": "Rex practiced writing There is a glass of water. in the 3C quiz.",
+          "context_chi": "Rex 在小考中精準默寫出 There is a glass of water.。",
+          "compare": "注意大小寫與字母順序"
+        },
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W7 實體考券 Grammar 3 (Unit 15) — Measure Words (Containers) 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：There is a glass of water."
+        }
+      },
+      {
+        "id": "TEA_W7_P12_B_1",
+        "week": "W7",
+        "page": 12,
+        "part": "Part B",
+        "part_title": "Grammar 3 (Unit 13) : 倒裝附和句改寫 (so / too / either / neither)",
+        "part_instructions": "B. Write sentences using the given words. (Hint: Think about your verb tenses!):",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "The verb tense of your answer should match that of the question!",
+        "type": "paper_rewrite",
+        "question": "【W7 歷史真卷·Grammar 3 (Unit 13) : 倒裝附和句】1. [Roger, Sean – see new Iron Man movie tomorrow / so]",
         "answer": "Roger will see a new Iron Man movie tomorrow, and so will Sean.",
-        "hint": "看到 tomorrow 必須用未來式 will see，倒裝附和用 so will Sean",
+        "ipa": "",
+        "vocab_card": null,
+        "difficulty": "★★★☆☆",
         "explanation": {
-          "concept": "Grammar 3 Unit 13: 未來式肯定倒裝附和句",
-          "formula": "S1 + will + V ... tomorrow, and so + will + S2。",
-          "trap": "Rex 考場原答：Roger see..., so do Sean ❌！忽略 tomorrow 未來式，導致前後都漏了 will。"
+          "point": "W7 實體考券 Grammar 3 (Unit 13) — `so / too / either / neither` Sentence Writing 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：Roger will see a new Iron Man movie tomorrow, and so will Sean."
         }
       },
       {
-        "id": "TEA_RW_10",
+        "id": "TEA_W7_P12_B_2",
+        "week": "W7",
+        "page": 12,
+        "part": "Part B",
+        "part_title": "Grammar 3 (Unit 13) : 倒裝附和句改寫 (so / too / either / neither)",
+        "part_instructions": "B. Write sentences using the given words. (Hint: Think about your verb tenses!):",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "The verb tense of your answer should match that of the question!",
         "type": "paper_rewrite",
-        "category_tag": "rewrite",
-        "question": "【Week 7 真題】[Rachel, Nicole – not learn to play the piano / either]（注意單數人名的否定助動詞！）",
+        "question": "【W7 歷史真卷·Grammar 3 (Unit 13) : 倒裝附和句】2. [me, my sister – go to bed early last night / too]",
+        "answer": "I went to bed early last night, and my sister did, too.",
+        "ipa": "",
+        "vocab_card": null,
+        "difficulty": "★★★☆☆",
+        "explanation": {
+          "point": "W7 實體考券 Grammar 3 (Unit 13) — `so / too / either / neither` Sentence Writing 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：I went to bed early last night, and my sister did, too."
+        }
+      },
+      {
+        "id": "TEA_W7_P12_B_3",
+        "week": "W7",
+        "page": 12,
+        "part": "Part B",
+        "part_title": "Grammar 3 (Unit 13) : 倒裝附和句改寫 (so / too / either / neither)",
+        "part_instructions": "B. Write sentences using the given words. (Hint: Think about your verb tenses!):",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "The verb tense of your answer should match that of the question!",
+        "type": "paper_rewrite",
+        "question": "【W7 歷史真卷·Grammar 3 (Unit 13) : 倒裝附和句】3. [Rachel, Nicole – not learn to play the piano / either]",
         "answer": "Rachel doesn't learn to play the piano, and Nicole doesn't, either.",
-        "hint": "Rachel 與 Nicole 皆為第三人稱單數，現在式否定用 doesn't",
+        "ipa": "",
+        "vocab_card": null,
+        "difficulty": "★★★☆☆",
         "explanation": {
-          "concept": "Grammar 3 Unit 13: 第三人稱單數否定附和句",
-          "formula": "S1 + doesn't + V ..., and S2 + doesn't, either。",
-          "trap": "Rex 考場原答：Rachel do not..., Nicole do not... ❌！單數主詞絕對不能用 do not。"
+          "point": "W7 實體考券 Grammar 3 (Unit 13) — `so / too / either / neither` Sentence Writing 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：Rachel doesn't learn to play the piano, and Nicole doesn't, either."
         }
       },
       {
-        "id": "TEA_RW_11",
+        "id": "TEA_W7_P12_B_4",
+        "week": "W7",
+        "page": 12,
+        "part": "Part B",
+        "part_title": "Grammar 3 (Unit 13) : 倒裝附和句改寫 (so / too / either / neither)",
+        "part_instructions": "B. Write sentences using the given words. (Hint: Think about your verb tenses!):",
+        "word_bank": "",
+        "sentence_form": "",
+        "tense_hint": "The verb tense of your answer should match that of the question!",
         "type": "paper_rewrite",
-        "category_tag": "rewrite",
-        "question": "【Week 7 真題】[penguins, ostriches – can't fly / neither]（注意情態助動詞 can't 的倒裝對應！）",
+        "question": "【W7 歷史真卷·Grammar 3 (Unit 13) : 倒裝附和句】4. [penguins, ostriches – can't fly / neither]",
         "answer": "Penguins can't fly, and neither can ostriches.",
-        "hint": "前句是 can't，後面 neither 倒裝必須用 can (neither can ostriches)",
+        "ipa": "",
+        "vocab_card": null,
+        "difficulty": "★★★☆☆",
         "explanation": {
-          "concept": "Grammar 3 Unit 13: 情態助動詞 can 否定倒裝附和",
-          "formula": "S1 + can't + V, and neither + can + S2。",
-          "trap": "Rex 考場原答：neither do ostriches ❌！前句是 can't，附和必須用 can 而非 do。"
+          "point": "W7 實體考券 Grammar 3 (Unit 13) — `so / too / either / neither` Sentence Writing 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：Penguins can't fly, and neither can ostriches."
         }
       },
       {
-        "id": "TEA_RW_12",
+        "id": "TEA_W7_P12_C_1",
+        "week": "W7",
+        "page": 12,
+        "part": "Part C",
+        "part_title": "Grammar 3 (Unit 14) : 副詞三級比較長句合成",
+        "part_instructions": "C. Answer the question to compare the three given items by writing a sentence with an adverb clause, a comparative adverb clause, and a superlative adverb clause. (The verb tense of your answer should match that of the question):",
+        "word_bank": "[beautifully, well, easily, badly, early]",
+        "sentence_form": "<adverb clause> , + <comparative clause> , + but + <superlative clause> .",
+        "tense_hint": "The verb tense of your answer should match that of the question!",
         "type": "paper_rewrite",
-        "category_tag": "rewrite",
-        "question": "【Week 7 真題】How beautifully do they sing? Singing Scores: Anne: 10/10, Penny: 9/10 & Eric: 8/10",
-        "answer": "Eric sings beautifully, Penny sings more beautifully than Eric, but Anne sings the most beautifully.",
-        "hint": "最高級子句主詞 Anne 後面必須保留一般動詞 sings，不可寫 Anne is！",
+        "question": "【W7 歷史真卷·Grammar 3 (Unit 14) : 副詞三級比較長句合成】1. How beautifully do they sing? Singing Scores: Anne: 10/10, Penny: 9/10 & Eric: 8/10",
+        "answer": "(Eric sings beautifully,) Penny sings more beautifully than Eric, but Anne sings the most beautifully.",
+        "ipa": "",
+        "vocab_card": null,
+        "difficulty": "★★★☆☆",
         "explanation": {
-          "concept": "Grammar 3 Unit 14: 多音節副詞三級比較問答",
-          "formula": "Penny sings more beautifully than Eric, but Anne sings the most beautifully.",
-          "trap": "Rex 考場原答寫成 but Anne is the most beautifully ❌！副詞修飾唱歌動作，動詞必須是 sings 而非 is。"
+          "point": "W7 實體考券 Grammar 3 (Unit 14) — Comparative & Superlative Adverbs 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：(Eric sings beautifully,) Penny sings more beautifully than Eric, but Anne sings the most beautifully."
         }
       },
       {
-        "id": "TEA_RW_13",
+        "id": "TEA_W7_P12_C_2",
+        "week": "W7",
+        "page": 12,
+        "part": "Part C",
+        "part_title": "Grammar 3 (Unit 14) : 副詞三級比較長句合成",
+        "part_instructions": "C. Answer the question to compare the three given items by writing a sentence with an adverb clause, a comparative adverb clause, and a superlative adverb clause. (The verb tense of your answer should match that of the question):",
+        "word_bank": "[beautifully, well, easily, badly, early]",
+        "sentence_form": "<adverb clause> , + <comparative clause> , + but + <superlative clause> .",
+        "tense_hint": "The verb tense of your answer should match that of the question!",
         "type": "paper_rewrite",
-        "category_tag": "rewrite",
-        "question": "【Week 7 真題】How well did they do their homework? Jeremy: 100%, Ingrid: 95% & Hank: 90%",
-        "answer": "Hank did his homework well, Ingrid did better than Hank, but Jeremy did the best.",
-        "hint": "題幹 did 為過去式，且 well 的比較級與最高級為 better / the best",
+        "question": "【W7 歷史真卷·Grammar 3 (Unit 14) : 副詞三級比較長句合成】2. How well did they do their homework? Jeremy (boy): 100%, Ingrid (girl): 95% & Hank (boy): 90%",
+        "answer": "(Hank did his homework well,) Ingrid did better than Hank, but Jeremy did the best.",
+        "ipa": "",
+        "vocab_card": null,
+        "difficulty": "★★★☆☆",
         "explanation": {
-          "concept": "Grammar 3 Unit 14: 不規則副詞 well 過去式三級比較",
-          "formula": "過去式 did + well ➔ did better than ➔ but Jeremy did the best。",
-          "trap": "Rex 考場原答：Ingrid did will than Hana, but Jeremy do the best ❌（better 寫成 will、過去式 did 寫成現在式 do）！"
+          "point": "W7 實體考券 Grammar 3 (Unit 14) — Comparative & Superlative Adverbs 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：(Hank did his homework well,) Ingrid did better than Hank, but Jeremy did the best."
         }
       },
       {
-        "id": "TEA_RW_14",
+        "id": "TEA_W7_P12_C_3",
+        "week": "W7",
+        "page": 12,
+        "part": "Part C",
+        "part_title": "Grammar 3 (Unit 14) : 副詞三級比較長句合成",
+        "part_instructions": "C. Answer the question to compare the three given items by writing a sentence with an adverb clause, a comparative adverb clause, and a superlative adverb clause. (The verb tense of your answer should match that of the question):",
+        "word_bank": "[beautifully, well, easily, badly, early]",
+        "sentence_form": "<adverb clause> , + <comparative clause> , + but + <superlative clause> .",
+        "tense_hint": "The verb tense of your answer should match that of the question!",
         "type": "paper_rewrite",
-        "category_tag": "rewrite",
-        "question": "【Week 7 真題】How easily do you learn: Chinese, science & maths?",
+        "question": "【W7 歷史真卷·Grammar 3 (Unit 14) : 副詞三級比較長句合成】3. How easily do you learn: Chinese, science & maths?",
         "answer": "I learn maths easily, I learn science more easily than maths, but I learn Chinese the most easily.",
-        "hint": "主詞動詞為 I learn，且副詞 easily 比較級為 more easily、最高級為 the most easily",
+        "ipa": "",
+        "vocab_card": null,
+        "difficulty": "★★★☆☆",
         "explanation": {
-          "concept": "Grammar 3 Unit 14: -ly 副詞 (easily) 比較級與最高級",
-          "formula": "I learn + 科目 + more easily than ..., but I learn + 科目 + the most easily。",
-          "trap": "Rex 考場原答：Science is easilier than maths, but Chinese is the easiliest ❌！把副詞 easily 當形容詞自創字且漏了 I learn。"
+          "point": "W7 實體考券 Grammar 3 (Unit 14) — Comparative & Superlative Adverbs 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：I learn maths easily, I learn science more easily than maths, but I learn Chinese the most easily."
         }
       },
       {
-        "id": "TEA_RW_15",
+        "id": "TEA_W7_P12_C_4",
+        "week": "W7",
+        "page": 12,
+        "part": "Part C",
+        "part_title": "Grammar 3 (Unit 14) : 副詞三級比較長句合成",
+        "part_instructions": "C. Answer the question to compare the three given items by writing a sentence with an adverb clause, a comparative adverb clause, and a superlative adverb clause. (The verb tense of your answer should match that of the question):",
+        "word_bank": "[beautifully, well, easily, badly, early]",
+        "sentence_form": "<adverb clause> , + <comparative clause> , + but + <superlative clause> .",
+        "tense_hint": "The verb tense of your answer should match that of the question!",
         "type": "paper_rewrite",
-        "category_tag": "rewrite",
-        "question": "【Week 7 真題】How badly do they play the electric guitar? Guitar Scores: Bill: 1/10, Ted: 3/10 & Fred: 5/10",
-        "answer": "Fred plays the electric guitar badly, Ted plays worse than Fred, but Bill plays the worst.",
-        "hint": "badly 的比較級是 worse，最高級是 the worst；1/10 分最低代表彈得最差 (plays the worst)！",
+        "question": "【W7 歷史真卷·Grammar 3 (Unit 14) : 副詞三級比較長句合成】4. How badly do they play the electric guitar? Guitar Scores: Bill: 1/10, Ted: 3/10 & Fred: 5/10",
+        "answer": "(Fred plays the electric guitar badly,) Ted plays worse than Fred, but Bill plays the worst.",
+        "ipa": "",
+        "vocab_card": null,
+        "difficulty": "★★★☆☆",
         "explanation": {
-          "concept": "Grammar 3 Unit 14: 不規則副詞 badly 三級變化",
-          "formula": "badly (原級) ➔ worse than (比較級) ➔ the worst (最高級)。",
-          "trap": "Rex 考場原答：Ted plays badly than Fred, but Bill play the most badly ❌！badly 是不規則變化 worse / the worst。"
+          "point": "W7 實體考券 Grammar 3 (Unit 14) — Comparative & Superlative Adverbs 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：(Fred plays the electric guitar badly,) Ted plays worse than Fred, but Bill plays the worst."
         }
       },
       {
-        "id": "TEA_RW_16",
+        "id": "TEA_W7_P12_C_5",
+        "week": "W7",
+        "page": 12,
+        "part": "Part C",
+        "part_title": "Grammar 3 (Unit 14) : 副詞三級比較長句合成",
+        "part_instructions": "C. Answer the question to compare the three given items by writing a sentence with an adverb clause, a comparative adverb clause, and a superlative adverb clause. (The verb tense of your answer should match that of the question):",
+        "word_bank": "[beautifully, well, easily, badly, early]",
+        "sentence_form": "<adverb clause> , + <comparative clause> , + but + <superlative clause> .",
+        "tense_hint": "The verb tense of your answer should match that of the question!",
         "type": "paper_rewrite",
-        "category_tag": "rewrite",
-        "question": "【Week 7 真題】How early did they get up? Elizabeth: 5:30 a.m., Caroline: 6:00 a.m. & Melanie: 6:30 a.m.",
-        "answer": "Melanie got up early, Caroline got up earlier than Melanie, but Elizabeth got up the earliest.",
-        "hint": "early 比較級為 earlier、最高級為 the earliest；最高級主詞 Elizabeth 後面動詞不可寫 is！",
+        "question": "【W7 歷史真卷·Grammar 3 (Unit 14) : 副詞三級比較長句合成】5. How early did they get up? Elizabeth: 5:30 a.m., Caroline: 6:00 a.m. & Melanie: 6:30 a.m.",
+        "answer": "(Melanie got up early,) Caroline got up earlier than Melanie, but Elizabeth got up the earliest.",
+        "ipa": "",
+        "vocab_card": null,
+        "difficulty": "★★★☆☆",
         "explanation": {
-          "concept": "Grammar 3 Unit 14: -y 結尾雙音節副詞 early 三級變化",
-          "formula": "early ➔ earlier than ➔ the earliest；動詞須維持 got up / gets up。",
-          "trap": "Rex 考場原答：but Elizebeth is the earliest ❌！再次把動作動詞 get up 誤寫成 be 動詞 is。"
-        }
-      },
-      {
-        "id": "TEA_FILL_07",
-        "type": "fill",
-        "category_tag": "fill",
-        "question": "【W7 量詞真題】6. bread (7 片吐司)：There are seven ( ____________ ) of ( ____________ ).",
-        "answer": "slices of bread",
-        "hint": "切片吐司量詞用 slice 複數，不可數名詞 bread 絕不加 s（請填 slices of bread）",
-        "explanation": {
-          "concept": "Grammar 3 Unit 15: 不可數食物計量詞搭配",
-          "formula": "數字 (seven) + 複數容器量詞 (slices) + of + 不可數名詞原形 (bread)。",
-          "trap": "Rex 考場原答寫成 seven packet of breads ❌，同時錯了量詞、漏複數 s、又給不可數 bread 加上 s！"
-        }
-      },
-      {
-        "id": "TEA_FILL_08",
-        "type": "fill",
-        "category_tag": "fill",
-        "question": "【W6 改錯真題】With ( ____________ ) of the money, I would treat my friends to lunch.",
-        "answer": "the rest",
-        "hint": "用剩下的錢：With the rest of the money",
-        "explanation": {
-          "concept": "Write Right 3 Unit 5: 假設語氣金額分配固定片語",
-          "formula": "With the rest of the money（用剩下的那筆錢），兩個 the 缺一不可。",
-          "trap": "Rex 考場原答只補了後面 the money，漏了前面 the rest 的 the ❌！"
-        }
-      },
-      {
-        "id": "TEA_MC_07",
-        "type": "choice",
-        "category_tag": "choice",
-        "question": "【W7 真題盲點秒殺】Penny sings more beautifully than Eric, but Anne ( ______ ) the most beautifully.",
-        "options": [
-          "sings",
-          "is",
-          "does",
-          "sing"
-        ],
-        "answer": "sings",
-        "hint": "副詞 the most beautifully 用來修飾唱歌動作，主詞 Anne 為第三人稱單數",
-        "explanation": {
-          "concept": "Grammar 3 Unit 14: 最高級副詞子句動詞搭配",
-          "formula": "主詞 (Anne) + 一般動詞三單 (sings) + 最高級副詞 (the most beautifully)。",
-          "trap": "Rex 在 W7 考卷連錯兩題：誤把最高級子句的動作動詞換成 be 動詞 is ❌！"
-        }
-      },
-      {
-        "id": "TEA_MC_08",
-        "type": "choice",
-        "category_tag": "choice",
-        "question": "【W7 真題盲點秒殺】Ted plays the electric guitar ( ______ ) than Fred, but Bill plays ( ______ ).",
-        "options": [
-          "worse / the worst",
-          "more badly / the most badly",
-          "badlier / the badliest",
-          "badly / the worst"
-        ],
-        "answer": "worse / the worst",
-        "hint": "badly 是不規則變化副詞！",
-        "explanation": {
-          "concept": "Grammar 3 Unit 14: 不規則副詞 badly 三級變化",
-          "formula": "badly (原級) ➔ worse (比較級) ➔ the worst (最高級)。",
-          "trap": "Rex 考場原答寫成 badly than Fred 與 the most badly ❌！切記 badly 不加 more/most。"
-        }
-      },
-      {
-        "id": "TEA_MC_09",
-        "type": "choice",
-        "category_tag": "choice",
-        "question": "【W7 真題盲點秒殺】Penguins can't fly, and ( ______ ) ostriches.",
-        "options": [
-          "neither can",
-          "neither do",
-          "neither can't",
-          "either can"
-        ],
-        "answer": "neither can",
-        "hint": "前句助動詞為 can't，否定倒裝用 neither + 肯定助動詞",
-        "explanation": {
-          "concept": "Grammar 3 Unit 13: 情態助動詞 can 否定倒裝附和",
-          "formula": "前句 can't ➔ 後句 neither + can + 主詞。",
-          "trap": "Rex 考場原答誤選 neither do ❌！必須看前句是哪個助動詞就用哪個助動詞。"
-        }
-      },
-      {
-        "id": "TEA_MC_10",
-        "type": "choice",
-        "category_tag": "choice",
-        "question": "【W7 真題盲點秒殺】There are seven ( ______ ) on the kitchen table.",
-        "options": [
-          "slices of bread",
-          "packet of breads",
-          "slices of breads",
-          "slice of bread"
-        ],
-        "answer": "slices of bread",
-        "hint": "seven 後接複數量詞 slices，bread 不可數永遠不加 s",
-        "explanation": {
-          "concept": "Grammar 3 Unit 15: 容器量詞與不可數名詞",
-          "formula": "seven + slices (複數) + of + bread (不可數原形)。",
-          "trap": "Rex 考場原答寫成 seven packet of breads ❌！"
+          "point": "W7 實體考券 Grammar 3 (Unit 14) — Comparative & Superlative Adverbs 核心考點",
+          "trap": "本題當年作答正確無失分！",
+          "note": "標準官方批改：(Melanie got up early,) Caroline got up earlier than Melanie, but Elizabeth got up the earliest."
         }
       }
     ]
