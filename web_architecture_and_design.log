@@ -1,63 +1,28 @@
 # 六年級英語特訓網頁 — 詳細設計架構、目標與設計原因 (web_architecture_and_design.log)
-建立日期：2026-10-18
-文件性質：系統架構規格書、設計決策白皮書、教研哲學與維護指引
-適用對象：使用者、後續維護之 AI Agent、英語教研專家
 
-================================================================================
-目錄導覽
-================================================================================
-一、產品核心定位與教育目標 (Product Vision & Core Goals)
-  1.1 研發背景與目標對象 (Target Audience)
-  1.2 傳統小學生英語學習四大痛點 (Core Pain Points Solved)
-  1.3 三大訓練矩陣 (Three-Tier Training Matrix)
+⚡ 0. 當下狀態快照 (TL;DR Current Snapshot)
+- **最後更新**：2026-11-14
+- **架構版本**：Zero-Build Vanilla SPA (`v2.3.0-week12-stem-ux` — **Phase 9~10 題庫零洩漏富化、三層題幹視覺卡片與課本全名統一已完成並通過驗收**)
+- **前端核心檔案**：`index.html`, `style.css`, `app.js`, `english_data.js`, `midterm_data.js`, `build_exam_bank.js`, `data/units/*.js`
+- **設計鐵律提醒**：保留雙速 TTS 防抖 cancel、顯式三態自評計分（翻牌與選選項皆不自動計分，僅點擊 `[data-rate]` 寫入）、零鍵盤打字 Mistake Buster、純淨英文例句 TTS 清洗 (`extractCleanEnglishForSpeech`)、聽寫雙層零洩漏防護、Firebase + LocalStorage 雙向同步。
 
-二、詳細系統設計架構 (Detailed System Architecture)
-  2.1 零建構純靜態 SPA 架構 (Zero-Build Vanilla SPA)
-  2.2 目錄結構與模組職責 (File Structure & Module Responsibilities)
-  2.3 全域狀態管理與生命週期 (State Management & Data Flow)
-  2.4 原生 Web Speech API 雙速語音引擎 (Web Speech Dual-Speed TTS)
-  2.5 A4 實體考卷排版與 QR Code 深度連結系統 (Print Engine & Deep Linking)
-  2.6 AI 教研閉環匯出器架構 (AI Prompt Exporter Architecture)
+---
 
-三、關鍵設計決策與設計原因 (Design Decisions & Rationales - "Why")
-  3.1 為什麼堅持捨棄 Vite/React 改用純原生 Vanilla SPA？
-  3.2 為什麼堅持「先在實體紙筆作答，再上網即時對答案」？
-  3.3 為什麼需要設計「晨間純腦力體操」（免動筆 1★~10★ 語感天梯）？
-  3.4 為什麼需要「雙速 TTS（1.0x 常速 / 0.8x 慢速）」？
-  3.5 為什麼單字卡需要「7 大記憶錨點（字根/諧音/情境/搭配/口訣/易混淆）」？
-  3.6 為什麼 A4 考卷需要專屬「單字聽寫格」與「作答 QR Code」？
+🧭 一、錨點索引大綱 (Indexed Outline — 標題 + 一句話結論)
+- [#ARCH-1] 產品核心定位與三大訓練矩陣：結合 100% 課本高保真閱聽、晨間純腦力體操與 A4 紙筆核對閉環，對標校內 100 分與 GEPT/KET。
+- [#ARCH-2] Zero-Build Vanilla SPA 與資料流規格：零建構靜態單頁架構，統一以 `data/units/*.js` 經 `build_exam_bank.js` 彙編寫入 `midterm_data.js` 與 `english_data.js`。
+- [#WHY-1] 關鍵設計決策與保留原因（Why Behind Design Decisions）：重構嚴禁破壞「保護視力紙筆先寫、零鍵盤改錯、雙速 TTS 防抖、7 錨點記憶卡、分句跟讀高亮」。
+- [#SPEC-1] 六大核心模組與統一資料映射規格：Topbar 雙向同步 `ENGLISH_DATA` 與 `MIDTERM_DATABASE`，打通學習專區點字彈卡、晨間體操、錯題本與 A4 列印。
+- [#ARCH-3] Midterm Sprint 與歷史考券四層分離架構：將紅黑批改與學生誤答抽離為可重測的點詞抓錯、1:1 原卷重測與 AI 變式模擬卷。
+- [#SPEC-2] KET 4D 四維詳解系統、Week 12 衝刺專區與顯式自評閉環：每題強制具備目的/正解邏輯/逐選項誘答或雙陷阱 + 可折疊延伸學習，且翻牌不自動計分。
+- [#SPEC-3] Phase 5~8 視覺化文法積木、課文逐句點讀與 3C 手寫實戰四膠囊架構：寬卡公式/膠囊/正反對比 + 純淨例句 TTS、課文句子 `.speaking-active` 點讀、`paper_rewrite` 紙筆引導與 `unit_custom` 動態 A4 列印。
+- [#SPEC-4] Phase 9~10 題庫零洩漏富化、三層呼吸感題幹卡片與課本全名統一架構：資料層與 UI 層雙重遮罩聽寫答案（含 `target_pos`/`masked_example_chi`）、Strip 內部 `[Tiger 3C ...]` 標籤、三層積木卡排版與五書全名零縮寫。
 
-四、六大核心模組功能與互動邏輯細節 (Module & Interaction Details)
-  4.1 頂部導覽列 (Topbar)
-  4.2 首頁進度儀表板 (Dashboard View)
-  4.3 單字與閱聽專區 (Vocabulary & Reading Study Room)
-  4.4 雙軌測驗作答頁 (Quiz View: 紙筆對答軌 vs iPad 晨間體操軌)
-  4.5 終身錯題本與弱點消滅戰 (Error Book View)
-  4.6 A4 考卷即時排版與出卷中心 (Print Setup View)
+---
 
-五、資料結構規範與未來擴充指引 (Data Specification & Roadmap)
-  5.1 課本與單元物件規格 (Book & Unit Schema)
-  5.2 詞彙物件規格 (Vocabulary Schema - 7 記憶錨點)
-  5.3 文法物件規格 (Grammar Schema)
-  5.4 測驗題目物件規格 (Quiz Question Schema)
-  5.5 部署 GitHub Pages 與 iPad PWA 設定指南
+📖 二、單一真實來源細節 (Single-Source Detailed Specifications)
 
-六、六上期中考特訓專區 (Midterm Sprint) 架構設計與互動規範 (2026-10-19 新增)
-  6.1 核心理念：堅持「零鍵盤打字」、「精細分句精聽」與「直覺點詞改錯」
-  6.2 midterm_data.js 前端資料架構規格
-  6.3 語音模式 (Voice Mode) 模糊匹配引擎
-
-七、六上期中考全站五大模組打通與互動式完整課文架構 (2026-10-21 新增)
-  7.1 雙資料庫統一映射與頂部選單雙向同步架構 (Unified Data Layer v2.0.0)
-  7.2 學習專區「100% 完整課文 + 必考長句高亮 + 點字彈出 7 大錨點小卡」引擎
-  7.3 晨間體操 (Brain Gym 1★~10★) 期中考秒殺題庫與雙色直覺解析架構
-  7.4 終身錯題本防呆正規化、一鍵匯入岱崙真題與專屬 A4 錯題重測卷引擎
-
-================================================================================
-一、產品核心定位與教育目標 (Product Vision & Core Goals)
-================================================================================
-
-### 1.1 研發背景與目標對象 (Target Audience)
+### [#ARCH-1] 一、產品核心定位與教育目標 (Product Vision & Core Goals)
 本系統專為「國小六年級學生（12 歲）」量身研發，對標台灣小六英語課綱與校內段考重點，向下紮根課本基礎、向上直通全民英檢（GEPT 初級）與劍橋國際英語檢定（Cambridge KET / Flyers A2~B1 頂標）。
 
 ### 1.2 傳統小學生英語學習四大痛點 (Core Pain Points Solved)
@@ -78,7 +43,7 @@
    - 紙上作答保留拼寫肌肉記憶，網頁單題三態核對（👍 答對 / ⏳ 想很久 / ❌ 答錯），錯題自動歸檔終身錯題本。
 
 ================================================================================
-二、詳細系統設計架構 (Detailed System Architecture)
+### [#ARCH-2] 二、詳細系統設計架構 (Detailed System Architecture)
 ================================================================================
 
 ### 2.1 零建構純靜態 SPA 架構 (Zero-Build Vanilla SPA)
@@ -153,7 +118,7 @@
   組裝成一份高精準度 Prompt，學生或家長可一鍵複製貼給 AI，立即生成 3 題同觀念變式題進行精準補強。
 
 ================================================================================
-三、關鍵設計決策與設計原因 (Design Decisions & Rationales - "Why")
+### [#WHY-1] 三、關鍵設計決策與設計原因 (Design Decisions & Rationales - "Why")
 ================================================================================
 
 ### 3.1 為什麼堅持捨棄 Vite/React 改用純原生 Vanilla SPA？
@@ -178,7 +143,7 @@
 - **原因**：小學生字體大、若沒有格線或橫線容易歪斜重疊；專屬 QR Code 則讓小朋友寫完紙卷後，拿起 iPad 掃一下即可瞬間跳到該份考卷的對答案頁面，體驗一氣呵成。
 
 ================================================================================
-四、六大核心模組功能與互動邏輯細節 (Module & Interaction Details)
+### [#SPEC-1] 四、六大核心模組與資料結構規範 (Module & Data Specifications)
 ================================================================================
 
 ### 4.1 頂部導覽列 (Topbar)
@@ -267,7 +232,7 @@
 
 
 ================================================================================
-六、六上期中考特訓專區 (Midterm Sprint) 架構設計與互動規範 (2026-10-19 新增)
+### [#ARCH-3] 六、六上期中考特訓與統一資料層架構 (Midterm Sprint & Unified Data Layer)
 ================================================================================
 
 ### 6.1 核心理念：堅持「零鍵盤打字」、「精細分句精聽」與「直覺點詞改錯」
@@ -334,3 +299,71 @@
   - `app.js` 內 `renderQuizOriginalExam()` 升級為收錄 W2, W4, W5, W6, W7 全真試題的 1:1 復原重測卷與紅黑批改對照卷。
 - **Tier 3 (學習專區 / 雙軌測試 / 晨間體操 / 錯題本 `english_data.js` 連動層)**：
   - `build_midterm_study_upgrade.py` 擴充 `tea_midterm_1` 完整課文（新增 Discover 3 U15 植物生長與 W6《If I Had 3000 Dollars》14 處訂正完本）、新增 16 張 W6 失分字 7 大記憶錨點單字卡（總單字數達 664 詞）、擴充晨間體操至 56 題（總題數達 1,711 題），並將錯題本「🔥 載入岱崙 W2~W7 真實失分題」擴充至全週次真實錯題。
+
+
+================================================================================
+### [#SPEC-2] 九、KET 4D 四維詳解架構、模組化 `data/units/*.js` 編譯管線與 Week 12 衝刺規範 (2026-11-14 新增)
+================================================================================
+
+### 9.1 模組化單元檔案結構 (`data/units/*.js`) 與 `build_exam_bank.js` 編譯器
+- **[#WHY-MODULAR] 為什麼從單一巨型腳本改為 `data/units/<unit>.js`？**：
+  - 過去 `build_midterm_data.py` 將所有單元寫死於單一大型腳本，AI 擴充或修改單一單元容易誤傷既有題庫且突破輸出長度上限。
+  - 參照 `劍橋英檢_KET` 實證架構：每個單元獨立存放於 `data/units/<unit_key>.js` (如 `odg3_u16.js`, `od3_u16.js`)，透過 `build_exam_bank.js` 自動校驗並整合寫入 `midterm_data.js` (`window.MIDTERM_DATABASE`) 與 `english_data.js` (`window.ENGLISH_DATA`)，兼顧零建構直開 `index.html` 與高可靠度自動化編譯。
+
+### 9.2 題目級 KET 4D 四維詳解 Schema 規範
+每題測驗 (`quizzes[]`) 必須滿足以下結構與去頁碼自給自足鐵律（禁止出現「課本第 X 頁」「Look at Chart」等依賴紙本卻沒附上下文的題幹）：
+- `explanation`:
+  - `point`: 核心文法或字彙考點一句話總結。
+  - `examPurpose` (>= 18 字): 命題核心目標與對應 GEPT/KET/校內考點能力。
+  - `correctReason` (>= 20 字): 正確答案的文法、搭配或語意邏輯推導。
+  - `note`: 官方解題公式或記憶口訣。
+  - `trap`: 高頻失分提醒。
+  - **二擇一防呆詳解結構**：
+    - `type === 'choice'`（4 選 1 選擇題）：必須具備 `distractorAnalysis`，涵蓋 **每一個錯誤選項字串**（共 3 個鍵），精準解析為何該選項錯誤（時態/介系詞/詞性/中式英語陷阱）。
+    - 非選擇題（`cloze` / `spelling` / `rewrite`）：必須具備 `commonTraps` 陣列（>= 2 條具體學生常見錯誤寫法與避坑提示）。
+- `extensionStudy`（可折疊 `💡 延伸學習重點 ▾`）：
+  - `synonyms`: >= 2 組同義/反義字詞族對比。
+  - `grammarCompare` (>= 18 字): 易混淆文法或相似字組辨析。
+  - `examVariations` (>= 18 字): 小考/段考常見換句話說或變式出法。
+
+### 9.3 顯式三態自評閉環 (`app.js`)
+- 點擊 `👁️ 看標準正解與詳解` (`#btn-reveal-answer`) **僅展開解答抽屜 (`#quiz-answer-drawer`)**，嚴禁在翻牌瞬間自動幫學生加分或寫入錯題本；必須等學生核對紙筆後手動點擊 `👍 我算對了` / `⏳ 想很久` / `❌ 算錯了` 才觸發進度與 Firebase/LocalStorage 寫入。
+
+---
+
+================================================================================
+### [#SPEC-3] 十、Phase 5~8 視覺化文法、逐句點讀與 3C 手寫實戰架構 (2026-11-14 新增)
+================================================================================
+
+### 10.1 視覺化文法卡與純淨例句 TTS (`renderGrammarSubpanel` & `extractCleanEnglishForSpeech`)
+- **寬版雙欄響應式佈局**：將 `.grammar-cards-grid` 改為 `repeat(auto-fit, minmax(460px, 1fr))`（`max-width: 960px` 單欄）且對 `.grammar-card-head .b-badge` 套用 `white-space: nowrap; flex-shrink: 0` 與 `overflow-wrap: anywhere`，消滅窄欄直排折行與長字串溢出。
+- **積木化內容層次**：支援 `formula`（必背公式橫幅）、`categories`（編號搭配膠囊列表；無結構化資料時自動由 `parseGrammarChiExp` 解析中文條列與括號詞群）、`pitfalls`（❌ 常見錯 vs ✅ 正解與避坑口訣）及高亮例句 `.btn-ex-speak`。
+- **純淨英語例句發音過濾**：`extractCleanEnglishForSpeech` 自動剝除 `❌` 前半錯誤句、保留 `✅`/`➔`/`→` 後的正確英文，並過濾 Emoji 與括號/漢字註解，避免 TTS 朗讀誤句或中文。
+
+### 10.2 課文保留整篇/整段同時新增單句點擊朗讀 (`renderReadingSubpanel`)
+- `getPassagesForUnit` 全分支保留 `sentences[]`（若缺失則由 `splitSentencesFallback` 斷句並保護 `Mr./Mrs./Ms./Dr./Prof./St./vs.` 不誤斷，同時不鎖死 `p.m./a.m.` 句尾新句）。
+- 每個 `.reading-sentence` 皆可點擊觸發單句發音與 `.speaking-active` 琥珀底色即時高亮跟讀，`stopAllSpeech()` 同步清理所有高亮標籤；點擊句內的 `.reading-vocab-token` 維持 `stopPropagation()` 彈出 `#vocabPopoverModal` 不衝突。
+
+### 10.3 仿真 3C Quiz 手寫實戰四膠囊分流與客製 A4 考卷
+- **`matchQuizType` 四大互斥集合**：在單元中心將測驗拆為 4 個互不空窗、互斥聯集的膠囊：`vocab` (`spelling_listen`)、`handwrite` (`paper_rewrite`)、`grammar` (`choice` + `category_tag: 'grammar'`)、`reading` (`choice` + `category_tag: 'reading'`)。
+- **紙筆先寫引導與自檢清單**：無選項手寫題先顯示 `.paper-write-guide-box`（備好紙筆手寫後再翻牌），解答抽屜底部展開專屬 `self_check` 自檢清單，協助學童自我抓錯後顯式點擊 👍/⏳/❌ 計分。
+- **`unit_custom` 客製單元 A4 考卷**：`renderA4PaperContent` 自動按單字聽寫 (`Part I`)、手寫造句與改寫 (`Part II` 含 `sentence_form`) 與觀念選擇 (`Part III`) 排版輸出雙版（學生卷 / 教師解答卷）。
+
+---
+
+================================================================================
+### [#SPEC-4] 十一、Phase 9~10 題庫零洩漏富化、三層題幹視覺卡片與課本全名規範 (2026-11-14 新增)
+================================================================================
+
+### 11.1 資料層與 UI 層雙重聽寫零洩漏 (`build_exam_bank.js` & `app.js`)
+- **單元原始檔去洩漏**：於 `data/units/odg3_u16.js` 消除提示洩漏，並於 `od3_u16.js`、`rww6_u09.js`、`space_ch06.js` 將 `spelling_listen` 題幹中的 `q.answer` 與詞形變化統一遮罩為 `________`。
+- **`build_exam_bank.js` 統一富化 (`enrichQuizItem`)**：自動填入 `target_chi`、`target_pos`、`masked_example`、`masked_example_chi`，並透過 `maskAnswerInText` 強制遮罩英文題幹、中文例句翻譯（修復 `TEA_QUIZ_REVIEW` 29 題 `"Rex 在小考中精準默寫出 <word>"`）及詞性三態標籤（修復 `TEA_W6_P09_B_5` `travel, traveled, traveled` 外露），同步補齊 `RWW6_U06/U08` `"In line X..."` 題的 `passage_excerpt` / `definition_clue`。
+- **UI 防禦性渲染 (`renderStructuredStemHtml`)**：輸出 `targetChi`、`targetPos` 與 `q.masked_example_chi` 時一律經過 `maskAnswerFallback(..., q.answer)` 兜底檢查。
+
+### 11.2 三層呼吸感題幹卡片與課本全名統一
+- **題幹分流卡片 (`app.js` + `style.css`)**：
+  1. 聽寫測驗（`.stem-listen-card`）：拆為「🎯 目標字義＋詞性膠囊」「📖 語境例句綠框（挖空 `________`＋中文翻譯）」「💡 拼寫小提示」。
+  2. 手寫改寫/造句/挑錯重寫（`.stem-rewrite-card`）：自動識別 `(A / B / C)` 筆記轉 `.stem-note-chip` 積木、挑錯題顯示 `.is-proofread` 橙框、其餘原句提供 `.btn-ex-speak` (`[data-speak-stem]`) 朗讀按鈕，將 `(Use / Include / Begin with / 用...)` 獨立拆至 `.stem-cue-pill`，並徹底移除內部 `[Tiger 3C ...]` 前綴。
+  3. 選擇與填空（`.stem-choice-card`）：強化 `.stem-blank-slot` 視覺底線槽與 `.stem-word-hint` 提示詞標籤。
+- **友善中文題型徽章與大題去重 (`renderActiveQuizView`)**：`getQuizTypeBadgeLabel(q)` 取代英文列舉標籤，`partBannerText` 自動檢查重複前綴，消滅 `Part : Part II:` 疊字。
+- **五書完整名稱統一**：於 `BOOK_META`、`tea_midterm` 單元卡片、`.banner-week12`（並將 `.w12-grid` 欄寬調整至 `minmax(215px, 1fr)`）與 `WEEK12_ALL` 標題全面使用完整書名（`Oxford Discover Grammar 3`、`Write Right 3`、`Reading with Writing 6`、`Read and Discover 6: Space`、`Oxford Discover 3`）。

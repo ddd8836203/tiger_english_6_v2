@@ -936,41 +936,58 @@ h1, h2, h3, h4 { margin: 0; line-height: 1.3; }
    ========================================================= */
 .grammar-cards-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(460px, 1fr));
+  gap: 18px;
+}
+@media (max-width: 960px) {
+  .grammar-cards-grid {
+    grid-template-columns: 1fr;
+  }
 }
 .grammar-focus-card {
-  padding: 20px 22px;
+  padding: 22px 24px;
   border-radius: var(--radius-sm);
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.96);
   border: 1.5px solid var(--line);
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 .grammar-card-head {
   display: flex;
   align-items: center;
-  gap: 8px;
-  margin-bottom: 12px;
+  gap: 10px;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+}
+.grammar-card-head .b-badge {
+  white-space: nowrap;
+  flex-shrink: 0;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-weight: 800;
 }
 .grammar-card-head h4 {
   margin: 0;
-  font-size: 16.5px;
+  font-size: 17px;
   font-weight: 800;
   color: #0f172a;
+  line-height: 1.4;
 }
 .grammar-exp-box {
   background: #f8fafc;
-  border-radius: 10px;
-  padding: 12px 14px;
+  border-radius: 12px;
+  padding: 14px 16px;
   margin: 10px 0;
 }
 .grammar-ex-item {
   display: flex;
   align-items: flex-start;
-  gap: 8px;
-  font-size: 14px;
-  line-height: 1.6;
-  padding: 8px 12px;
-  border-radius: 8px;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 14.5px;
+  line-height: 1.65;
+  padding: 10px 12px;
+  border-radius: 10px;
 }
 .grammar-ex-item.ok {
   background: #ecfdf5;
@@ -1469,4 +1486,646 @@ h1, h2, h3, h4 { margin: 0; line-height: 1.3; }
   font-size: 13px;
   font-weight: 600;
   opacity: 0.85;
+}
+
+/* =========================================================
+   Week 12 考前衝刺專區 & KET-4D 四維詳解面板
+   ========================================================= */
+.banner-week12 {
+  background: linear-gradient(135deg, #fff1f2 0%, #fff7ed 55%, #fefce8 100%);
+  border: 2px solid #fda4af;
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  margin-bottom: 18px;
+  box-shadow: 0 10px 28px rgba(225, 29, 72, 0.10);
+}
+.w12-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+.w12-badge-pill {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: #e11d48;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.4px;
+  margin-bottom: 6px;
+}
+.w12-header h3 {
+  margin: 0 0 4px 0;
+  font-size: 19px;
+  color: #881337;
+}
+.w12-header p {
+  margin: 0;
+  font-size: 13.5px;
+  color: #9f1239;
+}
+.w12-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(215px, 1fr));
+  gap: 10px;
+}
+.w12-chip {
+  text-align: left;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1.5px solid #fecdd3;
+  cursor: pointer;
+  transition: transform 0.14s ease, border-color 0.14s ease, box-shadow 0.14s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.w12-chip:hover {
+  transform: translateY(-2px);
+  border-color: #e11d48;
+  box-shadow: 0 6px 16px rgba(225, 29, 72, 0.14);
+}
+.w12-chip-top {
+  font-size: 13px;
+  line-height: 1.35;
+  font-weight: 800;
+  color: #be123c;
+}
+.w12-chip strong {
+  font-size: 14.5px;
+  color: var(--ink-1);
+}
+.w12-chip small {
+  font-size: 12px;
+  color: var(--ink-3);
+}
+.u-no.week12-badge {
+  background: linear-gradient(135deg, #e11d48, #f97316);
+  color: #fff;
+}
+
+/* 4D 四維詳解面板 */
+.exp-4d-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 14px 0;
+}
+.exp-row.exp-purpose {
+  background: #eff6ff;
+  border-left: 4px solid #2563eb;
+  color: #1e3a8a;
+}
+.exp-row.exp-correct {
+  background: #ecfdf5;
+  border-left: 4px solid #10b981;
+  color: #065f46;
+}
+.exp-row.exp-distractors {
+  background: #fff1f2;
+  border-left: 4px solid #f43f5e;
+  color: #9f1239;
+}
+.exp-pill-sub {
+  margin-top: 6px;
+  font-size: 13px;
+  padding: 5px 10px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.7);
+  display: inline-block;
+}
+.distractor-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 8px;
+}
+.distractor-item {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid #fecdd3;
+  border-radius: 10px;
+  padding: 8px 12px;
+  font-size: 13.5px;
+  line-height: 1.5;
+}
+.distractor-key {
+  display: inline-block;
+  font-weight: 800;
+  color: #be123c;
+  background: #ffe4e6;
+  padding: 1px 8px;
+  border-radius: 6px;
+  margin-right: 6px;
+}
+
+/* 可折疊延伸學習重點 */
+.ext-study-details {
+  margin-top: 12px;
+  border-radius: 14px;
+  background: #f5f3ff;
+  border: 1.5px solid #ddd6fe;
+  overflow: hidden;
+}
+.ext-study-details summary {
+  padding: 12px 16px;
+  font-weight: 800;
+  font-size: 14.5px;
+  color: #5b21b6;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+}
+.ext-study-details summary::-webkit-details-marker {
+  display: none;
+}
+.ext-study-body {
+  padding: 0 16px 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 13.5px;
+  color: #3b0764;
+  border-top: 1px dashed #ddd6fe;
+  padding-top: 10px;
+}
+.ext-syn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+.ext-syn-chip {
+  background: #fff;
+  border: 1px solid #c4b5fd;
+  color: #5b21b6;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 12.5px;
+  font-weight: 700;
+}
+
+/* =========================================================
+   Phase 5: 視覺化文法積木、例句朗讀、課文單句點讀、手寫指引
+   ========================================================= */
+.grammar-formula-banner {
+  background: linear-gradient(135deg, #eef2ff 0%, #f5f3ff 100%);
+  border: 1.5px solid #c7d2fe;
+  border-left: 5px solid #4f46e5;
+  border-radius: 12px;
+  padding: 12px 16px;
+  margin-bottom: 12px;
+}
+.grammar-formula-title {
+  font-size: 12.5px;
+  font-weight: 800;
+  color: #4338ca;
+  margin-bottom: 6px;
+}
+.grammar-formula-code {
+  font-family: 'Outfit', 'Noto Sans TC', monospace;
+  font-size: 15px;
+  font-weight: 800;
+  color: #1e1b4b;
+  word-break: break-word;
+  line-height: 1.6;
+}
+.grammar-cat-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 8px;
+}
+.grammar-cat-row {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+.grammar-cat-label {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1e293b;
+  line-height: 1.55;
+}
+.grammar-chips-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 6px;
+}
+.grammar-chip {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 12.5px;
+  font-weight: 700;
+  background: #e0f2fe;
+  color: #0369a1;
+  border: 1px solid #bae6fd;
+}
+.grammar-eng-rule {
+  font-size: 13px;
+  color: #64748b;
+  background: #f8fafc;
+  border: 1px dashed #cbd5e1;
+  border-radius: 10px;
+  padding: 8px 12px;
+  margin-top: 10px;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+}
+.grammar-pitfalls-box {
+  background: #fffbeb;
+  border: 1.5px solid #fde68a;
+  border-radius: 12px;
+  padding: 12px 14px;
+  margin-top: 12px;
+}
+.grammar-pitfalls-box h5 {
+  margin: 0 0 8px 0;
+  font-size: 13.5px;
+  color: #92400e;
+}
+.grammar-pitfall-row {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 6px 0;
+  border-top: 1px dashed #fcd34d;
+  font-size: 13.5px;
+}
+.grammar-pitfall-row:first-of-type {
+  border-top: none;
+  padding-top: 0;
+}
+.gp-wrong {
+  color: #be123c;
+  font-weight: 700;
+}
+.gp-right {
+  color: #047857;
+  font-weight: 800;
+}
+.gp-tip {
+  color: #78350f;
+  font-size: 12.5px;
+}
+.grammar-ex-main {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  flex: 1;
+  min-width: 0;
+}
+.grammar-ex-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+.grammar-ex-hl {
+  background: #fef08a;
+  color: #854d0e;
+  font-weight: 800;
+  padding: 0 4px;
+  border-radius: 4px;
+}
+.grammar-ex-zh {
+  font-size: 12.5px;
+  color: #475569;
+}
+.btn-ex-speak {
+  flex-shrink: 0;
+  background: #ffffff;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #334155;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.14s ease;
+}
+.btn-ex-speak:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  background: #eef2ff;
+}
+
+/* 課文單句點讀 + 跟讀高亮 */
+.reading-sentence {
+  display: inline;
+  cursor: pointer;
+  border-radius: 6px;
+  padding: 2px 4px;
+  margin-right: 4px;
+  transition: background-color 0.15s ease, box-shadow 0.15s ease;
+}
+.reading-sentence:hover {
+  background: #e0f2fe;
+}
+.reading-sentence.speaking-active {
+  background: #fef3c7;
+  box-shadow: inset 0 -2px 0 #f59e0b;
+  color: #78350f;
+}
+.sent-speaker-ico {
+  font-style: normal;
+  font-size: 13px;
+  opacity: 0.65;
+  margin-right: 3px;
+  user-select: none;
+}
+.reading-sentence:hover .sent-speaker-ico,
+.reading-sentence.speaking-active .sent-speaker-ico {
+  opacity: 1;
+}
+
+/* 紙筆手寫考卷模式指引與自檢清單 */
+.tab-pill-btn.handwrite-action-pill {
+  border-style: solid;
+  border-color: #f59e0b;
+  background: #fffbeb;
+  color: #92400e;
+}
+.paper-write-guide-box {
+  background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+  border: 1.5px dashed #f59e0b;
+  border-radius: 12px;
+  padding: 12px 16px;
+  margin: 14px 0 8px 0;
+  font-size: 14px;
+  font-weight: 700;
+  color: #92400e;
+  line-height: 1.55;
+}
+.self-check-rubric-box {
+  background: #f0fdf4;
+  border: 1.5px solid #86efac;
+  border-radius: 12px;
+  padding: 12px 16px;
+  margin: 12px 0;
+}
+.self-check-rubric-box strong {
+  color: #166534;
+  font-size: 13.5px;
+}
+.self-check-list {
+  margin: 6px 0 0 0;
+  padding-left: 18px;
+  font-size: 13px;
+  color: #15803d;
+  line-height: 1.6;
+}
+
+/* ====== Phase 10: 題幹三層呼吸感結構視覺化排版 ====== */
+.stem-task-header {
+  font-size: 15px;
+  font-weight: 800;
+  color: #312e81;
+  margin: 4px 0 12px 0;
+  line-height: 1.5;
+}
+
+/* 1) 聽寫卡片 (.stem-listen-card) */
+.stem-listen-card {
+  background: linear-gradient(180deg, #f8faff 0%, #ffffff 100%);
+  border-color: #c7d2fe;
+}
+.stem-listen-meaning-box {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  background: #ffffff;
+  border: 2px solid #e0e7ff;
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin-bottom: 12px;
+}
+.stem-listen-label {
+  font-size: 12px;
+  font-weight: 800;
+  color: #4f46e5;
+  background: #eef2ff;
+  padding: 3px 9px;
+  border-radius: 999px;
+  flex-shrink: 0;
+}
+.stem-listen-chi {
+  font-size: 20px;
+  font-weight: 800;
+  color: #1e1b4b;
+  letter-spacing: 0.01em;
+}
+.stem-listen-pos {
+  font-size: 13px;
+  font-weight: 700;
+  color: #6366f1;
+  background: #f5f3ff;
+  border: 1px solid #ddd6fe;
+  padding: 2px 8px;
+  border-radius: 6px;
+}
+.stem-listen-example-box {
+  background: #f0fdf4;
+  border: 1.5px solid #bbf7d0;
+  border-left: 4px solid #16a34a;
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin-bottom: 10px;
+}
+.stem-ex-label {
+  font-size: 12px;
+  font-weight: 800;
+  color: #15803d;
+  margin-bottom: 6px;
+}
+.stem-ex-sent {
+  font-size: 17px;
+  font-weight: 600;
+  color: #14532d;
+  line-height: 1.75;
+}
+.stem-ex-zh {
+  font-size: 13.5px;
+  color: #166534;
+  margin-top: 5px;
+  line-height: 1.5;
+}
+
+/* 2) 手寫改寫 / 筆記造句 / 挑錯重寫 (.stem-rewrite-card) */
+.stem-rewrite-card {
+  background: #ffffff;
+  border-color: #cbd5e1;
+}
+.stem-notes-box {
+  background: #faf5ff;
+  border: 1.5px solid #e9d5ff;
+  border-radius: 12px;
+  padding: 12px 14px;
+  margin-bottom: 12px;
+}
+.stem-box-label {
+  font-size: 12px;
+  font-weight: 800;
+  color: #475569;
+  letter-spacing: 0.02em;
+}
+.stem-notes-box .stem-box-label {
+  color: #6b21a8;
+  margin-bottom: 8px;
+  display: block;
+}
+.stem-notes-chips-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.stem-note-chip {
+  display: inline-block;
+  background: #ffffff;
+  color: #4c1d95;
+  border: 1.5px solid #c4b5fd;
+  border-radius: 8px;
+  padding: 6px 11px;
+  font-size: 15px;
+  font-weight: 700;
+  box-shadow: 0 1px 2px rgba(76, 29, 149, 0.06);
+}
+.stem-quote-box {
+  background: #f8fafc;
+  border: 1.5px solid #cbd5e1;
+  border-left: 4px solid #6366f1;
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin-bottom: 12px;
+}
+.stem-quote-box.is-proofread {
+  background: #fff7ed;
+  border-color: #fed7aa;
+  border-left-color: #ea580c;
+}
+.stem-quote-box.is-proofread .stem-box-label {
+  color: #c2410c;
+}
+.stem-quote-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.stem-quote-text {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1.75;
+}
+
+/* 共用提示膠囊 (.stem-cue-pill) */
+.stem-cue-pill {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 10px;
+  padding: 9px 12px;
+  margin-top: 8px;
+  font-size: 13.5px;
+  line-height: 1.55;
+}
+.stem-cue-pill.subtle-note {
+  background: #f8fafc;
+  border-color: #e2e8f0;
+}
+.cue-tag {
+  font-size: 12px;
+  font-weight: 800;
+  color: #1d4ed8;
+  background: #dbeafe;
+  padding: 2px 8px;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+.stem-cue-pill.subtle-note .cue-tag {
+  color: #475569;
+  background: #e2e8f0;
+}
+.cue-code {
+  font-family: var(--font-num), monospace;
+  font-size: 14px;
+  font-weight: 700;
+  color: #1e3a8a;
+  background: #ffffff;
+  border: 1px solid #bfdbfe;
+  padding: 2px 8px;
+  border-radius: 6px;
+}
+.cue-text {
+  color: #1e293b;
+  font-weight: 600;
+}
+
+/* 3) 選擇題與挖空填空卡 (.stem-choice-card) */
+.stem-choice-card {
+  background: #ffffff;
+  border-color: #cbd5e1;
+}
+.stem-choice-lead {
+  font-size: 14.5px;
+  font-weight: 800;
+  color: #4338ca;
+  margin: 4px 0 8px 0;
+  line-height: 1.5;
+}
+.stem-choice-sentence {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1.85;
+  margin-top: 4px;
+}
+.stem-blank-slot {
+  display: inline-block;
+  min-width: 72px;
+  text-align: center;
+  color: #4f46e5;
+  font-weight: 800;
+  background: #eef2ff;
+  border-bottom: 2.5px solid #4f46e5;
+  border-radius: 6px 6px 0 0;
+  padding: 0 8px;
+  margin: 0 3px;
+  line-height: 1.5;
+}
+.stem-word-hint {
+  display: inline-block;
+  font-size: 0.9em;
+  font-weight: 800;
+  color: #0369a1;
+  background: #e0f2fe;
+  border: 1px solid #bae6fd;
+  padding: 0 6px;
+  border-radius: 6px;
+  margin-left: 3px;
+}
+
+@media (max-width: 640px) {
+  .stem-listen-chi {
+    font-size: 18px;
+  }
+  .stem-quote-text,
+  .stem-choice-sentence {
+    font-size: 16.5px;
+    line-height: 1.7;
+  }
 }

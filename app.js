@@ -103,6 +103,117 @@
       .replace(/'/g, '&#039;');
   }
 
+  function escapeRegex(s) {
+    return String(s || '').replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  }
+
+  // Extract pure correct English text from bilingual or error-vs-correct examples
+  function extractCleanEnglishForSpeech(rawEx) {
+    if (!rawEx) return '';
+    let s = (typeof rawEx === 'object') ? (rawEx.en || rawEx.sentence || '') : String(rawEx);
+    const arrowMatch = s.match(/(?:✅|➔|→)\s*([^\n]+)/);
+    if (arrowMatch) {
+      s = arrowMatch[1];
+    } else if (s.includes('❌')) {
+      s = s.split('❌')[0];
+    }
+    s = s
+      .replace(/[🔴🟢✅❌⭐💡📐✍️🔊]/g, ' ')
+      .replace(/（[^）]*）/g, ' ')
+      .replace(/\([^)]*[\u4e00-\u9fff][^)]*\)/g, ' ')
+      .replace(/[\u4e00-\u9fff、，。！？：「」『』]+/g, ' ')
+      .replace(/\s+/g, ' ')
+      .trim();
+    return s;
+  }
+
+  function splitSentencesFallback(engText) {
+    if (!engText) return [];
+    const text = String(engText).replace(/\n+/g, ' ').trim();
+    if (!text) return [];
+    const safeAbbr = text
+      .replace(/\b(Mr|Mrs|Ms|Dr|Prof|St|vs)\./g, '$1__DOT__');
+    const parts = safeAbbr.split(/(?<=[.!?])\s+(?=[A-Z"'“‘])/);
+    return parts
+      .map(p => ({ en: p.replace(/__DOT__/g, '.').trim(), zh: '' }))
+      .filter(item => item.en.length > 0);
+  }
+
+  function splitChipList(rawListText) {
+    return String(rawListText || '')
+      .split(/[\/,，、]+/)
+      .map(t => t.trim())
+      .filter(Boolean);
+  }
+
+  function parseGrammarChiExp(chiExp) {
+    const raw = String(chiExp || '').trim();
+    if (!raw) return { intro: '', categories: [] };
+    const numberedRe = /\((\d+)\)\s*([\s\S]*?)(?=\(\d+\)|$)/g;
+    const matches = [...raw.matchAll(numberedRe)];
+    if (matches.length === 0) {
+      const parenChips = [];
+      const cleaned = raw.replace(/\(([^()]{4,})\)/g, (full, inner) => {
+        if (/[A-Za-z]/.test(inner) && (inner.includes('/') || inner.includes(','))) {
+          parenChips.push(...splitChipList(inner));
+          return '';
+        }
+        return full;
+      }).replace(/\s{2,}/g, ' ').trim();
+      return {
+        intro: cleaned,
+        categories: parenChips.length > 0 ? [{ label: '常見搭配詞清單', items: parenChips }] : []
+      };
+    }
+
+    const firstIdx = raw.search(/\(\d+\)/);
+    const intro = firstIdx > 0 ? raw.slice(0, firstIdx).replace(/[：:]\s*$/, '').trim() : '';
+    const categories = matches.map(m => {
+      const idxLabel = m[1];
+      let body = (m[2] || '').replace(/[;；。]+\s*$/, '').trim();
+      const chips = [];
+      body = body.replace(/\(([^()]+)\)/g, (full, inner) => {
+        if (/[A-Za-z]/.test(inner) && (inner.includes('/') || inner.includes(','))) {
+          chips.push(...splitChipList(inner));
+          return '';
+        }
+        return full;
+      }).replace(/\s{2,}/g, ' ').trim();
+      return {
+        label: `${idxLabel}. ${body}`,
+        items: chips
+      };
+    });
+    return { intro, categories };
+  }
+
+  function formatGrammarExampleHtml(rawEx) {
+    if (rawEx && typeof rawEx === 'object') {
+      let enHtml = escapeHtml(rawEx.en || '');
+      if (rawEx.highlight) {
+        const hlRe = new RegExp('(' + escapeRegex(rawEx.highlight) + ')', 'gi');
+        enHtml = enHtml.replace(hlRe, '<span class="grammar-ex-hl">$1</span>');
+      }
+      const zhHtml = rawEx.zh ? `<span class="grammar-ex-zh">${escapeHtml(rawEx.zh)}</span>` : '';
+      return `<div class="grammar-ex-content"><span>${enHtml}</span>${zhHtml}</div>`;
+    }
+    const rawStr = String(rawEx || '');
+    let enPart = rawStr;
+    let zhPart = '';
+    const zhTail = rawStr.match(/^(.*?)[（(]([\s\S]*[\u4e00-\u9fff][\s\S]*)[）)]\s*$/);
+    if (zhTail) {
+      enPart = zhTail[1].trim();
+      zhPart = zhTail[2].trim();
+    }
+    let enHtml = escapeHtml(enPart);
+    // Highlight common target patterns like preposition collocations or It is/was ... of
+    enHtml = enHtml.replace(
+      /\b(worried about|excited about|happy about|curious about|happy with|bored with|disappointed with|surprised by|amazed by|confused by|good at|bad at|excellent at|interested in|famous for|world-famous for|full of|allergic to|afraid of|thanks to|prefer\s+[a-z]+(?:ing)?\s+to)\b/gi,
+      '<span class="grammar-ex-hl">$1</span>'
+    );
+    return `<div class="grammar-ex-content"><span>${enHtml}</span>${zhPart ? `<span class="grammar-ex-zh">${escapeHtml(zhPart)}</span>` : ''}</div>`;
+  }
+
   function formatFormulaBlocks(formStr) {
     if (!formStr) return '';
     let s = escapeHtml(formStr);
@@ -125,6 +236,79 @@
     return '<div class="formula-blocks-container">' + s + '</div>';
   }
 
+  function getQuizTypeBadgeLabel(q) {
+    if (!q) return '🎯 綜合實戰';
+    const t = String(q.type || '').toLowerCase();
+    const cat = String(q.category_tag || '').toLowerCase();
+    if (t === 'paper_rewrite' || t === 'rewrite') return '✍️ 考卷手寫實戰';
+    if (t === 'spelling_listen' || t === 'spelling') return '🎧 考卷單字聽寫';
+    if (t === 'fill' || t === 'cloze') return '✏️ 克漏字填空';
+    if (q.is_count_noncount) return '🍎 可數與不可數判斷';
+    if (t === 'reading' || cat === 'reading') return '📖 閱讀理解四選一';
+    if (t === 'grammar' || cat === 'grammar') return '📐 文法觀念四選一';
+    if (t === 'vocab') return '🔤 核心單字測驗';
+    return '🎯 觀念四選一';
+  }
+
+  function highlightBlanksAndWordHints(rawText) {
+    let html = escapeHtml(String(rawText || ''));
+    // 將括號內底線 ( ______ ) 與獨立底線 ______ 轉為視覺化藍色填空槽
+    html = html.replace(/\(\s*_{2,}\s*\)/g, '<span class="stem-blank-slot">_______</span>');
+    html = html.replace(/_{2,}/g, '<span class="stem-blank-slot">_______</span>');
+    // 將題幹中的提示原形動詞如 (nervous), (slow), (Read), (help), (burn) 轉為綠色膠囊提示
+    html = html.replace(/\(([a-zA-Z]{2,20})\)/g, '<span class="stem-word-hint">($1)</span>');
+    return html;
+  }
+
+  function maskAnswerFallback(text, answer) {
+    const t = String(text || '');
+    const ans = String(answer || '').trim();
+    if (!t || !ans) return t;
+    const esc = escapeRegex(ans);
+    return t.replace(new RegExp(`\\b${esc}(?:es|s|ed|d|ing)?\\b`, 'gi'), '________');
+  }
+
+  function mapRewriteTaskTitle(prefixText, rawRest) {
+    const combined = `${prefixText || ''} ${rawRest || ''}`.toLowerCase();
+    if (/proofread|grammatical error|find the .*error/.test(combined)) {
+      return '⚠️ 挑錯改寫：請找出下方句子中的 1 處文法錯誤，並在紙上寫出正確的完整句子';
+    }
+    if (/biography sentence|factual notes|biographical facts|prompt cues|age and year|biography impact|honoring/.test(combined)) {
+      return '🧩 傳記造句：請將下方的語塊積木連成文法正確的完整英文句子';
+    }
+    if (/answer the question|short answer|reading comprehension|character analysis/.test(combined)) {
+      return '❓ 考卷簡答：請根據課文內容，用完整英文句子回答下方問題';
+    }
+    if (/fill in the missing word|story cloze/.test(combined)) {
+      return '✏️ 考卷填空：請依句子語境，在紙上寫出空格處應填入的單字';
+    }
+    if (/gerund|parentheses/.test(combined)) {
+      return '🔧 動名詞造句：請將括號內的提示動詞轉為正確的動名詞或單數動詞形式';
+    }
+    if (/preposition(?:s)? from the box/.test(combined)) {
+      return '📌 介系詞填空：請參考提示單字庫，在紙上寫出正確的介系詞';
+    }
+    if (/combine|rewrite|transform|guided writing|pattern/.test(combined)) {
+      return '✍️ 句型改寫：請依下方的必用句型提示改寫原句';
+    }
+    const cleanChi = String(prefixText || '').replace(/[：:]\s*$/, '').trim();
+    if (/[\u4e00-\u9fff]/.test(cleanChi)) {
+      return `✍️ ${cleanChi}：`;
+    }
+    return '✍️ 紙筆手寫任務：請先在紙上完成完整作答，再點下方對答案';
+  }
+
+  function mapChoiceLeadTitle(prefixText) {
+    const low = String(prefixText || '').toLowerCase();
+    if (low.includes('preposition')) return '📌 請選出正確的「介系詞」完成下方句子：';
+    if (low.includes('verb')) return '📌 請選出正確的「動詞型態」完成下方句子：';
+    if (low.includes('noun')) return '📌 請選出正確的「名詞型態」完成下方句子：';
+    if (low.includes('transition') || low.includes('consequence')) return '📌 請選出最適合的「轉折連接詞」完成下方句子：';
+    if (low.includes('pair')) return '📌 請選出同時符合平行對等結構的一組動詞：';
+    if (low.includes('apology')) return '📌 請選出最符合禮貌道歉語境的單字：';
+    return '📌 請閱讀句子並選出最恰當的答案：';
+  }
+
   function renderStructuredStemHtml(q) {
     const rawQ = (q && q.question) ? q.question.trim() : '';
     if (!rawQ) return '';
@@ -145,7 +329,7 @@
       </div>
     ` : '';
 
-    // 短文克漏字情境參照框
+    // 短文克漏字情境參照框 或 單句課文參照框
     let passageHtml = '';
     if (q.passage_context) {
       let pc = escapeHtml(q.passage_context);
@@ -161,6 +345,16 @@
             <span class="cpc-title">篇章情境閱讀參照（請對照當前空格序號）：</span>
           </div>
           <div class="cpc-body">${pc}</div>
+        </div>
+      `;
+    } else if (q.passage_excerpt) {
+      passageHtml = `
+        <div class="cloze-passage-card">
+          <div class="cpc-header">
+            <span class="cpc-icon">📖</span>
+            <span class="cpc-title">課文原句情境參照：</span>
+          </div>
+          <div class="cpc-body">${highlightBlanksAndWordHints(q.passage_excerpt)}</div>
         </div>
       `;
     }
@@ -280,30 +474,191 @@
       `;
     }
 
-    // 5. 聽音拼寫題 (Spelling Listen)
+    // 5. 聽音拼寫題 (Spelling Listen — 防洩題結構化聽寫卡)
     if (q.type === 'spelling_listen') {
+      const vc = q.vocab_card || null;
+      let targetChi = q.target_chi || (vc && (vc.chi || vc.meaning)) || '';
+      if (!targetChi) {
+        const mFor = rest.match(/Spell the target [^"]*?"([^"]+)"/);
+        const mBr = rest.match(/表示「([^」]+)」/);
+        targetChi = (mFor && mFor[1]) || (mBr && mBr[1]) || '';
+      }
+      const targetPos = q.target_pos || (vc && vc.pos) || '';
+      let maskedEx = q.masked_example || '';
+      if (!maskedEx) {
+        const qM = rest.match(/sentence:\s*"([^"]+)"/i);
+        const rawEx = (qM && qM[1]) || (vc && (vc.context_eng || vc.example)) || '';
+        maskedEx = maskAnswerFallback(rawEx, q.answer);
+      } else {
+        maskedEx = maskAnswerFallback(maskedEx, q.answer);
+      }
+      const hintMatch = rest.match(/（\s*提示[：:]\s*([^）]+)\s*）/) || rest.match(/\(\s*Hint[：:]\s*([^)]+)\s*\)/i);
+      const hintText = hintMatch ? maskAnswerFallback(hintMatch[1].trim(), q.answer) : '';
+
       return `
         ${passageHtml}
-        <div class="q-stem-card stem-listen">
+        <div class="q-stem-card stem-listen-card">
           ${badgeHtml}
-          <div class="q-stem-title-row">
-            <span class="q-stem-title-text">${escapeHtml(rest)}</span>
+          <div class="stem-task-header">🎧 請仔細聆聽上方發音，在紙上拼寫出對應的英文單字：</div>
+          <div class="stem-listen-meaning-box">
+            <span class="stem-listen-label">🎯 目標字義</span>
+            <span class="stem-listen-chi">${escapeHtml(maskAnswerFallback(targetChi || rest, q.answer))}</span>
+            ${targetPos ? `<span class="stem-listen-pos">${escapeHtml(maskAnswerFallback(targetPos, q.answer))}</span>` : ''}
           </div>
-          <div class="listen-tip-hint">
-            🎧 點擊上方發音按鈕播放，在紙上或心裡拼寫，完成後翻牌核對！
-          </div>
+          ${maskedEx ? `
+            <div class="stem-listen-example-box">
+              <div class="stem-ex-label">📖 語境例句（空格處即為本題單字）</div>
+              <div class="stem-ex-sent">${highlightBlanksAndWordHints(maskedEx)}</div>
+              ${q.masked_example_chi ? `<div class="stem-ex-zh">${escapeHtml(maskAnswerFallback(q.masked_example_chi, q.answer))}</div>` : ''}
+            </div>
+          ` : ''}
+          ${hintText ? `
+            <div class="stem-cue-pill">
+              <span class="cue-tag">💡 拼寫小提示</span>
+              <span class="cue-text">${escapeHtml(hintText)}</span>
+            </div>
+          ` : ''}
         </div>
       `;
     }
 
-    // 6. 一般通用題目
+    // 6. 考卷手寫實戰 / 改寫 / 造句 / 簡答 (三層視覺積木卡)
+    if (q.type === 'paper_rewrite' || q.type === 'rewrite') {
+      let work = rest.replace(/^\[(?:Tiger\s+3C|3C)[^\]]*\]\s*/i, '').trim();
+      let cueLabel = '';
+      let cueContent = '';
+      const cueM = work.match(/\(\s*(Use|Include|Begin with|Hint|提示)\s*[：:]\s*([^)]+)\)\s*\.?\s*$/i);
+      if (cueM) {
+        cueLabel = cueM[1].trim();
+        cueContent = cueM[2].trim();
+        work = work.slice(0, cueM.index).trim();
+      }
+
+      let leadRaw = '';
+      let coreRaw = work;
+      let tailRaw = '';
+      const quotedM = work.match(/^([^:]+?):\s*"([^"]+)"(.*)$/);
+      if (quotedM) {
+        leadRaw = quotedM[1].trim();
+        coreRaw = quotedM[2].trim();
+        tailRaw = quotedM[3].replace(/^\.\s*/, '').trim();
+      } else {
+        const colonM = work.match(/^([^:：]+)[：:]\s*([\s\S]+)$/);
+        if (colonM) {
+          leadRaw = colonM[1].trim();
+          coreRaw = colonM[2].trim();
+        }
+      }
+
+      // 去除外層反引號，並抽取中文化括號作答提示
+      coreRaw = coreRaw.replace(/^`([\s\S]+)`$/, '$1').trim();
+      if (!cueContent) {
+        const zhCueM = coreRaw.match(/^(.*?)\s*\((用[^)]+)\)\s*$/);
+        if (zhCueM) {
+          coreRaw = zhCueM[1].trim();
+          cueLabel = '作答提示';
+          cueContent = zhCueM[2].trim();
+        }
+      }
+
+      const taskHeader = mapRewriteTaskTitle(leadRaw, rest);
+      const isProofreadTask = /⚠️\s*挑錯改寫|改錯重寫/.test(taskHeader) || /改錯/.test(leadRaw);
+
+      // 判斷核心內容是否為「斜線分隔的關鍵字筆記積木」(例如 "(Thomas Edison / born on ... / in Ohio)")
+      const innerNotes = coreRaw.replace(/^\(([\s\S]+)\)$/, '$1').trim();
+      const isSlashNotes = innerNotes.includes(' / ') && !/[?!]/.test(innerNotes);
+
+      let coreHtml = '';
+      if (isSlashNotes) {
+        const chips = innerNotes.split(/\s*\/\s*/).map(s => s.trim()).filter(Boolean);
+        coreHtml = `
+          <div class="stem-notes-box">
+            <div class="stem-box-label">🧩 造句關鍵字積木</div>
+            <div class="stem-notes-chips-row">
+              ${chips.map(ch => `<span class="stem-note-chip">${escapeHtml(ch)}</span>`).join('')}
+            </div>
+          </div>
+        `;
+      } else {
+        const hasBlanks = /_{2,}/.test(coreRaw);
+        const canSpeakCore = !hasBlanks && !isProofreadTask && /[a-zA-Z]{3,}/.test(coreRaw) && !/^[\u4e00-\u9fff]/.test(coreRaw);
+        const boxLabel = isProofreadTask ? '⚠️ 待改錯原句（找出 1 處錯誤並重寫整句）' : (hasBlanks ? '✏️ 待完成句子' : '📄 題目原句 / 問題');
+        coreHtml = `
+          <div class="stem-quote-box ${isProofreadTask ? 'is-proofread' : ''}">
+            <div class="stem-quote-top">
+              <span class="stem-box-label">${boxLabel}</span>
+              ${canSpeakCore ? `<button type="button" class="btn-ex-speak" data-speak-stem="${escapeHtml(coreRaw)}">🔊 朗讀題目</button>` : ''}
+            </div>
+            <div class="stem-quote-text">${highlightBlanksAndWordHints(coreRaw)}</div>
+          </div>
+        `;
+      }
+
+      return `
+        ${passageHtml}
+        <div class="q-stem-card stem-rewrite-card">
+          ${badgeHtml}
+          <div class="stem-task-header">${escapeHtml(taskHeader)}</div>
+          ${coreHtml}
+          ${cueContent ? `
+            <div class="stem-cue-pill">
+              <span class="cue-tag">💡 必用句型 / 提示${cueLabel ? ` (${escapeHtml(cueLabel)})` : ''}</span>
+              <code class="cue-code">${escapeHtml(cueContent)}</code>
+            </div>
+          ` : ''}
+          ${tailRaw ? `
+            <div class="stem-cue-pill subtle-note">
+              <span class="cue-tag">📝 寫作檢核</span>
+              <span class="cue-text">${escapeHtml(tailRaw)}</span>
+            </div>
+          ` : ''}
+        </div>
+      `;
+    }
+
+    // 7. 觀念選擇與克漏字填空題 (Choice / Fill — 視覺挖空槽與簡潔前導)
+    let choiceLead = '';
+    let choiceCore = rest.replace(/^\[(?:Tiger\s+3C|3C)[^\]]*\]\s*/i, '').trim();
+    let choiceSubCue = '';
+
+    const chQuoteM = choiceCore.match(/^((?:Choose|Read|Complete)\s+[^:]+):\s*"([^"]+)"\s*$/i);
+    if (chQuoteM) {
+      choiceLead = mapChoiceLeadTitle(chQuoteM[1]);
+      choiceCore = chQuoteM[2].trim();
+    } else if (/^判斷名詞類別：\s*【\s*(.*?)\s*】\s*$/.test(choiceCore)) {
+      const ncM = choiceCore.match(/^判斷名詞類別：\s*【\s*(.*?)\s*】\s*$/);
+      choiceLead = '🍎 請判斷下方名詞為「可數 (Count)」或「不可數 (Noncount)」：';
+      choiceCore = ncM[1].trim();
+    } else if (choiceCore.includes('➔')) {
+      const arrowParts = choiceCore.split('➔');
+      choiceCore = arrowParts[0].trim();
+      choiceSubCue = arrowParts.slice(1).join(' ➔ ').trim();
+    } else if (choiceCore.startsWith('判斷下列特徵屬於哪一場歷史隕石事件：')) {
+      choiceLead = '☄️ 判斷下列特徵屬於哪一場歷史隕石事件：';
+      choiceCore = choiceCore.replace('判斷下列特徵屬於哪一場歷史隕石事件：', '').trim();
+    } else if (choiceCore.startsWith('根據英文定義拼寫出核心字彙：')) {
+      choiceLead = '📘 請根據以下英文定義，寫出對應的核心字彙：';
+      choiceCore = choiceCore.replace('根據英文定義拼寫出核心字彙：', '').trim();
+    }
+
     return `
       ${passageHtml}
-        <div class="q-stem-card stem-general">
-          ${badgeHtml}
-        <div class="q-stem-title-row">
-          <span class="q-stem-title-text">${escapeHtml(rest)}</span>
-        </div>
+      <div class="q-stem-card stem-choice-card">
+        ${badgeHtml}
+        ${choiceLead ? `<div class="stem-choice-lead">${escapeHtml(choiceLead)}</div>` : ''}
+        <div class="stem-choice-sentence">${highlightBlanksAndWordHints(choiceCore)}</div>
+        ${choiceSubCue ? `
+          <div class="stem-cue-pill">
+            <span class="cue-tag">🎯 作答要求</span>
+            <span class="cue-text">${escapeHtml(choiceSubCue)}</span>
+          </div>
+        ` : ''}
+        ${q.definition_clue ? `
+          <div class="stem-cue-pill">
+            <span class="cue-tag">💡 課文字義線索</span>
+            <span class="cue-text">${escapeHtml(q.definition_clue)}</span>
+          </div>
+        ` : ''}
       </div>
     `;
   }
@@ -576,9 +931,14 @@
 
       utt.onend = () => {
         activeSpeech = null;
+        document.querySelectorAll('.reading-sentence.speaking-active').forEach(el => el.classList.remove('speaking-active'));
         if (typeof onEndCallback === 'function') onEndCallback();
       };
-      utt.onerror = () => { activeSpeech = null; };
+      utt.onerror = () => {
+        activeSpeech = null;
+        document.querySelectorAll('.reading-sentence.speaking-active').forEach(el => el.classList.remove('speaking-active'));
+        if (typeof onEndCallback === 'function') onEndCallback();
+      };
 
       activeSpeech = utt;
       window.speechSynthesis.speak(utt);
@@ -592,6 +952,7 @@
       window.speechSynthesis.cancel();
       activeSpeech = null;
     }
+    document.querySelectorAll('.reading-sentence.speaking-active').forEach(el => el.classList.remove('speaking-active'));
   }
 
   // ==========================================================================
@@ -611,26 +972,26 @@
     'gra3': {
       id: 'gra3',
       name: '📘 Oxford Discover Grammar 3',
-      shortName: 'Grammar 3',
-      desc: '全冊 12 單元：時態變化、倒裝附和句、副詞三級比較、名詞計量與介系詞 (667 題)',
+      shortName: 'Oxford Discover Grammar 3',
+      desc: '全冊 12 單元：時態變化、倒裝附和句、副詞三級比較、名詞計量、動名詞與飲食事實 (635 題)',
       hue: 245,
       isMidterm: true,
       category: '文法專修'
     },
     'wr3': {
       id: 'wr3',
-      name: '📝 Write Right Level 3',
+      name: '📝 Write Right 3',
       shortName: 'Write Right 3',
-      desc: '全冊 5 單元：出國旅遊、最愛課堂、朋友爭執、社區空間與虛擬假設語氣 (311 題)',
+      desc: '全冊 6 單元：出國旅遊、最愛課堂、朋友爭執、社區空間、假設語氣與歷史偉人 (343 題)',
       hue: 285,
       isMidterm: true,
       category: '寫作專攻'
     },
     'rw6': {
       id: 'rw6',
-      name: '📖 Reading with Writing Level 6',
-      shortName: 'RWW 6',
-      desc: '全冊 8 單元：水中世界、鯊魚攝影師、時空背景分析、定向越野圖表與多國語言 (272 題)',
+      name: '📖 Reading with Writing 6',
+      shortName: 'Reading with Writing 6',
+      desc: '全冊 9 單元：水中世界、鯊魚攝影師、時空背景分析、定向越野、多國語言與認識地球 (304 題)',
       hue: 165,
       isMidterm: true,
       category: '讀寫進階'
@@ -638,19 +999,19 @@
     'rd6': {
       id: 'rd6',
       name: '🚀 Read and Discover 6: Space',
-      shortName: 'Space 科普',
-      desc: '全冊 4 章節：宇宙起源、地球與月球、岩石與冰 (小行星彗星) 與天文學史 (227 題)',
+      shortName: 'Read and Discover 6: Space',
+      desc: '全冊 5 章節：宇宙起源、地球與月球、岩石與冰、外星生命探索與天文學史 (259 題)',
       hue: 345,
       isMidterm: true,
       category: '太空科普'
     },
     'od3': {
       id: 'od3',
-      name: '📚 Oxford Discover 3 課本',
-      shortName: 'OD3 課本',
-      desc: '延伸閱讀：時間與地球 (Unit 7)、茉莉醫生 (Unit 8) 深度閱讀理解 (120 題)',
+      name: '📚 Oxford Discover 3',
+      shortName: 'Oxford Discover 3',
+      desc: '核心課本：時間與地球 (Unit 7)、茉莉醫生 (Unit 8)、快樂花園 (Unit 16) 深度閱讀與字彙 (152 題)',
       hue: 200,
-      isMidterm: false,
+      isMidterm: true,
       category: '課本閱讀'
     },
     'tiger_5b': {
@@ -674,6 +1035,16 @@
     if (bookId === 'tea_midterm') {
       return [
         {
+          id: 'week12_all',
+          bookId: 'tea_midterm',
+          title: '🚨 Week 12 (11/18 三) 小考五合一總複習模擬考',
+          desc: 'Oxford Discover Grammar 3 (U16) + Oxford Discover 3 (U16) + Reading with Writing 6 (U9) + Read and Discover 6: Space (Ch6) + Write Right 3 (U6)（共 156 題 KET-4D 新題）',
+          week: 'W12',
+          badge: '🚨 Week 12 必考',
+          is_midterm: true,
+          is_week12: true
+        },
+        {
           id: 'tea_all',
           bookId: 'tea_midterm',
           title: '🎲 Week 2~7 全週次綜合全真大模考',
@@ -686,7 +1057,7 @@
           id: 'tea_w2',
           bookId: 'tea_midterm',
           title: '📄 Week 2 真卷：簡單機械單字 + 倒裝附和 + 社區作文',
-          desc: 'OD3 U13 單字 (20) + Grammar 13 倒裝 (4) + Michelle\'s Neighborhood 作文 (9)（共 33 題真題）',
+          desc: 'Oxford Discover 3 (U13) 單字 (20) + Oxford Discover Grammar 3 (U13) 倒裝 (4) + Michelle\'s Neighborhood 作文 (9)（共 33 題真題）',
           week: 'W2',
           badge: 'Week 2',
           is_midterm: true
@@ -695,7 +1066,7 @@
           id: 'tea_w4',
           bookId: 'tea_midterm',
           title: '📄 Week 4 真卷：吹玻璃單字 + 方位介系詞 + 三級副詞長句',
-          desc: 'OD3 U14 單字 (20) + RWW6 方位 (16) + Grammar 14 副詞三合一長句 (5)（共 41 題真題）',
+          desc: 'Oxford Discover 3 (U14) 單字 (20) + Reading with Writing 6 方位 (16) + Oxford Discover Grammar 3 (U14) 副詞三合一長句 (5)（共 41 題真題）',
           week: 'W4',
           badge: 'Week 4',
           is_midterm: true
@@ -704,7 +1075,7 @@
           id: 'tea_w5',
           bookId: 'tea_midterm',
           title: '📄 Week 5 真卷：定向越野長篇聽寫 + 三級副詞 + 6000美元作文',
-          desc: 'RWW6 U6 課文長篇聽寫 (9) + Grammar 14 副詞比較 (3) + 6000美元作文 (7)（共 19 題真題）',
+          desc: 'Reading with Writing 6 (U6) 課文長篇聽寫 (9) + Oxford Discover Grammar 3 (U14) 副詞比較 (3) + 6000美元作文 (7)（共 19 題真題）',
           week: 'W5',
           badge: 'Week 5',
           is_midterm: true
@@ -713,7 +1084,7 @@
           id: 'tea_w6',
           bookId: 'tea_midterm',
           title: '📄 Week 6 真卷：植物與語言單字 + 14處抓錯題 + 數量詞',
-          desc: 'OD3 U15 植物 (20) + RWW6 語言 (15) + 3000美元 14 處抓錯 (14) + 數量詞 (3)（共 52 題真題）',
+          desc: 'Oxford Discover 3 (U15) 植物 (20) + Reading with Writing 6 語言 (15) + 3000美元 14 處抓錯 (14) + 數量詞 (3)（共 52 題真題）',
           week: 'W6',
           badge: 'Week 6',
           is_midterm: true
@@ -722,7 +1093,7 @@
           id: 'tea_w7',
           bookId: 'tea_midterm',
           title: '📄 Week 7 真卷：容器量詞造句 + 倒裝時態 + 三級副詞長句',
-          desc: 'Grammar 15 容器量詞看圖造句 (10) + Grammar 13 倒裝 (4) + Grammar 14 副詞問答 (5)（共 19 題真題）',
+          desc: 'Oxford Discover Grammar 3 (U15) 容器量詞看圖造句 (10) + Oxford Discover Grammar 3 (U13) 倒裝 (4) + Oxford Discover Grammar 3 (U14) 副詞問答 (5)（共 19 題真題）',
           week: 'W7',
           badge: 'Week 7',
           is_midterm: true
@@ -735,10 +1106,14 @@
     // 取得該課本底下的全部單元 (不限定期中考，全面開放)
     const list = window.ENGLISH_DATA.units.filter(u => u.book_id === bookId);
     
+    const WEEK12_UNIT_IDS = ['gra3_16', 'od3_16', 'rw6_9', 'rd6_6', 'wr3_6'];
     return list.map(u => {
-      let badge = u.is_midterm ? '🔥 期中核心' : '📚 實力精熟';
+      const isWeek12 = !!(u.is_week12 || WEEK12_UNIT_IDS.includes(u.unit_id));
+      let badge = isWeek12 ? '🚨 Week 12 必考' : (u.is_midterm ? '🔥 期中核心' : '📚 實力精熟');
       const uNumMatch = u.unit_id.match(/_(\d+)$/);
-      if (uNumMatch) {
+      if (isWeek12) {
+        badge = '🚨 Week 12 必考';
+      } else if (uNumMatch) {
         badge = (u.is_midterm ? '🔥 ' : '') + `Unit ${uNumMatch[1]}`;
       } else if (u.unit_id.includes('tiger_5b')) {
         badge = '複習 ' + u.unit_id.replace('tiger_5b_', '').toUpperCase();
@@ -750,7 +1125,8 @@
         desc: u.big_question || `${u.unit_title} 核心文法與實戰題庫`,
         midtermId: u.midterm_unit_id,
         badge: badge,
-        is_midterm: !!u.is_midterm
+        is_midterm: !!u.is_midterm,
+        is_week12: isWeek12
       };
     });
   }
@@ -768,34 +1144,35 @@
     return target;
   }
 
-  // 題目類型相容比對器 (跨 MIDTERM_DATABASE 與 ENGLISH_DATA)
+  // 題目類型相容比對器 (跨 MIDTERM_DATABASE 與 ENGLISH_DATA，區分手寫實戰 vs 觀念選擇)
   function matchQuizType(q, filterType) {
     if (!q || filterType === 'all') return true;
     const t = (q.type || '').toLowerCase();
     const cat = (q.category_tag || '').toLowerCase();
     const isErr = (qid) => state.errorBook.some(e => (typeof e === 'string' ? e : e.id) === qid);
 
-    if (filterType === 'vocab') {
-      return t === 'vocab' || t === 'spelling_listen' || cat === 'listening' || t === 'spelling';
-    }
-    if (filterType === 'grammar') {
-      return t === 'grammar' || t === 'fill' || t === 'rewrite' || t === 'paper_rewrite' || cat === 'fill' || cat === 'rewrite';
-    }
-    if (filterType === 'reading') {
-      return t === 'reading' || (t === 'choice' && cat !== 'grammar');
-    }
-    if (filterType === 'braingym') {
-      return t === 'brain_gym';
-    }
-    if (filterType === 'error') {
-      return isErr(q.id);
-    }
+    const isVocab = t === 'vocab' || t === 'spelling_listen' || t === 'spelling' || cat === 'listening';
+    const isHandwrite = !isVocab && (
+      t === 'paper_rewrite' || t === 'rewrite' || t === 'cloze' || t === 'fill' ||
+      cat === 'rewrite' || cat === 'fill' ||
+      ((t === 'grammar' || t === 'reading') && (!Array.isArray(q.options) || q.options.length === 0))
+    );
+
+    if (filterType === 'vocab') return isVocab;
+    if (filterType === 'handwrite') return isHandwrite;
+    if (filterType === 'grammar') return !isVocab && !isHandwrite && (t === 'grammar' || cat === 'grammar');
+    if (filterType === 'reading') return !isVocab && !isHandwrite && (t === 'reading' || (t === 'choice' && cat !== 'grammar'));
+    if (filterType === 'braingym') return t === 'brain_gym';
+    if (filterType === 'error') return isErr(q.id);
     return true;
   }
 
   // 取得某單元之單字庫清單 (7 大錨點單字卡)
   function getVocabsForUnit(bookId, unitId) {
     if (!window.ENGLISH_DATA || !window.ENGLISH_DATA.vocabulary) return [];
+    if (unitId === 'week12_all') {
+      return window.ENGLISH_DATA.vocabulary.filter(v => v.is_week12);
+    }
     if (bookId === 'tea_midterm' || unitId.startsWith('tea_')) {
       if (unitId === 'tea_w2') return window.ENGLISH_DATA.vocabulary.filter(v => v.unit_id === 'tea_midterm_1' || v.unit_id === 'gra3_13');
       if (unitId === 'tea_w4') return window.ENGLISH_DATA.vocabulary.filter(v => v.unit_id === 'rw6_5' || v.unit_id === 'gra3_14');
@@ -810,6 +1187,9 @@
   // 取得某單元之文法焦點清單
   function getGrammarForUnit(bookId, unitId) {
     if (!window.ENGLISH_DATA || !window.ENGLISH_DATA.grammar) return [];
+    if (unitId === 'week12_all') {
+      return window.ENGLISH_DATA.grammar.filter(g => g.is_week12);
+    }
     if (bookId === 'tea_midterm' || unitId.startsWith('tea_')) {
       if (unitId === 'tea_w2') return window.ENGLISH_DATA.grammar.filter(g => g.unit_id === 'gra3_13');
       if (unitId === 'tea_w4') return window.ENGLISH_DATA.grammar.filter(g => g.unit_id === 'gra3_14');
@@ -823,6 +1203,18 @@
 
   // 取得某單元之課文清單 (優先取完整課文，若來自 MIDTERM_DATABASE 則自動組合句子)
   function getPassagesForUnit(bookId, unitId) {
+    if (unitId === 'week12_all') {
+      const w12 = getMidtermDataUnit('WEEK12_ALL');
+      if (!w12 || !w12.passages) return [];
+      return w12.passages.map((p, idx) => ({
+        sequence: p.sequence || (idx + 1),
+        section_title: p.section_title || p.title || `Week 12 課文精讀 #${idx + 1}`,
+        eng: p.eng || (Array.isArray(p.sentences) ? p.sentences.map(s => s.en).join(' ') : (Array.isArray(p.paragraphs) ? p.paragraphs.join('\n\n') : (p.text || ''))),
+        chi: p.chi || (Array.isArray(p.sentences) ? p.sentences.map(s => s.zh).join(' ') : (p.chinese || p.translation || '')),
+        sentences: Array.isArray(p.sentences) ? p.sentences : [],
+        key_sentences: p.key_sentences || []
+      }));
+    }
     if (bookId === 'tea_midterm' || unitId.startsWith('tea_')) {
       const tea = getMidtermDataUnit('TEA_QUIZ_REVIEW');
       if (!tea || !tea.passages) return [];
@@ -839,6 +1231,7 @@
         section_title: p.section_title || p.title || `範文精讀 #${idx + 1}`,
         eng: p.eng || (Array.isArray(p.sentences) ? p.sentences.map(s => s.en).join(' ') : (Array.isArray(p.paragraphs) ? p.paragraphs.join('\n\n') : (p.text || ''))),
         chi: p.chi || (Array.isArray(p.sentences) ? p.sentences.map(s => s.zh).join(' ') : (p.chinese || p.translation || '')),
+        sentences: Array.isArray(p.sentences) ? p.sentences : [],
         key_sentences: p.key_sentences || []
       }));
     }
@@ -852,6 +1245,7 @@
           section_title: r.section_title || r.title || `課文段落 #${idx + 1}`,
           eng: r.eng || (Array.isArray(r.sentences) ? r.sentences.map(s => s.en).join(' ') : (r.text || '')),
           chi: r.chi || (Array.isArray(r.sentences) ? r.sentences.map(s => s.zh).join(' ') : (r.chinese || '')),
+          sentences: Array.isArray(r.sentences) ? r.sentences : [],
           key_sentences: r.key_sentences || []
         }));
       }
@@ -865,6 +1259,7 @@
         section_title: p.section_title || p.title || `課文段落 #${idx + 1}`,
         eng: p.eng || (Array.isArray(p.sentences) ? p.sentences.map(s => s.en).join(' ') : (Array.isArray(p.paragraphs) ? p.paragraphs.join('\n\n') : (p.text || ''))),
         chi: p.chi || (Array.isArray(p.sentences) ? p.sentences.map(s => s.zh).join(' ') : (p.chinese || p.translation || '')),
+        sentences: Array.isArray(p.sentences) ? p.sentences : [],
         key_sentences: p.key_sentences || []
       }));
     }
@@ -873,6 +1268,10 @@
   }
 
   function getMistakesForUnit(bookId, unitId) {
+    if (unitId === 'week12_all') {
+      const w12 = getMidtermDataUnit('WEEK12_ALL');
+      return (w12 && w12.mistake_buster) ? w12.mistake_buster : [];
+    }
     if (bookId === 'tea_midterm' || unitId.startsWith('tea_')) {
       const tea = getMidtermDataUnit('TEA_QUIZ_REVIEW');
       if (!tea || !tea.mistake_buster) return [];
@@ -898,6 +1297,14 @@
 
   // 取得某單元之測驗題庫清單 (支援 1,711 道全題庫 + 考券真題)
   function getQuizzesForUnit(bookId, unitId) {
+    if (unitId === 'week12_all') {
+      const w12 = getMidtermDataUnit('WEEK12_ALL');
+      if (w12 && w12.quizzes && w12.quizzes.length > 0) return w12.quizzes;
+      if (window.ENGLISH_DATA && window.ENGLISH_DATA.quizzes) {
+        return window.ENGLISH_DATA.quizzes.filter(q => q.is_week12);
+      }
+      return [];
+    }
     if (bookId === 'tea_midterm' || unitId.startsWith('tea_')) {
       const tea = getMidtermDataUnit('TEA_QUIZ_REVIEW');
       if (!tea || !tea.quizzes) return [];
@@ -1131,6 +1538,45 @@
           </div>
         </section>
 
+        <!-- 🚨 Week 12 (11/18 三) 小考五合一衝刺專區 -->
+        <aside class="banner-week12">
+          <div class="w12-header">
+            <div>
+              <span class="w12-badge-pill">🚨 下週三 11/18 (W12) *EL-3C 小考總衝刺</span>
+              <h3>Week 12 必考五大範圍 &times; 156 道 KET-4D 全真複習題庫（65 聽寫 + 41 手寫實戰 + 50 選擇）</h3>
+              <p>含四書範圍 + Oxford Discover 3 (Unit 16) 主課本單字，逐題附命題核心目標、正解推導與錯選項排除分析。</p>
+            </div>
+            <button class="btn btn-primary" id="btn-launch-w12-mock">🚀 五合一 156 題大模考</button>
+          </div>
+          <div class="w12-grid">
+            <button type="button" class="w12-chip" data-open-w12-book="rw6" data-open-w12-unit="rw6_9">
+              <span class="w12-chip-top">📖 Reading with Writing 6</span>
+              <strong>Unit 9：認識地球與人際</strong>
+              <small>14 聽寫 + 8 手寫 + 10 選擇 (32 題)</small>
+            </button>
+            <button type="button" class="w12-chip" data-open-w12-book="rd6" data-open-w12-unit="rd6_6">
+              <span class="w12-chip-top">🚀 Read and Discover 6: Space</span>
+              <strong>Ch 6：外星生命探索</strong>
+              <small>14 聽寫 + 8 手寫 + 10 選擇 (32 題)</small>
+            </button>
+            <button type="button" class="w12-chip" data-open-w12-book="gra3" data-open-w12-unit="gra3_16">
+              <span class="w12-chip-top">📘 Oxford Discover Grammar 3</span>
+              <strong>Unit 16：飲食事實 Facts</strong>
+              <small>6 聽寫 + 10 手寫 + 12 選擇 (28 題)</small>
+            </button>
+            <button type="button" class="w12-chip" data-open-w12-book="wr3" data-open-w12-unit="wr3_6">
+              <span class="w12-chip-top">📝 Write Right 3</span>
+              <strong>Unit 6：歷史偉人傳記</strong>
+              <small>14 聽寫 + 10 手寫 + 8 選擇 (32 題)</small>
+            </button>
+            <button type="button" class="w12-chip" data-open-w12-book="od3" data-open-w12-unit="od3_16">
+              <span class="w12-chip-top">📚 Oxford Discover 3</span>
+              <strong>Unit 16：快樂花園</strong>
+              <small>17 聽寫 + 5 手寫 + 10 選擇 (32 題)</small>
+            </button>
+          </div>
+        </aside>
+
         <!-- 早餐純腦力體操 Banner -->
         <aside class="glass banner-mental">
           <div style="display: flex; gap: 14px; align-items: center;">
@@ -1197,6 +1643,27 @@
     const modalBtn = document.getElementById('btn-open-user-modal');
     if (modalBtn) modalBtn.onclick = openUserModal;
 
+    const w12MockBtn = document.getElementById('btn-launch-w12-mock');
+    if (w12MockBtn) {
+      w12MockBtn.onclick = () => {
+        state.currentBookId = 'tea_midterm';
+        state.currentUnitId = 'week12_all';
+        startQuizSession('unit', 'tea_midterm', 'week12_all', 'all', 'all');
+      };
+    }
+
+    container.querySelectorAll('[data-open-w12-unit]').forEach(btn => {
+      btn.onclick = () => {
+        const bId = btn.getAttribute('data-open-w12-book');
+        const uId = btn.getAttribute('data-open-w12-unit');
+        state.currentBookId = bId;
+        state.currentUnitId = uId;
+        state.currentSubtab = 'reading';
+        state.view = 'unit_hub';
+        render();
+      };
+    });
+
     const bgBtn = document.getElementById('btn-launch-braingym');
     if (bgBtn) {
       bgBtn.onclick = () => {
@@ -1228,7 +1695,7 @@
       return `
         <article class="unit-card ${isExam ? 'exam-card' : ''}" style="--hue: ${book.hue}">
           <div style="display:flex; justify-content:space-between; align-items:center;">
-            <span class="u-no">${u.badge}</span>
+            <span class="u-no ${u.is_week12 ? 'week12-badge' : ''}">${u.badge}</span>
             <span class="tag ${st.pct === 100 ? 'ok' : ''}">掌握 ${st.pct}%</span>
           </div>
           <h3>${u.title}</h3>
@@ -1307,9 +1774,11 @@
     container.querySelectorAll('[data-print-unit]').forEach(btn => {
       btn.onclick = () => {
         const uId = btn.getAttribute('data-print-unit');
-        state.currentBookId = book.id || bookId;
-        state.printConfig.bookId = book.id || bookId;
+        const bId = book.id || bookId;
+        state.currentBookId = bId;
+        state.printConfig.bookId = bId;
         state.printConfig.unitId = uId;
+        state.printConfig.printType = (bId === 'tea_midterm' && uId.startsWith('tea_')) ? 'quiz_original' : 'unit_custom';
         state.view = 'print';
         render();
       };
@@ -1334,6 +1803,7 @@
     const allQuizzes = getQuizzesForUnit(bookId, unitId);
 
     const vocabQ = allQuizzes.filter(q => matchQuizType(q, 'vocab'));
+    const handwriteQ = allQuizzes.filter(q => matchQuizType(q, 'handwrite'));
     const grammarQ = allQuizzes.filter(q => matchQuizType(q, 'grammar'));
     const readingQ = allQuizzes.filter(q => matchQuizType(q, 'reading'));
     const brainGymQ = allQuizzes.filter(q => matchQuizType(q, 'braingym'));
@@ -1399,21 +1869,27 @@
             <!-- 視覺分隔線 -->
             <span class="tab-pills-divider" aria-hidden="true"></span>
 
-            <!-- 雙軌題庫分類按鈕 (點擊直接開測，不再全部雜在一起) -->
+            <!-- 雙軌題庫分類按鈕 (對齊歷史考卷手寫實戰 + 觀念選擇熱身) -->
             ${vocabQ.length > 0 ? `
-              <button class="tab-pill-btn quiz-action-pill" data-launch-quiz-type="vocab" title="專題測驗：單字辨析、英漢配對與字彙語境">
-                <span>🔤 單字核心檢測</span>
+              <button class="tab-pill-btn quiz-action-pill" data-launch-quiz-type="vocab" title="仿真考卷 Part A：聽音在紙上手寫拼出單字">
+                <span>🔊 考卷單字聽寫</span>
                 <span class="tab-pill-badge" style="background:#e0f2fe; color:#0369a1;">${vocabQ.length} 題</span>
               </button>
             ` : ''}
+            ${handwriteQ.length > 0 ? `
+              <button class="tab-pill-btn quiz-action-pill handwrite-action-pill" data-launch-quiz-type="handwrite" title="仿真考卷 Part B/C：紙筆手寫造句、合併、挑錯與課文聽寫">
+                <span>✍️ 考卷手寫實戰</span>
+                <span class="tab-pill-badge" style="background:#fde68a; color:#92400e;">${handwriteQ.length} 題</span>
+              </button>
+            ` : ''}
             ${grammarQ.length > 0 ? `
-              <button class="tab-pill-btn quiz-action-pill" data-launch-quiz-type="grammar" title="專題測驗：時態句型、倒裝附和與文法避坑">
-                <span>📐 文法實戰避坑</span>
+              <button class="tab-pill-btn quiz-action-pill" data-launch-quiz-type="grammar" title="觀念四選一熱身：文法避坑與搭配辨析">
+                <span>📐 文法觀念選擇</span>
                 <span class="tab-pill-badge" style="background:#ede9fe; color:#5b21b6;">${grammarQ.length} 題</span>
               </button>
             ` : ''}
             ${readingQ.length > 0 ? `
-              <button class="tab-pill-btn quiz-action-pill" data-launch-quiz-type="reading" title="專題測驗：篇章閱讀、圖表理解與細節推論">
+              <button class="tab-pill-btn quiz-action-pill" data-launch-quiz-type="reading" title="專題測驗：篇章閱讀、科普事實與細節推論">
                 <span>📖 閱讀理解訓練</span>
                 <span class="tab-pill-badge" style="background:#d1fae5; color:#065f46;">${readingQ.length} 題</span>
               </button>
@@ -1455,6 +1931,7 @@
     document.getElementById('btn-quick-print-launch').onclick = () => {
       state.printConfig.bookId = bookId;
       state.printConfig.unitId = unitId;
+      state.printConfig.printType = (bookId === 'tea_midterm' && unitId.startsWith('tea_')) ? 'quiz_original' : 'unit_custom';
       state.view = 'print';
       render();
     };
@@ -1502,21 +1979,40 @@
       if (v.word) vocabMap.set(v.word.toLowerCase().trim(), v);
     });
 
-    // 建立段落清單
+    const vocabHighlightEntries = [];
+    vocabMap.forEach((vObj, wordKey) => {
+      if (wordKey.length >= 3 && !['and','the','for','with','this','that','from','they','them','have','were','will'].includes(wordKey)) {
+        vocabHighlightEntries.push({
+          word: vObj.word,
+          reg: new RegExp(`\\b(${escapeRegex(wordKey)}(?:s|es|ed|d|ing|er|est|ies)?)\\b`, 'gi')
+        });
+      }
+    });
+
+    function decorateSentenceTokens(sentenceStr) {
+      let out = escapeHtml(sentenceStr);
+      vocabHighlightEntries.forEach(entry => {
+        out = out.replace(entry.reg, (match) => `<span class="reading-vocab-token" data-word="${escapeHtml(entry.word)}">${match}</span>`);
+      });
+      return out;
+    }
+
+    // 建立段落清單 (保留整段朗讀 + 新增點擊任一句子單獨朗讀與高亮跟讀)
     const passagesHtml = passages.map((p, idx) => {
       const engText = p.eng || '';
       const chiText = p.chi || '';
       const title = p.section_title || `Paragraph ${idx + 1}`;
       const keySentences = p.key_sentences || [];
+      const sentenceObjs = (Array.isArray(p.sentences) && p.sentences.length > 0)
+        ? p.sentences.filter(s => s && s.en && String(s.en).trim())
+        : splitSentencesFallback(engText);
 
-      // 高亮匹配單字
-      let renderedEng = engText;
-      vocabMap.forEach((vObj, wordKey) => {
-        if (wordKey.length >= 3 && !['and','the','for','with','this','that','from','they','them','have','were','will'].includes(wordKey)) {
-          const reg = new RegExp(`\\b(${wordKey}(?:s|es|ed|d|ing|er|est|ies)?)\\b`, 'gi');
-          renderedEng = renderedEng.replace(reg, `<span class="reading-vocab-token" data-word="${vObj.word}">$1</span>`);
-        }
-      });
+      const sentencesHtml = sentenceObjs.length > 0
+        ? sentenceObjs.map((sObj, sIdx) => {
+            const cleanSent = String(sObj.en || '').trim();
+            return `<span class="reading-sentence" data-speak-sentence="1" data-sent-en="${escapeHtml(cleanSent)}" data-p-idx="${idx}" data-s-idx="${sIdx}" title="點擊單獨朗讀此句"><i class="sent-speaker-ico" aria-hidden="true">🔊</i>${decorateSentenceTokens(cleanSent)}</span> `;
+          }).join('')
+        : decorateSentenceTokens(engText).replace(/\n\n/g, '<br><br>');
 
       return `
         <article class="reading-passage-card">
@@ -1528,7 +2024,7 @@
             <button class="btn btn-sm btn-ghost" data-speak-passage="${idx}" title="朗讀此段落">🔊 朗讀此段</button>
           </div>
           <div class="reading-passage-body">
-            ${renderedEng.replace(/\n\n/g, '<br><br>')}
+            ${sentencesHtml}
           </div>
           ${chiText ? `
             <div class="reading-translation-box">
@@ -1542,7 +2038,7 @@
                 <div class="reading-key-note-item">
                   <span class="note-tag">🎯 段考考點解析</span>
                   <strong style="color:#1e293b;">${ks.sentence || ''}</strong>
-                  ${ks.note ? `<div style="color:#78350f; font-size:13px; margin-top:2px;">💡 解析：${ks.note}</div>` : ''}
+                  ${(ks.note || ks.point) ? `<div style="color:#78350f; font-size:13px; margin-top:2px;">💡 解析：${ks.note || ks.point}</div>` : ''}
                 </div>
               `).join('')}
             </div>
@@ -1565,7 +2061,7 @@
             <span>標註段考考點解析</span>
           </label>
         </div>
-        <span class="muted" style="font-size:13px;">💡 提示：點擊課文內<strong>藍色高亮生字</strong>即可發音並彈出「Tiger 7 大錨點單字卡」！</span>
+        <span class="muted" style="font-size:13px;">💡 提示：點擊<strong>任一句子 (🔊)</strong> 可單句朗讀跟讀；點擊<strong>藍色高亮生字</strong>可發音並彈出「7 大錨點單字卡」！</span>
       </div>
       <div class="reading-passages-list">
         ${passagesHtml}
@@ -1588,6 +2084,18 @@
         noteBoxes.forEach(box => { box.style.display = chkNotes.checked ? 'block' : 'none'; });
       };
     }
+
+    container.querySelectorAll('.reading-sentence').forEach(sentEl => {
+      sentEl.onclick = () => {
+        const sentEn = sentEl.getAttribute('data-sent-en');
+        if (!sentEn) return;
+        document.querySelectorAll('.reading-sentence.speaking-active').forEach(el => el.classList.remove('speaking-active'));
+        sentEl.classList.add('speaking-active');
+        speakText(sentEn, state.ttsSpeed, () => {
+          sentEl.classList.remove('speaking-active');
+        });
+      };
+    });
 
     container.querySelectorAll('[data-speak-passage]').forEach(btn => {
       btn.onclick = () => {
@@ -1710,34 +2218,86 @@
       const engExp = g.eng_exp || '';
       const chiExp = g.chi_exp || '';
       const examples = g.examples || [];
+      const formulaStr = g.formula || '';
+      const parsed = (Array.isArray(g.categories) && g.categories.length > 0)
+        ? { intro: g.intro || '', categories: g.categories }
+        : parseGrammarChiExp(chiExp);
+      const pitfalls = Array.isArray(g.pitfalls) ? g.pitfalls : [];
 
       return `
         <article class="grammar-focus-card glass">
           <div class="grammar-card-head">
             <span class="b-badge" style="background:#ede9fe; color:#5b21b6; font-size:12px;">文法專修</span>
-            <h4>${title}</h4>
+            <h4>${escapeHtml(title)}</h4>
           </div>
-          ${chiExp ? `
+
+          ${formulaStr ? `
+            <div class="grammar-formula-banner">
+              <div class="grammar-formula-title">📐 必背句型公式積木：</div>
+              <div class="grammar-formula-code">${escapeHtml(formulaStr)}</div>
+            </div>
+          ` : ''}
+
+          ${(parsed.categories.length > 0 || chiExp) ? `
             <div class="grammar-exp-box">
-              <strong style="color:var(--ink-1);">💡 核心觀念解析：</strong><br>
-              <p style="margin:6px 0 0; line-height:1.65; color:var(--ink-2); font-size:14.5px;">${chiExp}</p>
+              <strong style="color:var(--ink-1); font-size:14px;">💡 核心觀念分段解析：</strong>
+              ${parsed.categories.length > 0 ? `
+                ${parsed.intro ? `<p style="margin:6px 0 4px; line-height:1.6; color:var(--ink-2); font-size:14px;">${escapeHtml(parsed.intro)}</p>` : ''}
+                <div class="grammar-cat-list">
+                  ${parsed.categories.map(cat => `
+                    <div class="grammar-cat-row">
+                      <div class="grammar-cat-label">${escapeHtml(cat.label || '')}</div>
+                      ${(Array.isArray(cat.items) && cat.items.length > 0) ? `
+                        <div class="grammar-chips-wrap">
+                          ${cat.items.map(chip => `<span class="grammar-chip">${escapeHtml(chip)}</span>`).join('')}
+                        </div>
+                      ` : ''}
+                      ${cat.note ? `<div style="font-size:12.5px; color:#64748b; margin-top:4px;">${escapeHtml(cat.note)}</div>` : ''}
+                    </div>
+                  `).join('')}
+                </div>
+              ` : `
+                <p style="margin:6px 0 0; line-height:1.7; color:var(--ink-2); font-size:14.5px;">${escapeHtml(chiExp)}</p>
+              `}
             </div>
           ` : ''}
+
+          ${pitfalls.length > 0 ? `
+            <div class="grammar-pitfalls-box">
+              <h5>⚡ 考場避坑對比 (錯 vs 正)：</h5>
+              ${pitfalls.map(pf => `
+                <div class="grammar-pitfall-row">
+                  <span class="gp-wrong">❌ ${escapeHtml(pf.wrong || '')}</span>
+                  <span class="gp-right">✅ ${escapeHtml(pf.right || '')}</span>
+                  ${pf.tip ? `<span class="gp-tip">💡 ${escapeHtml(pf.tip)}</span>` : ''}
+                </div>
+              `).join('')}
+            </div>
+          ` : ''}
+
           ${engExp ? `
-            <div style="font-size:13.5px; color:var(--ink-3); margin-top:8px; line-height:1.5;">
-              <strong>Rule:</strong> ${engExp}
+            <div class="grammar-eng-rule">
+              <strong>📖 課本英文規則：</strong> ${escapeHtml(engExp)}
             </div>
           ` : ''}
+
           ${examples.length > 0 ? `
-            <div class="grammar-examples-box">
-              <strong style="color:var(--primary); font-size:13.5px;">🌟 經典正反範例與例句：</strong>
+            <div class="grammar-examples-box" style="margin-top:14px;">
+              <strong style="color:var(--primary); font-size:13.5px;">🌟 經典正反範例與例句 (點擊 🔊 聆聽標準發音)：</strong>
               <div class="grammar-examples-list" style="margin-top:8px; display:grid; gap:8px;">
                 ${examples.map(ex => {
-                  const isMistake = ex.includes('❌') || ex.includes('Mistake');
+                  const rawStr = typeof ex === 'object' ? (ex.en || '') : String(ex || '');
+                  const isMistake = rawStr.includes('❌') && !rawStr.includes('✅') && !rawStr.includes('➔');
+                  const cleanSpeech = extractCleanEnglishForSpeech(ex);
                   return `
                     <div class="grammar-ex-item ${isMistake ? 'bad' : 'ok'}">
-                      <span>${isMistake ? '🔴' : '🟢'}</span>
-                      <span>${ex}</span>
+                      <div class="grammar-ex-main">
+                        <span style="flex-shrink:0;">${isMistake ? '🔴' : '🟢'}</span>
+                        ${formatGrammarExampleHtml(ex)}
+                      </div>
+                      ${cleanSpeech ? `
+                        <button type="button" class="btn-ex-speak" data-speak-ex="${escapeHtml(cleanSpeech)}" title="朗讀正確英文例句">🔊 朗讀</button>
+                      ` : ''}
                     </div>
                   `;
                 }).join('')}
@@ -1751,12 +2311,19 @@
     container.innerHTML = `
       <div class="section-title" style="margin-bottom:14px;">
         <h3>🔍 本單元文法核心焦點與避坑指南 (${grammars.length} 條規則)</h3>
-        <span class="muted">掌握句子時態、助動詞附和、三級副詞與段考易錯陷阱</span>
+        <span class="muted">句型公式積木 + 搭配膠囊 + 正反對比 + 例句即時點讀</span>
       </div>
       <div class="grammar-cards-grid">
         ${grammarCardsHtml}
       </div>
     `;
+
+    container.querySelectorAll('.btn-ex-speak').forEach(btn => {
+      btn.onclick = () => {
+        const text = btn.getAttribute('data-speak-ex');
+        if (text) speakText(text, state.ttsSpeed);
+      };
+    });
   }
 
   // --------------------------------------------------------------------------
@@ -1771,7 +2338,7 @@
     const itemsHtml = mistakes.map((m, idx) => {
       const sentence = m.sentence || '';
       const tokens = sentence.split(/\s+/);
-      const targetTokenIdx = m.error_token_index !== undefined ? m.error_token_index : -1;
+      const targetTokenIdx = m.error_token_index !== undefined ? m.error_token_index : (m.wrong_index !== undefined ? m.wrong_index : -1);
 
       return `
         <article class="mistake-buster-card glass" id="mb-card-${idx}">
@@ -1790,9 +2357,9 @@
           <div class="mb-feedback-box" id="mb-feed-${idx}" style="display:none;">
             <div class="mb-correct-line">
               <span class="badge-ok">✓ 修正形式：</span>
-              <strong style="color:var(--ok); font-size:16px;">${m.correct_text || m.correction}</strong>
+              <strong style="color:var(--ok); font-size:16px;">${m.correct_text || m.fixed_sentence || m.correction || m.correct_word || ''}</strong>
             </div>
-            <p class="mb-exp-text">💡 <strong>神探解析：</strong>${m.explanation || ''}</p>
+            <p class="mb-exp-text">💡 <strong>神探解析：</strong>${m.explanation || m.reason || ''}</p>
           </div>
         </article>
       `;
@@ -1812,7 +2379,7 @@
     container.querySelectorAll('.sentence-tokens-box').forEach(box => {
       const mbIdx = parseInt(box.getAttribute('data-mb-idx'), 10);
       const m = mistakes[mbIdx];
-      const targetIdx = m.error_token_index !== undefined ? m.error_token_index : 0;
+      const targetIdx = m.error_token_index !== undefined ? m.error_token_index : (m.wrong_index !== undefined ? m.wrong_index : 0);
       const feedBox = document.getElementById(`mb-feed-${mbIdx}`);
 
       box.querySelectorAll('.token-chip').forEach(btn => {
@@ -1906,11 +2473,19 @@
     const isRewrite = (q.type === 'rewrite' || q.type === 'paper_rewrite');
     const options = q.options || [];
 
-    // 解析詳解與錨點單字卡
+    // 解析詳解與錨點單字卡 (支援舊版 3 色詳解與 KET-4D 四維詳解 + extensionStudy)
     const expObj = typeof q.explanation === 'object' && q.explanation !== null ? q.explanation : { point: q.explanation || '文法規則與語境考核' };
     const expPoint = expObj.point || '文法規則與語境考核';
     const expTrap = expObj.trap || '';
     const expNote = expObj.note || '';
+    const expPurpose = expObj.examPurpose || '';
+    const expCorrectReason = expObj.correctReason || '';
+    const expDistractors = expObj.distractorAnalysis || null;
+    const expCommonTraps = Array.isArray(expObj.commonTraps)
+      ? expObj.commonTraps
+      : (typeof expObj.commonTraps === 'string' && expObj.commonTraps ? [expObj.commonTraps] : []);
+    const has4DExp = !!(expPurpose || expCorrectReason || expDistractors || expCommonTraps.length > 0);
+    const extObj = (q.extensionStudy && typeof q.extensionStudy === 'object') ? q.extensionStudy : null;
 
     let vocabCard = q.vocab_card;
     if (!vocabCard && isListenMode && window.ENGLISH_DATA && window.ENGLISH_DATA.vocabulary) {
@@ -1919,6 +2494,120 @@
     }
 
     const ipaStr = q.ipa || (vocabCard ? vocabCard.ipa : '') || '';
+
+    let expDetailHtml = '';
+    if (has4DExp) {
+      let distractorItemsHtml = '';
+      if (expDistractors && typeof expDistractors === 'object' && !Array.isArray(expDistractors)) {
+        distractorItemsHtml += Object.entries(expDistractors).map(([optKey, reason]) => `
+          <div class="distractor-item">
+            <span class="distractor-key">${escapeHtml(optKey)}</span>
+            <span>${escapeHtml(reason)}</span>
+          </div>
+        `).join('');
+      } else if (Array.isArray(expDistractors)) {
+        distractorItemsHtml += expDistractors.map((item, dIdx) => `
+          <div class="distractor-item">
+            <span class="distractor-key">干擾項 ${dIdx + 1}</span>
+            <span>${escapeHtml(typeof item === 'string' ? item : JSON.stringify(item))}</span>
+          </div>
+        `).join('');
+      } else if (typeof expDistractors === 'string' && expDistractors) {
+        distractorItemsHtml += `<div class="distractor-item"><span>${escapeHtml(expDistractors)}</span></div>`;
+      }
+      if (expCommonTraps.length > 0) {
+        distractorItemsHtml += expCommonTraps.map((trapText, tIdx) => `
+          <div class="distractor-item">
+            <span class="distractor-key">陷阱 ${tIdx + 1}</span>
+            <span>${escapeHtml(trapText)}</span>
+          </div>
+        `).join('');
+      }
+
+      expDetailHtml = `
+        <div class="exp-4d-grid">
+          <div class="exp-row exp-purpose">
+            <div>
+              <strong>🎯 命題核心目標：</strong><span>${escapeHtml(expPurpose || expPoint)}</span>
+              ${(expPurpose && expPoint && expPoint !== expPurpose) ? `<div class="exp-pill-sub">📌 核心考點：${escapeHtml(expPoint)}</div>` : ''}
+            </div>
+          </div>
+          ${(expCorrectReason || expNote) ? `
+            <div class="exp-row exp-correct">
+              <div>
+                <strong>✅ 正解邏輯推導：</strong><span>${escapeHtml(expCorrectReason || expNote)}</span>
+                ${(expCorrectReason && expNote) ? `<div class="exp-pill-sub">💡 考點公式：${escapeHtml(expNote)}</div>` : ''}
+              </div>
+            </div>
+          ` : ''}
+          ${(distractorItemsHtml || expTrap) ? `
+            <div class="exp-row exp-distractors">
+              <div style="width:100%;">
+                <strong>🕵️ 逐項迷思排除與避坑指南：</strong>
+                ${expTrap ? `<div class="exp-pill-sub">⚠️ 考場陷阱：${escapeHtml(expTrap)}</div>` : ''}
+                ${distractorItemsHtml ? `<div class="distractor-list">${distractorItemsHtml}</div>` : ''}
+              </div>
+            </div>
+          ` : ''}
+        </div>
+      `;
+    } else if (!vocabCard) {
+      expDetailHtml = `
+        <!-- 文法三色結構化詳解 -->
+        <div class="structured-exp-box">
+          <div class="exp-row exp-concept">
+            <strong>🎯 核心考點：</strong><span>${expPoint}</span>
+          </div>
+          ${expTrap ? `
+            <div class="exp-row exp-trap">
+              <strong>⚠️ 考場避坑（Rex 當年失分點）：</strong><span>${expTrap}</span>
+            </div>
+          ` : ''}
+          ${expNote ? `
+            <div class="exp-row exp-note">
+              <strong>💡 官方解題公式：</strong><span>${expNote}</span>
+            </div>
+          ` : ''}
+        </div>
+      `;
+    }
+
+    let extStudyHtml = '';
+    if (extObj && (extObj.synonyms || extObj.grammarCompare || extObj.examVariations)) {
+      const synList = Array.isArray(extObj.synonyms)
+        ? extObj.synonyms
+        : (typeof extObj.synonyms === 'string' && extObj.synonyms.trim() ? [extObj.synonyms.trim()] : []);
+      const varList = Array.isArray(extObj.examVariations)
+        ? extObj.examVariations
+        : (typeof extObj.examVariations === 'string' && extObj.examVariations.trim() ? [extObj.examVariations.trim()] : []);
+      extStudyHtml = `
+        <details class="ext-study-details">
+          <summary>📚 點此展開 KET 延伸學習：同義替換 / 易混對比 / 考題變形 ▼</summary>
+          <div class="ext-study-body">
+            ${synList.length > 0 ? `
+              <div class="ext-syn-row">
+                <strong>🔄 同義替換：</strong>
+                ${synList.map(s => `<span class="ext-syn-chip">${escapeHtml(s)}</span>`).join('')}
+              </div>
+            ` : ''}
+            ${extObj.grammarCompare ? `
+              <div><strong>⚖️ 易混文法對比：</strong><span>${escapeHtml(extObj.grammarCompare)}</span></div>
+            ` : ''}
+            ${varList.length > 0 ? `
+              <div><strong>🧩 考題變形預測：</strong><span>${varList.map(v => escapeHtml(v)).join(' ｜ ')}</span></div>
+            ` : ''}
+          </div>
+        </details>
+      `;
+    }
+
+    const rawPart = (q.part || '').trim();
+    const rawPartTitle = (q.part_title || '大題說明').trim();
+    const partBannerText = !rawPart
+      ? rawPartTitle
+      : (rawPartTitle.toLowerCase().startsWith(rawPart.toLowerCase()) || /^part\s+[ivx0-9]/i.test(rawPartTitle))
+        ? rawPartTitle
+        : `${rawPart}：${rawPartTitle}`;
 
     container.innerHTML = `
       <div class="view active-quiz-view">
@@ -1952,14 +2641,14 @@
         <!-- 題目卡片 -->
         <div class="quiz-card">
           <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
-            <span class="tag pri">${q.type ? q.type.toUpperCase() : 'GRAMMAR'}</span>
+            <span class="tag pri">${getQuizTypeBadgeLabel(q)}</span>
             <span style="font-size:13px; color:var(--ink-3);">難度：${q.difficulty || '★★★☆☆'}</span>
           </div>
 
                     <!-- 岱崙實體真卷大題指南橫幅 -->
           ${(q.part_instructions || q.sentence_form || q.word_bank) ? `
             <div class="exam-section-banner">
-              <div class="es-badge">📄 ${escapeHtml(q.part || 'Part')}：${escapeHtml(q.part_title || '大題說明')}</div>
+              <div class="es-badge">📄 ${escapeHtml(partBannerText)}</div>
               ${q.part_instructions ? `
                 <blockquote class="es-instructions">
                   <strong>Directions:</strong> ${escapeHtml(q.part_instructions)}
@@ -2025,8 +2714,17 @@
             `}
           ` : ''}
 
+          <!-- 紙筆手寫作答提示框 (當無互動選項時呈現) -->
+          ${options.length === 0 ? `
+            <div class="paper-write-guide-box">
+              ${isListenMode
+                ? '✍️ 【紙筆聽寫訓練】請準備紙筆，點擊上方播放鍵，在紙上拼寫完整單字（留意靜音字母、雙母音與單複數），寫完後再點擊「看詳解與對答案」！'
+                : '✍️ 【仿真考卷手寫實戰】請先在紙上完整寫出你的英文句子或答案（檢查動詞時態、介系詞、冠詞與句尾標點），寫完後再按下方「看詳解與對答案」！'}
+            </div>
+          ` : ''}
+
           <!-- 紙筆翻牌核對正解按鈕 -->
-          <div style="margin:20px 0;">
+          <div style="margin:16px 0 20px;">
             <button class="btn btn-primary btn-block btn-lg" id="btn-reveal-answer">
               👁️ 看詳解與對答案
             </button>
@@ -2086,24 +2784,23 @@
                   ` : ''}
                 </div>
               </div>
-            ` : `
-              <!-- 文法三色結構化詳解 -->
-              <div class="structured-exp-box">
-                <div class="exp-row exp-concept">
-                  <strong>🎯 核心考點：</strong><span>${expPoint}</span>
-                </div>
-                ${expTrap ? `
-                  <div class="exp-row exp-trap">
-                    <strong>⚠️ 考場避坑（Rex 當年失分點）：</strong><span>${expTrap}</span>
-                  </div>
-                ` : ''}
-                ${expNote ? `
-                  <div class="exp-row exp-note">
-                    <strong>💡 官方解題公式：</strong><span>${expNote}</span>
-                  </div>
-                ` : ''}
+            ` : ''}
+            ${expDetailHtml}
+            ${extStudyHtml}
+
+            ${options.length === 0 ? `
+              <div class="self-check-rubric-box">
+                <strong>✅ 紙筆批改自檢清單（確認以下幾點再打分）：</strong>
+                <ul class="self-check-list">
+                  ${(Array.isArray(q.self_check) && q.self_check.length > 0
+                    ? q.self_check
+                    : (isListenMode
+                      ? ['核對每一個母音與雙子音順序是否完全一致', '確認字首是否誤寫大寫，或漏掉靜音字母 e / 複數 -s']
+                      : ['檢查動詞時態是否與題目問句一致（現在式 / 過去式 / 助動詞）', '檢查介系詞搭配與動名詞 (V-ing) 字尾變化', '檢查句首大寫、冠詞 (a/an/the) 與句尾標點符號'])
+                  ).map(chk => `<li>${escapeHtml(chk)}</li>`).join('')}
+                </ul>
               </div>
-            `}
+            ` : ''}
 
             <!-- 三態打分按鈕 (👍 / ⏳ / ❌) -->
             <div style="margin-top:20px; text-align:center;">
@@ -2178,6 +2875,13 @@
     if (speakAnsBtn) {
       speakAnsBtn.onclick = () => speakText(q.answer);
     }
+
+    container.querySelectorAll('[data-speak-stem]').forEach(btn => {
+      btn.onclick = () => {
+        const txt = btn.getAttribute('data-speak-stem');
+        if (txt) speakText(txt, state.ttsSpeed);
+      };
+    });
 
     // 互動點選選項
     container.querySelectorAll('[data-opt-idx]').forEach(btn => {
@@ -2391,11 +3095,12 @@
             <div class="field">
               <label>考卷類型：</label>
               <select id="select-print-type" class="custom-select" style="width:100%; padding:9px; border-radius:10px; border:1.5px solid var(--line); font-weight:700;">
-                <option value="quiz_original" selected>📄 岱崙美語歷史考券 1:1 復原重測卷 (Week 2~7)</option>
-                <option value="contrast">📝 考券紅黑批改對照卷 (學生原答 + 老師批改)</option>
-                <option value="quiz_variant">🎲 AI 變式狙擊模擬卷 (相同考點動態抽換)</option>
-                <option value="spelling">🔤 Spelling Bee 單字聽寫專用卷</option>
-                <option value="errorbook">📕 個人專屬弱點錯題消滅卷</option>
+                <option value="unit_custom" ${state.printConfig.printType === 'unit_custom' ? 'selected' : ''}>📑 本單元專屬考卷 (聽寫 + 手寫實戰 + 選擇)</option>
+                <option value="quiz_original" ${state.printConfig.printType === 'quiz_original' ? 'selected' : ''}>📄 岱崙美語歷史考券 1:1 復原重測卷 (Week 2~7)</option>
+                <option value="contrast" ${state.printConfig.printType === 'contrast' ? 'selected' : ''}>📝 考券紅黑批改對照卷 (學生原答 + 老師批改)</option>
+                <option value="quiz_variant" ${state.printConfig.printType === 'quiz_variant' ? 'selected' : ''}>🎲 AI 變式狙擊模擬卷 (相同考點動態抽換)</option>
+                <option value="spelling" ${state.printConfig.printType === 'spelling' ? 'selected' : ''}>🔤 Spelling Bee 單字聽寫專用卷</option>
+                <option value="errorbook" ${state.printConfig.printType === 'errorbook' ? 'selected' : ''}>📕 個人專屬弱點錯題消滅卷</option>
               </select>
             </div>
 
@@ -2469,6 +3174,88 @@
         qrSvg = qr.createSvgTag({ scalable: true });
       }
     } catch (e) {}
+
+    if (type === 'unit_custom') {
+      const bMeta = BOOK_META[state.printConfig.bookId] || BOOK_META['tea_midterm'];
+      const uList = getUnitsForBook(bMeta.id);
+      const uMeta = uList.find(u => u.id === state.printConfig.unitId) || uList[0];
+      const uQuizzes = uMeta ? getQuizzesForUnit(bMeta.id, uMeta.id) : [];
+      const uVocabs = uMeta ? getVocabsForUnit(bMeta.id, uMeta.id) : [];
+      const pListen = uQuizzes.filter(q => matchQuizType(q, 'vocab'));
+      const pHand = uQuizzes.filter(q => matchQuizType(q, 'handwrite'));
+      const pChoice = uQuizzes.filter(q => !matchQuizType(q, 'vocab') && !matchQuizType(q, 'handwrite'));
+      const dictItems = pListen.length > 0
+        ? pListen.map(q => ({ zh: (q.vocab_card && q.vocab_card.chi) || q.question, ans: q.answer }))
+        : uVocabs.map(v => ({ zh: v.chi || v.meaning || '', ans: v.word }));
+
+      sheetEl.innerHTML = `
+        <div class="paper-head">
+          <div>
+            <h2>${escapeHtml(bMeta.shortName)} — ${escapeHtml(uMeta ? uMeta.title : '單元實戰卷')}</h2>
+            <div class="sub">命題日期：${today} ${isTeacher ? '【教師解答版】' : '【學生紙筆作答版】'} ｜ 仿 3C 實戰手寫架構</div>
+            <div class="paper-fields">
+              <span>班級：____________</span>
+              <span>學員姓名：<b>${escapeHtml(curUser.name)}</b></span>
+              <span>得分：______ / 100</span>
+            </div>
+          </div>
+          <div class="paper-qr">
+            ${qrSvg}
+            <div>掃碼對答案</div>
+          </div>
+        </div>
+
+        ${dictItems.length > 0 ? `
+          <div style="font-weight:900; margin:6mm 0 3mm; border-bottom:1.5px solid #000; padding-bottom:1mm;">
+            Part I. Listen and Write 單字聽寫 (${dictItems.length} 題)
+          </div>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:3mm 10mm;">
+            ${dictItems.slice(0, 20).map((item, i) => `
+              <div style="font-size:11.5pt; padding:2mm 0; border-bottom:1px dotted #ccc;">
+                ${i + 1}. ${escapeHtml(item.zh)}：${isTeacher ? `<strong style="color:#dc2626;">${escapeHtml(item.ans)}</strong>` : '__________________'}
+              </div>
+            `).join('')}
+          </div>
+        ` : ''}
+
+        ${pHand.length > 0 ? `
+          <div style="font-weight:900; margin:7mm 0 3mm; border-bottom:1.5px solid #000; padding-bottom:1mm;">
+            Part II. Grammar & Writing 手寫造句與改寫實戰 (${pHand.length} 題)
+          </div>
+          <div>
+            ${pHand.slice(0, 12).map((q, i) => `
+              <div class="pq" style="margin-bottom:4mm;">
+                ${q.sentence_form ? `<div style="font-size:10pt; color:#475569; margin-bottom:1mm;">Formula: <code>${escapeHtml(q.sentence_form)}</code></div>` : ''}
+                <div><strong>${i + 1}.</strong> ${escapeHtml(q.question)}</div>
+                ${isTeacher
+                  ? `<div style="color:#dc2626; font-weight:bold; margin-top:1.5mm;">正解：${escapeHtml(q.answer)}</div>`
+                  : `<div style="height:22px; border-bottom:1px solid #333; margin-top:3mm;"></div>`}
+              </div>
+            `).join('')}
+          </div>
+        ` : ''}
+
+        ${pChoice.length > 0 ? `
+          <div style="font-weight:900; margin:7mm 0 3mm; border-bottom:1.5px solid #000; padding-bottom:1mm;">
+            Part III. Reading & Grammar Usage 觀念選擇 (${pChoice.length} 題)
+          </div>
+          <div>
+            ${pChoice.slice(0, 12).map((q, i) => `
+              <div class="pq" style="margin-bottom:3mm;">
+                <div>( &nbsp;&nbsp; ) <strong>${i + 1}.</strong> ${escapeHtml(q.question)}</div>
+                ${Array.isArray(q.options) && q.options.length > 0 ? `
+                  <div style="display:grid; grid-template-columns:1fr 1fr; gap:1mm 6mm; margin-top:1mm; font-size:10.5pt;">
+                    ${q.options.map((o, oi) => `<span>(${String.fromCharCode(65 + oi)}) ${escapeHtml(o)}</span>`).join('')}
+                  </div>
+                ` : ''}
+                ${isTeacher ? `<div style="color:#dc2626; font-weight:bold; font-size:10.5pt;">正解：${escapeHtml(q.answer)}</div>` : ''}
+              </div>
+            `).join('')}
+          </div>
+        ` : ''}
+      `;
+      return;
+    }
 
     // A4 考券標頭
     let title = '國小六年級 岱崙美語 3C Quiz 歷史真題 1:1 復原評量卷 (Week 2~7)';

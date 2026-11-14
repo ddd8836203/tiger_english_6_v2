@@ -1,138 +1,86 @@
-# 六年級上學期英語教材數位化進度追蹤表 (source_manifest.log)
-建立日期：2026-10-18
-維護責任：AI Agent & 使用者協作追蹤
-檔案用途：全面清查、定位與追蹤「六年級上/課本」目錄下所有 PDF 原始檔之總頁數、單元對應、MD 產出進度與品質驗收狀態，杜絕漏頁或單元錯位。
+# 教材與題庫資產清冊 (source_manifest.log)
 
-================================================================================
-目錄導覽
-================================================================================
-一、條列式大綱 (Outline)
-  1. 原始教材總庫清冊與數位化進度總覽 (Overview Matrix)
-  2. 教材 A：Oxford Discover 3 (Student Book) 單元切分與進度
-  3. 教材 B：Oxford Discover Grammar 3 文法特訓冊單元切分與進度
-  4. 教材 C：Reading with Writing 6 讀寫系列 (4 冊) 單元切分與進度
-  5. 教材 D：Write Right 3 寫作專攻系列 (2 冊) 單元切分與進度
-  6. 教材 E：Discover 6 - Read and Discover: All About Space 科普讀本
-  7. 數位化提取品質標準與驗收 Checklist
-
-二、條列式大綱細節 (Detailed Specifications & Manifest)
-  [詳見後續各教材完整對照表]
-================================================================================
-
---------------------------------------------------------------------------------
-一、條列式大綱 (Outline)
---------------------------------------------------------------------------------
-1. 原始教材總庫清冊與數位化進度總覽 (Overview Matrix)
-   - 總教材規格：5 套書系列（9 份 PDF 檔案）。
-   - 總掃描頁數：375 頁。
-   - 架構規格：金字塔分層架構（每書獨立資料夾 + 00_Overview.md + 各單元獨立 Unit_XX.md + 內嵌 Book Context 導航塊）。
-   - 全書總綱進度：5 份 `00_Overview.md` 全數完工 (✅ 100%)。
-   - 單元精讀進度：OD3 Unit 1 完工已驗收 (✅ 完工)。
-
-2. 教材 A：Oxford Discover 3 (Student Book)（共 82 頁）
-   - [00_Overview.md](file:///C:/@植善課業/AI/英語學習網頁/六年級上/課本/01_Oxford_Discover_3/00_Overview.md)：8 大單元課程大綱與文法遞進線 (✅ 完工)
-   - [Unit_01_Having_Fun.md](file:///C:/@植善課業/AI/英語學習網頁/六年級上/課本/01_Oxford_Discover_3/Unit_01_Having_Fun.md)：含 Book Context 導航塊 (✅ 完工)
-
-3. 教材 B：Oxford Discover Grammar 3（共 86 頁）
-   - [00_Overview.md](file:///C:/@植善課業/AI/英語學習網頁/六年級上/課本/02_Oxford_Discover_Grammar_3/00_Overview.md)：9 大模組 18 單元文法對照表 (✅ 完工)
-
-4. 教材 C：Reading with Writing 6（4 冊共 117 頁）
-   - [00_Overview.md](file:///C:/@植善課業/AI/英語學習網頁/六年級上/課本/03_Reading_with_Writing_6/00_Overview.md)：6 大 Topic 12 單元讀寫策略表 (✅ 完工)
-
-5. 教材 D：Write Right 3（2 冊共 77 頁）
-   - [00_Overview.md](file:///C:/@植善課業/AI/英語學習網頁/六年級上/課本/04_Write_Right_3/00_Overview.md)：8 大寫作任務體裁與轉折詞表 (✅ 完工)
-
-6. 教材 E：Read and Discover: All About Space（共 53 頁）
-   - [00_Overview.md](file:///C:/@植善課業/AI/英語學習網頁/六年級上/課本/05_Read_and_Discover_6_Space/00_Overview.md)：8 大太空科學章節與 CLIL 詞彙 (✅ 完工)
-
-7. 數位化提取品質標準與驗收 Checklist
-   - 影像解析度（>= 1800×2400）、單課開頭內嵌 Book Context、零文字遺漏、插圖生動文字化、AI_SPEC 語法公式與盲點代碼齊備。
-
-8. 六上期中考 5 大書系 12 單元統一資料庫 (english_data.js v2.0.0) 整合清冊 (2026-10-21 新增)
-   - 完成 `build_midterm_study_upgrade.py`，將 12 個期中考單元的 100% 完整原文課文、7 大記憶錨點單字卡、文法避坑卡、雙軌測驗題與 50 題晨間體操全面注入 `english_data.js`。
-
-================================================================================
-二、條列式大綱細節 (Detailed Specifications & Manifest)
-================================================================================
-
-### 1. 原始教材總庫清冊與數位化進度總覽
-
-| 編號 | 書系資料夾名稱 | 實體 PDF 冊別 (共 9 份) | 總頁數 | 全書總綱 (Overview) | 單元精讀 MD 進度 | 當前狀態 |
-| :---: | :--- | :--- | :---: | :---: | :---: | :---: |
-| **01** | `01_Oxford_Discover_3/` | `Oxford Discover_3.pdf` | 82 頁 | [00_Overview.md](file:///C:/@植善課業/AI/英語學習網頁/六年級上/課本/01_Oxford_Discover_3/00_Overview.md) (✅) | [Unit_01_Having_Fun.md](file:///C:/@植善課業/AI/英語學習網頁/六年級上/課本/01_Oxford_Discover_3/Unit_01_Having_Fun.md) (✅)<br>*(Unit 13~15 暫跳過待補檔)* | **Unit 1 完工** |
-| **02** | `02_Oxford_Discover_Grammar_3/` | `Oxford Discover Grammar 3.pdf` | 86 頁 | [00_Overview.md](file:///C:/@植善課業/AI/英語學習網頁/六年級上/課本/02_Oxford_Discover_Grammar_3/00_Overview.md) (✅) | [Unit_13_Making_History.md](file:///C:/@植善課業/AI/英語學習網頁/六年級上/課本/02_Oxford_Discover_Grammar_3/Unit_13_Making_History.md) (✅)<br>[Unit_14_Success_Stories.md](file:///C:/@植善課業/AI/英語學習網頁/六年級上/課本/02_Oxford_Discover_Grammar_3/Unit_14_Success_Stories.md) (✅)<br>[Unit_15_Tasty_Treats.md](file:///C:/@植善課業/AI/英語學習網頁/六年級上/課本/02_Oxford_Discover_Grammar_3/Unit_15_Tasty_Treats.md) (✅) | **期中考 3 單元完工** |
-| **03** | `03_Reading_with_Writing_6/` | `unit 1_2.pdf` (20 頁)<br>`unit 3_6.pdf` (28 頁)<br>`unit 7_10.pdf` (28 頁)<br>`unit 11_12.pdf` (41 頁) | 117 頁 | [00_Overview.md](file:///C:/@植善課業/AI/英語學習網頁/六年級上/課本/03_Reading_with_Writing_6/00_Overview.md) (✅) | [Unit_05_Travel_and_Transport.md](file:///C:/@植善課業/AI/英語學習網頁/六年級上/課本/03_Reading_with_Writing_6/Unit_05_Travel_and_Transport.md) (✅)<br>[Unit_06_Amazing_Journeys.md](file:///C:/@植善課業/AI/英語學習網頁/六年級上/課本/03_Reading_with_Writing_6/Unit_06_Amazing_Journeys.md) (✅)<br>[Unit_07_A_World_of_Words.md](file:///C:/@植善課業/AI/英語學習網頁/六年級上/課本/03_Reading_with_Writing_6/Unit_07_A_World_of_Words.md) (✅)<br>[Unit_08_Dictionaries_and_Search.md](file:///C:/@植善課業/AI/英語學習網頁/六年級上/課本/03_Reading_with_Writing_6/Unit_08_Dictionaries_and_Search.md) (✅) | **期中考 4 單元完工** |
-| **04** | `04_Write_Right_3/` | `Write right 3_01_04.pdf` (35 頁)<br>`Write right 3_05_08.pdf` (42 頁) | 77 頁 | [00_Overview.md](file:///C:/@植善課業/AI/英語學習網頁/六年級上/課本/04_Write_Right_3/00_Overview.md) (✅) | [Unit_04_Around_My_Neighborhood.md](file:///C:/@植善課業/AI/英語學習網頁/六年級上/課本/04_Write_Right_3/Unit_04_Around_My_Neighborhood.md) (✅)<br>[Unit_05_If_I_Had_a_Lot_of_Money.md](file:///C:/@植善課業/AI/英語學習網頁/六年級上/課本/04_Write_Right_3/Unit_05_If_I_Had_a_Lot_of_Money.md) (✅) | **期中考 2 單元完工** |
-| **05** | `05_Read_and_Discover_6_Space/` | `discover 6_Read and discover_all about space.pdf` | 53 頁 | [00_Overview.md](file:///C:/@植善課業/AI/英語學習網頁/六年級上/課本/05_Read_and_Discover_6_Space/00_Overview.md) (✅) | [Chapter_04_Rocks_and_Ice.md](file:///C:/@植善課業/AI/英語學習網頁/六年級上/課本/05_Read_and_Discover_6_Space/Chapter_04_Rocks_and_Ice.md) (✅)<br>[Chapter_05_Astronomy.md](file:///C:/@植善課業/AI/英語學習網頁/六年級上/課本/05_Read_and_Discover_6_Space/Chapter_05_Astronomy.md) (✅) | **期中考 2 章節完工** |
-| **總計** | **5 套教材 (9 份 PDF)** | **375 頁** | **涵蓋小六英語主修、文法專用、讀寫進階與太空科普** | **5 份總綱 100% 完工** | **11 個重點單元 100% 高保真轉錄完工並注入 midterm_data.js** | **期中考特訓專區全功能上線驗收** |
+⚡ 0. 當下狀態快照 (TL;DR Current Snapshot)
+- **最後更新**：2026-11-14
+- **總資產狀態**：**Phase 9~10 已完成並通過 `verify_phase_1..10.js` 驗收（全庫 2,580 檢驗項 / 368 道聽寫 0 洩漏、課本全名統一與三層呼吸感題幹落地）**；Week 12 五大單元雙層 MD 與 `data/units/*.js` 已全面對齊 3C 考卷架構並編譯入主題庫（共 **156 題 4D** [65 聽寫 + 41 手寫實戰 + 50 選擇] + 71 單字 + 17 張視覺文法卡 + 17 課文段落 + 39 抓錯）。
+- **本周必考清單 (Week 12 Quiz, \*EL-3C)**：
+  1. `ODG3_U16`: Oxford Discover Grammar 3 U16 *Food Facts* — `[✅ Phase 6/8/9/10 完成]` (12 字彙 / 4 視覺文法卡 / 3 段落 / 9 抓錯 / **28 題**：6 聽寫 + 10 手寫 + 12 選擇)
+  2. `OD3_U16`: Oxford Discover 3 U16 *The Garden of Happiness* — `[✅ Phase 6/8/9/10 完成]` (17 字彙 / 3 視覺文法卡 / 3 段落 / 8 抓錯 / **32 題**：17 聽寫全覆蓋 + 5 手寫 + 10 選擇)
+  3. `RWW6_U09`: Reading with Writing 6 U9 *Getting to Know You / A Trip to Earth* — `[✅ Phase 7/8/9/10 完成]` (14 字彙 / 3 視覺文法卡 / 3 段落 / 6 抓錯 / **32 題**：14 聽寫全覆蓋 + 8 手寫 + 10 選擇)
+  4. `SPACE_CH06`: Read and Discover 6: Space Ch6 *Life on Other Planets* — `[✅ Phase 7/8/9/10 完成]` (14 字彙 / 3 視覺文法卡 / 4 段落 / 8 抓錯 / **32 題**：14 聽寫全覆蓋 + 8 手寫 + 10 選擇)
+  5. `WR3_U06`: Write Right 3 U6 *A Great Person in History* — `[✅ Phase 7/8/9/10 完成]` (14 字彙 / 4 視覺文法卡 / 4 段落 / 8 抓錯 / **32 題**：14 聽寫全覆蓋 + 10 手寫 + 8 選擇)
+- **Next Actions**：向使用者彙報 Phase 9~10 完成成果與實測數據，待確認後啟動 Phase 11~12（`OD3 U13~U15` 補完、期中舊書 11 單元 4D 與視覺文法升級、異質審查與 GitHub 推送）。
 
 ---
 
-### 2. 教材 A：Oxford Discover 3 (Student Book) 詳細單元對照
-
-| 單元編號 | 課本頁碼範圍 | 抽取圖檔名稱 | 核心主題 (Theme & Title) | 核心文法 (Grammar Focus) | 產出 MD 檔案路徑 | 驗收狀態 |
-| :---: | :---: | :---: | :--- | :--- | :--- | :---: |
-| **全書總綱** | p.1 - p.82 | `page_001` ~ `page_006` | 全書課程介紹、Big Questions 與文法遞進線 | 全書語法架構圖與 AI 出題指引 | [00_Overview.md](file:///C:/@植善課業/AI/英語學習網頁/六年級上/課本/01_Oxford_Discover_3/00_Overview.md) | ✅ **100% 完工** |
-| **BQ 1 & U1** | p.6 - p.15 | `page_04` ~ `page_12` | **Unit 1: Having Fun**<br>(Social Studies: Culture) | Adjectives with -ed and -ing<br>Time Words (Past Simple) | [Unit_01_Having_Fun.md](file:///C:/@植善課業/AI/英語學習網頁/六年級上/課本/01_Oxford_Discover_3/Unit_01_Having_Fun.md) | ✅ **100% 完工** |
-| **U2** | p.16 - p.25 | `page_13` ~ `page_22` | **Unit 2: The Red Rubber Ball**<br>(Fiction / Play & Sports) | Gerunds (動名詞用法)<br>Verb Phrases with Get | `01_Oxford_Discover_3/Unit_02_The_Red_Rubber_Ball.md` | 下一步推進 |
-| **BQ 2 & U3** | p.26 - p.35 | `page_23` ~ `page_32` | **Unit 3: Letters to a Friend**<br>(Social Studies: Geography) | Can and Could for Ability<br>Surgeon, Clay, Monsoon | `01_Oxford_Discover_3/Unit_03_Letters_to_a_Friend.md` | 規劃中 |
-| **U4** | p.36 - p.45 | `page_33` ~ `page_42` | **Unit 4: Moving from Here... to There!**<br>(Nonfiction / Immigration) | Present Real Conditional (真實條件句)<br>Suffixes for Countries | `01_Oxford_Discover_3/Unit_04_Moving_from_Here_to_There.md` | 規劃中 |
-| **BQ 3 & U5** | p.46 - p.55 | `page_43` ~ `page_52` | **Unit 5: Three Poets**<br>(Social Studies: Culture / Poems) | Past Continuous (過去進行式)<br>Words That End with -le | `01_Oxford_Discover_3/Unit_05_Three_Poets.md` | 規劃中 |
-| **U6** | p.56 - p.65 | `page_53` ~ `page_62` | **Unit 6: You Can Be a Poet**<br>(Instructional Text / Writing) | Past Continuous & Simple Past (複合時態)<br>Word Study: Syllables | `01_Oxford_Discover_3/Unit_06_You_Can_Be_a_Poet.md` | 規劃中 |
-| **BQ 4 & U7** | p.66 - p.75 | `page_63` ~ `page_72` | **Unit 7: Time and the Earth**<br>(Earth Science / Nonfiction) | Future Facts with Will (客觀未來式)<br>Suffix -tion | `01_Oxford_Discover_3/Unit_07_Time_and_the_Earth.md` | 規劃中 |
-| **U8** | p.76 - p.82 | `page_73` ~ `page_82` | **Unit 8: Doctor Molly**<br>(Realistic Fiction / Medicine) | Future Plans with Going to<br>Word Study: Contractions | `01_Oxford_Discover_3/Unit_08_Doctor_Molly.md` | 規劃中 |
+🧭 一、錨點索引大綱 (Indexed Outline — 標題 + 一句話結論)
+- [#MAN-1] Week 12 Quiz (11/18 三, \*EL-3C) 5 大必考單元資產清冊：5 單元原始圖片 100% 轉正並核對頁碼完畢，準備執行高保真雙層 MD 與 20 題 KET 4D JS 生成。
+- [#MAN-2] `01_Oxford_Discover_3` 全書圖檔與單元清冊：已將後半 107 張拍攝照片轉正歸檔為 `od3_p086.jpg`~`od3_p192.jpg`，覆蓋 U9~U18（含 U16 主課文與 U13~15 期中缺口）。
+- [#MAN-3] `02_ODG3` / `03_RWW6` / `04_WR3` / `05_Space` 數位教材清冊：期中 11 單元已有雙層 MD，Week 12 新補抽取 RWW6 `p15~28`、WR3 `p13~22` 與 Space `p27~30`。
+- [#MAN-4] 歷史考卷 (`W2~W7`) 與 Phase 5~8 待升級 4D 清冊：現有 W2~W7 10 頁考卷四層分離 MD 已上線，舊版 4 套書與 OD3 U13~15 排定 Phase 5~8 進行 4D 升級與 20 題精煉。
+- [#MAN-5] Phase 9~10 全庫 368 道聽寫零洩漏檢核與跨題富化資產清冊：完成 `odg3_u16`/`od3_u16`/`rww6_u09`/`space_ch06`/`wr3_u06` 遮罩、`TEA_QUIZ_REVIEW` 中文例句與三態標籤淨化及 `RWW6_U06/U08` 行號引用原文補齊。
 
 ---
 
-### 3. 教材 B：Oxford Discover Grammar 3 (86 頁) 單元對照
-- 職責：作為 `Oxford Discover 3` 各單元語法規則的直接互補練習庫。
-- 規劃：每完成一個 Student Book 單元，提取對應 Grammar 冊的 8~10 頁練習，抽取額外題庫補充進前端題庫庫存。
+📖 二、單一真實來源細節 (Single-Source Detailed Specifications)
 
-
----
-
-### 5. 歷史實體考券專區：岱崙美語 3C Quiz (共 6 頁考券，四層筆跡嚴格分離)
-
-| 週次 | 頁碼 | 原始影像檔 | 考查主題與大題 | 學生得分 | 四層分離 MD 檔案路徑 | 驗收狀態 |
-| :---: | :---: | :---: | :--- | :---: | :--- | :---: |
-| **總綱** | 全景 | - | 6 頁考券全景清查、得分率趨勢與盲點診斷總矩陣 | - | [00_Overview_歷史考券.md](file:///C:/@植善課業/AI/英語學習網頁/六年級上/考券/六年級上_考券/00_Overview_歷史考券.md) | ✅ **100% 完工** |
-| **Week 2** | Page 1 | `IMG_4016.HEIC` / `.jpg` | Discover 3 U13 單字 (20題) + Grammar 3 U13 倒裝附和句 (4題) | 38 / 48 | [考券_六上_Week02_Page01.md](file:///C:/@植善課業/AI/英語學習網頁/六年級上/考券/六年級上_考券/考券_六上_Week02_Page01.md) | ✅ **100% 完工** |
-| **Week 2** | Page 2 | `IMG_4017.HEIC` / `.jpg` | Write Right 3 U4 社區環境提綱擴寫作文 (Michelle's Neighborhood 15行) | 15 / 16 | [考券_六上_Week02_Page02.md](file:///C:/@植善課業/AI/英語學習網頁/六年級上/考券/六年級上_考券/考券_六上_Week02_Page02.md) | ✅ **100% 完工** |
-| **Week 4** | Page 5 | `IMG_4018.HEIC` / `.jpg` | Discover 3 U14 單字 (20題) + RWW6 U5&6 方位片語 (16題) | 34 / 36 | [考券_六上_Week04_Page05.md](file:///C:/@植善課業/AI/英語學習網頁/六年級上/考券/六年級上_考券/考券_六上_Week04_Page05.md) | ✅ **100% 完工** |
-| **Week 4** | Page 6 | `IMG_4019.HEIC` / `.jpg` | Grammar 3 U14 副詞三級比較長句合成 (原級+比較級+最高級 5題) | 4 / 20 | [考券_六上_Week04_Page06.md](file:///C:/@植善課業/AI/英語學習網頁/六年級上/考券/六年級上_考券/考券_六上_Week04_Page06.md) | ✅ **100% 完工** |
-| **Week 5** | Page 7 | `IMG_4020.HEIC` / `.jpg` | RWW6 U6 尋寶定向運動課文長篇聽寫默寫 (The World of Orienteering p.40 前兩段) | 25 / 25 | [考券_六上_Week05_Page07.md](file:///C:/@植善課業/AI/英語學習網頁/六年級上/考券/六年級上_考券/考券_六上_Week05_Page07.md) | ✅ **100% 完工** |
-| **Week 5** | Page 8 | `IMG_4021.HEIC` / `.jpg` | Grammar 3 U14 副詞長句比較 (3題) + Write Right 3 U5 假設語氣作文 (If I Had $6000) | 25 / 28 | [考券_六上_Week05_Page08.md](file:///C:/@植善課業/AI/英語學習網頁/六年級上/考券/六年級上_考券/考券_六上_Week05_Page08.md) | ✅ **100% 完工** |
-
+### [#MAN-1] 一、Week 12 Quiz (11/18 三, \*EL-3C) 5 大必考單元資產狀態
+| 單元代碼 | 書名與單元標題 | 課本頁碼 | 驗證圖檔清冊 | 雙層 MD | 4D JS (`data/units/`) |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| `ODG3_U16` | Oxford Discover Grammar 3 U16: Food Facts | p.80–83 | `odg3_pdf_p070.png` ~ `odg3_pdf_p073.png` | `[✅ Phase 2 完成]` | `odg3_u16.js` `[✅ Phase 6: 28 題 / 4 文法卡]` |
+| `OD3_U16` | Oxford Discover 3 U16: The Garden of Happiness | p.156–163 | `od3_p156.jpg` ~ `od3_p163.jpg` | `[✅ Phase 2 完成]` | `od3_u16.js` `[✅ Phase 6: 32 題 / 3 文法卡]` |
+| `RWW6_U09` | Reading with Writing 6 U9: A Trip to Earth | p.62–67 | `rww6_u710_pdf_p15.png` ~ `rww6_u710_pdf_p20.png` | `[✅ Phase 3 完成]` | `rww6_u09.js` `[✅ Phase 7: 32 題 / 3 文法卡]` |
+| `SPACE_CH06` | Read and Discover 6 Space Ch6: Life on Other Planets | p.24–27, p.46–47 | `space_pdf_p24`~`27.png`, `space_act_p46`~`47.png` | `[✅ Phase 3 完成]` | `space_ch06.js` `[✅ Phase 7: 32 題 / 3 文法卡]` |
+| `WR3_U06` | Write Right 3 U6: A Great Person in History | p.46–53 | `wr3_u5_pdf_p09.png` ~ `wr3_u5_pdf_p16.png` | `[✅ Phase 3 完成]` | `wr3_u06.js` `[✅ Phase 7: 32 題 / 4 文法卡]` |
 
 ---
 
-### 6. 六上期中考 5 大書系 12 單元統一資料庫 (`english_data.js` v2.0.0-midterm-unified) 整合清冊 (2026-10-21 新增)
-
-| 期中考單元 ID (`midterm_data.js`) | 對應課本/單元 ID (`english_data.js`) | 100% 完整課文段落 (`reading_content`) | 7 大記憶錨點單字卡 (`vocabulary`) | 文法規則避坑卡 (`grammar`) | 雙軌測驗題 (`quizzes`) | 狀態 |
-| :--- | :--- | :--- | :---: | :---: | :---: | :---: |
-| **`ODG3_U13`** | `gra3` / `gra3_13` | 3 段完整情境短文 (Future & So/Neither) + 必考長句標註 | ✅ 完整收錄 | ✅ 完整收錄 | ✅ 完整收錄 | ✅ **100% 完工** |
-| **`ODG3_U14`** | `gra3` / `gra3_14` | 3 段完整情境短文 (Talent Show & Science Fair Adverbs) + 必考長句標註 | ✅ 完整收錄 | ✅ 完整收錄 | ✅ 完整收錄 | ✅ **100% 完工** |
-| **`ODG3_U15`** | `gra3` / `gra3_15` | 3 段完整情境短文 (Emergency Typhoon Drill Conditionals) + 必考長句標註 | ✅ 完整收錄 | ✅ 完整收錄 | ✅ 完整收錄 | ✅ **100% 完工** |
-| **`WR3_U04`** | `wr3` / `wr3_4` | 3 段完整高分範文 (My Convenient Neighborhood) + 必考長句標註 | ✅ 完整收錄 | ✅ 完整收錄 | ✅ 完整收錄 | ✅ **100% 完工** |
-| **`WR3_U05`** | `wr3` / `wr3_5` | 3 段完整高分範文 (An Unforgettable Trip to Hualien) + 必考長句標註 | ✅ 完整收錄 | ✅ 完整收錄 | ✅ 完整收錄 | ✅ **100% 完工** |
-| **`RWW6_U05`** | `rw6` / `rw6_5` | 4 段 100% 課本原文 (*In the shrinking room*) + 必考長句標註 | ✅ 完整收錄 | ✅ 完整收錄 | ✅ 完整收錄 | ✅ **100% 完工** |
-| **`RWW6_U06`** | `rw6` / `rw6_6` | 3 段 100% 課本原文 (*Moving Day*) + 必考長句標註 | ✅ 完整收錄 | ✅ 完整收錄 | ✅ 完整收錄 | ✅ **100% 完工** |
-| **`RWW6_U07`** | `rw6` / `rw6_7` | 4 段 100% 課本原文 (*The Mysterious Disappearance of Left Socks*) + 必考長句標註 | ✅ 完整收錄 | ✅ 完整收錄 | ✅ 完整收錄 | ✅ **100% 完工** |
-| **`RWW6_U08`** | `rw6` / `rw6_8` | 4 段 100% 課本原文 (*The Truth about Frame 352*) + 必考長句標註 | ✅ 完整收錄 | ✅ 完整收錄 | ✅ 完整收錄 | ✅ **100% 完工** |
-| **`SPACE_CH04`** | `rd6` / `rd6_4` | 3 段 100% 課本原文 (*Chapter 4: Life in Space / ISS*) + 必考長句標註 | ✅ 完整收錄 | ✅ 完整收錄 | ✅ 完整收錄 | ✅ **100% 完工** |
-| **`SPACE_CH05`** | `rd6` / `rd6_5` | 3 段 100% 課本原文 (*Chapter 5: Other Worlds / Mars & Exoplanets*) + 必考長句標註 | ✅ 完整收錄 | ✅ 完整收錄 | ✅ 完整收錄 | ✅ **100% 完工** |
-| **`TEA_QUIZ_REVIEW`** | `tea_midterm` / `tea_midterm_1` | 3 段岱崙小考閱讀題組原文 (*Eco-Friendly Robot Competition & Drone Delivery*) | ✅ 完整收錄 | ✅ 完整收錄 | ✅ 完整收錄 | ✅ **100% 完工** |
-| **總計 (`v2.0.0`)** | **5 大期中考書系置頂 (共 40 實質單元)** | **175 段完整課文段落 (含必考句與點字彈卡)** | **650 組 7 大記憶錨點單字** | **81 組文法避坑卡** | **1,698 題 (含 50 題期中考 1★~10★ 晨間體操)** | ✅ **全數上線並同步 GitHub** |
-
+### [#MAN-2] 二、`01_Oxford_Discover_3` 全書圖檔與後半段 107 張補齊清冊
+- **目錄路徑**：`六年級上/課本/01_Oxford_Discover_3/`
+- **總綱檔案**：`00_Overview.md` (`[✅ 已建立]`)
+- **照片來源歸檔 (`2026-11-14`)**：
+  - 來源資料夾：`六年級上/課本/Oxford Discover_3_後半段_85 頁後照片/`（`IMG_4206.JPG` ~ `IMG_4312.JPG`，共 107 張）。
+  - 物理轉正處理：透過 `build_phase_1_assets.py` 將原始像素順時針旋轉 90° (`ROTATE_270`) 並清除殘留 EXIF 方向標記，輸出為正向直立肖像（`width < height`）至 `01_Oxford_Discover_3/images/od3_p086.jpg` ~ `od3_p192.jpg`（對照公式：`課本頁碼 = 照片編號 - 4120`）。
+- **單元涵蓋與狀態**：
+  - `Unit_01_Having_Fun.md` (U1)：`[✅ 已完工]`（含 `page_001..006.jpeg`）
+  - `Unit 13` (*Tools, Inventions*, p.128–135 / `od3_p128..135.jpg`)：`[⏳ 待 Phase 5 補完]`
+  - `Unit 14` (*Music / The Mystery*, p.136–143 / `od3_p136..143.jpg`)：`[⏳ 待 Phase 5 補完]`
+  - `Unit 15` (*Plants*, p.148–155 / `od3_p148..155.jpg`)：`[⏳ 待 Phase 5 補完]`
+  - `Unit 16` (*The Garden of Happiness*, p.156–163 / `od3_p156..163.jpg`)：`[✅ Phase 2/4 完成]` (`Unit_16_The_Garden_of_Happiness.md` + `data/units/od3_u16.js`)
 
 ---
 
-### 7. 岱崙美語 3C Quiz Week 6 & Week 7 新增 4 頁考券與全站資料庫擴充清冊 (2026-10-21 新增)
+### [#MAN-3] 三、其餘四大教材資料夾與 PDF 抽圖清冊
+1. **`02_Oxford_Discover_Grammar_3`** (`00_Overview.md` ✅)
+   - 已轉錄：`Unit_13_Making_History.md` ✅、`Unit_14_Success_Stories.md` ✅、`Unit_15_Tasty_Treats.md` ✅（U13~U15 舊版 20 題已於 Stage 21 完成瘦身，待 Phase 6 升級 KET 4D）。
+   - Week 12 新增：`Unit_16_Food_Facts.md` (`odg3_pdf_p070..073.png`, `[✅ Phase 2/4 完成]` + `data/units/odg3_u16.js`)。
+2. **`03_Reading_with_Writing_6`** (`00_Overview.md` ✅)
+   - PDF 來源：`Reading with writing_6_unit 7_10.pdf`（共 28 頁，2026-11-14 補齊抽出 `rww6_u710_pdf_p15.png` ~ `p28.png`）。
+   - 已轉錄：`Unit_05` ~ `Unit_08` ✅（待 Phase 7 升級 KET 4D）。
+   - Week 12 新增：`Unit_09_Getting_to_Know_You.md` (`p15..20.png`, `[✅ Phase 3/4 完成]` + `data/units/rww6_u09.js`)。
+3. **`04_Write_Right_3`** (`00_Overview.md` ✅)
+   - PDF 來源：`Write right 3_05_08.pdf`（共 42 頁，2026-11-14 補齊抽出 `wr3_u5_pdf_p13.png` ~ `p22.png`）。
+   - 已轉錄：`Unit_04` ✅、`Unit_05` ✅（待 Phase 8 升級 KET 4D）。
+   - Week 12 新增：`Unit_06_A_Great_Person_in_History.md` (`p09..16.png`, `[✅ Phase 3/4 完成]` + `data/units/wr3_u06.js`)。
+4. **`05_Read_and_Discover_6_Space`** (`00_Overview.md` ✅)
+   - PDF 來源：`discover 6_Read and discover_all about space.pdf`（共 53 頁，2026-11-14 補齊抽出 `space_pdf_p27.png` ~ `p30.png`）。
+   - 已轉錄：`Chapter_04_Rocks_and_Ice.md` ✅、`Chapter_05_Astronomy.md` ✅（待 Phase 8 升級 KET 4D）。
+   - Week 12 新增：`Chapter_06_Life_on_Other_Planets.md` (`space_pdf_p24..27.png` + `space_act_p46..47.png`, `[✅ Phase 3/4 完成]` + `data/units/space_ch06.js`)。
 
-| 週次 | 頁碼 | 原始影像檔 | 考查主題與大題 | 學生得分 | 四層分離 MD 檔案路徑 | 驗收狀態 |
-| :---: | :---: | :---: | :--- | :---: | :--- | :---: |
-| **Week 6** | Page 9 | `IMG_4068.HEIC` / `.jpg` | Discover 3 U15 植物生長單字 (20題: 19/20) + RWW6 U7&8 語言單字 (15題: 7/15) | 43 / 54 (整份) | [考券_六上_Week06_Page09.md](file:///C:/@植善課業/AI/英語學習網頁/六年級上/考券/六年級上_考券/考券_六上_Week06_Page09.md) | ✅ **100% 完工** |
-| **Week 6** | Page 10 | `IMG_4069.HEIC` / `.jpg` | Write Right 3 U5《If I Had 3000 Dollars》14 處挑錯 (5/7) + Grammar 3 數量詞 (12/12) | 同上 | [考券_六上_Week06_Page10.md](file:///C:/@植善課業/AI/英語學習網頁/六年級上/考券/六年級上_考券/考券_六上_Week06_Page10.md) | ✅ **100% 完工** |
-| **Week 7** | Page 11 | `IMG_4070.HEIC` / `.jpg` | Grammar 3 U15 容器量詞看圖造句 (10題: 17.5/20，`seven slices of bread`) | 41.5 / 50 (整份) | [考券_六上_Week07_Page11.md](file:///C:/@植善課業/AI/英語學習網頁/六年級上/考券/六年級上_考券/考券_六上_Week07_Page11.md) | ✅ **100% 完工** |
-| **Week 7** | Page 12 | `IMG_4071.HEIC` / `.jpg` | Grammar 3 U13 倒裝附和 (5題: 8/10) + Grammar 3 U14 三級副詞比較長句 (5題: 16/20) | 同上 | [考券_六上_Week07_Page12.md](file:///C:/@植善課業/AI/英語學習網頁/六年級上/考券/六年級上_考券/考券_六上_Week07_Page12.md) | ✅ **100% 完工** |
-| **總計更新 (`v2.1`)** | **W2~W7 全 10 頁考卷** | `midterm_data.js` (`TEA_QUIZ_REVIEW`: 5 篇 42 句 / 33 單字 / 27 抓錯 / 55 測驗) + `english_data.js` (`664 單字 / 82 文法 / 160 段落 / 1,711 題`) | ✅ **全數上線並同步 GitHub** | - | [00_Overview_歷史考券.md](file:///C:/@植善課業/AI/英語學習網頁/六年級上/考券/六年級上_考券/00_Overview_歷史考券.md) | ✅ **100% 完工** |
+---
+
+### [#MAN-4] 四、歷史考券 (`W2~W7`) 與舊資料庫清冊
+- **既有資料庫參考**：`Tiger 5th 2ndBooks.xlsx`（600 單字 + 1,612 題基準庫，轉譯匯入 `english_data.js`）。
+- **歷史考券 (`六年級上/考試考卷/` & `六年級上/考券/`)**：
+  - `00_Overview_歷史考券.md` ✅ + `考券_六上_Week02_Page01~02.md`、`Week04_Page05~06.md`、`Week05_Page07~08.md`、`Week06_Page09~10.md`、`Week07_Page11~12.md` 共 10 頁 ✅。
+  - 待後續排程 (`Phase 5~8`)：將期中 11 課本單元 + OD3 U13~U15 全面模組化至 `data/units/*.js` 並對標 20 題 KET 4D 詳解格式。
+
+---
+
+### [#MAN-5] 五、Phase 9~10 全庫 368 道聽寫零洩漏檢核與跨題富化資產清冊 (2026-11-14 新增)
+- **Week 12 聽寫語幹去洩漏**：`odg3_u16.js`（修補 `ingredients` 提示洩漏）、`od3_u16.js`（17 題語幹/變化形遮罩）、`rww6_u09.js`（14 題遮罩）、`space_ch06.js`（14 題遮罩）、`wr3_u06.js`（14 題借由 `vocab_card.context_eng` 遮罩補全例句），合計 65 題全數零洩漏。
+- **`TEA_QUIZ_REVIEW` 歷史真卷淨化與句寫提示**：
+  - `TEA_W5_P07_A_Sent01..08`（8 題長篇聽寫）：補齊中文單元情境指引為 `target_chi`。
+  - 其餘 29 題 `TEA_W2/W4/W6` 聽寫題之 `masked_example_chi` 與 `TEA_W6_P09_B_5` 之 `target_pos` 完成答案遮罩，消滅 `midterm_data.js` 內 30 筆跨欄位外露。
+- **獨立句意自足化 (`RWW6_U06` & `RWW6_U08`)**：於 `build_exam_bank.js` 建立 `LINE_EXCERPT_LOOKUP`，為 `"In line X..."` 題型注入 `passage_excerpt` 原句摘錄與 `definition_clue` 提示。
+- **全庫驗證覆蓋統計**：`verify_phase_9.js` 與 `verify_phase_10.js` 實測 `midterm_data.js`（18 單元）與 `english_data.js`（44 單元）共 **2,580** 筆題目渲染檢驗項，其中 `368` 道 `spelling_listen`、`238` 道 `paper_rewrite`、`48` 道含 `cue_pill` 手寫題與 `161` 道底線挖空選擇/填空題皆 0 失敗、0 洩漏。

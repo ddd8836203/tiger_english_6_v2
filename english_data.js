@@ -1,37 +1,38 @@
 /**
- * 六年級英語特訓系統 — 全域資料層 (v2.0 六上期中考 12 單元深度整合版)
- * 包含：7大記憶錨點單字卡、100% 課本完整原文與必考句標註、文法避坑卡、雙軌測驗與 50 題晨間體操秒殺題庫
+ * 六年級英語特訓系統 — 全域資料層 (v2.2.0 Week 12 KET-4D 整合版)
+ * 包含：7大記憶錨點單字卡、100% 課本完整原文、KET-4D 四維詳解與衍伸學習重點
  */
 const ENGLISH_DATA = {
   "metadata": {
-    "version": "2.0.0-midterm-unified",
-    "generated_at": "2026-10-20",
+    "version": "2.2.0-week12-4d",
+    "generated_at": "2026-11-14",
     "total_books": 7,
-    "total_units": 40,
-    "total_vocab": 664,
-    "total_grammar": 82,
-    "total_reading": 160,
-    "total_quizzes": 1711
+    "total_units": 44,
+    "total_vocab": 715,
+    "total_grammar": 97,
+    "total_reading": 172,
+    "total_quizzes": 1807,
+    "week12_quizzes": 156
   },
   "books": [
     {
       "book_id": "gra3",
-      "book_name": "📘 Oxford Discover Grammar 3 (六上期中考 U13~U15)",
+      "book_name": "📘 Oxford Discover Grammar 3 (含 Week 12 U16 & U13~U15)",
       "is_midterm": true
     },
     {
       "book_id": "wr3",
-      "book_name": "📝 Write Right Level 3 (六上期中考 U4~U5)",
+      "book_name": "📝 Write Right Level 3 (含 Week 12 U6 & U4~U5)",
       "is_midterm": true
     },
     {
       "book_id": "rw6",
-      "book_name": "📖 Reading with Writing Level 6 (六上期中考 U5~U8)",
+      "book_name": "📖 Reading with Writing Level 6 (含 Week 12 U9 & U5~U8)",
       "is_midterm": true
     },
     {
       "book_id": "rd6",
-      "book_name": "🚀 Read and Discover 6: Space (六上期中考 Ch4~Ch5)",
+      "book_name": "🚀 Read and Discover 6: Space (含 Week 12 Ch6 & Ch4~Ch5)",
       "is_midterm": true
     },
     {
@@ -41,8 +42,8 @@ const ENGLISH_DATA = {
     },
     {
       "book_id": "od3",
-      "book_name": "📚 Oxford Discover 3 (延伸單元 U7~U8)",
-      "is_midterm": false
+      "book_name": "📚 Oxford Discover 3 (含 Week 12 U16 & 延伸 U7~U8)",
+      "is_midterm": true
     },
     {
       "book_id": "tiger_5b",
@@ -268,13 +269,6 @@ const ENGLISH_DATA = {
     },
     {
       "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "unit_title": "Unit 16 \"Food Facts\"（形容詞搭配介系詞 Adjectives with Prepositions)",
-      "big_question": "",
-      "is_midterm": false
-    },
-    {
-      "book_id": "gra3",
       "unit_id": "gra3_17",
       "unit_title": "Unit 17 \"Staying Safe\"（祈使句 Imperatives &amp; 動態介系詞 Prepositions of Movement）",
       "big_question": "",
@@ -342,6 +336,93 @@ const ENGLISH_DATA = {
       "unit_title": "Unit 2",
       "big_question": "",
       "is_midterm": false
+    },
+    {
+      "book_id": "gra3",
+      "unit_id": "gra3_16",
+      "unit_title": "🚨 Week 12 · Unit 16: Food Facts (Adjectives with Prepositions)",
+      "big_question": "How can we express feelings & evaluations with Adjectives + Prepositions?",
+      "is_midterm": true,
+      "is_week12": true,
+      "midterm_unit_id": "ODG3_U16",
+      "page_images": [
+        "六年級上/課本/02_Oxford_Discover_Grammar_3/images/odg3_pdf_p070.png",
+        "六年級上/課本/02_Oxford_Discover_Grammar_3/images/odg3_pdf_p071.png",
+        "六年級上/課本/02_Oxford_Discover_Grammar_3/images/odg3_pdf_p072.png",
+        "六年級上/課本/02_Oxford_Discover_Grammar_3/images/odg3_pdf_p073.png"
+      ]
+    },
+    {
+      "book_id": "od3",
+      "unit_id": "od3_16",
+      "unit_title": "🚨 Week 12 · Unit 16: The Garden of Happiness",
+      "big_question": "Why do we need plants? — Community Garden, Plot, Synonyms & Location Phrases",
+      "is_midterm": true,
+      "is_week12": true,
+      "midterm_unit_id": "OD3_U16",
+      "page_images": [
+        "六年級上/課本/01_Oxford_Discover_3/images/od3_p156.jpg",
+        "六年級上/課本/01_Oxford_Discover_3/images/od3_p157.jpg",
+        "六年級上/課本/01_Oxford_Discover_3/images/od3_p158.jpg",
+        "六年級上/課本/01_Oxford_Discover_3/images/od3_p159.jpg",
+        "六年級上/課本/01_Oxford_Discover_3/images/od3_p160.jpg",
+        "六年級上/課本/01_Oxford_Discover_3/images/od3_p161.jpg",
+        "六年級上/課本/01_Oxford_Discover_3/images/od3_p162.jpg",
+        "六年級上/課本/01_Oxford_Discover_3/images/od3_p163.jpg"
+      ]
+    },
+    {
+      "book_id": "rw6",
+      "unit_id": "rw6_9",
+      "unit_title": "🚨 Week 12 · Unit 9: Getting to Know You (A Trip to Earth)",
+      "big_question": "How do words and actions help us analyze characters and personalities?",
+      "is_midterm": true,
+      "is_week12": true,
+      "midterm_unit_id": "RWW6_U09",
+      "page_images": [
+        "六年級上/課本/03_Reading_with_Writing_6/images/rww6_u710_pdf_p15.png",
+        "六年級上/課本/03_Reading_with_Writing_6/images/rww6_u710_pdf_p16.png",
+        "六年級上/課本/03_Reading_with_Writing_6/images/rww6_u710_pdf_p17.png",
+        "六年級上/課本/03_Reading_with_Writing_6/images/rww6_u710_pdf_p18.png",
+        "六年級上/課本/03_Reading_with_Writing_6/images/rww6_u710_pdf_p19.png",
+        "六年級上/課本/03_Reading_with_Writing_6/images/rww6_u710_pdf_p20.png"
+      ]
+    },
+    {
+      "book_id": "rd6",
+      "unit_id": "rd6_6",
+      "unit_title": "🚨 Week 12 · Chapter 6: Life on Other Planets",
+      "big_question": "Could there be life on Mars, Europa, Titan, or exoplanets in other solar systems?",
+      "is_midterm": true,
+      "is_week12": true,
+      "midterm_unit_id": "SPACE_CH06",
+      "page_images": [
+        "六年級上/課本/05_Read_and_Discover_6_Space/images/space_pdf_p24.png",
+        "六年級上/課本/05_Read_and_Discover_6_Space/images/space_pdf_p25.png",
+        "六年級上/課本/05_Read_and_Discover_6_Space/images/space_pdf_p26.png",
+        "六年級上/課本/05_Read_and_Discover_6_Space/images/space_pdf_p27.png",
+        "六年級上/課本/05_Read_and_Discover_6_Space/images/space_act_p46.png",
+        "六年級上/課本/05_Read_and_Discover_6_Space/images/space_act_p47.png"
+      ]
+    },
+    {
+      "book_id": "wr3",
+      "unit_id": "wr3_6",
+      "unit_title": "🚨 Week 12 · Unit 06: A Great Person in History",
+      "big_question": "How do we write a well-organized biography essay about a person we admire?",
+      "is_midterm": true,
+      "is_week12": true,
+      "midterm_unit_id": "WR3_U06",
+      "page_images": [
+        "六年級上/課本/04_Write_Right_3/images/wr3_u5_pdf_p09.png",
+        "六年級上/課本/04_Write_Right_3/images/wr3_u5_pdf_p10.png",
+        "六年級上/課本/04_Write_Right_3/images/wr3_u5_pdf_p11.png",
+        "六年級上/課本/04_Write_Right_3/images/wr3_u5_pdf_p12.png",
+        "六年級上/課本/04_Write_Right_3/images/wr3_u5_pdf_p13.png",
+        "六年級上/課本/04_Write_Right_3/images/wr3_u5_pdf_p14.png",
+        "六年級上/課本/04_Write_Right_3/images/wr3_u5_pdf_p15.png",
+        "六年級上/課本/04_Write_Right_3/images/wr3_u5_pdf_p16.png"
+      ]
     }
   ],
   "reading_content": [
@@ -1251,51 +1332,6 @@ const ENGLISH_DATA = {
       "sequence": 111,
       "eng": "Modern instruments aren't as easy to play as the earliest instruments, but they make great sounds! Modern music is as interesting as traditional or classical music, because it is part of our amazing musical history.",
       "chi": "現代樂器不像最早的樂器那麼容易演奏，但它們能發出很棒的聲音！現代音樂和傳統音樂或古典音樂一樣有趣，因為它是我們驚人音樂歷史的一部分。",
-      "exp_eng": "",
-      "exp_chi": ""
-    },
-    {
-      "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "sequence": 149,
-      "eng": "Food labels on packages, cartons, and cans give us information about the foods we buy. Hana asks Kamil if he is interested in eating healthily. Kamil says it is silly of people to eat lots of junk food.",
-      "chi": "包裝、紙盒和罐頭上的食品標籤為我們提供所購買食品的資訊。Hana 問 Kamil 是否對健康飲食感興趣。Kamil 說人們吃很多垃圾食物是很傻的。",
-      "exp_eng": "",
-      "exp_chi": ""
-    },
-    {
-      "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "sequence": 150,
-      "eng": "Hana is worried about the amount of junk food people eat because it is full of fat and chemicals. Kamil is angry about the number of chemicals food companies put in products, saying it is bad of them to use so many chemicals.",
-      "chi": "Hana 擔心人們食用的垃圾食物數量，因為它充滿了脂肪和化學物質。Kamil 對食品公司在產品中添加大量化學物質感到憤怒，認為他們使用這麼多化學物質是很糟糕的。",
-      "exp_eng": "",
-      "exp_chi": ""
-    },
-    {
-      "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "sequence": 151,
-      "eng": "Hana agrees that she is not happy about that either, so people have to read food labels carefully. However, Kamil is excited about the food for their party.",
-      "chi": "Hana 也同意她對此感到不高興，所以人們現在必須非常仔細地閱讀食品標籤。不過，Kamil 對他們派對的食物感到很興奮。",
-      "exp_eng": "",
-      "exp_chi": ""
-    },
-    {
-      "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "sequence": 152,
-      "eng": "Lisa, who is eight years old, made a cake with her sister yesterday. Lisa is not very good at cooking, but her sister is interested in cooking and makes great things. Lisa was excited about making the cake and wanted her family to be surprised by how delicious it was.",
-      "chi": "八歲的 Lisa 昨天和她姐姐一起做了一個蛋糕。Lisa 不太擅長做飯，但她姐姐對做飯很感興趣，而且能做出很棒的東西。Lisa 對做蛋糕感到很興奮，希望家人對蛋糕的美味感到驚喜。",
-      "exp_eng": "",
-      "exp_chi": ""
-    },
-    {
-      "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "sequence": 153,
-      "eng": "Lisa was worried about burning the cake, so she watched it all the time in the oven. But when her sister tried a piece, it was full of salt! Lisa had given her sister a cup of salt instead of sugar. It was silly of her, and she was sorry about making that mistake, but her sister thought it was funny.",
-      "chi": "Lisa 擔心把蛋糕烤焦，所以一直看著烤箱裡的蛋糕。但當她姐姐嘗了一小塊時，裡面竟充滿了鹽！Lisa 給了她姐姐一杯鹽而不是一杯糖。她真是太傻了，她對犯了這個錯誤感到抱歉，但她姐姐覺得這很有趣。",
       "exp_eng": "",
       "exp_chi": ""
     },
@@ -2259,6 +2295,1271 @@ const ENGLISH_DATA = {
       ],
       "exp_eng": "",
       "exp_chi": ""
+    },
+    {
+      "book_id": "gra3",
+      "unit_id": "gra3_16",
+      "sequence": 1,
+      "section_title": "食品標籤與健康生活 (Food Labels and Healthy Eating)",
+      "eng": "Food labels on packages, cartons, and cans give us information about the foods we buy. Are you worried about eating lots of chemicals? You can read the list of ingredients. People are often surprised by how many chemicals are in some products. You should also read the label if you are afraid of eating something that you are allergic to. If you are interested in eating healthily, you can find out how much salt, fat, etc., is in a product. Don't buy it if you are not happy with it. Are you curious about how to cook the product? Read the instructions on the label. If you are not sure about what a product is, you can look at the picture!",
+      "chi": "包裝袋、紙盒和罐頭上的食品標籤為我們提供了購買食品的重要資訊。你是否擔心吃進太多化學添加物？你可以閱讀成分清單。人們常常對某些產品中含有如此多的化學物質感到驚訝。如果你害怕吃到自己會過敏的物質，你也應該仔細閱讀標籤。如果你對健康飲食感興趣，你可以查出產品中含有多少鹽分、脂肪等。如果你對該項食品不滿意，就不要購買。你是否對如何烹煮這項產品感到好奇？請閱讀標籤上的烹飪步驟指示。如果你不確定某個產品究竟是什麼，你可以看看包裝上的圖片！",
+      "sentences": [
+        {
+          "en": "Food labels on packages, cartons, and cans give us information about the foods we buy.",
+          "zh": "包裝袋、紙盒和罐頭上的食品標籤為我們提供了購買食品的重要資訊。"
+        },
+        {
+          "en": "Are you worried about eating lots of chemicals?",
+          "zh": "你是否擔心吃進太多化學添加物？"
+        },
+        {
+          "en": "You can read the list of ingredients.",
+          "zh": "你可以閱讀成分清單。"
+        },
+        {
+          "en": "People are often surprised by how many chemicals are in some products.",
+          "zh": "人們常常對某些產品中含有如此多的化學物質感到驚訝。"
+        },
+        {
+          "en": "You should also read the label if you are afraid of eating something that you are allergic to.",
+          "zh": "如果你害怕吃到自己會過敏的物質，你也應該仔細閱讀標籤。"
+        },
+        {
+          "en": "If you are interested in eating healthily, you can find out how much salt, fat, etc., is in a product.",
+          "zh": "如果你對健康飲食感興趣，你可以查出產品中含有多少鹽分、脂肪等。"
+        },
+        {
+          "en": "Don't buy it if you are not happy with it.",
+          "zh": "如果你對該項食品不滿意，就不要購買。"
+        },
+        {
+          "en": "Are you curious about how to cook the product?",
+          "zh": "你是否對如何烹煮這項產品感到好奇？"
+        },
+        {
+          "en": "Read the instructions on the label.",
+          "zh": "請閱讀標籤上的烹飪步驟指示。"
+        },
+        {
+          "en": "If you are not sure about what a product is, you can look at the picture!",
+          "zh": "如果你不確定某個產品究竟是什麼，你可以看看包裝上的圖片！"
+        }
+      ],
+      "key_sentences": [
+        {
+          "sentence": "Are you worried about eating lots of chemicals?",
+          "tag": "⭐ Week 12 核心考點",
+          "note": "worried about 後接動名詞 eating，表示對特定情況或問題感到憂慮擔憂。",
+          "point": "worried about 後接動名詞 eating，表示對特定情況或問題感到憂慮擔憂。"
+        },
+        {
+          "sentence": "People are often surprised by how many chemicals are in some products.",
+          "tag": "⭐ Week 12 核心考點",
+          "note": "surprised by 後接受詞子句，表示對某項事實或數據感到震驚或意外。",
+          "point": "surprised by 後接受詞子句，表示對某項事實或數據感到震驚或意外。"
+        },
+        {
+          "sentence": "If you are interested in eating healthily, you can find out how much salt, fat, etc., is in a product.",
+          "tag": "⭐ Week 12 核心考點",
+          "note": "interested in 後接動名詞 eating，表示對某項習慣或領域產生濃厚興趣。",
+          "point": "interested in 後接動名詞 eating，表示對某項習慣或領域產生濃厚興趣。"
+        },
+        {
+          "sentence": "Don't buy it if you are not happy with it.",
+          "tag": "⭐ Week 12 核心考點",
+          "note": "happy with 接具體物品代名詞 it，表示對某個產品的品質或狀態感到滿意。",
+          "point": "happy with 接具體物品代名詞 it，表示對某個產品的品質或狀態感到滿意。"
+        }
+      ],
+      "exp_eng": "",
+      "exp_chi": "",
+      "is_week12": true
+    },
+    {
+      "book_id": "gra3",
+      "unit_id": "gra3_16",
+      "sequence": 2,
+      "section_title": "哈娜與卡米爾的對話：垃圾食物與食品成分 (Hana & Kamil: Food Labels Dialogue)",
+      "eng": "Hana: Are you interested in eating healthily, Kamil? Kamil: Of course. I think it is silly of people to eat lots of junk food. Hana: Me too. I am worried about the amount of junk food people eat. Junk food is full of fat and chemicals. Kamil: I know. I am angry about the number of chemicals that food companies put in their products. It is very bad of them to use a lot of chemicals. Hana: I know. I am not happy about that, either. We have to read food labels very carefully these days. Kamil: We do. But I am excited about the food for our party!",
+      "chi": "哈娜：卡米爾，你對健康飲食感興趣嗎？卡米爾：當然。我覺得人們吃很多垃圾食物真是太糊塗了。哈娜：我也是。我很擔心大家吃進過多垃圾食物的量。垃圾食物充滿了脂肪和化學物質。卡米爾：我知道。我對食品公司在產品中添加如此多化學成分感到非常憤怒。他們使用大量化學添加物真是太要不得了。哈娜：我知道，我對此也很不滿。我們這些日子真的必須非常仔細閱讀食品標籤。卡米爾：確實如此。不過我對我們派對的美味食物感到超級興奮！",
+      "sentences": [
+        {
+          "en": "Hana: Are you interested in eating healthily, Kamil?",
+          "zh": "哈娜：卡米爾，你對健康飲食感興趣嗎？"
+        },
+        {
+          "en": "Kamil: Of course. I think it is silly of people to eat lots of junk food.",
+          "zh": "卡米爾：當然。我覺得人們吃很多垃圾食物真是太糊塗了。"
+        },
+        {
+          "en": "Hana: Me too. I am worried about the amount of junk food people eat.",
+          "zh": "哈娜：我也是。我很擔心大家吃進過多垃圾食物的量。"
+        },
+        {
+          "en": "Junk food is full of fat and chemicals.",
+          "zh": "垃圾食物充滿了脂肪和化學物質。"
+        },
+        {
+          "en": "Kamil: I know. I am angry about the number of chemicals that food companies put in their products.",
+          "zh": "卡米爾：我知道。我對食品公司在產品中添加如此多化學成分感到非常憤怒。"
+        },
+        {
+          "en": "It is very bad of them to use a lot of chemicals.",
+          "zh": "他們使用大量化學添加物真是太要不得了。"
+        },
+        {
+          "en": "Hana: I know. I am not happy about that, either.",
+          "zh": "哈娜：我知道，我對此也很不滿。"
+        },
+        {
+          "en": "We have to read food labels very carefully these days.",
+          "zh": "我們這些日子真的必須非常仔細閱讀食品標籤。"
+        },
+        {
+          "en": "Kamil: We do. But I am excited about the food for our party!",
+          "zh": "卡米爾：確實如此。不過我對我們派對的美味食物感到超級興奮！"
+        }
+      ],
+      "key_sentences": [
+        {
+          "sentence": "I think it is silly of people to eat lots of junk food.",
+          "tag": "⭐ Week 12 核心考點",
+          "note": "It is silly of someone to do sth 用來評價某人的行為糊塗愚昧，不可誤用 for 或 with。",
+          "point": "It is silly of someone to do sth 用來評價某人的行為糊塗愚昧，不可誤用 for 或 with。"
+        },
+        {
+          "sentence": "Junk food is full of fat and chemicals.",
+          "tag": "⭐ Week 12 核心考點",
+          "note": "be full of 為固定搭配，表示充滿某種成分，相當於 be filled with。",
+          "point": "be full of 為固定搭配，表示充滿某種成分，相當於 be filled with。"
+        },
+        {
+          "sentence": "It is very bad of them to use a lot of chemicals.",
+          "tag": "⭐ Week 12 核心考點",
+          "note": "It is bad of someone to do sth 用於道德或行為評價，介系詞固定使用 of。",
+          "point": "It is bad of someone to do sth 用於道德或行為評價，介系詞固定使用 of。"
+        }
+      ],
+      "exp_eng": "",
+      "exp_chi": "",
+      "is_week12": true
+    },
+    {
+      "book_id": "gra3",
+      "unit_id": "gra3_16",
+      "sequence": 3,
+      "section_title": "麗莎烤蛋糕的鹽糖烏龍故事 (Lisa's Salty Cake Adventure)",
+      "eng": "Hi! My name is Lisa and I am eight. Yesterday, my sister and I made a cake. I am not very good at cooking, but my sister is interested in cooking and she makes great things! I was excited about making the cake. I wanted my family to be surprised by how delicious it was. I gave my sister the ingredients and she mixed them together in a big bowl. We put the cake in the oven. I was worried about burning the cake, so I watched it all the time. When the cake was ready, my sister tried a little piece. \"Ugh!\" she said. \"It is full of salt!\" I could not believe it. I had given my sister a cup of salt, not a cup of sugar. That was very silly of me. I was very sorry about making that mistake, but my sister thought it was funny!",
+      "chi": "嗨！我叫麗莎，今年八歲。昨天我和姊姊一起做了一個蛋糕。我不太擅長做菜，但我姊姊對烹飪很有興趣，而且她做的點心超棒！我對做蛋糕感到非常興奮。我希望家人會對蛋糕有多美味感到驚訝。我把食材拿給姊姊，她在一個大碗裡把所有材料混合拌勻。我們把蛋糕送進烤箱。我一直擔心蛋糕會烤焦，所以眼睛緊盯著它看。當蛋糕烤好時，姊姊嚐了一小塊。「呃！」她大叫：「這滿滿都是鹽巴！」我簡直不敢相信。我竟然拿了一杯鹽巴給姊姊，而不是一杯糖。我真是太糊塗了！我對犯下這個錯誤感到非常抱歉，但我姊姊卻覺得這件事太有趣好笑了！",
+      "sentences": [
+        {
+          "en": "Hi! My name is Lisa and I am eight.",
+          "zh": "嗨！我叫麗莎，今年八歲。"
+        },
+        {
+          "en": "Yesterday, my sister and I made a cake.",
+          "zh": "昨天我和姊姊一起做了一個蛋糕。"
+        },
+        {
+          "en": "I am not very good at cooking, but my sister is interested in cooking and she makes great things!",
+          "zh": "我不太擅長做菜，但我姊姊對烹飪很有興趣，而且她做的點心超棒！"
+        },
+        {
+          "en": "I was excited about making the cake.",
+          "zh": "我對做蛋糕感到非常興奮。"
+        },
+        {
+          "en": "I wanted my family to be surprised by how delicious it was.",
+          "zh": "我希望家人會對蛋糕有多美味感到驚訝。"
+        },
+        {
+          "en": "I gave my sister the ingredients and she mixed them together in a big bowl.",
+          "zh": "我把食材拿給姊姊，她在一個大碗裡把所有材料混合拌勻。"
+        },
+        {
+          "en": "We put the cake in the oven.",
+          "zh": "我們把蛋糕送進烤箱。"
+        },
+        {
+          "en": "I was worried about burning the cake, so I watched it all the time.",
+          "zh": "我一直擔心蛋糕會烤焦，所以眼睛緊盯著它看。"
+        },
+        {
+          "en": "When the cake was ready, my sister tried a little piece.",
+          "zh": "當蛋糕烤好時，姊姊嚐了一小塊。"
+        },
+        {
+          "en": "\"Ugh!\" she said. \"It is full of salt!\"",
+          "zh": "「呃！」她大叫：「這滿滿都是鹽巴！」"
+        },
+        {
+          "en": "I could not believe it.",
+          "zh": "我簡直不敢相信。"
+        },
+        {
+          "en": "I had given my sister a cup of salt, not a cup of sugar.",
+          "zh": "我竟然拿了一杯鹽巴給姊姊，而不是一杯糖。"
+        },
+        {
+          "en": "That was very silly of me.",
+          "zh": "我真是太糊塗了。"
+        },
+        {
+          "en": "I was very sorry about making that mistake, but my sister thought it was funny!",
+          "zh": "我對犯下這個錯誤感到非常抱歉，但我姊姊卻覺得這件事太有趣好笑了！"
+        }
+      ],
+      "key_sentences": [
+        {
+          "sentence": "I am not very good at cooking, but my sister is interested in cooking.",
+          "tag": "⭐ Week 12 核心考點",
+          "note": "be good at + V-ing 表示擅長某才藝；be interested in + V-ing 表示對某事物有興趣。",
+          "point": "be good at + V-ing 表示擅長某才藝；be interested in + V-ing 表示對某事物有興趣。"
+        },
+        {
+          "sentence": "I wanted my family to be surprised by how delicious it was.",
+          "tag": "⭐ Week 12 核心考點",
+          "note": "be surprised by + 名詞子句，表示對某項事實或情況感到驚訝。",
+          "point": "be surprised by + 名詞子句，表示對某項事實或情況感到驚訝。"
+        },
+        {
+          "sentence": "I was worried about burning the cake, so I watched it all the time.",
+          "tag": "⭐ Week 12 核心考點",
+          "note": "be worried about + 動名詞 burning，說明心中憂慮的事件。",
+          "point": "be worried about + 動名詞 burning，說明心中憂慮的事件。"
+        },
+        {
+          "sentence": "That was very silly of me to give her salt instead of sugar.",
+          "tag": "⭐ Week 12 核心考點",
+          "note": "That was silly of me 屬於對自身粗心行為的感嘆評價句型。",
+          "point": "That was silly of me 屬於對自身粗心行為的感嘆評價句型。"
+        }
+      ],
+      "exp_eng": "",
+      "exp_chi": "",
+      "is_week12": true
+    },
+    {
+      "book_id": "od3",
+      "unit_id": "od3_16",
+      "sequence": 1,
+      "section_title": "The Garden of Happiness: Part 1 — Summer Sunflower (夏日向日葵盛放)",
+      "eng": "A young girl named Marisol plants a single seed in the Garden of Happiness, a small community garden in her city. She waters it daily, and it grows and grows. Marisol is curious about her plant. What kind of plant is it? Meanwhile, a group of teenagers wants to paint a mural nearby. They aren't sure what to paint. One morning, Marisol saw an amazing sight from halfway down the block. She ran the rest of the way. Standing higher than all the plants and vines in the garden was a flower as big as a plate! Her bud had turned into petals of yellow and gold. \"A sunflower!\" Mrs. Anderson exclaimed as she pushed her shopping cart by. \"Reminds me of when I was a girl.\" The flower was a glowing circle, brighter than a yellow taxi. A flower of sunshine, Marisol thought, the happiest plant in the Garden of Happiness. All summer long, it made the people on the street stop and smile. Soon the air became cool and crisp with autumn. Mr. Castro picked the last of his tomatoes. Mr. Singh carried away a basket full of beans.",
+      "chi": "一位名叫 Marisol 的小女孩在城市裡一座名為「幸福花園」的社區小花園裡種下了一顆種子。她每天給它澆水，它長啊長啊。Marisol 對她的植物充滿好奇。這到底是哪種植物呢？與此同時，附近有一群青少年想畫一幅壁畫，但他們拿不定主意要畫什麼。某天早晨，Marisol 在半個街區外就看見了一幅驚人的景象。她一路飛奔過去。一朵像盤子一樣大的花，高高佇立在花園所有植物和藤蔓之上！花苞已經綻放成金黃色的花瓣。「一朵向日葵！」Anderson 太太推著超市手推車經過時驚呼道。「這讓我想起了我小時候的時光。」這朵花就像一個發光的圓盤，比黃色計程車還要明亮。Marisol 心想，這是一朵陽光之花，是幸福花園裡最快樂的植物。整整一個夏天，它讓街上經過的人們紛紛停下腳步微笑。不久，空氣隨著秋天的到來變得涼爽而清脆。Castro 先生採收了最後的番茄。Singh 先生提走了一滿籃的豆子。",
+      "sentences": [
+        {
+          "en": "A young girl named Marisol plants a single seed in the Garden of Happiness, a small community garden in her city.",
+          "zh": "一位名叫 Marisol 的小女孩在她城市裡一座名為「幸福花園」的社區小花園中種下了一顆種子。"
+        },
+        {
+          "en": "She waters it daily, and it grows and grows.",
+          "zh": "她每天為它澆水，它長啊長啊。"
+        },
+        {
+          "en": "Marisol is curious about her plant.",
+          "zh": "Marisol 對她的植物充滿好奇。"
+        },
+        {
+          "en": "What kind of plant is it?",
+          "zh": "這到底是什麼植物呢？"
+        },
+        {
+          "en": "Meanwhile, a group of teenagers wants to paint a mural nearby.",
+          "zh": "與此同時，附近有一群青少年想要畫一幅壁畫。"
+        },
+        {
+          "en": "They aren't sure what to paint.",
+          "zh": "他們還不確定要畫什麼。"
+        },
+        {
+          "en": "One morning, Marisol saw an amazing sight from halfway down the block.",
+          "zh": "某天早晨，Marisol 在半個街區外看見了一幅驚人的景象。"
+        },
+        {
+          "en": "She ran the rest of the way.",
+          "zh": "她一路飛奔跑完剩下的路。"
+        },
+        {
+          "en": "Standing higher than all the plants and vines in the garden was a flower as big as a plate!",
+          "zh": "佇立在花園所有植物和藤蔓之上的，是一朵像盤子一樣大的花！"
+        },
+        {
+          "en": "Her bud had turned into petals of yellow and gold.",
+          "zh": "她的花苞已經綻放成金黃色的花瓣。"
+        },
+        {
+          "en": "\"A sunflower!\" Mrs. Anderson exclaimed as she pushed her shopping cart by.",
+          "zh": "「一朵向日葵！」Anderson 太太推著手推車經過時驚呼道。"
+        },
+        {
+          "en": "\"Reminds me of when I was a girl.\"",
+          "zh": "「這讓我想起了我還是個小女孩時的時光。」"
+        },
+        {
+          "en": "The flower was a glowing circle, brighter than a yellow taxi.",
+          "zh": "這朵花是一個發光的圓圈，比黃色計程車還要耀眼明亮。"
+        },
+        {
+          "en": "A flower of sunshine, Marisol thought, the happiest plant in the Garden of Happiness.",
+          "zh": "一朵陽光之花，Marisol 心想，是幸福花園中最快樂的植物。"
+        },
+        {
+          "en": "All summer long, it made the people on the street stop and smile.",
+          "zh": "整個夏天，它讓街道上的行人紛紛停下腳步微笑。"
+        },
+        {
+          "en": "Soon the air became cool and crisp with autumn.",
+          "zh": "不久，空氣隨著秋天的到來變得涼爽而清新。"
+        },
+        {
+          "en": "Mr. Castro picked the last of his tomatoes.",
+          "zh": "Castro 先生採摘了他最後幾顆番茄。"
+        },
+        {
+          "en": "Mr. Singh carried away a basket full of beans.",
+          "zh": "Singh 先生提走了一滿籃的豆子。"
+        }
+      ],
+      "key_sentences": [
+        {
+          "sentence": "Marisol is curious about her plant.",
+          "tag": "⭐ Week 12 核心考點",
+          "note": "核心文法：be curious about 對某事感到好奇，介系詞固定搭配 about，不可誤用 at。",
+          "point": "核心文法：be curious about 對某事感到好奇，介系詞固定搭配 about，不可誤用 at。"
+        },
+        {
+          "sentence": "Standing higher than all the plants and vines in the garden was a flower as big as a plate!",
+          "tag": "⭐ Week 12 核心考點",
+          "note": "經典倒裝修辭：地方副詞與分詞片語置於句首加強語氣，as big as a plate 運用明喻修辭。",
+          "point": "經典倒裝修辭：地方副詞與分詞片語置於句首加強語氣，as big as a plate 運用明喻修辭。"
+        },
+        {
+          "sentence": "All summer long, it made the people on the street stop and smile.",
+          "tag": "⭐ Week 12 核心考點",
+          "note": "使役動詞句型：make + 受詞 + 原形動詞 (stop and smile)，不可加 to。",
+          "point": "使役動詞句型：make + 受詞 + 原形動詞 (stop and smile)，不可加 to。"
+        }
+      ],
+      "exp_eng": "",
+      "exp_chi": "",
+      "is_week12": true
+    },
+    {
+      "book_id": "od3",
+      "unit_id": "od3_16",
+      "sequence": 2,
+      "section_title": "The Garden of Happiness: Part 2 — Autumn Loss & Mural Surprise (秋季凋零與壁畫驚喜)",
+      "eng": "Mrs. Willie Mae Washington dug up orange potatoes. \"I can almost smell my sweet potato pie.\" She winked at Marisol. \"I'm gonna save an extra big slice for a good little gardener I know.\" But something terrible was happening to Marisol's flower. Its leaves were turning brown and dry. \"My flower of sunshine is sick,\" Marisol cried. \"What should I do?\" \"Oh, child,\" Mrs. Willie Mae Washington said. \"Its season is over. There's a time to bloom and a time to die.\" \"No! I don't want my flower to die!\" \"Mi cariño, don't cry,\" Mrs. Rodriguez said. \"That's the way of a garden. You must save the seeds and plant again next spring.\" Marisol was too sad to go to the empty lot anymore. For a whole week, she couldn't even look down the block where her beautiful flower used to be. Then one day, she heard people calling her name. \"Marisol! Come quick!\" \"Marisol! Apurate! Hurry!\" A golden haze shone on the street. There was a big crowd, like on a holiday. Music from the bodega was loud and bright. And what she saw made Marisol laugh and dance and clap her hands.",
+      "chi": "Willie Mae Washington 太太挖出了橘色的地瓜。「我幾乎都能聞到我的地瓜派香味了。」她對 Marisol 眨了眨眼。「我要為我認識的一位優秀小園丁留一塊特大號的派。」但可怕的事情發生在 Marisol 的花朵上。它的葉子正漸漸變褐乾枯。「我的陽光之花病了，」Marisol 哭了出來。「我該怎麼辦？」Washington 太太說：「噢，孩子，它的季節結束了。萬物有盛開之時，也有衰亡之日。」「不！我不要我的花死去！」「親愛的心肝寶貝，別哭，」Rodriguez 太太安慰道。「這就是花園的自然法則。妳必須把種子保存好，明年春天再播種。」Marisol 傷心欲絕，再也不想去那個空曠的花園空地了。整整一週，她甚至不敢朝她心愛花朵曾經矗立的街區望上一眼。直到有一天，她聽見大家呼喚她的名字。「Marisol！快過來！」「Marisol！趕快！快點！」金色的薄霧光暈灑照在街道上。街上聚集了龐大的人群，就像過節一般熱鬧。街角雜貨店傳出歡快響亮的音樂。而眼前所看見的景象，讓 Marisol 開心地大笑、跳起舞來並拍手歡呼。",
+      "sentences": [
+        {
+          "en": "Mrs. Willie Mae Washington dug up orange potatoes.",
+          "zh": "Willie Mae Washington 太太挖出了橘色地瓜。"
+        },
+        {
+          "en": "\"I can almost smell my sweet potato pie.\"",
+          "zh": "「我幾乎都能聞到我的地瓜派香味了。」"
+        },
+        {
+          "en": "She winked at Marisol.",
+          "zh": "她對 Marisol 眨了眨眼。"
+        },
+        {
+          "en": "\"I'm gonna save an extra big slice for a good little gardener I know.\"",
+          "zh": "「我要為我認識的一位優秀小園丁保留一塊特大號的派。」"
+        },
+        {
+          "en": "But something terrible was happening to Marisol's flower.",
+          "zh": "但一件可怕的事情正發生在 Marisol 的花朵上。"
+        },
+        {
+          "en": "Its leaves were turning brown and dry.",
+          "zh": "它的葉子正逐漸變為褐色且乾枯。"
+        },
+        {
+          "en": "\"My flower of sunshine is sick,\" Marisol cried.",
+          "zh": "「我的陽光之花病了，」Marisol 哭了出來。"
+        },
+        {
+          "en": "\"What should I do?\"",
+          "zh": "「我該怎麼辦才好？」"
+        },
+        {
+          "en": "\"Oh, child,\" Mrs. Willie Mae Washington said. \"Its season is over. There's a time to bloom and a time to die.\"",
+          "zh": "「噢，孩子，」Washington 太太說。「它的季節結束了。花朵有盛開之時，也有枯萎之日。」"
+        },
+        {
+          "en": "\"No! I don't want my flower to die!\"",
+          "zh": "「不要！我不要我的花死掉！」"
+        },
+        {
+          "en": "\"Mi cariño, don't cry,\" Mrs. Rodriguez said. \"That's the way of a garden. You must save the seeds and plant again next spring.\"",
+          "zh": "「親愛的孩子，別哭，」Rodriguez 太太說。「花園的規律就是如此。妳必須把種子保存下來，明年春天再種下去。」"
+        },
+        {
+          "en": "Marisol was too sad to go to the empty lot anymore.",
+          "zh": "Marisol 傷心到再也不想去那個空地了。"
+        },
+        {
+          "en": "For a whole week, she couldn't even look down the block where her beautiful flower used to be.",
+          "zh": "整整一個星期，她甚至不敢往她那朵美麗花兒曾經生長的街區看一眼。"
+        },
+        {
+          "en": "Then one day, she heard people calling her name.",
+          "zh": "直到有一天，她聽到了大家在呼喚她的名字。"
+        },
+        {
+          "en": "\"Marisol! Come quick!\"",
+          "zh": "「Marisol！快點來！」"
+        },
+        {
+          "en": "\"Marisol! Apurate! Hurry!\"",
+          "zh": "「Marisol！快點！趕快！」"
+        },
+        {
+          "en": "A golden haze shone on the street.",
+          "zh": "金色的薄霧光輝映照在街道上。"
+        },
+        {
+          "en": "There was a big crowd, like on a holiday.",
+          "zh": "那裡有一大群人，就像在過節一樣熱鬧。"
+        },
+        {
+          "en": "Music from the bodega was loud and bright.",
+          "zh": "從小雜貨店傳出的音樂響亮又歡樂。"
+        },
+        {
+          "en": "And what she saw made Marisol laugh and dance and clap her hands.",
+          "zh": "而她所看見的一切，讓 Marisol 開心地大笑、跳起舞來並拍手鼓掌。"
+        }
+      ],
+      "key_sentences": [
+        {
+          "sentence": "There's a time to bloom and a time to die.",
+          "tag": "⭐ Week 12 核心考點",
+          "note": "生命週期名言：植物盛放與衰亡的自然法則，bloom 在此做動詞「開花綻放」。",
+          "point": "生命週期名言：植物盛放與衰亡的自然法則，bloom 在此做動詞「開花綻放」。"
+        },
+        {
+          "sentence": "Marisol was too sad to go to the empty lot anymore.",
+          "tag": "⭐ Week 12 核心考點",
+          "note": "重要句型：too + 形容詞 + to + V 表示「太...而無法...」，empty 與 vacant 為同義詞。",
+          "point": "重要句型：too + 形容詞 + to + V 表示「太...而無法...」，empty 與 vacant 為同義詞。"
+        },
+        {
+          "sentence": "A golden haze shone on the street. There was a big crowd, like on a holiday.",
+          "tag": "⭐ Week 12 核心考點",
+          "note": "環境描寫：haze 表示朦朧的金黃光暈，crowd 為集合名詞「大批人群」。",
+          "point": "環境描寫：haze 表示朦朧的金黃光暈，crowd 為集合名詞「大批人群」。"
+        }
+      ],
+      "exp_eng": "",
+      "exp_chi": "",
+      "is_week12": true
+    },
+    {
+      "book_id": "od3",
+      "unit_id": "od3_16",
+      "sequence": 3,
+      "section_title": "Before You Read Vignette & Grammar Comic (情節引導與文法對話)",
+      "eng": "It was a beautiful summer morning. The birds were chirping loudly, and the sun was shining brightly. Mrs. Chin was unhappy. She sat on the porch steps and stared at the apple trees. She needed help picking the apples for the school festival. Suddenly, the phone rang. It was Mrs. Chin's son, Philip! Meanwhile, in the classroom, the teacher said, \"I'm very happy with your essay. You did an excellent job.\" But to another student, the teacher said, \"I'm surprised at all of your spelling mistakes.\" When the friend asked, \"So, what did the teacher think of your paper?\" the student replied, \"Well... she was surprised!\"",
+      "chi": "那是一個美麗的夏日早晨。鳥兒在枝頭大聲啁啾，陽光燦爛耀眼。Chin 太太很不開心。她坐在門廊台階上凝視著蘋果樹。她需要有人幫忙為學校慶典採摘蘋果。突然間，電話鈴聲響起，原來是 Chin 太太的兒子 Philip！與此同時在教室裡，老師說：「我對你的作文非常滿意，你表現得太棒了。」但對另一位學生，老師說：「我對你所有的拼字錯誤感到很吃驚。」當朋友問道：「那麼，老師覺得你的作業如何？」那位學生回答：「呃……她很吃驚！」",
+      "sentences": [
+        {
+          "en": "It was a beautiful summer morning.",
+          "zh": "那是一個美麗的夏日早晨。"
+        },
+        {
+          "en": "The birds were chirping loudly, and the sun was shining brightly.",
+          "zh": "鳥兒在大聲啼叫，陽光燦爛耀眼。"
+        },
+        {
+          "en": "Mrs. Chin was unhappy.",
+          "zh": "Chin 太太很不開心。"
+        },
+        {
+          "en": "She sat on the porch steps and stared at the apple trees.",
+          "zh": "她坐在門廊階梯上凝視著蘋果樹。"
+        },
+        {
+          "en": "She needed help picking the apples for the school festival.",
+          "zh": "她需要幫忙採摘學校慶典用的蘋果。"
+        },
+        {
+          "en": "Suddenly, the phone rang.",
+          "zh": "突然間，電話響了。"
+        },
+        {
+          "en": "It was Mrs. Chin's son, Philip!",
+          "zh": "是 Chin 太太的兒子 Philip！"
+        },
+        {
+          "en": "The teacher said, \"I'm very happy with your essay. You did an excellent job.\"",
+          "zh": "老師說：「我對你的作文感到非常滿意，你寫得太棒了。」"
+        },
+        {
+          "en": "The teacher said, \"I'm surprised at all of your spelling mistakes.\"",
+          "zh": "老師說：「我對你這麼多的拼字錯誤感到很驚訝。」"
+        },
+        {
+          "en": "\"So, what did the teacher think of your paper?\" \"Well... she was surprised!\"",
+          "zh": "「那麼，老師對你的作文評價如何？」「呃……她感到很驚訝！」"
+        }
+      ],
+      "key_sentences": [
+        {
+          "sentence": "I'm very happy with your essay.",
+          "tag": "⭐ Week 12 核心考點",
+          "note": "固定介系詞搭配：be happy with 對某成果滿意。",
+          "point": "固定介系詞搭配：be happy with 對某成果滿意。"
+        },
+        {
+          "sentence": "I'm surprised at all of your spelling mistakes.",
+          "tag": "⭐ Week 12 核心考點",
+          "note": "固定介系詞搭配：be surprised at 對某事感到吃驚意外。",
+          "point": "固定介系詞搭配：be surprised at 對某事感到吃驚意外。"
+        }
+      ],
+      "exp_eng": "",
+      "exp_chi": "",
+      "is_week12": true
+    },
+    {
+      "book_id": "rw6",
+      "unit_id": "rw6_9",
+      "sequence": 1,
+      "section_title": "Personalities and Sports (性格與運動偏好)",
+      "eng": "What do the sports you like to play say about you? For instance, if you're more outgoing, you probably like to play team sports like soccer or basketball. If you're quiet, you may prefer an individual sport, like tennis or golf. Do you like to play sports just for fun, or do you always play to win? The games we like to play, and how we play them, can say a lot about our personalities.",
+      "chi": "你喜歡從事的運動展現了你怎樣的性格？舉例來說，如果你比較外向，你很可能會喜歡踢足球或打籃球等團隊運動。如果你比較安靜，你可能會偏好網球或高爾夫球等個人運動。你喜歡運動純粹是為了好玩，還是總是為了獲勝而全力以赴？我們喜歡玩的運動遊戲、以及我們參與它們的方式，都能深刻反映出我們的個性。",
+      "sentences": [
+        {
+          "en": "What do the sports you like to play say about you?",
+          "zh": "你喜歡從事的運動展現了你怎樣的性格？"
+        },
+        {
+          "en": "For instance, if you're more outgoing, you probably like to play team sports like soccer or basketball.",
+          "zh": "舉例來說，如果你比較外向，你很可能會喜歡踢足球或打籃球等團隊運動。"
+        },
+        {
+          "en": "If you're quiet, you may prefer an individual sport, like tennis or golf.",
+          "zh": "如果你比較安靜，你可能會偏好網球或高爾夫球等個人運動。"
+        },
+        {
+          "en": "Do you like to play sports just for fun, or do you always play to win?",
+          "zh": "你喜歡運動純粹是為了好玩，還是總是為了獲勝而全力以赴？"
+        },
+        {
+          "en": "The games we like to play, and how we play them, can say a lot about our personalities.",
+          "zh": "我們喜歡玩的運動遊戲、以及我們參與它們的方式，都能深刻反映出我們的個性。"
+        }
+      ],
+      "key_sentences": [
+        {
+          "sentence": "If you're quiet, you may prefer an individual sport, like tennis or golf.",
+          "tag": "⭐ Week 12 核心考點",
+          "note": "prefer 的高頻句型為「prefer A to B」（比起 B 更偏好 A）；此處以 individual sport 對比 team sports。",
+          "point": "prefer 的高頻句型為「prefer A to B」（比起 B 更偏好 A）；此處以 individual sport 對比 team sports。"
+        },
+        {
+          "sentence": "The games we like to play, and how we play them, can say a lot about our personalities.",
+          "tag": "⭐ Week 12 核心考點",
+          "note": "say a lot about sth. 為固定成語，意指「充分反映、說明…」，名詞 personality 複數為 personalities。",
+          "point": "say a lot about sth. 為固定成語，意指「充分反映、說明…」，名詞 personality 複數為 personalities。"
+        }
+      ],
+      "exp_eng": "",
+      "exp_chi": "",
+      "is_week12": true
+    },
+    {
+      "book_id": "rw6",
+      "unit_id": "rw6_9",
+      "sequence": 2,
+      "section_title": "A Trip to Earth (重返地球之旅)",
+      "eng": "\"I don't know how you can be so calm, Nora. After so much time in space, I can't wait to see Earth and smell the air,\" said Rayyan. He talked almost nonstop all morning to everyone on the shuttle. His twin sister, Nora, knew that Rayyan talked a lot when he was nervous. Their daring parents left Earth years before with a group of explorers, to live on the planet Regulus. Now Rayyan and Nora were traveling to Earth to visit family that they didn't know very well. The twins were very young the last time they saw their family. The shuttle landed at last. Nora and Rayyan walked out into a large, open area. Long, colorful pieces of cloth covered the whole space, flapping in the breeze. Hundreds of people walked around or sat at tables, talking. \"Nora and Rayyan! Is that you?\" asked a smiling woman walking toward them. \"Hi,\" said Rayyan. \"Yes, I'm Rayyan, and this is Nora. She's the shy one. Sorry, I don't mean to be rude, but I don't remember you.\" Nora just smiled and looked thoughtful. \"Hi, Irdina,\" she said. \"Shy?\" asked Irdina. \"I remember Nora being quiet, but confident. And Rayyan, you were always so friendly, I don't think you can be rude.\" \"Oh, our cousin Irdina. I remember you now!\" said Rayyan. \"I think we were only five when you left for Earth. How are you?\" \"I'm fine, thanks,\" she said and hugged them both. \"Let's get going. You have a lot of family that can't wait to see you!\"",
+      "chi": "「諾拉，我真不知道妳怎麼能這麼冷靜。在太空中待了那麼久，我簡直迫不及待想要看見地球、聞聞空氣了，」拉揚說道。整個早晨他在太空梭上幾乎滔滔不絕地跟每個人說話。他的雙胞胎妹妹諾拉心裡明白，拉揚感到緊張時就會說個不停。他們勇敢大膽的父母多年前跟隨一群探險家離開地球，前往軒轅十四星（Regulus）定居。如今，拉揚和諾拉正前往地球拜訪他們不太熟悉的親戚。雙胞胎上次見到家人時年紀還非常小。太空梭終於降落了。諾拉和拉揚步入一個寬敞的露天廣場。長長的多彩布條遮蓋了整個空間，在微風中輕輕飄揚。數以百計的人們漫步走動或圍坐在桌旁熱絡交談。「諾拉和拉揚！是你們嗎？」一位面帶微笑的女士朝他們走來並問道。「嗨，」拉揚說。「是的，我是拉揚，這是諾拉。她比較害羞。抱歉，我不是故意沒禮貌，但我記不得妳了。」諾拉只是微笑著，若有所思地看著她。「嗨，爾蒂娜，」諾拉說道。「害羞？」爾蒂娜問道。「我記得諾拉以前很安靜，但很有自信。而拉揚，你以前總是那麼親切友善，我想你絕不可能會無禮的。」「噢，是我們的堂姊爾蒂娜！我現在想起來了！」拉揚說。「我想妳當年離開去地球時，我們才五歲吧。妳好嗎？」「我很好，謝謝，」她說著並擁抱了他們兩人。「我們出發吧。有好多熱切的家人迫不及待要見到你們呢！」",
+      "sentences": [
+        {
+          "en": "\"I don't know how you can be so calm, Nora. After so much time in space, I can't wait to see Earth and smell the air,\" said Rayyan.",
+          "zh": "「諾拉，我真不知道妳怎麼能這麼冷靜。在太空中待了那麼久，我簡直迫不及待想要看見地球、聞聞空氣了，」拉揚說道。"
+        },
+        {
+          "en": "He talked almost nonstop all morning to everyone on the shuttle.",
+          "zh": "整個早晨他在太空梭上幾乎滔滔不絕地跟每個人說話。"
+        },
+        {
+          "en": "His twin sister, Nora, knew that Rayyan talked a lot when he was nervous.",
+          "zh": "他的雙胞胎妹妹諾拉心裡明白，拉揚感到緊張時就會說個不停。"
+        },
+        {
+          "en": "Their daring parents left Earth years before with a group of explorers, to live on the planet Regulus.",
+          "zh": "他們勇敢大膽的父母多年前跟隨一群探險家離開地球，前往軒轅十四星定居。"
+        },
+        {
+          "en": "Now Rayyan and Nora were traveling to Earth to visit family that they didn't know very well.",
+          "zh": "如今，拉揚和諾拉正前往地球拜訪他們不太熟悉的親戚。"
+        },
+        {
+          "en": "The twins were very young the last time they saw their family.",
+          "zh": "雙胞胎上次見到家人時年紀還非常小。"
+        },
+        {
+          "en": "The shuttle landed at last.",
+          "zh": "太空梭終於降落了。"
+        },
+        {
+          "en": "Nora and Rayyan walked out into a large, open area.",
+          "zh": "諾拉和拉揚步入一個寬敞的露天廣場。"
+        },
+        {
+          "en": "Long, colorful pieces of cloth covered the whole space, flapping in the breeze.",
+          "zh": "長長的多彩布條遮蓋了整個空間，在微風中輕輕飄揚。"
+        },
+        {
+          "en": "Hundreds of people walked around or sat at tables, talking.",
+          "zh": "數以百計的人們漫步走動或圍坐在桌旁熱絡交談。"
+        },
+        {
+          "en": "\"Nora and Rayyan! Is that you?\" asked a smiling woman walking toward them.",
+          "zh": "「諾拉和拉揚！是你們嗎？」一位面帶微笑的女士朝他們走來並問道。"
+        },
+        {
+          "en": "\"Hi,\" said Rayyan. \"Yes, I'm Rayyan, and this is Nora. She's the shy one. Sorry, I don't mean to be rude, but I don't remember you.\"",
+          "zh": "「嗨，」拉揚說。「是的，我是拉揚，這是諾拉。她比較害羞。抱歉，我不是故意沒禮貌，但我記不得妳了。」"
+        },
+        {
+          "en": "Nora just smiled and looked thoughtful. \"Hi, Irdina,\" she said.",
+          "zh": "諾拉只是微笑著，若有所思地看著她。「嗨，爾蒂娜，」諾拉說道。"
+        },
+        {
+          "en": "\"Shy?\" asked Irdina. \"I remember Nora being quiet, but confident. And Rayyan, you were always so friendly, I don't think you can be rude.\"",
+          "zh": "「害羞？」爾蒂娜問道。「我記得諾拉以前很安靜，但很有自信。而拉揚，你以前總是那麼親切友善，我想你絕不可能會無禮的。」"
+        },
+        {
+          "en": "\"Oh, our cousin Irdina. I remember you now!\" said Rayyan. \"I think we were only five when you left for Earth. How are you?\"",
+          "zh": "「噢，是我們的堂姊爾蒂娜！我現在想起來了！」拉揚說。「我想妳當年離開去地球時，我們才五歲吧。妳好嗎？」"
+        },
+        {
+          "en": "\"I'm fine, thanks,\" she said and hugged them both. \"Let's get going. You have a lot of family that can't wait to see you!\"",
+          "zh": "「我很好，謝謝，」她說著並擁抱了他們兩人。「我們出發吧。有好多熱切的家人迫不及待要見到你們呢！」"
+        }
+      ],
+      "key_sentences": [
+        {
+          "sentence": "His twin sister, Nora, knew that Rayyan talked a lot when he was nervous.",
+          "tag": "⭐ Week 12 核心考點",
+          "note": "閱讀理解核心：外在言行 (talked a lot) 與內在情緒 (nervous) 的因果連結，展現角色分析策略。",
+          "point": "閱讀理解核心：外在言行 (talked a lot) 與內在情緒 (nervous) 的因果連結，展現角色分析策略。"
+        },
+        {
+          "sentence": "Sorry, I don't mean to be rude, but I don't remember you.",
+          "tag": "⭐ Week 12 核心考點",
+          "note": "社交委婉用語：mean to be + 形容詞（存心做…），以否定形式禮貌表達「我並非有意冒犯」。",
+          "point": "社交委婉用語：mean to be + 形容詞（存心做…），以否定形式禮貌表達「我並非有意冒犯」。"
+        },
+        {
+          "sentence": "I remember Nora being quiet, but confident.",
+          "tag": "⭐ Week 12 核心考點",
+          "note": "remember + 受詞 + V-ing（記得某人當時在做…或呈現…狀態），形容詞 confident 修飾人的自信特質。",
+          "point": "remember + 受詞 + V-ing（記得某人當時在做…或呈現…狀態），形容詞 confident 修飾人的自信特質。"
+        }
+      ],
+      "exp_eng": "",
+      "exp_chi": "",
+      "is_week12": true
+    },
+    {
+      "book_id": "rw6",
+      "unit_id": "rw6_9",
+      "sequence": 3,
+      "section_title": "Family Get-together (米勒家族溫馨大團圓)",
+      "eng": "The whole Miller family gets together every two years. Grandparents, parents, and children travel from all over the country. The grown-ups are friendly, talking a lot the whole weekend. They plan many activities for the kids so they don't get bored. Some kids enjoy quiet activities. The adults make sure they have crafts to do and games to play. Other kids like to move a lot, so there are outdoor activities for everyone to do. The older kids help the younger kids. And everyone has a fun weekend!",
+      "chi": "米勒全家人每兩年齊聚一堂大團圓。祖父母、父母與孩子們從全國各地遠道而來。大人們親切和藹，整個週末都在熱絡暢談。他們為孩子們規劃了豐富多樣的活動，好讓大家不感到無聊。有些孩子喜歡安靜的室內活動，大人們貼心確保他們有手工勞作可以發揮、有桌上遊戲可以同樂。其他孩子喜歡跑跳活動，因此有充足的戶外活動讓每個人盡情奔跑。年長的孩子熱心照顧年幼的弟妹。每個人都度過了一個無比充實歡樂的週末！",
+      "sentences": [
+        {
+          "en": "The whole Miller family gets together every two years.",
+          "zh": "米勒全家人每兩年齊聚一堂大團圓。"
+        },
+        {
+          "en": "Grandparents, parents, and children travel from all over the country.",
+          "zh": "祖父母、父母與孩子們從全國各地遠道而來。"
+        },
+        {
+          "en": "The grown-ups are friendly, talking a lot the whole weekend.",
+          "zh": "大人們親切和藹，整個週末都在熱絡暢談。"
+        },
+        {
+          "en": "They plan many activities for the kids so they don't get bored.",
+          "zh": "他們為孩子們規劃了豐富多樣的活動，好讓大家不感到無聊。"
+        },
+        {
+          "en": "Some kids enjoy quiet activities.",
+          "zh": "有些孩子喜歡安靜的室內活動。"
+        },
+        {
+          "en": "The adults make sure they have crafts to do and games to play.",
+          "zh": "大人們貼心確保他們有手工勞作可以發揮、有桌上遊戲可以同樂。"
+        },
+        {
+          "en": "Other kids like to move a lot, so there are outdoor activities for everyone to do.",
+          "zh": "其他孩子喜歡跑跳活動，因此有充足的戶外活動讓每個人盡情奔跑。"
+        },
+        {
+          "en": "The older kids help the younger kids.",
+          "zh": "年長的孩子熱心照顧年幼的弟妹。"
+        },
+        {
+          "en": "And everyone has a fun weekend!",
+          "zh": "每個人都度過了一個無比充實歡樂的週末！"
+        }
+      ],
+      "key_sentences": [
+        {
+          "sentence": "The grown-ups are friendly, talking a lot the whole weekend.",
+          "tag": "⭐ Week 12 核心考點",
+          "note": "",
+          "point": ""
+        },
+        {
+          "sentence": "The adults make sure they have crafts to do and games to play.",
+          "tag": "⭐ Week 12 核心考點",
+          "note": "",
+          "point": ""
+        }
+      ],
+      "exp_eng": "",
+      "exp_chi": "",
+      "is_week12": true
+    },
+    {
+      "book_id": "rd6",
+      "unit_id": "rd6_6",
+      "sequence": 1,
+      "section_title": "Part 1: Martians and Early Astronomy (火星人傳說與早期天文觀測)",
+      "eng": "In stories, aliens are living things from another world, but are they real? Is there life on other planets? Astronomers are looking for life in our solar system, and on planets around other stars. A hundred years ago, telescopes were smaller, and it was difficult to see Mars clearly. Astronomers thought that they saw lines on the surface of Mars, and some people thought that they were canals. At the time, people were building great canals on Earth, like the Panama Canal in Central America. Some astronomers imagined aliens building these canals and living in cities on Mars. People wrote stories and made movies about aliens from Mars, called Martians, visiting Earth. Now we know that there aren't any Martians, but we still make movies about them!",
+      "chi": "在故事中，外星人是來自另一個世界的生物，但他們是真的存在嗎？其他行星上有生命嗎？天文學家正在我們的太陽系中，以及其他恆星周圍的行星上尋找生命。一百年前，望遠鏡比較小，很難看清火星。天文學家以為他們在火星表面看到了線條，有些人認為那是運河。當時，人們正在地球上建造巨大的運河，例如中美洲的巴拿馬運河。有些天文學家想像外星人建造了這些運河並住在火星的城市裡。人們寫了許多故事，並拍攝了關於來自火星的外星人（被稱為火星人）造訪地球的電影。現在我們知道根本沒有火星人，但我們仍然在拍攝關於他們的電影！",
+      "sentences": [
+        {
+          "en": "In stories, aliens are living things from another world, but are they real?",
+          "zh": "在故事中，外星人是來自另一個世界的生物，但他們是真的存在嗎？"
+        },
+        {
+          "en": "Is there life on other planets?",
+          "zh": "其他行星上有生命嗎？"
+        },
+        {
+          "en": "Astronomers are looking for life in our solar system, and on planets around other stars.",
+          "zh": "天文學家正在我們的太陽系中，以及圍繞其他恆星運行的行星上尋找生命。"
+        },
+        {
+          "en": "A hundred years ago, telescopes were smaller, and it was difficult to see Mars clearly.",
+          "zh": "一百年前，望遠鏡比較小，很難把火星看得很清楚。"
+        },
+        {
+          "en": "Astronomers thought that they saw lines on the surface of Mars, and some people thought that they were canals.",
+          "zh": "天文學家以為他們在火星表面看到了線條，有些人認為那是運河。"
+        },
+        {
+          "en": "At the time, people were building great canals on Earth, like the Panama Canal in Central America.",
+          "zh": "當時，人們正在地球上修建宏偉的運河，例如中美洲的巴拿馬運河。"
+        },
+        {
+          "en": "Some astronomers imagined aliens building these canals and living in cities on Mars.",
+          "zh": "有些天文學家想像外星人建造了這些運河，並且居住在火星上的城市裡。"
+        },
+        {
+          "en": "People wrote stories and made movies about aliens from Mars, called Martians, visiting Earth.",
+          "zh": "人們創作故事並拍攝電影，描述來自火星的外星人（被稱為火星人）造訪地球。"
+        },
+        {
+          "en": "Now we know that there aren't any Martians, but we still make movies about them!",
+          "zh": "現在我們知道根本沒有火星人，但我們仍然在製作關於他們的電影！"
+        }
+      ],
+      "key_sentences": [
+        {
+          "sentence": "A hundred years ago, telescopes were smaller, and it was difficult to see Mars clearly.",
+          "tag": "⭐ Week 12 核心考點",
+          "note": "核心文法：it was difficult to see... 運用 it 做虛主詞，真正主詞為後方的不定詞片語 to see Mars clearly。",
+          "point": "核心文法：it was difficult to see... 運用 it 做虛主詞，真正主詞為後方的不定詞片語 to see Mars clearly。"
+        },
+        {
+          "sentence": "Some astronomers imagined aliens building these canals and living in cities on Mars.",
+          "tag": "⭐ Week 12 核心考點",
+          "note": "動詞感官想像句型：imagine + 受詞 + V-ing (building ... and living ...)，描述腦海中浮現的動態景象。",
+          "point": "動詞感官想像句型：imagine + 受詞 + V-ing (building ... and living ...)，描述腦海中浮現的動態景象。"
+        },
+        {
+          "sentence": "People wrote stories and made movies about aliens from Mars, called Martians, visiting Earth.",
+          "tag": "⭐ Week 12 核心考點",
+          "note": "分詞後置修飾：called Martians 為過去分詞片語，修飾前面的名詞 aliens from Mars。",
+          "point": "分詞後置修飾：called Martians 為過去分詞片語，修飾前面的名詞 aliens from Mars。"
+        }
+      ],
+      "exp_eng": "",
+      "exp_chi": "",
+      "is_week12": true
+    },
+    {
+      "book_id": "rd6",
+      "unit_id": "rd6_6",
+      "sequence": 2,
+      "section_title": "Part 2: Water, Bacteria and Life on Mars (水、細菌與火星探測)",
+      "eng": "Life on Earth needs liquid water, carbon, and gases like oxygen and nitrogen. When scientists look for life on other planets, they look for places that have liquid water. Bacteria are simple living things on Earth, and they can live in very hot and cold places, and even inside rocks. Scientists are looking for bacteria on Mars and in other places in our solar system. It's very cold on Mars, so all the water on the surface is ice. Many scientists think that there is liquid water in the soil or even in underground rivers. Maybe there is life on Mars, too. At the moment, robots from Earth are exploring Mars and looking for life.",
+      "chi": "地球上的生命需要液態水、碳，以及像氧氣和氮氣這樣的氣體。當科學家在其他行星上尋找生命時，他們會尋找有液態水的地方。細菌是地球上構造簡單的生物，它們可以在極熱和極冷的地方生存，甚至能活在岩石內部。科學家正在火星和我們太陽系的其他地方尋找細菌。火星上非常寒冷，因此表面所有的水都是冰。許多科學家認為在土壤中甚至地下河流中存在著液態水。也許火星上也有生命。目前，來自地球的機器人正在探索火星並尋找生命。",
+      "sentences": [
+        {
+          "en": "Life on Earth needs liquid water, carbon, and gases like oxygen and nitrogen.",
+          "zh": "地球上的生命需要液態水、碳，以及像氧氣與氮氣這樣的氣體。"
+        },
+        {
+          "en": "When scientists look for life on other planets, they look for places that have liquid water.",
+          "zh": "當科學家在其他行星上尋找生命時，他們會搜尋擁有液態水的地方。"
+        },
+        {
+          "en": "Bacteria are simple living things on Earth, and they can live in very hot and cold places, and even inside rocks.",
+          "zh": "細菌是地球上的簡單生物，它們能生活在極熱或極冷的地方，甚至生存在岩石內部。"
+        },
+        {
+          "en": "Scientists are looking for bacteria on Mars and in other places in our solar system.",
+          "zh": "科學家正在火星以及太陽系中的其他地方尋找細菌。"
+        },
+        {
+          "en": "It's very cold on Mars, so all the water on the surface is ice.",
+          "zh": "火星上非常寒冷，所以表面所有的水都是結成冰的。"
+        },
+        {
+          "en": "Many scientists think that there is liquid water in the soil or even in underground rivers.",
+          "zh": "許多科學家認為，在土壤中甚至在地下河流中可能存在著液態水。"
+        },
+        {
+          "en": "Maybe there is life on Mars, too.",
+          "zh": "也許火星上也存在著生命。"
+        },
+        {
+          "en": "At the moment, robots from Earth are exploring Mars and looking for life.",
+          "zh": "目前，來自地球的機器人正在探索火星並尋找生命。"
+        }
+      ],
+      "key_sentences": [
+        {
+          "sentence": "When scientists look for life on other planets, they look for places that have liquid water.",
+          "tag": "⭐ Week 12 核心考點",
+          "note": "關係代名詞子句：places that have liquid water 中，that 作為關係代名詞引導形容詞子句修飾先行詞 places。",
+          "point": "關係代名詞子句：places that have liquid water 中，that 作為關係代名詞引導形容詞子句修飾先行詞 places。"
+        },
+        {
+          "sentence": "Bacteria are simple living things on Earth, and they can live in very hot and cold places, and even inside rocks.",
+          "tag": "⭐ Week 12 核心考點",
+          "note": "單複數名詞注意：bacteria 為複數名詞（單數為 bacterium），動詞必須搭配複數形 are。",
+          "point": "單複數名詞注意：bacteria 為複數名詞（單數為 bacterium），動詞必須搭配複數形 are。"
+        },
+        {
+          "sentence": "Many scientists think that there is liquid water in the soil or even in underground rivers.",
+          "tag": "⭐ Week 12 核心考點",
+          "note": "名詞子句與存在句：think 後方接 that 引導的名詞子句，子句內部使用 there is 表示「存在有...」。",
+          "point": "名詞子句與存在句：think 後方接 that 引導的名詞子句，子句內部使用 there is 表示「存在有...」。"
+        }
+      ],
+      "exp_eng": "",
+      "exp_chi": "",
+      "is_week12": true
+    },
+    {
+      "book_id": "rd6",
+      "unit_id": "rd6_6",
+      "sequence": 3,
+      "section_title": "Part 3: Moons of the Giant Planets: Europa and Titan (巨行星的衛星：木衛二與土衛六)",
+      "eng": "Europa is one of Jupiter's moons and it's covered in ice. The surface is very cold, but scientists think it's warmer inside. Maybe there are oceans under the ice. Maybe there are bacteria or other living things in the oceans, too. One day people will send robots to explore Europa and to look for life. Saturn's largest moon, Titan, is the only moon in the solar system with atmosphere. It has rivers, lakes, rain, and clouds. These are made of chemicals called hydrocarbons, and scientists think that there is water under the surface of Titan, too. Living things are made of hydrocarbons and water. Maybe one day we will discover life on Titan.",
+      "chi": "木衛二（歐羅巴）是木星的衛星之一，表面覆蓋著厚厚的冰層。其表面非常寒冷，但科學家認為它的內部比較溫暖。也許在冰層下方有海洋。也許在海洋中也有細菌或其他生物。有朝一日，人們會派遣機器人去探索木衛二並尋找生命。土星最大的衛星——土衛六（泰坦），是太陽系中唯一擁有大氣層的衛星。它擁有河流、湖泊、降雨和雲層。這些是由稱為碳氫化合物的化學物質所組成的，科學家認為土衛六的地表下也有水。生物正是由碳氫化合物和水所構成的。也許有朝一日我們會在土衛六上發現生命。",
+      "sentences": [
+        {
+          "en": "Europa is one of Jupiter's moons and it's covered in ice.",
+          "zh": "木衛二是木星的衛星之一，表面覆蓋著厚厚的冰層。"
+        },
+        {
+          "en": "The surface is very cold, but scientists think it's warmer inside.",
+          "zh": "它的表面極度寒冷，但科學家認為內部比較溫暖。"
+        },
+        {
+          "en": "Maybe there are oceans under the ice.",
+          "zh": "也許在冰層下方存在著海洋。"
+        },
+        {
+          "en": "Maybe there are bacteria or other living things in the oceans, too.",
+          "zh": "也許在冰下海洋中也有細菌或其他生物。"
+        },
+        {
+          "en": "One day people will send robots to explore Europa and to look for life.",
+          "zh": "有朝一日，人類將會發射機器人前往探索木衛二並尋找生命。"
+        },
+        {
+          "en": "Saturn's largest moon, Titan, is the only moon in the solar system with atmosphere.",
+          "zh": "土星最大的衛星——土衛六，是太陽系中唯一擁有大氣層的衛星。"
+        },
+        {
+          "en": "It has rivers, lakes, rain, and clouds.",
+          "zh": "它擁有河流、湖泊、雨水和雲層。"
+        },
+        {
+          "en": "These are made of chemicals called hydrocarbons, and scientists think that there is water under the surface of Titan, too.",
+          "zh": "這些是由被稱為碳氫化合物的化學物質構成的，且科學家認為在土衛六的地表下也有水。"
+        },
+        {
+          "en": "Living things are made of hydrocarbons and water.",
+          "zh": "生物體本身就是由碳氫化合物和水所組成的。"
+        },
+        {
+          "en": "Maybe one day we will discover life on Titan.",
+          "zh": "也許有朝一日我們會在土衛六上發現生命。"
+        }
+      ],
+      "key_sentences": [
+        {
+          "sentence": "Europa is one of Jupiter's moons and it's covered in ice.",
+          "tag": "⭐ Week 12 核心考點",
+          "note": "被動語態與介系詞搭配：be covered in ice 表示「被冰層所覆蓋包覆」，介系詞使用 in。",
+          "point": "被動語態與介系詞搭配：be covered in ice 表示「被冰層所覆蓋包覆」，介系詞使用 in。"
+        },
+        {
+          "sentence": "Saturn's largest moon, Titan, is the only moon in the solar system with atmosphere.",
+          "tag": "⭐ Week 12 核心考點",
+          "note": "同位語結構：Titan 作為 Saturn's largest moon 的同位語補充說明，the only moon 表示唯一性。",
+          "point": "同位語結構：Titan 作為 Saturn's largest moon 的同位語補充說明，the only moon 表示唯一性。"
+        },
+        {
+          "sentence": "These are made of chemicals called hydrocarbons, and scientists think that there is water under the surface of Titan, too.",
+          "tag": "⭐ Week 12 核心考點",
+          "note": "組成片語與分詞修飾：be made of 表示「由...物質製成」，called hydrocarbons 作分詞後置修飾 chemicals。",
+          "point": "組成片語與分詞修飾：be made of 表示「由...物質製成」，called hydrocarbons 作分詞後置修飾 chemicals。"
+        }
+      ],
+      "exp_eng": "",
+      "exp_chi": "",
+      "is_week12": true
+    },
+    {
+      "book_id": "rd6",
+      "unit_id": "rd6_6",
+      "sequence": 4,
+      "section_title": "Part 4: Life in Other Solar Systems and UFOs (系外行星生命與幽浮探索)",
+      "eng": "What do we know about life in other solar systems? Astronomers have found hundreds of planets near other stars, but they are still looking for a planet like Earth. Some scientists think that there are lots of planets like Earth in our galaxy, and millions in the universe. Maybe there is life on some of them. On another planet billions of kilometers from here, maybe alien astronomers are looking at the stars! Sometimes, people see unusual objects in the sky, called UFOs. Some people think that they are alien spacecraft, but they are usually things like balloons or comets.",
+      "chi": "關於其他太陽系中的生命，我們了解多少呢？天文學家已經在其他恆星附近發現了數百顆行星，但他們仍在尋找一顆像地球一樣的行星。有些科學家認為，在我們的銀河系中有很多像地球一樣的行星，而在整個宇宙中則有數百萬顆。也許其中一些上面存在著生命。在距離這裡數十億公里之外的另一顆行星上，也許外星天文學家也正注視著繁星呢！有時候，人們在天空中看到不尋常的物體，被稱為幽浮（UFO）。有些人認為它們是外星人的太空船，但它們通常只是氣球或彗星之類的東西。",
+      "sentences": [
+        {
+          "en": "What do we know about life in other solar systems?",
+          "zh": "關於其他太陽系中的生命，我們知道些什麼呢？"
+        },
+        {
+          "en": "Astronomers have found hundreds of planets near other stars, but they are still looking for a planet like Earth.",
+          "zh": "天文學家已經在其他恆星附近發現了數百顆行星，但他們仍在尋找一顆像地球一樣的行星。"
+        },
+        {
+          "en": "Some scientists think that there are lots of planets like Earth in our galaxy, and millions in the universe.",
+          "zh": "有些科學家認為在我們的銀河系中有很多像地球一樣的行星，而在整個宇宙中則有數百萬顆。"
+        },
+        {
+          "en": "Maybe there is life on some of them.",
+          "zh": "也許在其中的某些行星上存在著生命。"
+        },
+        {
+          "en": "On another planet billions of kilometers from here, maybe alien astronomers are looking at the stars!",
+          "zh": "在距離這裡數十億公里的另一顆行星上，也許外星天文學家正望著繁星呢！"
+        },
+        {
+          "en": "Sometimes, people see unusual objects in the sky, called UFOs.",
+          "zh": "有時候，人們會在天空中看到不尋常的物體，被稱為幽浮（UFO）。"
+        },
+        {
+          "en": "Some people think that they are alien spacecraft, but they are usually things like balloons or comets.",
+          "zh": "有些人認為它們是外星太空船，但它們通常只是像氣球或彗星之類的事物。"
+        }
+      ],
+      "key_sentences": [
+        {
+          "sentence": "Astronomers have found hundreds of planets near other stars, but they are still looking for a planet like Earth.",
+          "tag": "⭐ Week 12 核心考點",
+          "note": "時態對比：have found（現在完成式表示已有發現）與 are still looking for（現在進行式表示目前持續探索中）。",
+          "point": "時態對比：have found（現在完成式表示已有發現）與 are still looking for（現在進行式表示目前持續探索中）。"
+        },
+        {
+          "sentence": "On another planet billions of kilometers from here, maybe alien astronomers are looking at the stars!",
+          "tag": "⭐ Week 12 核心考點",
+          "note": "空間地方副詞前置：On another planet billions of kilometers from here 置於句首引導空間想像。",
+          "point": "空間地方副詞前置：On another planet billions of kilometers from here 置於句首引導空間想像。"
+        },
+        {
+          "sentence": "Sometimes, people see unusual objects in the sky, called UFOs.",
+          "tag": "⭐ Week 12 核心考點",
+          "note": "科學批判思考：called UFOs 作過去分詞修飾 unusual objects，辨析科幻想像與真實天文氣象現象。",
+          "point": "科學批判思考：called UFOs 作過去分詞修飾 unusual objects，辨析科幻想像與真實天文氣象現象。"
+        }
+      ],
+      "exp_eng": "",
+      "exp_chi": "",
+      "is_week12": true
+    },
+    {
+      "book_id": "wr3",
+      "unit_id": "wr3_6",
+      "sequence": 1,
+      "section_title": "Ella's Story: The Person I Admire (Thomas Edison)",
+      "eng": "The person I admire the most is Thomas Edison. Thomas Edison was an inventor from the United States. He was born in 1847 and died in 1931. Edison invented many things. His most famous invention is the light bulb. Thanks to Edison, we can see at night. Edison was smart and wise. However, I admire Edison most of all because he never gave up on his dreams. He failed many times before he invented the light bulb. For these reasons, I think Thomas Edison was a great person.",
+      "chi": "我最欽佩的人是湯瑪斯·愛迪生。湯瑪斯·愛迪生是一位來自美國的發明家。他出生於 1847 年，並於 1931 年逝世。愛迪生發明了許多事物。他最著名的發明是電燈泡。多虧了愛迪生，我們在夜晚才能看得見。愛迪生既聰明又充滿智慧。然而，我最欽佩愛迪生的地方在於他從不放棄自己的夢想。在發明電燈泡之前，他經歷了許多次的失敗。基於這些原因，我認為湯瑪斯·愛迪生是一位偉大的人。",
+      "sentences": [
+        {
+          "en": "The person I admire the most is Thomas Edison.",
+          "zh": "我最欽佩的人是湯瑪斯·愛迪生。"
+        },
+        {
+          "en": "Thomas Edison was an inventor from the United States.",
+          "zh": "湯瑪斯·愛迪生是一位來自美國的發明家。"
+        },
+        {
+          "en": "He was born in 1847 and died in 1931.",
+          "zh": "他出生於 1847 年，並於 1931 年逝世。"
+        },
+        {
+          "en": "Edison invented many things.",
+          "zh": "愛迪生發明了許多事物。"
+        },
+        {
+          "en": "His most famous invention is the light bulb.",
+          "zh": "他最著名的發明是電燈泡。"
+        },
+        {
+          "en": "Thanks to Edison, we can see at night.",
+          "zh": "多虧了愛迪生，我們在夜晚才能看得見。"
+        },
+        {
+          "en": "Edison was smart and wise.",
+          "zh": "愛迪生既聰明又充滿智慧。"
+        },
+        {
+          "en": "However, I admire Edison most of all because he never gave up on his dreams.",
+          "zh": "然而，我最欽佩愛迪生的地方在於他從不放棄自己的夢想。"
+        },
+        {
+          "en": "He failed many times before he invented the light bulb.",
+          "zh": "在發明電燈泡之前，他經歷了許多次的失敗。"
+        },
+        {
+          "en": "For these reasons, I think Thomas Edison was a great person.",
+          "zh": "基於這些原因，我認為湯瑪斯·愛迪生是一位偉大的人。"
+        }
+      ],
+      "key_sentences": [
+        {
+          "sentence": "His most famous invention is the light bulb.",
+          "tag": "⭐ Week 12 核心考點",
+          "note": "最高代表作成就句型：His/Her most famous [invention/painting/etc.] is [Noun]...",
+          "point": "最高代表作成就句型：His/Her most famous [invention/painting/etc.] is [Noun]..."
+        },
+        {
+          "sentence": "Thanks to Edison, we can see at night.",
+          "tag": "⭐ Week 12 核心考點",
+          "note": "深遠影響與貢獻句型：Thanks to + [Person], 主詞 + can + 原形動詞...",
+          "point": "深遠影響與貢獻句型：Thanks to + [Person], 主詞 + can + 原形動詞..."
+        },
+        {
+          "sentence": "However, I admire Edison most of all because he never gave up on his dreams.",
+          "tag": "⭐ Week 12 核心考點",
+          "note": "核心欽佩原因轉折句：However + I admire... most of all because + 過去式子句...",
+          "point": "核心欽佩原因轉折句：However + I admire... most of all because + 過去式子句..."
+        }
+      ],
+      "exp_eng": "",
+      "exp_chi": "",
+      "is_week12": true
+    },
+    {
+      "book_id": "wr3",
+      "unit_id": "wr3_6",
+      "sequence": 2,
+      "section_title": "Model Biography: Isaac Newton (The Giant of Modern Science)",
+      "eng": "The person I admire the most is Isaac Newton. Isaac Newton was a scientist from England. He was born in 1643 and died in 1727. Newton made many scientific discoveries. His most famous scientific theory is the theory of gravity. Thanks to Newton, we understand gravity better. Newton was brilliant and dedicated. However, I admire Newton most of all because he was not afraid to be different. For these reasons, I think Isaac Newton was a great person.",
+      "chi": "我最欽佩的人是艾薩克·牛頓。艾薩克·牛頓是一位來自英國的科學家。他出生於 1643 年，並於 1727 年逝世。牛頓做出了許多科學發現。他最著名的科學理論是地心引力理論。多虧了牛頓，我們才能更深入理解重力。牛頓聰穎過人且全心奉獻。然而，我最欽佩牛頓之處在於他不害怕與眾不同。基於這些原因，我認為艾薩克·牛頓是一位偉大的人。",
+      "sentences": [
+        {
+          "en": "The person I admire the most is Isaac Newton.",
+          "zh": "我最欽佩的人是艾薩克·牛頓。"
+        },
+        {
+          "en": "Isaac Newton was a scientist from England.",
+          "zh": "艾薩克·牛頓是一位來自英國的科學家。"
+        },
+        {
+          "en": "He was born in 1643 and died in 1727.",
+          "zh": "他出生於 1643 年，並於 1727 年逝世。"
+        },
+        {
+          "en": "Newton made many scientific discoveries.",
+          "zh": "牛頓做出了許多科學發現。"
+        },
+        {
+          "en": "His most famous scientific theory is the theory of gravity.",
+          "zh": "他最著名的科學理論是地心引力理論。"
+        },
+        {
+          "en": "Thanks to Newton, we understand gravity better.",
+          "zh": "多虧了牛頓，我們才能更深入理解重力。"
+        },
+        {
+          "en": "Newton was brilliant and dedicated.",
+          "zh": "牛頓聰穎過人且全心奉獻。"
+        },
+        {
+          "en": "However, I admire Newton most of all because he was not afraid to be different.",
+          "zh": "然而，我最欽佩牛頓之處在於他不害怕與眾不同。"
+        },
+        {
+          "en": "For these reasons, I think Isaac Newton was a great person.",
+          "zh": "基於這些原因，我認為艾薩克·牛頓是一位偉大的人。"
+        }
+      ],
+      "key_sentences": [
+        {
+          "sentence": "Newton made many scientific discoveries.",
+          "tag": "⭐ Week 12 核心考點",
+          "note": "科學家成就搭配動詞：make scientific discoveries (做出科學發現)。",
+          "point": "科學家成就搭配動詞：make scientific discoveries (做出科學發現)。"
+        },
+        {
+          "sentence": "Thanks to Newton, we understand gravity better.",
+          "tag": "⭐ Week 12 核心考點",
+          "note": "因果影響結構：Thanks to + 名詞，主要子句說明人類生活或知識的進步。",
+          "point": "因果影響結構：Thanks to + 名詞，主要子句說明人類生活或知識的進步。"
+        }
+      ],
+      "exp_eng": "",
+      "exp_chi": "",
+      "is_week12": true
+    },
+    {
+      "book_id": "wr3",
+      "unit_id": "wr3_6",
+      "sequence": 3,
+      "section_title": "Model Biography: Helen Keller (A Beacon of Hope)",
+      "eng": "The person I admire the most is Helen Keller. Helen Keller was a writer from the United States. She was born in 1880 and died in 1968. She wrote great books and traveled around the world. Thanks to Keller, disabled people have more hope. Helen Keller was remarkably brave. However, I admire Keller most of all because she never complained about her disabilities. She worked hard to learn how to speak and write. For these reasons, I think Helen Keller was a great person.",
+      "chi": "我最欽佩的人是海倫·凱勒。海倫·凱勒是一位來自美國的作家。她出生於 1880 年，並於 1968 年逝世。她撰寫了許多傑出的書籍，並走訪世界各地。多虧了凱勒，身心障礙人士擁有了更多的希望。海倫·凱勒非凡勇敢。然而，我最欽佩凱勒的地方在於她從不抱怨自己的身體障礙。她辛勤努力學習如何說話與書寫。基於這些原因，我認為海倫·凱勒是一位偉大的人。",
+      "sentences": [
+        {
+          "en": "The person I admire the most is Helen Keller.",
+          "zh": "我最欽佩的人是海倫·凱勒。"
+        },
+        {
+          "en": "Helen Keller was a writer from the United States.",
+          "zh": "海倫·凱勒是一位來自美國的作家。"
+        },
+        {
+          "en": "She was born in 1880 and died in 1968.",
+          "zh": "她出生於 1880 年，並於 1968 年逝世。"
+        },
+        {
+          "en": "She wrote great books and traveled around the world.",
+          "zh": "她撰寫了許多傑出的書籍，並走訪世界各地。"
+        },
+        {
+          "en": "Thanks to Keller, disabled people have more hope.",
+          "zh": "多虧了凱勒，身心障礙人士擁有了更多的希望。"
+        },
+        {
+          "en": "Helen Keller was remarkably brave.",
+          "zh": "海倫·凱勒非凡勇敢。"
+        },
+        {
+          "en": "However, I admire Keller most of all because she never complained about her disabilities.",
+          "zh": "然而，我最欽佩凱勒的地方在於她從不抱怨自己的身體障礙。"
+        },
+        {
+          "en": "She worked hard to learn how to speak and write.",
+          "zh": "她辛勤努力學習如何說話與書寫。"
+        },
+        {
+          "en": "For these reasons, I think Helen Keller was a great person.",
+          "zh": "基於這些原因，我認為海倫·凱勒是一位偉大的人。"
+        }
+      ],
+      "key_sentences": [
+        {
+          "sentence": "Thanks to Keller, disabled people have more hope.",
+          "tag": "⭐ Week 12 核心考點",
+          "note": "形容詞 disabled 修飾 people 表示身心障礙人士；hope 為不可數名詞。",
+          "point": "形容詞 disabled 修飾 people 表示身心障礙人士；hope 為不可數名詞。"
+        },
+        {
+          "sentence": "I admire Keller most of all because she never complained about her disabilities.",
+          "tag": "⭐ Week 12 核心考點",
+          "note": "complain about sth 為固定動詞片語搭配，disabilities 為名詞複數型態。",
+          "point": "complain about sth 為固定動詞片語搭配，disabilities 為名詞複數型態。"
+        }
+      ],
+      "exp_eng": "",
+      "exp_chi": "",
+      "is_week12": true
+    },
+    {
+      "book_id": "wr3",
+      "unit_id": "wr3_6",
+      "sequence": 4,
+      "section_title": "Model Biography: Wolfgang Amadeus Mozart (The Musical Genius)",
+      "eng": "The person I admire the most is Wolfgang Amadeus Mozart. Wolfgang Amadeus Mozart was a composer from Austria. He was born in 1756 and died in 1791. Mozart composed many symphonies and operas. His most famous composition is the opera Don Giovanni. Thanks to Mozart, we can listen to great music. Mozart was brilliant and hardworking. However, I admire Mozart most of all because he studied music very hard. For these reasons, I think Wolfgang Amadeus Mozart was a great person.",
+      "chi": "我最欽佩的人是沃夫岡·阿瑪迪斯·莫札特。沃夫岡·阿瑪迪斯·莫札特是一位來自奧地利的作曲家。他出生於 1756 年，並於 1791 年逝世。莫札特創作了許多交響樂與歌劇。他最著名的音樂作品是歌劇《唐·喬望尼》。多虧了莫札特，我們才能聆聽到美妙的音樂。莫札特既才華橫溢又辛勤努力。然而，我最欽佩莫札特的地方在於他極其刻苦地研習音樂。基於這些原因，我認為沃夫岡·阿瑪迪斯·莫札特是一位偉大的人。",
+      "sentences": [
+        {
+          "en": "The person I admire the most is Wolfgang Amadeus Mozart.",
+          "zh": "我最欽佩的人是沃夫岡·阿瑪迪斯·莫札特。"
+        },
+        {
+          "en": "Wolfgang Amadeus Mozart was a composer from Austria.",
+          "zh": "沃夫岡·阿瑪迪斯·莫札特是一位來自奧地利的作曲家。"
+        },
+        {
+          "en": "He was born in 1756 and died in 1791.",
+          "zh": "他出生於 1756 年，並於 1791 年逝世。"
+        },
+        {
+          "en": "Mozart composed many symphonies and operas.",
+          "zh": "莫札特創作了許多交響樂與歌劇。"
+        },
+        {
+          "en": "His most famous composition is the opera Don Giovanni.",
+          "zh": "他最著名的音樂作品是歌劇《唐·喬望尼》。"
+        },
+        {
+          "en": "Thanks to Mozart, we can listen to great music.",
+          "zh": "多虧了莫札特，我們才能聆聽到美妙的音樂。"
+        },
+        {
+          "en": "Mozart was brilliant and hardworking.",
+          "zh": "莫札特既才華橫溢又辛勤努力。"
+        },
+        {
+          "en": "However, I admire Mozart most of all because he studied music very hard.",
+          "zh": "然而，我最欽佩莫札特的地方在於他極其刻苦地研習音樂。"
+        },
+        {
+          "en": "For these reasons, I think Wolfgang Amadeus Mozart was a great person.",
+          "zh": "基於這些原因，我認為沃夫岡·阿瑪迪斯·莫札特是一位偉大的人。"
+        }
+      ],
+      "key_sentences": [
+        {
+          "sentence": "His most famous composition is the opera Don Giovanni.",
+          "tag": "⭐ Week 12 核心考點",
+          "note": "代表作名詞 composition (音樂創作/樂曲) 為單數，be 動詞使用現在式 is。",
+          "point": "代表作名詞 composition (音樂創作/樂曲) 為單數，be 動詞使用現在式 is。"
+        },
+        {
+          "sentence": "However, I admire Mozart most of all because he studied music very hard.",
+          "tag": "⭐ Week 12 核心考點",
+          "note": "欽佩原因轉折句：because 子句描述已故音樂家生前奮鬥事蹟，動詞使用過去式 studied。",
+          "point": "欽佩原因轉折句：because 子句描述已故音樂家生前奮鬥事蹟，動詞使用過去式 studied。"
+        }
+      ],
+      "exp_eng": "",
+      "exp_chi": "",
+      "is_week12": true
     }
   ],
   "vocabulary": [
@@ -11103,346 +12404,6 @@ const ENGLISH_DATA = {
       "compare": "Piece (片/塊) vs. Peace (和平)。發音完全一樣（同音異義詞）。口訣：Give me a piece of cake in peace. (在和平中給我一塊蛋糕)。"
     },
     {
-      "id": "voc_521",
-      "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "word": "Label",
-      "pos": "名詞 (Noun) / 動詞 (Verb: label, labeled, labeled)",
-      "chi": "標籤 / 貼標籤",
-      "breakdown": "來自古法文 label (薄片/絲帶)。指示物品資訊的小紙片。",
-      "trick": "諧音「雷波」。聯想：這張食品「標籤」被「雷」電打到，發出「波」的一聲亮了起來！",
-      "scene": "拿起一罐洋芋片，翻到背面看著上面印著密密麻麻卡路里和成分的小貼紙。",
-      "collocation": "food label (食品標籤), read labels (讀標籤)",
-      "img": "🏷️",
-      "context_eng": "Always read the food label before buying snacks.",
-      "context_chi": "購買零食前一定要閱讀食品標籤。",
-      "chant": "雷波閃亮，食品標籤 (Label) 看清楚！",
-      "compare": "Label (標籤) vs. Libel (誹謗) vs. Level (等級)。"
-    },
-    {
-      "id": "voc_522",
-      "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "word": "Package",
-      "pos": "名詞 (Noun) / 動詞 (Verb: package, packaged, packaged)",
-      "chi": "包裝 / 包裹",
-      "breakdown": "pack (包裝) + -age (名詞字尾)。打包在一起的物品。",
-      "trick": "諧音「派客」。聯想：快遞「派客」送來了一個包裝得非常嚴密的「包裹」。",
-      "scene": "郵差送來一個用黃色硬紙盒裝著、外層裹滿泡泡紙的包裹。",
-      "collocation": "food package (食品包裝), open a package (打開包裹)",
-      "img": "📦",
-      "context_eng": "Check the food package for the expiration date.",
-      "context_chi": "檢查食品包裝上的保存期限。",
-      "chant": "派客送來，精美包裝 (Package) 拆開看！",
-      "compare": "Package (包裝/包裹) vs. Packet (小紙包/小袋)。"
-    },
-    {
-      "id": "voc_523",
-      "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "word": "Chemical",
-      "pos": "名詞 (Noun) / 形容詞 (Adj)",
-      "chi": "化學物質 / 化學的",
-      "breakdown": "來自拉丁文 alchimia (煉金術) -> chem- (化學) + -ical (形容詞字尾)。",
-      "trick": "諧音「凱米摳」。聯想：「凱米」颱風把實驗室吹翻，裡面的「化學物質」被「摳」(扣) 留了下來！",
-      "scene": "穿著白袍的科學家把試管裡的綠色液體倒進藍色液體裡，瞬間冒出許多氣泡。",
-      "collocation": "harmful chemicals (有害化學物質), chemical reaction (化學反應)",
-      "img": "🧪",
-      "context_eng": "Junk food often contains a lot of chemicals.",
-      "context_chi": "垃圾食物通常含有許多化學物質。",
-      "chant": "試管冒泡，化學物質 (Chemical) 要小心！",
-      "compare": "Chemical (化學物質) vs. Physical (物理的)。"
-    },
-    {
-      "id": "voc_524",
-      "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "word": "Ingredient",
-      "pos": "名詞 (Noun)",
-      "chi": "配料 / 食材 / 原料",
-      "breakdown": "字首 in- (into 進入) + gred (step/walk 走) + -ient ->「走進去」組成成品的一部分。源自拉丁文 ingredi.",
-      "trick": "諧音「硬哥瑞特」。聯想：「硬哥」在「瑞特」(Right/對) 的廚房裡，把所有「食材配料」丟進大鍋裡！",
-      "scene": "做披薩時，把麵粉、起司、番茄片和奧勒岡草一項一項擺在桌上準備烘焙。",
-      "collocation": "main ingredient (主要原料), list of ingredients (食材清單)",
-      "img": "🧀",
-      "context_eng": "Mix all the ingredients together in a big bowl.",
-      "context_chi": "將所有食材配料在大碗裡混合在一起。",
-      "chant": "硬哥瑞特，準備食材 (Ingredient) 做大餐！",
-      "compare": "Ingredient (料理食材/原料) vs. Element (元素/要素)。"
-    },
-    {
-      "id": "voc_525",
-      "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "word": "Product",
-      "pos": "名詞 (Noun)。由動詞 produce 衍生。",
-      "chi": "產品 / 產物",
-      "breakdown": "字首 pro- (forward 向前) + duct (lead 引導) ->「引導製造出來」推向市場的東西。",
-      "trick": "諧音「撲熱客」。聯想：這項新「產品」太熱門了，「撲」向「熱」情的「客」人！",
-      "scene": "超市貨架上擺滿了各種洗髮精、餅乾盒和罐頭，全都是工廠製造出來的商品。",
-      "collocation": "food product (食品), new product (新產品), produce (動詞: 生產)",
-      "img": "🛒",
-      "context_eng": "Food companies put chemicals in their products.",
-      "context_chi": "食品公司在他們的產品中加入化學物質。",
-      "chant": "撲熱客 人，搶購熱門 產品 (Product)！",
-      "compare": "Product (產品/名詞) vs. Produce (生產/動詞) vs. Protect (保護)。"
-    },
-    {
-      "id": "voc_526",
-      "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "word": "Delicious",
-      "pos": "形容詞 (Adj)",
-      "chi": "美味的 / 可口的",
-      "breakdown": "字首 de- (away) + lici (entice 誘惑) + -ous (充滿...的) -> 充滿誘惑好吃的味道。源自拉丁文 deliciosus.",
-      "trick": "諧音「得力蛇」。聯想：「得力」的「蛇」廚師，做出了世界上最「美味的」蛋糕！",
-      "scene": "剛出爐的起司披薩，香氣四溢，一口咬下去還會拉出金黃色的長絲。",
-      "collocation": "delicious food (美味的食物), taste delicious (嘗起來美味)",
-      "img": "😋",
-      "context_eng": "Lisa wanted her family to eat delicious cake.",
-      "context_chi": "Lisa 希望她的家人能吃到美味的蛋糕。",
-      "chant": "得力蛇 廚師，做出 美味 (Delicious) 大餐！",
-      "compare": "Delicious (極美味的 - 不加 very) vs. Tasty (好吃的)。"
-    },
-    {
-      "id": "voc_527",
-      "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "word": "Junk food",
-      "pos": "名詞 (Noun)",
-      "chi": "垃圾食物",
-      "breakdown": "junk (廢棄物/破爛) + food (食物) -> 沒有營養價值的廢棄級食物。",
-      "trick": "直譯聯想。Junk (垃圾) + food (食物) = 吃多了對身體沒好處的高熱量食物。",
-      "scene": "洋芋片、可樂、炸雞和漢堡，雖然吃起來香脆，但吃多了會變胖不健康。",
-      "collocation": "eat junk food (吃垃圾食物), avoid junk food (避免垃圾食物)",
-      "img": "🍟",
-      "context_eng": "Junk food is full of fat and unhealthy chemicals.",
-      "context_chi": "垃圾食物充滿了脂肪和不健康的化學物質。",
-      "chant": "垃圾食物 (Junk food) 少少吃，身體健康多運動！",
-      "compare": "Junk food (垃圾食物) vs. Fast food (速食 - 不一定全是垃圾食物)。"
-    },
-    {
-      "id": "voc_528",
-      "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "word": "Healthily",
-      "pos": "副詞 (Adverb)。形容詞為 healthy。",
-      "chi": "健康地",
-      "breakdown": "health (健康) + -i- + -ly (副詞字尾) -> 保持健康狀態地。",
-      "trick": "諧音「黑死力」。聯想：鍛鍊身體不能用「黑死力」(蠻力)，要「健康地」吃與運動！",
-      "scene": "每天吃蔬菜水果、按時睡覺並做運動，整個人看起來精神煥發。",
-      "collocation": "eat healthily (健康地飲食), live healthily (健康地生活)",
-      "img": "🥗",
-      "context_eng": "Are you interested in eating healthily?",
-      "context_chi": "你對健康地飲食感興趣嗎？",
-      "chant": "黑死力 不可取，健康地 (Healthily) 飲食尚要緊！",
-      "compare": "Healthily (副詞: 健康地) vs. Healthy (形容詞: 健康的) vs. Health (名詞: 健康)。"
-    },
-    {
-      "id": "voc_529",
-      "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "word": "Surprised",
-      "pos": "形容詞 (Adj)。動詞為 surprise。",
-      "chi": "感到驚喜的 / 感到驚訝的",
-      "breakdown": "sur- (over 在...之上) + prise (take 抓住) + -ed (感到...的) -> 突然被意想不到的事抓住。",
-      "trick": "諧音「色白死」。聯想：看到鬼屋裡的怪獸，「色」(臉色) 變「白死」了，真是「感到驚訝的」！",
-      "scene": "生日那天，朋友突然關燈推著大蛋糕出來，你高興地張大嘴巴「哇！」了一聲。",
-      "collocation": "be surprised by (被...驚訝到), feel surprised (感到驚訝)",
-      "img": "😲",
-      "context_eng": "She was surprised by the delicious cake.",
-      "context_chi": "她對蛋糕的美味感到驚喜。",
-      "chant": "臉色白死，感到驚喜 (Surprised) 又驚訝！",
-      "compare": "Surprised (感到驚訝的 - 修飾人) vs. Surprising (令人驚訝的 - 修飾物)。"
-    },
-    {
-      "id": "voc_530",
-      "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "word": "Allergic",
-      "pos": "形容詞 (Adj)。名詞為 allergy。",
-      "chi": "過敏的",
-      "breakdown": "all- (other 其他的) + erg (work 作用) + -ic -> 身體對外來物質產生異常的其他反應。源自希臘文 allergia.",
-      "trick": "諧音「阿樂吉」。聯想：「阿樂」吃了「吉」(花生) 之後全身發癢，原來是「過敏的」！",
-      "scene": "吃了海鮮後，皮膚上突然長出一個個紅紅癢癢的小疹子，一直想用手去抓。",
-      "collocation": "be allergic to (對...過敏), allergic reaction (過敏反應)",
-      "img": "🤧",
-      "context_eng": "Some children are allergic to peanuts or milk.",
-      "context_chi": "有些兒童對花生或牛奶過敏。",
-      "chant": "阿樂吉 花生過敏，皮膚發癢要看醫生！",
-      "compare": "Allergic (過敏的/形容詞) vs. Allergy (過敏/名詞)。"
-    },
-    {
-      "id": "voc_531",
-      "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "word": "Excited",
-      "pos": "形容詞 (Adj)。動詞為 excite。",
-      "chi": "感到興奮的",
-      "breakdown": "ex- (out 出) + cite (call 呼喚/動) + -ed -> 心中的熱情被呼喚出來。",
-      "trick": "諧音「伊克塞」。聯想：「伊克」拿到「塞」(賽) 車冠軍，整個人「感到極度興奮」！",
-      "scene": "明天要去迪士尼樂園，你今晚在床上跳來跳去，高興得完全睡不著覺。",
-      "collocation": "be excited about (對...感到興奮), feel excited (感到興奮)",
-      "img": "🤩",
-      "context_eng": "The children were excited about going to the party.",
-      "context_chi": "孩子們對去參加派對感到興奮。",
-      "chant": "伊克賽 車拿第一，感到興奮 (Excited) 跳起來！",
-      "compare": "Excited (感到興奮的 - 修飾人) vs. Exciting (令人興奮的 - 修飾物)。"
-    },
-    {
-      "id": "voc_532",
-      "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "word": "Worried",
-      "pos": "形容詞 (Adj)。動詞為 worry。",
-      "chi": "感到擔心的",
-      "breakdown": "worry (扼住咽喉/折磨) + -ied -> 被煩惱纏住的。源自古英文 wyrgan.",
-      "trick": "諧音「握瑞」。聯想：「握」著「瑞」(幸運) 符，心裡依然「感到擔心的」。",
-      "scene": "考試成績單快發下來了，你坐在位置上，雙手緊握，眉頭深鎖。",
-      "collocation": "be worried about (對...感到擔心), feel worried (感到擔心)",
-      "img": "😰",
-      "context_eng": "Lisa was worried about burning the cake.",
-      "context_chi": "Lisa 擔心把蛋糕烤焦。",
-      "chant": "握瑞 幸運符，感到擔心 (Worried) 皺眉頭！",
-      "compare": "Worried (感到擔心的 - 修飾人) vs. Worrying (令人擔心的 - 修飾物)。"
-    },
-    {
-      "id": "voc_533",
-      "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "word": "Disappointed",
-      "pos": "形容詞 (Adj)。動詞為 disappoint。",
-      "chi": "感到失望的",
-      "breakdown": "dis- (away 離開) + appoint (指定/期望) + -ed -> 期望的事情落空離去了。",
-      "trick": "諧音「底色盼點」。聯想：期「盼」很久的彩色畫，「底色」只印了一「點」，真讓人「感到失望的」！",
-      "scene": "期待已久的戶外教學因為下暴雨取消了，你低下頭默默把背包放回角落。",
-      "collocation": "be disappointed with/in (對...感到失望)",
-      "img": "😞",
-      "context_eng": "I was disappointed with the test results.",
-      "context_chi": "我對測驗結果感到失望。",
-      "chant": "底色盼點 畫作壞，感到失望 (Disappointed) 低下頭！",
-      "compare": "Disappointed (感到失望的) vs. Disappointing (令人失望的)。"
-    },
-    {
-      "id": "voc_534",
-      "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "word": "Interested",
-      "pos": "形容詞 (Adj)。名詞為 interest。",
-      "chi": "感到感興趣的",
-      "breakdown": "inter- (between 在...之間) + est (is 存在) + -ed -> 參與其中並產生關切。",
-      "trick": "諧音「音區瑞斯」。聯想：對低「音區」的「瑞斯」(Race) 樂曲，「感到感興趣的」！",
-      "scene": "在圖書館看到一本關於黑洞和外星人的科普書，你津津有味地翻了一頁又一頁。",
-      "collocation": "be interested in (對...感興趣), feel interested (感到有趣)",
-      "img": "🧐",
-      "context_eng": "Hana is interested in learning about health.",
-      "context_chi": "Hana 對學習健康知識感興趣。",
-      "chant": "音區瑞斯 聽樂曲，感到興趣 (Interested) 探究竟！",
-      "compare": "Interested (感到感興趣的 - 修飾人) vs. Interesting (令人有趣的 - 修飾物)。"
-    },
-    {
-      "id": "voc_535",
-      "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "word": "Silly",
-      "pos": "形容詞 (Adj)",
-      "chi": "傻的 / 糊塗的 / 搞笑的",
-      "breakdown": "古英文 sælig 原意為「幸運的/神聖的」，後來演變為單純天真、乃至糊塗搞笑的。",
-      "trick": "諧音「西力」。聯想：「西」瓜裝在「力」(竹籃) 裡拿去當帽子戴，真是太「傻了/糊塗了」！",
-      "scene": "做算術題時不小心把 1+1 寫成 3，自己看了都忍不住拍腦袋笑出來。",
-      "collocation": "a silly mistake (糊塗的錯誤), silly of someone (某人太傻了)",
-      "img": "🤪",
-      "context_eng": "That was a silly mistake to confuse salt with sugar.",
-      "context_chi": "把鹽和糖搞混真是一個糊塗的錯誤。",
-      "chant": "西瓜戴頭上，太傻 (Silly) 糊塗笑哈哈！",
-      "compare": "Silly (糊塗搞笑的/輕微的傻) vs. Stupid (蠢笨的/較重字眼)。"
-    },
-    {
-      "id": "voc_536",
-      "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "word": "Famous",
-      "pos": "形容詞 (Adj)。名詞為 fame。",
-      "chi": "著名的 / 出名的",
-      "breakdown": "fame (名聲，源自拉丁文 fama 傳言) + -ous (充滿...的) -> 充滿名聲的。",
-      "trick": "諧音「飛馬斯」。聯想：騎著「飛馬」的「斯」巴達戰士，非常「著名的」！",
-      "scene": "電影明星走在紅地毯上，周圍幾百台相機閃光燈閃個不停，粉絲大聲尖叫。",
-      "collocation": "be famous for (以...聞名), famous person (名人)",
-      "img": "🌟",
-      "context_eng": "Italy is famous for its delicious food.",
-      "context_chi": "義大利以其美味食物聞名。",
-      "chant": "騎著飛馬，非常著名 (Famous)！",
-      "compare": "Famous (著名的 - 正面) vs. Infamous (惡名昭彰的 - 負面)。"
-    },
-    {
-      "id": "voc_537",
-      "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "word": "Full",
-      "pos": "形容詞 (Adj)",
-      "chi": "充滿的 / 飽的",
-      "breakdown": "古英文 full (滿的)。",
-      "trick": "諧音「富爾」。聯想：富有的小「富爾」，口袋裡「充滿了」金幣！",
-      "scene": "喝下一大碗熱湯和兩大碗飯，肚子鼓得像小氣球一樣，再也吃不下了。",
-      "collocation": "be full of (充滿...), full moon (滿月), full stomach (飽肚子)",
-      "img": "🌕",
-      "context_eng": "Junk food is full of fat and salt.",
-      "context_chi": "垃圾食物充滿了脂肪和鹽。",
-      "chant": "富爾口袋，充滿 (Full) 金幣肚飽飽！",
-      "compare": "Full (充滿的 / 反義詞: empty 空的) vs. Fool (傻瓜 - 長母音)。"
-    },
-    {
-      "id": "voc_538",
-      "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "word": "Excellent",
-      "pos": "形容詞 (Adj)",
-      "chi": "優秀的 / 極好的",
-      "breakdown": "ex- (out 出) + cell (rise 上升) + -ent -> 卓越超出常人的。源自拉丁文 excellere.",
-      "trick": "諧音「愛克斯倫特」。聯想：「愛克斯」(X) 教授表現「倫特」(特別)「優秀」！",
-      "scene": "考卷發下來，上面用紅筆寫著大大的「100 分」和三顆好棒棒印章。",
-      "collocation": "excellent performance (優秀的表現), be excellent at (精通...)",
-      "img": "💯",
-      "context_eng": "Lisa's sister is an excellent cook.",
-      "context_chi": "Lisa 的姐姐是一位優秀的廚師。",
-      "chant": "愛克斯特別棒，表現優秀 (Excellent) 考一百！",
-      "compare": "Excellent (極優秀的) vs. Perfect (完美的)。"
-    },
-    {
-      "id": "voc_539",
-      "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "word": "Amount",
-      "pos": "名詞 (Noun) / 動詞 (Verb)",
-      "chi": "數量 / 總額",
-      "breakdown": "ad- (to) + mont (mountain 山) -> 堆積如山總合起來的數量。",
-      "trick": "諧音「阿貓特」。聯想：「阿貓特」別會吃，盤子裡魚的「數量」像山一樣高！",
-      "scene": "量杯上面刻著 100ml、200ml 的刻度，用來測量麵粉或牛奶的多少。",
-      "collocation": "amount of money (金額), large amount of (大量的 - 接不可數名詞)",
-      "img": "📊",
-      "context_eng": "We should reduce the amount of junk food we eat.",
-      "context_chi": "我們應該減少食用的垃圾食物數量。",
-      "chant": "阿貓特別吃，數量 (Amount) 堆積如小山！",
-      "compare": "Amount (修飾「不可數名詞」, 如 amount of food) vs. Number (修飾「可數名詞」, 如 number of cars)。"
-    },
-    {
-      "id": "voc_540",
-      "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "word": "Mistake",
-      "pos": "名詞 (Noun) / 動詞 (Verb: mistake, mistook, mistaken)",
-      "chi": "錯誤 / 弄錯",
-      "breakdown": "mis- (wrong 錯誤地) + take (拿取) -> 拿錯了、做錯了。",
-      "trick": "諧音「米斯泰克」。聯想：「米斯」(Miss)「泰克」(Take) 拿錯了考卷，犯了一個「錯誤」！",
-      "scene": "在計算題裡把加號看成減號，算出來的答案和解答完全不一樣。",
-      "collocation": "make a mistake (犯錯), by mistake (不小心弄錯)",
-      "img": "❌",
-      "context_eng": "Lisa made a mistake and used salt instead of sugar.",
-      "context_chi": "Lisa 犯了一個錯誤，用了鹽而不是糖。",
-      "chant": "米斯泰克拿錯，犯了錯誤 (Mistake) 改過來！",
-      "compare": "Mistake (無心犯下的錯誤) vs. Fault (過失/責任)。"
-    },
-    {
       "id": "voc_541",
       "book_id": "gra3",
       "unit_id": "gra3_17",
@@ -13549,6 +14510,1426 @@ const ENGLISH_DATA = {
       "context_chi": "科學家可以測量它莖的長度、葉子的寬度以及根部的強度。",
       "chant": "strong 與 long 變名詞，o 改 e 加 th 記心裡 (strength / length)！",
       "compare": "strong (形容詞：強壯的) vs. strength (名詞：力量/強度)。"
+    },
+    {
+      "id": "voc_w12_gra3_16_1",
+      "book_id": "gra3",
+      "unit_id": "gra3_16",
+      "word": "interested",
+      "ipa": "/ˈɪntrəstɪd/",
+      "pos": "形容詞 (Adjective)",
+      "chi": "感興趣的",
+      "breakdown": "inter-(在...之間) + est(存在) + -ed(感到...的) -> 置身其中感到有趣的",
+      "trick": "諧音「因特瑞斯」-> 因特網特瑞斯很感興趣！",
+      "scene": "看到烹飪書時想嘗試做菜，或對科學實驗充滿好奇的心情",
+      "collocation": "be interested in (doing) something",
+      "img": "🎨",
+      "context_eng": "My sister is very interested in cooking international food.",
+      "context_chi": "我姊姊對烹飪國際各國美食非常感興趣。",
+      "chant": "Interested, interested, interested in! Learning new things makes us grin!",
+      "compare": "interested (人感到有興趣的，固定搭配 in) vs interesting (事物令人感興趣的)",
+      "is_midterm": true,
+      "is_week12": true
+    },
+    {
+      "id": "voc_w12_gra3_16_2",
+      "book_id": "gra3",
+      "unit_id": "gra3_16",
+      "word": "worried",
+      "ipa": "/ˈwʌrid/",
+      "pos": "形容詞 (Adjective)",
+      "chi": "擔心的；擔憂的",
+      "breakdown": "worry(擔憂) + -ed(形容詞字尾，表受詞心理狀態)",
+      "trick": "諧音「握銳的」-> 手裡握著鋒利的刀子，心裡很擔憂！",
+      "scene": "看著烤箱裡的蛋糕怕烤焦，或是看到零食標籤上密密麻麻的化學物質",
+      "collocation": "be worried about (doing) something",
+      "img": "😟",
+      "context_eng": "Mom is worried about eating too many chemicals in snacks.",
+      "context_chi": "媽媽很擔心零食裡面吃進太多化學添加物。",
+      "chant": "Worried about, worried about, don't you fret! Check the label, you're all set!",
+      "compare": "worried about (對某事憂慮) vs afraid of (對某物感到害怕恐懼)",
+      "is_midterm": true,
+      "is_week12": true
+    },
+    {
+      "id": "voc_w12_gra3_16_3",
+      "book_id": "gra3",
+      "unit_id": "gra3_16",
+      "word": "disappointed",
+      "ipa": "/ˌdɪsəˈpɔɪntɪd/",
+      "pos": "形容詞 (Adjective)",
+      "chi": "感到失望的",
+      "breakdown": "dis-(否定/遠離) + appoint(約定/指定) + -ed -> 期待落空感到失望",
+      "trick": "拆字：dis(不) + appoint(約定) -> 沒有如約定好的那麼好吃，感到好失望！",
+      "scene": "滿心期待咬下剛買的手工餅乾，卻發現又乾又硬很難吃",
+      "collocation": "be disappointed with / in something or someone",
+      "img": "😞",
+      "context_eng": "I am disappointed with these dry cookies because they have no flavor.",
+      "context_chi": "我對這些乾巴巴的餅乾感到很失望，因為它們毫無風味。",
+      "chant": "Disappointed with, disappointed in, try once more and you will win!",
+      "compare": "disappointed with (對物品/結果感到失望) vs disappointed in (對某人的表現失望)",
+      "is_midterm": true,
+      "is_week12": true
+    },
+    {
+      "id": "voc_w12_gra3_16_4",
+      "book_id": "gra3",
+      "unit_id": "gra3_16",
+      "word": "surprised",
+      "ipa": "/sərˈpraɪzd/",
+      "pos": "形容詞 (Adjective)",
+      "chi": "感到驚訝的；感到意外的",
+      "breakdown": "sur-(在...之上/突然) + prise(抓住) + -ed -> 突然被震撼抓住",
+      "trick": "諧音「蛇撲來」-> 突然一條玩具蛇撲來，大家都感到很驚訝！",
+      "scene": "看到果汁瓶標籤上的含糖量居然有八顆方糖那麼多時的表情",
+      "collocation": "be surprised by / at something",
+      "img": "😲",
+      "context_eng": "We were surprised by how much sugar there was in the fruit juice.",
+      "context_chi": "我們對果汁裡面竟然含有那麼多糖分感到非常驚訝。",
+      "chant": "Surprised by the facts, surprised by the news, reading food labels gives you clues!",
+      "compare": "surprised by (對外在事實感到驚訝) vs amazed by (對神奇卓越的事物驚嘆佩服)",
+      "is_midterm": true,
+      "is_week12": true
+    },
+    {
+      "id": "voc_w12_gra3_16_5",
+      "book_id": "gra3",
+      "unit_id": "gra3_16",
+      "word": "amazed",
+      "ipa": "/əˈmeɪzd/",
+      "pos": "形容詞 (Adjective)",
+      "chi": "感到驚奇的；大為讚嘆的",
+      "breakdown": "a-(在...狀態) + maze(迷宮) + -ed -> 如入迷宮般震撼神奇",
+      "trick": "諧音「額妹子」-> 看到大廚華麗拉糖花，大家讚嘆「額妹子太厲害了」！",
+      "scene": "在國際美食節看到廚師在十秒內把麵團拉成細如髮絲的麵條",
+      "collocation": "be amazed by (someone / something)",
+      "img": "🤩",
+      "context_eng": "The guests were amazed by the chef's incredible baking skills.",
+      "context_chi": "賓客們對主廚高超驚人的烘焙手藝感到讚嘆不已。",
+      "chant": "Amazed by the wonder, amazed by the skill, that giant chocolate cake gave us a thrill!",
+      "compare": "amazed by (讚嘆佩服，程度高於 surprised) vs confused by (困惑不解)",
+      "is_midterm": true,
+      "is_week12": true
+    },
+    {
+      "id": "voc_w12_gra3_16_6",
+      "book_id": "gra3",
+      "unit_id": "gra3_16",
+      "word": "confused",
+      "ipa": "/kənˈfjuːzd/",
+      "pos": "形容詞 (Adjective)",
+      "chi": "困惑的；搞不清楚的",
+      "breakdown": "con-(共同/一起) + fuse(倒/融合) + -ed -> 所有東西混倒在一起搞不清楚",
+      "trick": "諧音「肯服輸」-> 題意太混亂被搞得很困惑，不得不肯服輸！",
+      "scene": "看著兩款外觀一模一樣的調味粉包，分不清哪包是白糖哪包是細鹽",
+      "collocation": "be confused about / by something",
+      "img": "😕",
+      "context_eng": "Lisa was confused about the difference between the salt and sugar jars.",
+      "context_chi": "麗莎對鹽罐與糖罐的差異搞得一頭霧水。",
+      "chant": "Confused by the labels, confused about the rules, read them again to use proper tools!",
+      "compare": "confused about (對某件事困惑) vs confused by (被某個外在事物搞糊塗)",
+      "is_midterm": true,
+      "is_week12": true
+    },
+    {
+      "id": "voc_w12_gra3_16_7",
+      "book_id": "gra3",
+      "unit_id": "gra3_16",
+      "word": "sensible",
+      "ipa": "/ˈsensəbl/",
+      "pos": "形容詞 (Adjective)",
+      "chi": "明智的；合情理的",
+      "breakdown": "sense(理智/判斷力) + -ible(能...的) -> 有理智判斷力的",
+      "trick": "拆字：sense(常識/理智) + ible -> 有常識理智的就是「明智的」！",
+      "scene": "購物時仔細核對營養標籤再決定是否購買，展現理智成熟的消費行為",
+      "collocation": "It is sensible of someone (to do something)",
+      "img": "🧠",
+      "context_eng": "It is very sensible of you to choose fresh fruit instead of candy.",
+      "context_chi": "你選擇吃新鮮水果而不是糖果，真是太明智了。",
+      "chant": "Sensible, sensible, wise and clear! It is sensible of you to listen, my dear!",
+      "compare": "sensible (明智理性的) vs sensitive (敏感的/易受刺激的)",
+      "is_midterm": true,
+      "is_week12": true
+    },
+    {
+      "id": "voc_w12_gra3_16_8",
+      "book_id": "gra3",
+      "unit_id": "gra3_16",
+      "word": "curious",
+      "ipa": "/ˈkjʊəriəs/",
+      "pos": "形容詞 (Adjective)",
+      "chi": "好奇的；想探究的",
+      "breakdown": "cur(關心/注意) + -ious(多...的) -> 對各種事情都想深入探究的",
+      "trick": "諧音「Q 軟思」-> 對 Q 軟的果凍成分充滿好奇思考！",
+      "scene": "拿到一盒進口異國即食調理包，好奇地看著背面的烹飪說明步驟",
+      "collocation": "be curious about (doing) something",
+      "img": "🧐",
+      "context_eng": "The kids were curious about how the factory makes dark chocolate.",
+      "context_chi": "孩子們對這家工廠如何製造黑巧克力感到十分好奇。",
+      "chant": "Curious about this, curious about that, why did the kitten wear a funny chef hat?",
+      "compare": "curious about (對某事好奇) vs interested in (對某事感興趣並願深入投入)",
+      "is_midterm": true,
+      "is_week12": true
+    },
+    {
+      "id": "voc_w12_gra3_16_9",
+      "book_id": "gra3",
+      "unit_id": "gra3_16",
+      "word": "concerned",
+      "ipa": "/kənˈsɜːrnd/",
+      "pos": "形容詞 (Adjective)",
+      "chi": "關切的；憂心的",
+      "breakdown": "con-(完全) + cern(察覺/關聯) + -ed -> 全心牽掛關聯在心上的",
+      "trick": "諧音「肯深念」-> 肯在心裡深深思念牽掛，代表非常「關切憂心」！",
+      "scene": "醫生提醒家長關注學童的肥胖問題，家長認真閱讀食品中的鈉含量標示",
+      "collocation": "be concerned about (someone / something)",
+      "img": "🤝",
+      "context_eng": "Parents are concerned about the high amount of salt in instant noodles.",
+      "context_chi": "家長們對泡麵中過高的鹽分含量感到相當憂心與關切。",
+      "chant": "Concerned about health, concerned about sweet, eating good veggies is such a nice treat!",
+      "compare": "concerned about (關切擔憂某事) vs worried about (更偏向焦慮害怕不安)",
+      "is_midterm": true,
+      "is_week12": true
+    },
+    {
+      "id": "voc_w12_gra3_16_10",
+      "book_id": "gra3",
+      "unit_id": "gra3_16",
+      "word": "chemicals",
+      "ipa": "/ˈkemɪkəlz/",
+      "pos": "名詞 (Noun, 複數)",
+      "chi": "化學物質；化學添加劑",
+      "breakdown": "chem(化學) + -ic(的) + -al(名詞字尾) + -s(複數)",
+      "trick": "諧音「開門口」-> 食品工廠一開門口，滿滿都是化學原料！",
+      "scene": "看著食品包裝背面一長串看不懂的英文化學防腐劑名稱",
+      "collocation": "lots of chemicals, artificial chemicals, put chemicals in foods",
+      "img": "🧪",
+      "context_eng": "Many parents try to avoid buying foods that contain harmful chemicals.",
+      "context_chi": "許多父母盡量避免購買含有有害化學物質的食品。",
+      "chant": "Chemicals, chemicals, read the can! Choose real food whenever you can!",
+      "compare": "chemicals (化學物質) vs natural ingredients (天然食材成分)",
+      "is_midterm": true,
+      "is_week12": true
+    },
+    {
+      "id": "voc_w12_gra3_16_11",
+      "book_id": "gra3",
+      "unit_id": "gra3_16",
+      "word": "ingredients",
+      "ipa": "/ɪnˈɡriːdiənts/",
+      "pos": "名詞 (Noun, 複數)",
+      "chi": "成分；食材清單",
+      "breakdown": "in-(進入) + gred(走/步入) + -i- + -ent(物質) + -s -> 走進組合成菜餚的各項原料",
+      "trick": "拆字：in(在裡面) + grid(格子) -> 盒子裡每一格都是烘焙的新鮮食材！",
+      "scene": "烤蛋糕前在料理桌上排開的麵粉、雞蛋、牛奶、糖和奶油",
+      "collocation": "list of ingredients, mix the ingredients, natural ingredients",
+      "img": "🥗",
+      "context_eng": "You can check the list of ingredients before buying cereal.",
+      "context_chi": "在購買麥片之前，你可以先檢查成分清單。",
+      "chant": "Ingredients, ingredients, mix them slow! Flour, milk, and eggs make the dough!",
+      "compare": "ingredients (食材成分) vs recipe (包含製作步驟與份量的完整食譜)",
+      "is_midterm": true,
+      "is_week12": true
+    },
+    {
+      "id": "voc_w12_gra3_16_12",
+      "book_id": "gra3",
+      "unit_id": "gra3_16",
+      "word": "labels",
+      "ipa": "/ˈleɪblz/",
+      "pos": "名詞 (Noun, 複數)",
+      "chi": "標籤；食品標示牌",
+      "breakdown": "label(條籤/標記) + -s(複數)",
+      "trick": "諧音「雷寶」-> 踩雷小寶貝買東西不看標籤，買回家才後悔！",
+      "scene": "超市貨架上每個易開罐和紙盒背面的白色長方形營養成分表",
+      "collocation": "food labels, read the label, nutrition labels",
+      "img": "🏷️",
+      "context_eng": "Food labels give us important facts about the nutrition in our meals.",
+      "context_chi": "食品標籤提供我們關於餐點營養價值的重要事實。",
+      "chant": "Labels, labels, on the box! Give us the facts from head to socks!",
+      "compare": "label (貼在包裝上的資訊標籤) vs sticker (一般的貼紙/玩具貼)",
+      "is_midterm": true,
+      "is_week12": true
+    },
+    {
+      "id": "voc_w12_od3_16_1",
+      "book_id": "od3",
+      "unit_id": "od3_16",
+      "word": "gardener",
+      "ipa": "/ˈɡɑːrdənər/",
+      "pos": "名詞 (Noun)",
+      "chi": "園丁；造園者",
+      "breakdown": "garden(花園) + -er(人) -> 照料花園的人",
+      "trick": "趣味記憶：「花園(garden)裡的人(-er)」就是辛苦修剪花草的園丁！",
+      "scene": "在社區花園中蹲在土壤旁細心澆水拔草的志工或專家。",
+      "collocation": "skilled gardener, little gardener",
+      "img": "🧑‍🌾",
+      "context_eng": "Mrs. Washington saved a slice of pie for a good little gardener she knows.",
+      "context_chi": "Washington 太太為她認識的一位優秀小園丁留了一大塊派。",
+      "chant": "Gardener, gardener, tends the seeds; watering plants and pulling weeds!",
+      "compare": "gardener (園丁) vs farmer (農夫，多指耕種大片農田作物的人)",
+      "is_midterm": true,
+      "is_week12": true
+    },
+    {
+      "id": "voc_w12_od3_16_2",
+      "book_id": "od3",
+      "unit_id": "od3_16",
+      "word": "sweet potato",
+      "ipa": "/swiːt pəˈteɪtoʊ/",
+      "pos": "名詞 (Noun)",
+      "chi": "地瓜；甘藷",
+      "breakdown": "sweet(甜的) + potato(馬鈴薯) -> 甜甜的塊莖即地瓜",
+      "trick": "諧音記憶：「水甜」加上「破天頭」-> 甜如糖水、產量破天頭的大地瓜！",
+      "scene": "秋天在土壤泥土中挖掘出深橙色的大地瓜，用來烤地瓜派。",
+      "collocation": "sweet potato pie, dig up sweet potatoes",
+      "img": "🍠",
+      "context_eng": "Mrs. Willie Mae Washington dug up orange sweet potatoes to make a pie.",
+      "context_chi": "Washington 太太挖出橙色的地瓜來製作美味地瓜派。",
+      "chant": "Sweet potato, orange and round; growing quietly in the ground!",
+      "compare": "sweet potato (地瓜/甘藷) vs potato (馬鈴薯/洋芋)",
+      "is_midterm": true,
+      "is_week12": true
+    },
+    {
+      "id": "voc_w12_od3_16_3",
+      "book_id": "od3",
+      "unit_id": "od3_16",
+      "word": "beans",
+      "ipa": "/biːnz/",
+      "pos": "名詞 (Noun)",
+      "chi": "豆子；豆類",
+      "breakdown": "單數 bean + 複數 -s -> 豆莢內的顆顆豆子",
+      "trick": "自然發音法：ea 發長音 /iː/，唸起來像「冰」的清脆聲！",
+      "scene": "秋收時農夫把攀爬在竹架上的長長豆莢摘下，裝成滿滿一竹籃。",
+      "collocation": "a basket full of beans, green beans",
+      "img": "🫘",
+      "context_eng": "Mr. Singh carried away a basket full of beans from the community garden.",
+      "context_chi": "Singh 先生從社區花園裡提走了一整籃滿滿的豆子。",
+      "chant": "Beans on vines, beans in a pot; cook them healthy, eat them hot!",
+      "compare": "beans (豆類) vs peas (豌豆，多指小圓形綠色豌豆)",
+      "is_midterm": true,
+      "is_week12": true
+    },
+    {
+      "id": "voc_w12_od3_16_4",
+      "book_id": "od3",
+      "unit_id": "od3_16",
+      "word": "vines",
+      "ipa": "/vaɪnz/",
+      "pos": "名詞 (Noun)",
+      "chi": "藤蔓；攀爬植物",
+      "breakdown": "vine + 複數 -s -> 沿著支架攀爬的條狀藤蔓",
+      "trick": "拼讀記憶：字母 i 在字尾不發音 e 影響下發雙母音 /aɪ/。",
+      "scene": "爬滿紅磚牆或瓜棚的綠色葉蔓，西瓜、南瓜和小黃瓜都長在藤蔓上。",
+      "collocation": "grow on vines, green vines",
+      "img": "🌿",
+      "context_eng": "Standing higher than all the plants and vines in the garden was a giant sunflower.",
+      "context_chi": "佇立在花園所有植物與藤蔓之上的，是一朵巨大的向日葵。",
+      "chant": "Climbing vines upon the wall; holding pumpkins green and tall!",
+      "compare": "vines (藤蔓) vs branches (硬質樹枝)",
+      "is_midterm": true,
+      "is_week12": true
+    },
+    {
+      "id": "voc_w12_od3_16_5",
+      "book_id": "od3",
+      "unit_id": "od3_16",
+      "word": "garden",
+      "ipa": "/ˈɡɑːrdən/",
+      "pos": "名詞 (Noun)",
+      "chi": "花園；菜園",
+      "breakdown": "gard(保護/圍繞) + -en -> 被圍起來細心照料的花草園地",
+      "trick": "聯想記憶：「嘎等」-> 鴨子嘎嘎叫著，等著進花園散步！",
+      "scene": "陽光穿透薄霧灑在社區花園裡，鄰居們分工除草、摘番茄、澆花。",
+      "collocation": "community garden, flower garden, vegetable garden",
+      "img": "🏡",
+      "context_eng": "Marisol planted a seed in the Garden of Happiness.",
+      "context_chi": "Marisol 在幸福花園裡種下了一顆小小的種子。",
+      "chant": "In the garden, green and bright; flowers bloom in summer light!",
+      "compare": "garden (花園/菜圃) vs park (公園，多指供公眾休憩運動的大型綠地)",
+      "is_midterm": true,
+      "is_week12": true
+    },
+    {
+      "id": "voc_w12_od3_16_6",
+      "book_id": "od3",
+      "unit_id": "od3_16",
+      "word": "haze",
+      "ipa": "/heɪz/",
+      "pos": "名詞 (Noun)",
+      "chi": "薄霧；陰霾；光暈",
+      "breakdown": "單音節詞，a_e 發長音 /eɪ/",
+      "trick": "趣味諧音：「黑姿」-> 雖然叫黑姿，但金色薄霧 (golden haze) 卻金燦燦的！",
+      "scene": "早晨或黃昏陽光斜照街頭時，空氣中漂浮著一層溫暖朦朧的金黃光輝。",
+      "collocation": "golden haze, morning haze",
+      "img": "🌫️",
+      "context_eng": "A golden haze shone on the street as the big crowd gathered.",
+      "context_chi": "當人群聚集時，一道金黃色的光暈薄霧灑照在街道上。",
+      "chant": "Golden haze in morning light; street and houses shining bright!",
+      "compare": "haze (薄霧/光暈，多指大氣朦朧或金光) vs fog (濃霧，能見度極低)",
+      "is_midterm": true,
+      "is_week12": true
+    },
+    {
+      "id": "voc_w12_od3_16_7",
+      "book_id": "od3",
+      "unit_id": "od3_16",
+      "word": "teenagers",
+      "ipa": "/ˈtiːnˌeɪdʒərz/",
+      "pos": "名詞 (Noun)",
+      "chi": "青少年 (13至19歲)",
+      "breakdown": "teen(13-19字尾) + age(年齡) + -er(人) + -s -> 青少年群體",
+      "trick": "拆詞法：年齡 (age) 在 -teen 數字結尾的人 (-er) 就是青少年！",
+      "scene": "幾位年輕高中生拿著五顏六色的噴漆罐與畫筆，在街區磚牆上繪製向日葵壁畫。",
+      "collocation": "a group of teenagers, talented teenagers",
+      "img": "🧑‍🤝‍🧑",
+      "context_eng": "A group of teenagers wanted to paint a colorful mural on the wall.",
+      "context_chi": "一群青少年想要在牆上畫一幅色彩斑斕的壁畫。",
+      "chant": "Teenagers laugh and teenagers play; painting murals on a sunny day!",
+      "compare": "teenagers (13-19歲青少年) vs children (兒童) vs adults (成年人)",
+      "is_midterm": true,
+      "is_week12": true
+    },
+    {
+      "id": "voc_w12_od3_16_8",
+      "book_id": "od3",
+      "unit_id": "od3_16",
+      "word": "community",
+      "ipa": "/kəˈmjuːnəti/",
+      "pos": "名詞 (Noun)",
+      "chi": "社區；共同體",
+      "breakdown": "com-(共同) + mun(責任/服務) + -ity(名詞字尾) -> 共同生活服務的群體",
+      "trick": "發音諧音：「渴謬泥梯」-> 社區居民渴望齊心協力，搭起溝通的泥梯！",
+      "scene": "住在同一條街上的鄰居們齊心協力整理廢棄空地，將它打造成社區花園。",
+      "collocation": "community garden, local community",
+      "img": "🏘️",
+      "context_eng": "The neighbors planted vegetables together in the small community garden.",
+      "context_chi": "鄰居們在小小的社區花園裡一起種植蔬菜。",
+      "chant": "Community helpers, side by side; building gardens far and wide!",
+      "compare": "community (社區，強調人際互助) vs society (整個社會，範圍更廣)",
+      "is_midterm": true,
+      "is_week12": true
+    },
+    {
+      "id": "voc_w12_od3_16_9",
+      "book_id": "od3",
+      "unit_id": "od3_16",
+      "word": "crowd",
+      "ipa": "/kraʊd/",
+      "pos": "名詞 (Noun)",
+      "chi": "人群；群眾",
+      "breakdown": "單音節詞，ow 發雙母音 /aʊ/",
+      "trick": "聯想記憶：一群烏鴉 (crow) 飛進了人群 (crowd) 裡！",
+      "scene": "像過節般熱鬧非凡的街道上擠滿了鼓掌歡呼的鄰居與小朋友。",
+      "collocation": "a big crowd, a cheering crowd",
+      "img": "👥",
+      "context_eng": "There was a big crowd on the street, like on a holiday.",
+      "context_chi": "街上聚集了龐大的人群，就像在過節一般熱鬧。",
+      "chant": "A noisy crowd on the street today; clapping and cheering all the way!",
+      "compare": "crowd (人群，強調聚集的一大群人) vs audience (觀眾/聽眾，強調特定表演席)",
+      "is_midterm": true,
+      "is_week12": true
+    },
+    {
+      "id": "voc_w12_od3_16_10",
+      "book_id": "od3",
+      "unit_id": "od3_16",
+      "word": "shopping cart",
+      "ipa": "/ˈʃɑːpɪŋ kɑːrt/",
+      "pos": "名詞 (Noun)",
+      "chi": "超市手推車；購物車",
+      "breakdown": "shopping(採買) + cart(二輪或四輪小手推車)",
+      "trick": "直觀字根：推著去血拚 (shopping) 的車 (cart) 就是購物車！",
+      "scene": "老太太從雜貨店走出來，推著裝滿新鮮麵包與日用品的金屬推車走過花園。",
+      "collocation": "push a shopping cart, metal shopping cart",
+      "img": "🛒",
+      "context_eng": "Mrs. Anderson pushed her shopping cart by the garden and saw the flower.",
+      "context_chi": "Anderson 太太推著她的購物手推車經過花園，看見了那朵花。",
+      "chant": "Shopping cart rolling down the street; full of tasty things to eat!",
+      "compare": "shopping cart (手推車) vs basket (手提籃子)",
+      "is_midterm": true,
+      "is_week12": true
+    },
+    {
+      "id": "voc_w12_od3_16_11",
+      "book_id": "od3",
+      "unit_id": "od3_16",
+      "word": "water",
+      "ipa": "/ˈwɔːtər/",
+      "pos": "動詞 (Verb) / 名詞",
+      "chi": "澆水 (動詞)；水 (名詞)",
+      "breakdown": "日常基礎核心詞彙，此處做及物動詞使用",
+      "trick": "日常活用：水 (water) 不僅能喝，每天給盆栽倒水就是「澆水 (water the plant)」！",
+      "scene": "Marisol 每天清晨拿著綠色灑水壺，細心將水澆在冒芽的小種子上。",
+      "collocation": "water daily, water the plants",
+      "img": "🚿",
+      "context_eng": "She waters the single seed daily, and it grows taller and taller.",
+      "context_chi": "她每天為那顆單獨的種子澆水，它長得越來越高。",
+      "chant": "Water the seed and watch it grow; green leaves appearing in a row!",
+      "compare": "water (動詞澆水，例：She waters the flower) vs water (名詞飲用水，例：a glass of water)",
+      "is_midterm": true,
+      "is_week12": true
+    },
+    {
+      "id": "voc_w12_od3_16_12",
+      "book_id": "od3",
+      "unit_id": "od3_16",
+      "word": "curious",
+      "ipa": "/ˈkjʊriəs/",
+      "pos": "形容詞 (Adjective)",
+      "chi": "好奇的；渴望探究的",
+      "breakdown": "cur(關心/照看) + -ious(充滿...特質的形容詞字尾) -> 充滿關心探知慾的",
+      "trick": "趣味記憶：「Q睿思」-> 又 Q 又有智慧的思想，對全世界充滿好奇！",
+      "scene": "望著泥土中破土而出的小綠芽，心中猜測它到底會結出什麼果實或花朵。",
+      "collocation": "curious about, curious child",
+      "img": "🔍",
+      "context_eng": "Marisol is curious about her plant and wonders what it will become.",
+      "context_chi": "Marisol 對她的植物充滿好奇，想知道它未來會變成什麼模樣。",
+      "chant": "Curious about the earth and sky; always asking how and why!",
+      "compare": "curious (好奇的) vs interested (感興趣的，搭配 in)",
+      "is_midterm": true,
+      "is_week12": true
+    },
+    {
+      "id": "voc_w12_od3_16_13",
+      "book_id": "od3",
+      "unit_id": "od3_16",
+      "word": "bloom",
+      "ipa": "/bluːm/",
+      "pos": "動詞 (Verb) / 名詞",
+      "chi": "開花；綻放；盛放期",
+      "breakdown": "bl- (發芽生長象形) + -oom -> 砰地一聲繁花盛開",
+      "trick": "聯想擬音：「不擼木」-> 繁花盛開 (bloom) 時生機盎然，千萬不要去粗暴擼樹木！",
+      "scene": "夏日清晨巨大的向日葵金黃花瓣完全舒展開來，猶如燦爛發光的太陽圓盤。",
+      "collocation": "time to bloom, in full bloom",
+      "img": "🌸",
+      "context_eng": "Mrs. Washington said there is a time to bloom and a time to die.",
+      "context_chi": "Washington 太太說萬物皆有盛開之時，也有衰亡之日。",
+      "chant": "Sunflowers bloom in yellow and gold; the happiest story ever told!",
+      "compare": "bloom (指整株或多數花朵盛開綻放) vs blossom (特指果樹開花，如 cherry blossom)",
+      "is_midterm": true,
+      "is_week12": true
+    },
+    {
+      "id": "voc_w12_od3_16_14",
+      "book_id": "od3",
+      "unit_id": "od3_16",
+      "word": "empty",
+      "ipa": "/ˈempti/",
+      "pos": "形容詞 (Adjective)",
+      "chi": "空的；空無一物的",
+      "breakdown": "emp(空) + -ty(形容詞字尾)",
+      "trick": "發音諧音：「M 梯」-> 麥當勞 M 標誌的梯子上空空無人！",
+      "scene": "秋天花草凋零後，只剩下光禿禿泥土、沒有人影的淒涼廢棄空地。",
+      "collocation": "empty lot, empty room",
+      "img": "🈳",
+      "context_eng": "Marisol was too sad to visit the empty lot after her flower died.",
+      "context_chi": "在她的花朵死去之後，Marisol 傷心到再也不想踏進那座空蕩蕩的空地。",
+      "chant": "Empty boxes, empty space; bring some flowers to this place!",
+      "compare": "empty (空的，通用日常詞) = vacant (空置無人的，多指房地產或職缺同義詞)",
+      "is_midterm": true,
+      "is_week12": true
+    },
+    {
+      "id": "voc_w12_od3_16_15",
+      "book_id": "od3",
+      "unit_id": "od3_16",
+      "word": "vacant",
+      "ipa": "/ˈveɪkənt/",
+      "pos": "形容詞 (Adjective)",
+      "chi": "空置的；未被佔用的",
+      "breakdown": "vac-(空，如 vacation 假期) + -ant(形容詞字尾) -> 空置著的",
+      "trick": "字根聯想：放假 (vacation) 時學校空蕩蕩的，土地也是「空置的 (vacant)」！",
+      "scene": "大城市街區轉角處尚未蓋起高樓大廈、長滿野草的閒置空地。",
+      "collocation": "vacant lot, vacant seat, vacant room",
+      "img": "🏷️",
+      "context_eng": "Some cities transform vacant lots into beautiful community gardens.",
+      "context_chi": "有些城市會將閒置無人的空地改造成美麗的社區花園。",
+      "chant": "Vacant lots with trees and seeds; turning empty dirt into lovely greens!",
+      "compare": "vacant (強調未被租用、未被佔用) = empty (強調空間內無物)",
+      "is_midterm": true,
+      "is_week12": true
+    },
+    {
+      "id": "voc_w12_od3_16_16",
+      "book_id": "od3",
+      "unit_id": "od3_16",
+      "word": "unafraid",
+      "ipa": "/ˌʌnəˈfreɪd/",
+      "pos": "形容詞 (Adjective)",
+      "chi": "不怕的；無所畏懼的",
+      "breakdown": "un-(否定前綴，表示不) + afraid(害怕的) -> 不害怕的",
+      "trick": "前綴拆解法：un- 就是 NO，unafraid 就是「不害怕 (brave)」！",
+      "scene": "小園丁面對高大植物上的毛毛蟲毫不畏懼，勇敢伸手照顧植物。",
+      "collocation": "unafraid of danger, remain unafraid",
+      "img": "🦁",
+      "context_eng": "The unafraid little girl stood brave in front of the giant plant.",
+      "context_chi": "那個無所畏懼的小女孩勇敢地站在高大的植物面前。",
+      "chant": "Unafraid and standing tall; brave and strong through it all!",
+      "compare": "unafraid (不害怕的) = brave (勇敢的)；反義詞為 afraid / fearful",
+      "is_midterm": true,
+      "is_week12": true
+    },
+    {
+      "id": "voc_w12_od3_16_17",
+      "book_id": "od3",
+      "unit_id": "od3_16",
+      "word": "mature",
+      "ipa": "/məˈtʃʊr/",
+      "pos": "形容詞 (Adjective)",
+      "chi": "成熟的；長成的",
+      "breakdown": "matur-(成熟) + -e -> 充分發育長全的",
+      "trick": "趣味諧音：「美秋」-> 美麗的秋天到了，所有農作物都「成熟 (mature)」了！",
+      "scene": "歷經整個盛夏的充足日照與水分灌溉，向日葵植株完全成熟結籽。",
+      "collocation": "mature plant, mature fruit",
+      "img": "🌾",
+      "context_eng": "When the sunflower was fully mature, its seeds could be collected.",
+      "context_chi": "當向日葵完全成熟時，就可以把它的種子收集起來。",
+      "chant": "Mature and ripe, ready to eat; fresh fruit tastes sweet and neat!",
+      "compare": "mature (成熟的，可形容動植物與人) = ripe (熟透的，專門形容水果蔬菜熟了)",
+      "is_midterm": true,
+      "is_week12": true
+    },
+    {
+      "id": "voc_w12_rw6_9_1",
+      "book_id": "rw6",
+      "unit_id": "rw6_9",
+      "word": "calm",
+      "ipa": "/kɑːm/",
+      "pos": "形容詞 (Adjective)",
+      "chi": "冷靜的；平靜的",
+      "breakdown": "源自希臘語 kauma (酷暑炎熱休憩之寧靜時光) -> 心平氣和",
+      "trick": "諧音「看門」-> 看門守衛遇到任何狀況都要保持沉著冷靜！",
+      "scene": "在太空梭穿過大氣層震動降落時，諾拉神色自若、毫不驚慌。",
+      "collocation": "stay calm (保持冷靜), keep calm (冷靜沉著), calm voice (沉著平靜的嗓音)",
+      "img": "🧘",
+      "context_eng": "I don't know how you can be so calm, Nora.",
+      "context_chi": "諾拉，我真不知道妳怎麼能這麼冷靜。",
+      "chant": "Calm and cool, keep your head; do not panic, think instead!",
+      "compare": "calm (內心鎮定冷靜) vs. quiet (環境或人安靜不說話) vs. silent (完全無聲寂靜)",
+      "is_midterm": true,
+      "is_week12": true
+    },
+    {
+      "id": "voc_w12_rw6_9_2",
+      "book_id": "rw6",
+      "unit_id": "rw6_9",
+      "word": "confident",
+      "ipa": "/ˈkɒnfɪdənt/",
+      "pos": "形容詞 (Adjective)",
+      "chi": "有自信的；有信心的",
+      "breakdown": "con-(完全) + fid-(信任) + -ent(形容詞字尾) -> 對自己深信不疑的",
+      "trick": "拆記 con(一起) + fident(信得他) -> 大家一起信任他，他超有「自信」！",
+      "scene": "堂姊爾蒂娜回憶諾拉小時候雖然話不多，但眼神篤定、非常自信。",
+      "collocation": "feel confident (感到自信), be confident about (對…有信心), confident smile (自信的微笑)",
+      "img": "🦁",
+      "context_eng": "I remember Nora being quiet, but confident.",
+      "context_chi": "我記得諾拉以前很安靜，但很有自信。",
+      "chant": "Stand up tall, stand up proud; confident and calm, in a crowd!",
+      "compare": "confident (充滿自信的，褒義) vs. arrogant (傲慢自大的，貶義)",
+      "is_midterm": true,
+      "is_week12": true
+    },
+    {
+      "id": "voc_w12_rw6_9_3",
+      "book_id": "rw6",
+      "unit_id": "rw6_9",
+      "word": "friendly",
+      "ipa": "/ˈfrendli/",
+      "pos": "形容詞 (Adjective)",
+      "chi": "友善的；親切的",
+      "breakdown": "friend(朋友) + -ly(具…特質的形容詞字尾) -> 像朋友般待人的",
+      "trick": "記住「朋友 (friend)」加上 -ly 就是親切友善的模樣！",
+      "scene": "米勒家族聚會時，大人們滿面春風、熱情招待每位遠道而來的親戚。",
+      "collocation": "be friendly to sb. (對某人友善), friendly smile (親切的笑容), friendly atmosphere (友善的氣氛)",
+      "img": "🤝",
+      "context_eng": "And Rayyan, you were always so friendly, I don't think you can be rude.",
+      "context_chi": "而拉揚，你以前總是那麼親切友善，我想你絕不可能會無禮的。",
+      "chant": "A friendly smile, a friendly wave; kind and polite is how we behave!",
+      "compare": "friendly (形容詞：友善的) vs. kindly (副詞/形容詞：慈祥地)；注意 friendly 是形容詞非副詞！",
+      "is_midterm": true,
+      "is_week12": true
+    },
+    {
+      "id": "voc_w12_rw6_9_4",
+      "book_id": "rw6",
+      "unit_id": "rw6_9",
+      "word": "daring",
+      "ipa": "/ˈdeərɪŋ/",
+      "pos": "形容詞 (Adjective)",
+      "chi": "大膽的；敢於冒險的",
+      "breakdown": "dare(敢於、挑戰) + -ing(形容詞字尾) -> 敢作敢當、勇於開拓的",
+      "trick": "諧音「大人的」-> 敢隻身飛向外太空開拓新星球，這需要「大膽冒險」的魄力！",
+      "scene": "雙胞胎的父母敢於跟隨探險隊離開地球，前往遙遠的軒轅十四星定居開拓。",
+      "collocation": "daring explorer (勇敢大膽的探險家), daring plan (大膽的計畫), daring feat (大膽的壯舉)",
+      "img": "🚀",
+      "context_eng": "Their daring parents left Earth years before with a group of explorers.",
+      "context_chi": "他們勇敢大膽的父母多年前跟隨一群探險家離開了地球。",
+      "chant": "Daring and bold, ready to explore; flying to the stars and seeking more!",
+      "compare": "daring (大膽且富開創冒險精神) vs. brave (面對危險不退縮) vs. reckless (魯莽不顧後果)",
+      "is_midterm": true,
+      "is_week12": true
+    },
+    {
+      "id": "voc_w12_rw6_9_5",
+      "book_id": "rw6",
+      "unit_id": "rw6_9",
+      "word": "nervous",
+      "ipa": "/ˈnɜːvəs/",
+      "pos": "形容詞 (Adjective)",
+      "chi": "緊張的；擔憂不安的",
+      "breakdown": "nerve(神經) + -ous(充滿…的形容詞字尾) -> 神經緊繃的",
+      "trick": "口訣「神經緊繃，全身直發抖」-> 緊張 (nervous) 的感覺！",
+      "scene": "拉揚搭乘太空梭重返地球前，因為心中充滿緊張而整個早晨講話講個不停。",
+      "collocation": "feel nervous (感到緊張), be nervous about (對…感到緊張不安), nervous habit (緊張時的習慣)",
+      "img": "😰",
+      "context_eng": "His twin sister, Nora, knew that Rayyan talked a lot when he was nervous.",
+      "context_chi": "他的雙胞胎妹妹諾拉心裡明白，拉揚感到緊張時就會說個不停。",
+      "chant": "Nervous hands, tapping feet; deep breath in, feel your heartbeat!",
+      "compare": "nervous (當下的緊張不安) vs. anxious (長期的焦慮擔憂) vs. scared (感到害怕恐懼)",
+      "is_midterm": true,
+      "is_week12": true
+    },
+    {
+      "id": "voc_w12_rw6_9_6",
+      "book_id": "rw6",
+      "unit_id": "rw6_9",
+      "word": "rude",
+      "ipa": "/ruːd/",
+      "pos": "形容詞 (Adjective)",
+      "chi": "粗魯的；無禮的",
+      "breakdown": "源自拉丁語 rudis (未加工的、原始粗野的) -> 缺乏教養與禮貌的",
+      "trick": "諧音「入的」-> 不敲門就「入的」，真是太無禮粗魯 (rude) 了！",
+      "scene": "拉揚坦承自己忘了堂姊的面容，趕緊補充說自己絕非有意無禮。",
+      "collocation": "mean to be rude (有意無禮), rude behavior (粗魯無禮的舉止), it is rude to do sth. (做某事很失禮)",
+      "img": "🙅",
+      "context_eng": "Sorry, I don't mean to be rude, but I don't remember you.",
+      "context_chi": "抱歉，我不是故意沒禮貌，但我記不得妳了。",
+      "chant": "Do not be rude, be polite; saying thank you is always right!",
+      "compare": "rude (粗魯無禮的) vs. polite (有禮貌的，反義詞) vs. impolite (不禮貌的)",
+      "is_midterm": true,
+      "is_week12": true
+    },
+    {
+      "id": "voc_w12_rw6_9_7",
+      "book_id": "rw6",
+      "unit_id": "rw6_9",
+      "word": "shy",
+      "ipa": "/ʃaɪ/",
+      "pos": "形容詞 (Adjective)",
+      "chi": "害羞的；靦腆的",
+      "breakdown": "源自古英語 sceoh (膽怯避開的) -> 羞怯怕生的",
+      "trick": "諧音「曬」-> 臉蛋曬紅得像害羞 (shy) 一樣！",
+      "scene": "表弟剛抵達新環境時不太說話，顯得非常羞怯靦腆。",
+      "collocation": "a shy smile (靦腆的微笑), feel shy (感到害羞), shy around strangers (在陌生人面前怕生)",
+      "img": "🫣",
+      "context_eng": "Yes, I'm Rayyan, and this is Nora. She's the shy one.",
+      "context_chi": "是的，我是拉揚，這是諾拉。她比較害羞。",
+      "chant": "A little shy, quiet and mild; a gentle heart in a thoughtful child!",
+      "compare": "shy (害羞怕生的，常伴隨不自在) vs. quiet (安靜不多話，但不一定害怕人)",
+      "is_midterm": true,
+      "is_week12": true
+    },
+    {
+      "id": "voc_w12_rw6_9_8",
+      "book_id": "rw6",
+      "unit_id": "rw6_9",
+      "word": "thoughtful",
+      "ipa": "/ˈθɔːtfəl/",
+      "pos": "形容詞 (Adjective)",
+      "chi": "體貼周到的；深思熟慮的",
+      "breakdown": "thought(思考、心意) + -ful(充滿…的形容詞字尾) -> 充滿體貼與思慮的",
+      "trick": "拆記 thought(想法) + ful(滿滿) -> 腦海裡滿滿都是替別人著想的「體貼」！",
+      "scene": "叔叔提早準備好客房並煮了豐盛晚餐迎接孩子，處處展現體貼入微的心意。",
+      "collocation": "a thoughtful gift (貼心的禮物), look thoughtful (神態若有所思), thoughtful host (體貼的主人)",
+      "img": "🎁",
+      "context_eng": "My uncle was so thoughtful. He had a guest room ready for us.",
+      "context_chi": "我叔叔非常體貼，他替我們準備好客房，還煮了一頓豐盛的晚餐。",
+      "chant": "Thoughtful and kind, caring each day; helping your friends in every way!",
+      "compare": "thoughtful (體貼周到的；若有所思的) vs. considerate (設想周到的) vs. thoughtless (粗心不顧人的，反義詞)",
+      "is_midterm": true,
+      "is_week12": true
+    },
+    {
+      "id": "voc_w12_rw6_9_9",
+      "book_id": "rw6",
+      "unit_id": "rw6_9",
+      "word": "outgoing",
+      "ipa": "/ˌaʊtˈɡəʊɪŋ/",
+      "pos": "形容詞 (Adjective)",
+      "chi": "外向的；開朗好社交的",
+      "breakdown": "out(向外) + go(走動) + -ing(形容詞字尾) -> 勇於向外走入人群的",
+      "trick": "out(往外) + going(去) -> 總是喜歡往外跑去跟朋友打成一片，就是「外向的」！",
+      "scene": "外向開朗的孩子通常喜歡參與足球或籃球等需要團隊合作與熱絡溝通的運動。",
+      "collocation": "an outgoing personality (外向開朗的個性), outgoing and friendly (外向熱情且親切的)",
+      "img": "😄",
+      "context_eng": "For instance, if you're more outgoing, you probably like to play team sports like soccer or basketball.",
+      "context_chi": "舉例來說，如果你比較外向，你很可能會喜歡踢足球或打籃球等團隊運動。",
+      "chant": "Outgoing and bright, talking with cheer; making new friends everywhere near!",
+      "compare": "outgoing (外向熱絡好社交) vs. introverted (內向內省的) vs. shy (害羞怕生的)",
+      "is_midterm": true,
+      "is_week12": true
+    },
+    {
+      "id": "voc_w12_rw6_9_10",
+      "book_id": "rw6",
+      "unit_id": "rw6_9",
+      "word": "prefer",
+      "ipa": "/prɪˈfɜː/",
+      "pos": "動詞 (Verb)",
+      "chi": "更偏好；更喜歡",
+      "breakdown": "pre-(在…之前) + fer(帶來、放置) -> 把更喜愛的事物擺在第一優先位",
+      "trick": "拆記 pre(提前) + fer(拿) -> 看到喜歡的點心「提前拿」，代表「更偏好」！",
+      "scene": "生性文靜沉著的同學，在體育課時往往偏好網球或高爾夫等個人球類運動。",
+      "collocation": "prefer A to B (比起 B 更偏好 A), prefer doing sth. (偏好做某事), prefer to do sth. (寧願做某事)",
+      "img": "⚖️",
+      "context_eng": "If you're quiet, you may prefer an individual sport, like tennis or golf.",
+      "context_chi": "如果你比較安靜，你可能會偏好網球或高爾夫球等個人運動。",
+      "chant": "Which one do you prefer? Tea or coffee, him or her?",
+      "compare": "prefer A to B (比起 B 更喜歡 A，介系詞用 to！) vs. like A better than B (比較級搭配 than)",
+      "is_midterm": true,
+      "is_week12": true
+    },
+    {
+      "id": "voc_w12_rw6_9_11",
+      "book_id": "rw6",
+      "unit_id": "rw6_9",
+      "word": "serious",
+      "ipa": "/ˈsɪəriəs/",
+      "pos": "形容詞 (Adjective)",
+      "chi": "嚴肅的；認真的",
+      "breakdown": "源自拉丁語 serius (莊重沈著的、認真的) -> 不輕浮玩笑的",
+      "trick": "諧音「希瑞爾死」-> 聽到神情嚴肅 (serious) 的教練哨音，大家立刻肅立！",
+      "scene": "有的人玩運動只是純屬休閒放鬆，有的人則非常認真嚴肅，每場比賽都誓在必得。",
+      "collocation": "a serious expression (嚴肅的神情), take sth. seriously (認真看待某事), serious problem (嚴重的問題)",
+      "img": "🧐",
+      "context_eng": "Are you usually serious or usually laughing? How would you describe yourself?",
+      "context_chi": "你通常是神情嚴肅還是總是笑口常開？你會如何描述自己？",
+      "chant": "Serious face, eyes so bright; thinking through both day and night!",
+      "compare": "serious (嚴肅認真的) vs. humorous (幽默風趣的，反義詞) vs. playful (愛開玩笑的)",
+      "is_midterm": true,
+      "is_week12": true
+    },
+    {
+      "id": "voc_w12_rw6_9_12",
+      "book_id": "rw6",
+      "unit_id": "rw6_9",
+      "word": "adult",
+      "ipa": "/ˈædʌlt/",
+      "pos": "名詞 (Noun)",
+      "chi": "成年人；大人",
+      "breakdown": "源自拉丁語 adolescere (成長) 之過去分詞 adultus (已完全長大成熟者)",
+      "trick": "拆記 a + dult (大人的諧音) -> 已經長大成人的「大人 (adult)」！",
+      "scene": "在家族盛大聚會中，大人們負責統籌策劃各項活動並照料所有孩子。",
+      "collocation": "adult life (成年生活), young adult (年輕成年人), an adult supervision (成人看護監督)",
+      "img": "🧑‍💼",
+      "context_eng": "The adults make sure they have crafts to do and games to play.",
+      "context_chi": "大人們貼心確保他們有手工勞作可以發揮、有桌上遊戲可以同樂。",
+      "chant": "Adults guide and lend a hand, helping kids throughout the land!",
+      "compare": "adult (正式名詞：成年人) vs. grown-up (日常口語名詞：大人) vs. child (兒童)",
+      "is_midterm": true,
+      "is_week12": true
+    },
+    {
+      "id": "voc_w12_rw6_9_13",
+      "book_id": "rw6",
+      "unit_id": "rw6_9",
+      "word": "individual",
+      "ipa": "/ˌɪndɪˈvɪdʒuəl/",
+      "pos": "形容詞 (Adjective)",
+      "chi": "個人的；單獨的",
+      "breakdown": "in-(不) + divid-(分割) + -u- + -al(形容詞字尾) -> 不可再分割的單一獨立個體",
+      "trick": "拆記 in(不) + divide(分開) -> 單獨一個個體不能再被分開，就是「個人的」！",
+      "scene": "網球、高爾夫球與游泳皆屬於考驗個人技巧與心智的個人運動。",
+      "collocation": "individual sport (個人運動), individual needs (個別需求), individual attention (個別關注)",
+      "img": "🏌️",
+      "context_eng": "If you're quiet, you may prefer an individual sport, like tennis or golf.",
+      "context_chi": "如果你比較安靜，你可能會偏好網球或高爾夫球等個人運動。",
+      "chant": "Individual skills, one by one; playing hard until you have won!",
+      "compare": "individual sport (個人運動) vs. team sport (團隊運動)；individual 也可作名詞表示「個人、個體」。",
+      "is_midterm": true,
+      "is_week12": true
+    },
+    {
+      "id": "voc_w12_rw6_9_14",
+      "book_id": "rw6",
+      "unit_id": "rw6_9",
+      "word": "nonstop",
+      "ipa": "/ˌnɒnˈstɒp/",
+      "pos": "副詞 (Adverb) / 形容詞",
+      "chi": "不停歇地；不間斷的",
+      "breakdown": "non-(無、不) + stop(停止) -> 不停息、一刻不歇的",
+      "trick": "non(不) + stop(停) -> 從頭到尾「不停止」地講個不停！",
+      "scene": "拉揚因為登陸地球前太過緊張，一整個早晨嘴巴幾乎沒停過地說話。",
+      "collocation": "talk nonstop (滔滔不絕講個不停), fly nonstop (直飛不停留), work nonstop (馬不停蹄地工作)",
+      "img": "🗣️",
+      "context_eng": "He talked almost nonstop all morning to everyone on the shuttle.",
+      "context_chi": "整個早晨他在太空梭上幾乎滔滔不絕地跟每個人說話。",
+      "chant": "Talking nonstop day and night, full of words and full of light!",
+      "compare": "nonstop (副詞/形容詞：不間斷地) vs. continuously (副詞：持續不斷地)",
+      "is_midterm": true,
+      "is_week12": true
+    },
+    {
+      "id": "voc_w12_rd6_6_1",
+      "book_id": "rd6",
+      "unit_id": "rd6_6",
+      "word": "canal",
+      "ipa": "/kəˈnæl/",
+      "pos": "名詞 (Noun)",
+      "chi": "運河；人工水道",
+      "breakdown": "can-(蘆葦/管道) + -al -> 像管子般引水通航的人造水道",
+      "trick": "發音諧音「看鬧」-> 站在運河兩岸「看熱鬧」的人絡繹不絕！",
+      "scene": "一百年前天文學家誤把火星表面的陰影線條看成巨大的人工開鑿運河。",
+      "collocation": "Panama Canal, build canals, water canal",
+      "img": "🛶",
+      "context_eng": "Astronomers thought that they saw lines on the surface of Mars, and some people thought that they were canals.",
+      "context_chi": "天文學家以為在火星表面看到了線條，有些人認為那是運河。",
+      "chant": "Big long canal, water deep and wide; boats and ships sail side by side!",
+      "compare": "canal (人工開鑿運河) vs river (天然形成的河流)",
+      "is_midterm": true,
+      "is_week12": true
+    },
+    {
+      "id": "voc_w12_rd6_6_2",
+      "book_id": "rd6",
+      "unit_id": "rd6_6",
+      "word": "Martian",
+      "ipa": "/ˈmɑːrʃən/",
+      "pos": "名詞 (Noun) / 形容詞",
+      "chi": "火星人；火星的",
+      "breakdown": "Mars(火星) + -ian(表示...居民或來源的字尾) -> 火星人",
+      "trick": "聯想記憶：Mars (火星) 加上 -tian 就是住在火星上的「馬星人 (Martian)」！",
+      "scene": "科幻電影中從紅色飛碟走下來、長著大腦袋綠皮膚的火星訪客。",
+      "collocation": "aliens from Mars called Martians, Martian movie",
+      "img": "👽",
+      "context_eng": "People wrote stories and made movies about aliens from Mars, called Martians, visiting Earth.",
+      "context_chi": "人們寫故事並拍電影，描述被稱為火星人的外星訪客造訪地球。",
+      "chant": "Martians fly and Martians run; visiting Earth under the golden sun!",
+      "compare": "Martian (特指火星人) vs alien (泛指一切地外外星人)",
+      "is_midterm": true,
+      "is_week12": true
+    },
+    {
+      "id": "voc_w12_rd6_6_3",
+      "book_id": "rd6",
+      "unit_id": "rd6_6",
+      "word": "bacteria",
+      "ipa": "/bækˈtɪriə/",
+      "pos": "名詞 (Noun, 複數)",
+      "chi": "細菌 (單數 bacterium)",
+      "breakdown": "bacter-(桿狀小棍棒) + -ia(複數名詞字尾) -> 顯微鏡下像小棍子的細菌群",
+      "trick": "發音諧音「百克體力」-> 細菌雖然微小，卻有一百克超強體力能在岩石裡生存！",
+      "scene": "科學家在極地冰層深處與火星土壤採樣中，用顯微鏡尋找微小活體細菌。",
+      "collocation": "simple bacteria, live inside rocks, look for bacteria",
+      "img": "🔬",
+      "context_eng": "Bacteria are simple living things on Earth, and they can live in very hot and cold places, and even inside rocks.",
+      "context_chi": "細菌是地球上的簡單生物，能在極熱或極冷處甚至岩石內部生存。",
+      "chant": "Bacteria small, bacteria tough; living in rocks where life is rough!",
+      "compare": "bacteria (複數動詞用 are) vs bacterium (單數動詞用 is)",
+      "is_midterm": true,
+      "is_week12": true
+    },
+    {
+      "id": "voc_w12_rd6_6_4",
+      "book_id": "rd6",
+      "unit_id": "rd6_6",
+      "word": "underground",
+      "ipa": "/ˌʌndərˈɡraʊnd/",
+      "pos": "形容詞 (Adjective) / 副詞",
+      "chi": "地下的；在地底",
+      "breakdown": "under(在...下方) + ground(地面/土壤) -> 地表之下的",
+      "trick": "合成詞：under (在下面) + ground (泥土地) = underground (地下)！",
+      "scene": "火星地表極度嚴寒結成厚冰，但在地底深處可能流動著溫暖的地下河流。",
+      "collocation": "underground rivers, underground water, deep underground",
+      "img": "⛏️",
+      "context_eng": "Many scientists think that there is liquid water in the soil or even in underground rivers.",
+      "context_chi": "許多科學家認為土壤中甚至地下河流中存在著液態水。",
+      "chant": "Under the ground, dark and deep; underground rivers secretly flow and seep!",
+      "compare": "underground (地下的) vs underwater (水下的) vs surface (地表的)",
+      "is_midterm": true,
+      "is_week12": true
+    },
+    {
+      "id": "voc_w12_rd6_6_5",
+      "book_id": "rd6",
+      "unit_id": "rd6_6",
+      "word": "liquid",
+      "ipa": "/ˈlɪkwɪd/",
+      "pos": "形容詞 (Adjective) / 名詞",
+      "chi": "液態的；液體",
+      "breakdown": "liqu-(流動/液體) + -id(形容詞字尾) -> 會流動的液態",
+      "trick": "發音諧音「立刻的」-> 倒水在桌上，液體 (liquid)「立刻地」流開了！",
+      "scene": "科學家尋找外星生命時，將「流動的液態水」列為最重要的第一生命指標。",
+      "collocation": "liquid water, liquid chemicals, liquid form",
+      "img": "💧",
+      "context_eng": "When scientists look for life on other planets, they look for places that have liquid water.",
+      "context_chi": "當科學家在其他行星尋找生命時，他們會尋找有液態水的地方。",
+      "chant": "Liquid water, smooth and clear; brings alive the atmosphere here!",
+      "compare": "liquid (液態的) vs solid (固態的，如 ice) vs gas (氣態的，如 vapor)",
+      "is_midterm": true,
+      "is_week12": true
+    },
+    {
+      "id": "voc_w12_rd6_6_6",
+      "book_id": "rd6",
+      "unit_id": "rd6_6",
+      "word": "atmosphere",
+      "ipa": "/ˈætməsfɪr/",
+      "pos": "名詞 (Noun)",
+      "chi": "大氣層；大氣氣壓",
+      "breakdown": "atmos-(蒸汽/氣體) + sphere(球體) -> 環繞星球氣體球層",
+      "trick": "字根記憶：atmos (水氣/大氣) + sphere (球體) -> 包裹整個星球的大氣層！",
+      "scene": "土衛六泰坦擁有濃厚混濁的黃色大氣層，成為太陽系唯一擁有大氣的衛星。",
+      "collocation": "have an atmosphere, Earth's atmosphere, dense atmosphere",
+      "img": "🌫️",
+      "context_eng": "Saturn's largest moon, Titan, is the only moon in the solar system with atmosphere.",
+      "context_chi": "土星最大的衛星土衛六是太陽系中唯一擁有大氣層的衛星。",
+      "chant": "Atmosphere wraps round the planet high; holding clouds across the sky!",
+      "compare": "atmosphere (包裹行星的大氣層) vs space (完全真空的外部宇宙空間)",
+      "is_midterm": true,
+      "is_week12": true
+    },
+    {
+      "id": "voc_w12_rd6_6_7",
+      "book_id": "rd6",
+      "unit_id": "rd6_6",
+      "word": "hydrocarbons",
+      "ipa": "/ˌhaɪdrəˈkɑːrbənz/",
+      "pos": "名詞 (Noun, 複數)",
+      "chi": "碳氫化合物；烴類化合物",
+      "breakdown": "hydro-(水/氫) + carbon(碳) + -s -> 氫與碳結合的有機分子",
+      "trick": "拆詞記憶：hydro (氫) + carbon (碳) = 碳氫化合物 (hydrocarbons)！",
+      "scene": "土衛六泰坦表面下著甲烷雨，匯聚成完全由碳氫化合物構成的湖泊與河流。",
+      "collocation": "made of hydrocarbons, hydrocarbons and water",
+      "img": "⚗️",
+      "context_eng": "These are made of chemicals called hydrocarbons, and scientists think that there is water under the surface of Titan, too.",
+      "context_chi": "這些是由稱為碳氫化合物的化學物質組成的，科學家認為土衛六地表下也有水。",
+      "chant": "Hydrocarbons make the rain; lakes of methane on Titan's plain!",
+      "compare": "hydrocarbons (有機碳氫化合物) vs pure water (無機水分子 H2O)",
+      "is_midterm": true,
+      "is_week12": true
+    },
+    {
+      "id": "voc_w12_rd6_6_8",
+      "book_id": "rd6",
+      "unit_id": "rd6_6",
+      "word": "alien",
+      "ipa": "/ˈeɪliən/",
+      "pos": "名詞 (Noun) / 形容詞",
+      "chi": "外星人；外來的",
+      "breakdown": "ali-(其他/不同) + -en -> 來自另一個異域世界的存在",
+      "trick": "趣味諧音「愛臉」-> 科幻電影裡的外星人 (alien) 最愛把大臉湊在窗前！",
+      "scene": "電影與科幻小說常描繪從外太空駕駛幽浮造訪地球的綠色小外星人。",
+      "collocation": "alien spacecraft, alien astronomers, stories about aliens",
+      "img": "👾",
+      "context_eng": "In stories, aliens are living things from another world, but are they real?",
+      "context_chi": "在故事中外星人是來自另一個世界的生物，但他們是真的嗎？",
+      "chant": "Alien, alien in the night; flying saucers shining bright!",
+      "compare": "alien (泛指一切地外生命或外星人) vs human (人類)",
+      "is_midterm": true,
+      "is_week12": true
+    },
+    {
+      "id": "voc_w12_rd6_6_9",
+      "book_id": "rd6",
+      "unit_id": "rd6_6",
+      "word": "UFO",
+      "ipa": "/ˌjuː ef ˈoʊ/",
+      "pos": "名詞 (Noun, 縮寫)",
+      "chi": "幽浮；不明飛行物體",
+      "breakdown": "U(Unidentified 未確認) + F(Flying 飛行) + O(Object 物體)",
+      "trick": "首字母縮寫：三個字母分開唸 U-F-O，就是台灣學生耳熟能詳的「幽浮」！",
+      "scene": "目擊者在夜空中看見高速盤旋閃爍的飛碟光點，後來證實只是氣象氣球或彗星。",
+      "collocation": "called UFOs, see UFOs in the sky, UFO sighting",
+      "img": "🛸",
+      "context_eng": "Sometimes, people see unusual objects in the sky, called UFOs.",
+      "context_chi": "有時候人們會在天空中看見不尋常的物體，被稱為幽浮（UFO）。",
+      "chant": "U-F-O in the evening glow; is it a spaceship? We don't know!",
+      "compare": "UFO (未確認飛行物，通常為氣球/彗星) vs airplane (普通民航客機)",
+      "is_midterm": true,
+      "is_week12": true
+    },
+    {
+      "id": "voc_w12_rd6_6_10",
+      "book_id": "rd6",
+      "unit_id": "rd6_6",
+      "word": "imagine",
+      "ipa": "/ɪˈmædʒɪn/",
+      "pos": "動詞 (Verb)",
+      "chi": "想像；設想",
+      "breakdown": "im-(進入) + mag/image(圖像) + -ine -> 在腦海中描繪出畫面",
+      "trick": "字根聯想：image (圖像) ➔ imagine (在心裡把圖像畫出來，想像)！",
+      "scene": "古代天文學家望著望遠鏡中的微弱光點，想像著火星上宏偉的外星城市。",
+      "collocation": "imagine aliens building, imagine life on other worlds",
+      "img": "💭",
+      "context_eng": "Some astronomers imagined aliens building these canals and living in cities on Mars.",
+      "context_chi": "有些天文學家想像外星人建造了這些運河並住在火星城市裡。",
+      "chant": "Imagine high, imagine far; imagine life around a star!",
+      "compare": "imagine (想像未見之事) vs discover (發現客觀已存在之物)",
+      "is_midterm": true,
+      "is_week12": true
+    },
+    {
+      "id": "voc_w12_rd6_6_11",
+      "book_id": "rd6",
+      "unit_id": "rd6_6",
+      "word": "astronomer",
+      "ipa": "/əˈstrɑːnəmər/",
+      "pos": "名詞 (Noun)",
+      "chi": "天文學家",
+      "breakdown": "astro-(星星) + nom(規律/法則) + -er(人) -> 研究星體運行規律的學者",
+      "trick": "拆詞法：astro (星際) + nomer (命名研究者) = 天文學家！",
+      "scene": "天文學家整夜守在大型深空光學望遠鏡前，捕捉遙遠星系傳來的微弱星光。",
+      "collocation": "alien astronomers, ancient astronomers, astronomers use telescopes",
+      "img": "🔭",
+      "context_eng": "Astronomers are looking for life in our solar system, and on planets around other stars.",
+      "context_chi": "天文學家正在我們的太陽系以及圍繞其他恆星的行星上尋找生命。",
+      "chant": "Astronomers look with giant eyes; watching planets in the skies!",
+      "compare": "astronomer (天文學家) vs astronaut (太空人) vs astrologer (占星術士)",
+      "is_midterm": true,
+      "is_week12": true
+    },
+    {
+      "id": "voc_w12_rd6_6_12",
+      "book_id": "rd6",
+      "unit_id": "rd6_6",
+      "word": "universe",
+      "ipa": "/ˈjuːnɪvɜːrs/",
+      "pos": "名詞 (Noun)",
+      "chi": "宇宙；萬物天地",
+      "breakdown": "uni-(單一/整體) + vers-(轉動) -> 萬物共同旋轉化為一體的廣袤宇宙",
+      "trick": "前綴聯想：uni- (一個整體，如 uniform 制服) ➔ universe (包羅萬象的唯一宇宙)！",
+      "scene": "在無邊無際的宇宙深空中，蘊藏著數千億個星系與無數可能孕育生命的星球。",
+      "collocation": "in the universe, expand across the universe, millions in the universe",
+      "img": "🌌",
+      "context_eng": "Some scientists think that there are lots of planets like Earth in our galaxy, and millions in the universe.",
+      "context_chi": "有些科學家認為在我們的銀河系有很多類地行星，而在整個宇宙中則有數百萬顆。",
+      "chant": "Universe wide, universe deep; millions of secrets it will keep!",
+      "compare": "universe (整個宇宙，包容所有星系) vs galaxy (單個星系，如銀河系)",
+      "is_midterm": true,
+      "is_week12": true
+    },
+    {
+      "id": "voc_w12_rd6_6_13",
+      "book_id": "rd6",
+      "unit_id": "rd6_6",
+      "word": "galaxy",
+      "ipa": "/ˈɡæləksi/",
+      "pos": "名詞 (Noun)",
+      "chi": "星系；銀河系",
+      "breakdown": "galax-(牛奶/銀河) + -y -> 像牛奶光帶灑在夜空中的星系",
+      "trick": "聯想記憶：Galaxy 手機取名自「銀河星系」，由數億顆閃耀恆星匯聚！",
+      "scene": "我們居住的銀河系呈螺旋狀盤旋，中心聚集著成千上萬億顆明亮恆星。",
+      "collocation": "our galaxy, the Milky Way galaxy, billions of galaxies",
+      "img": "🌀",
+      "context_eng": "Some scientists think that there are lots of planets like Earth in our galaxy.",
+      "context_chi": "有些科學家認為在我們的銀河系中有很多像地球一樣的行星。",
+      "chant": "Spinning galaxy in the night; billions of stars of silver light!",
+      "compare": "galaxy (星系，如 Milky Way) vs solar system (太陽系，僅單一恆星系統)",
+      "is_midterm": true,
+      "is_week12": true
+    },
+    {
+      "id": "voc_w12_rd6_6_14",
+      "book_id": "rd6",
+      "unit_id": "rd6_6",
+      "word": "spacecraft",
+      "ipa": "/ˈspeɪskræft/",
+      "pos": "名詞 (Noun, 單複數同形)",
+      "chi": "太空船；太空探測載具",
+      "breakdown": "space(太空) + craft(載具/飛艇) -> 航行太空中之載具",
+      "trick": "合成詞：space (太空) + craft (飛行船隻) = spacecraft (太空船)！",
+      "scene": "人類發射無人深空探測太空船，歷經數年航行飛越木星與土星探測冰封衛星。",
+      "collocation": "alien spacecraft, robotic spacecraft, send a spacecraft",
+      "img": "🚀",
+      "context_eng": "Some people think that they are alien spacecraft, but they are usually things like balloons or comets.",
+      "context_chi": "有些人認為幽浮是外星太空船，但它們通常只是氣球或彗星之類的事物。",
+      "chant": "Spacecraft flies beyond the blue; exploring planets strange and new!",
+      "compare": "spacecraft (單複數同形：one spacecraft, two spacecraft) vs airplane (普通大氣內飛機)",
+      "is_midterm": true,
+      "is_week12": true
+    },
+    {
+      "id": "voc_w12_wr3_6_1",
+      "book_id": "wr3",
+      "unit_id": "wr3_6",
+      "word": "inventor",
+      "ipa": "/ɪnˈventər/",
+      "pos": "名詞 (Noun)",
+      "chi": "發明家",
+      "breakdown": "in-(進入/朝向) + vent(來) + -or(人) -> 讓新事物到來的人",
+      "trick": "諧音「因問他」-> 發明家總是好奇「因為問他」才有了新點子！",
+      "scene": "Thomas Edison 在實驗室研發耐用白熾電燈泡的專注場景。",
+      "collocation": "an inventor from..., famous inventor, great inventor",
+      "img": "💡",
+      "context_eng": "Thomas Edison was an inventor from the United States.",
+      "context_chi": "湯瑪斯·愛迪生是一位來自美國的發明家。",
+      "chant": "Inventor, inventor, make new things! Light the dark and joy it brings!",
+      "compare": "inventor (發明家 - 創造新事物) vs discoverer (發現者 - 找出本已存在的事物)",
+      "is_midterm": true,
+      "is_week12": true
+    },
+    {
+      "id": "voc_w12_wr3_6_2",
+      "book_id": "wr3",
+      "unit_id": "wr3_6",
+      "word": "composer",
+      "ipa": "/kəmˈpoʊzər/",
+      "pos": "名詞 (Noun)",
+      "chi": "作曲家",
+      "breakdown": "com-(共同) + pos(放置) + -er(人) -> 將各種音符組合在一起的人",
+      "trick": "諧音「看譜者」-> 作曲家看著樂譜譜寫宏偉樂章！",
+      "scene": "Mozart 在鋼琴前彈奏並振筆譜寫歌劇與交響樂。",
+      "collocation": "famous composer, classical composer, compose music",
+      "img": "🎼",
+      "context_eng": "Wolfgang Amadeus Mozart was a composer from Austria.",
+      "context_chi": "沃夫岡·阿瑪迪斯·莫札特是一位來自奧地利的作曲家。",
+      "chant": "Composer, composer, notes in a row, making beautiful music flow!",
+      "compare": "composer (作曲家 - 創作音符) vs conductor (指揮家 - 指揮樂團演出)",
+      "is_midterm": true,
+      "is_week12": true
+    },
+    {
+      "id": "voc_w12_wr3_6_3",
+      "book_id": "wr3",
+      "unit_id": "wr3_6",
+      "word": "scientist",
+      "ipa": "/ˈsaɪəntɪst/",
+      "pos": "名詞 (Noun)",
+      "chi": "科學家",
+      "breakdown": "sci-(知道) + -ent(名詞後綴) + -ist(專家) -> 追求知識與真理的學者",
+      "trick": "諧音「賽恩提斯」-> 像奧特曼一樣探索科學奧秘！",
+      "scene": "Isaac Newton 在蘋果樹下思索萬有引力定律。",
+      "collocation": "make scientific discoveries, a scientist from..., brilliant scientist",
+      "img": "🔬",
+      "context_eng": "Isaac Newton was a scientist from England.",
+      "context_chi": "艾薩克·牛頓是一位來自英國的科學家。",
+      "chant": "Scientist, scientist, searching high and low, finding facts we want to know!",
+      "compare": "scientist (科學家 - 研究理論規律) vs engineer (工程師 - 應用技術建造)",
+      "is_midterm": true,
+      "is_week12": true
+    },
+    {
+      "id": "voc_w12_wr3_6_4",
+      "book_id": "wr3",
+      "unit_id": "wr3_6",
+      "word": "political leader",
+      "ipa": "/pəˈlɪtɪkəl ˈliːdər/",
+      "pos": "名詞片語 (Noun Phrase)",
+      "chi": "政治領袖",
+      "breakdown": "political (國家的/政治的) + leader (帶領者/領袖)",
+      "trick": "聯想「帶領 (lead) 人民走出困境的領袖 (leader)」",
+      "scene": "Gandhi 帶領印度人民以和平非暴力方式爭取國家獨立。",
+      "collocation": "lead the nation, work for independence, great political leader",
+      "img": "🏛️",
+      "context_eng": "Mohandas Gandhi was a political leader from India.",
+      "context_chi": "莫罕達斯·甘地是一位來自印度的政治領袖。",
+      "chant": "Political leader, standing tall and strong, helping the nation all along!",
+      "compare": "political leader (政治領袖 - 治國領導) vs president (總統 - 國家元首具體職稱)",
+      "is_midterm": true,
+      "is_week12": true
+    },
+    {
+      "id": "voc_w12_wr3_6_5",
+      "book_id": "wr3",
+      "unit_id": "wr3_6",
+      "word": "philosopher",
+      "ipa": "/fɪˈlɑːsəfər/",
+      "pos": "名詞 (Noun)",
+      "chi": "哲學家",
+      "breakdown": "philo-(喜愛) + soph-(智慧) + -er(人) -> 喜愛智慧與追求真理的人",
+      "trick": "字根 philo (愛) + soph (智慧) -> 喜愛智慧之人就是哲學家！",
+      "scene": "古代希臘哲學家在廣場與學子探討生命的意義與真理。",
+      "collocation": "teach the meaning of life, ancient philosopher, great philosopher",
+      "img": "🤔",
+      "context_eng": "A philosopher is someone who teaches the meaning of life.",
+      "context_chi": "哲學家是教導人們生命意義的人。",
+      "chant": "Philosopher, philosopher, thinking deep and bright, searching for the truth and light!",
+      "compare": "philosopher (哲學家 - 思索本質與智慧) vs psychologist (心理學家 - 研究行為與心智)",
+      "is_midterm": true,
+      "is_week12": true
+    },
+    {
+      "id": "voc_w12_wr3_6_6",
+      "book_id": "wr3",
+      "unit_id": "wr3_6",
+      "word": "admire",
+      "ipa": "/ədˈmaɪər/",
+      "pos": "動詞 (Verb)",
+      "chi": "欽佩；欣賞",
+      "breakdown": "ad-(朝向) + mire(驚嘆/奇蹟) -> 朝著令人驚嘆的事物投以敬意",
+      "trick": "諧音「額頭買」-> 令人佩服到額頭點地致敬！",
+      "scene": "學生在演講台上滿懷敬意地介紹自己最崇拜的偉人。",
+      "collocation": "admire ... the most, admire someone most of all, admire for",
+      "img": "👏",
+      "context_eng": "The person I admire the most is Thomas Edison.",
+      "context_chi": "我最欽佩的人是湯瑪斯·愛迪生。",
+      "chant": "Admire, admire, look up with respect! Great deeds and courage we protect!",
+      "compare": "admire (欽佩 - 帶著敬意與肯定) vs respect (尊敬 - 禮貌與遵循規矩)",
+      "is_midterm": true,
+      "is_week12": true
+    },
+    {
+      "id": "voc_w12_wr3_6_7",
+      "book_id": "wr3",
+      "unit_id": "wr3_6",
+      "word": "discovery",
+      "ipa": "/dɪˈskʌvəri/",
+      "pos": "名詞 (Noun)",
+      "chi": "發現",
+      "breakdown": "dis-(解開/移除) + cover(覆蓋) + -y(名詞後綴) -> 掀開遮蔽物顯露真理",
+      "trick": "拆解 dis + cover -> 把蓋子掀開 (uncover)，重大發現就出現了！",
+      "scene": "Newton 看見蘋果落地，揭示了萬有引力存在的重大發現。",
+      "collocation": "make scientific discoveries, great discovery, discovery of gravity",
+      "img": "🔍",
+      "context_eng": "Isaac Newton made many important scientific discoveries.",
+      "context_chi": "艾薩克·牛頓做出了許多重要的科學發現。",
+      "chant": "Discovery, discovery, hidden in the ground, open up your eyes and truth is found!",
+      "compare": "discovery (發現 - 本來存在被找到) vs invention (發明 - 本來不存在被創造)",
+      "is_midterm": true,
+      "is_week12": true
+    },
+    {
+      "id": "voc_w12_wr3_6_8",
+      "book_id": "wr3",
+      "unit_id": "wr3_6",
+      "word": "composition",
+      "ipa": "/ˌkɑːmpəˈzɪʃən/",
+      "pos": "名詞 (Noun)",
+      "chi": "音樂作品；創作",
+      "breakdown": "com-(共同) + posit(放置) + -ion(名詞後綴) -> 組合樂符成章",
+      "trick": "動詞 compose (創作) 加上名詞字尾 -ition -> 音樂作品！",
+      "scene": "貝多芬的《第五號交響曲》手稿上工整排列的音符。",
+      "collocation": "famous composition, musical composition, composition is...",
+      "img": "🎼",
+      "context_eng": "His most famous composition is the Fifth Symphony.",
+      "context_chi": "他最著名的音樂作品是《第五號交響曲》。",
+      "chant": "Composition, note by note, finest melody ever wrote!",
+      "compare": "composition (樂曲/作文 - 完整作品) vs song (歌曲 - 通常含人聲歌唱)",
+      "is_midterm": true,
+      "is_week12": true
+    },
+    {
+      "id": "voc_w12_wr3_6_9",
+      "book_id": "wr3",
+      "unit_id": "wr3_6",
+      "word": "accomplishment",
+      "ipa": "/əˈkɑːmplɪʃmənt/",
+      "pos": "名詞 (Noun)",
+      "chi": "成就；功績",
+      "breakdown": "ac-(去/朝向) + compl-(填滿/完成) + -ish(動詞) + -ment(名詞)",
+      "trick": "諧音「一顆滿滿石」-> 每一顆基石都象徵一項重大的成就！",
+      "scene": "Lincoln 簽署《解放奴隸宣言》，為自由寫下不朽的歷史成就。",
+      "collocation": "great accomplishment, most famous accomplishment, proud accomplishment",
+      "img": "🏆",
+      "context_eng": "His most famous accomplishment is helping India become free.",
+      "context_chi": "他最著名的功績是協助印度贏得自由與獨立。",
+      "chant": "Accomplishment, work done right, shining like a trophy bright!",
+      "compare": "accomplishment (成就 - 歷經艱辛達成的壯舉) vs success (成功 - 廣泛的順利成果)",
+      "is_midterm": true,
+      "is_week12": true
+    },
+    {
+      "id": "voc_w12_wr3_6_10",
+      "book_id": "wr3",
+      "unit_id": "wr3_6",
+      "word": "disability",
+      "ipa": "/ˌdɪsəˈbɪləti/",
+      "pos": "名詞 (Noun)",
+      "chi": "身體障礙；殘疾",
+      "breakdown": "dis-(否定/缺乏) + ability(能力) -> 某種身體機能的限制",
+      "trick": "拆解 dis (不) + ability (能力) -> 身體受限但心智依然堅強！",
+      "scene": "Helen Keller 克服失聰與失明的雙重障礙，激勵全球無數人。",
+      "collocation": "overcome disabilities, disabled people, live with a disability",
+      "img": "♿",
+      "context_eng": "Helen Keller overcame her disabilities and inspired the world.",
+      "context_chi": "海倫·凱勒克服了自身的身體障礙，並激勵了全世界。",
+      "chant": "Disability cannot hold us down, courage earns the golden crown!",
+      "compare": "disability (身體機能障礙) vs illness (短期生病、疾病)",
+      "is_midterm": true,
+      "is_week12": true
+    },
+    {
+      "id": "voc_w12_wr3_6_11",
+      "book_id": "wr3",
+      "unit_id": "wr3_6",
+      "word": "gravity",
+      "ipa": "/ˈɡrævəti/",
+      "pos": "名詞 (Noun)",
+      "chi": "地心引力；重力",
+      "breakdown": "grav-(沉重) + -ity(狀態名詞後綴) -> 讓物體有重量的吸引力",
+      "trick": "字根 grav- 意為 heavy (沉重) -> 抓住沉重萬物的力量就是地心引力！",
+      "scene": "成熟的蘋果從枝頭垂直墜落地面，引導牛頓提出引力理論。",
+      "collocation": "theory of gravity, understand gravity, center of gravity",
+      "img": "🍎",
+      "context_eng": "Thanks to Newton, we understand gravity better.",
+      "context_chi": "多虧了牛頓，我們才能更深入理解地心引力。",
+      "chant": "Gravity pulls, what goes up comes down, keeping our feet upon the ground!",
+      "compare": "gravity (重力/引力) vs weight (重量 - 受引力作用測量出的質量重量)",
+      "is_midterm": true,
+      "is_week12": true
+    },
+    {
+      "id": "voc_w12_wr3_6_12",
+      "book_id": "wr3",
+      "unit_id": "wr3_6",
+      "word": "symphony",
+      "ipa": "/ˈsɪmfəni/",
+      "pos": "名詞 (Noun)",
+      "chi": "交響樂；交響曲",
+      "breakdown": "sym-(共同/和諧) + phon-(聲音) + -y(名詞後綴) -> 眾聲和鳴的和諧樂章",
+      "trick": "字根 sym (一起) + phon (聲音) -> 幾十種樂器一起發聲的和鳴！",
+      "scene": "管弦樂團全員盛裝演奏貝多芬第五號《命運》交響曲。",
+      "collocation": "compose symphonies, the Fifth Symphony, symphony orchestra",
+      "img": "🎻",
+      "context_eng": "Beethoven composed the famous Fifth Symphony.",
+      "context_chi": "貝多芬創作了著名的《第五號交響曲》。",
+      "chant": "Symphony sounds, loud and clear, sweetest music you can hear!",
+      "compare": "symphony (交響曲 - 大型管弦多樂章) vs concerto (協奏曲 - 獨奏樂器與樂團對應)",
+      "is_midterm": true,
+      "is_week12": true
+    },
+    {
+      "id": "voc_w12_wr3_6_13",
+      "book_id": "wr3",
+      "unit_id": "wr3_6",
+      "word": "give up",
+      "ipa": "/ɡɪv ʌp/",
+      "pos": "動詞片語 (Phrasal Verb)",
+      "chi": "放棄",
+      "breakdown": "give (給予) + up (往上/徹底放棄所有權)",
+      "trick": "聯想「把雙手高舉 (hands up) 投降交出 (give up)」-> 放棄！",
+      "scene": "愛迪生經歷上千次燈絲實驗失敗，依然堅定不移絕不放棄。",
+      "collocation": "never give up on, gave up on his dreams, give up easily",
+      "img": "💪",
+      "context_eng": "He became successful because he never gave up on his dreams.",
+      "context_chi": "他之所以成功，是因為他從未放棄過自己的夢想。",
+      "chant": "Never give up, keep trying every day, brighter tomorrow is on the way!",
+      "compare": "give up on (放棄某人或夢想希望) vs give in (向強權或壓力屈服)",
+      "is_midterm": true,
+      "is_week12": true
+    },
+    {
+      "id": "voc_w12_wr3_6_14",
+      "book_id": "wr3",
+      "unit_id": "wr3_6",
+      "word": "consequence",
+      "ipa": "/ˈkɑːnsəkwens/",
+      "pos": "名詞 (Noun)",
+      "chi": "結果；因果影響",
+      "breakdown": "con-(共同) + sequ-(跟隨) + -ence(名詞後綴) -> 緊緊跟隨在原因之後的事物",
+      "trick": "拆解 sequ- (跟隨 sequence) -> 一連串跟在後面產生的就是「結果」！",
+      "scene": "在文章結尾使用轉折詞因此 (therefore / as a consequence) 總結全篇。",
+      "collocation": "as a consequence, words of consequence, suffer the consequences",
+      "img": "➡️",
+      "context_eng": "Transition words show consequence and connect ideas logically.",
+      "context_chi": "因果轉折詞能展現因果影響並將不同觀點合乎邏輯地串聯起來。",
+      "chant": "Cause and consequence, hand in hand, reason and result across the land!",
+      "compare": "consequence (因果結果/影響) vs cause (起因/理由)",
+      "is_midterm": true,
+      "is_week12": true
     }
   ],
   "grammar": [
@@ -14477,28 +16858,6 @@ const ENGLISH_DATA = {
       ]
     },
     {
-      "id": "gra_65",
-      "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "rule_title": "Adjectives with Prepositions: Feelings and Emotions (形容詞搭配介系詞：情緒與感受) 💖",
-      "eng_exp": "Many adjectives that describe feelings or emotional states are followed by specific prepositions. 1. Use about with: happy, excited, confused, worried, sorry, concerned, sure, curious, angry, sad. (e.g., worried about something)2. Use with with: happy, bored, disappointed. (e.g., disappointed with someone/something)3. Use by with: surprised, amazed, confused. (e.g., surprised by the news)",
-      "chi_exp": "老師傳授「形容詞小尾巴」密技！很多描繪「心情與感受」的形容詞，後面必須跟著特定的介系詞（小尾巴）喔！1. 配 about (關於...)：happy, excited (興奮), confused (困惑), worried (擔心), sorry (抱歉), angry (生氣)。2. 配 with (對...感到)：happy (滿意), bored (無聊), disappointed (失望)。3. 配 by (被...驚嚇/震撼)：surprised (驚喜), amazed (讚嘆), confused (被搞混)。",
-      "examples": [
-        "I'm worried about the amount of junk food people eat. (我擔心人們食用的垃圾食物數量。),\"Kamil is angry about the chemicals in food. (Kamil 對食物中的化學物質感到憤怒。)\",\"Lisa was excited about making the cake. (Lisa 對做蛋糕感到很興奮。)\",\"I'm disappointed with these cookies. They taste dry. (我對這些餅乾很失望。它們吃起來很乾。)\",\"We were surprised by how delicious the meal was. (我們對這頓飯多麼美味感到很驚奇。)\""
-      ]
-    },
-    {
-      "id": "gra_66",
-      "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "rule_title": "Adjectives with Prepositions: Ability, Quality, and Behavior (形容詞搭配介系詞：能力、品質與行為) 🎯",
-      "eng_exp": "Different prepositions are used when describing abilities, qualities, behavior, or states.1. Use at for abilities: good, bad, excellent. (e.g., good at cooking)2. Use of when commenting on a person's behavior: nice, kind, good, bad, stupid, silly, smart, sensible, rude. Formula: It is/was + Adjective + of + person + to do something.3. Use in for interests: interested, disappointed.4. Use full of: full of something. Use famous for: famous for something.",
-      "chi_exp": "老師的「能力與品質公式」！1. 能力小尾巴 at：be good at (擅長) / be bad at (不擅長) / be excellent at (精通)。後面接動名詞 V-ing！2. 評價行為小尾巴 of：讚美或批評別人的行為時用 It's nice/kind/silly/rude OF you to...。3. 興趣小尾巴 in：be interested in (對...感興趣)。4. 滿滿小尾巴 of：be full of (充滿著...)。5. 名氣小尾巴 for：be famous for (以...聞名)。",
-      "examples": [
-        "Lisa is not very good at cooking. (Lisa 不太擅長做飯。),\"My sister is interested in cooking. (我姐姐對做飯感興趣。)\",\"It was silly of me to confuse salt with sugar. (我把鹽跟糖搞混真是太傻了。)\",\"Junk food is full of fat and chemicals. (垃圾食物充滿了脂肪和化學物質。)\",\"Italy is famous for its pizza and pasta. (義大利以其披薩和義大利麵聞名。)\""
-      ]
-    },
-    {
       "id": "gra_67",
       "book_id": "gra3",
       "unit_id": "gra3_17",
@@ -14728,6 +17087,1334 @@ const ENGLISH_DATA = {
         "【W6 抓錯必背 #2】With the rest of the money, I would put it in the bank.",
         "【W7 量詞滿分句】There are seven slices of bread. / There are five bars of chocolate."
       ]
+    },
+    {
+      "id": "odg3_u16_g01",
+      "book_id": "gra3",
+      "unit_id": "gra3_16",
+      "rule_title": "形容詞與介系詞搭配 (一)：心理情緒與外在反應 (about / with / by)",
+      "eng_exp": "Use 'about' for feelings directed toward situations or upcoming events. Use 'with' for satisfaction or dissatisfaction with things or states. Use 'by' when being affected or surprised by an external fact or person.",
+      "chi_exp": "英語中表達內心情感狀態的形容詞，習慣搭配特定介系詞：(1) 對於情境或事件感到憂喜，多搭配 about；(2) 對於事物品質的滿意或厭倦，搭配 with；(3) 受到外在事實或數據的衝擊震撼，搭配 by。",
+      "formula": "S + Be + Adj + Prep (about / with / by) + Noun / V-ing",
+      "intro": "",
+      "categories": [
+        {
+          "label": "搭配 about (對事物/事件的情緒起伏)",
+          "items": [
+            "happy about",
+            "excited about",
+            "worried about",
+            "sorry about",
+            "curious about",
+            "concerned about",
+            "anxious about"
+          ],
+          "note": "表示因特定事件、情境或即將發生的事物而引發的心理感受。"
+        },
+        {
+          "label": "搭配 with (對物品成果/某人的滿意或厭倦)",
+          "items": [
+            "happy with",
+            "bored with",
+            "disappointed with"
+          ],
+          "note": "表示對具體產品、成果或現狀的滿意或失望感受。"
+        },
+        {
+          "label": "搭配 by (被動受外在事實/數據衝擊)",
+          "items": [
+            "surprised by",
+            "amazed by",
+            "confused by"
+          ],
+          "note": "表示受到外在客觀事實、數據或現象帶來的震驚或驚異。"
+        }
+      ],
+      "pitfalls": [
+        {
+          "wrong": "People are surprised of how many chemicals are in the food.",
+          "right": "People are surprised by how many chemicals are in the food.",
+          "tip": "表示受到某事實驚訝，必用 surprised by 或 surprised at，絕不可用 of！"
+        },
+        {
+          "wrong": "I am worried with eating too much junk food.",
+          "right": "I am worried about eating too much junk food.",
+          "tip": "擔憂某事情況用 worried about，不可誤用 with！"
+        },
+        {
+          "wrong": "Don't buy it if you are not happy about the product.",
+          "right": "Don't buy it if you are not happy with the product.",
+          "tip": "對具體產品品質不滿意，習慣搭配 happy with 代名詞/名詞！"
+        }
+      ],
+      "examples": [
+        {
+          "en": "I am worried about eating lots of chemicals in junk food.",
+          "zh": "我很擔憂吃進垃圾食物中大量的化學成分。",
+          "highlight": "worried about eating"
+        },
+        {
+          "en": "Lisa was excited about making a birthday cake with her sister.",
+          "zh": "麗莎對於和姊姊一起做生日蛋糕感到非常興奮。",
+          "highlight": "excited about making"
+        },
+        {
+          "en": "Don't buy the drink if you are not happy with it.",
+          "zh": "如果你對該飲料不滿意，就不要購買。",
+          "highlight": "happy with it"
+        },
+        {
+          "en": "People are often surprised by how many chemicals are in some products.",
+          "zh": "人們常對某些產品中含有的化學物質數量感到驚訝。",
+          "highlight": "surprised by how many"
+        }
+      ],
+      "trap": "受中文直譯「關於...感到驚訝」影響，常誤寫成 surprised about 或 surprised of。課本標準用法必為 surprised by / at！",
+      "is_week12": true
+    },
+    {
+      "id": "odg3_u16_g02",
+      "book_id": "gra3",
+      "unit_id": "gra3_16",
+      "rule_title": "形容詞與介系詞搭配 (二)：評價人物品格與行為 (It is + adj + OF someone to do sth)",
+      "eng_exp": "Use 'of' with adjectives describing human character, behavior, or intelligence when evaluating a person's action in the pattern 'It is/was + Adjective + of + Person + to + base verb'. Use 'for' only when describing the difficulty or nature of an action itself (e.g. It is easy for me to read).",
+      "chi_exp": "當使用虛主詞 It 來評價「某人做出某項行為所展現的個人性格、善良、糊塗或禮貌」時，介系詞絕對必須使用 OF，而不是 FOR 或 WITH！",
+      "formula": "It + is / was + Adj (nice / kind / silly / rude) + OF + 某人 + to + 原形動詞 (V)",
+      "intro": "",
+      "categories": [
+        {
+          "label": "正面人物品格 (形容人善良/貼心/明智)",
+          "items": [
+            "nice of",
+            "kind of",
+            "good of",
+            "smart of",
+            "sensible of"
+          ],
+          "note": "評價人展現的正面性格：It was nice of you to help us."
+        },
+        {
+          "label": "負面人物行為 (形容人糊塗/愚蠢/無禮)",
+          "items": [
+            "silly of",
+            "stupid of",
+            "bad of",
+            "rude of"
+          ],
+          "note": "評價人做出的糊塗或失禮舉動：It was silly of me to confuse sugar with salt."
+        },
+        {
+          "label": "對比：事物客觀屬性 (難易/重要性用 FOR)",
+          "items": [
+            "easy for",
+            "hard for",
+            "important for",
+            "necessary for"
+          ],
+          "note": "注意區分！若形容事情本身難易度，用 for：It is important for kids to eat vegetables."
+        }
+      ],
+      "pitfalls": [
+        {
+          "wrong": "It was very nice with Grandma to make us a cake.",
+          "right": "It was very nice of Grandma to make us a cake.",
+          "tip": "評價人的善意行為，必須用 It was nice of 某人，絕不可用 with！"
+        },
+        {
+          "wrong": "That was silly for me to use salt instead of sugar.",
+          "right": "That was silly of me to use salt instead of sugar.",
+          "tip": "silly 是形容人糊塗，受格人稱代名詞前必須搭配 of，不可用 for！"
+        },
+        {
+          "wrong": "It is rude of him to shouting at the waiter.",
+          "right": "It is rude of him to shout at the waiter.",
+          "tip": "It is adj of sb 後面必須接 to + 原形動詞 (to shout)，不可接 V-ing！"
+        }
+      ],
+      "examples": [
+        {
+          "en": "It was nice of Grandma to make us a delicious cake.",
+          "zh": "阿嬤為我們烤蛋糕真是太好了。",
+          "highlight": "nice of Grandma to make"
+        },
+        {
+          "en": "That was very silly of me to put salt in the cake.",
+          "zh": "我把鹽巴加進蛋糕裡真是太糊塗了。",
+          "highlight": "silly of me to put"
+        },
+        {
+          "en": "I think it is silly of people to eat lots of junk food.",
+          "zh": "我覺得人們吃大量垃圾食物真是太糊塗了。",
+          "highlight": "silly of people to eat"
+        },
+        {
+          "en": "It was very kind of our teacher to explain the food label.",
+          "zh": "老師為我們再次解說食品標籤真是太親切了。",
+          "highlight": "kind of our teacher to explain"
+        }
+      ],
+      "trap": "最致命的大考陷阱！學生常看見 It is easy for me，就誤以為所有 It is adj 都要接 for。記住：形容事物性質難易用 for；評價人的性格智慧用 of！",
+      "is_week12": true
+    },
+    {
+      "id": "odg3_u16_g03",
+      "book_id": "gra3",
+      "unit_id": "gra3_16",
+      "rule_title": "形容詞與介系詞搭配 (三)：能力專長、領域、名聲、特質與內容物 (at / in / for / of / to / from)",
+      "eng_exp": "Use 'at' for skills and abilities. Use 'in' for areas of interest. Use 'for' for fame or reasons. Use 'of' for contents or fears. Use 'to' for allergies or similarities. Use 'from' for differences or safety.",
+      "chi_exp": "不同屬性的形容詞有其專屬介系詞體系：(1) 技能優劣用 at；(2) 興趣愛好用 in；(3) 特色聲名用 for；(4) 充滿內容物與恐懼用 of；(5) 過敏與相似用 to；(6) 差異與防範用 from。",
+      "formula": "good/bad at + V-ing/N | interested in + V-ing/N | famous for + N | full of + N | allergic to + N | different from + N",
+      "intro": "",
+      "categories": [
+        {
+          "label": "能力專長 (搭配 at)",
+          "items": [
+            "good at",
+            "bad at",
+            "excellent at",
+            "terrible at"
+          ],
+          "note": "表示在各項運動、廚藝、學科等技能上的熟練度。"
+        },
+        {
+          "label": "興趣投入 (搭配 in)",
+          "items": [
+            "interested in"
+          ],
+          "note": "表示對某學問、活動或領域抱有高度興趣。"
+        },
+        {
+          "label": "特色名產 (搭配 for)",
+          "items": [
+            "famous for"
+          ],
+          "note": "表示以某項產品、美景或特質而享譽盛名。"
+        },
+        {
+          "label": "內容物與心理恐懼 (搭配 of)",
+          "items": [
+            "full of",
+            "afraid of",
+            "tired of"
+          ],
+          "note": "full of 表示充滿實體物質；afraid of 表示害怕某事物。"
+        },
+        {
+          "label": "過敏、相似與婚姻 (搭配 to)",
+          "items": [
+            "allergic to",
+            "similar to",
+            "married to"
+          ],
+          "note": "表示生理過敏反應或兩事物之間的相似關聯。"
+        },
+        {
+          "label": "差異性與安全隔離 (搭配 from)",
+          "items": [
+            "different from",
+            "safe from"
+          ],
+          "note": "表示與某事物不同，或免於受到危險傷害。"
+        }
+      ],
+      "pitfalls": [
+        {
+          "wrong": "My brother is not very good in cooking.",
+          "right": "My brother is not very good at cooking.",
+          "tip": "中文「在烹飪方面很好」常誘使學生誤用 in，英文能力擅長必用 good at！"
+        },
+        {
+          "wrong": "Taiwan is famous about boba milk tea and night markets.",
+          "right": "Taiwan is famous for boba milk tea and night markets.",
+          "tip": "以某產物聞名固定搭配 famous for，絕不可用 about！"
+        },
+        {
+          "wrong": "The bottle is full with orange juice.",
+          "right": "The bottle is full of orange juice.",
+          "tip": "full 固定搭配 of (full of)；只有 filled 才會搭配 with (filled with)！"
+        }
+      ],
+      "examples": [
+        {
+          "en": "Lisa is not very good at cooking, but she loves to help.",
+          "zh": "麗莎不是很擅長做菜，但她很喜歡幫忙。",
+          "highlight": "good at cooking"
+        },
+        {
+          "en": "My sister is interested in cooking and makes great things.",
+          "zh": "我姊姊對烹飪很有興趣，而且做得一手好菜！",
+          "highlight": "interested in cooking"
+        },
+        {
+          "en": "Italy is famous for its delicious pizza and pasta.",
+          "zh": "義大利以美味的披薩和義大利麵而聞名世界。",
+          "highlight": "famous for its delicious pizza"
+        },
+        {
+          "en": "The salty cake was completely full of salt.",
+          "zh": "那個鹹蛋糕裡面完全裝滿了鹽巴。",
+          "highlight": "full of salt"
+        }
+      ],
+      "trap": "中文「在...方面很棒」常誤寫成 good in；「關於...很有名」常誤寫成 famous about。切記：能力用 at，名氣用 for，充滿用 of！",
+      "is_week12": true
+    },
+    {
+      "id": "odg3_u16_g04",
+      "book_id": "gra3",
+      "unit_id": "gra3_16",
+      "rule_title": "黃金文法鐵律：動名詞核心規則 (介系詞後接 V-ing 與動名詞作主詞單數動詞)",
+      "eng_exp": "Whenever a verb directly follows a preposition, it must become a gerund (-ing). Furthermore, when a gerund phrase serves as the subject of a sentence, it is treated as a singular noun and takes a singular verb (is/has/makes).",
+      "chi_exp": "掌握動名詞兩大核心鐵律：(1) 介系詞（about, at, in, by, of, for, with, without 等）後方若接動詞，絕對必須轉化為動名詞 (V-ing)；(2) 動名詞或動名詞片語擔任整個句子的主詞時，視為「單一件事」，後方動詞一律強制搭配單數動詞（is / was / makes / helps）！",
+      "formula": "Preposition (without / by / about / at / in / of) + V-ing | V-ing (動名詞主詞) + 單數動詞 (is / makes / helps)",
+      "intro": "",
+      "categories": [
+        {
+          "label": "介系詞後接動名詞 (Preposition + V-ing)",
+          "items": [
+            "worried about burning",
+            "good at making",
+            "interested in eating",
+            "sorry about making",
+            "by reading labels",
+            "without buying"
+          ],
+          "note": "介系詞後不可直接出現原形動詞或 to + V，必須一律改為 -ing 動名詞受詞。"
+        },
+        {
+          "label": "動名詞作主詞視為單數 (Gerund Subject + Singular Verb)",
+          "items": [
+            "Reading labels is important.",
+            "Eating junk food makes you unhealthy.",
+            "Drinking water helps your body."
+          ],
+          "note": "動名詞主詞表達「這件事」，動詞必須使用第三人稱單數形式 (is / was / makes / helps)。"
+        }
+      ],
+      "pitfalls": [
+        {
+          "wrong": "I was worried about burn the cake in the oven.",
+          "right": "I was worried about burning the cake in the oven.",
+          "tip": "介系詞 about 後方動詞 burn 必須加上 -ing 變為 burning！"
+        },
+        {
+          "wrong": "Eating too many chemicals are bad for your health.",
+          "right": "Eating too many chemicals is bad for your health.",
+          "tip": "主詞是動名詞 Eating（這件事），而非複數名詞 chemicals，動詞必須用單數 is！"
+        },
+        {
+          "wrong": "Reading food labels help us choose healthy food.",
+          "right": "Reading food labels helps us choose healthy food.",
+          "tip": "動名詞 Reading 做主詞，一般現在式動詞必須加上 -s (helps)！"
+        }
+      ],
+      "examples": [
+        {
+          "en": "Are you interested in eating healthily every day?",
+          "zh": "你對每天健康飲食感興趣嗎？",
+          "highlight": "interested in eating"
+        },
+        {
+          "en": "I was worried about burning the cake in the hot oven.",
+          "zh": "我很擔心把烤箱裡的蛋糕烤焦了。",
+          "highlight": "worried about burning"
+        },
+        {
+          "en": "Reading food labels is very helpful for our health.",
+          "zh": "閱讀食品標籤對我們的健康非常有幫助。",
+          "highlight": "Reading food labels is"
+        },
+        {
+          "en": "Eating fresh vegetables keeps our body strong.",
+          "zh": "食用新鮮蔬菜能使我們的身體保持強壯。",
+          "highlight": "Eating fresh vegetables keeps"
+        }
+      ],
+      "trap": "兩大段考扣分黑洞：(1) 介系詞後忘記動詞加 -ing；(2) 看到動名詞後面接複數著名詞（如 food labels / chemicals），就誤用複數動詞 are，記住主詞是動名詞本身，動詞必用單數！",
+      "is_week12": true
+    },
+    {
+      "id": "OD3_U16_G1",
+      "book_id": "od3",
+      "unit_id": "od3_16",
+      "rule_title": "Adjectives with Prepositions (情緒與評價形容詞的介系詞搭配)",
+      "eng_exp": "Certain adjectives expressing emotion, attitude, or evaluation require specific prepositions before nouns, pronouns, or gerunds (verb-ing).",
+      "chi_exp": "英語中表達情緒、好奇或評價的形容詞，習慣搭配特定介系詞：(1) curious about (對...感到好奇)；(2) surprised at/by (對...感到驚訝)；(3) happy with (對...感到滿意)；(4) proud of (以...為榮)；(5) full of (充滿著...)；(6) interested in (對...有興趣)；(7) good for (對...健康有益)。",
+      "formula": "主詞 + be動詞 + [curious about / surprised at / happy with / proud of / full of] + 名詞 / V-ing",
+      "intro": "",
+      "categories": [
+        {
+          "label": "about 系列 (心態好奇與關切)",
+          "items": [
+            "curious about",
+            "worried about",
+            "excited about"
+          ],
+          "note": "表達對某事件、新事物或未知未來的探索好奇或關心"
+        },
+        {
+          "label": "at / by 系列 (驚訝與衝擊)",
+          "items": [
+            "surprised at",
+            "surprised by",
+            "amazed by"
+          ],
+          "note": "受到外在事實、成果或龐大數據震撼衝擊時的心理反應"
+        },
+        {
+          "label": "with / of 系列 (滿意、自豪與充盈)",
+          "items": [
+            "happy with",
+            "proud of",
+            "full of"
+          ],
+          "note": "happy with 表滿意；proud of 表引以為傲；full of 表裝滿某物"
+        }
+      ],
+      "pitfalls": [
+        {
+          "wrong": "Marisol was very curious at her new mystery seed.",
+          "right": "Marisol was very curious about her new mystery seed.",
+          "tip": "curious 習慣搭配 about，絕不可受中文「對...感到好奇」直譯誤用 at 或 to。"
+        },
+        {
+          "wrong": "The teacher was very happy at my wonderful essay.",
+          "right": "The teacher was very happy with my wonderful essay.",
+          "tip": "happy 表示對某項作品成果感到滿意時搭配 with，不可用 at。"
+        },
+        {
+          "wrong": "The wooden basket was full with sweet red tomatoes.",
+          "right": "The wooden basket was full of sweet red tomatoes.",
+          "tip": "full 固定搭配 of (full of)；只有動詞 filled 才是搭配 with (filled with)。"
+        }
+      ],
+      "examples": [
+        {
+          "en": "Marisol was curious about her mystery seed and watered it daily.",
+          "zh": "Marisol 對她的神祕種子感到好奇，並且每天給它澆水。",
+          "highlight": "curious about"
+        },
+        {
+          "en": "The neighbors were surprised at the giant golden flower.",
+          "zh": "鄰居們對那朵巨大的金黃色花朵感到非常驚訝。",
+          "highlight": "surprised at"
+        },
+        {
+          "en": "The entire neighborhood was proud of the Garden of Happiness.",
+          "zh": "整個街區都為這座「幸福花園」感到無比自豪。",
+          "highlight": "proud of"
+        },
+        {
+          "en": "Mr. Singh carried away a basket full of fresh beans.",
+          "zh": "Singh 先生提走了一整籃裝滿新鮮豆子的籃子。",
+          "highlight": "full of"
+        }
+      ],
+      "trap": "受中文直譯「對...感到好奇/滿意」影響，學生最常把所有介系詞通通誤寫為 to 或 at。務必牢記：curious about, surprised at/by, happy with, proud of, full of！",
+      "is_week12": true
+    },
+    {
+      "id": "OD3_U16_G2",
+      "book_id": "od3",
+      "unit_id": "od3_16",
+      "rule_title": "Word Study: Synonyms (核心同義字辨析與代換法則)",
+      "eng_exp": "Synonyms are words that have the same or very similar meanings. Using synonyms enriches vocabulary, avoids repetition, and enhances reading comprehension.",
+      "chi_exp": "同義字（Synonyms）是語義相同或高度相近的詞彙。掌握同義字能靈活改寫句子並提高閱讀理解能力。本單元四大核心對應：(1) empty ⟷ vacant (空置的、無人的)；(2) unafraid ⟷ brave (勇敢不懼的)；(3) mature ⟷ ripe (成熟發育完全的)；(4) raw ⟷ uncooked (生的、未經烹煮的)。",
+      "formula": "詞彙 A ⟷ 詞彙 B (語義等價替換：empty = vacant | unafraid = brave | mature = ripe)",
+      "intro": "",
+      "categories": [
+        {
+          "label": "空間場地類",
+          "items": [
+            "empty ⟷ vacant"
+          ],
+          "note": "empty lot = vacant lot (無建物的空置土地)"
+        },
+        {
+          "label": "品格特質類",
+          "items": [
+            "unafraid ⟷ brave"
+          ],
+          "note": "unafraid girl = brave girl (不畏艱難的勇敢女孩)"
+        },
+        {
+          "label": "農作熟成類",
+          "items": [
+            "mature ⟷ ripe"
+          ],
+          "note": "mature plant = ripe plant (發育成熟結籽的作物)"
+        },
+        {
+          "label": "食物狀態類",
+          "items": [
+            "raw ⟷ uncooked"
+          ],
+          "note": "raw vegetables = uncooked vegetables (生鮮蔬菜)"
+        }
+      ],
+      "pitfalls": [
+        {
+          "wrong": "The vacant lot was empty, so it was crowded.",
+          "right": "The vacant lot was empty, so it was not crowded.",
+          "tip": "crowded (擁擠的) 是 empty 的「反義字」而非同義字，切勿混淆！"
+        },
+        {
+          "wrong": "The brave girl was unafraid, meaning she was fearful.",
+          "right": "The brave girl was unafraid, meaning she was fearless.",
+          "tip": "fearful (恐懼的) 是 unafraid 的反義字，不可當作同義字選擇！"
+        }
+      ],
+      "examples": [
+        {
+          "en": "Marisol planted her sunflower in the empty lot on the corner.",
+          "zh": "Marisol 在街角那片空曠無人的空地上種下了向日葵。",
+          "highlight": "empty lot"
+        },
+        {
+          "en": "The city turned the vacant lot into a wonderful community garden.",
+          "zh": "這座城市將那片閒置的空地改造成了一座美好的社區花園。",
+          "highlight": "vacant lot"
+        },
+        {
+          "en": "The unafraid little gardener worked hard under the warm summer sun.",
+          "zh": "那位勇敢無懼的小園丁在溫暖的夏日陽光下辛勤勞作。",
+          "highlight": "unafraid"
+        },
+        {
+          "en": "When the sunflower was fully mature, its seeds were ripe for harvest.",
+          "zh": "當向日葵完全成熟發育時，它的種子也熟成可以採收了。",
+          "highlight": "mature"
+        }
+      ],
+      "trap": "段考同義字大題最容易誤選反義字（Antonyms，如把 empty 選成 crowded，或把 unafraid 選成 fearful）。作答時務必看清題目是要求「同義字 (Synonym)」還是「反義字 (Antonym)」！",
+      "is_week12": true
+    },
+    {
+      "id": "OD3_U16_G3",
+      "book_id": "od3",
+      "unit_id": "od3_16",
+      "rule_title": "Writing Study: Prepositional Phrases of Location (植物生長與空間位置介系詞片語)",
+      "eng_exp": "Prepositional phrases of location tell WHERE things happen or WHERE specific plants grow in nature (on trees, in the ground, on vines, off the ground, in pots).",
+      "chi_exp": "地點介系詞片語精確描述植物在自然界中的生長部位與空間位置：(1) on trees (長在樹上，果實懸掛在樹枝上)；(2) in the ground (長在泥土中，如地瓜胡蘿蔔等地下根莖)；(3) on vines (生長在爬藤上，如豆類、南瓜、小黃瓜)；(4) off the ground (架高脫離地面，避免番茄腐爛)；(5) in pots (種在花盆裡)。",
+      "formula": "植物/農作物 + grow + [ on trees / in the ground / on vines / off the ground / in pots ]",
+      "intro": "",
+      "categories": [
+        {
+          "label": "樹木與藤蔓 (表面附著生長)",
+          "items": [
+            "grow on trees",
+            "grow on vines"
+          ],
+          "note": "蘋果、橘子長在樹上；四季豆、南瓜長在藤蔓上"
+        },
+        {
+          "label": "泥土層內部 (地下根莖作物)",
+          "items": [
+            "grow in the ground"
+          ],
+          "note": "地瓜、胡蘿蔔、馬鈴薯深埋於土壤內部生長"
+        },
+        {
+          "label": "人工園藝與花器栽培",
+          "items": [
+            "grow off the ground",
+            "grow in pots"
+          ],
+          "note": "番茄架高脫離地面；香草花卉栽種於花盆中"
+        }
+      ],
+      "pitfalls": [
+        {
+          "wrong": "Sweet apples and juicy oranges grow in trees.",
+          "right": "Sweet apples and juicy oranges grow on trees.",
+          "tip": "水果懸掛在樹枝條外表面，介系詞必須用 on trees，不可用 in trees。"
+        },
+        {
+          "wrong": "Sweet potatoes and carrots grow on the ground.",
+          "right": "Sweet potatoes and carrots grow in the ground.",
+          "tip": "地下塊根深埋在泥土層內部，必須用 in the ground，不可用 on the ground。"
+        }
+      ],
+      "examples": [
+        {
+          "en": "Sweet oranges and crunchy apples grow on trees in the sunny orchard.",
+          "zh": "甜柳橙與清脆蘋果在陽光明媚的果園樹上生長。",
+          "highlight": "grow on trees"
+        },
+        {
+          "en": "Sweet potatoes and carrots grow in the ground under the dark soil.",
+          "zh": "地瓜與胡蘿蔔在深色泥土下方的土壤中生長。",
+          "highlight": "grow in the ground"
+        },
+        {
+          "en": "Green beans and heavy pumpkins grow on climbing vines.",
+          "zh": "四季豆與沉甸甸的南瓜在攀爬的藤蔓上生長。",
+          "highlight": "grow on climbing vines"
+        },
+        {
+          "en": "Gardeners keep fragile tomato plants off the ground with wooden sticks.",
+          "zh": "園丁們用木樁將脆弱的番茄植株架高脫離地面。",
+          "highlight": "off the ground"
+        }
+      ],
+      "trap": "中文常說「長在地上」，學生常不假思索寫 on the ground。地瓜與胡蘿蔔是地下根，在土壤「內部」，英文絕對必須使用 in the ground！",
+      "is_week12": true
+    },
+    {
+      "id": "RWW6_U09_G1",
+      "book_id": "rw6",
+      "unit_id": "rw6_9",
+      "rule_title": "Reading Strategy: How to Analyze Characters (角色分析四大線索：言、行、思、貌)",
+      "eng_exp": "To analyze a character in a story, readers examine four key elements: what the character looks like (appearance), what they feel or think (thoughts and feelings), what they say (dialogue and speech patterns), and what they do (actions). Authors often show personality traits through specific clues rather than stating them directly.",
+      "chi_exp": "閱讀小說與故事時，分析角色的四大切入點為「外貌 (looks like)」、「心理與感受 (feels/thinks)」、「言語對話 (says)」與「肢體動作 (does)」。作者通常不會平鋪直敘告訴讀者主角是什麼個性，而是透過角色的言行舉止讓讀者主動推理出真實性格。例如拉揚「整個早晨滔滔不絕講話 (talked nonstop)」，其實是他「感到緊張 (was nervous)」的表現方式。",
+      "formula": "Character Analysis = Appearance (外貌) + Actions (行為) + Dialogue (言語) + Thoughts & Feelings (內心感受)",
+      "intro": "",
+      "categories": [
+        {
+          "label": "言談對話 (Dialogue & Words)",
+          "items": [
+            "talk nonstop all morning (緊張多話)",
+            "greet politely with a warm smile (友善親切)"
+          ],
+          "note": "從說話頻率、語氣與內容推敲角色心理與教養"
+        },
+        {
+          "label": "行為舉止 (Actions & Behavior)",
+          "items": [
+            "jump up and down with joy (興奮喜悅)",
+            "stomp feet and walk away (沮喪生氣)",
+            "hug family warmly (熱情溫暖)"
+          ],
+          "note": "肢體動作往往直接反映當下的真實情緒狀態"
+        },
+        {
+          "label": "神情外貌 (Appearance & Expression)",
+          "items": [
+            "smile and look thoughtful (若有所思、沉著冷靜)",
+            "nervous facial expression (緊張神情)"
+          ],
+          "note": "面部表情與眼神傳遞隱性性格特質"
+        },
+        {
+          "label": "內心感受 (Thoughts & Feelings)",
+          "items": [
+            "feel nervous before landing (降落前緊張)",
+            "stay calm in deep space (太空中沉著鎮定)"
+          ],
+          "note": "內在心理活動是推動故事角色動機的核心"
+        }
+      ],
+      "pitfalls": [
+        {
+          "wrong": "Rayyan talks nonstop, so he is definitely very confident and relaxed.",
+          "right": "Rayyan talks nonstop because he is nervous inside.",
+          "tip": "不能僅憑表面多話就斷定自信放鬆，需結合情境線索（妹妹 Nora 知道他緊張時話特別多）。"
+        },
+        {
+          "wrong": "Rayyan says Nora is shy, so Nora must be afraid of meeting people.",
+          "right": "Nora is quiet but confident, smiling and looking thoughtful.",
+          "tip": "單一角色的主觀評價不等於客觀事實，堂姊 Irdina 指出 Nora 其實是「安靜但有自信」。"
+        }
+      ],
+      "examples": [
+        {
+          "en": "Rayyan talked almost nonstop all morning, which shows he was nervous about visiting Earth.",
+          "zh": "拉揚整個早晨幾乎滔滔不絕地講話，這顯示他對拜訪地球感到十分緊張。",
+          "highlight": "talked almost nonstop"
+        },
+        {
+          "en": "Nora just smiled and looked thoughtful, revealing that she is observant, calm, and confident.",
+          "zh": "諾拉只是微笑著並顯得若有所思，展現出她善於觀察、沉著且自信的性格。",
+          "highlight": "smiled and looked thoughtful"
+        },
+        {
+          "en": "Jeff couldn't stop jumping up and down when his team won the match.",
+          "zh": "當傑夫的隊伍贏得比賽時，他忍不住又蹦又跳，展現出極致的喜悅。",
+          "highlight": "jumping up and down"
+        },
+        {
+          "en": "Mike stomped his feet and walked away, showing that he was upset and frustrated.",
+          "zh": "麥克跺了跺腳轉身走開，表現出他內心的懊惱與沮喪。",
+          "highlight": "stomped his feet"
+        }
+      ],
+      "trap": "切勿只看單一表面舉止就武斷下結論。例如 Rayyan 說 Nora 是「害羞的 (shy)」，但堂姊 Irdina 卻指出她是「安靜但有自信 (quiet, but confident)」；讀者必須綜合全篇線索進行交叉比對。",
+      "is_week12": true
+    },
+    {
+      "id": "RWW6_U09_G2",
+      "book_id": "rw6",
+      "unit_id": "rw6_9",
+      "rule_title": "Personality Adjectives & Preference Patterns (偏好表達 prefer A to B 與社交委婉 mean to be)",
+      "eng_exp": "When describing personalities and sporting preferences, use specific adjectives (outgoing, quiet, daring, thoughtful). To express choosing one thing over another, use the high-frequency pattern \"prefer + noun/gerund + to + noun/gerund\" (NEVER use than!). For social politeness, use \"mean to be + adjective\" (especially in the negative: \"I don't mean to be rude\").",
+      "chi_exp": "描述個性與嗜好時，高頻文法焦點為「prefer A to B」（比起 B 更偏好 A）。請特別注意：此處的比較介系詞必須使用「to」，絕對不能填寫比較連詞「than」！此外，表達委婉社交歉意時，使用「mean to be + 形容詞」（存心做…），否定句 \"I don't mean to be rude, but...\" 是英美文化中極重要的禮貌預防語。",
+      "formula": "S + prefer + A (N / V-ing) + to + B (N / V-ing) | S + don't/doesn't mean to be + Adj.",
+      "intro": "",
+      "categories": [
+        {
+          "label": "名詞偏好對比 (prefer N to N)",
+          "items": [
+            "prefer team sports to individual sports",
+            "prefer basketball to golf"
+          ],
+          "note": "名詞對比名詞，介系詞固定搭配 to"
+        },
+        {
+          "label": "動名詞偏好對比 (prefer V-ing to V-ing)",
+          "items": [
+            "prefer playing soccer to watching TV",
+            "prefer reading books to playing games"
+          ],
+          "note": "兩端動詞必須保持動名詞 V-ing 對稱平行"
+        },
+        {
+          "label": "社交委婉句型 (mean to be + Adj.)",
+          "items": [
+            "I don't mean to be rude, but...",
+            "He didn't mean to be impolite."
+          ],
+          "note": "be 動詞後接形容詞，表「並非故意顯得失禮」"
+        }
+      ],
+      "pitfalls": [
+        {
+          "wrong": "I prefer team sports than individual sports.",
+          "right": "I prefer team sports to individual sports.",
+          "tip": "受到中文「比」干擾易誤填 than，prefer 句型比較介系詞必用 to！"
+        },
+        {
+          "wrong": "Sorry, I do not mean to be rudely.",
+          "right": "Sorry, I do not mean to be rude.",
+          "tip": "mean to be 後面的 be 是連綴/繫動詞，後面必須接形容詞 rude，不可用副詞 rudely！"
+        },
+        {
+          "wrong": "He prefers playing soccer than play tennis.",
+          "right": "He prefers playing soccer to playing tennis.",
+          "tip": "prefer V-ing to V-ing 兩側動名詞必須對稱平行，且介系詞用 to！"
+        }
+      ],
+      "examples": [
+        {
+          "en": "If you are quiet, you may prefer an individual sport to a team sport.",
+          "zh": "如果你比較文靜，你可能會比起團隊運動更偏好個人運動。",
+          "highlight": "prefer an individual sport to a team sport"
+        },
+        {
+          "en": "Sorry, I don't mean to be rude, but I don't remember you.",
+          "zh": "抱歉，我不是故意沒禮貌，但我記不得妳了。",
+          "highlight": "don't mean to be rude"
+        },
+        {
+          "en": "Outgoing students usually prefer playing soccer to reading quietly in the library.",
+          "zh": "外向的學生通常比起在圖書館安靜看書，更偏好踢足球。",
+          "highlight": "prefer playing soccer to reading"
+        }
+      ],
+      "trap": "三大高頻盲點：1. prefer 誤接 than（受中文「比起…」干擾）；2. mean to be 後面誤接副詞 rudely（be 動詞後應接形容詞 rude）；3. prefer 在第三人稱單數時忘記加 s（He prefers...）。",
+      "is_week12": true
+    },
+    {
+      "id": "RWW6_U09_G3",
+      "book_id": "rw6",
+      "unit_id": "rw6_9",
+      "rule_title": "Permanent Trait vs. Temporary Behavior & Social Etiquette (性格特質 vs 當下行為與虛主詞禮儀句型)",
+      "eng_exp": "The simple present form \"He is friendly\" describes a permanent personality trait. In contrast, \"Alex is being friendly\" emphasizes temporary behavior at a specific moment. Furthermore, impersonal \"It is + Adj. + to V\" evaluates social etiquette and manners.",
+      "chi_exp": "「主詞 + be + 形容詞」通常用來表示角色的「恆常性格特徵」（如 Rayyan is always friendly）；若使用現在進行式「主詞 + be being + 形容詞」，則專門強調「當下此時此刻表現出來的暫時行為」（如 Alex is being friendly / Alex is being rude）。此外，虛主詞句型「It is polite / impolite / rude to + 原形動詞 V」專門用來客觀評斷某種社交行為的禮儀標準。",
+      "formula": "Trait: S + be + Adj. vs Behavior: S + be being + Adj. | It + is + polite / impolite / rude + to + 原形動詞 V",
+      "intro": "",
+      "categories": [
+        {
+          "label": "恆常性格特徵 (Permanent Trait)",
+          "items": [
+            "She is always confident.",
+            "The Miller family is friendly."
+          ],
+          "note": "用簡單現在式/過去式，表示長期一貫的性格本質"
+        },
+        {
+          "label": "當下刻意舉動 (Temporary Behavior)",
+          "items": [
+            "Alex is being friendly today.",
+            "Why are you being so rude to him?"
+          ],
+          "note": "用 be being + Adj. 強調此刻刻意做出的舉止態度"
+        },
+        {
+          "label": "虛主詞社交禮儀 (It is polite / rude to V)",
+          "items": [
+            "It is polite to greet guests with a smile.",
+            "It is rude to interrupt others while talking."
+          ],
+          "note": "It 為虛主詞，真正主詞為後方不定詞 to + 原形動詞"
+        }
+      ],
+      "pitfalls": [
+        {
+          "wrong": "He is being tall and handsome.",
+          "right": "He is tall and handsome.",
+          "tip": "be being + Adj. 只能用於人可以主觀用意志控制的行為特質（如 friendly, rude, polite），不能用於不可控的外貌狀態（如 tall, short）。"
+        },
+        {
+          "wrong": "It is rude of interrupting when someone is speaking.",
+          "right": "It is rude to interrupt when someone is speaking.",
+          "tip": "It is rude 後方必須接不定詞片語 to + 原形動詞 (to interrupt)，不可誤用 of V-ing！"
+        },
+        {
+          "wrong": "It is polite to greeting the teacher in the morning.",
+          "right": "It is polite to greet the teacher in the morning.",
+          "tip": "to 是不定詞符號，後方必須接原形動詞 greet，不可加 -ing！"
+        }
+      ],
+      "examples": [
+        {
+          "en": "Rayyan was always so friendly when he was living on planet Regulus.",
+          "zh": "拉揚住在軒轅十四星時，性格總是那麼親切友善。",
+          "highlight": "was always so friendly"
+        },
+        {
+          "en": "Alex greeted the new classmate warmly, showing he was being friendly.",
+          "zh": "亞歷克斯熱情地問候新同學，表現出當下親切友善的舉止。",
+          "highlight": "was being friendly"
+        },
+        {
+          "en": "It is polite to listen carefully and not interrupt while others are speaking.",
+          "zh": "在別人說話時專心聆聽且不插嘴，是有禮貌的行為。",
+          "highlight": "It is polite to listen"
+        },
+        {
+          "en": "It is rude to laugh at someone when they make a mistake.",
+          "zh": "當別人犯錯時取笑對方是非常粗魯無禮的。",
+          "highlight": "It is rude to laugh"
+        }
+      ],
+      "trap": "be being + Adj. 只能用於人類「可以自主意志控制的言行」（如 friendly, rude, polite, silly），絕不能用於無法控制的客觀狀態（如不可說 He is being tall 或 She is being young）。虛主詞 It is rude/polite 後方必須接 to + 原形動詞。",
+      "is_week12": true
+    },
+    {
+      "id": "space_ch06_g01",
+      "book_id": "rd6",
+      "unit_id": "rd6_6",
+      "rule_title": "Scientific Deduction Modals & Astrobiological Speculation (科學推論情態助動詞：might / could + 原形動詞 與 推測假說)",
+      "eng_exp": "In scientific writing, astronomers use modal verbs \"might\" and \"could\" followed by a base verb to state educated deductions and hypotheses based on indirect evidence. For unproven possibilities, sentences often begin with the adverb \"Maybe\" or the reporting clause \"Scientists think that...\".",
+      "chi_exp": "在天文科普寫作中，當科學家根據間接觀測證據提出推論假說時，固定使用情態助動詞「might」或「could」加上原形動詞 (Base Verb)，表達「可能存在某現象或生物」；若以副詞開頭則使用「Maybe + 完整子句」，或以學術引述句「Scientists think that + 完整子句」提出客觀假說。",
+      "formula": "Subject + might / could + Base Verb (科學推測) | Maybe + S + V | Scientists think that + S + V",
+      "intro": "",
+      "categories": [
+        {
+          "label": "情態助動詞推論 (might / could + 原形動詞)",
+          "items": [
+            "might be life on Mars",
+            "could have liquid oceans",
+            "might live inside rocks"
+          ],
+          "note": "might 與 could 在科學語境中皆表示客觀假設與可能性，後方必須嚴格接原形動詞。"
+        },
+        {
+          "label": "學術假說引述句 (Scientists think that...)",
+          "items": [
+            "Scientists think that there is liquid water",
+            "Scientists think that the inside is warmer"
+          ],
+          "note": "that 引導名詞子句作為 think 的受詞，子句內部時態與語法結構須完整。"
+        },
+        {
+          "label": "推測副詞運用 (Maybe 置於句首)",
+          "items": [
+            "Maybe there is life on Mars",
+            "Maybe one day we will discover life"
+          ],
+          "note": "Maybe 為單一副詞修飾全句，切勿與動詞片語 may be 混淆。"
+        }
+      ],
+      "pitfalls": [
+        {
+          "wrong": "Scientists think that there could being liquid water under the ice.",
+          "right": "Scientists think that there could be liquid water under the ice.",
+          "tip": "情態助動詞 could 後方必須接原形動詞 be，切勿接現在分詞 being 或不定詞 to be！"
+        },
+        {
+          "wrong": "May be there are bacteria in the oceans of Europa.",
+          "right": "Maybe there are bacteria in the oceans of Europa.",
+          "tip": "句首副詞「也許」應拼寫為一個單字 Maybe，切勿拆開寫成動詞片語 May be！"
+        }
+      ],
+      "examples": [
+        {
+          "en": "Scientists think that there could be liquid water under the ice of Europa.",
+          "zh": "科學家推測木衛二的冰層下方可能存在著液態水。",
+          "highlight": "could be liquid water"
+        },
+        {
+          "en": "Simple bacteria might survive inside deep underground rocks on Mars.",
+          "zh": "簡單的細菌可能在火星深處的地下岩石內部存活。",
+          "highlight": "might survive inside"
+        },
+        {
+          "en": "Maybe one day astronomers will discover signs of life on Titan.",
+          "zh": "也許有朝一日天文學家會在土衛六上發現生命的跡象。",
+          "highlight": "Maybe one day"
+        }
+      ],
+      "trap": "台灣學生最容易在 could / might 後方誤加 to（如 could to have）或誤用動名詞 being；此外常混淆副詞 Maybe 與動詞片語 may be。",
+      "is_week12": true
+    },
+    {
+      "id": "space_ch06_g02",
+      "book_id": "rd6",
+      "unit_id": "rd6_6",
+      "rule_title": "Habitable Zone & Temperature Extremes: \"too + Adj. + to + V\" vs. \"just right for + N\" (適居帶環境與極端溫度句型)",
+      "eng_exp": "Astronomers describe habitable zones (Goldilocks zones) using \"too + adjective + to + base verb\" for hostile extremes (too hot or too cold for liquid water to exist) and \"just right for + noun\" when environmental conditions allow liquid water and living organisms to thrive.",
+      "chi_exp": "在天文學中描述「適居帶 (Goldilocks Zone)」時，常使用「too + 形容詞 + to + 原形動詞」表示「太...而無法保持液態水」（例如 Venus is too hot to hold liquid water；Mars is too cold to keep liquid water on the surface）；而地球距離太陽恰到好處，則使用「just right for + 名詞/動名詞」表示「對生命而言恰恰好」。",
+      "formula": "too + hot / cold + to + Base Verb (太極端而無法...) | just right for + Noun / V-ing (恰到好處)",
+      "intro": "",
+      "categories": [
+        {
+          "label": "極端極限句型 (too + Adj. + to + V)",
+          "items": [
+            "too cold to have liquid surface water",
+            "too hot to support water oceans",
+            "too far to observe directly"
+          ],
+          "note": "too... to... 結構本身蘊含否定意義（太...以至於不能...），後接原形動詞。"
+        },
+        {
+          "label": "適居黃金條件 (just right for + N)",
+          "items": [
+            "just right for liquid water",
+            "just right for living organisms",
+            "just right for carbon-based life"
+          ],
+          "note": "介系詞 for 後方接名詞或動名詞，強調環境條件適宜。"
+        },
+        {
+          "label": "空間距離否定表達 (too far away to see)",
+          "items": [
+            "too far away to see clearly",
+            "too faint to detect without instruments"
+          ],
+          "note": "用以說明系外行星因距離過遠且母星光芒過強而難以直接用望遠鏡觀測。"
+        }
+      ],
+      "pitfalls": [
+        {
+          "wrong": "The surface of Mars is too cold to having liquid water.",
+          "right": "The surface of Mars is too cold to have liquid water.",
+          "tip": "too... to... 結構中的 to 為不定詞符號，後方必須嚴格接原形動詞 have，絕不能加 -ing！"
+        },
+        {
+          "wrong": "Earth is located in an orbit that is just right to liquid water.",
+          "right": "Earth is located in an orbit that is just right for liquid water.",
+          "tip": "表示對某事物「剛剛好、最適宜」，介系詞固定搭配 for，不可誤用 to！"
+        }
+      ],
+      "examples": [
+        {
+          "en": "Mars is too cold to maintain liquid water on its frozen surface.",
+          "zh": "火星太過寒冷，以至於無法在其冰封地表保持液態水。",
+          "highlight": "too cold to maintain"
+        },
+        {
+          "en": "Earth orbits at a distance that is just right for liquid water and life.",
+          "zh": "地球運行的軌道距離對液態水與生命而言恰到好處。",
+          "highlight": "just right for liquid water"
+        },
+        {
+          "en": "Exoplanets are too far away to see clearly with ordinary telescopes.",
+          "zh": "系外行星距離太過遙遠，以至於普通望遠鏡無法清楚看見。",
+          "highlight": "too far away to see"
+        }
+      ],
+      "trap": "學生常在 too... to... 句型中誤加 not 形成雙重否定語病（如 too cold not to have），或在 to 後方誤填動名詞；需牢記 too... to... 本身即代表否定意涵。",
+      "is_week12": true
+    },
+    {
+      "id": "space_ch06_g03",
+      "book_id": "rd6",
+      "unit_id": "rd6_6",
+      "rule_title": "Scientific Cause-and-Effect & Passive Observation (科學因果論述與被動描繪：so ... that / be covered in / called)",
+      "eng_exp": "Planetary texts explain physical facts through cause-and-effect clauses using \"so + adjective + that + clause\" and describe planetary landscapes through passive voice combinations (\"be covered in + noun\") and reduced participle phrases (\"called + name\").",
+      "chi_exp": "在科普說明文中，解釋天文事實的因果關係常用「so + 形容詞 + that + 結果子句」（例如望遠鏡太小以致看錯表面線條）；描繪星體外觀狀態時使用被動語態搭配固定介系詞「be covered in + 名詞」（被厚冰覆蓋）；提及科學命名時則使用省略 which is 的分詞後置修飾「called + 專有名稱」。",
+      "formula": "so + Adj + that + S + V (如此...以至於...) | S + be covered in + N | N + called + Name",
+      "intro": "",
+      "categories": [
+        {
+          "label": "因果結果句型 (so + Adj + that + 子句)",
+          "items": [
+            "so cold that all surface water is ice",
+            "so small that it was difficult to see"
+          ],
+          "note": "so 修飾形容詞，that 引導結果子句，若語意明確口語中 that 可省略。"
+        },
+        {
+          "label": "地質被動覆蓋 (be covered in + N)",
+          "items": [
+            "covered in ice",
+            "covered in frozen craters",
+            "covered in dust"
+          ],
+          "note": "描述星球大面積被冰雪深陷覆蓋，教材標準搭配介系詞 in。"
+        },
+        {
+          "label": "專有名詞分詞後置修飾 (called + 名稱)",
+          "items": [
+            "chemicals called hydrocarbons",
+            "aliens called Martians",
+            "objects called UFOs"
+          ],
+          "note": "為省略 which/that are 的過去分詞片語，修飾前面的普通名詞。"
+        }
+      ],
+      "pitfalls": [
+        {
+          "wrong": "Europa is covered with ice, but Mars is covering ice too.",
+          "right": "Europa is covered in ice, and the water on Mars is frozen into ice.",
+          "tip": "被冰層全面封凍包覆，課本標準用法為 be covered in ice，絕不可寫主動態 covering！"
+        },
+        {
+          "wrong": "Titan has lakes made of chemicals are called hydrocarbons.",
+          "right": "Titan has lakes made of chemicals called hydrocarbons.",
+          "tip": "called hydrocarbons 為分詞修飾語，切勿多加 are 導致句子出現雙重主要動詞！"
+        }
+      ],
+      "examples": [
+        {
+          "en": "It is so cold on Mars that all the water on the surface is frozen into ice.",
+          "zh": "火星上如此寒冷，以至於地表所有的水都結成了冰。",
+          "highlight": "so cold that"
+        },
+        {
+          "en": "Europa is one of Jupiter's moons and it is completely covered in ice.",
+          "zh": "木衛二是木星的衛星之一，表面完全被冰層所覆蓋。",
+          "highlight": "is completely covered in ice"
+        },
+        {
+          "en": "The rivers and lakes on Titan are made of organic chemicals called hydrocarbons.",
+          "zh": "土衛六上的河流與湖泊是由名為碳氫化合物的有機化學物質構成的。",
+          "highlight": "chemicals called hydrocarbons"
+        }
+      ],
+      "trap": "分詞修飾時最忌諱加上 be 動詞變成雙動詞（chemicals are called hydrocarbons）；此外受中文直譯影響，常將 be covered in 誤寫成 covered at 或 covered by。",
+      "is_week12": true
+    },
+    {
+      "id": "WR3_U06_G01",
+      "book_id": "wr3",
+      "unit_id": "wr3_6",
+      "rule_title": "歷史人物生卒年與生平時間介系詞 (Born & Timeline Prepositions: in vs on vs at)",
+      "eng_exp": "Use the past tense passive \"was/were born\" followed by \"in + year/month/place\" or \"on + specific calendar date\". To describe childhood location, use \"grew up in + place\". To indicate age, use \"at the age of [number]\".",
+      "chi_exp": "敘述歷史偉人的生平起點時：(1) 出生年份、月份或城市國家前用 in (was born in 1847 / in Ohio)；(2) 具體確切日期（含月日）前用 on (was born on February 11, 1847)；(3) 敘述童年成長地用 grew up in + 地點；(4) 敘述年齡時用 at the age of + 數字。注意：born 是過去分詞，前方絕不可漏掉過去式 be 動詞 was！",
+      "formula": "Subject + was born on [exact date] / in [year/month/place], and grew up in [place].",
+      "intro": "",
+      "categories": [
+        {
+          "label": "年份、月份與地點 (搭配 in)",
+          "items": [
+            "was born in 1847",
+            "was born in October",
+            "was born in Ohio",
+            "grew up in Michigan"
+          ],
+          "note": "長時間跨度（年、月、年代）或大範圍地理區域一律搭配 in。"
+        },
+        {
+          "label": "具體特定月日日期 (搭配 on)",
+          "items": [
+            "was born on February 11",
+            "was born on July 4, 1847"
+          ],
+          "note": "只要出現具體日期「日 (day)」，介系詞立即切換為 on。"
+        },
+        {
+          "label": "特定歲數與年齡節點 (搭配 at)",
+          "items": [
+            "at the age of five",
+            "at age twelve"
+          ],
+          "note": "表示人生特定年齡節點時，固定搭配介系詞 at。"
+        }
+      ],
+      "pitfalls": [
+        {
+          "wrong": "Thomas Edison born in 1847 in the United States.",
+          "right": "Thomas Edison was born in 1847 in the United States.",
+          "tip": "born 是過去分詞，必須與過去式 be 動詞 was 連用 (was born)，不可單獨作謂語動詞。"
+        },
+        {
+          "wrong": "Wolfgang Mozart was born on 1756 in Salzburg.",
+          "right": "Wolfgang Mozart was born in 1756 in Salzburg.",
+          "tip": "純年份前面必須搭配 in，只有包含具體日期的完整年月日才使用 on。"
+        },
+        {
+          "wrong": "He began to compose music on the age of five.",
+          "right": "He began to compose music at the age of five.",
+          "tip": "表示「在幾歲時」固定介系詞片語為 at the age of，不可受中文直譯誤寫 on。"
+        }
+      ],
+      "examples": [
+        {
+          "en": "Thomas Edison was born on February 11, 1847, and grew up in Michigan.",
+          "zh": "湯瑪斯·愛迪生出生於 1847 年 2 月 11 日，並在密西根州長大。",
+          "highlight": "was born on February 11, 1847, and grew up in"
+        },
+        {
+          "en": "Wolfgang Amadeus Mozart was born in 1756 and died in 1791.",
+          "zh": "沃夫岡·阿瑪迪斯·莫札特出生於 1756 年，逝世於 1791 年。",
+          "highlight": "was born in 1756 and died in 1791"
+        },
+        {
+          "en": "Mozart began composing brilliant musical pieces at the age of five.",
+          "zh": "莫札特在五歲時就開始創作精彩絕倫的音樂作品。",
+          "highlight": "at the age of five"
+        },
+        {
+          "en": "Helen Keller was born in Alabama in 1880.",
+          "zh": "海倫·凱勒於 1880 年出生於阿拉巴馬州。",
+          "highlight": "was born in Alabama in 1880"
+        }
+      ],
+      "trap": "中文常說「他 1847 年出生」，學生容易把 born 誤當成動詞而寫出 \"He born in 1847\"；或將年份介系詞誤寫為 on (was born on 1847)。務必牢記 was born in + 年份！",
+      "is_week12": true
+    },
+    {
+      "id": "WR3_U06_G02",
+      "book_id": "wr3",
+      "unit_id": "wr3_6",
+      "rule_title": "功績影響與因果歸屬句型 (Expressing Impact: Thanks to vs Because of)",
+      "eng_exp": "Use \"Thanks to [Person/Thing]\" or \"Because of [Person/Thing]\" followed by a noun phrase to show how someone's historical contribution benefits modern humanity. Follow with a main clause stating the beneficial result.",
+      "chi_exp": "句型「Thanks to + 人/成就，主要子句」用來表達「多虧了/歸功於某人的重大發明或奉獻，我們現代人現在才能……」。Thanks 後面必須接介系詞 to，絕不可誤用 for (Thanks for 是「為某事感謝某人」)；同義轉換可用 Because of + 名詞。逗號後主要子句描述現代生活效益時通常用現在式情態助動詞 (we can see at night)。",
+      "formula": "Thanks to / Because of + [Person / Invention], Subject + can / could + V...",
+      "intro": "",
+      "categories": [
+        {
+          "label": "Thanks to 系列 (正面功勞歸屬)",
+          "items": [
+            "Thanks to Edison",
+            "Thanks to Newton",
+            "Thanks to Keller"
+          ],
+          "note": "帶有強烈正面感激語氣，意為「幸虧、多虧了某人的重大奉獻」。"
+        },
+        {
+          "label": "Because of 系列 (客觀因果關聯)",
+          "items": [
+            "Because of his invention",
+            "Because of their dedication",
+            "Because of her hard work"
+          ],
+          "note": "後接名詞或動名詞片語，客觀陳述造成後續成果的原因。"
+        },
+        {
+          "label": "現代成果主要子句 (助動詞搭配)",
+          "items": [
+            "we can see at night",
+            "we understand gravity better",
+            "disabled people have more hope"
+          ],
+          "note": "主要子句展現歷史偉人成就對現今人類世界的持久影響。"
+        }
+      ],
+      "pitfalls": [
+        {
+          "wrong": "Thanks for Edison, we can see clearly at night.",
+          "right": "Thanks to Edison, we can see clearly at night.",
+          "tip": "表示「多虧了某人的發明」固定用 Thanks to；Thanks for 是口語中的「為某事表達感謝」(如 Thanks for your gift)。"
+        },
+        {
+          "wrong": "Because Edison invented the light bulb, so we can see at night.",
+          "right": "Because Edison invented the light bulb, we can see at night.",
+          "tip": "英文中 because 與 so 具有相同因果功能，一律不可同時出現在同一個句子中！"
+        },
+        {
+          "wrong": "Thanks to Edison, we could saw at night.",
+          "right": "Thanks to Edison, we can see at night.",
+          "tip": "助動詞 can / could 後面必須接原形動詞 see，且描述現代生活普遍事實應用現在式 can see。"
+        }
+      ],
+      "examples": [
+        {
+          "en": "Thanks to Edison, we can see at night.",
+          "zh": "多虧了愛迪生，我們在夜晚才能看得見。",
+          "highlight": "Thanks to Edison, we can see"
+        },
+        {
+          "en": "Thanks to Newton, we understand gravity better.",
+          "zh": "多虧了牛頓，我們才能更深入理解地心引力。",
+          "highlight": "Thanks to Newton, we understand"
+        },
+        {
+          "en": "Because of Keller's courage, disabled people have more hope today.",
+          "zh": "因為凱勒的勇氣，如今身心障礙人士擁有了更多希望。",
+          "highlight": "Because of Keller's courage, disabled people have"
+        },
+        {
+          "en": "Thanks to Mozart, we can enjoy immortal classical music.",
+          "zh": "多虧了莫札特，我們才能欣賞到不朽的古典樂曲。",
+          "highlight": "Thanks to Mozart, we can enjoy"
+        }
+      ],
+      "trap": "學生極常受日常口語「Thank you for your help」影響而誤寫出 \"Thanks for Edison\"；或在 Because 子句後重複寫出 so。記住：歸功於某人必用 Thanks to + 名詞！",
+      "is_week12": true
+    },
+    {
+      "id": "WR3_U06_G03",
+      "book_id": "wr3",
+      "unit_id": "wr3_6",
+      "rule_title": "最高代表作與歷史偉人地位句型 (Superlative Achievements & \"One of the + Plural Nouns\")",
+      "eng_exp": "Use \"His/Her most famous [singular noun] is [work]\" to highlight a figure's greatest masterpiece. Use \"was one of the + superlative adjective + plural noun\" (e.g., one of the greatest inventors) to honor their historical stature.",
+      "chi_exp": "在傳記寫作中點出偉人成就的兩大核心句型：(1) 單一代表作：「His/Her most famous + 代表名詞 (單數) + is + 作品名稱」，因為代表作至今仍最著名，be 動詞用現在式 is；(2) 歷史地位：「主詞 + was one of the + 最高級形容詞 + 複數名詞 (inventors / composers / scientists)」，代表眾多最偉大人物中的其中一位，名詞務必使用複數！",
+      "formula": "His/Her most famous [invention / composition] is [Noun] | Subject + was one of the greatest + [Plural Nouns]",
+      "intro": "",
+      "categories": [
+        {
+          "label": "代表作單數句型 (搭配 is)",
+          "items": [
+            "His most famous invention is the light bulb",
+            "His most famous composition is the Fifth Symphony",
+            "His most famous scientific theory is the theory of gravity"
+          ],
+          "note": "主詞核心名詞為單數 (invention / composition / painting)，動詞一致用 is。"
+        },
+        {
+          "label": "動名詞成就句型 (搭配 V-ing)",
+          "items": [
+            "His most famous accomplishment is helping India become free",
+            "Her greatest accomplishment is writing inspiring books"
+          ],
+          "note": "若代表成就是一項歷程行動，be 動詞後接動名詞 (helping / writing)。"
+        },
+        {
+          "label": "歷史巨擘地位句型 (one of the + 複數名詞)",
+          "items": [
+            "one of the greatest inventors",
+            "one of the most famous composers",
+            "one of the most brilliant scientists"
+          ],
+          "note": "one of the 後方必定接複數名詞 (inventors / scientists)，表示「眾多偉人之一」。"
+        }
+      ],
+      "pitfalls": [
+        {
+          "wrong": "His most famous inventions is the light bulb.",
+          "right": "His most famous invention is the light bulb.",
+          "tip": "單一代表作句型中，most famous 後修飾單數名詞 invention，配合單數 be 動詞 is。"
+        },
+        {
+          "wrong": "Thomas Edison was one of the greatest inventor in history.",
+          "right": "Thomas Edison was one of the greatest inventors in history.",
+          "tip": "「one of the + 最高級」後面必須接複數名詞 inventors，不可寫成單數 inventor！"
+        },
+        {
+          "wrong": "His most famous accomplishment are helping India become free.",
+          "right": "His most famous accomplishment is helping India become free.",
+          "tip": "主詞是 accomplishment (單數)，動詞必須用單數 is，切勿誤用 are。"
+        }
+      ],
+      "examples": [
+        {
+          "en": "His most famous invention is the light bulb.",
+          "zh": "他最著名的發明是電燈泡。",
+          "highlight": "most famous invention is"
+        },
+        {
+          "en": "Thomas Edison was one of the greatest inventors in American history.",
+          "zh": "湯瑪斯·愛迪生是美國歷史上最偉大的發明家之一。",
+          "highlight": "one of the greatest inventors"
+        },
+        {
+          "en": "His most famous scientific theory is the theory of gravity.",
+          "zh": "他最著名的科學理論是萬有引力理論。",
+          "highlight": "most famous scientific theory is"
+        },
+        {
+          "en": "His most famous accomplishment is helping India become free.",
+          "zh": "他最著名的成就功績是協助印度贏得自由獨立。",
+          "highlight": "most famous accomplishment is helping"
+        }
+      ],
+      "trap": "大考最常見致命陷阱：在 \"one of the greatest...\" 後面漏寫名詞複數 s (誤寫 one of the greatest inventor)；以及在 His most famous invention 後方誤填 are！",
+      "is_week12": true
+    },
+    {
+      "id": "WR3_U06_G04",
+      "book_id": "wr3",
+      "unit_id": "wr3_6",
+      "rule_title": "傳記欽佩原因、轉折詞與因果總結 (Admiration, Contrast & Consequence Transition Words)",
+      "eng_exp": "Use \"However, I admire [Person] most of all because [past clause]\" to pivot from general talents to deep moral character. In conclusion, use consequence transitions (For these reasons, Therefore, As a result, Consequently) followed by a summarizing judgment.",
+      "chi_exp": "傳記文章核心轉折與因果總結架構：(1) 先敘述外在才能 (He was smart and wise)，接著以 However 轉折，引導出最深層欽佩原因 (I admire... most of all because...)，because 子句描述偉人生前事蹟，必須一律使用過去式動詞 (never gave up on, never complained about, studied hard)；(2) 結尾段以因果轉折詞 (For these reasons, Therefore, As a result, Consequently) 總結全篇，帶出「I think [Person] was a great person」。",
+      "formula": "However, I admire [Person] most of all because Subject + [Past Verb] | For these reasons / Therefore, I think...",
+      "intro": "",
+      "categories": [
+        {
+          "label": "欽佩原因過去式片語 (搭配 because)",
+          "items": [
+            "never gave up on his dreams",
+            "never complained about her disabilities",
+            "studied music very hard",
+            "was not afraid to be different"
+          ],
+          "note": "because 後方子句描述已故偉人生前作為，動詞一律用過去式。"
+        },
+        {
+          "label": "結論段因果轉折詞 (Transitions of Consequence)",
+          "items": [
+            "For these reasons,",
+            "Therefore,",
+            "As a result,",
+            "Consequently,"
+          ],
+          "note": "位於段落開頭引導總結句，後方通常加上逗號，帶出最終評價。"
+        },
+        {
+          "label": "固定搭配介系詞片語",
+          "items": [
+            "give up on (放棄)",
+            "complain about (抱怨)",
+            "be afraid of / to (害怕)"
+          ],
+          "note": "give up 接受詞夢想固定用 on；complain 接抱怨事物固定用 about。"
+        }
+      ],
+      "pitfalls": [
+        {
+          "wrong": "I admire Edison most of all because he never give up on his dreams.",
+          "right": "I admire Edison most of all because he never gave up on his dreams.",
+          "tip": "敘述愛迪生生前的奮鬥事蹟，動詞必須使用過去式 gave up，不可誤寫現在式 give up。"
+        },
+        {
+          "wrong": "Helen Keller never complained with her disabilities.",
+          "right": "Helen Keller never complained about her disabilities.",
+          "tip": "「抱怨某事」固定搭配介系詞 about (complain about sth)，不可直譯誤用 with。"
+        },
+        {
+          "wrong": "For these reason, I think Thomas Edison was a great person.",
+          "right": "For these reasons, I think Thomas Edison was a great person.",
+          "tip": "基於前面提到的多項理由，reasons 必須使用複數形 (For these reasons)。"
+        }
+      ],
+      "examples": [
+        {
+          "en": "However, I admire Edison most of all because he never gave up on his dreams.",
+          "zh": "然而，我最欽佩愛迪生的地方在於他從不放棄自己的夢想。",
+          "highlight": "admire Edison most of all because he never gave up on"
+        },
+        {
+          "en": "However, I admire Keller most of all because she never complained about her disabilities.",
+          "zh": "然而，我最欽佩凱勒之處在於她從不抱怨自己的身體障礙。",
+          "highlight": "never complained about her disabilities"
+        },
+        {
+          "en": "For these reasons, I think Thomas Edison was a great person.",
+          "zh": "基於這些原因，我認為湯瑪斯·愛迪生是一位偉大的人。",
+          "highlight": "For these reasons, I think"
+        },
+        {
+          "en": "Therefore, Isaac Newton remains an inspiring giant of modern science.",
+          "zh": "因此，艾薩克·牛頓依然是現代科學界啟迪人心的偉大巨人。",
+          "highlight": "Therefore, Isaac Newton remains"
+        }
+      ],
+      "trap": "學生最常在 because 子句中忘記轉過去式動詞 (寫成 never give up 或 never complain)；以及將 For these reasons 的 reasons 漏寫複數 s！",
+      "is_week12": true
     }
   ],
   "quizzes": [
@@ -22088,326 +25775,6 @@ const ENGLISH_DATA = {
       "answer": "Dough, olive oil, flour, honey",
       "difficulty": "★★★★☆",
       "explanation": "正確答案：Dough, olive oil, flour, honey。原因：這四個詞皆為不可數名詞，只有單數形且無法直接用數字計算。錯誤選項原因：其他選項中包含複數可數名詞 (tomatoes, apples, bottles, jars等)。"
-    },
-    {
-      "id": "q_0461",
-      "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "type": "reading",
-      "question": "What gives us information about the food we buy?",
-      "options": [
-        "TV commercials",
-        "Food labels on packages",
-        "Cookbooks",
-        "Music songs"
-      ],
-      "answer": "Food labels on packages",
-      "difficulty": "★☆☆☆☆",
-      "explanation": "正確答案：Food labels on packages。原因：第一段明確提到「Food labels on packages, cartons, and cans give us information...」。錯誤選項原因：電視廣告、食譜或歌曲非文中說明的資訊主要來源。"
-    },
-    {
-      "id": "q_0462",
-      "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "type": "reading",
-      "question": "What is Kamil's opinion about people who eat lots of junk food?",
-      "options": [
-        "It is smart of them",
-        "It is silly of them",
-        "It is brave of them",
-        "It is cheap of them"
-      ],
-      "answer": "It is silly of them",
-      "difficulty": "★☆☆☆☆",
-      "explanation": "正確答案：It is silly of them。原因：文中 Kamil 提到「I think it's silly of people to eat lots of junk food.」。錯誤選項原因：他並不認為這是聰明、勇敢或划算的。"
-    },
-    {
-      "id": "q_0463",
-      "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "type": "reading",
-      "question": "Why is Hana worried about junk food?",
-      "options": [
-        "Because it is very expensive",
-        "Because it is full of fat and chemicals",
-        "Because it tastes bad",
-        "Because it is hard to cook"
-      ],
-      "answer": "Because it is full of fat and chemicals",
-      "difficulty": "★★☆☆☆",
-      "explanation": "正確答案：Because it is full of fat and chemicals。原因：文中 Hana 說「Junk food is full of fat and chemicals.」。錯誤選項原因：文中未提及價格貴、難吃或難煮。"
-    },
-    {
-      "id": "q_0464",
-      "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "type": "reading",
-      "question": "How does Kamil feel about the chemicals in food products?",
-      "options": [
-        "He is angry about them",
-        "He is happy about them",
-        "He is bored with them",
-        "He is scared of them"
-      ],
-      "answer": "He is angry about them",
-      "difficulty": "★★☆☆☆",
-      "explanation": "正確答案：He is angry about them。原因：第二段指出「I'm angry about the number of chemicals...」。錯誤選項原因：高興、無聊或害怕皆不符 Kamil 的態度。"
-    },
-    {
-      "id": "q_0465",
-      "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "type": "reading",
-      "question": "What should people do carefully these days according to Hana?",
-      "options": [
-        "Cook food quickly",
-        "Read food labels",
-        "Eat more sweets",
-        "Buy cheaper food"
-      ],
-      "answer": "Read food labels",
-      "difficulty": "★☆☆☆☆",
-      "explanation": "正確答案：Read food labels。原因：第三段提到「We have to read food labels very carefully these days.」。錯誤選項原因：快速煮飯、多吃糖或買便宜食物非 Hana 的建議。"
-    },
-    {
-      "id": "q_0466",
-      "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "type": "reading",
-      "question": "How old is Lisa in the story?",
-      "options": [
-        "Six years old",
-        "Eight years old",
-        "Ten years old",
-        "Twelve years old"
-      ],
-      "answer": "Eight years old",
-      "difficulty": "★☆☆☆☆",
-      "explanation": "正確答案：Eight years old。原因：第四段第一句寫道「My name's Lisa and I'm eight.」。錯誤選項原因：其餘年齡不符合課文敘述。"
-    },
-    {
-      "id": "q_0467",
-      "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "type": "reading",
-      "question": "Is Lisa good at cooking?",
-      "options": [
-        "Yes, she is an expert",
-        "No, she is not very good at cooking",
-        "Yes, she makes great cakes",
-        "No, she hates cooking"
-      ],
-      "answer": "No, she is not very good at cooking",
-      "difficulty": "★★☆☆☆",
-      "explanation": "正確答案：No, she is not very good at cooking。原因：文中 Lisa 說「I'm not very good at cooking...」。錯誤選項原因：她姐姐才擅長做飯，且 Lisa 並不討厭做飯。"
-    },
-    {
-      "id": "q_0468",
-      "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "type": "reading",
-      "question": "Who is interested in cooking and makes great food?",
-      "options": [
-        "Lisa",
-        "Lisa's mother",
-        "Lisa's sister",
-        "Hana"
-      ],
-      "answer": "Lisa's sister",
-      "difficulty": "★☆☆☆☆",
-      "explanation": "正確答案：Lisa's sister。原因：第四段點出「...my sister is interested in cooking and she makes great things!」。錯誤選項原因：Lisa 本人不擅長，媽媽與 Hana 非該段落主角。"
-    },
-    {
-      "id": "q_0469",
-      "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "type": "reading",
-      "question": "What did Lisa and her sister make yesterday?",
-      "options": [
-        "A pizza",
-        "A cake",
-        "A bowl of soup",
-        "Some cookies"
-      ],
-      "answer": "A cake",
-      "difficulty": "★☆☆☆☆",
-      "explanation": "正確答案：A cake。原因：第四段第一句指出「Yesterday, my sister and I made a cake.」。錯誤選項原因：披薩、湯或餅乾皆非她們昨天的成品。"
-    },
-    {
-      "id": "q_0470",
-      "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "type": "reading",
-      "question": "How did Lisa want her family to feel about the cake?",
-      "options": [
-        "Bored by it",
-        "Surprised by how delicious it was",
-        "Angry at her",
-        "Worried about her"
-      ],
-      "answer": "Surprised by how delicious it was",
-      "difficulty": "★★☆☆☆",
-      "explanation": "正確答案：Surprised by how delicious it was。原因：文中寫道「I wanted my family to be surprised by how delicious it was.」。錯誤選項原因：她希望家人驚喜於美味，而非感到無聊、生氣或擔心。"
-    },
-    {
-      "id": "q_0471",
-      "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "type": "reading",
-      "question": "What was Lisa worried about while baking?",
-      "options": [
-        "Burning the cake",
-        "Breaking the oven",
-        "Losing her apron",
-        "Singing loudly"
-      ],
-      "answer": "Burning the cake",
-      "difficulty": "★★☆☆☆",
-      "explanation": "正確答案：Burning the cake。原因：第五段明確提到「I was worried about burning the cake...」。錯誤選項原因：弄壞烤箱、丟失圍裙或唱歌皆非 Lisa 的擔憂。"
-    },
-    {
-      "id": "q_0472",
-      "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "type": "reading",
-      "question": "What was wrong with the cake when Lisa's sister tried it?",
-      "options": [
-        "It was too sweet",
-        "It was burnt black",
-        "It was full of salt",
-        "It was frozen cold"
-      ],
-      "answer": "It was full of salt",
-      "difficulty": "★★☆☆☆",
-      "explanation": "正確答案：It was full of salt。原因：姐姐嘗了一口後說「It's full of salt!」。錯誤選項原因：蛋糕沒有過甜、烤焦或冰凍，而是放錯鹽巴。"
-    },
-    {
-      "id": "q_0473",
-      "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "type": "reading",
-      "question": "What mistake did Lisa make?",
-      "options": [
-        "She used water instead of milk",
-        "She gave her sister a cup of salt instead of sugar",
-        "She forgot to turn on the oven",
-        "She dropped the cake"
-      ],
-      "answer": "She gave her sister a cup of salt instead of sugar",
-      "difficulty": "★★☆☆☆",
-      "explanation": "正確答案：She gave her sister a cup of salt instead of sugar。原因：第五段解釋「I had given my sister a cup of salt, not a cup of sugar.」。錯誤選項原因：其他皆非 Lisa 犯下的具體錯誤。"
-    },
-    {
-      "id": "q_0474",
-      "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "type": "reading",
-      "question": "How did Lisa feel about making the mistake?",
-      "options": [
-        "She was proud of it",
-        "She was very sorry about it",
-        "She was happy about it",
-        "She was angry at her sister"
-      ],
-      "answer": "She was very sorry about it",
-      "difficulty": "★★☆☆☆",
-      "explanation": "正確答案：She was very sorry about it。原因：文中寫道「I was very sorry about making that mistake...」。錯誤選項原因：她感到很抱歉，而非自豪、高興或對姐姐發脾氣。"
-    },
-    {
-      "id": "q_0475",
-      "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "type": "reading",
-      "question": "What was Lisa's sister's reaction to the salty cake?",
-      "options": [
-        "She cried loudly",
-        "She thought it was funny",
-        "She hit Lisa",
-        "She left the house"
-      ],
-      "answer": "She thought it was funny",
-      "difficulty": "★★☆☆☆",
-      "explanation": "正確答案：She thought it was funny。原因：文中最後一句提到「...but my sister thought it was funny!」。錯誤選項原因：姐姐沒有大哭、打人或離開，而是覺得搞笑。"
-    },
-    {
-      "id": "q_0476",
-      "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "type": "reading",
-      "question": "What preposition goes with \"interested\" in the text?",
-      "options": [
-        "at",
-        "in",
-        "on",
-        "with"
-      ],
-      "answer": "in",
-      "difficulty": "★☆☆☆☆",
-      "explanation": "正確答案：in。原因：語法搭配為 interested in (對...感興趣)。錯誤選項原因：interested 不能搭配 at, on, with。"
-    },
-    {
-      "id": "q_0477",
-      "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "type": "reading",
-      "question": "What preposition goes with \"worried\" in the text?",
-      "options": [
-        "about",
-        "of",
-        "at",
-        "by"
-      ],
-      "answer": "about",
-      "difficulty": "★☆☆☆☆",
-      "explanation": "正確答案：about。原因：語法搭配為 worried about (對...感到擔心)。錯誤選項原因：worried 不能搭配 of, at, by。"
-    },
-    {
-      "id": "q_0478",
-      "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "type": "reading",
-      "question": "What preposition goes with \"good\" when talking about skills like cooking?",
-      "options": [
-        "in",
-        "for",
-        "at",
-        "with"
-      ],
-      "answer": "at",
-      "difficulty": "★★☆☆☆",
-      "explanation": "正確答案：at。原因：表達擅長某項技能時，使用 good at (be good at cooking)。錯誤選項原因：good for 意為對...有益；good in/with 語意不符。"
-    },
-    {
-      "id": "q_0479",
-      "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "type": "reading",
-      "question": "What preposition goes with \"silly\" when describing someone's action?",
-      "options": [
-        "of",
-        "about",
-        "with",
-        "at"
-      ],
-      "answer": "of",
-      "difficulty": "★★★☆☆",
-      "explanation": "正確答案：of。原因：描述某人的行為很蠢/傻時，使用 silly of + 人 (That was silly of me)。錯誤選項原因：silly 描述人的品質行為時搭配 of。"
-    },
-    {
-      "id": "q_0480",
-      "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "type": "reading",
-      "question": "What is the main lesson we learn from the food facts and stories in Unit 16?",
-      "options": [
-        "We should never eat cakes",
-        "Reading food labels and knowing ingredients is important for health",
-        "Salt is better than sugar in cakes",
-        "Cooking is too dangerous for children"
-      ],
-      "answer": "Reading food labels and knowing ingredients is important for health",
-      "difficulty": "★★★★☆",
-      "explanation": "正確答案：Reading food labels and knowing ingredients is important for health。原因：全文強調食品標籤、垃圾食物成分、以及搞錯食材（鹽與糖）的重要性。錯誤選項原因：文章並非禁止吃蛋糕、宣揚鹽比糖好，或認為兒童不該做飯。"
     },
     {
       "id": "q_0481",
@@ -30406,326 +33773,6 @@ const ENGLISH_DATA = {
       "answer": "packet",
       "difficulty": "★★★☆☆",
       "explanation": "正確答案：packet。原因：咖啡糖通常是一小紙袋包裝，即 a packet of sugar。錯誤選項原因：sugar (糖) 在此不用 bottle (瓶)、bar (條) 或 slice (薄片) 形容。"
-    },
-    {
-      "id": "q_0981",
-      "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "type": "grammar",
-      "question": "Are you interested ___ eating healthily?",
-      "options": [
-        "at",
-        "in",
-        "about",
-        "for"
-      ],
-      "answer": "in",
-      "difficulty": "★☆☆☆☆",
-      "explanation": "正確答案：in。原因：be interested in 是固定搭配，表示「對...感興趣」。錯誤選項原因：interested 不能搭配 at, about, for。"
-    },
-    {
-      "id": "q_0982",
-      "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "type": "grammar",
-      "question": "I am worried ___ the amount of junk food children eat.",
-      "options": [
-        "about",
-        "with",
-        "of",
-        "by"
-      ],
-      "answer": "about",
-      "difficulty": "★☆☆☆☆",
-      "explanation": "正確答案：about。原因：be worried about 表示「對...感到擔心」。錯誤選項原因：worried 不與 with, of, by 搭配。"
-    },
-    {
-      "id": "q_0983",
-      "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "type": "grammar",
-      "question": "Junk food is full ___ fat and chemicals.",
-      "options": [
-        "with",
-        "in",
-        "of",
-        "about"
-      ],
-      "answer": "of",
-      "difficulty": "★☆☆☆☆",
-      "explanation": "正確答案：of。原因：be full of 表示「充滿著...」。錯誤選項原因：無 full with 或 full in 的搭配。"
-    },
-    {
-      "id": "q_0984",
-      "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "type": "grammar",
-      "question": "Lisa is not very good ___ cooking.",
-      "options": [
-        "in",
-        "at",
-        "for",
-        "about"
-      ],
-      "answer": "at",
-      "difficulty": "★☆☆☆☆",
-      "explanation": "正確答案：at。原因：be good at 表示「擅長...」，後面接動名詞 cooking。錯誤選項原因：good in/about 語意不符；good for 意思是「對...有好處」。"
-    },
-    {
-      "id": "q_0985",
-      "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "type": "grammar",
-      "question": "France is famous ___ its delicious bread and cheese.",
-      "options": [
-        "for",
-        "about",
-        "in",
-        "with"
-      ],
-      "answer": "for",
-      "difficulty": "★☆☆☆☆",
-      "explanation": "正確答案：for。原因：be famous for 表示「以...聞名」。錯誤選項原因：famous 不能搭配 about, in, with。"
-    },
-    {
-      "id": "q_0986",
-      "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "type": "grammar",
-      "question": "It was very nice ___ Grandma to bake us a cake.",
-      "options": [
-        "about",
-        "of",
-        "with",
-        "by"
-      ],
-      "answer": "of",
-      "difficulty": "★★☆☆☆",
-      "explanation": "正確答案：of。原因：評價個人的特質或行為，句型為 \"It is + adj + of + person\" (It was nice of Grandma)。錯誤選項原因：不能用 about, with, by。"
-    },
-    {
-      "id": "q_0987",
-      "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "type": "grammar",
-      "question": "I am disappointed ___ these cookies. They are too hard.",
-      "options": [
-        "with",
-        "of",
-        "at",
-        "for"
-      ],
-      "answer": "with",
-      "difficulty": "★★☆☆☆",
-      "explanation": "正確答案：with。原因：be disappointed with 表示「對(某物)感到失望」。錯誤選項原因：disappointed 搭配 with (或 in)，不搭配 of, at, for。"
-    },
-    {
-      "id": "q_0988",
-      "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "type": "grammar",
-      "question": "We were surprised ___ how fast the chef made the pizza.",
-      "options": [
-        "by",
-        "about",
-        "with",
-        "in"
-      ],
-      "answer": "by",
-      "difficulty": "★★☆☆☆",
-      "explanation": "正確答案：by。原因：be surprised by 表示「被...所驚訝/震撼」。錯誤選項原因：surprised by 是最標準的被動震撼搭配。"
-    },
-    {
-      "id": "q_0989",
-      "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "type": "grammar",
-      "question": "It was rude ___ the boy to shout at the waiter.",
-      "options": [
-        "for",
-        "of",
-        "with",
-        "about"
-      ],
-      "answer": "of",
-      "difficulty": "★★☆☆☆",
-      "explanation": "正確答案：of。原因：評價人的粗魯行為，使用 \"It is rude of + person\"。錯誤選項原因：評價人格行為時必須用 of，不能用 for。"
-    },
-    {
-      "id": "q_0990",
-      "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "type": "grammar",
-      "question": "The children are excited ___ going to a restaurant tonight.",
-      "options": [
-        "about",
-        "with",
-        "of",
-        "by"
-      ],
-      "answer": "about",
-      "difficulty": "★★☆☆☆",
-      "explanation": "正確答案：about。原因：be excited about 表示「對...感到興奮」。錯誤選項原因：excited 不搭配 with, of, by。"
-    },
-    {
-      "id": "q_0991",
-      "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "type": "grammar",
-      "question": "Kamil is angry ___ the number of chemicals in food.",
-      "options": [
-        "with",
-        "about",
-        "in",
-        "for"
-      ],
-      "answer": "about",
-      "difficulty": "★★☆☆☆",
-      "explanation": "正確答案：about。原因：對某件事情感到生氣，使用 be angry about something。錯誤選項原因：angry with 通常用於對「某人」生氣 (angry with someone)。"
-    },
-    {
-      "id": "q_0992",
-      "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "type": "grammar",
-      "question": "My brother is excellent ___ playing the recorder.",
-      "options": [
-        "at",
-        "in",
-        "for",
-        "on"
-      ],
-      "answer": "at",
-      "difficulty": "★★☆☆☆",
-      "explanation": "正確答案：at。原因：be excellent at 與 be good at 相同，表示「精通/擅長...」。錯誤選項原因：excellent 不搭配 in, for, on。"
-    },
-    {
-      "id": "q_0993",
-      "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "type": "grammar",
-      "question": "That was very silly ___ me to use salt instead of sugar!",
-      "options": [
-        "about",
-        "of",
-        "for",
-        "by"
-      ],
-      "answer": "of",
-      "difficulty": "★★★☆☆",
-      "explanation": "正確答案：of。原因：評價自己犯下的糊塗行為，使用 \"That was silly of me\"。錯誤選項原因：silly 後面接人時固定搭配介系詞 of。"
-    },
-    {
-      "id": "q_0994",
-      "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "type": "grammar",
-      "question": "I am very sorry ___ making that silly mistake.",
-      "options": [
-        "about",
-        "for",
-        "with",
-        "at"
-      ],
-      "answer": "about",
-      "difficulty": "★★☆☆☆",
-      "explanation": "正確答案：about。原因：be sorry about doing something 表示「對做某事感到抱歉」。錯誤選項原因：sorry about 是表達對特定過失抱歉的常用片語。"
-    },
-    {
-      "id": "q_0995",
-      "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "type": "grammar",
-      "question": "Are you happy ___ your exam results?",
-      "options": [
-        "about",
-        "with",
-        "for",
-        "at"
-      ],
-      "answer": "with",
-      "difficulty": "★★★☆☆",
-      "explanation": "正確答案：with。原因：be happy with something 表示「對(成果/事物)感到滿意」。錯誤選項原因：happy with 表滿意，也可用 happy about，但選項中最貼切成果滿意度的是 with。"
-    },
-    {
-      "id": "q_0996",
-      "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "type": "grammar",
-      "question": "Which sentence is grammatically CORRECT?",
-      "options": [
-        "It was kind with him to help us.",
-        "She is interested about science.",
-        "It was silly of me to drop the eggs.",
-        "He is bad in cooking."
-      ],
-      "answer": "It was silly of me to drop the eggs.",
-      "difficulty": "★★★★☆",
-      "explanation": "正確答案：It was silly of me to drop the eggs.。原因：silly of me 搭配完全正確。錯誤選項原因：A 應為 kind of him；B 應為 interested in；D 應為 bad at cooking。"
-    },
-    {
-      "id": "q_0997",
-      "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "type": "grammar",
-      "question": "Which sentence is grammatically INCORRECT?",
-      "options": [
-        "Italy is famous for pizza.",
-        "Junk food is full of chemicals.",
-        "Lisa was worried about burning the cake.",
-        "We are amazed at how big the cake is."
-      ],
-      "answer": "We are amazed at how big the cake is.",
-      "difficulty": "★★★★☆",
-      "explanation": "正確答案：We are amazed at how big the cake is.。原因：根據本課規則，表達被某事震撼時，課本規範為 amazed by（或常用 by）。（註：受驚嚇震撼被動態首選 by）。錯誤選項原因：其他選項 famous for, full of, worried about 皆完全符合課本規範。"
-    },
-    {
-      "id": "q_0998",
-      "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "type": "grammar",
-      "question": "I'm bad at baking cakes. means:",
-      "options": [
-        "I love baking cakes.",
-        "I cannot bake cakes well.",
-        "I bake cakes every day.",
-        "Baking cakes is easy for me."
-      ],
-      "answer": "I cannot bake cakes well.",
-      "difficulty": "★★★☆☆",
-      "explanation": "正確答案：I cannot bake cakes well.。原因：be bad at 表示不擅長，也就是做不好。錯誤選項原因：其他選項意思相反或不符。"
-    },
-    {
-      "id": "q_0999",
-      "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "type": "grammar",
-      "question": "Fill in the missing prepositions: \"She is good ___ math, but worried ___ the test.\"",
-      "options": [
-        "at / about",
-        "in / with",
-        "for / of",
-        "about / at"
-      ],
-      "answer": "at / about",
-      "difficulty": "★★★☆☆",
-      "explanation": "正確答案：at / about。原因：be good at (擅長) 與 be worried about (擔心) 的雙重考驗。錯誤選項原因：其餘組合介系詞搭配皆不正確。"
-    },
-    {
-      "id": "q_1000",
-      "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "type": "grammar",
-      "question": "The basket is full of apples. contains the same preposition pattern as:",
-      "options": [
-        "interested in art",
-        "sorry about the noise",
-        "good at soccer",
-        "full of fat"
-      ],
-      "answer": "full of fat",
-      "difficulty": "★☆☆☆☆",
-      "explanation": "正確答案：full of fat。原因：兩者皆為形容詞 full 搭配介系詞 of。錯誤選項原因：其餘選項搭配的介系詞分別為 in, about, at。"
     },
     {
       "id": "q_1001",
@@ -39240,326 +42287,6 @@ const ENGLISH_DATA = {
       "explanation": "正確答案：Piece。原因：從大物體(如蛋糕或紙)上切下、分出的一個部分是 piece (塊/張/片)。錯誤選項原因：Bar 是條，Can 是罐頭，Bottle 是瓶子，均不能用來指代切下來的蛋糕。"
     },
     {
-      "id": "q_1533",
-      "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "type": "vocab",
-      "question": "A piece of paper on a package that gives information about the product is a:",
-      "options": [
-        "Label",
-        "Package",
-        "Chemical",
-        "Ingredient"
-      ],
-      "answer": "Label",
-      "difficulty": "★☆☆☆☆",
-      "explanation": "正確答案：Label。原因：Label (標籤) 是貼在包裝上提供產品資訊的小紙片。錯誤選項原因：Package 是包裝盒；Chemical 是化學物質；Ingredient 是食材。"
-    },
-    {
-      "id": "q_1534",
-      "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "type": "vocab",
-      "question": "The items or foods you mix together to bake a cake are called:",
-      "options": [
-        "Products",
-        "Ingredients",
-        "Labels",
-        "Packages"
-      ],
-      "answer": "Ingredients",
-      "difficulty": "★☆☆☆☆",
-      "explanation": "正確答案：Ingredients。原因：做蛋糕混合在一起的食材配料稱為 ingredients。錯誤選項原因：Products 是成品；Labels 是標籤；Packages 是包裝。"
-    },
-    {
-      "id": "q_1535",
-      "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "type": "vocab",
-      "question": "Unhealthy food that contains a lot of fat and salt is called:",
-      "options": [
-        "Fresh food",
-        "Junk food",
-        "Organic food",
-        "Fruit"
-      ],
-      "answer": "Junk food",
-      "difficulty": "★☆☆☆☆",
-      "explanation": "正確答案：Junk food。原因：含有高脂肪和高鹽分的不健康食物稱為垃圾食物 (junk food)。錯誤選項原因：Fresh food (新鮮食物)、Organic food (有機食物)、Fruit (水果) 皆屬健康食品。"
-    },
-    {
-      "id": "q_1536",
-      "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "type": "vocab",
-      "question": "Something that a factory makes to sell to customers is a:",
-      "options": [
-        "Ingredient",
-        "Product",
-        "Mistake",
-        "Chemical"
-      ],
-      "answer": "Product",
-      "difficulty": "★★☆☆☆",
-      "explanation": "正確答案：Product。原因：工廠製造出來要賣給顧客的商品稱為產品 (product)。錯誤選項原因：Ingredient 是原料；Mistake 是錯誤；Chemical 是化學物質。"
-    },
-    {
-      "id": "q_1537",
-      "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "type": "vocab",
-      "question": "Food that tastes very good and pleasant to eat is:",
-      "options": [
-        "Silly",
-        "Delicious",
-        "Angry",
-        "Worried"
-      ],
-      "answer": "Delicious",
-      "difficulty": "★☆☆☆☆",
-      "explanation": "正確答案：Delicious。原因：嘗起來非常美味可口的食物是 delicious。錯誤選項原因：Silly (糊塗的)、Angry (生氣的)、Worried (擔心的) 皆非形容食物味道。"
-    },
-    {
-      "id": "q_1538",
-      "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "type": "vocab",
-      "question": "If you do something in a way that keeps your body healthy, you eat:",
-      "options": [
-        "Quickly",
-        "Healthily",
-        "Nervously",
-        "Loudly"
-      ],
-      "answer": "Healthily",
-      "difficulty": "★★☆☆☆",
-      "explanation": "正確答案：Healthily。原因：維持身體健康地飲食是 eat healthily。錯誤選項原因：Quickly (快速地)、Nervously (緊張地)、Loudly (大聲地)。"
-    },
-    {
-      "id": "q_1539",
-      "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "type": "vocab",
-      "question": "If you get sick or have red spots on your skin whenever you eat peanuts, you are:",
-      "options": [
-        "Famous",
-        "Excited",
-        "Allergic",
-        "Silly"
-      ],
-      "answer": "Allergic",
-      "difficulty": "★★☆☆☆",
-      "explanation": "正確答案：Allergic。原因：吃到特定食物皮膚發癢生病稱為過敏的 (allergic)。錯誤選項原因：Famous (著名的)、Excited (興奮的)、Silly (糊塗的)。"
-    },
-    {
-      "id": "q_1540",
-      "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "type": "vocab",
-      "question": "When you feel nervous or unhappy because something bad might happen, you feel:",
-      "options": [
-        "Worried",
-        "Excited",
-        "Delicious",
-        "Famous"
-      ],
-      "answer": "Worried",
-      "difficulty": "★☆☆☆☆",
-      "explanation": "正確答案：Worried。原因：擔心壞事發生所產生的情緒是感到擔心的 (worried)。錯誤選項原因：Excited 是興奮的；Delicious 是美味的；Famous 是著名的。"
-    },
-    {
-      "id": "q_1541",
-      "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "type": "vocab",
-      "question": "When an outcome is not as good as you hoped or expected, you feel:",
-      "options": [
-        "Disappointed",
-        "Excited",
-        "Delicious",
-        "Full"
-      ],
-      "answer": "Disappointed",
-      "difficulty": "★★☆☆☆",
-      "explanation": "正確答案：Disappointed。原因：期望落空時產生的情緒是感到失望的 (disappointed)。錯誤選項原因：Excited 是興奮；Delicious 是美味；Full 是飽的。"
-    },
-    {
-      "id": "q_1542",
-      "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "type": "vocab",
-      "question": "A action that is foolish, funny, or not sensible is:",
-      "options": [
-        "Smart",
-        "Silly",
-        "Famous",
-        "Excellent"
-      ],
-      "answer": "Silly",
-      "difficulty": "★☆☆☆☆",
-      "explanation": "正確答案：Silly。原因：愚蠢、糊塗或搞笑的行為是用 silly (傻的/糊塗的) 來形容。錯誤選項原因：Smart (聰明的) 和 Excellent (優秀的) 意思相反。"
-    },
-    {
-      "id": "q_1543",
-      "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "type": "vocab",
-      "question": "Known or recognized by many people all around the world means:",
-      "options": [
-        "Silly",
-        "Worried",
-        "Famous",
-        "Allergic"
-      ],
-      "answer": "Famous",
-      "difficulty": "★☆☆☆☆",
-      "explanation": "正確答案：Famous。原因：被世界上許多人所熟知代表著名的 (famous)。錯誤選項原因：Silly (傻的)、Worried (擔心的)、Allergic (過敏的)。"
-    },
-    {
-      "id": "q_1544",
-      "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "type": "vocab",
-      "question": "Containing as much or as many as possible, with no empty space, means:",
-      "options": [
-        "Empty",
-        "Full",
-        "Bored",
-        "Silly"
-      ],
-      "answer": "Full",
-      "difficulty": "★☆☆☆☆",
-      "explanation": "正確答案：Full。原因：裝滿、沒有空間代表充滿的 (full)。錯誤選項原因：Empty (空的) 意思相反；Bored (無聊的)、Silly (傻的)。"
-    },
-    {
-      "id": "q_1545",
-      "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "type": "vocab",
-      "question": "Extremely good, outstanding, or showing high quality means:",
-      "options": [
-        "Terrible",
-        "Excellent",
-        "Bad",
-        "Silly"
-      ],
-      "answer": "Excellent",
-      "difficulty": "★★☆☆☆",
-      "explanation": "正確答案：Excellent。原因：極好、優秀的品質是用 excellent 來形容。錯誤選項原因：Terrible (糟糕的) 和 Bad (壞的) 意思相反。"
-    },
-    {
-      "id": "q_1546",
-      "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "type": "vocab",
-      "question": "How much or how many of something there is, is the:",
-      "options": [
-        "Amount",
-        "Label",
-        "Product",
-        "Package"
-      ],
-      "answer": "Amount",
-      "difficulty": "★★☆☆☆",
-      "explanation": "正確答案：Amount。原因：某物的數量或總額稱為 amount。錯誤選項原因：Label 是標籤；Product 是產品；Package 是包裝。"
-    },
-    {
-      "id": "q_1547",
-      "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "type": "vocab",
-      "question": "An action, decision, or judgment that is wrong or incorrect is a:",
-      "options": [
-        "Success",
-        "Mistake",
-        "Ingredient",
-        "Label"
-      ],
-      "answer": "Mistake",
-      "difficulty": "★☆☆☆☆",
-      "explanation": "正確答案：Mistake。原因：做錯的事情或判斷稱為錯誤 (mistake)。錯誤選項原因：Success (成功) 意思相反；Ingredient 是材料；Label 是標籤。"
-    },
-    {
-      "id": "q_1548",
-      "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "type": "vocab",
-      "question": "Substances made by science that are added to food to keep it fresh are:",
-      "options": [
-        "Fruits",
-        "Chemicals",
-        "Vegetables",
-        "Packages"
-      ],
-      "answer": "Chemicals",
-      "difficulty": "★★☆☆☆",
-      "explanation": "正確答案：Chemicals。原因：食品添加以防腐保鮮的化學物質稱為 chemicals。錯誤選項原因：Fruits (水果)、Vegetables (蔬菜) 是天然食材。"
-    },
-    {
-      "id": "q_1549",
-      "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "type": "vocab",
-      "question": "Eager and happy about something good that is going to happen means:",
-      "options": [
-        "Excited",
-        "Worried",
-        "Disappointed",
-        "Allergic"
-      ],
-      "answer": "Excited",
-      "difficulty": "★☆☆☆☆",
-      "explanation": "正確答案：Excited。原因：對即將發生的好事感到高興期待是感到興奮的 (excited)。錯誤選項原因：Worried (擔心的)、Disappointed (失望的) 皆為消極情緒。"
-    },
-    {
-      "id": "q_1550",
-      "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "type": "vocab",
-      "question": "Wanting to give your attention to something because you enjoy it means being:",
-      "options": [
-        "Bored",
-        "Interested",
-        "Allergic",
-        "Silly"
-      ],
-      "answer": "Interested",
-      "difficulty": "★★☆☆☆",
-      "explanation": "正確答案：Interested。原因：因為喜歡而想投入注意力是感到感興趣的 (interested)。錯誤選項原因：Bored (感到無聊的) 意思相反。"
-    },
-    {
-      "id": "q_1551",
-      "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "type": "vocab",
-      "question": "A box, bag, or wrapping in which something is sold or sent is a:",
-      "options": [
-        "Package",
-        "Mistake",
-        "Chemical",
-        "Label"
-      ],
-      "answer": "Package",
-      "difficulty": "★★☆☆☆",
-      "explanation": "正確答案：Package。原因：用來包裝物品出售或寄送的包裹/包裝盒稱為 package。錯誤選項原因：Mistake 是錯誤；Chemical 是化學物質；Label 是標籤貼紙。"
-    },
-    {
-      "id": "q_1552",
-      "book_id": "gra3",
-      "unit_id": "gra3_16",
-      "type": "vocab",
-      "question": "Which word is a VERB meaning to make something or bring it into existence?",
-      "options": [
-        "Creation",
-        "Creative",
-        "Create",
-        "Creature"
-      ],
-      "answer": "Create",
-      "difficulty": "★★★☆☆",
-      "explanation": "正確答案：Create。原因：Create 是動詞，代表「創造、產生」。錯誤選項原因：Creation (名詞: 創造物)；Creative (形容詞: 有創造力的)；Creature (名詞: 生物)。"
-    },
-    {
       "id": "q_1553",
       "book_id": "gra3",
       "unit_id": "gra3_17",
@@ -42214,6 +44941,7267 @@ const ENGLISH_DATA = {
       "answer": "sings",
       "difficulty": "Lv.9 (★★★★★)",
       "explanation": "🟢 正確語感直覺：最高級副詞 the most beautifully 用來修飾動作『唱歌 (sings)』，第三子句必須保留一般動詞 sings！\n🔴 誘答盲點排除：Rex 在 W7 考卷寫成『but Anne is the most beautifully ❌』，把動作動詞 sings 誤換成 be 動詞 is 是超常見失分坑！"
+    },
+    {
+      "id": "q_w12_odg3_u16_01",
+      "book_id": "gra3",
+      "unit_id": "gra3_16",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★☆☆☆☆",
+      "difficulty_level": 1,
+      "question": "🎧 聽力拼字測驗：請仔細聆聽發音，拼寫出表示「對...感興趣的」形容詞單字（提示：注意結尾為 -ed，固定搭配介系詞 in）。",
+      "answer": "interested",
+      "options": [],
+      "vocab_card": {
+        "word": "interested",
+        "ipa": "/ˈɪntrəstɪd/",
+        "phonetic": "/ˈɪntrəstɪd/",
+        "syllables": "in·ter·est·ed",
+        "pos": "形容詞 (Adjective)",
+        "chi": "感興趣的",
+        "meaning": "對某人、某事物或某項活動產生好奇並想進一步了解",
+        "breakdown": "inter-(在...之間) + est(存在) + -ed(感到...的) -> 置身其中感到有趣的",
+        "trick": "諧音「因特瑞斯」-> 因特網特瑞斯很感興趣！",
+        "scene": "看到烹飪書時想嘗試做菜，或對科學實驗充滿好奇的心情",
+        "collocation": "be interested in (doing) something",
+        "img": "🎨",
+        "context_eng": "My sister is very interested in cooking international food.",
+        "example": "My sister is very interested in cooking international food.",
+        "context_chi": "我姊姊對烹飪國際各國美食非常感興趣。",
+        "chant": "Interested, interested, interested in! Learning new things makes us grin!",
+        "compare": "interested (人感到有興趣的，固定搭配 in) vs interesting (事物令人感興趣的)",
+        "note": "高頻考試陷阱：中文說「對...感興趣」，學生常誤填 about 或 to，正確必填 in！"
+      },
+      "explanation": {
+        "point": "核心單字 interested (感興趣的) 拼寫與固定介系詞搭配 in",
+        "examPurpose": "考核學生對本課核心單字 interested 的自然發音音節拆解、正確英文字母拼寫及固定介系詞 in 的搭配能力。",
+        "correctReason": "單字 interested 的正確音節拆解為 in-ter-est-ed，注意中間為 -ter- 而非 -tar-，結尾加 -ed 作形容詞。",
+        "note": "interested 固定搭配介系詞 in，不可誤用 about 或 with。",
+        "trap": "受中文「對...有興趣」影響容易漏掉介系詞 in，或將單字拼寫錯成 intrested。",
+        "commonTraps": [
+          "拼寫陷阱：容易漏掉中間的字母 e 誤拼為 intrested，應牢記音節 in-ter-est-ed。",
+          "介系詞陷阱：中文常說「對...感興趣」，學生容易直譯套用 about 或 to，正確必為 interested in。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "curious",
+          "fascinated",
+          "keen on"
+        ],
+        "grammarCompare": "interested 是被動情緒形容詞修飾人（人 + be interested in），而 interesting 是事物本身具有趣味性（事物 + be interesting）。",
+        "examVariations": "題型常考聽音拼字、形容詞介系詞搭配選擇題 (be interested in + V-ing) 以及句子重組題。"
+      },
+      "target_chi": "對...感興趣的",
+      "target_pos": "形容詞 (Adjective)",
+      "masked_example": "My sister is very ________ in cooking international food.",
+      "masked_example_chi": "我姊姊對烹飪國際各國美食非常感興趣。"
+    },
+    {
+      "id": "q_w12_odg3_u16_02",
+      "book_id": "gra3",
+      "unit_id": "gra3_16",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★☆☆☆☆",
+      "difficulty_level": 1,
+      "question": "🎧 聽力拼字測驗：請仔細聆聽發音，拼寫出表示「擔憂的；焦慮的」形容詞單字（提示：字首為 w-，字尾為 -ed，固定搭配介系詞 about）。",
+      "answer": "worried",
+      "options": [],
+      "vocab_card": {
+        "word": "worried",
+        "ipa": "/ˈwʌrid/",
+        "phonetic": "/ˈwʌrid/",
+        "syllables": "wor·ried",
+        "pos": "形容詞 (Adjective)",
+        "chi": "擔心的；擔憂的",
+        "meaning": "因為某個不好的可能情況而感到焦慮或不安",
+        "breakdown": "worry(擔憂) + -ed(形容詞字尾，表受詞心理狀態)",
+        "trick": "諧音「握銳的」-> 手裡握著鋒利的刀子，心裡很擔憂！",
+        "scene": "看著烤箱裡的蛋糕怕烤焦，或是看到零食標籤上密密麻麻的化學物質",
+        "collocation": "be worried about (doing) something",
+        "img": "😟",
+        "context_eng": "Mom is worried about eating too many chemicals in snacks.",
+        "example": "Mom is worried about eating too many chemicals in snacks.",
+        "context_chi": "媽媽很擔心零食裡面吃進太多化學添加物。",
+        "chant": "Worried about, worried about, don't you fret! Check the label, you're all set!",
+        "compare": "worried about (對某事憂慮) vs afraid of (對某物感到害怕恐懼)",
+        "note": "worried 後接介系詞 about，若後接動詞必須加 -ing (worried about burning)。"
+      },
+      "explanation": {
+        "point": "核心單字 worried (擔憂的) 拼寫與固定介系詞搭配 about",
+        "examPurpose": "考核學生對本課核心單字 worried 的字尾去 y 加 ied 規則、拼寫精確度及與 about 的介系詞搭配。",
+        "correctReason": "動詞 worry 轉為形容詞時依規則「子音 + y」去 y 加上 ied 成為 worried，中間包含雙寫字母 rr。",
+        "note": "worried 後接介系詞 about，若後接動詞必須加 -ing (worried about burning)。",
+        "trap": "容易漏寫一個 r 拼成 woried，或誤用介系詞 worried with 或 worried of。",
+        "commonTraps": [
+          "拼寫陷阱：學生常漏掉雙寫字母 r 誤拼為 woried，或忘記去 y 加 ied 寫成 worryed。",
+          "介系詞陷阱：受 afraid of 影響誤用 worried of，或受中文「對...煩惱」影響誤用 worried with，正確必為 worried about。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "anxious",
+          "concerned",
+          "nervous"
+        ],
+        "grammarCompare": "worried 表示個人內心的擔憂感受，concerned 較偏向對公共議題或客觀情勢的關切，兩者皆搭配介系詞 about。",
+        "examVariations": "題型常考單字拼寫、克漏字填空 (worried about + V-ing) 以及錯題改錯 (修正介系詞與動名詞)。"
+      },
+      "target_chi": "擔憂的；焦慮的",
+      "target_pos": "形容詞 (Adjective)",
+      "masked_example": "Mom is ________ about eating too many chemicals in snacks.",
+      "masked_example_chi": "媽媽很擔心零食裡面吃進太多化學添加物。"
+    },
+    {
+      "id": "q_w12_odg3_u16_03",
+      "book_id": "gra3",
+      "unit_id": "gra3_16",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★★☆☆☆",
+      "difficulty_level": 2,
+      "question": "🎧 聽力拼字測驗：請仔細聆聽發音，拼寫出表示「感到失望的」形容詞單字（提示：注意單 s 雙 p，固定搭配 with 或 in）。",
+      "answer": "disappointed",
+      "options": [],
+      "vocab_card": {
+        "word": "disappointed",
+        "ipa": "/ˌdɪsəˈpɔɪntɪd/",
+        "phonetic": "/ˌdɪsəˈpɔɪntɪd/",
+        "syllables": "dis·ap·point·ed",
+        "pos": "形容詞 (Adjective)",
+        "chi": "感到失望的",
+        "meaning": "因為事情不如預期美好而感到沮喪難過",
+        "breakdown": "dis-(否定/遠離) + appoint(約定/指定) + -ed -> 期待落空感到失望",
+        "trick": "拆字：dis(不) + appoint(約定) -> 沒有如約定好的那麼好吃，感到好失望！",
+        "scene": "滿心期待咬下剛買的手工餅乾，卻發現又乾又硬很難吃",
+        "collocation": "be disappointed with / in something or someone",
+        "img": "😞",
+        "context_eng": "I am disappointed with these dry cookies because they have no flavor.",
+        "example": "I am disappointed with these dry cookies because they have no flavor.",
+        "context_chi": "我對這些乾巴巴的餅乾感到很失望，因為它們毫無風味。",
+        "chant": "Disappointed with, disappointed in, try once more and you will win!",
+        "compare": "disappointed with (對物品/結果感到失望) vs disappointed in (對某人的表現失望)",
+        "note": "課本核心文法表明確列出 disappointed 搭配 with 或 in，不可誤用 of 或 about！"
+      },
+      "explanation": {
+        "point": "核心單字 disappointed (感到失望的) 拼寫與介系詞 with/in 搭配",
+        "examPurpose": "考核學生對多音節單字 disappointed 的前綴 dis-、詞根 appoint 及後綴 -ed 的字母結構辨析能力。",
+        "correctReason": "單字拆解為 dis-(否定前綴) + appoint(約定/指定) + -ed(形容詞後綴)，注意為單個 s 與雙寫 pp。",
+        "note": "disappointed 搭配 with 或 in，不可誤用 of 或 about！",
+        "trap": "最常將 s 雙寫成 dissappointed，或將 pp 漏寫成 disapointed，以及誤填介系詞 disappointed of。",
+        "commonTraps": [
+          "拼寫陷阱：容易混淆雙寫字母位置，誤寫成 dissappointed (雙 s) 或 disapointed (單 p)。",
+          "介系詞陷阱：受中文「對...感到失望」直譯影響誤用 disappointed of，標準搭配必為 with 或 in。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "upset",
+          "let down",
+          "dissatisfied"
+        ],
+        "grammarCompare": "disappointed with 常接具體事物或成品 (the cake)，disappointed in 則多接某人或表現 (my brother / your behavior)。",
+        "examVariations": "常見題型包含多音節聽力拼寫、介系詞填空 (disappointed with/in) 與情緒形容詞情境配對題。"
+      },
+      "target_chi": "感到失望的",
+      "target_pos": "形容詞 (Adjective)",
+      "masked_example": "I am ________ with these dry cookies because they have no flavor.",
+      "masked_example_chi": "我對這些乾巴巴的餅乾感到很失望，因為它們毫無風味。"
+    },
+    {
+      "id": "q_w12_odg3_u16_04",
+      "book_id": "gra3",
+      "unit_id": "gra3_16",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★★☆☆☆",
+      "difficulty_level": 2,
+      "question": "🎧 聽力拼字測驗：請仔細聆聽發音，拼寫出表示「感到驚訝的；感到意外的」形容詞單字（提示：字首為 sur-，固定搭配 by 或 at）。",
+      "answer": "surprised",
+      "options": [],
+      "vocab_card": {
+        "word": "surprised",
+        "ipa": "/sərˈpraɪzd/",
+        "phonetic": "/sərˈpraɪzd/",
+        "syllables": "sur·prised",
+        "pos": "形容詞 (Adjective)",
+        "chi": "感到驚訝的；感到意外的",
+        "meaning": "因為看到或得知未預料到的事實而感到吃驚",
+        "breakdown": "sur-(在...之上/突然) + prise(抓住) + -ed -> 突然被震撼抓住",
+        "trick": "諧音「蛇撲來」-> 突然一條玩具蛇撲來，大家都感到很驚訝！",
+        "scene": "看到果汁瓶標籤上的含糖量居然有八顆方糖那麼多時的表情",
+        "collocation": "be surprised by / at something",
+        "img": "😲",
+        "context_eng": "We were surprised by how much sugar there was in the fruit juice.",
+        "example": "We were surprised by how much sugar there was in the fruit juice.",
+        "context_chi": "我們對果汁裡面竟然含有那麼多糖分感到非常驚訝。",
+        "chant": "Surprised by the facts, surprised by the news, reading food labels gives you clues!",
+        "compare": "surprised by (對外在事實感到驚訝) vs amazed by (對神奇卓越的事物驚嘆佩服)",
+        "note": "surprised 常搭配 by 或 at，嚴禁搭配 of (不可寫 surprised of)。"
+      },
+      "explanation": {
+        "point": "核心單字 surprised (感到驚訝的) 拼寫與固定搭配介系詞 by/at",
+        "examPurpose": "考核學生對核心情緒形容詞 surprised 的字母拼寫（注意 sur- 前綴與字中 r）及搭配介系詞 by 的掌握。",
+        "correctReason": "單字音節為 sur-prised，注意第一個音節為 sur- 而非 sup-，結尾加 -d 構成形容詞。",
+        "note": "surprised 常搭配 by 或 at，嚴禁搭配 of (不可寫 surprised of)。",
+        "trap": "容易漏掉第一個字母 r 拼成 suprised，或受直譯影響誤寫成 surprised of。",
+        "commonTraps": [
+          "拼寫陷阱：極高比例學生會漏掉第一個 r 誤拼為 suprised，請牢記字首為 sur-。",
+          "介系詞陷阱：受中文影響誤寫 surprised of 或 surprised about，課本標準必為 surprised by 或 surprised at。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "amazed",
+          "astonished",
+          "shocked"
+        ],
+        "grammarCompare": "surprised by 表達被動受到外在事實或數據衝擊，amazed by 則帶有更強烈的讚嘆或不可思議之感。",
+        "examVariations": "題型常見於聽力拼字、介系詞選擇題 (surprised by how many...) 與閱讀篇章主旨推論題。"
+      },
+      "target_chi": "感到驚訝的；感到意外的",
+      "target_pos": "形容詞 (Adjective)",
+      "masked_example": "We were ________ by how much sugar there was in the fruit juice.",
+      "masked_example_chi": "我們對果汁裡面竟然含有那麼多糖分感到非常驚訝。"
+    },
+    {
+      "id": "q_w12_odg3_u16_05",
+      "book_id": "gra3",
+      "unit_id": "gra3_16",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★★★☆☆",
+      "difficulty_level": 4,
+      "question": "🎧 聽力拼字測驗：請仔細聆聽發音，拼寫出表示「（食品）成分；原料」的複數名詞單字（提示：食品包裝標籤上的「食材清單」，注意字首 in- 與複數 -s）。",
+      "answer": "ingredients",
+      "options": [],
+      "vocab_card": {
+        "word": "ingredients",
+        "ipa": "/ɪnˈɡriːdiənts/",
+        "phonetic": "/ɪnˈɡriːdiənts/",
+        "syllables": "in·gre·di·ents",
+        "pos": "名詞 (Noun, 複數)",
+        "chi": "成分；食材清單",
+        "meaning": "製作某種食品、糕點或菜餚所需要的所有原料與配料",
+        "breakdown": "in-(進入) + gred(走/步入) + -i- + -ent(物質) + -s -> 走進組合成菜餚的各項原料",
+        "trick": "拆字：in(在裡面) + grid(格子) -> 盒子裡每一格都是烘焙的新鮮食材！",
+        "scene": "烤蛋糕前在料理桌上排開的麵粉、雞蛋、牛奶、糖和奶油",
+        "collocation": "list of ingredients, mix the ingredients, natural ingredients",
+        "img": "🥗",
+        "context_eng": "You can check the list of ingredients before buying cereal.",
+        "example": "You can check the list of ingredients before buying cereal.",
+        "context_chi": "在購買麥片之前，你可以先檢查成分清單。",
+        "chant": "Ingredients, ingredients, mix them slow! Flour, milk, and eggs make the dough!",
+        "compare": "ingredients (食材成分) vs recipe (包含製作步驟與份量的完整食譜)",
+        "note": "課文：You can read the list of ingredients."
+      },
+      "explanation": {
+        "point": "核心名詞 ingredients (食材成分/原料) 複數拼寫與食品標籤語境",
+        "examPurpose": "考核學生對食品標籤核心高頻單字 ingredients 的音節拆解、名詞複數字尾 -s 及跨學科科普語彙掌握。",
+        "correctReason": "音節拆解為 in-gre-di-ents，前綴 in-(進入) + gred(走入) + -ient(名詞後綴) + -s(複數)，意為組成食物的所有原料。",
+        "note": "食品標籤上通常列出所有食材，因此多以複數形 ingredients 出現。",
+        "trap": "中間第三音節容易誤拼成 ingredants 或 ingridients，請特別注意 -gre-di- 結構。",
+        "commonTraps": [
+          "拼寫陷阱：容易將 -di- 拼成 -de- (ingredents) 或將 -gre- 拼成 -gri- (ingridients)。",
+          "單複數陷阱：食品成分清單通常包含多種原料，考試常要求填寫複數形式 ingredients。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "components",
+          "elements",
+          "contents"
+        ],
+        "grammarCompare": "ingredient 強調調配或烹飪過程中的原料配方，material 則偏向建築或工業加工原料。",
+        "examVariations": "題型常見於食品標籤圖表題、名詞拼寫填空題及閱讀理解細節題 (the list of ingredients)。"
+      },
+      "target_chi": "（食品）成分；原料",
+      "target_pos": "名詞 (Noun, 複數)",
+      "masked_example": "You can check the list of ________ before buying cereal.",
+      "masked_example_chi": "在購買麥片之前，你可以先檢查成分清單。"
+    },
+    {
+      "id": "q_w12_odg3_u16_06",
+      "book_id": "gra3",
+      "unit_id": "gra3_16",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★★☆☆☆",
+      "difficulty_level": 2,
+      "question": "🎧 聽力拼字測驗：請仔細聆聽發音，拼寫出表示「化學物質；化學添加劑」的複數名詞單字（提示：字首 ch 發 /k/ 音）。",
+      "answer": "chemicals",
+      "options": [],
+      "vocab_card": {
+        "word": "chemicals",
+        "ipa": "/ˈkemɪkəlz/",
+        "phonetic": "/ˈkemɪkəlz/",
+        "syllables": "chem·i·cals",
+        "pos": "名詞 (Noun, 複數)",
+        "chi": "化學物質；化學添加劑",
+        "meaning": "由化學工藝製成或天然存在的純淨物質，在食品中多指人工添加劑、防腐劑與色素",
+        "breakdown": "chem(化學) + -ic(的) + -al(名詞字尾) + -s(複數)",
+        "trick": "諧音「開門口」-> 食品工廠一開門口，滿滿都是化學原料！",
+        "scene": "看著食品包裝背面一長串看不懂的英文化學防腐劑名稱",
+        "collocation": "lots of chemicals, artificial chemicals, put chemicals in foods",
+        "img": "🧪",
+        "context_eng": "Many parents try to avoid buying foods that contain harmful chemicals.",
+        "example": "Many parents try to avoid buying foods that contain harmful chemicals.",
+        "context_chi": "許多父母盡量避免購買含有有害化學物質的食品。",
+        "chant": "Chemicals, chemicals, read the can! Choose real food whenever you can!",
+        "compare": "chemicals (化學物質) vs natural ingredients (天然食材成分)",
+        "note": "課本核心文法表高頻核心單字：Are you worried about eating lots of chemicals?"
+      },
+      "explanation": {
+        "point": "核心名詞 chemicals (化學物質/添加劑) 拼寫與發音規則",
+        "examPurpose": "考核學生對名詞 chemicals 中 ch 發 /k/ 的特殊拼讀規則、多音節詞形及本課食品安全主題詞彙。",
+        "correctReason": "單字拆解為 chem(化學) + -ic(形容詞後綴) + -al(名詞後綴) + -s(複數)，字首 ch 源自希臘語發 /k/。",
+        "note": "食品安全篇章中常指人工合成添加物 (preservatives, coloring)，以複數形 chemicals 出現。",
+        "trap": "字首 ch 發 /k/ 音，容易誤拼為 k (kemicals) 或 c (cemicals)，且易漏掉結尾複數 -s。",
+        "commonTraps": [
+          "拼寫陷阱：容易受發音誤導拼成 kemicals，需牢記化學相關單字均為 ch- 開頭。",
+          "字尾陷阱：容易漏掉最後的 -al- 誤寫成 chemics，正確必為 chemicals。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "additives",
+          "substances",
+          "compounds"
+        ],
+        "grammarCompare": "chemical 可作名詞（化學製品）亦可作形容詞（化學的，如 chemical reaction），常與 artificial 連用。",
+        "examVariations": "題型常見於聽力拼寫、篇章克漏字 (lots of chemicals) 以及食品標籤正誤判斷題。"
+      },
+      "target_chi": "化學物質；化學添加劑",
+      "target_pos": "名詞 (Noun, 複數)",
+      "masked_example": "Many parents try to avoid buying foods that contain harmful ________.",
+      "masked_example_chi": "許多父母盡量避免購買含有有害化學物質的食品。"
+    },
+    {
+      "id": "q_w12_odg3_u16_07",
+      "book_id": "gra3",
+      "unit_id": "gra3_16",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "part_title": "Part A: Complete the sentences with a preposition from the box",
+      "part_instructions": "請先在紙上寫出正確的介系詞或完整句子（about / with / by / at / in / for / of / to / from），再翻開對答案。",
+      "word_bank": [
+        "about",
+        "with",
+        "by",
+        "at",
+        "in",
+        "for",
+        "of",
+        "to",
+        "from"
+      ],
+      "sentence_form": "Be + Adjective + Preposition + Noun / V-ing",
+      "difficulty": "★★★☆☆",
+      "difficulty_level": 4,
+      "question": "Complete the sentence with the correct prepositions from the box: Lisa is not very good _____ cooking, but her sister is interested _____ making cakes.",
+      "answer": "Lisa is not very good at cooking, but her sister is interested in making cakes.",
+      "options": [],
+      "self_check": [
+        "是否在 good 後使用 at 而非 in (good at cooking)",
+        "是否在 interested 後使用 in 而非 about (interested in making)",
+        "動詞 cooking 與 making 是否皆正確保留動名詞 -ing 結尾"
+      ],
+      "explanation": {
+        "point": "形容詞固定介系詞搭配：be good at + V-ing 與 be interested in + V-ing",
+        "examPurpose": "考核學生對技能專長介系詞 at 與興趣投入介系詞 in 的精確辨析及介系詞後接動名詞的書寫能力。",
+        "correctReason": "表達擅長某技能使用 good at，表達對某活動抱有興趣使用 interested in，兩者後方動詞均需加 -ing。",
+        "note": "中文常說「在某方面很好」，極易誘使學生寫成 good in，必須特別警惕。",
+        "trap": "受中文思考影響誤將擅長寫為 good in，或將感興趣寫為 interested about。",
+        "commonTraps": [
+          "介系詞混淆陷阱：受中文影響誤寫為 good in 或 interested about，需牢記「能力用 at，興趣用 in」。",
+          "動名詞漏變陷阱：部分學生抄寫時漏掉動名詞字尾 -ing 寫成 good at cook，介系詞後必加 -ing。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "skilled at / keen on",
+          "talented in / enthusiastic about"
+        ],
+        "grammarCompare": "good at 表示後天習得的擅長技能；interested in 表示內心對該領域抱持的主觀愛好，兩者句型均接動名詞。",
+        "examVariations": "題型常見於紙筆造句填空、連貫句子改寫以及克漏字介系詞選填。"
+      }
+    },
+    {
+      "id": "q_w12_odg3_u16_08",
+      "book_id": "gra3",
+      "unit_id": "gra3_16",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "part_title": "Part A: Complete the sentences with a preposition from the box",
+      "part_instructions": "請先在紙上寫出正確的介系詞或完整句子（about / with / by / at / in / for / of / to / from），再翻開對答案。",
+      "word_bank": [
+        "about",
+        "with",
+        "by",
+        "at",
+        "in",
+        "for",
+        "of",
+        "to",
+        "from"
+      ],
+      "sentence_form": "Be + Adjective + Preposition + Noun / V-ing",
+      "difficulty": "★★★☆☆",
+      "difficulty_level": 4,
+      "question": "Complete the sentence with the correct preposition from the box: People are often surprised _____ how many chemicals are in canned soup.",
+      "answer": "People are often surprised by how many chemicals are in canned soup.",
+      "options": [],
+      "self_check": [
+        "是否精準填入介系詞 by (或 at) 而非 of 或 about",
+        "名詞子句 how many chemicals are in canned soup 是否抄寫完整",
+        "句首 People 大寫與句尾標點符號句點是否完全齊備"
+      ],
+      "explanation": {
+        "point": "形容詞固定介系詞搭配：be surprised by + 受詞子句",
+        "examPurpose": "考核學生對情緒形容詞 surprised 與介系詞 by 的固定搭配及引導名詞子句的整句書寫能力。",
+        "correctReason": "受到外在客觀事實、數據或現象帶來的震驚與意外，課本文法表標準搭配為 surprised by。",
+        "note": "surprised 亦可接 at，但課本嚴禁搭配 of (不可寫 surprised of)。",
+        "trap": "中文「對...感到驚訝」容易被字面直譯為 surprised about 或 surprised of。",
+        "commonTraps": [
+          "介系詞混淆陷阱：直譯中文常誤寫 surprised of 或 surprised about，課本標準答案必為 surprised by。",
+          "子句抄寫陷阱：how many 後方接複數名詞 chemicals，動詞必為 are，學生常粗心漏抄 are。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "amazed by",
+          "astonished at",
+          "shocked by"
+        ],
+        "grammarCompare": "surprised by 後方可接名詞或疑問詞引導的名詞子句 (how many chemicals...)，表示受到該事實衝擊。",
+        "examVariations": "常見題型包含紙筆填空、改錯題 (糾正 surprised of) 及食品標籤閱讀問答。"
+      }
+    },
+    {
+      "id": "q_w12_odg3_u16_09",
+      "book_id": "gra3",
+      "unit_id": "gra3_16",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "part_title": "Part A: Complete the sentences with a preposition from the box",
+      "part_instructions": "請先在紙上寫出正確的介系詞或完整句子（about / with / by / at / in / for / of / to / from），再翻開對答案。",
+      "word_bank": [
+        "about",
+        "with",
+        "by",
+        "at",
+        "in",
+        "for",
+        "of",
+        "to",
+        "from"
+      ],
+      "sentence_form": "Be + Adjective + Preposition + Noun / V-ing",
+      "difficulty": "★★★☆☆",
+      "difficulty_level": 5,
+      "question": "Complete the sentence with the correct preposition from the box: Don't buy the strawberry juice if you are not happy _____ the sugar level.",
+      "answer": "Don't buy the strawberry juice if you are not happy with the sugar level.",
+      "options": [],
+      "self_check": [
+        "是否使用介系詞 with 表示對具體產品品質感到滿意/不滿意",
+        "Don't 祈使句縮寫與撇號是否正確無誤",
+        "if 條件子句的主詞與動詞 you are not happy with 是否完整抄寫"
+      ],
+      "explanation": {
+        "point": "形容詞固定介系詞搭配：be happy with + 具體產品或狀態",
+        "examPurpose": "考核學生對形容詞 happy 搭配 with（對物品或現狀滿意）與搭配 about（對事件高興）的語義區分能力。",
+        "correctReason": "當受詞為具體產品 (juice)、成果或條件 (sugar level) 時，表達滿意與否固定搭配 happy with。",
+        "note": "若對即將發生的喜事或消息高興，則搭配 happy about (happy about the party)。",
+        "trap": "容易受 happy about 影響，在接具體物品時誤寫 happy about the product。",
+        "commonTraps": [
+          "搭配混淆陷阱：happy with 接具體物品（滿意），happy about 接消息或事件（高興），此處指產品甜度必用 with。",
+          "祈使句抄寫陷阱：句首 Don't 常有學生漏掉縮寫撇號寫成 Dont，或句尾漏寫句點。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "satisfied with",
+          "pleased with",
+          "content with"
+        ],
+        "grammarCompare": "happy with 接事物表示「對其感到滿意」；happy about 則表達「因某件好消息或事情而感到欣喜」。",
+        "examVariations": "常考於食品標籤購買建議對話、克漏字測驗及手寫整句翻譯。"
+      }
+    },
+    {
+      "id": "q_w12_odg3_u16_10",
+      "book_id": "gra3",
+      "unit_id": "gra3_16",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "part_title": "Part A: Complete the sentences with a preposition from the box",
+      "part_instructions": "請先在紙上寫出正確的介系詞或完整句子（about / with / by / at / in / for / of / to / from），再翻開對答案。",
+      "word_bank": [
+        "about",
+        "with",
+        "by",
+        "at",
+        "in",
+        "for",
+        "of",
+        "to",
+        "from"
+      ],
+      "sentence_form": "Be + Adjective + Preposition + Noun / V-ing",
+      "difficulty": "★★★☆☆",
+      "difficulty_level": 5,
+      "question": "Complete the sentence with the correct preposition from the box: The chocolate cake tasted strange because it was full _____ salt instead of sugar.",
+      "answer": "The chocolate cake tasted strange because it was full of salt instead of sugar.",
+      "options": [],
+      "self_check": [
+        "是否精準使用介系詞 of (full of) 而非受 filled with 影響誤用 with",
+        "because 原因子句的過去式動詞 was 是否正確填寫",
+        "instead of sugar 片語拼寫是否精確無誤"
+      ],
+      "explanation": {
+        "point": "形容詞固定介系詞搭配：be full of + 物質名詞",
+        "examPurpose": "考核學生對形容詞 full 固定搭配介系詞 of 的掌握，以及與 filled with 的文法形式辨析。",
+        "correctReason": "形容詞 full 固定搭配介系詞 of (full of salt)，表示充滿某種實體物質或成分。",
+        "note": "若使用動詞分詞 filled，才搭配 with (filled with salt)；full 絕不可搭配 with！",
+        "trap": "受 filled with 或中文「裝滿著...」影響，極高頻率誤寫成 full with。",
+        "commonTraps": [
+          "介系詞混淆陷阱：將 full of 與 filled with 混淆，在考卷上手寫出 *full with 的嚴重語法錯誤。",
+          "不可數名詞陷阱：salt 與 sugar 為不可數名詞，後方不可加 -s，需保持原形。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "filled with",
+          "packed with",
+          "loaded with"
+        ],
+        "grammarCompare": "full of (形容詞片語) 與 filled with (被動分詞片語) 意思皆為充滿，但介系詞搭配嚴格不同，不可混用。",
+        "examVariations": "題型常見於烘焙篇章閱讀、克漏字選填、抓錯題及紙筆造句題。"
+      }
+    },
+    {
+      "id": "q_w12_odg3_u16_11",
+      "book_id": "gra3",
+      "unit_id": "gra3_16",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "part_title": "Part B: Rewrite the sentences using It is/was + adj + of + person + to V",
+      "part_instructions": "請拿紙筆，依提示將原句改寫為 It is / was + 形容詞 + of + 某人 + to V 的完整英文句子（注意時態、受格與句尾標點）。",
+      "sentence_form": "It + is/was + Adjective + of + Object Pronoun/Noun + to + Base Verb",
+      "difficulty": "★★★★☆",
+      "difficulty_level": 6,
+      "question": "Rewrite the sentence using \"It was nice of... to...\": Grandma made us a delicious chocolate cake yesterday.",
+      "answer": "It was nice of Grandma to make us a delicious chocolate cake yesterday.",
+      "options": [],
+      "self_check": [
+        "是否使用 of Grandma 評價人物善意行為而非 with Grandma",
+        "made 是否在 to 後方還原為原形動詞 to make",
+        "時態是否正確使用過去式 It was，且句末標點符號齊全"
+      ],
+      "explanation": {
+        "point": "虛主詞評價句型：It was nice of 某人 to + 原形動詞",
+        "examPurpose": "考核學生將主動敘述句改寫為虛主詞 It 評價人物善意行為句型的文法轉換與動詞原形還原能力。",
+        "correctReason": "評價某人的性格或友善舉止，固定使用 It was nice of 某人，後接不定詞 to + 原形動詞 make。",
+        "note": "Grandma 做出善意行為，屬於人的特質，因此介系詞必用 of，絕不可用 for 或 with。",
+        "trap": "改寫時忘記將過去式 made 還原成原形動詞 make，或將 of 誤寫為 with 或 for。",
+        "commonTraps": [
+          "介系詞誤用陷阱：受中文「對奶奶來說很好」直譯干擾，誤寫成 It was nice with/for Grandma。",
+          "動詞時態陷阱：不定詞 to 後面必須接原形動詞 make，學生常粗心照抄原句的過去式 made。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "It was kind of Grandma to...",
+          "It was sweet of Grandma to..."
+        ],
+        "grammarCompare": "It is nice of sb to do sth 評價人的性格舉止；It is easy for sb to do sth 則描述事情本身的客觀難易度。",
+        "examVariations": "題型常見於段考句型轉換、手寫重組題及錯題訂正改寫。"
+      }
+    },
+    {
+      "id": "q_w12_odg3_u16_12",
+      "book_id": "gra3",
+      "unit_id": "gra3_16",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "part_title": "Part B: Rewrite the sentences using It is/was + adj + of + person + to V",
+      "part_instructions": "請拿紙筆，依提示將原句改寫為 It is / was + 形容詞 + of + 某人 + to V 的完整英文句子（注意時態、受格與句尾標點）。",
+      "sentence_form": "It + is/was + Adjective + of + Object Pronoun/Noun + to + Base Verb",
+      "difficulty": "★★★★☆",
+      "difficulty_level": 7,
+      "question": "Rewrite the sentence using \"It was very silly of... to...\": I gave my sister a cup of salt instead of sugar in the kitchen.",
+      "answer": "It was very silly of me to give my sister a cup of salt instead of sugar in the kitchen.",
+      "options": [],
+      "self_check": [
+        "主格 I 在介系詞 of 後方是否轉化為受格代名詞 me (of me)",
+        "過去式 gave 是否在 to 後方還原為原形動詞 to give",
+        "句型是否完整採用 It was very silly of me to give..."
+      ],
+      "explanation": {
+        "point": "虛主詞評價句型：It was silly of me to + 原形動詞",
+        "examPurpose": "考核學生在虛主詞評價句中將主格代名詞轉換為受格 (I -> me) 及還原原形動詞的雙重語法能力。",
+        "correctReason": "silly 評價做錯事的糊塗舉止，介系詞用 of，介系詞後接受格代名詞 me，to 後接原形動詞 give。",
+        "note": "課本故事原文：That was very silly of me. 考試改寫句型必須熟練運用。",
+        "trap": "忘記將主格 I 改為受格 me (誤寫 of I)，或忘記將 gave 還原為 give。",
+        "commonTraps": [
+          "代名詞格位陷阱：介系詞 of 後方必須使用受格 me，不可照抄主格 I (of I 為嚴重文法錯誤)。",
+          "原形動詞還原陷阱：不定詞 to give 必須為原形動詞，常有學生漏看寫成 to gave。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "It was foolish of me to...",
+          "It was stupid of me to..."
+        ],
+        "grammarCompare": "silly of me 強調自身行為的糊塗粗心；若用 careless of me 則強調粗心大意未注意細節。",
+        "examVariations": "常見題型包括紙筆句子改寫、代名詞格位填空題及連貫故事寫作翻譯。"
+      }
+    },
+    {
+      "id": "q_w12_odg3_u16_13",
+      "book_id": "gra3",
+      "unit_id": "gra3_16",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "part_title": "Part B: Rewrite the sentences using It is/was + adj + of + person + to V",
+      "part_instructions": "請拿紙筆，依提示將原句改寫為 It is / was + 形容詞 + of + 某人 + to V 的完整英文句子（注意時態、受格與句尾標點）。",
+      "sentence_form": "It + is/was + Adjective + of + Object Pronoun/Noun + to + Base Verb",
+      "difficulty": "★★★★☆",
+      "difficulty_level": 7,
+      "question": "Rewrite the sentence using \"I think it is silly of... to...\": People eat lots of greasy junk food every day.",
+      "answer": "I think it is silly of people to eat lots of greasy junk food every day.",
+      "options": [],
+      "self_check": [
+        "名詞子句 it is silly of people 結構是否完整",
+        "動詞 eat 是否置於不定詞 to 後方保持原形 to eat",
+        "受詞 lots of greasy junk food every day 是否完整保留"
+      ],
+      "explanation": {
+        "point": "複合句虛主詞評價：I think it is silly of people to eat...",
+        "examPurpose": "考核學生在賓語子句中嵌入虛主詞評價句型 (I think it is silly of people to...) 的高階句型組織能力。",
+        "correctReason": "I think 後接名詞子句，子句採用虛主詞 it is + 形容詞 silly + of + 對象 people + to eat 的標準結構。",
+        "note": "課本 Kamil 的原話：I think it is silly of people to eat lots of junk food.",
+        "trap": "學生常漏掉虛主詞 it is 寫成 *I think silly of people，或誤將 of people 寫成 for people。",
+        "commonTraps": [
+          "虛主詞脫落陷阱：容易漏掉 it is 直接寫成 I think silly of people，主詞與動詞結構必須完整。",
+          "介系詞混淆陷阱：silly 是評價人類盲目吃垃圾食物的行為，介系詞必用 of，不可用 for。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "I believe it is unwise of people to...",
+          "In my opinion, it is foolish of people to..."
+        ],
+        "grammarCompare": "I think it is silly of people to... 屬於個人主觀價值評價；It is unhealthy for people to eat... 則是事物對健康的客觀影響。",
+        "examVariations": "題型常見於口語意見表達、對話題改寫、論說文開頭句型手寫運用。"
+      }
+    },
+    {
+      "id": "q_w12_odg3_u16_14",
+      "book_id": "gra3",
+      "unit_id": "gra3_16",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "part_title": "Part C: Write sentences using Gerunds (V-ing) as subjects or after prepositions",
+      "part_instructions": "請在紙上將括號內的動詞改為動名詞 (V-ing) 並寫出完整句子（注意動名詞作主詞時搭配單數動詞）。",
+      "sentence_form": "V-ing (Gerund Subject) + Singular Verb / Preposition + V-ing",
+      "difficulty": "★★★★★",
+      "difficulty_level": 8,
+      "question": "Combine the prompt words into a complete sentence using a gerund subject: (Read) food labels (help) us choose healthy food.",
+      "answer": "Reading food labels helps us choose healthy food.",
+      "options": [],
+      "self_check": [
+        "句首動詞 Read 是否轉化為動名詞 Reading 且字首大寫 R",
+        "動詞 help 是否依動名詞單數主詞規則加上 -s 變為 helps",
+        "受詞與受詞補語 us choose healthy food 拼寫與標點是否精確"
+      ],
+      "explanation": {
+        "point": "動名詞片語作主詞：Reading food labels 視為單數主詞 + 單數動詞 helps",
+        "examPurpose": "考核學生動名詞作主詞的屈折變化（加 -ing）及主述一致（動名詞主詞視為第三人稱單數加 -s）的核心文法規則。",
+        "correctReason": "動詞 Read 置於句首擔任主詞需變為動名詞 Reading；動名詞主詞代表「閱讀這件事」，動詞必須加 -s (helps)。",
+        "note": "主詞核心是 Reading 而非複數名詞 labels，這是國小銜接國中段考最致命的陷阱。",
+        "trap": "看到複數名詞 labels 就誤用原形動詞 help，忘記主詞是動名詞 Reading。",
+        "commonTraps": [
+          "主述一致陷阱：學生常被靠近動詞的複數名詞 labels 誘騙而誤填原形動詞 help，動名詞主詞動詞必加 -s。",
+          "動名詞大小寫陷阱：句首動名詞 Reading 的字首 R 必須大寫，忘記大寫會被扣分。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "Checking food labels enables us to...",
+          "Looking at ingredient lists allows us to..."
+        ],
+        "grammarCompare": "動名詞主詞 (Reading labels) 與不定詞主詞 (To read labels) 皆視為單數，但日常英語與標題中以動名詞最為自然普遍。",
+        "examVariations": "題型常見於主謂一致填空題、提示字造句題、克漏字動詞型態選填題。"
+      }
+    },
+    {
+      "id": "q_w12_odg3_u16_15",
+      "book_id": "gra3",
+      "unit_id": "gra3_16",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "part_title": "Part C: Write sentences using Gerunds (V-ing) as subjects or after prepositions",
+      "part_instructions": "請在紙上將括號內的動詞改為動名詞 (V-ing) 並寫出完整句子（注意動名詞作主詞時搭配單數動詞）。",
+      "sentence_form": "V-ing (Gerund Subject) + Singular Verb / Preposition + V-ing",
+      "difficulty": "★★★★★",
+      "difficulty_level": 9,
+      "question": "Complete the sentence by putting the verbs in parentheses into the gerund form: Lisa was worried about (burn) the cake, but she was excited about (make) it.",
+      "answer": "Lisa was worried about burning the cake, but she was excited about making it.",
+      "options": [],
+      "self_check": [
+        "介系詞 about 後方動詞 burn 是否精準寫成 burning (不重複 n)",
+        "make 是否去 e 加上 -ing 變為 making",
+        "對等連接詞 but 前後兩子句的完整拼寫與標點是否正確"
+      ],
+      "explanation": {
+        "point": "介系詞後接動名詞規則：worried about burning 與 excited about making",
+        "examPurpose": "考核學生介系詞後強制接動名詞 (Preposition + V-ing) 的文法守恆定律及動詞去 e 加 ing (making) 的拼字規則。",
+        "correctReason": "介系詞 about 後方動詞必須轉為動名詞：burn 加 -ing 成為 burning；make 去 e 加 -ing 成為 making。",
+        "note": "課本故事原文：I was worried about burning the cake... I was excited about making the cake.",
+        "trap": "burn 誤雙寫 n 拼成 burnning，或 make 忘記去 e 拼成 makeing，或直接照抄原形動詞。",
+        "commonTraps": [
+          "動名詞拼寫陷阱：make 必須去 e 再加 -ing 成為 making (不可寫 makeing)；burn 字尾不重複 n 直接加 -ing。",
+          "介系詞照抄陷阱：學生常只注意前方的 about，後方的動詞卻忘記加 -ing 原封不動抄寫。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "worried about scorching / excited about baking",
+          "afraid of ruining / thrilled about creating"
+        ],
+        "grammarCompare": "所有介系詞 (about, at, in, by, of, for, with, without) 後方動詞均需加 -ing，無一例外。",
+        "examVariations": "題型常見於課文克漏字填空、括號動詞正確形式填空、烘焙情境句子重寫。"
+      }
+    },
+    {
+      "id": "q_w12_odg3_u16_16",
+      "book_id": "gra3",
+      "unit_id": "gra3_16",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "part_title": "Part C: Write sentences using Gerunds (V-ing) as subjects or after prepositions",
+      "part_instructions": "請在紙上將括號內的動詞改為動名詞 (V-ing) 並寫出完整句子（注意動名詞作主詞時搭配單數動詞）。",
+      "sentence_form": "V-ing (Gerund Subject) + Singular Verb / Preposition + V-ing",
+      "difficulty": "★★★★★",
+      "difficulty_level": 10,
+      "question": "Combine the prompt words into a complete sentence using a gerund subject: (Eat) lots of chemicals (be) dangerous for our body.",
+      "answer": "Eating lots of chemicals is dangerous for our body.",
+      "options": [],
+      "self_check": [
+        "句首 Eat 是否正確轉化為動名詞 Eating 且字首大寫 E",
+        "動詞 (be) 是否依動名詞單數主詞填入單數 is 而非複數 are",
+        "dangerous for our body 拼寫與句尾標點句點是否精準"
+      ],
+      "explanation": {
+        "point": "動名詞主詞核心單數動詞判定：Eating lots of chemicals is...",
+        "examPurpose": "考核學生在面臨複數名詞 chemicals 干擾時，仍能堅定依動名詞主詞 Eating 判定搭配單數 be 動詞 is 的高階文法控制力。",
+        "correctReason": "主詞為動名詞 Eating（食用這件事），屬於不可數的抽象單一事件，因此 be 動詞必須使用單數 is。",
+        "note": "即便動名詞後面接有複數受詞 (chemicals)，謂語動詞依然嚴格受動名詞支配，必用單數 is！",
+        "trap": "絕大多數學生會被緊鄰的複數 chemicals 迷惑，而填入複數 are，這是國中會考與私中入學必考題。",
+        "commonTraps": [
+          "名詞複數誘騙陷阱：緊鄰 be 動詞的 chemicals 是複數名詞，學生極易手滑填入 are，正確主詞為 Eating 必填 is。",
+          "單字拼寫陷阱：chemicals 容易拼錯，dangerous 容易漏掉字母 o 拼成 dangerus。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "Consuming many artificial additives is harmful to our health.",
+          "Taking in too many chemicals is bad for our well-being."
+        ],
+        "grammarCompare": "Eating chemicals is dangerous (動名詞做主詞用 is) vs Chemicals are dangerous (名詞複數做主詞用 are)。",
+        "examVariations": "題型常見於段考進階除錯題、主謂一致造句題以及會考克漏字文法陷阱題。"
+      }
+    },
+    {
+      "id": "q_w12_odg3_u16_17",
+      "book_id": "gra3",
+      "unit_id": "gra3_16",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "choice",
+      "category_tag": "grammar",
+      "difficulty": "★☆☆☆☆",
+      "difficulty_level": 1,
+      "question": "If you are interested _____ eating healthily, you should always check the nutrition facts on the label.",
+      "options": [
+        "in",
+        "about",
+        "at",
+        "with"
+      ],
+      "answer": "in",
+      "explanation": {
+        "point": "interested 固定搭配介系詞 in (be interested in + V-ing)",
+        "examPurpose": "考核學生對本課最核心形容詞 interested 固定搭配介系詞 in 的直覺辨識與選詞能力。",
+        "correctReason": "interested 固定搭配介系詞 in (be interested in something / doing something)，表示對某事物或活動感興趣。",
+        "note": "課文第一段原文：If you're interested in eating healthily, you can find out how much salt, fat, etc., is in a product.",
+        "trap": "中文常說「對...感興趣」，學生容易直譯填入 about 或 to。",
+        "distractorAnalysis": {
+          "about": "受中文「對...感興趣」直譯誤導，英語中 interested 絕不能搭配 about。",
+          "at": "at 用於技能擅長 (good at)，不能與 interested 搭配表示興趣。",
+          "with": "with 用於滿意度 (happy with)，不能與 interested 搭配表達興趣。"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "keen on",
+          "fond of",
+          "curious about"
+        ],
+        "grammarCompare": "be interested in 後接動名詞 (eating)；若是 interesting 則是形容事物本身有趣 (The food label is interesting)。",
+        "examVariations": "題型常考介系詞四選一選擇題、動名詞型態選填題以及對話情境填空。"
+      }
+    },
+    {
+      "id": "q_w12_odg3_u16_18",
+      "book_id": "gra3",
+      "unit_id": "gra3_16",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "choice",
+      "category_tag": "grammar",
+      "difficulty": "★★☆☆☆",
+      "difficulty_level": 2,
+      "question": "It was very kind _____ Grandma to bake delicious fruit tarts for all of us.",
+      "options": [
+        "of",
+        "for",
+        "with",
+        "to"
+      ],
+      "answer": "of",
+      "explanation": {
+        "point": "評價人物性格特質句型：It is/was + kind + OF + 某人 + to V",
+        "examPurpose": "考核學生對虛主詞評價人物善良特質時必須使用介系詞 of，而非 for 或 with 的句型掌握。",
+        "correctReason": "kind 是形容人的親切善良特質，在 It is + adj + of sb to do sth 句型中，介系詞絕對必須使用 of。",
+        "note": "若形容事物本身性質（如 It is difficult for me），才使用 for；形容人的品格必用 of。",
+        "trap": "最普遍的大考陷阱：看見 It is 就直覺選 for，忽略了 kind 是形容人的優美性格。",
+        "distractorAnalysis": {
+          "for": "for 用於客觀事物難易度 (easy for me)，不能用於評價人的性格 (kind of sb)。",
+          "with": "受中文「對某人來說很好」影響誤用 with，英語評價人性格絕不用 with。",
+          "to": "to 為不定詞引導詞或方向介系詞，不能置於人稱名詞前表示評價歸屬。"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "nice of",
+          "sweet of",
+          "generous of"
+        ],
+        "grammarCompare": "It is kind of you to help me (讚賞你的善良，用 of) vs It is important for you to study (強調讀書的重要性，用 for)。",
+        "examVariations": "題型常見於 of vs for 辨析選擇題、段考錯題改錯題以及虛主詞重組題。"
+      }
+    },
+    {
+      "id": "q_w12_odg3_u16_19",
+      "book_id": "gra3",
+      "unit_id": "gra3_16",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "choice",
+      "category_tag": "grammar",
+      "difficulty": "★★☆☆☆",
+      "difficulty_level": 3,
+      "question": "Many shoppers were surprised _____ how much sugar was contained in a single bottle of soda.",
+      "options": [
+        "by",
+        "of",
+        "about",
+        "with"
+      ],
+      "answer": "by",
+      "explanation": {
+        "point": "surprised 固定搭配介系詞 by (be surprised by + 事實/數字)",
+        "examPurpose": "考核學生對被動情緒形容詞 surprised 與介系詞 by 的固定搭配及排除 of 等干擾項的能力。",
+        "correctReason": "受到外在客觀事實或震驚數據的觸動與衝擊，課本標準搭配介系詞為 by (surprised by how much sugar...)。",
+        "note": "surprised 亦可接 at，但嚴禁搭配 of；課本除錯大題特別將 surprised of 列為核心錯題。",
+        "trap": "受中文思考影響誤選 of 或 about，特別是 of 是歷屆段考最高頻的誘答項。",
+        "distractorAnalysis": {
+          "of": "課本除錯大題特別糾錯的典型陷阱！surprised 絕不能搭配 of。",
+          "about": "受中文直譯「關於...感到驚訝」影響，但在標準用法中必為 surprised by。",
+          "with": "with 用於滿意或厭煩 (happy/bored with)，不能與 surprised 搭配。"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "amazed by",
+          "shocked by",
+          "stunned by"
+        ],
+        "grammarCompare": "surprised by 後方常接疑問詞引導的名詞子句 (how many/how much)，表達受到該事實的震驚。",
+        "examVariations": "題型常見於食品科普閱讀克漏字、介系詞選擇題與抓錯訂正題。"
+      }
+    },
+    {
+      "id": "q_w12_odg3_u16_20",
+      "book_id": "gra3",
+      "unit_id": "gra3_16",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "choice",
+      "category_tag": "grammar",
+      "difficulty": "★★☆☆☆",
+      "difficulty_level": 3,
+      "question": "Italy and France are world-famous _____ their traditional food culture and delicious cheeses.",
+      "options": [
+        "for",
+        "about",
+        "with",
+        "at"
+      ],
+      "answer": "for",
+      "explanation": {
+        "point": "famous 固定搭配介系詞 for (be famous for 以...聞名)",
+        "examPurpose": "考核學生對國家產物名聲形容詞 famous 固定搭配介系詞 for 的記憶與辨析能力。",
+        "correctReason": "be famous for 表示「以某項名產、特產、特色或文化聞名於世」，固定搭配介系詞 for。",
+        "note": "課文除錯大題原句改編：Italy is famous for its pizza and pasta.",
+        "trap": "中文常說「關於某事很有名」，極易誤選 about 或 with。",
+        "distractorAnalysis": {
+          "about": "受中文「關於...很有名」直譯影響，英語表以特產聞名必須用 for。",
+          "with": "with 表示伴隨或滿意，不能用在 famous 後面表達聞名的原因。",
+          "at": "at 表示在某技能上的專長 (good at)，不能用於表達國家以特產聞名。"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "well-known for",
+          "renowned for",
+          "celebrated for"
+        ],
+        "grammarCompare": "famous for 表示「以某特色聞名」(famous for its pizza)；famous as 表示「以某身分聞名」(famous as a chef)。",
+        "examVariations": "題型常考地理特產配對、形容詞介系詞選擇題及名詞短語填空。"
+      }
+    },
+    {
+      "id": "q_w12_odg3_u16_21",
+      "book_id": "gra3",
+      "unit_id": "gra3_16",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "choice",
+      "category_tag": "grammar",
+      "difficulty": "★★☆☆☆",
+      "difficulty_level": 3,
+      "question": "The cake tasted completely awful because the mixing bowl was full _____ salt instead of sugar.",
+      "options": [
+        "of",
+        "with",
+        "in",
+        "about"
+      ],
+      "answer": "of",
+      "explanation": {
+        "point": "full 固定搭配介系詞 of (be full of 裝滿/充滿某物質)",
+        "examPurpose": "考核學生對形容詞 full 固定搭配介系詞 of 的掌握，並排除 filled with 帶來的干擾。",
+        "correctReason": "形容詞 full 固定搭配介系詞 of (full of salt)，表達容器或空間內充滿了某種實體物質。",
+        "note": "課文故事原文：Ugh! It's full of salt! I had given my sister a cup of salt, not sugar.",
+        "trap": "受 filled with 或中文「裝滿著」影響，高達四成學生會誤選 with。",
+        "distractorAnalysis": {
+          "with": "受 filled with 混淆！full 固定搭配 of，只有 filled 才能搭配 with。",
+          "in": "in 表示在...裡面，不能與 full 連用構成「裝滿」的固定搭配片語。",
+          "about": "about 表示關於或情緒引發原因，不能用於具體物質充滿容器的語境。"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "filled with",
+          "packed with",
+          "loaded with"
+        ],
+        "grammarCompare": "full of 是形容詞搭配 of；filled with 則是動詞 fill 的被動分詞搭配 with，兩者意思相同但介系詞不同。",
+        "examVariations": "題型常見於故事閱讀理解、介系詞四選一選擇題及段考克漏字填空。"
+      }
+    },
+    {
+      "id": "q_w12_odg3_u16_22",
+      "book_id": "gra3",
+      "unit_id": "gra3_16",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "choice",
+      "category_tag": "grammar",
+      "difficulty": "★★★★★",
+      "difficulty_level": 8,
+      "question": "_____ food labels before buying snacks helps children avoid dangerous food allergies.",
+      "options": [
+        "Reading",
+        "Read",
+        "To reading",
+        "Reads"
+      ],
+      "answer": "Reading",
+      "explanation": {
+        "point": "動名詞作主詞：Reading food labels 視為單數主詞 + 單數動詞 helps",
+        "examPurpose": "考核學生辨識句子主詞位置需要使用動名詞 (Reading) 及主謂一致配合單數動詞 helps 的綜合文法能力。",
+        "correctReason": "整個句子的謂語動詞為 helps，空格處需要非謂語動詞充當主詞，動名詞 Reading 正確擔任名詞性主詞。",
+        "note": "動名詞作主詞代表一項行為，動詞需用第三人稱單數形式 (helps)。",
+        "trap": "學生常誤選原形動詞 Read，誤將句子當成祈使句，但後方已有謂語動詞 helps。",
+        "distractorAnalysis": {
+          "Read": "原形動詞不能直接擔任句子的主詞，若為祈使句後方不應出現謂語動詞 helps。",
+          "To reading": "英語中無 To reading 這種錯誤的不定詞結構，不定詞應為 to read。",
+          "Reads": "三單動詞 Reads 不能置於句首充當主詞，主詞必須為名詞或動名詞。"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "Checking",
+          "Examining",
+          "Inspecting"
+        ],
+        "grammarCompare": "Reading labels helps us (動名詞主詞) vs If you read labels, you will know (條件子句動詞)。",
+        "examVariations": "題型常見於會考第一大題文法選擇、非謂語動詞形式判斷題及段考長句結構分析。"
+      }
+    },
+    {
+      "id": "q_w12_odg3_u16_23",
+      "book_id": "gra3",
+      "unit_id": "gra3_16",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "choice",
+      "category_tag": "reading",
+      "difficulty": "★★★☆☆",
+      "difficulty_level": 5,
+      "question": "According to the \"Food Labels\" passage, why should people read the list of ingredients on food packages?",
+      "options": [
+        "To check how many chemicals are in the food and avoid things they are allergic to.",
+        "To find out the phone number of the food company that made the product.",
+        "To learn how to draw colorful pictures of vegetables in the supermarket.",
+        "To compare the supermarket prices of different kinds of fruit juice."
+      ],
+      "answer": "To check how many chemicals are in the food and avoid things they are allergic to.",
+      "explanation": {
+        "point": "食品標籤說明文閱讀理解：閱讀成分清單 (ingredients) 的核心目的",
+        "examPurpose": "考核學生對說明文細節的定位檢索能力，精確理解閱讀成分清單是為了確認化學添加物與防範過敏。",
+        "correctReason": "課文原文明確指出：Are you worried about eating lots of chemicals? You can read the list of ingredients... read the label if you are afraid of eating something that you are allergic to.",
+        "note": "食品成分清單 (ingredients) 最重要的健康功能即為把關化學添加物與過敏原。",
+        "trap": "選項設計了電話號碼、畫畫、比價等干擾項，需依據文章真實細節作答。",
+        "distractorAnalysis": {
+          "To find out the phone number of the food company that made the product.": "課文中完全未提及成分清單是用來查詢食品公司的電話號碼。",
+          "To learn how to draw colorful pictures of vegetables in the supermarket.": "課文提到看圖片是為了確認不知名的產品，而非學習繪畫蔬菜。",
+          "To compare the supermarket prices of different kinds of fruit juice.": "成分清單標註的是食品原料成分，而不是超市的販售價格標籤。"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "check contents / prevent allergic reactions",
+          "examine ingredients / stay safe"
+        ],
+        "grammarCompare": "afraid of eating something that you are allergic to 包含介系詞接動名詞 (afraid of eating) 及關係子句 (that you are allergic to)。",
+        "examVariations": "題型常見於素養閱讀理解、細節事實定位題及生活健康常識英文推論題。"
+      }
+    },
+    {
+      "id": "q_w12_odg3_u16_24",
+      "book_id": "gra3",
+      "unit_id": "gra3_16",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "choice",
+      "category_tag": "reading",
+      "difficulty": "★★★☆☆",
+      "difficulty_level": 5,
+      "question": "According to the \"Food Labels\" text, what should shoppers do if they are curious about how to cook the product?",
+      "options": [
+        "Read the cooking instructions printed on the label.",
+        "Look at the picture on the front of the box.",
+        "Call their friends to ask about the recipe.",
+        "Check the list of chemicals in the supermarket."
+      ],
+      "answer": "Read the cooking instructions printed on the label.",
+      "explanation": {
+        "point": "食品標籤說明文閱讀理解：烹飪指示 (cooking instructions) 的用途",
+        "examPurpose": "考核學生對課文條件句 If you are curious about how to cook the product 的直接因果細節定位能力。",
+        "correctReason": "課文原文明確指出：Are you curious about how to cook the product? Read the instructions on the label.",
+        "note": "instructions 意為操作指南、烹飪步驟說明，印於包裝標籤上提供料理指引。",
+        "trap": "容易混淆 Look at the picture（這是用於不確定產品是什麼時的建議）。",
+        "distractorAnalysis": {
+          "Look at the picture on the front of the box.": "看圖片是課文建議給「不確定產品是什麼 (not sure what a product is)」的解決辦法。",
+          "Call their friends to ask about the recipe.": "課文完全未提及打電話給朋友詢問食譜，此為捏造選項。",
+          "Check the list of chemicals in the supermarket.": "化學物質清單是用來了解添加物，並不能提供具體的烹調方法指示。"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "follow the cooking steps",
+          "read the preparation guide"
+        ],
+        "grammarCompare": "curious about how to cook 包含形容詞搭配介系詞 about 及「疑問詞 + to + 原形動詞」的名詞片語結構。",
+        "examVariations": "題型常見於說明文閱讀測驗、標籤圖文資訊對照題及條件句細節匹配題。"
+      }
+    },
+    {
+      "id": "q_w12_odg3_u16_25",
+      "book_id": "gra3",
+      "unit_id": "gra3_16",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "choice",
+      "category_tag": "reading",
+      "difficulty": "★★★☆☆",
+      "difficulty_level": 6,
+      "question": "In the dialogue between Hana and Kamil, why is Kamil angry about food companies?",
+      "options": [
+        "Because food companies put a lot of chemicals in their products.",
+        "Because food companies only sell food in expensive supermarkets.",
+        "Because the party snacks are not delivered on time for the party.",
+        "Because Hana does not want to read the nutrition facts with him."
+      ],
+      "answer": "Because food companies put a lot of chemicals in their products.",
+      "explanation": {
+        "point": "對話篇章細節理解：Kamil 對食品公司感到生氣的原因",
+        "examPurpose": "考核學生對 Hana 與 Kamil 對話中情感因果關係的理解，掌握 Kamil 憤怒於食品添加化學物質的事實。",
+        "correctReason": "Kamil 在對話中說道：I am angry about the number of chemicals that food companies put in their products. It is very bad of them to use a lot of chemicals.",
+        "note": "be angry about sth 表示因某事而生氣，受詞為食品公司添加大量化學物的行為。",
+        "trap": "選項設計了價格昂貴、派對送貨延誤、哈娜不看標籤等干擾情境。",
+        "distractorAnalysis": {
+          "Because food companies only sell food in expensive supermarkets.": "對話中完全未提及超市價格昂貴，與原文生氣原因不符。",
+          "Because the party snacks are not delivered on time for the party.": "對話中 Kamil 對派對食物感到興奮期待，並無延遲送達的情節。",
+          "Because Hana does not want to read the nutrition facts with him.": "Hana 同意 Kamil 的看法並認真看標籤，兩人觀點高度一致。"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "upset about artificial additives",
+          "annoyed by chemical ingredients"
+        ],
+        "grammarCompare": "angry about the number of chemicals 中的 that 引導關係代名詞子句修飾先行詞 chemicals。",
+        "examVariations": "題型常見於角色情感動機推論題、對話細節檢索題及因果關係配對題。"
+      }
+    },
+    {
+      "id": "q_w12_odg3_u16_26",
+      "book_id": "gra3",
+      "unit_id": "gra3_16",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "choice",
+      "category_tag": "reading",
+      "difficulty": "★★★★☆",
+      "difficulty_level": 6,
+      "question": "What is Kamil excited about at the end of his conversation with Hana?",
+      "options": [
+        "The delicious food they will have for their party.",
+        "Buying more chemicals from the food company.",
+        "Making a giant salty cake in the kitchen with Lisa.",
+        "Going to the supermarket to return the junk food."
+      ],
+      "answer": "The delicious food they will have for their party.",
+      "explanation": {
+        "point": "對話篇章結尾細節理解：Kamil 在對話末尾感到興奮的事物",
+        "examPurpose": "考核學生對對話篇章結尾轉折的把握，理解 Kamil 雖然不滿化學物，但仍對派對食物充滿興奮期待。",
+        "correctReason": "對話最後一句 Kamil 說：We do. But I am excited about the food for our party!",
+        "note": "excited about 後接名詞 the food for our party，表示對即將到來的派對美食滿心期待。",
+        "trap": "學生容易將另一個故事中的角色 Lisa 烘焙蛋糕混入此題選項作為干擾。",
+        "distractorAnalysis": {
+          "Buying more chemicals from the food company.": "Kamil 極度厭惡化學添加物，不可能興奮於購買更多化學物質。",
+          "Making a giant salty cake in the kitchen with Lisa.": "做鹹蛋糕是 Lisa 與姊姊的故事，Kamil 並未參與 Lisa 的廚房烘焙。",
+          "Going to the supermarket to return the junk food.": "對話中未提到去超市退還垃圾食物，此為憑空捏造的選項。"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "looking forward to the party treats",
+          "thrilled about the party meal"
+        ],
+        "grammarCompare": "excited about the food for our party 展示了形容詞搭配介系詞 about 接名詞片語的標準日常用法。",
+        "examVariations": "題型常見於對話主旨推論、末句情感轉折題及篇章跨段落細節辨析。"
+      }
+    },
+    {
+      "id": "q_w12_odg3_u16_27",
+      "book_id": "gra3",
+      "unit_id": "gra3_16",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "choice",
+      "category_tag": "reading",
+      "difficulty": "★★★★☆",
+      "difficulty_level": 7,
+      "question": "In the story \"Lisa's Salty Cake Adventure\", why did Lisa's sister exclaim \"Ugh!\" after tasting the cake?",
+      "options": [
+        "Because Lisa accidentally gave her sister a cup of salt instead of sugar.",
+        "Because the oven was too cold and the cake was not baked at all.",
+        "Because Lisa dropped the whole cake onto the dirty kitchen floor.",
+        "Because the cake was full of hot chili powder and bitter medicine."
+      ],
+      "answer": "Because Lisa accidentally gave her sister a cup of salt instead of sugar.",
+      "explanation": {
+        "point": "烘焙故事篇章細節理解：蛋糕味道可怕發出 Ugh! 的根本原因",
+        "examPurpose": "考核學生對故事核心衝突點（誤將鹽巴當白糖加入蛋糕糊）的情節因果理解與英文細節提取能力。",
+        "correctReason": "故事原文：\"Ugh!\" she said. \"It's full of salt!\" I couldn't believe it. I had given my sister a cup of salt, not a cup of sugar.",
+        "note": "full of salt instead of sugar 是本課核心文法與故事高潮的完美結合點。",
+        "trap": "選項設計了烤箱沒熱、蛋糕掉在地上、辣椒粉等荒謬干擾項。",
+        "distractorAnalysis": {
+          "Because the oven was too cold and the cake was not baked at all.": "故事中烤箱正常運轉且蛋糕已烤好 (When the cake was ready)，烤箱溫度無問題。",
+          "Because Lisa dropped the whole cake onto the dirty kitchen floor.": "故事中蛋糕並未掉到地板上，姊姊是在餐桌品嚐切片時發現問題。",
+          "Because the cake was full of hot chili powder and bitter medicine.": "故事中加入的是鹽巴 (salt)，絕非辣椒粉或苦藥，此為捏造選項。"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "mistook salt for sugar",
+          "accidentally used salt instead of sugar"
+        ],
+        "grammarCompare": "had given 是過去完成式，表示「在姊姊嚐蛋糕之前」就已經發生的動作，搭配 instead of (代替)。",
+        "examVariations": "題型常考故事原因分析、順序排列題及篇章代名詞指涉題。"
+      }
+    },
+    {
+      "id": "q_w12_odg3_u16_28",
+      "book_id": "gra3",
+      "unit_id": "gra3_16",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "choice",
+      "category_tag": "reading",
+      "difficulty": "★★★★★",
+      "difficulty_level": 8,
+      "question": "How did Lisa's sister react when she discovered that Lisa made the mistake with the salt?",
+      "options": [
+        "She thought it was funny and was not angry with Lisa.",
+        "She shouted at Lisa angrily and threw the cake away.",
+        "She cried loudly because their birthday party was ruined.",
+        "She blamed Grandma for buying salt instead of sugar."
+      ],
+      "answer": "She thought it was funny and was not angry with Lisa.",
+      "explanation": {
+        "point": "烘焙故事篇章情感推論：姊姊對鹽巴失誤的反應態度",
+        "examPurpose": "考核學生對故事結尾人物心理情感與幽默包容態度的深層理解與推論歸納能力。",
+        "correctReason": "故事結尾明確記載：I was very sorry about making that mistake, but my sister thought it was funny!",
+        "note": "thought it was funny 展現了姊姊幽默、寬容且溫馨的姊妹情感，並未對 Lisa 生氣。",
+        "trap": "常理可能猜測姊姊大發雷霆或大哭，但必須忠於文章原文描述：thought it was funny。",
+        "distractorAnalysis": {
+          "She shouted at Lisa angrily and threw the cake away.": "文章明確說明姊姊覺得這件事很有趣 (thought it was funny)，並沒有生氣大吼。",
+          "She cried loudly because their birthday party was ruined.": "姊姊並未大哭，整篇故事結尾洋溢著輕鬆溫馨的家庭幽默氛圍。",
+          "She blamed Grandma for buying salt instead of sugar.": "故事中阿嬤並未出現，姊姊完全沒有怪罪任何人，純屬趣味烏龍。"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "amused by the accident",
+          "found the cooking blunder amusing"
+        ],
+        "grammarCompare": "sorry about making that mistake (為犯錯抱歉) 與 thought it was funny (覺得很有趣) 形成生動的情感對比。",
+        "examVariations": "題型常見於角色態度推論題、故事主旨總結題及課後閱讀素養評量。"
+      }
+    },
+    {
+      "id": "q_w12_od3_u16_01",
+      "book_id": "od3",
+      "unit_id": "od3_16",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★☆☆☆☆",
+      "question": "Listen to the pronunciation and sentence: \"Mrs. Washington saved an extra big slice of pie for a good little ________ she knows.\" Spell the target word for \"園丁；造園者\".",
+      "options": [],
+      "answer": "gardener",
+      "vocab_card": {
+        "word": "gardener",
+        "ipa": "/ˈɡɑːrdənər/",
+        "phonetic": "/ˈɡɑːrdənər/",
+        "syllables": "gar·den·er",
+        "pos": "名詞 (Noun)",
+        "chi": "園丁；造園者",
+        "meaning": "照料花園、修剪植物的花藝耕作者",
+        "breakdown": "garden(花園) + -er(人) -> 照料花園的人",
+        "trick": "趣味記憶：「花園(garden)裡的人(-er)」就是辛苦修剪花草的園丁！",
+        "scene": "在社區花園中蹲在土壤旁細心澆水拔草的志工或專家。",
+        "collocation": "skilled gardener, little gardener",
+        "img": "🧑‍🌾",
+        "context_eng": "Mrs. Washington saved a slice of pie for a good little gardener she knows.",
+        "example": "Mrs. Washington saved a slice of pie for a good little gardener she knows.",
+        "context_chi": "Washington 太太為她認識的一位優秀小園丁留了一大塊派。",
+        "chant": "Gardener, gardener, tends the seeds; watering plants and pulling weeds!",
+        "compare": "gardener (園丁) vs farmer (農夫，多指耕種大片農田作物的人)",
+        "note": "字尾為 -er，注意拼寫時不要漏掉中間的 e。"
+      },
+      "explanation": {
+        "point": "gardener 為名詞「園丁；花藝栽種者」，由 garden (花園) 加後綴 -er 構成。",
+        "examPurpose": "考查小六學生依據語音與語境線索精確拼寫花園照料者名詞 gardener 的能力。",
+        "correctReason": "在社區花園中照料植物、除草澆水的人稱為 gardener，注意字尾為 -er 且中間有 e。",
+        "note": "gardener [n.] 園丁；造園者。",
+        "trap": "拼寫時最容易漏掉中間的 e 誤寫成 gardner，或將字尾誤寫為 -or (gardenor)。",
+        "commonTraps": [
+          "拼寫時容易漏掉中間的字母 e，誤拼成 gardner。",
+          "受到 actor 等字尾混淆，將結尾 -er 誤寫成 -or (gardenor)。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "groundskeeper",
+          "horticulturist"
+        ],
+        "grammarCompare": "gardener 指照料花園菜圃的園丁；farmer 則特指耕作大片農田作物的農夫。",
+        "examVariations": "字彙定義題：Someone who takes care of plants and flowers in a garden is a gardener."
+      },
+      "target_chi": "園丁；造園者",
+      "target_pos": "名詞 (Noun)",
+      "masked_example": "Mrs. Washington saved an extra big slice of pie for a good little ________ she knows."
+    },
+    {
+      "id": "q_w12_od3_u16_02",
+      "book_id": "od3",
+      "unit_id": "od3_16",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★★☆☆☆",
+      "question": "Listen to the pronunciation and sentence: \"Mrs. Willie Mae Washington dug up orange ________ to bake a warm autumn pie.\" Spell the target word for \"地瓜；甘藷\".",
+      "options": [],
+      "answer": "sweet potato",
+      "vocab_card": {
+        "word": "sweet potato",
+        "ipa": "/swiːt pəˈteɪtoʊ/",
+        "phonetic": "/swiːt pəˈteɪtoʊ/",
+        "syllables": "sweet po·ta·to",
+        "pos": "名詞 (Noun)",
+        "chi": "地瓜；甘藷",
+        "meaning": "具有橙黃色甜味果肉的地下食用塊根植物",
+        "breakdown": "sweet(甜的) + potato(馬鈴薯) -> 甜甜的塊莖即地瓜",
+        "trick": "諧音記憶：「水甜」加上「破天頭」-> 甜如糖水、產量破天頭的大地瓜！",
+        "scene": "秋天在土壤泥土中挖掘出深橙色的大地瓜，用來烤地瓜派。",
+        "collocation": "sweet potato pie, dig up sweet potatoes",
+        "img": "🍠",
+        "context_eng": "Mrs. Willie Mae Washington dug up orange sweet potatoes to make a pie.",
+        "example": "Mrs. Willie Mae Washington dug up orange sweet potatoes to make a pie.",
+        "context_chi": "Washington 太太挖出橙色的地瓜來製作美味地瓜派。",
+        "chant": "Sweet potato, orange and round; growing quietly in the ground!",
+        "compare": "sweet potato (地瓜/甘藷) vs potato (馬鈴薯/洋芋)",
+        "note": "複數形必須在 potato 後加 -es 變成 sweet potatoes。"
+      },
+      "explanation": {
+        "point": "sweet potato 為複合名詞「地瓜；甘藷」，生長於泥土裡 (grow in the ground)。",
+        "examPurpose": "評量學生在蔬果詞彙中正確拼寫複合名詞 sweet potato 及單複數變化的能力。",
+        "correctReason": "sweet (甜的) 加上 potato (馬鈴薯) 即為甘藷地瓜，複數形需在 potato 後加 -es 成為 sweet potatoes。",
+        "note": "sweet potato [n.] 地瓜；甘藷。",
+        "trap": "複數常誤漏 e 寫成 sweet potatos，或兩字黏在一起誤拼成 sweetpotato。",
+        "commonTraps": [
+          "複數形容易漏掉結尾字母 e，錯誤拼寫為 sweet potatos。",
+          "誤將兩個獨立單字連寫在一起拼成一個字 sweetpotato。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "yam",
+          "sweet root"
+        ],
+        "grammarCompare": "sweet potato 為生長於地底的塊根 (tuber)；普通 potato 同樣長在地底但甜度較低。",
+        "examVariations": "生長位置題：Sweet potatoes and carrots grow in the ground under the soil."
+      },
+      "target_chi": "地瓜；甘藷",
+      "target_pos": "名詞 (Noun)",
+      "masked_example": "Mrs. Willie Mae Washington dug up orange ________ to bake a warm autumn pie."
+    },
+    {
+      "id": "q_w12_od3_u16_03",
+      "book_id": "od3",
+      "unit_id": "od3_16",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★☆☆☆☆",
+      "question": "Listen to the pronunciation and sentence: \"Mr. Singh carried away a basket full of fresh ________ from the community garden.\" Spell the target word for \"豆子；豆類\".",
+      "options": [],
+      "answer": "beans",
+      "vocab_card": {
+        "word": "beans",
+        "ipa": "/biːnz/",
+        "phonetic": "/biːnz/",
+        "syllables": "beans",
+        "pos": "名詞 (Noun)",
+        "chi": "豆子；豆類",
+        "meaning": "生長於豆莢內可食用的種子",
+        "breakdown": "單數 bean + 複數 -s -> 豆莢內的顆顆豆子",
+        "trick": "自然發音法：ea 發長音 /iː/，唸起來像「冰」的清脆聲！",
+        "scene": "秋收時農夫把攀爬在竹架上的長長豆莢摘下，裝成滿滿一竹籃。",
+        "collocation": "a basket full of beans, green beans",
+        "img": "🫘",
+        "context_eng": "Mr. Singh carried away a basket full of beans from the community garden.",
+        "example": "Mr. Singh carried away a basket full of beans from the community garden.",
+        "context_chi": "Singh 先生從社區花園裡提走了一整籃滿滿的豆子。",
+        "chant": "Beans on vines, beans in a pot; cook them healthy, eat them hot!",
+        "compare": "beans (豆類) vs peas (豌豆，多指小圓形綠色豌豆)",
+        "note": "通常以複數形 beans 出現；搭配量詞可用 a basket of beans。"
+      },
+      "explanation": {
+        "point": "beans 為名詞「豆子；豆莢類種子」，母音字母組合 ea 發長母音 /iː/。",
+        "examPurpose": "考核學生對基礎蔬菜農作名詞 beans 的拼讀規則與複數習慣用法的掌握。",
+        "correctReason": "生長在豆莢內的食用種子稱為 beans，自然發音 ea 發 /iː/，日常多以複數形呈現。",
+        "note": "beans [n.] 豆子；豆類。",
+        "trap": "容易與發音相近的 bins (垃圾桶) 或 peas (豌豆) 發生聽力混淆。",
+        "commonTraps": [
+          "聽音時容易將長母音 /iː/ 誤聽成短母音 /ɪ/ 而拼寫成 bins。",
+          "受到 peas 影響將開頭字母 b 混淆寫成 p。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "legumes",
+          "green beans"
+        ],
+        "grammarCompare": "beans 多指各類豆莢或乾豆；peas 專指小顆圓形的綠色豌豆。",
+        "examVariations": "量詞搭配：a basket full of beans (裝滿豆子的提籃)。"
+      },
+      "target_chi": "豆子；豆類",
+      "target_pos": "名詞 (Noun)",
+      "masked_example": "Mr. Singh carried away a basket full of fresh ________ from the community garden."
+    },
+    {
+      "id": "q_w12_od3_u16_04",
+      "book_id": "od3",
+      "unit_id": "od3_16",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★☆☆☆☆",
+      "question": "Listen to the pronunciation and sentence: \"Standing higher than all the plants and climbing ________ was a giant golden sunflower.\" Spell the target word for \"藤蔓；攀爬植物\".",
+      "options": [],
+      "answer": "vines",
+      "vocab_card": {
+        "word": "vines",
+        "ipa": "/vaɪnz/",
+        "phonetic": "/vaɪnz/",
+        "syllables": "vines",
+        "pos": "名詞 (Noun)",
+        "chi": "藤蔓；攀爬植物",
+        "meaning": "具有細長莖條、需攀附在牆面或架子上生長的爬藤植物",
+        "breakdown": "vine + 複數 -s -> 沿著支架攀爬的條狀藤蔓",
+        "trick": "拼讀記憶：字母 i 在字尾不發音 e 影響下發雙母音 /aɪ/。",
+        "scene": "爬滿紅磚牆或瓜棚的綠色葉蔓，西瓜、南瓜和小黃瓜都長在藤蔓上。",
+        "collocation": "grow on vines, green vines",
+        "img": "🌿",
+        "context_eng": "Standing higher than all the plants and vines in the garden was a giant sunflower.",
+        "example": "Standing higher than all the plants and vines in the garden was a giant sunflower.",
+        "context_chi": "佇立在花園所有植物與藤蔓之上的，是一朵巨大的向日葵。",
+        "chant": "Climbing vines upon the wall; holding pumpkins green and tall!",
+        "compare": "vines (藤蔓) vs branches (硬質樹枝)",
+        "note": "介系詞固定搭配 on vines (長在藤蔓上)。"
+      },
+      "explanation": {
+        "point": "vines 為名詞「藤蔓；爬藤植物」，單數為 vine，字尾 e 不發音使 i 發 /aɪ/。",
+        "examPurpose": "檢測學生對攀爬生長型植物名詞 vines 的拼音與地方介系詞搭配理解。",
+        "correctReason": "依靠細長莖部攀附在牆壁或竹架生長的植物稱為 vines，常見南瓜與豆類皆 grow on vines。",
+        "note": "vines [n.] 藤蔓；攀爬植物。",
+        "trap": "字尾 e 不發音，拼寫時切勿漏掉 e 誤寫成 vins，或與 lines 混淆。",
+        "commonTraps": [
+          "拼寫時漏掉不發音的字尾 e，錯誤拼寫成 vins。",
+          "聽音時受到首字母發音干擾，誤拼成 wines (葡萄酒) 或 lines (線條)。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "creepers",
+          "climbing plants"
+        ],
+        "grammarCompare": "vines 指軟質可攀爬的藤蔓；branches 則指樹木硬質木本分枝。",
+        "examVariations": "介系詞片語題：Watermelons and pumpkins grow on vines along the ground."
+      },
+      "target_chi": "藤蔓；攀爬植物",
+      "target_pos": "名詞 (Noun)",
+      "masked_example": "Standing higher than all the plants and climbing ________ was a giant golden sunflower."
+    },
+    {
+      "id": "q_w12_od3_u16_05",
+      "book_id": "od3",
+      "unit_id": "od3_16",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★☆☆☆☆",
+      "question": "Listen to the pronunciation and sentence: \"Marisol planted her precious seed in the small community ________.\" Spell the target word for \"花園；菜園\".",
+      "options": [],
+      "answer": "garden",
+      "vocab_card": {
+        "word": "garden",
+        "ipa": "/ˈɡɑːrdən/",
+        "phonetic": "/ˈɡɑːrdən/",
+        "syllables": "gar·den",
+        "pos": "名詞 (Noun)",
+        "chi": "花園；菜園",
+        "meaning": "用以種植花卉、水果或蔬菜的土地區塊",
+        "breakdown": "gard(保護/圍繞) + -en -> 被圍起來細心照料的花草園地",
+        "trick": "聯想記憶：「嘎等」-> 鴨子嘎嘎叫著，等著進花園散步！",
+        "scene": "陽光穿透薄霧灑在社區花園裡，鄰居們分工除草、摘番茄、澆花。",
+        "collocation": "community garden, flower garden, vegetable garden",
+        "img": "🏡",
+        "context_eng": "Marisol planted a seed in the Garden of Happiness.",
+        "example": "Marisol planted a seed in the Garden of Happiness.",
+        "context_chi": "Marisol 在幸福花園裡種下了一顆小小的種子。",
+        "chant": "In the garden, green and bright; flowers bloom in summer light!",
+        "compare": "garden (花園/菜圃) vs park (公園，多指供公眾休憩運動的大型綠地)",
+        "note": "可做名詞也可做動詞 (gardening 做園藝)。"
+      },
+      "explanation": {
+        "point": "garden 為名詞「花園；菜圃」，由 gar- 加 -den 構成。",
+        "examPurpose": "考查小六學生對本單元核心主題空間名詞 garden 的標準聽寫。",
+        "correctReason": "種植花卉蔬菜的土地稱為 garden，本課核心主題即為 The Garden of Happiness。",
+        "note": "garden [n.] 花園；菜園。",
+        "trap": "容易誤將第二個音節的 e 寫成 a (誤拼成 gardan) 或與 guard (警衛) 混淆。",
+        "commonTraps": [
+          "將非重音節的母音字母 e 誤拼為 a，拼成 gardan。",
+          "受到 guard 拼寫影響，錯誤在開頭加上 u 拼成 guarden。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "yard",
+          "vegetable plot"
+        ],
+        "grammarCompare": "garden 指供個人或社區種植的花圃；park 則為供公眾休憩遊樂的廣大公園。",
+        "examVariations": "本課主題片語：The Garden of Happiness (幸福花園)。"
+      },
+      "target_chi": "花園；菜園",
+      "target_pos": "名詞 (Noun)",
+      "masked_example": "Marisol planted her precious seed in the small community ________."
+    },
+    {
+      "id": "q_w12_od3_u16_06",
+      "book_id": "od3",
+      "unit_id": "od3_16",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★★☆☆☆",
+      "question": "Listen to the pronunciation and sentence: \"A golden ________ shone on the street as cheerful neighbors gathered together.\" Spell the target word for \"薄霧；陰霾；光暈\".",
+      "options": [],
+      "answer": "haze",
+      "vocab_card": {
+        "word": "haze",
+        "ipa": "/heɪz/",
+        "phonetic": "/heɪz/",
+        "syllables": "haze",
+        "pos": "名詞 (Noun)",
+        "chi": "薄霧；陰霾；光暈",
+        "meaning": "空氣中因細微水氣、塵埃或陽光折射形成的朦朧金光或薄霧",
+        "breakdown": "單音節詞，a_e 發長音 /eɪ/",
+        "trick": "趣味諧音：「黑姿」-> 雖然叫黑姿，但金色薄霧 (golden haze) 卻金燦燦的！",
+        "scene": "早晨或黃昏陽光斜照街頭時，空氣中漂浮著一層溫暖朦朧的金黃光輝。",
+        "collocation": "golden haze, morning haze",
+        "img": "🌫️",
+        "context_eng": "A golden haze shone on the street as the big crowd gathered.",
+        "example": "A golden haze shone on the street as the big crowd gathered.",
+        "context_chi": "當人群聚集時，一道金黃色的光暈薄霧灑照在街道上。",
+        "chant": "Golden haze in morning light; street and houses shining bright!",
+        "compare": "haze (薄霧/光暈，多指大氣朦朧或金光) vs fog (濃霧，能見度極低)",
+        "note": "不可數名詞，常與形容詞 golden 連用構成 a golden haze。"
+      },
+      "explanation": {
+        "point": "haze 為不可數名詞「薄霧；金色光暈」，拼寫符合 a_e 長母音規則 /heɪz/。",
+        "examPurpose": "檢測學生掌握自然景觀與大氣光線詞彙 haze 的拼寫能力。",
+        "correctReason": "陽光折射在水氣塵埃中形成的朦朧金光稱為 a golden haze，字尾為 ze。",
+        "note": "haze [n.] 薄霧；光暈。",
+        "trap": "容易將字尾字母 z 誤寫為 s 拼成 hase，或誤聽成 hay (乾草)。",
+        "commonTraps": [
+          "將字尾的濁輔音字母 z 誤寫成清輔音字母 s 拼成 hase。",
+          "聽音時忽略尾音 /z/，誤拼成 hay 或 hate。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "mist",
+          "golden glow"
+        ],
+        "grammarCompare": "haze 多指金黃溫暖的朦朧光暈或薄霧；fog 則指濃重影響視線的白色水氣大霧。",
+        "examVariations": "課文關鍵描寫：A golden haze shone on the street as the crowd cheered."
+      },
+      "target_chi": "薄霧；陰霾；光暈",
+      "target_pos": "名詞 (Noun)",
+      "masked_example": "A golden ________ shone on the street as cheerful neighbors gathered together."
+    },
+    {
+      "id": "q_w12_od3_u16_07",
+      "book_id": "od3",
+      "unit_id": "od3_16",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★★☆☆☆",
+      "question": "Listen to the pronunciation and sentence: \"A creative group of ________ wanted to paint a beautiful mural on the brick wall.\" Spell the target word for \"青少年 (13至19歲)\".",
+      "options": [],
+      "answer": "teenagers",
+      "vocab_card": {
+        "word": "teenagers",
+        "ipa": "/ˈtiːnˌeɪdʒərz/",
+        "phonetic": "/ˈtiːnˌeɪdʒərz/",
+        "syllables": "teen·ag·ers",
+        "pos": "名詞 (Noun)",
+        "chi": "青少年 (13至19歲)",
+        "meaning": "十三歲到十九歲年齡階段的年輕人",
+        "breakdown": "teen(13-19字尾) + age(年齡) + -er(人) + -s -> 青少年群體",
+        "trick": "拆詞法：年齡 (age) 在 -teen 數字結尾的人 (-er) 就是青少年！",
+        "scene": "幾位年輕高中生拿著五顏六色的噴漆罐與畫筆，在街區磚牆上繪製向日葵壁畫。",
+        "collocation": "a group of teenagers, talented teenagers",
+        "img": "🧑‍🤝‍🧑",
+        "context_eng": "A group of teenagers wanted to paint a colorful mural on the wall.",
+        "example": "A group of teenagers wanted to paint a colorful mural on the wall.",
+        "context_chi": "一群青少年想要在牆上畫一幅色彩斑斕的壁畫。",
+        "chant": "Teenagers laugh and teenagers play; painting murals on a sunny day!",
+        "compare": "teenagers (13-19歲青少年) vs children (兒童) vs adults (成年人)",
+        "note": "注意拼寫為 teen- + age- + -r + -s，中間有 e。"
+      },
+      "explanation": {
+        "point": "teenagers 為名詞「青少年群體」，由 teen + age + -er + -s 複合構成。",
+        "examPurpose": "評量學生對複合年齡名詞 teenagers 的結構解析與字根拼寫精準度。",
+        "correctReason": "指年齡介於十三至十九歲的年輕人，單數為 teenager，複數加 s 為 teenagers。",
+        "note": "teenagers [n.] 青少年 (複數)。",
+        "trap": "常漏掉中間的字母 e (誤拼 teenagrs) 或漏掉 r 誤寫成 teenages (青少年時期)。",
+        "commonTraps": [
+          "漏掉名詞後綴中的字母 r，錯誤拼寫為抽象名詞 teenages。",
+          "拼寫時漏掉中間 age 的字母 e，拼成 teenagrs。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "adolescents",
+          "youths"
+        ],
+        "grammarCompare": "teenager 專指 13-19 歲；children 指 12 歲以下兒童；adults 指 18 或 20 歲以上成年人。",
+        "examVariations": "主詞片語：A group of teenagers decided to paint a giant sunflower mural."
+      },
+      "target_chi": "青少年 (13至19歲)",
+      "target_pos": "名詞 (Noun)",
+      "masked_example": "A creative group of ________ wanted to paint a beautiful mural on the brick wall."
+    },
+    {
+      "id": "q_w12_od3_u16_08",
+      "book_id": "od3",
+      "unit_id": "od3_16",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★★☆☆☆",
+      "question": "Listen to the pronunciation and sentence: \"The neighbors worked side by side to build a warm ________ where everyone helped.\" Spell the target word for \"社區；共同體\".",
+      "options": [],
+      "answer": "community",
+      "vocab_card": {
+        "word": "community",
+        "ipa": "/kəˈmjuːnəti/",
+        "phonetic": "/kəˈmjuːnəti/",
+        "syllables": "com·mu·ni·ty",
+        "pos": "名詞 (Noun)",
+        "chi": "社區；共同體",
+        "meaning": "生活在同一地區並共享生活空間、相互關懷的人群團體",
+        "breakdown": "com-(共同) + mun(責任/服務) + -ity(名詞字尾) -> 共同生活服務的群體",
+        "trick": "發音諧音：「渴謬泥梯」-> 社區居民渴望齊心協力，搭起溝通的泥梯！",
+        "scene": "住在同一條街上的鄰居們齊心協力整理廢棄空地，將它打造成社區花園。",
+        "collocation": "community garden, local community",
+        "img": "🏘️",
+        "context_eng": "The neighbors planted vegetables together in the small community garden.",
+        "example": "The neighbors planted vegetables together in the small community garden.",
+        "context_chi": "鄰居們在小小的社區花園裡一起種植蔬菜。",
+        "chant": "Community helpers, side by side; building gardens far and wide!",
+        "compare": "community (社區，強調人際互助) vs society (整個社會，範圍更廣)",
+        "note": "複數形去 y 加 -ies 變 communities。"
+      },
+      "explanation": {
+        "point": "community 為名詞「社區；共同體」，重音在第二音節 /kəˈmjuːnəti/。",
+        "examPurpose": "考查學生拼寫四音節社會名詞 community 的雙子音 mm 與字尾 -ity 規則。",
+        "correctReason": "居住在同一區域並互助合作的人群團體稱為 community，中間有兩個 m (com- + mun- + -ity)。",
+        "note": "community [n.] 社區；共同體。",
+        "trap": "最常漏掉一個 m 誤拼成 comunity，或將第三音節 i 誤寫為 a。",
+        "commonTraps": [
+          "拼寫時遺漏中間雙子音字母，錯誤拼成單個 m 的 comunity。",
+          "將第三音節弱化母音 /ə/ 誤拼為 a 寫成 communaty。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "neighborhood",
+          "local society"
+        ],
+        "grammarCompare": "community 強調彼此生活互助的小區；society 則指整個人類國家社會。",
+        "examVariations": "名詞修飾名詞：community garden (社區花園), community center (活動中心)。"
+      },
+      "target_chi": "社區；共同體",
+      "target_pos": "名詞 (Noun)",
+      "masked_example": "The neighbors worked side by side to build a warm ________ where everyone helped."
+    },
+    {
+      "id": "q_w12_od3_u16_09",
+      "book_id": "od3",
+      "unit_id": "od3_16",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★☆☆☆☆",
+      "question": "Listen to the pronunciation and sentence: \"A large ________ of smiling people filled the street like on a holiday.\" Spell the target word for \"人群；群眾\".",
+      "options": [],
+      "answer": "crowd",
+      "vocab_card": {
+        "word": "crowd",
+        "ipa": "/kraʊd/",
+        "phonetic": "/kraʊd/",
+        "syllables": "crowd",
+        "pos": "名詞 (Noun)",
+        "chi": "人群；群眾",
+        "meaning": "聚集在某一地點的眾多人流或群眾",
+        "breakdown": "單音節詞，ow 發雙母音 /aʊ/",
+        "trick": "聯想記憶：一群烏鴉 (crow) 飛進了人群 (crowd) 裡！",
+        "scene": "像過節般熱鬧非凡的街道上擠滿了鼓掌歡呼的鄰居與小朋友。",
+        "collocation": "a big crowd, a cheering crowd",
+        "img": "👥",
+        "context_eng": "There was a big crowd on the street, like on a holiday.",
+        "example": "There was a big crowd on the street, like on a holiday.",
+        "context_chi": "街上聚集了龐大的人群，就像在過節一般熱鬧。",
+        "chant": "A noisy crowd on the street today; clapping and cheering all the way!",
+        "compare": "crowd (人群，強調聚集的一大群人) vs audience (觀眾/聽眾，強調特定表演席)",
+        "note": "常用搭配 a big crowd 或 a crowd of people。"
+      },
+      "explanation": {
+        "point": "crowd 為集合名詞「大批人群；群眾」，字母組合 ow 發雙母音 /aʊ/。",
+        "examPurpose": "測驗學生對聚集人群單字 crowd 的拼讀與集合名詞用法掌握。",
+        "correctReason": "成群聚集在街頭觀看壁畫的人群稱為 crowd，拼讀為 c-r-o-w-d。",
+        "note": "crowd [n.] 人群；群眾。",
+        "trap": "容易與 crown (皇冠) 或 clown (小丑) 發生拼音與聽力混淆。",
+        "commonTraps": [
+          "聽音時將尾音 /d/ 誤聽成 /n/，錯誤拼寫成 crown (皇冠)。",
+          "受發音相似字影響將首輔音 cr- 誤記為 cl- 拼成 clown (小丑)。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "gathering",
+          "throng"
+        ],
+        "grammarCompare": "crowd 指聚集在公共場合的無組織人群；audience 專指欣賞演出的觀眾聽眾。",
+        "examVariations": "形容詞派生：crowded (擁擠的，如 a crowded street)。"
+      },
+      "target_chi": "人群；群眾",
+      "target_pos": "名詞 (Noun)",
+      "masked_example": "A large ________ of smiling people filled the street like on a holiday."
+    },
+    {
+      "id": "q_w12_od3_u16_10",
+      "book_id": "od3",
+      "unit_id": "od3_16",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★★☆☆☆",
+      "question": "Listen to the pronunciation and sentence: \"Mrs. Anderson pushed her metal ________ along the street.\" Spell the target word for \"超市手推車；購物車\".",
+      "options": [],
+      "answer": "shopping cart",
+      "vocab_card": {
+        "word": "shopping cart",
+        "ipa": "/ˈʃɑːpɪŋ kɑːrt/",
+        "phonetic": "/ˈʃɑːpɪŋ kɑːrt/",
+        "syllables": "shop·ping cart",
+        "pos": "名詞 (Noun)",
+        "chi": "超市手推車；購物車",
+        "meaning": "商店或超市提供給顧客盛裝採購物品的四輪金屬手推車",
+        "breakdown": "shopping(採買) + cart(二輪或四輪小手推車)",
+        "trick": "直觀字根：推著去血拚 (shopping) 的車 (cart) 就是購物車！",
+        "scene": "老太太從雜貨店走出來，推著裝滿新鮮麵包與日用品的金屬推車走過花園。",
+        "collocation": "push a shopping cart, metal shopping cart",
+        "img": "🛒",
+        "context_eng": "Mrs. Anderson pushed her shopping cart by the garden and saw the flower.",
+        "example": "Mrs. Anderson pushed her shopping cart by the garden and saw the flower.",
+        "context_chi": "Anderson 太太推著她的購物手推車經過花園，看見了那朵花。",
+        "chant": "Shopping cart rolling down the street; full of tasty things to eat!",
+        "compare": "shopping cart (手推車) vs basket (手提籃子)",
+        "note": "美式英語常用 shopping cart，英式英語常稱為 trolley。"
+      },
+      "explanation": {
+        "point": "shopping cart 為名詞片語「超市手推車」，shopping 重複 p 加 -ing。",
+        "examPurpose": "評量學生對日常生活工具複合名詞 shopping cart 的拼字能力。",
+        "correctReason": "在超市推著採購物品的四輪推車稱為 shopping cart，注意 shopping 有兩個 p。",
+        "note": "shopping cart [n.] 超市手推車。",
+        "trap": "shopping 常漏掉一個 p 寫成 shoping，或將 cart 誤拼成 card (卡片)。",
+        "commonTraps": [
+          "shop 為單音節短母音，加 ing 忘記重複字尾 p 誤寫成 shoping cart。",
+          "將結尾名詞 cart 誤聽誤寫為 card (卡片) 或 car (汽車)。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "trolley",
+          "grocery cart"
+        ],
+        "grammarCompare": "shopping cart 為四輪推車；basket 則為手提籃。美式用 shopping cart，英式常用 trolley。",
+        "examVariations": "動作搭配：push a shopping cart (推著購物車)。"
+      },
+      "target_chi": "超市手推車；購物車",
+      "target_pos": "名詞 (Noun)",
+      "masked_example": "Mrs. Anderson pushed her metal ________ along the street."
+    },
+    {
+      "id": "q_w12_od3_u16_11",
+      "book_id": "od3",
+      "unit_id": "od3_16",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★☆☆☆☆",
+      "question": "Listen to the pronunciation and sentence: \"Every morning Marisol went to ________ her little green sprout.\" Spell the target word for \"澆水 (動詞)；水 (名詞)\".",
+      "options": [],
+      "answer": "water",
+      "vocab_card": {
+        "word": "water",
+        "ipa": "/ˈwɔːtər/",
+        "phonetic": "/ˈwɔːtər/",
+        "syllables": "wa·ter",
+        "pos": "動詞 (Verb) / 名詞",
+        "chi": "澆水 (動詞)；水 (名詞)",
+        "meaning": "將水澆灌在泥土或植物上以促進其生長",
+        "breakdown": "日常基礎核心詞彙，此處做及物動詞使用",
+        "trick": "日常活用：水 (water) 不僅能喝，每天給盆栽倒水就是「澆水 (water the plant)」！",
+        "scene": "Marisol 每天清晨拿著綠色灑水壺，細心將水澆在冒芽的小種子上。",
+        "collocation": "water daily, water the plants",
+        "img": "🚿",
+        "context_eng": "She waters the single seed daily, and it grows taller and taller.",
+        "example": "She waters the single seed daily, and it grows taller and taller.",
+        "context_chi": "她每天為那顆單獨的種子澆水，它長得越來越高。",
+        "chant": "Water the seed and watch it grow; green leaves appearing in a row!",
+        "compare": "water (動詞澆水，例：She waters the flower) vs water (名詞飲用水，例：a glass of water)",
+        "note": "第三人稱單數現在式加 -s 變 waters；過去式加 -ed 變 watered。"
+      },
+      "explanation": {
+        "point": "water 可作及物動詞「給...澆水」，亦可作不可數名詞「水」。",
+        "examPurpose": "考核學生理解基礎名詞 water 在園藝語境中轉為及物動詞澆水的用法與拼寫。",
+        "correctReason": "拿灑水壺給土壤與種子澆水動詞使用 water，第三人稱單數加 s 為 waters。",
+        "note": "water [v.] 澆水；[n.] 水。",
+        "trap": "詞性轉換陷阱：學生常誤以為只有 pour water 才能表達澆水，water 本身即是動詞！",
+        "commonTraps": [
+          "受到發音影響，少數學生可能誤拼成 watter (多加一個 t)。",
+          "閱讀時誤將動詞 water 當成名詞，誤解句中動詞結構。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "irrigate",
+          "sprinkle"
+        ],
+        "grammarCompare": "water 當動詞是及物動詞 (water the plants)；當名詞為不可數 (a glass of water)。",
+        "examVariations": "動詞時態：She waters the flower daily. / Yesterday she watered the seed."
+      },
+      "target_chi": "澆水 (動詞)；水 (名詞)",
+      "target_pos": "動詞 (Verb) / 名詞",
+      "masked_example": "Every morning Marisol went to ________ her little green sprout."
+    },
+    {
+      "id": "q_w12_od3_u16_12",
+      "book_id": "od3",
+      "unit_id": "od3_16",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★★☆☆☆",
+      "question": "Listen to the pronunciation and sentence: \"Marisol was very ________ about what kind of plant would grow from the seed.\" Spell the target word for \"好奇的；渴望探究的\".",
+      "options": [],
+      "answer": "curious",
+      "vocab_card": {
+        "word": "curious",
+        "ipa": "/ˈkjʊriəs/",
+        "phonetic": "/ˈkjʊriəs/",
+        "syllables": "cu·ri·ous",
+        "pos": "形容詞 (Adjective)",
+        "chi": "好奇的；渴望探究的",
+        "meaning": "對未知事物充滿探索慾望、極想弄明白的心理狀態",
+        "breakdown": "cur(關心/照看) + -ious(充滿...特質的形容詞字尾) -> 充滿關心探知慾的",
+        "trick": "趣味記憶：「Q睿思」-> 又 Q 又有智慧的思想，對全世界充滿好奇！",
+        "scene": "望著泥土中破土而出的小綠芽，心中猜測它到底會結出什麼果實或花朵。",
+        "collocation": "curious about, curious child",
+        "img": "🔍",
+        "context_eng": "Marisol is curious about her plant and wonders what it will become.",
+        "example": "Marisol is curious about her plant and wonders what it will become.",
+        "context_chi": "Marisol 對她的植物充滿好奇，想知道它未來會變成什麼模樣。",
+        "chant": "Curious about the earth and sky; always asking how and why!",
+        "compare": "curious (好奇的) vs interested (感興趣的，搭配 in)",
+        "note": "固定與介系詞 about 連用：be curious about something。"
+      },
+      "explanation": {
+        "point": "curious 為形容詞「好奇的」，字尾為形容詞後綴 -ious，固定搭配介系詞 about。",
+        "examPurpose": "檢測學生對本單元核心文法情緒形容詞 curious 的拼寫與字根掌握。",
+        "correctReason": "對未知事物想要弄清楚的心態稱為 curious，拼寫為 c-u-r-i-o-u-s。",
+        "note": "curious [adj.] 好奇的。",
+        "trap": "字尾 -ious 容易誤寫成 -ous (漏掉 i 寫成 curous) 或誤拼成 curius。",
+        "commonTraps": [
+          "拼寫時漏掉後綴中的元音字母 i，錯誤拼寫為 curous。",
+          "將結尾 -ous 誤記為 -us，錯誤拼寫成 curius。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "inquisitive",
+          "interested"
+        ],
+        "grammarCompare": "curious 搭配介系詞 about (curious about)；interested 搭配介系詞 in (interested in)。",
+        "examVariations": "介系詞搭配考題：Marisol was very curious (about / at / in) the green leaf."
+      },
+      "target_chi": "好奇的；渴望探究的",
+      "target_pos": "形容詞 (Adjective)",
+      "masked_example": "Marisol was very ________ about what kind of plant would grow from the seed."
+    },
+    {
+      "id": "q_w12_od3_u16_13",
+      "book_id": "od3",
+      "unit_id": "od3_16",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★★☆☆☆",
+      "question": "Listen to the pronunciation and sentence: \"Mrs. Washington said there is a time to ________ and a time to die.\" Spell the target word for \"開花；綻放；盛放期\".",
+      "options": [],
+      "answer": "bloom",
+      "vocab_card": {
+        "word": "bloom",
+        "ipa": "/bluːm/",
+        "phonetic": "/bluːm/",
+        "syllables": "bloom",
+        "pos": "動詞 (Verb) / 名詞",
+        "chi": "開花；綻放；盛放期",
+        "meaning": "植物花苞展開成盛開的花朵",
+        "breakdown": "bl- (發芽生長象形) + -oom -> 砰地一聲繁花盛開",
+        "trick": "聯想擬音：「不擼木」-> 繁花盛開 (bloom) 時生機盎然，千萬不要去粗暴擼樹木！",
+        "scene": "夏日清晨巨大的向日葵金黃花瓣完全舒展開來，猶如燦爛發光的太陽圓盤。",
+        "collocation": "time to bloom, in full bloom",
+        "img": "🌸",
+        "context_eng": "Mrs. Washington said there is a time to bloom and a time to die.",
+        "example": "Mrs. Washington said there is a time to bloom and a time to die.",
+        "context_chi": "Washington 太太說萬物皆有盛開之時，也有衰亡之日。",
+        "chant": "Sunflowers bloom in yellow and gold; the happiest story ever told!",
+        "compare": "bloom (指整株或多數花朵盛開綻放) vs blossom (特指果樹開花，如 cherry blossom)",
+        "note": "可用於片語 in bloom (盛開中) 或 a time to bloom (綻放之時)。"
+      },
+      "explanation": {
+        "point": "bloom 為動詞或名詞「開花；盛開」，雙母音 oo 發長音 /uː/。",
+        "examPurpose": "評量學生掌握課文中植物生命週期重要動詞 bloom 的拼寫與語義。",
+        "correctReason": "花苞展開綻放成花朵稱為 bloom，片語 a time to bloom 表綻放的季節。",
+        "note": "bloom [v./n.] 開花；盛放。",
+        "trap": "容易與 broom (掃帚) 或 gloom (陰暗) 發生首字母拼寫混淆。",
+        "commonTraps": [
+          "首字母聽音混淆，將 bl- 誤聽為 br- 錯誤拼寫成 broom (掃帚)。",
+          "將長母音 oo 誤寫為單個 o 或 u 拼成 blom 或 blum。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "blossom",
+          "open up"
+        ],
+        "grammarCompare": "bloom 指整株草本或花卉盛放；blossom 特指果樹開花 (如 cherry blossom)。",
+        "examVariations": "介系詞片語：The garden was in full bloom all summer long."
+      },
+      "target_chi": "開花；綻放；盛放期",
+      "target_pos": "動詞 (Verb) / 名詞",
+      "masked_example": "Mrs. Washington said there is a time to ________ and a time to die.",
+      "masked_example_chi": "Washington 太太說萬物皆有盛開之時，也有衰亡之日。"
+    },
+    {
+      "id": "q_w12_od3_u16_14",
+      "book_id": "od3",
+      "unit_id": "od3_16",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★☆☆☆☆",
+      "question": "Listen to the pronunciation and sentence: \"Marisol was too heartbroken to look at the ________ lot where her sunflower had stood.\" Spell the target word for \"空的；空無一物的\".",
+      "options": [],
+      "answer": "empty",
+      "vocab_card": {
+        "word": "empty",
+        "ipa": "/ˈempti/",
+        "phonetic": "/ˈempti/",
+        "syllables": "emp·ty",
+        "pos": "形容詞 (Adjective)",
+        "chi": "空的；空無一物的",
+        "meaning": "容器或空間內沒有裝載任何物品或沒有人",
+        "breakdown": "emp(空) + -ty(形容詞字尾)",
+        "trick": "發音諧音：「M 梯」-> 麥當勞 M 標誌的梯子上空空無人！",
+        "scene": "秋天花草凋零後，只剩下光禿禿泥土、沒有人影的淒涼廢棄空地。",
+        "collocation": "empty lot, empty room",
+        "img": "🈳",
+        "context_eng": "Marisol was too sad to visit the empty lot after her flower died.",
+        "example": "Marisol was too sad to visit the empty lot after her flower died.",
+        "context_chi": "在她的花朵死去之後，Marisol 傷心到再也不想踏進那座空蕩蕩的空地。",
+        "chant": "Empty boxes, empty space; bring some flowers to this place!",
+        "compare": "empty (空的，通用日常詞) = vacant (空置無人的，多指房地產或職缺同義詞)",
+        "note": "同義字為 vacant；反義字為 full 或 crowded。"
+      },
+      "explanation": {
+        "point": "empty 為形容詞「空的；無人的」，同義字為 vacant，反義字為 full。",
+        "examPurpose": "考查學生對基礎空間形容詞 empty 及其同義字對應關聯的拼寫認知。",
+        "correctReason": "沒有種植植物或沒有建築物的空地稱為 empty lot，拼讀為 e-m-p-t-y。",
+        "note": "empty [adj.] 空的；空無一物的。",
+        "trap": "發音中 p 較輕，學生有時會漏掉字母 p 誤拼成 emty。",
+        "commonTraps": [
+          "拼寫時漏掉不完全爆破的字母 p，錯誤拼成 emty。",
+          "字尾 -ty 誤寫成 -ti 拼成 empti。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "vacant",
+          "unoccupied"
+        ],
+        "grammarCompare": "empty 與 vacant 互為同義字；反義字為 crowded (擁擠的) 或 full (滿的)。",
+        "examVariations": "同義字替換題：The empty lot was turned into a garden. = The vacant lot was turned into a garden."
+      },
+      "target_chi": "空的；空無一物的",
+      "target_pos": "形容詞 (Adjective)",
+      "masked_example": "Marisol was too heartbroken to look at the ________ lot where her sunflower had stood."
+    },
+    {
+      "id": "q_w12_od3_u16_15",
+      "book_id": "od3",
+      "unit_id": "od3_16",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★★☆☆☆",
+      "question": "Listen to the pronunciation and sentence: \"The city allowed neighbors to plant flowers in the ________ lot on the corner.\" Spell the target word for \"空置的；未被佔用的\".",
+      "options": [],
+      "answer": "vacant",
+      "vocab_card": {
+        "word": "vacant",
+        "ipa": "/ˈveɪkənt/",
+        "phonetic": "/ˈveɪkənt/",
+        "syllables": "va·cant",
+        "pos": "形容詞 (Adjective)",
+        "chi": "空置的；未被佔用的",
+        "meaning": "空著沒有建築物、沒有居民或沒有被使用的空間土地",
+        "breakdown": "vac-(空，如 vacation 假期) + -ant(形容詞字尾) -> 空置著的",
+        "trick": "字根聯想：放假 (vacation) 時學校空蕩蕩的，土地也是「空置的 (vacant)」！",
+        "scene": "大城市街區轉角處尚未蓋起高樓大廈、長滿野草的閒置空地。",
+        "collocation": "vacant lot, vacant seat, vacant room",
+        "img": "🏷️",
+        "context_eng": "Some cities transform vacant lots into beautiful community gardens.",
+        "example": "Some cities transform vacant lots into beautiful community gardens.",
+        "context_chi": "有些城市會將閒置無人的空地改造成美麗的社區花園。",
+        "chant": "Vacant lots with trees and seeds; turning empty dirt into lovely greens!",
+        "compare": "vacant (強調未被租用、未被佔用) = empty (強調空間內無物)",
+        "note": "名詞形式為 vacancy (空房、空缺)。"
+      },
+      "explanation": {
+        "point": "vacant 為形容詞「空置的；未被佔據的」，字根 vac- 表示空 (如 vacation)。",
+        "examPurpose": "測驗小六進階字彙中 vacant 與 empty 同義對應的精準拼寫。",
+        "correctReason": "未被建築物佔用的閒置土地稱為 vacant lot，由 vac- + -ant 構成。",
+        "note": "vacant [adj.] 空置的；未被佔用的。",
+        "trap": "第二個音節容易誤寫為 e (誤拼成 vacent) 或將 c 誤寫為 k (vakant)。",
+        "commonTraps": [
+          "後綴字母混淆，將 -ant 誤記為 -ent 拼成 vacent。",
+          "受到發音 /k/ 誤導，將字母 c 寫成 k 拼成 vakant。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "empty",
+          "free"
+        ],
+        "grammarCompare": "vacant 常修飾土地、房間或職缺；empty 則廣泛形容任何容器或內部無物的空間。",
+        "examVariations": "名詞派生：vacancy (空缺；空房)。"
+      },
+      "target_chi": "空置的；未被佔用的",
+      "target_pos": "形容詞 (Adjective)",
+      "masked_example": "The city allowed neighbors to plant flowers in the ________ lot on the corner."
+    },
+    {
+      "id": "q_w12_od3_u16_16",
+      "book_id": "od3",
+      "unit_id": "od3_16",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★★☆☆☆",
+      "question": "Listen to the pronunciation and sentence: \"The brave little girl stood ________ when working hard in the soil.\" Spell the target word for \"不怕的；無所畏懼的\".",
+      "options": [],
+      "answer": "unafraid",
+      "vocab_card": {
+        "word": "unafraid",
+        "ipa": "/ˌʌnəˈfreɪd/",
+        "phonetic": "/ˌʌnəˈfreɪd/",
+        "syllables": "un·a·fraid",
+        "pos": "形容詞 (Adjective)",
+        "chi": "不怕的；無所畏懼的",
+        "meaning": "心中不感到恐懼、泰然自若的心理狀態",
+        "breakdown": "un-(否定前綴，表示不) + afraid(害怕的) -> 不害怕的",
+        "trick": "前綴拆解法：un- 就是 NO，unafraid 就是「不害怕 (brave)」！",
+        "scene": "小園丁面對高大植物上的毛毛蟲毫不畏懼，勇敢伸手照顧植物。",
+        "collocation": "unafraid of danger, remain unafraid",
+        "img": "🦁",
+        "context_eng": "The unafraid little girl stood brave in front of the giant plant.",
+        "example": "The unafraid little girl stood brave in front of the giant plant.",
+        "context_chi": "那個無所畏懼的小女孩勇敢地站在高大的植物面前。",
+        "chant": "Unafraid and standing tall; brave and strong through it all!",
+        "compare": "unafraid (不害怕的) = brave (勇敢的)；反義詞為 afraid / fearful",
+        "note": "常與介系詞 of 連用：unafraid of something。"
+      },
+      "explanation": {
+        "point": "unafraid 為形容詞「不害怕的」，由否定前綴 un- 加 afraid 構成，同義字為 brave。",
+        "examPurpose": "評量學生理解否定前綴 un- 構詞法則及 unafraid = brave 同義字關係。",
+        "correctReason": "心中不感到恐懼害怕稱為 unafraid，前綴 un- 表示否定，後接 afraid。",
+        "note": "unafraid [adj.] 不怕的；勇敢的。",
+        "trap": "容易漏掉中間的字母 a 誤拼成 unfraid，或將 afraid 字尾誤寫為 -ed。",
+        "commonTraps": [
+          "前綴與字根組合時漏掉字母 a，錯誤拼寫成 unfraid。",
+          "誤將形容詞 afraid 當成規則動詞加 ed 拼成 unafraided。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "brave",
+          "courageous"
+        ],
+        "grammarCompare": "unafraid 與 brave 互為同義字；反義字為 afraid / fearful (害怕恐懼的)。`",
+        "examVariations": "同義字改寫：She was unafraid of hard work. = She was brave when facing hard work."
+      },
+      "target_chi": "不怕的；無所畏懼的",
+      "target_pos": "形容詞 (Adjective)",
+      "masked_example": "The brave little girl stood ________ when working hard in the soil."
+    },
+    {
+      "id": "q_w12_od3_u16_17",
+      "book_id": "od3",
+      "unit_id": "od3_16",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★★☆☆☆",
+      "question": "Listen to the pronunciation and sentence: \"When the plant became ________, its yellow petals opened wide in the sun.\" Spell the target word for \"成熟的；長成的\".",
+      "options": [],
+      "answer": "mature",
+      "vocab_card": {
+        "word": "mature",
+        "ipa": "/məˈtʃʊr/",
+        "phonetic": "/məˈtʃʊr/",
+        "syllables": "ma·ture",
+        "pos": "形容詞 (Adjective)",
+        "chi": "成熟的；長成的",
+        "meaning": "動植物完全發育成長成熟，或果實已經熟成",
+        "breakdown": "matur-(成熟) + -e -> 充分發育長全的",
+        "trick": "趣味諧音：「美秋」-> 美麗的秋天到了，所有農作物都「成熟 (mature)」了！",
+        "scene": "歷經整個盛夏的充足日照與水分灌溉，向日葵植株完全成熟結籽。",
+        "collocation": "mature plant, mature fruit",
+        "img": "🌾",
+        "context_eng": "When the sunflower was fully mature, its seeds could be collected.",
+        "example": "When the sunflower was fully mature, its seeds could be collected.",
+        "context_chi": "當向日葵完全成熟時，就可以把它的種子收集起來。",
+        "chant": "Mature and ripe, ready to eat; fresh fruit tastes sweet and neat!",
+        "compare": "mature (成熟的，可形容動植物與人) = ripe (熟透的，專門形容水果蔬菜熟了)",
+        "note": "反義詞為 immature (未成熟的) 或 unripe。"
+      },
+      "explanation": {
+        "point": "mature 為形容詞「成熟的；充分發育長成的」，同義字為 ripe (熟透的)。",
+        "examPurpose": "檢測學生掌握植物成長週期進階形容詞 mature 的拼寫與發音 /məˈtʃʊr/。",
+        "correctReason": "植物完全長成具備繁殖或結籽能力稱為 mature，拼寫為 m-a-t-u-r-e。",
+        "note": "mature [adj.] 成熟的；長成的。",
+        "trap": "發音中含 /tʃ/ 音，容易誤拼成 machure 或 matoor。",
+        "commonTraps": [
+          "受到音標 /tʃ/ 發音干擾，錯誤將 t 寫成 ch 拼成 machure。",
+          "字尾 u_e 結構混淆，誤拼成 matoor 或 matuer。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "ripe",
+          "fully grown"
+        ],
+        "grammarCompare": "mature 可形容動植物長成或人的心智成熟；ripe 則專門指水果蔬菜果實成熟可食用。",
+        "examVariations": "反義詞拓展：immature (未成熟的), unripe (生澀未熟的)。"
+      },
+      "target_chi": "成熟的；長成的",
+      "target_pos": "形容詞 (Adjective)",
+      "masked_example": "When the plant became ________, its yellow petals opened wide in the sun."
+    },
+    {
+      "id": "q_w12_od3_u16_18",
+      "book_id": "od3",
+      "unit_id": "od3_16",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "difficulty": "★★★☆☆",
+      "part_title": "Part II. Sentence Transformation & Guided Writing (句型改寫與引導寫作)",
+      "part_instructions": "依據提示將兩個分句合併改寫為一個完整句子，精確運用形容詞介系詞搭配 curious about 與 interested in，並將動詞改為動名詞。",
+      "sentence_form": "Subject + is curious about + N, and + is interested in + V-ing.",
+      "question": "[Tiger 3C Handwritten Section · Sentence Transformation] Combine and rewrite the sentences using the provided grammar cues: \"Marisol wants to know more about the mystery seed. She also wants to grow healthy vegetables.\" (Use: curious about / interested in)",
+      "options": [],
+      "answer": "Marisol is curious about the mystery seed, and she is interested in growing healthy vegetables.",
+      "self_check": [
+        "1. curious 後方是否正確使用介系詞 about（不可寫 curious at 或 to）？",
+        "2. interested 後方是否正確搭配介系詞 in，且接動名詞 growing（不可寫原形 grow）？",
+        "3. 主詞 Marisol 與 be 動詞 is 一致，大小寫與標點符號完整無殘缺？"
+      ],
+      "explanation": {
+        "point": "形容詞介系詞搭配：curious about 後接名詞；interested in 後接動名詞 V-ing。",
+        "examPurpose": "檢驗小六學生在手寫卷中靈活轉換及合併情緒與興趣形容詞固定介系詞句型的能力。",
+        "correctReason": "curious 固定搭配 about，表達對神祕種子的好奇；interested 固定搭配 in，且介系詞後接動名詞 growing。",
+        "note": "be curious about + N / be interested in + V-ing。",
+        "trap": "最常見的錯誤是將 curious about 誤寫為 curious at，或在 in 後接原形動詞 grow。",
+        "commonTraps": [
+          "介系詞搭配錯誤：受中文直譯影響，誤將 curious about 寫成 curious at。",
+          "動名詞遺漏：介系詞 in 後方忘記加 -ing，誤寫成 interested in grow。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "inquisitive about",
+          "keen on"
+        ],
+        "grammarCompare": "curious about (好奇某事物) 與 interested in (對某活動有濃厚興趣) 的介系詞差異。",
+        "examVariations": "常見改寫題：She wants to know about X. -> She is curious about X."
+      }
+    },
+    {
+      "id": "q_w12_od3_u16_19",
+      "book_id": "od3",
+      "unit_id": "od3_16",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "difficulty": "★★★☆☆",
+      "part_title": "Part II. Sentence Transformation & Guided Writing (句型改寫與引導寫作)",
+      "part_instructions": "運用形容詞介系詞搭配 proud of 與 full of 合併兩個句子，說明因果關係並注意代名詞與時態一致。",
+      "sentence_form": "Subject + were proud of + N + because it was full of + N.",
+      "question": "[Tiger 3C Handwritten Section · Sentence Combining] Combine into one coherent sentence using the cues: \"The neighbors felt very proud of the garden. The garden was packed with lots of golden sunflowers.\" (Use: proud of / full of)",
+      "options": [],
+      "answer": "The neighbors were proud of the garden because it was full of golden sunflowers.",
+      "self_check": [
+        "1. proud 後方是否正確搭配介系詞 of（不可誤填 proud for 或 proud with）？",
+        "2. full 後方是否正確搭配介系詞 of（不可誤填 full with）？",
+        "3. 過去式動詞 were 與 was 前後時態呼應一致且標點正確？"
+      ],
+      "explanation": {
+        "point": "形容詞介系詞搭配：be proud of 表示「為...感到自豪」；be full of 表示「充滿著...」。",
+        "examPurpose": "考核學生在手寫合併句子時對形容詞介系詞固定片語 (proud of / full of) 的精準掌握。",
+        "correctReason": "proud 固定與 of 連用表示引以為傲；full 固定與 of 連用表示裝滿或充滿某物，兩者皆搭配介系詞 of。",
+        "note": "be proud of + N / be full of + N。",
+        "trap": "中文常說「為...感到驕傲」，容易誤套用 for 寫成 proud for；受 filled with 影響常誤寫 full with。",
+        "commonTraps": [
+          "介系詞混淆：受中文「為...感到驕傲」影響，誤將 proud of 寫成 proud for。",
+          "介系詞誤用：將 full of 誤寫成 full with（受到 be filled with 混淆干擾）。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "pleased with",
+          "filled with"
+        ],
+        "grammarCompare": "full of (形容詞片語，接 of) vs filled with (過去分詞片語，接 with)。",
+        "examVariations": "句子合併題：The basket had many beans. Mr. Singh was happy. -> Mr. Singh was proud of the basket full of beans."
+      }
+    },
+    {
+      "id": "q_w12_od3_u16_20",
+      "book_id": "od3",
+      "unit_id": "od3_16",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "difficulty": "★★★★☆",
+      "part_title": "Part II. Sentence Transformation & Guided Writing (句型改寫與引導寫作)",
+      "part_instructions": "依據情境提示使用 surprised by 與 good for 改寫句子，表達驚訝反應與健康益處，注意時態一致。",
+      "sentence_form": "Subject + was surprised by + N, and + N + were good for + N.",
+      "question": "[Tiger 3C Handwritten Section · Guided Writing] Rewrite the situation using the target adjective and preposition patterns: \"Everyone was amazed by the giant sunflower, and they knew fresh vegetables brought great health benefits to the whole community.\" (Use: surprised by / good for)",
+      "options": [],
+      "answer": "Everyone was surprised by the giant sunflower, and fresh vegetables were good for the community.",
+      "self_check": [
+        "1. surprised 後方是否正確使用 by 或 at（不可誤用 of 或 about）？",
+        "2. good 後方是否正確使用 for 表「對...有益」（不可誤用 at，good at 表擅長）？",
+        "3. 過去式動詞 was 與 were 與前後名詞單複數一致？"
+      ],
+      "explanation": {
+        "point": "surprised by/at 表「對...感到驚訝」；be good for 表「對...身體或環境有益處」。",
+        "examPurpose": "測驗學生在段考手寫題中分辨 surprised by (驚訝) 與 good for (有益) 介系詞的功能區隔。",
+        "correctReason": "受到外界事物震撼衝擊用 surprised by；對某人或群體有健康益處用 good for (good at 則是擅長才藝)。",
+        "note": "be surprised by + N / be good for + N。",
+        "trap": "最致命陷阱：把表益處的 good for 誤寫為 good at（good at cooking 是擅長烹飪，非對健康好）。",
+        "commonTraps": [
+          "介系詞功能混淆：把表益處的 good for 誤寫為 good at（good at 是擅長某才藝）。",
+          "surprised 搭配錯誤：surprised 後方誤填 of 造成嚴重語法錯誤（surprised of 是常見錯誤）。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "amazed by",
+          "beneficial to"
+        ],
+        "grammarCompare": "good for (對健康有益) vs good at (擅長才藝) vs good of (評價某人為人良善)。",
+        "examVariations": "三合一辨析題：Apples are good for you, she is good at sports, and it is good of you to help."
+      }
+    },
+    {
+      "id": "q_w12_od3_u16_21",
+      "book_id": "od3",
+      "unit_id": "od3_16",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "difficulty": "★★★★☆",
+      "part_title": "Part II. Story Reading Comprehension & Writing (故事理解手寫問答)",
+      "part_instructions": "根據故事細節以完整英文句子回答問題，清楚說明 Marisol 種下種子的原因與每天的照料動作，注意過去時態。",
+      "sentence_form": "Marisol planted a single seed in the vacant lot because ..., and she watered it daily.",
+      "question": "[Tiger 3C Handwritten Section · Reading Comprehension] Answer the question in a complete English sentence based on the story: \"Why did Marisol plant a single seed in the vacant lot, and what did she do every day?\"",
+      "options": [],
+      "answer": "Marisol planted a single seed in the vacant lot because she wanted to grow a flower, and she watered it daily.",
+      "self_check": [
+        "1. 動詞是否皆使用正確的過去式形式 planted 與 watered？",
+        "2. 是否清楚寫出「vacant lot」與「watered it daily」之核心情節細節？",
+        "3. 句子開頭是否大寫、結尾是否加上句號，句子結構完整？"
+      ],
+      "explanation": {
+        "point": "故事開端細節理解：Marisol 在空地播種並每天澆水照料 (watered it daily)。",
+        "examPurpose": "評量學生對故事起承轉合開端細節的閱讀檢索能力，以及用過去式完整書寫句子的能力。",
+        "correctReason": "故事開頭明確交代 Marisol 在社區花園空地種下一顆種子，因為想種出一朵花，且每天澆水 (she watered it daily)。",
+        "note": "The Garden of Happiness: Plot Beginning。",
+        "trap": "學生常只寫半截片段 (如 because she want flower) 或忘記將動詞轉為過去式 planted 與 watered。",
+        "commonTraps": [
+          "時態混淆錯誤：將過去式 planted 與 watered 誤寫為現在式 plants 與 waters。",
+          "殘缺句子：只寫出半截短語（如 because want flower）而未寫出完整的主詞加動詞結構。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "sowed a seed",
+          "tended the sprout"
+        ],
+        "grammarCompare": "過去式描寫記敘文 (planted, watered) vs 現在式習慣描寫 (plants, waters)。",
+        "examVariations": "情節問答題：Where did Marisol plant her seed? -> She planted it in a vacant lot in her neighborhood."
+      }
+    },
+    {
+      "id": "q_w12_od3_u16_22",
+      "book_id": "od3",
+      "unit_id": "od3_16",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "difficulty": "★★★★★",
+      "part_title": "Part II. Story Reading Comprehension & Writing (故事理解手寫問答)",
+      "part_instructions": "根據故事結尾高潮以完整英文句子回答，闡述青少年壁畫如何延續向日葵帶來的快樂，注意因果連接詞與過去式。",
+      "sentence_form": "The teenagers painted a giant sunflower mural on the wall, so the neighborhood could enjoy its sunshine all winter long.",
+      "question": "[Tiger 3C Handwritten Section · Reading Comprehension] Answer the question in a complete English sentence based on the story: \"How did the teenagers keep the happiness of the sunflower alive for Marisol and the neighbors after the plant died in autumn?\"",
+      "options": [],
+      "answer": "The teenagers painted a giant sunflower mural on the wall, so the neighborhood could enjoy its sunshine all winter long.",
+      "self_check": [
+        "1. 是否正確使用過去式動詞 painted 與助動詞 could enjoy？",
+        "2. 是否完整包含 mural (壁畫)、sunflower (向日葵) 與延續快樂 (sunshine/happiness) 核心概念？",
+        "3. 連接詞 so 或 because 是否使用得當，主從子句文法結構完整無誤？"
+      ],
+      "explanation": {
+        "point": "故事結局高潮理解：青少年在磚牆上繪製巨大向日葵壁畫，讓陽光與快樂在寒冬永續。",
+        "examPurpose": "考查學生深度理解故事象徵意義 (Symbolism & Plot Resolution) 並組織長句精確作答的寫作能力。",
+        "correctReason": "當向日葵自然凋零後，青少年利用五彩顏料在空地牆面畫下發光的向日葵壁畫，使鄰居在整個冬天都能欣賞陽光。",
+        "note": "The Garden of Happiness: Plot Resolution。",
+        "trap": "最常見的失分點是漏掉核心名詞 mural (壁畫) 或將 could enjoy 後的動詞誤寫為 enjoyed。",
+        "commonTraps": [
+          "核心受詞遺漏：漏掉受詞 mural (壁畫)，導致回答空洞無法命中故事核心關鍵。",
+          "助動詞後接動詞錯誤：將助動詞 could 後方的動詞寫成過去式 enjoyed（助動詞後必須接原形動詞 enjoy）。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "wall painting",
+          "artwork"
+        ],
+        "grammarCompare": "so (表結果因此) 與 because (表原因因為) 在複合句中的正確邏輯連結。",
+        "examVariations": "主題探討題：What does the mural represent? -> It represents everlasting happiness and community unity."
+      }
+    },
+    {
+      "id": "q_w12_od3_u16_23",
+      "book_id": "od3",
+      "unit_id": "od3_16",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "choice",
+      "category_tag": "grammar",
+      "difficulty": "★★★☆☆",
+      "question": "Marisol looked at the tiny green sprout every morning because she was extremely curious _______ what kind of plant it would become.",
+      "options": [
+        "about",
+        "at",
+        "with",
+        "for"
+      ],
+      "answer": "about",
+      "explanation": {
+        "point": "curious 固定搭配介系詞 about (be curious about)，表示對某事物感到好奇探索。",
+        "examPurpose": "考查小六學生掌握情緒形容詞 curious 與固定介系詞 about 的精確搭配能力。",
+        "correctReason": "表示對未知事物產生探究好奇的心理狀態，英語固定搭配介系詞 about (curious about the plant)。",
+        "note": "be curious about + N / V-ing。",
+        "trap": "受中文「對...感到好奇」的直譯影響，台灣學生最常誤選 at 或 to。",
+        "distractorAnalysis": {
+          "at": "受 surprised at 搭配干擾，但 curious 習慣搭配 about，不能搭配 at。",
+          "with": "with 常用於 happy with 或 bored with，不能與 curious 連用。",
+          "for": "for 表原因或對象益處，不能與表示好奇探索的 curious 搭配。"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "inquisitive about",
+          "interested in"
+        ],
+        "grammarCompare": "curious about (好奇某事物) vs interested in (對某活動感興趣) 的介系詞差異。",
+        "examVariations": "改寫題：She wants to know about the flower. = She is curious about the flower."
+      }
+    },
+    {
+      "id": "q_w12_od3_u16_24",
+      "book_id": "od3",
+      "unit_id": "od3_16",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "choice",
+      "category_tag": "grammar",
+      "difficulty": "★★★☆☆",
+      "question": "When the neighbors saw the giant blossom standing higher than all other plants, everyone was very surprised _______ its incredible size.",
+      "options": [
+        "at",
+        "about",
+        "of",
+        "with"
+      ],
+      "answer": "at",
+      "explanation": {
+        "point": "surprised 習慣搭配介系詞 at 或 by (surprised at/by)，表示對外在事實感到驚訝。",
+        "examPurpose": "評量學生對震驚與意外形容詞 surprised 固定介系詞搭配的正確辨別。",
+        "correctReason": "受到突如其來的巨大花朵震撼衝擊，固定搭配介系詞 at (或 by)，表示對該事實感到吃驚。",
+        "note": "be surprised at / by + N。",
+        "trap": "中文常說「關於這件事感到驚訝」，常使學生誤選 about 或 of。",
+        "distractorAnalysis": {
+          "about": "中文直譯「關於...驚訝」常誤用 about，但課本核心搭配為 surprised at/by。",
+          "of": "受 full of 或 afraid of 混淆，英語中絕無 surprised of 這種搭配。",
+          "with": "with 常用於 happy with 或 disappointed with，不能表示受到震驚意外。"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "amazed at",
+          "astonished by"
+        ],
+        "grammarCompare": "surprised at (對特定現象吃驚) vs surprised by (受到某人或某力量震撼)。",
+        "examVariations": "對話填空：The teacher was surprised at all your mistakes."
+      }
+    },
+    {
+      "id": "q_w12_od3_u16_25",
+      "book_id": "od3",
+      "unit_id": "od3_16",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "choice",
+      "category_tag": "grammar",
+      "difficulty": "★★★★☆",
+      "question": "In the grammar comic vignette, the teacher told the student: \"I am very happy _______ your wonderful essay; you did an excellent job!\"",
+      "options": [
+        "with",
+        "about",
+        "at",
+        "for"
+      ],
+      "answer": "with",
+      "explanation": {
+        "point": "happy with 表示「對某成果、作品或狀態感到滿意愉悅」。",
+        "examPurpose": "檢測學生在生活情境對話中對滿意評價介系詞 happy with 的準確掌握。",
+        "correctReason": "老師對學生的作文成果感到十分滿意，固定搭配介系詞 with (be happy with your essay)。",
+        "note": "be happy with + N。",
+        "trap": "學生看見 happy 常直覺聯想到 happy about (對某件事感到開心)，忽略對成果滿意需用 with。",
+        "distractorAnalysis": {
+          "about": "about 表對事件發展感到歡欣，但對作品成果滿意固定搭配 happy with。",
+          "at": "受 surprised at 混淆，happy 不能搭配 at 來表示對作品滿意。",
+          "for": "happy for someone 是為某人的好運感到高興，不能用於對作文成果滿意。"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "pleased with",
+          "satisfied with"
+        ],
+        "grammarCompare": "happy with + 作品/成果 (滿意) vs happy about + 事件 (為某事開心)。",
+        "examVariations": "反義對比：happy with (滿意) vs disappointed with (失望)。"
+      }
+    },
+    {
+      "id": "q_w12_od3_u16_26",
+      "book_id": "od3",
+      "unit_id": "od3_16",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "choice",
+      "category_tag": "grammar",
+      "difficulty": "★★★★☆",
+      "question": "In nature study, root vegetables like orange sweet potatoes and crunchy carrots grow _______ the ground under the dark soil.",
+      "options": [
+        "in",
+        "on",
+        "off",
+        "over"
+      ],
+      "answer": "in",
+      "explanation": {
+        "point": "植物生長地點介系詞片語：地下根莖類蔬菜生長在泥土「內部」，固定用 grow in the ground。",
+        "examPurpose": "考核學生在自然科普與記敘描寫中對植物生長空間部位介系詞的精準運用。",
+        "correctReason": "地瓜與胡蘿蔔為地下食用塊根，生長在泥土層內部深處，英語慣用法必為 grow in the ground。",
+        "note": "grow in the ground (生長於泥土裡)。",
+        "trap": "中文常說「長在地上」，學生常不假思索誤選 on the ground（on the ground 是指地表上方）。",
+        "distractorAnalysis": {
+          "on": "地瓜與胡蘿蔔是地下根莖類，深埋在土壤內部，絕不可寫 on the ground。",
+          "off": "off the ground 表示架高脫離地面（如架高番茄），不符合地下塊根生長位置。",
+          "over": "over 表示在上方懸空，地下根莖類不可能生長在地面上方空中。"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "under the soil",
+          "beneath the dirt"
+        ],
+        "grammarCompare": "in the ground (在泥土內部，如地瓜胡蘿蔔) vs on trees (在樹上，如果實懸掛)。",
+        "examVariations": "分類題：Which crop grows in the ground? (A) Sweet potatoes (B) Apples (C) Pumpkins."
+      }
+    },
+    {
+      "id": "q_w12_od3_u16_27",
+      "book_id": "od3",
+      "unit_id": "od3_16",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "choice",
+      "category_tag": "grammar",
+      "difficulty": "★★★★★",
+      "question": "Mr. Singh walked through the garden plots where green beans and long cucumbers grow _______ strong wooden vines and climbing poles.",
+      "options": [
+        "on",
+        "in",
+        "at",
+        "into"
+      ],
+      "answer": "on",
+      "explanation": {
+        "point": "攀爬類植物與其果實附著生長在藤蔓架上，固定使用地方介系詞 grow on vines。",
+        "examPurpose": "評量學生對爬藤植物生長部位地方片語 (grow on vines) 的精確理解與母語干擾排除。",
+        "correctReason": "四季豆、南瓜、小黃瓜的果實結在藤蔓的枝條表面上，英文標準搭配為 grow on vines。",
+        "note": "grow on vines (生長在藤蔓上)。",
+        "trap": "學生常誤將介系詞寫成 in vines，誤以為果實是長在藤蔓裡面。",
+        "distractorAnalysis": {
+          "in": "爬藤植物的莖葉在支架外表面攀爬，介系詞固定為 on vines 而非 in vines。",
+          "at": "at 表特定微小地點或時間點，無法表達攀附生長於植物藤蔓表面。",
+          "into": "into 表進入內部之動態方向，與植物附著生長於藤蔓之靜態位置不符。"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "along climbing stems",
+          "attached to trellises"
+        ],
+        "grammarCompare": "grow on vines (長在藤蔓上) vs grow on trees (長在樹上) vs grow in pots (種在花盆裡)。",
+        "examVariations": "寫作練習：Pumpkins and beans grow on vines in the community garden."
+      }
+    },
+    {
+      "id": "q_w12_od3_u16_28",
+      "book_id": "od3",
+      "unit_id": "od3_16",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "choice",
+      "category_tag": "reading",
+      "difficulty": "★★★☆☆",
+      "question": "At the beginning of \"The Garden of Happiness,\" what does Marisol do in the empty lot in her city?",
+      "options": [
+        "She plants a single mystery seed and waters it daily.",
+        "She paints a giant colorful mural on the brick wall.",
+        "She harvests a whole basket of sweet orange potatoes.",
+        "She buys fresh vegetables from the local bodega store."
+      ],
+      "answer": "She plants a single mystery seed and waters it daily.",
+      "explanation": {
+        "point": "故事開端核心情節：Marisol 在空地種下一顆單獨的種子並每天細心澆水。",
+        "examPurpose": "測驗學生在 Realistic Fiction 故事閱讀中檢索開端 (Beginning) 主要情節事實的能力。",
+        "correctReason": "課文第一段明確敘述 Marisol 在城市的小小社區花園空地種下一顆種子，每天澆水，好奇它會長成什麼。",
+        "note": "The Garden of Happiness Part 1 開端情節。",
+        "trap": "混淆故事開端與後續高潮，把青少年的壁畫創作或鄰居的秋收誤當成 Marisol 的開端行動。",
+        "distractorAnalysis": {
+          "She paints a giant colorful mural on the brick wall.": "畫壁畫是故事後半段街區青少年的集體創作，並非開頭 Marisol 的個人行動。",
+          "She harvests a whole basket of sweet orange potatoes.": "採收地瓜是鄰居 Washington 太太在秋天的行動，不是 Marisol 在故事開端的作為。",
+          "She buys fresh vegetables from the local bodega store.": "雜貨店 bodega 是街道背景之一，Marisol 並不是去買蔬菜，而是在花園播種。"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "planted a solitary seed",
+          "tended her mystery sprout"
+        ],
+        "grammarCompare": "故事結構三部曲：Beginning (開端播種), Middle (向日葵盛放與枯萎), End (向日葵壁畫誕生)。",
+        "examVariations": "情節判斷題：What was Marisol's plant at the beginning? (A single mystery seed)."
+      }
+    },
+    {
+      "id": "q_w12_od3_u16_29",
+      "book_id": "od3",
+      "unit_id": "od3_16",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "choice",
+      "category_tag": "reading",
+      "difficulty": "★★★☆☆",
+      "question": "During the summer, how did Marisol's giant sunflower affect the people walking along the street?",
+      "options": [
+        "It made them stop, smile, and feel cheerful like sunshine.",
+        "It blocked the sidewalk so people could not walk past.",
+        "It made Mrs. Anderson complain about pushing her cart.",
+        "It attracted noisy birds that frightened the neighbors."
+      ],
+      "answer": "It made them stop, smile, and feel cheerful like sunshine.",
+      "explanation": {
+        "point": "課文關鍵細節：向日葵猶如金色發光圓盤，讓街上的行人在整個盛夏停步微笑。",
+        "examPurpose": "考查學生對故事角色情感互動與花朵象徵幸福意義 (The happiest plant) 的閱讀理解。",
+        "correctReason": "課文敘述：All summer long, it made the people on the street stop and smile，像黃色計程車般耀眼明亮。",
+        "note": "向日葵的盛開為社區注入無限溫暖與快樂。",
+        "trap": "切勿被負面干擾選項誤導，課文中鄰居推車經過是驚喜讚嘆而非抱怨。",
+        "distractorAnalysis": {
+          "It blocked the sidewalk so people could not walk past.": "課文敘述向日葵高聳美麗讓所有人微笑停步，從未阻礙人行道或妨礙通行。",
+          "It made Mrs. Anderson complain about pushing her cart.": "Anderson 太太推著手推車看見花朵時非常驚喜讚嘆，回憶起童年，並未抱怨。",
+          "It attracted noisy birds that frightened the neighbors.": "課文中花朵帶給所有人溫暖與幸福感，完全沒有嚇到鄰居或吸引吵鬧鳥類的負面情節。"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "brought smiles to all faces",
+          "brightened the community"
+        ],
+        "grammarCompare": "使役動詞用法：make + 受詞 + 原形動詞 (made people stop and smile)。",
+        "examVariations": "明喻修辭：The flower was brighter than a yellow taxi (運用比喻描寫耀眼金黃)。"
+      }
+    },
+    {
+      "id": "q_w12_od3_u16_30",
+      "book_id": "od3",
+      "unit_id": "od3_16",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "choice",
+      "category_tag": "reading",
+      "difficulty": "★★★★☆",
+      "question": "In autumn, what happened to Marisol's beloved sunflower that made her feel so heartbroken?",
+      "options": [
+        "Its leaves turned brown and dry because its growing season ended.",
+        "A strong wind blew it completely out of the garden soil.",
+        "The teenagers accidentally covered it with colorful paint.",
+        "Mr. Castro picked it by mistake along with his ripe tomatoes."
+      ],
+      "answer": "Its leaves turned brown and dry because its growing season ended.",
+      "explanation": {
+        "point": "故事發展轉折點：向日葵隨秋天到來葉片變褐乾枯，自然生長週期結束。",
+        "examPurpose": "檢驗學生對故事衝突高潮 (Middle: Problem) 與植物生命週期客觀規律的理解。",
+        "correctReason": "Washington 太太對哭泣的 Marisol 說：Its season is over. There is a time to bloom and a time to die，指出生長規律。",
+        "note": "生命的自然法則：盛開與衰亡的循環。",
+        "trap": "把自然的枯萎凋零誤判為意外事故（如強風吹走或人為誤拔破壞）。",
+        "distractorAnalysis": {
+          "A strong wind blew it completely out of the garden soil.": "課文中花朵枯萎是自然的季節交替循環，並非被強風拔起吹走。",
+          "The teenagers accidentally covered it with colorful paint.": "青少年是在花朵枯萎後為了安慰大家而在牆上畫壁畫，並未把油漆潑在植物上。",
+          "Mr. Castro picked it by mistake along with his ripe tomatoes.": "Castro 先生採收的是自己種植的番茄，並未誤拔 Marisol 的向日葵。"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "withered away",
+          "reached the end of its life cycle"
+        ],
+        "grammarCompare": "There is a time to bloom and a time to die (平行句結構對比盛放與凋零)。",
+        "examVariations": "角色安慰對話：Mrs. Rodriguez told her to save the seeds and plant again next spring."
+      }
+    },
+    {
+      "id": "q_w12_od3_u16_31",
+      "book_id": "od3",
+      "unit_id": "od3_16",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "choice",
+      "category_tag": "reading",
+      "difficulty": "★★★★★",
+      "question": "In the story context, Erika Tamar writes that Marisol planted her seed in a \"vacant lot.\" What does \"vacant lot\" mean?",
+      "options": [
+        "An empty piece of city land that has no buildings on it.",
+        "A very crowded parking space full of yellow taxis.",
+        "A large indoor supermarket selling sweet potato pies.",
+        "A private backyard playground reserved only for teenagers."
+      ],
+      "answer": "An empty piece of city land that has no buildings on it.",
+      "explanation": {
+        "point": "字彙與語境推論：vacant lot 意指「未興建任何建築物的空置土地」。",
+        "examPurpose": "考核學生在長篇閱讀中依據上下文推斷進階同義詞彙 vacant lot 確切含義的能力。",
+        "correctReason": "vacant 與 empty 為同義字，lot 指地塊，故 vacant lot 即為城市中無房屋無人的空曠土地。",
+        "note": "vacant lot = empty lot (未利用的閒置空地)。",
+        "trap": "vacant 容易被誤解為反義詞 crowded，或誤以為是私人遊樂場或室內場所。",
+        "distractorAnalysis": {
+          "A very crowded parking space full of yellow taxis.": "vacant 與 crowded 互為反義詞，vacant lot 是無建物的空地而非停滿計程車的停車場。",
+          "A large indoor supermarket selling sweet potato pies.": "vacant 指戶外空置土地，並非販賣地瓜派的室內大超市。",
+          "A private backyard playground reserved only for teenagers.": "該處為社區公共荒廢空地改造成的花園，並非青少年專屬的私人遊樂場。"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "empty lot",
+          "unoccupied piece of land"
+        ],
+        "grammarCompare": "vacant (強調未被租用、無建物) ⟷ empty (強調內部空無一物)。",
+        "examVariations": "同義字代換：She walked to the vacant lot. = She walked to the empty lot."
+      }
+    },
+    {
+      "id": "q_w12_od3_u16_32",
+      "book_id": "od3",
+      "unit_id": "od3_16",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "choice",
+      "category_tag": "reading",
+      "difficulty": "★★★★★",
+      "question": "At the end of the story, why did Marisol laugh, dance, and clap her hands when she ran toward the big crowd?",
+      "options": [
+        "She saw the teenagers had painted a giant glowing sunflower mural on the wall.",
+        "Her dead sunflower miraculously sprang back to life with green leaves.",
+        "Mrs. Washington gave her an entire freshly baked sweet potato pie.",
+        "The city decided to build a huge new playground in the garden lot."
+      ],
+      "answer": "She saw the teenagers had painted a giant glowing sunflower mural on the wall.",
+      "explanation": {
+        "point": "故事結局高潮理解：青少年在空地紅磚牆上繪製巨大向日葵壁畫，重現向日葵的燦爛。",
+        "examPurpose": "評量學生對 Realistic Fiction 故事解決方案 (Plot Resolution) 與核心主題精神的綜合理解。",
+        "correctReason": "故事結尾，青少年完成了一幅巨大的向日葵壁畫，金黃色澤猶如陽光光暈，讓 Marisol 開心拍手跳舞。",
+        "note": "The Garden of Happiness: Plot End & Theme。",
+        "trap": "誤信「枯花神奇復活」的非現實幻想情節，忽視這是一篇寫實小說 (Realistic Fiction)。",
+        "distractorAnalysis": {
+          "Her dead sunflower miraculously sprang back to life with green leaves.": "凋零的植物遵循自然法則不會起死回生，延續美麗的是牆面上的藝術壁畫。",
+          "Mrs. Washington gave her an entire freshly baked sweet potato pie.": "雖然 Washington 太太曾承諾留一塊派，但讓街區轟動慶祝的是牆上巨大的向日葵壁畫。",
+          "The city decided to build a huge new playground in the garden lot.": "故事結尾是社區居民齊聚慶祝美麗壁畫誕生，並非市府興建新遊樂場。"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "gigantic sunflower mural",
+          "everlasting sunshine painting"
+        ],
+        "grammarCompare": "過去完成式感應：What made Marisol laugh was what she saw (名詞子句當主詞)。",
+        "examVariations": "主旨題：What kept happiness in the garden? -> The mural painted by caring teenagers."
+      }
+    },
+    {
+      "id": "q_w12_rww6_u09_01",
+      "book_id": "rw6",
+      "unit_id": "rw6_9",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★☆☆☆☆",
+      "difficulty_level": 1,
+      "question": "Listen to the pronunciation and sentence: \"I don't know how you can be so ________, Nora, after so much time in space.\" Spell the target word for \"冷靜的；平靜的\".",
+      "options": [],
+      "answer": "calm",
+      "vocab_card": {
+        "word": "calm",
+        "ipa": "/kɑːm/",
+        "phonetic": "/kɑːm/",
+        "syllables": "calm",
+        "pos": "形容詞 (Adjective)",
+        "chi": "冷靜的；平靜的",
+        "meaning": "心神鎮定不慌亂的；風平浪靜的",
+        "breakdown": "源自希臘語 kauma (酷暑炎熱休憩之寧靜時光) -> 心平氣和",
+        "trick": "諧音「看門」-> 看門守衛遇到任何狀況都要保持沉著冷靜！",
+        "scene": "在太空梭穿過大氣層震動降落時，諾拉神色自若、毫不驚慌。",
+        "collocation": "stay calm (保持冷靜), keep calm (冷靜沉著), calm voice (沉著平靜的嗓音)",
+        "img": "🧘",
+        "context_eng": "I don't know how you can be so calm, Nora.",
+        "example": "I don't know how you can be so calm, Nora.",
+        "context_chi": "諾拉，我真不知道妳怎麼能這麼冷靜。",
+        "chant": "Calm and cool, keep your head; do not panic, think instead!",
+        "compare": "calm (內心鎮定冷靜) vs. quiet (環境或人安靜不說話) vs. silent (完全無聲寂靜)",
+        "note": "注意字母 l 不發音，母音發長母音 /ɑː/，切勿念成 /kɑːlm/。"
+      },
+      "explanation": {
+        "point": "calm 為形容詞「冷靜的；平靜的」，注意字母 l 不發音。",
+        "examPurpose": "評量學生依據語音與對話語境精確拼寫性格形容詞 calm 的能力。",
+        "correctReason": "在緊張的太空飛行環境中保持鎮定不慌亂，形容詞使用 calm，注意 l 不發音。",
+        "note": "calm [adj.] 冷靜的；平靜的。",
+        "trap": "注意字母 l 不發音，不可誤拼成 cam 或 calmn；母音為長母音 /ɑː/。",
+        "commonTraps": [
+          "受到發音長母音影響，容易漏掉不發音的字母 l 誤拼成 cam。",
+          "受 column 等字干擾，字尾誤加不發音的 n 拼寫成 calmn。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "peaceful",
+          "composed"
+        ],
+        "grammarCompare": "calm 指內心鎮定冷靜；quiet 指環境或人安靜不說話；silent 指完全無聲。",
+        "examVariations": "同義字替換題：Nora stayed calm and quiet during the space flight. (calm = composed)"
+      },
+      "target_chi": "冷靜的；平靜的",
+      "target_pos": "形容詞 (Adjective)",
+      "masked_example": "I don't know how you can be so ________, Nora, after so much time in space."
+    },
+    {
+      "id": "q_w12_rww6_u09_02",
+      "book_id": "rw6",
+      "unit_id": "rw6_9",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★★☆☆☆",
+      "difficulty_level": 2,
+      "question": "Listen to the pronunciation and sentence: \"I remember Nora being quiet, but ________ when she was little.\" Spell the target word for \"有自信的；有信心的\".",
+      "options": [],
+      "answer": "confident",
+      "vocab_card": {
+        "word": "confident",
+        "ipa": "/ˈkɒnfɪdənt/",
+        "phonetic": "/ˈkɑːnfɪdənt/",
+        "syllables": "con·fi·dent",
+        "pos": "形容詞 (Adjective)",
+        "chi": "有自信的；有信心的",
+        "meaning": "對自己的能力、判斷或未來感到確信篤定的",
+        "breakdown": "con-(完全) + fid-(信任) + -ent(形容詞字尾) -> 對自己深信不疑的",
+        "trick": "拆記 con(一起) + fident(信得他) -> 大家一起信任他，他超有「自信」！",
+        "scene": "堂姊爾蒂娜回憶諾拉小時候雖然話不多，但眼神篤定、非常自信。",
+        "collocation": "feel confident (感到自信), be confident about (對…有信心), confident smile (自信的微笑)",
+        "img": "🦁",
+        "context_eng": "I remember Nora being quiet, but confident.",
+        "example": "I remember Nora being quiet, but confident.",
+        "context_chi": "我記得諾拉以前很安靜，但很有自信。",
+        "chant": "Stand up tall, stand up proud; confident and calm, in a crowd!",
+        "compare": "confident (充滿自信的，褒義) vs. arrogant (傲慢自大的，貶義)",
+        "note": "名詞形式為 confidence (自信心)；形容詞字尾為 -ent，不是 -ant。"
+      },
+      "explanation": {
+        "point": "confident 為形容詞「有自信的」，字尾為 -ent，名詞為 confidence。",
+        "examPurpose": "考核學生對核心性格形容詞 confident 之拼寫結構與字尾變化的精準掌握。",
+        "correctReason": "形容一個人對自身能力充滿信心的形容詞為 confident，字尾是 -ent 而非 -ant。",
+        "note": "confident [adj.] 有自信的；有信心的。",
+        "trap": "形容詞字尾最容易誤拼為 -ant (confidant 指知己密友)，或漏掉字母 i 寫成 confdent。",
+        "commonTraps": [
+          "形容詞字尾容易混淆誤拼為 -ant (confidant 是知己密友而非形容詞)。",
+          "拼寫音節劃分不清楚，容易漏掉中間弱化母音字母 i 誤拼為 confdent。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "self-assured",
+          "positive"
+        ],
+        "grammarCompare": "confident 為形容詞 (feel confident)；名詞為 confidence (have confidence)。",
+        "examVariations": "詞性轉換題：She has great _______ in her ability, so she is always _______. (confidence / confident)"
+      },
+      "target_chi": "有自信的；有信心的",
+      "target_pos": "形容詞 (Adjective)",
+      "masked_example": "I remember Nora being quiet, but ________ when she was little."
+    },
+    {
+      "id": "q_w12_rww6_u09_03",
+      "book_id": "rw6",
+      "unit_id": "rw6_9",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★☆☆☆☆",
+      "difficulty_level": 1,
+      "question": "Listen to the pronunciation and sentence: \"Rayyan, you were always so ________, I don't think you can be rude.\" Spell the target word for \"友善的；親切的\".",
+      "options": [],
+      "answer": "friendly",
+      "vocab_card": {
+        "word": "friendly",
+        "ipa": "/ˈfrendli/",
+        "phonetic": "/ˈfrendli/",
+        "syllables": "friend·ly",
+        "pos": "形容詞 (Adjective)",
+        "chi": "友善的；親切的",
+        "meaning": "待人和藹可親、熱情好客的",
+        "breakdown": "friend(朋友) + -ly(具…特質的形容詞字尾) -> 像朋友般待人的",
+        "trick": "記住「朋友 (friend)」加上 -ly 就是親切友善的模樣！",
+        "scene": "米勒家族聚會時，大人們滿面春風、熱情招待每位遠道而來的親戚。",
+        "collocation": "be friendly to sb. (對某人友善), friendly smile (親切的笑容), friendly atmosphere (友善的氣氛)",
+        "img": "🤝",
+        "context_eng": "And Rayyan, you were always so friendly, I don't think you can be rude.",
+        "example": "And Rayyan, you were always so friendly, I don't think you can be rude.",
+        "context_chi": "而拉揚，你以前總是那麼親切友善，我想你絕不可能會無禮的。",
+        "chant": "A friendly smile, a friendly wave; kind and polite is how we behave!",
+        "compare": "friendly (形容詞：友善的) vs. kindly (副詞/形容詞：慈祥地)；注意 friendly 是形容詞非副詞！",
+        "note": "極重要！雖然以 -ly 結尾，但 friendly 是「形容詞」，若要當副詞需用 in a friendly way。"
+      },
+      "explanation": {
+        "point": "friendly 為形容詞「親切友善的」，由名詞 friend 加 -ly 構成。",
+        "examPurpose": "測驗學生對 -ly 結尾形容詞 friendly 的拼寫與形容詞詞性辨識能力。",
+        "correctReason": "friend (朋友) 加上 -ly 構成形容詞 friendly，表示對人熱情友善且和藹可親。",
+        "note": "friendly [adj.] 友善的；親切的。",
+        "trap": "極易因 -ly 結尾誤認為副詞，且 friend 中的 ie 字母順序容易顛倒寫成 freindly。",
+        "commonTraps": [
+          "friend 內部的字母組合容易寫反，誤拼為 freindly (i 與 e 順序顛倒)。",
+          "誤將 friendly 當成副詞使用，修飾動詞時應使用 in a friendly way。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "kind",
+          "welcoming"
+        ],
+        "grammarCompare": "friendly 是形容詞不是副詞；若要修飾一般動詞需用片語 in a friendly manner。",
+        "examVariations": "句型填空題：The cousins greeted each other in a _______ way. (friendly)"
+      },
+      "target_chi": "友善的；親切的",
+      "target_pos": "形容詞 (Adjective)",
+      "masked_example": "Rayyan, you were always so ________, I don't think you can be rude."
+    },
+    {
+      "id": "q_w12_rww6_u09_04",
+      "book_id": "rw6",
+      "unit_id": "rw6_9",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★★☆☆☆",
+      "difficulty_level": 2,
+      "question": "Listen to the pronunciation and sentence: \"Their ________ parents left Earth years before with a group of explorers to live on planet Regulus.\" Spell the target word for \"大膽的；敢於冒險的\".",
+      "options": [],
+      "answer": "daring",
+      "vocab_card": {
+        "word": "daring",
+        "ipa": "/ˈdeərɪŋ/",
+        "phonetic": "/ˈderɪŋ/",
+        "syllables": "dar·ing",
+        "pos": "形容詞 (Adjective)",
+        "chi": "大膽的；敢於冒險的",
+        "meaning": "勇敢無畏、敢於嘗試危險或嶄新事物的",
+        "breakdown": "dare(敢於、挑戰) + -ing(形容詞字尾) -> 敢作敢當、勇於開拓的",
+        "trick": "諧音「大人的」-> 敢隻身飛向外太空開拓新星球，這需要「大膽冒險」的魄力！",
+        "scene": "雙胞胎的父母敢於跟隨探險隊離開地球，前往遙遠的軒轅十四星定居開拓。",
+        "collocation": "daring explorer (勇敢大膽的探險家), daring plan (大膽的計畫), daring feat (大膽的壯舉)",
+        "img": "🚀",
+        "context_eng": "Their daring parents left Earth years before with a group of explorers.",
+        "example": "Their daring parents left Earth years before with a group of explorers.",
+        "context_chi": "他們勇敢大膽的父母多年前跟隨一群探險家離開了地球。",
+        "chant": "Daring and bold, ready to explore; flying to the stars and seeking more!",
+        "compare": "daring (大膽且富開創冒險精神) vs. brave (面對危險不退縮) vs. reckless (魯莽不顧後果)",
+        "note": "動詞 dare (敢於) 變現在分詞/形容詞時，去 e 加 ing 成為 daring。"
+      },
+      "explanation": {
+        "point": "daring 為形容詞「大膽勇敢的」，由動詞 dare 去 e 加 -ing 構成。",
+        "examPurpose": "評量學生對冒險人格形容詞 daring 的字根變化與語意掌握能力。",
+        "correctReason": "敢於冒險、勇於探索未知世界的特質稱為 daring，由 dare 去 e 加 ing 形成。",
+        "note": "daring [adj.] 大膽的；敢於冒險的。",
+        "trap": "動詞 dare 變形容詞時需去 e 加 ing，不可直接加 ing 寫成 dareing。",
+        "commonTraps": [
+          "字尾變化規則錯誤，忘記去掉不發音的字母 e 而誤拼為 dareing。",
+          "發音時母音容易與 darling (親愛的) 混淆，注意中間沒有字母 l。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "bold",
+          "courageous"
+        ],
+        "grammarCompare": "daring 強調富開創性與冒險膽識；brave 側重面對危險毫無懼色。",
+        "examVariations": "選詞填空：The _______ explorers decided to travel to the distant planet. (daring)"
+      },
+      "target_chi": "大膽的；敢於冒險的",
+      "target_pos": "形容詞 (Adjective)",
+      "masked_example": "Their ________ parents left Earth years before with a group of explorers to live on planet Regulus."
+    },
+    {
+      "id": "q_w12_rww6_u09_05",
+      "book_id": "rw6",
+      "unit_id": "rw6_9",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★★☆☆☆",
+      "difficulty_level": 2,
+      "question": "Listen to the pronunciation and sentence: \"His twin sister, Nora, knew that Rayyan talked a lot when he was ________.\" Spell the target word for \"緊張的；擔憂不安的\".",
+      "options": [],
+      "answer": "nervous",
+      "vocab_card": {
+        "word": "nervous",
+        "ipa": "/ˈnɜːvəs/",
+        "phonetic": "/ˈnɜːrvəs/",
+        "syllables": "ner·vous",
+        "pos": "形容詞 (Adjective)",
+        "chi": "緊張的；擔憂不安的",
+        "meaning": "因擔憂即將發生的事情而心神不寧、坐立難安的",
+        "breakdown": "nerve(神經) + -ous(充滿…的形容詞字尾) -> 神經緊繃的",
+        "trick": "口訣「神經緊繃，全身直發抖」-> 緊張 (nervous) 的感覺！",
+        "scene": "拉揚搭乘太空梭重返地球前，因為心中充滿緊張而整個早晨講話講個不停。",
+        "collocation": "feel nervous (感到緊張), be nervous about (對…感到緊張不安), nervous habit (緊張時的習慣)",
+        "img": "😰",
+        "context_eng": "His twin sister, Nora, knew that Rayyan talked a lot when he was nervous.",
+        "example": "His twin sister, Nora, knew that Rayyan talked a lot when he was nervous.",
+        "context_chi": "他的雙胞胎妹妹諾拉心裡明白，拉揚感到緊張時就會說個不停。",
+        "chant": "Nervous hands, tapping feet; deep breath in, feel your heartbeat!",
+        "compare": "nervous (當下的緊張不安) vs. anxious (長期的焦慮擔憂) vs. scared (感到害怕恐懼)",
+        "note": "介系詞常搭配 about (be nervous about sth.)；名詞為 nerve (神經；勇氣)。"
+      },
+      "explanation": {
+        "point": "nervous 為形容詞「緊張不安的」，字尾為 -ous，常搭配介系詞 about。",
+        "examPurpose": "測驗學生在心理情緒語境中正確拼寫形容詞 nervous 的能力。",
+        "correctReason": "因即將發生的事情而感到心神不寧、神經緊繃，形容詞使用 nervous。",
+        "note": "nervous [adj.] 緊張的；擔憂不安的。",
+        "trap": "字尾 -ous 容易誤拼成 -us 或 -os；母音 /ɜː/ 易誤寫成 narvous。",
+        "commonTraps": [
+          "形容詞字尾 -ous 容易拼寫不全，誤寫為 nervus 或 nervos。",
+          "受第一音節發音影響，第一個母音字母 e 容易誤寫成 a (narvous)。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "anxious",
+          "worried"
+        ],
+        "grammarCompare": "nervous 多指面對特定事件當下的緊張情緒；anxious 則指長期深層的焦慮。",
+        "examVariations": "介系詞搭配題：Rayyan was nervous _______ landing on Earth. (正解：about)"
+      },
+      "target_chi": "緊張的；擔憂不安的",
+      "target_pos": "形容詞 (Adjective)",
+      "masked_example": "His twin sister, Nora, knew that Rayyan talked a lot when he was ________.",
+      "masked_example_chi": "他的雙胞胎妹妹諾拉心裡明白，拉揚感到緊張時就會說個不停。"
+    },
+    {
+      "id": "q_w12_rww6_u09_06",
+      "book_id": "rw6",
+      "unit_id": "rw6_9",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★☆☆☆☆",
+      "difficulty_level": 1,
+      "question": "Listen to the pronunciation and sentence: \"Sorry, I don't mean to be ________, but I don't remember you.\" Spell the target word for \"粗魯的；無禮的\".",
+      "options": [],
+      "answer": "rude",
+      "vocab_card": {
+        "word": "rude",
+        "ipa": "/ruːd/",
+        "phonetic": "/ruːd/",
+        "syllables": "rude",
+        "pos": "形容詞 (Adjective)",
+        "chi": "粗魯的；無禮的",
+        "meaning": "缺乏禮貌、傷害他人感受或舉止不恭敬的",
+        "breakdown": "源自拉丁語 rudis (未加工的、原始粗野的) -> 缺乏教養與禮貌的",
+        "trick": "諧音「入的」-> 不敲門就「入的」，真是太無禮粗魯 (rude) 了！",
+        "scene": "拉揚坦承自己忘了堂姊的面容，趕緊補充說自己絕非有意無禮。",
+        "collocation": "mean to be rude (有意無禮), rude behavior (粗魯無禮的舉止), it is rude to do sth. (做某事很失禮)",
+        "img": "🙅",
+        "context_eng": "Sorry, I don't mean to be rude, but I don't remember you.",
+        "example": "Sorry, I don't mean to be rude, but I don't remember you.",
+        "context_chi": "抱歉，我不是故意沒禮貌，但我記不得妳了。",
+        "chant": "Do not be rude, be polite; saying thank you is always right!",
+        "compare": "rude (粗魯無禮的) vs. polite (有禮貌的，反義詞) vs. impolite (不禮貌的)",
+        "note": "副詞為 rudely；名詞為 rudeness；口語常用委婉句型 \"I don't mean to be rude, but...\"。"
+      },
+      "explanation": {
+        "point": "rude 為形容詞「粗魯無禮的」，反義詞為 polite，副詞為 rudely。",
+        "examPurpose": "考核學生在日常社交禮儀語境中辨識並拼寫關鍵形容詞 rude 的能力。",
+        "correctReason": "缺乏禮貌或舉止不恭敬的形容詞為 rude，常用於否定委婉語 I don't mean to be rude。",
+        "note": "rude [adj.] 粗魯的；無禮的。",
+        "trap": "發音為 /ruːd/，不可誤拼成 rood，也不可在 mean to be 後面誤用副詞 rudely。",
+        "commonTraps": [
+          "受到同音字干擾，容易將 rude 誤拼成十字架同音字 rood。",
+          "在 mean to be 後方誤填副詞形式 rudely，忽略了 be 動詞後需接形容詞。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "impolite",
+          "ill-mannered"
+        ],
+        "grammarCompare": "rude (粗魯無禮) ⟷ polite (有禮貌)；impolite 語氣比 rude 稍顯客氣委婉。",
+        "examVariations": "反義字選擇：The opposite of being polite is being _______. (rude)"
+      },
+      "target_chi": "粗魯的；無禮的",
+      "target_pos": "形容詞 (Adjective)",
+      "masked_example": "Sorry, I don't mean to be ________, but I don't remember you.",
+      "masked_example_chi": "抱歉，我不是故意沒禮貌，但我記不得妳了。"
+    },
+    {
+      "id": "q_w12_rww6_u09_07",
+      "book_id": "rw6",
+      "unit_id": "rw6_9",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★☆☆☆☆",
+      "difficulty_level": 1,
+      "question": "Listen to the pronunciation and sentence: \"Yes, I'm Rayyan, and this is Nora. She's the ________ one.\" Spell the target word for \"害羞的；靦腆的\".",
+      "options": [],
+      "answer": "shy",
+      "vocab_card": {
+        "word": "shy",
+        "ipa": "/ʃaɪ/",
+        "phonetic": "/ʃaɪ/",
+        "syllables": "shy",
+        "pos": "形容詞 (Adjective)",
+        "chi": "害羞的；靦腆的",
+        "meaning": "面對陌生人或人群時感到不自在、膽怯退縮的",
+        "breakdown": "源自古英語 sceoh (膽怯避開的) -> 羞怯怕生的",
+        "trick": "諧音「曬」-> 臉蛋曬紅得像害羞 (shy) 一樣！",
+        "scene": "表弟剛抵達新環境時不太說話，顯得非常羞怯靦腆。",
+        "collocation": "a shy smile (靦腆的微笑), feel shy (感到害羞), shy around strangers (在陌生人面前怕生)",
+        "img": "🫣",
+        "context_eng": "Yes, I'm Rayyan, and this is Nora. She's the shy one.",
+        "example": "Yes, I'm Rayyan, and this is Nora. She's the shy one.",
+        "context_chi": "是的，我是拉揚，這是諾拉。她比較害羞。",
+        "chant": "A little shy, quiet and mild; a gentle heart in a thoughtful child!",
+        "compare": "shy (害羞怕生的，常伴隨不自在) vs. quiet (安靜不多話，但不一定害怕人)",
+        "note": "比較級為 shyer 或 shier；最高級為 shyest 或 shiest。"
+      },
+      "explanation": {
+        "point": "shy 為形容詞「害羞的；靦腆的」，比較級為 shyer/shier，最高級為 shyest/shiest。",
+        "examPurpose": "測驗學生拼寫基礎核心性格形容詞 shy 及其在閱讀文本中的指稱關係。",
+        "correctReason": "面對陌生人時容易感到膽怯退縮或靦腆不多話，形容詞使用 shy。",
+        "note": "shy [adj.] 害羞的；靦腆的。",
+        "trap": "單音節以 y 結尾，容易誤拼成 shi；比較級時可以直接加 er (shyer)。",
+        "commonTraps": [
+          "部分學生受拼讀規則干擾，誤將結尾字母 y 拼寫為字母 i (shi)。",
+          "將害羞 (shy) 與安靜文靜 (quiet) 混為一談，忽視兩者心理內涵的區別。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "timid",
+          "bashful"
+        ],
+        "grammarCompare": "shy 指害怕與陌生人互動的害羞退縮；quiet 純粹指話不多或環境寧靜。",
+        "examVariations": "性格辨析題：Nora was not _______; she was just quiet and observant. (shy)"
+      },
+      "target_chi": "害羞的；靦腆的",
+      "target_pos": "形容詞 (Adjective)",
+      "masked_example": "Yes, I'm Rayyan, and this is Nora. She's the ________ one.",
+      "masked_example_chi": "是的，我是拉揚，這是諾拉。她比較害羞。"
+    },
+    {
+      "id": "q_w12_rww6_u09_08",
+      "book_id": "rw6",
+      "unit_id": "rw6_9",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★★★☆☆",
+      "difficulty_level": 4,
+      "question": "Listen to the pronunciation and sentence: \"Nora just smiled and looked ________ as she recognized cousin Irdina.\" Spell the target word for \"體貼周到的；深思熟慮的\".",
+      "options": [],
+      "answer": "thoughtful",
+      "vocab_card": {
+        "word": "thoughtful",
+        "ipa": "/ˈθɔːtfəl/",
+        "phonetic": "/ˈθɑːtfəl/",
+        "syllables": "thought·ful",
+        "pos": "形容詞 (Adjective)",
+        "chi": "體貼周到的；深思熟慮的",
+        "meaning": "替他人著想細心關照的；或表情神態陷入沉思的",
+        "breakdown": "thought(思考、心意) + -ful(充滿…的形容詞字尾) -> 充滿體貼與思慮的",
+        "trick": "拆記 thought(想法) + ful(滿滿) -> 腦海裡滿滿都是替別人著想的「體貼」！",
+        "scene": "叔叔提早準備好客房並煮了豐盛晚餐迎接孩子，處處展現體貼入微的心意。",
+        "collocation": "a thoughtful gift (貼心的禮物), look thoughtful (神態若有所思), thoughtful host (體貼的主人)",
+        "img": "🎁",
+        "context_eng": "My uncle was so thoughtful. He had a guest room ready for us.",
+        "example": "My uncle was so thoughtful. He had a guest room ready for us.",
+        "context_chi": "我叔叔非常體貼，他替我們準備好客房，還煮了一頓豐盛的晚餐。",
+        "chant": "Thoughtful and kind, caring each day; helping your friends in every way!",
+        "compare": "thoughtful (體貼周到的；若有所思的) vs. considerate (設想周到的) vs. thoughtless (粗心不顧人的，反義詞)",
+        "note": "注意拼寫只有一個 l (-ful)，不可拼成 thoughtfull。"
+      },
+      "explanation": {
+        "point": "thoughtful 為形容詞「體貼的；深思的」，由 thought 加 -ful 構成，只有一個 l。",
+        "examPurpose": "評量學生對複合字尾 -ful 形容詞 thoughtful 的精準拼寫與語義辨析能力。",
+        "correctReason": "形容表情若有所思或為人細心體貼的形容詞為 thoughtful，字尾為單一字母 l。",
+        "note": "thoughtful [adj.] 體貼周到的；深思熟慮的。",
+        "trap": "字尾 -ful 容易寫成雙重字母 -full (thoughtfull 是常見錯誤)；thought 中間易漏 gh。",
+        "commonTraps": [
+          "受到單字 full 影響，將結尾 -ful 錯誤拼寫成雙 l (thoughtfull)。",
+          "中間字母組合 -ough- 容易拼錯，遺漏不發音的字母 gh 誤拼為 thotful。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "considerate",
+          "reflective"
+        ],
+        "grammarCompare": "thoughtful (體貼的；沉思的) ⟷ thoughtless (粗心不顧他人的，反義詞)。",
+        "examVariations": "情境描寫題：The host was so _______ that he prepared warm drinks for all guests. (thoughtful)"
+      },
+      "target_chi": "體貼周到的；深思熟慮的",
+      "target_pos": "形容詞 (Adjective)",
+      "masked_example": "Nora just smiled and looked ________ as she recognized cousin Irdina."
+    },
+    {
+      "id": "q_w12_rww6_u09_09",
+      "book_id": "rw6",
+      "unit_id": "rw6_9",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★★★☆☆",
+      "difficulty_level": 4,
+      "question": "Listen to the pronunciation and sentence: \"If you're more ________, you probably like to play team sports like soccer or basketball.\" Spell the target word for \"外向的；開朗好社交的\".",
+      "options": [],
+      "answer": "outgoing",
+      "vocab_card": {
+        "word": "outgoing",
+        "ipa": "/ˌaʊtˈɡəʊɪŋ/",
+        "phonetic": "/ˈaʊtɡoʊɪŋ/",
+        "syllables": "out·go·ing",
+        "pos": "形容詞 (Adjective)",
+        "chi": "外向的；開朗好社交的",
+        "meaning": "個性親切活潑、熱愛與人群結交互動的",
+        "breakdown": "out(向外) + go(走動) + -ing(形容詞字尾) -> 勇於向外走入人群的",
+        "trick": "out(往外) + going(去) -> 總是喜歡往外跑去跟朋友打成一片，就是「外向的」！",
+        "scene": "外向開朗的孩子通常喜歡參與足球或籃球等需要團隊合作與熱絡溝通的運動。",
+        "collocation": "an outgoing personality (外向開朗的個性), outgoing and friendly (外向熱情且親切的)",
+        "img": "😄",
+        "context_eng": "For instance, if you're more outgoing, you probably like to play team sports like soccer or basketball.",
+        "example": "For instance, if you're more outgoing, you probably like to play team sports like soccer or basketball.",
+        "context_chi": "舉例來說，如果你比較外向，你很可能會喜歡踢足球或打籃球等團隊運動。",
+        "chant": "Outgoing and bright, talking with cheer; making new friends everywhere near!",
+        "compare": "outgoing (外向熱絡好社交) vs. introverted (內向內省的) vs. shy (害羞怕生的)",
+        "note": "outgoing 是一個複合字，中間不加空格或連字號。"
+      },
+      "explanation": {
+        "point": "outgoing 為複合形容詞「外向開朗的」，由 out + going 連寫而成。",
+        "examPurpose": "考核學生對運動偏好文本中核心性格詞彙 outgoing 之拼寫與詞義理解。",
+        "correctReason": "喜歡與人群互動、熱愛社交與團隊活動的性格特質為 outgoing，中間不加空格。",
+        "note": "outgoing [adj.] 外向的；開朗好社交的。",
+        "trap": "outgoing 是一個不可分割的複合字，切勿分開寫成 out going 或加連字號。",
+        "commonTraps": [
+          "誤將單字拆開書寫為兩個獨立單詞 out going，應為單一連寫字。",
+          "受到音節劃分影響，結尾 -ing 容易誤拼成 -ed (outgoed)。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "extroverted",
+          "sociable"
+        ],
+        "grammarCompare": "outgoing (外向開朗好社交) ⟷ introverted / quiet (內向沉靜的)。",
+        "examVariations": "運動性格配對：_______ people usually enjoy team sports like soccer. (Outgoing)"
+      },
+      "target_chi": "外向的；開朗好社交的",
+      "target_pos": "形容詞 (Adjective)",
+      "masked_example": "If you're more ________, you probably like to play team sports like soccer or basketball."
+    },
+    {
+      "id": "q_w12_rww6_u09_10",
+      "book_id": "rw6",
+      "unit_id": "rw6_9",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★★★☆☆",
+      "difficulty_level": 5,
+      "question": "Listen to the pronunciation and sentence: \"If you're quiet, you may ________ an individual sport, like tennis or golf.\" Spell the target word for \"更偏好；更喜歡\".",
+      "options": [],
+      "answer": "prefer",
+      "vocab_card": {
+        "word": "prefer",
+        "ipa": "/prɪˈfɜː/",
+        "phonetic": "/prɪˈfɜːr/",
+        "syllables": "pre·fer",
+        "pos": "動詞 (Verb)",
+        "chi": "更偏好；更喜歡",
+        "meaning": "在多個選項中比較喜歡某特定事物",
+        "breakdown": "pre-(在…之前) + fer(帶來、放置) -> 把更喜愛的事物擺在第一優先位",
+        "trick": "拆記 pre(提前) + fer(拿) -> 看到喜歡的點心「提前拿」，代表「更偏好」！",
+        "scene": "生性文靜沉著的同學，在體育課時往往偏好網球或高爾夫等個人球類運動。",
+        "collocation": "prefer A to B (比起 B 更偏好 A), prefer doing sth. (偏好做某事), prefer to do sth. (寧願做某事)",
+        "img": "⚖️",
+        "context_eng": "If you're quiet, you may prefer an individual sport, like tennis or golf.",
+        "example": "If you're quiet, you may prefer an individual sport, like tennis or golf.",
+        "context_chi": "如果你比較安靜，你可能會偏好網球或高爾夫球等個人運動。",
+        "chant": "Which one do you prefer? Tea or coffee, him or her?",
+        "compare": "prefer A to B (比起 B 更喜歡 A，介系詞用 to！) vs. like A better than B (比較級搭配 than)",
+        "note": "過去式與過去分詞需重複 r 加上 ed -> preferred；現在分詞為 preferring。"
+      },
+      "explanation": {
+        "point": "prefer 為及物動詞「更偏好」，過去式需重複 r 加 ed (preferred)。",
+        "examPurpose": "測驗學生在對比選擇句型中正確拼寫及物動詞 prefer 及其句型搭配能力。",
+        "correctReason": "在多個選項中比較偏愛某特定事物，動詞使用 prefer，句型為 prefer A to B。",
+        "note": "prefer [v.] 更偏好；更喜歡。",
+        "trap": "過去式與進行式必須重複字母 r (preferred, preferring)；介系詞固定搭配 to。",
+        "commonTraps": [
+          "時態變化時忘記重複尾端子音字母 r，誤拼為 prefered。",
+          "受中文語意影響，常在句型中誤接比較連詞 than (應為 prefer A to B)。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "favor",
+          "like better"
+        ],
+        "grammarCompare": "prefer A to B (比起 B 更偏好 A，介系詞用 to！) ⟷ like A better than B。",
+        "examVariations": "句型轉換題：I like tennis better than golf. -> I _______ tennis _______ golf. (prefer / to)"
+      },
+      "target_chi": "更偏好；更喜歡",
+      "target_pos": "動詞 (Verb)",
+      "masked_example": "If you're quiet, you may ________ an individual sport, like tennis or golf.",
+      "masked_example_chi": "如果你比較安靜，你可能會偏好網球或高爾夫球等個人運動。"
+    },
+    {
+      "id": "q_w12_rww6_u09_11",
+      "book_id": "rw6",
+      "unit_id": "rw6_9",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★★★☆☆",
+      "difficulty_level": 4,
+      "question": "Listen to the pronunciation and sentence: \"Are you usually ________ or usually laughing? How would you describe yourself?\" Spell the target word for \"嚴肅的；認真的\".",
+      "options": [],
+      "answer": "serious",
+      "vocab_card": {
+        "word": "serious",
+        "ipa": "/ˈsɪəriəs/",
+        "phonetic": "/ˈsɪriəs/",
+        "syllables": "se·ri·ous",
+        "pos": "形容詞 (Adjective)",
+        "chi": "嚴肅的；認真的",
+        "meaning": "神情莊重不茍言笑的；對待事物全神貫注認真負責的",
+        "breakdown": "源自拉丁語 serius (莊重沈著的、認真的) -> 不輕浮玩笑的",
+        "trick": "諧音「希瑞爾死」-> 聽到神情嚴肅 (serious) 的教練哨音，大家立刻肅立！",
+        "scene": "有的人玩運動只是純屬休閒放鬆，有的人則非常認真嚴肅，每場比賽都誓在必得。",
+        "collocation": "a serious expression (嚴肅的神情), take sth. seriously (認真看待某事), serious problem (嚴重的問題)",
+        "img": "🧐",
+        "context_eng": "Are you usually serious or usually laughing? How would you describe yourself?",
+        "example": "Are you usually serious or usually laughing? How would you describe yourself?",
+        "context_chi": "你通常是神情嚴肅還是總是笑口常開？你會如何描述自己？",
+        "chant": "Serious face, eyes so bright; thinking through both day and night!",
+        "compare": "serious (嚴肅認真的) vs. humorous (幽默風趣的，反義詞) vs. playful (愛開玩笑的)",
+        "note": "副詞為 seriously；片語 take sth. seriously 表示「認真嚴肅對待某事」。"
+      },
+      "explanation": {
+        "point": "serious 為形容詞「嚴肅的；認真的」，副詞為 seriously，反義詞為 playful。",
+        "examPurpose": "評量學生對性格光譜兩極詞彙 serious 之拼寫與閱讀情境應用能力。",
+        "correctReason": "神情莊重不茍言笑或對待事情全神貫注，形容詞使用 serious。",
+        "note": "serious [adj.] 嚴肅的；認真的。",
+        "trap": "字尾為 -ious，不可誤拼成 -us 或 -os；第一音節字母為 se- 不是 si-。",
+        "commonTraps": [
+          "受到發音 /sɪr/ 影響，容易將字首 se- 誤拼為 si- (sirious)。",
+          "形容詞字尾 -ious 容易漏掉字母 i，誤拼成 serous (血清的)。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "solemn",
+          "grave"
+        ],
+        "grammarCompare": "serious (嚴肅認真的) ⟷ humorous (幽默風趣的)；take sth. seriously 認真看待。",
+        "examVariations": "片語填空題：You should take your schoolwork _______ and study hard. (seriously)"
+      },
+      "target_chi": "嚴肅的；認真的",
+      "target_pos": "形容詞 (Adjective)",
+      "masked_example": "Are you usually ________ or usually laughing? How would you describe yourself?",
+      "masked_example_chi": "你通常是神情嚴肅還是總是笑口常開？你會如何描述自己？"
+    },
+    {
+      "id": "q_w12_rww6_u09_12",
+      "book_id": "rw6",
+      "unit_id": "rw6_9",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★★★★☆",
+      "difficulty_level": 6,
+      "question": "Listen to the pronunciation and sentence: \"The ________ make sure they have crafts to do and games to play at the family reunion.\" Spell the target word for \"成年人；大人\".",
+      "options": [],
+      "answer": "adult",
+      "vocab_card": {
+        "word": "adult",
+        "ipa": "/ˈædʌlt/",
+        "phonetic": "/əˈdʌlt/",
+        "syllables": "a·dult",
+        "pos": "名詞 (Noun)",
+        "chi": "成年人；大人",
+        "meaning": "身體與心智發育成熟的人（通常指年滿 18 歲以上者）",
+        "breakdown": "源自拉丁語 adolescere (成長) 之過去分詞 adultus (已完全長大成熟者)",
+        "trick": "拆記 a + dult (大人的諧音) -> 已經長大成人的「大人 (adult)」！",
+        "scene": "在家族盛大聚會中，大人們負責統籌策劃各項活動並照料所有孩子。",
+        "collocation": "adult life (成年生活), young adult (年輕成年人), an adult supervision (成人看護監督)",
+        "img": "🧑‍💼",
+        "context_eng": "The adults make sure they have crafts to do and games to play.",
+        "example": "The adults make sure they have crafts to do and games to play.",
+        "context_chi": "大人們貼心確保他們有手工勞作可以發揮、有桌上遊戲可以同樂。",
+        "chant": "Adults guide and lend a hand, helping kids throughout the land!",
+        "compare": "adult (正式名詞：成年人) vs. grown-up (日常口語名詞：大人) vs. child (兒童)",
+        "note": "英音常重音在第一個音節 /ˈædʌlt/，美音常重音在第二音節 /əˈdʌlt/。"
+      },
+      "explanation": {
+        "point": "adult 為名詞「成年人；大人」，口語同義詞為 grown-up，複數加 -s。",
+        "examPurpose": "考核學生在家庭聚會文本中精準拼寫核心名詞 adult 及其單複數概念。",
+        "correctReason": "年滿 18 歲以上、心智成熟的成年人在英文中稱為 adult，複數形式為 adults。",
+        "note": "adult [n.] 成年人；大人。",
+        "trap": "注意開頭為字母 a，重音英美音略有不同；不可誤拼為 adalt 或 audlt。",
+        "commonTraps": [
+          "第二個母音字母 u 容易受混淆音影響誤拼成 a (adalt)。",
+          "字母順序顛倒，將 d 與 u 寫反成 audlt。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "grown-up",
+          "mature person"
+        ],
+        "grammarCompare": "adult 為正式書面名詞；grown-up 則是日常口語常用的同義字。",
+        "examVariations": "同義字替換題：The grown-ups planned fun activities for all the kids. (grown-ups = adults)"
+      },
+      "target_chi": "成年人；大人",
+      "target_pos": "名詞 (Noun)",
+      "masked_example": "The ________ make sure they have crafts to do and games to play at the family reunion."
+    },
+    {
+      "id": "q_w12_rww6_u09_13",
+      "book_id": "rw6",
+      "unit_id": "rw6_9",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★★★★☆",
+      "difficulty_level": 6,
+      "question": "Listen to the pronunciation and sentence: \"Tennis and golf are examples of ________ sports that you can play on your own.\" Spell the target word for \"個人的；單獨的\".",
+      "options": [],
+      "answer": "individual",
+      "vocab_card": {
+        "word": "individual",
+        "ipa": "/ˌɪndɪˈvɪdʒuəl/",
+        "phonetic": "/ˌɪndəˈvɪdʒuəl/",
+        "syllables": "in·di·vid·u·al",
+        "pos": "形容詞 (Adjective)",
+        "chi": "個人的；單獨的",
+        "meaning": "單獨一人的；非團隊或集體的",
+        "breakdown": "in-(不) + divid-(分割) + -u- + -al(形容詞字尾) -> 不可再分割的單一獨立個體",
+        "trick": "拆記 in(不) + divide(分開) -> 單獨一個個體不能再被分開，就是「個人的」！",
+        "scene": "網球、高爾夫球與游泳皆屬於考驗個人技巧與心智的個人運動。",
+        "collocation": "individual sport (個人運動), individual needs (個別需求), individual attention (個別關注)",
+        "img": "🏌️",
+        "context_eng": "If you're quiet, you may prefer an individual sport, like tennis or golf.",
+        "example": "If you're quiet, you may prefer an individual sport, like tennis or golf.",
+        "context_chi": "如果你比較安靜，你可能會偏好網球或高爾夫球等個人運動。",
+        "chant": "Individual skills, one by one; playing hard until you have won!",
+        "compare": "individual sport (個人運動) vs. team sport (團隊運動)；individual 也可作名詞表示「個人、個體」。",
+        "note": "重音在第四個音節 /vɪdʒ/ 上，發音請勿讀漏音節。"
+      },
+      "explanation": {
+        "point": "individual 為形容詞「個人的；獨立的」，亦可作名詞「個人」，音節較長。",
+        "examPurpose": "評量學生對多音節學術詞彙 individual 之正確音節拆解與拼寫掌握度。",
+        "correctReason": "考驗個人單獨技能、非團隊進行的運動稱為 individual sport，反義為 team sport。",
+        "note": "individual [adj.] 個人的；單獨的。",
+        "trap": "音節較長 (in-di-vid-u-al)，最容易在 middle syllable 漏掉字母 i 或 u 拼成 indivdual。",
+        "commonTraps": [
+          "長單字拼寫容易漏掉倒數第二音節的字母 u，誤拼為 individal。",
+          "字首 in- 容易受混淆字影響誤寫成 un- (undividual 是錯誤拼法)。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "single-player",
+          "personal"
+        ],
+        "grammarCompare": "individual sport (個人運動，如網球) ⟷ team sport (團隊運動，如足球籃球)。",
+        "examVariations": "運動分類題：Golf is an _______ sport, while soccer is a team sport. (individual)"
+      },
+      "target_chi": "個人的；單獨的",
+      "target_pos": "形容詞 (Adjective)",
+      "masked_example": "Tennis and golf are examples of ________ sports that you can play on your own."
+    },
+    {
+      "id": "q_w12_rww6_u09_14",
+      "book_id": "rw6",
+      "unit_id": "rw6_9",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★★★★☆",
+      "difficulty_level": 6,
+      "question": "Listen to the pronunciation and sentence: \"He talked almost ________ all morning to everyone on the shuttle.\" Spell the target word for \"不停歇地；不間斷的\".",
+      "options": [],
+      "answer": "nonstop",
+      "vocab_card": {
+        "word": "nonstop",
+        "ipa": "/ˌnɒnˈstɒp/",
+        "phonetic": "/ˌnɑːnˈstɑːp/",
+        "syllables": "non·stop",
+        "pos": "副詞 (Adverb) / 形容詞",
+        "chi": "不停歇地；不間斷的",
+        "meaning": "中間毫無暫停、持續不斷進行的",
+        "breakdown": "non-(無、不) + stop(停止) -> 不停息、一刻不歇的",
+        "trick": "non(不) + stop(停) -> 從頭到尾「不停止」地講個不停！",
+        "scene": "拉揚因為登陸地球前太過緊張，一整個早晨嘴巴幾乎沒停過地說話。",
+        "collocation": "talk nonstop (滔滔不絕講個不停), fly nonstop (直飛不停留), work nonstop (馬不停蹄地工作)",
+        "img": "🗣️",
+        "context_eng": "He talked almost nonstop all morning to everyone on the shuttle.",
+        "example": "He talked almost nonstop all morning to everyone on the shuttle.",
+        "context_chi": "整個早晨他在太空梭上幾乎滔滔不絕地跟每個人說話。",
+        "chant": "Talking nonstop day and night, full of words and full of light!",
+        "compare": "nonstop (副詞/形容詞：不間斷地) vs. continuously (副詞：持續不斷地)",
+        "note": "可作為副詞修飾動詞 (talked nonstop)，亦可作為形容詞修飾名詞 (a nonstop flight 直達班機)。"
+      },
+      "explanation": {
+        "point": "nonstop 為副詞或形容詞「不停歇地」，由否定前綴 non- 加 stop 連寫而成。",
+        "examPurpose": "測驗學生在角色分析語境中理解並拼寫修飾動詞的副詞 nonstop 的能力。",
+        "correctReason": "從頭到尾毫無中斷停歇地持續進行，副詞使用 nonstop，修飾動詞 talked。",
+        "note": "nonstop [adv./adj.] 不停歇地；不間斷的。",
+        "trap": "不可在中間加上空格，且 stop 中的字母 p 只有一個，不可拼成 nonstopp。",
+        "commonTraps": [
+          "受 stopped 過去式規則混淆，誤將 nonstop 結尾重複 p 寫成 nonstopp。",
+          "誤在 non 與 stop 之間添加空格分開寫成 non stop，應為連寫詞。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "continuously",
+          "without stopping"
+        ],
+        "grammarCompare": "nonstop 可當副詞修飾動詞 (talked nonstop)，亦可當形容詞 (a nonstop flight 直飛航班)。",
+        "examVariations": "改寫題：Rayyan talked without stopping all morning. -> Rayyan talked _______ all morning. (nonstop)"
+      },
+      "target_chi": "不停歇地；不間斷的",
+      "target_pos": "副詞 (Adverb) / 形容詞",
+      "masked_example": "He talked almost ________ all morning to everyone on the shuttle.",
+      "masked_example_chi": "整個早晨他在太空梭上幾乎滔滔不絕地跟每個人說話。"
+    },
+    {
+      "id": "q_w12_rww6_u09_15",
+      "book_id": "rw6",
+      "unit_id": "rw6_9",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "difficulty": "★★★☆☆",
+      "difficulty_level": 5,
+      "part_title": "Part I: Story Cloze & Vocabulary in Context",
+      "part_instructions": "閱讀《A Trip to Earth》故事情境，根據文意脈絡與性格線索，填入最適當的單字完成句子。",
+      "sentence_form": "Subject + talked nonstop because + Subject + felt very nervous.",
+      "question": "[Tiger 3C Handwritten Section · Story Cloze] Read the passage context from \"A Trip to Earth\" and fill in the missing word: \"Rayyan talked almost nonstop all morning to everyone on the shuttle because he felt very _______ about visiting Earth.\"",
+      "options": [],
+      "answer": "nervous",
+      "self_check": [
+        "1. 是否正確拼寫出代表緊張不安的形容詞 nervous（注意字尾為 -ous）？",
+        "2. 是否理解滔滔不絕說話 (talked nonstop) 背後的真實心理狀態為緊張？",
+        "3. 單字大小寫是否符合句中空格要求（句中填小寫 nervous）？"
+      ],
+      "explanation": {
+        "point": "故事角色心理分析：Rayyan 滔滔不絕說話 (talked nonstop) 是他內心緊張 (nervous) 的行為體現。",
+        "examPurpose": "評量學生從角色表面言行推斷內在心理情緒的閱讀策略，以及核心形容詞 nervous 的精確拼寫。",
+        "correctReason": "課文原文指出 Nora knew that Rayyan talked a lot when he was nervous，因此空格處精確填入 nervous。",
+        "note": "feel / be nervous about sth. 對某事感到緊張。",
+        "trap": "易將 nervous 誤拼為 nervus 或 nervos；切勿填入副詞 nervously。",
+        "commonTraps": [
+          "形容詞字尾 -ous 容易漏掉母音 o 誤拼寫成 nervus。",
+          "受到 feel 後面修飾概念干擾，部分學生會誤填副詞 nervously。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "worried",
+          "uneasy"
+        ],
+        "grammarCompare": "nervous 是形容詞，放在連綴動詞 felt 後作主詞補語；副詞 nervously 則修飾動作動詞。",
+        "examVariations": "原因分析題：Why did Rayyan talk nonstop? -> Because he was very nervous."
+      }
+    },
+    {
+      "id": "q_w12_rww6_u09_16",
+      "book_id": "rw6",
+      "unit_id": "rw6_9",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "difficulty": "★★★☆☆",
+      "difficulty_level": 5,
+      "part_title": "Part I: Story Cloze & Vocabulary in Context",
+      "part_instructions": "閱讀《A Trip to Earth》故事情境，根據文意脈絡與性格線索，填入最適當的單字完成句子。",
+      "sentence_form": "Subject + don't mean to be + rude + but ...",
+      "question": "[Tiger 3C Handwritten Section · Story Cloze] Read the dialogue context from \"A Trip to Earth\" and fill in the missing word: \"When the twins arrived at the open square, Rayyan said politely, 'Sorry, I don\\'t mean to be _______, but I don\\'t remember you.'\"",
+      "options": [],
+      "answer": "rude",
+      "self_check": [
+        "1. 是否正確填寫出代表粗魯失禮的形容詞 rude？",
+        "2. 是否掌握 mean to be 後接形容詞 rude（不可誤寫副詞 rudely）？",
+        "3. 是否理解此句為社交禮貌預防用語，表達並非故意冒犯？"
+      ],
+      "explanation": {
+        "point": "社交禮貌委婉句型：don't mean to be + rude 表達「並非存心無禮冒犯」。",
+        "examPurpose": "測驗學生在日常對話與故事文本中辨析委婉道歉句型及形容詞 rude 搭配的能力。",
+        "correctReason": "Rayyan 坦承自己記不得堂姊的面容，趕緊補充說明自己絕非存心無禮，因此填入 rude。",
+        "note": "mean to be rude 存心失禮；rude 的反義詞為 polite。",
+        "trap": "最常見的錯誤是受中文「粗魯地」影響而在 be 動詞後誤填副詞 rudely。",
+        "commonTraps": [
+          "在 mean to be 後方誤填副詞 rudely，忽視了 be 是連綴動詞需接形容詞。",
+          "受到同音字干擾，將形容詞 rude 拼寫成同音異義字 rood。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "impolite",
+          "disrespectful"
+        ],
+        "grammarCompare": "I don't mean to be rude 是固定禮貌套語；若要修飾動作則用 speak rudely。",
+        "examVariations": "同義句改寫：I don't want to seem impolite. -> I don't mean to be rude."
+      }
+    },
+    {
+      "id": "q_w12_rww6_u09_17",
+      "book_id": "rw6",
+      "unit_id": "rw6_9",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "difficulty": "★★★★☆",
+      "difficulty_level": 6,
+      "part_title": "Part I: Story Cloze & Vocabulary in Context",
+      "part_instructions": "閱讀《A Trip to Earth》故事情境，根據文意脈絡與性格線索，填入最適當的單字完成句子。",
+      "sentence_form": "Subject + remembers + Object + being quiet, but confident.",
+      "question": "[Tiger 3C Handwritten Section · Story Cloze] Read the character description context from \"A Trip to Earth\" and fill in the missing word: \"Although Rayyan thought Nora was shy, cousin Irdina smiled and said she remembered Nora being quiet, but _______.\"",
+      "options": [],
+      "answer": "confident",
+      "self_check": [
+        "1. 是否正確拼寫出代表有信心的形容詞 confident（注意結尾是 -ent 不是 -ant）？",
+        "2. 是否能對比 quiet 與 confident 之間的轉折關係（安靜但篤定自信）？",
+        "3. 是否準確捕捉到 Irdina 對 Nora 深刻而正面的人格特質評價？"
+      ],
+      "explanation": {
+        "point": "人物特質深度分析：Irdina 指出 Nora 並非純粹害羞，而是「安靜但自信 (quiet, but confident)」。",
+        "examPurpose": "考核學生對故事人物性格轉折線索的精準理解，以及形容詞 confident 的標準拼寫。",
+        "correctReason": "故事原文中 cousin Irdina 反問 Shy? 並說 I remember Nora being quiet, but confident，故填 confident。",
+        "note": "confident [adj.] 有信心的；名詞為 confidence。",
+        "trap": "形容詞字尾最容易誤拼為 -ant (confidant 指知己密友)，切記為 -ent。",
+        "commonTraps": [
+          "形容詞字尾容易混淆誤拼為 -ant (confidant 是名詞密友)。",
+          "誤填副詞 confidently，忽視了 being 後接形容詞作為補語。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "self-assured",
+          "poised"
+        ],
+        "grammarCompare": "remember sb. being + Adj. 表示「記得某人過去總是呈現某種性格狀態」。",
+        "examVariations": "細節推論題：What did Irdina think of young Nora? -> She was quiet, but confident."
+      }
+    },
+    {
+      "id": "q_w12_rww6_u09_18",
+      "book_id": "rw6",
+      "unit_id": "rw6_9",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "difficulty": "★★★★☆",
+      "difficulty_level": 6,
+      "part_title": "Part II: Sentence Writing & Character Analysis",
+      "part_instructions": "依據給定句型提示進行偏好句型改寫，寫出文法正確的完整英文句子，注意介系詞選用。",
+      "sentence_form": "Subject + prefer + Noun Phrase A + to + Noun Phrase B.",
+      "question": "[Tiger 3C Handwritten Section · Sentence Rewrite] Rewrite the sentence using the \"prefer ... to ...\" pattern to compare sporting habits: \"Outgoing people like team sports like basketball more than individual sports like golf.\" (Use: prefer team sports to individual sports)",
+      "options": [],
+      "answer": "Outgoing people prefer team sports to individual sports.",
+      "self_check": [
+        "1. 是否正確使用比較介系詞 to（切勿誤用比較連詞 than）？",
+        "2. 主詞 Outgoing people 為複數，動詞 prefer 是否保持原形未加 s？",
+        "3. 前後名詞片語 team sports 與 individual sports 是否對稱完整？"
+      ],
+      "explanation": {
+        "point": "偏好比較句型：prefer A to B 表示「比起 B 更喜歡 A」，介系詞絕對必須使用 to。",
+        "examPurpose": "測驗學生在段考手寫題中精準將 like ... more than 改寫為 prefer ... to ... 的能力。",
+        "correctReason": "prefer 的受詞為 team sports，比較對象為 individual sports，兩者之間必以介系詞 to 連接。",
+        "note": "prefer A to B (介系詞用 to，絕不可用 than)。",
+        "trap": "受中文「比起」及比較級 than 深刻影響，極易將 to 誤寫成 than！",
+        "commonTraps": [
+          "受到中文「比起」干擾，在 prefer 後方嚴重誤用比較連詞 than。",
+          "主詞 Outgoing people 為複數名詞，部分學生動詞誤加 s 寫成 prefers。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "like team sports better than individual sports",
+          "favor team sports over individual sports"
+        ],
+        "grammarCompare": "prefer A to B 中介系詞用 to；like A better than B 中則使用比較連詞 than。",
+        "examVariations": "句型轉換題：They like soccer better than tennis. -> They prefer soccer to tennis."
+      }
+    },
+    {
+      "id": "q_w12_rww6_u09_19",
+      "book_id": "rw6",
+      "unit_id": "rw6_9",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "difficulty": "★★★★☆",
+      "difficulty_level": 7,
+      "part_title": "Part II: Sentence Writing & Character Analysis",
+      "part_instructions": "依據給定句型提示使用動名詞進行偏好改寫，寫出文法正確的完整英文句子。",
+      "sentence_form": "Subject + prefer + V-ing phrase A + to + V-ing phrase B.",
+      "question": "[Tiger 3C Handwritten Section · Sentence Rewrite] Rewrite the preference using the \"prefer V-ing to V-ing\" pattern: \"Quiet students like reading books in the library more than playing loud sports outside.\" (Use: prefer reading books to playing loud sports)",
+      "options": [],
+      "answer": "Quiet students prefer reading books to playing loud sports.",
+      "self_check": [
+        "1. 動詞 prefer 兩端是否皆使用平行對稱的動名詞形式 (reading ... to playing ...)？",
+        "2. 比較介系詞是否精確選用 to，完全排除 than？",
+        "3. 首字母大寫與句末標點符號是否完整無誤？"
+      ],
+      "explanation": {
+        "point": "動名詞平行偏好句型：prefer V-ing to V-ing，兩端動名詞必須結構對稱。",
+        "examPurpose": "考核學生在進階手寫寫作中運用動名詞平行結構表達偏好的綜合文法駕馭力。",
+        "correctReason": "動詞 prefer 後接動名詞 reading books，介系詞 to 後方同樣必須接動名詞 playing loud sports。",
+        "note": "prefer V-ing to V-ing (平行對稱結構)。",
+        "trap": "常見錯誤是在 to 後方誤用原形動詞 play，造成動名詞與原形動詞結構不對稱。",
+        "commonTraps": [
+          "介系詞 to 後方誤寫原形動詞 play，破壞了兩側動名詞的平行對稱性。",
+          "受慣性思維影響在句中誤填 than (prefer reading than playing 是嚴重錯誤)。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "choose reading books rather than playing loud sports",
+          "favor reading books over playing sports"
+        ],
+        "grammarCompare": "prefer doing A to doing B；would rather do A than do B (rather than 後接原形動詞)。",
+        "examVariations": "平行結構改錯題：She prefers swimming to run in the park. (run -> running)"
+      }
+    },
+    {
+      "id": "q_w12_rww6_u09_20",
+      "book_id": "rw6",
+      "unit_id": "rw6_9",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "difficulty": "★★★★★",
+      "difficulty_level": 8,
+      "part_title": "Part II: Sentence Writing & Character Analysis",
+      "part_instructions": "運用虛主詞 It is + Adj. + to V 句型改寫社交禮儀守則，形成完整連貫的句子。",
+      "sentence_form": "It is polite to + V ..., and it is rude to + V ...",
+      "question": "[Tiger 3C Handwritten Section · Sentence Transformation] Transform the social etiquette advice into a sentence beginning with the impersonal subject \"It\": \"Listening carefully when someone is speaking is polite, while interrupting others is rude.\" (Use: It is polite to listen carefully and it is rude to interrupt others.)",
+      "options": [],
+      "answer": "It is polite to listen carefully and it is rude to interrupt others.",
+      "self_check": [
+        "1. 是否正確使用虛主詞 It is polite / rude to + 原形動詞結構？",
+        "2. 不定詞 to 後方是否接原形動詞 listen 與 interrupt（未加 -ing）？",
+        "3. 句子連接詞 and 前後文法結構是否平行完整？"
+      ],
+      "explanation": {
+        "point": "虛主詞社交評價句型：It is polite to + 原形動詞 / It is rude to + 原形動詞。",
+        "examPurpose": "測驗學生將動名詞主詞轉化為虛主詞 It 開頭的不定詞禮貌評價句型的造句能力。",
+        "correctReason": "以虛主詞 It 代替後方的不定詞片語 to listen carefully 與 to interrupt others，客觀評述社交禮儀。",
+        "note": "It is + polite / impolite / rude + to V (不定詞作真正主詞)。",
+        "trap": "學生常在 to 後方誤加 -ing 寫成 to listening，或誤用 of 代替 to。",
+        "commonTraps": [
+          "不定詞 to 後方誤保留動名詞字尾 -ing 寫成 to listening 或 to interrupting。",
+          "介系詞混淆：誤將不定詞符號 to 寫成介系詞 of (It is polite of listen 是錯誤的)。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "It is courteous to pay attention and discourteous to cut in",
+          "Being attentive is well-mannered while interrupting is impolite"
+        ],
+        "grammarCompare": "It is polite to V (虛主詞客觀陳述) vs It is polite of you to V (強調某人此舉真有禮貌)。",
+        "examVariations": "句子合併題：Do not speak loudly in the library. It is rude. -> It is rude to speak loudly in the library."
+      }
+    },
+    {
+      "id": "q_w12_rww6_u09_21",
+      "book_id": "rw6",
+      "unit_id": "rw6_9",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "difficulty": "★★★★★",
+      "difficulty_level": 8,
+      "part_title": "Part II: Sentence Writing & Character Analysis",
+      "part_instructions": "根據《A Trip to Earth》故事情節，結合言行證據與內心情緒，寫出完整的角色分析句子。",
+      "sentence_form": "Rayyan + past tense action + because + he was + adjective emotion.",
+      "question": "[Tiger 3C Handwritten Section · Character Analysis] Based on \"A Trip to Earth\", write a complete sentence explaining Rayyan's inner emotion and what action showed it on the shuttle: \"What did Rayyan do all morning, and what personality trait or feeling did it reveal?\" (Include: talked nonstop / nervous)",
+      "options": [],
+      "answer": "Rayyan talked nonstop all morning because he was nervous about visiting Earth.",
+      "self_check": [
+        "1. 動詞是否使用正確過去式 talked 與 was？",
+        "2. 是否明確包含行為證據 (talked nonstop) 與內在情緒 (nervous) 的因果關係？",
+        "3. 句子主詞、動詞、受詞與因果子句結構是否完整流暢？"
+      ],
+      "explanation": {
+        "point": "角色分析整合應用：結合外在言語行為 (talked nonstop) 與內在心理情緒 (was nervous)。",
+        "examPurpose": "考核學生整合閱讀策略「言行推論性格」與過去式記敘文書寫的綜合高階讀寫能力。",
+        "correctReason": "故事中 Rayyan 整早滔滔不絕說話是因為他對拜訪地球感到緊張，以 because 連接因果句。",
+        "note": "Character Analysis: Words & Actions Clues -> Internal Feeling。",
+        "trap": "記敘文時態必須前後一致使用過去式 (talked, was)，不可現在式與過去式混雜。",
+        "commonTraps": [
+          "時態不一致：主句寫過去式 talked，子句卻誤寫現在式 is nervous。",
+          "漏掉因果連接詞 because，導致寫成兩個無關聯的逗號連接殘句 (comma splice)。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "Rayyan spoke continuously due to his anxiety about landing",
+          "Rayyan could not stop chatting because he felt anxious about meeting family"
+        ],
+        "grammarCompare": "talked nonstop (分詞/副詞修飾動詞) vs was nervous (be 動詞加形容詞表心理狀態)。",
+        "examVariations": "簡答題：How do we know Rayyan was nervous? -> Because he talked nonstop all morning."
+      }
+    },
+    {
+      "id": "q_w12_rww6_u09_22",
+      "book_id": "rw6",
+      "unit_id": "rw6_9",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "difficulty": "★★★★★",
+      "difficulty_level": 9,
+      "part_title": "Part II: Sentence Writing & Character Analysis",
+      "part_instructions": "根據故事細節以完整英文句子描寫 Nora 的外在舉止與真實性格特質，注意時態一致。",
+      "sentence_form": "Nora + smiled and looked thoughtful + because + she was quiet but confident.",
+      "question": "[Tiger 3C Handwritten Section · Character Analysis] Based on \"A Trip to Earth\", write a complete sentence describing Nora's calm demeanor when meeting cousin Irdina: \"How did Nora behave when meeting Irdina, and how did Irdina describe her character?\" (Include: smiled / quiet but confident)",
+      "options": [],
+      "answer": "Nora smiled and looked thoughtful because she was quiet but confident.",
+      "self_check": [
+        "1. 是否精確寫出外在神情 (smiled and looked thoughtful) 與性格特質 (quiet but confident)？",
+        "2. 過去式動詞 smiled, looked 與 was 時態是否一致？",
+        "3. 句子語意流暢且符合課本角色深度分析核心準則？"
+      ],
+      "explanation": {
+        "point": "角色神態與性格雙重描寫：外在表現為微笑若有所思，內在真實特質為安靜且充滿自信。",
+        "examPurpose": "測驗學生運用故事關鍵性格詞彙（thoughtful, quiet, confident）組織複合敘述句的高階寫作力。",
+        "correctReason": "Nora 與 Irdina 相聚時微笑且若有所思，印證了堂姊對她 quiet but confident 的評價。",
+        "note": "Appearance (smiled, looked thoughtful) + Trait (quiet but confident)。",
+        "trap": "易遺漏連綴動詞 looked 或將 quiet but confident 誤寫成副詞 quietly but confidently。",
+        "commonTraps": [
+          "在 was 後方誤填副詞形式 quietly but confidently，忽視了形容詞補語功能。",
+          "容易拼錯 thoughtful (誤寫雙 l) 或 confident (誤拼為 -ant)。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "Nora displayed a thoughtful smile reflecting her calm confidence",
+          "Nora remained calm and thoughtful, proving she was quiet yet self-assured"
+        ],
+        "grammarCompare": "look thoughtful (連綴動詞加形容詞) vs smile thoughtfully (一般動作動詞加副詞)。",
+        "examVariations": "角色對比題：How was Nora different from Rayyan? -> Rayyan was nervous and talkative, while Nora was calm and confident."
+      }
+    },
+    {
+      "id": "q_w12_rww6_u09_23",
+      "book_id": "rw6",
+      "unit_id": "rw6_9",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "choice",
+      "category_tag": "grammar",
+      "difficulty": "★☆☆☆☆",
+      "difficulty_level": 1,
+      "question": "Choose the correct preposition to express sporting preference: \"If you are a quiet person, you may prefer an individual sport _______ a team sport.\"",
+      "options": [
+        "to",
+        "than",
+        "from",
+        "with"
+      ],
+      "answer": "to",
+      "explanation": {
+        "point": "偏好比較介系詞規則：prefer A to B 表示「比起 B 更偏好 A」，固定搭配介系詞 to。",
+        "examPurpose": "測驗學生在對比句型中能否準確選用 prefer 的固定搭配介系詞 to，排除 than 的干擾。",
+        "correctReason": "動詞 prefer 的偏好比較對象前方固定搭配介系詞 to，絕不可使用比較連詞 than。",
+        "note": "prefer A to B (固定搭配介系詞 to)。",
+        "trap": "最常見的台灣學生 Chinglish 盲點就是受中文「比起…」干擾而誤選 than！",
+        "distractorAnalysis": {
+          "than": "受到中文「比起…」的比較思維嚴重干擾，容易誤選比較級連詞 than，但 prefer 只能接 to。",
+          "from": "from 表示來源或事物之間的差異（如 be different from），不能用於 prefer 的偏好選擇結構。",
+          "with": "with 表示陪伴或伴隨狀態（如 play with friends），與 prefer 偏好比較的文法搭配完全不合。"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "favor ... over ...",
+          "like ... better than ..."
+        ],
+        "grammarCompare": "prefer A to B 介系詞用 to；like A better than B 則搭配比較連詞 than。",
+        "examVariations": "介系詞選填：He prefers swimming _______ running. (正解：to)"
+      }
+    },
+    {
+      "id": "q_w12_rww6_u09_24",
+      "book_id": "rw6",
+      "unit_id": "rw6_9",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "choice",
+      "category_tag": "grammar",
+      "difficulty": "★★☆☆☆",
+      "difficulty_level": 2,
+      "question": "Choose the correct word to complete the polite apology: \"Sorry, I don't mean to be _______, but I don't remember your name.\"",
+      "options": [
+        "rude",
+        "rudely",
+        "rudeness",
+        "more rude"
+      ],
+      "answer": "rude",
+      "explanation": {
+        "point": "連綴動詞與形容詞補語：be 動詞後方必須接形容詞 rude，不可誤用副詞 rudely。",
+        "examPurpose": "評量學生在 mean to be [Adj.] 社交委婉句型中辨析形容詞補語與副詞干擾的能力。",
+        "correctReason": "mean to be 後方的 be 為連綴繫動詞，需要形容詞 rude 作為主詞補語，表達「存心無禮」。",
+        "note": "mean to be + Adjective (如 mean to be rude / mean to be polite)。",
+        "trap": "中文常說「無禮地說話」，學生容易受副詞思維誤導而錯選 rudely。",
+        "distractorAnalysis": {
+          "rudely": "rudely 為副詞，be 動詞後方必須接形容詞作為主詞補語，不可誤填副詞形式。",
+          "rudeness": "rudeness 為抽象名詞「粗魯無禮」，在 mean to be 後應接描述人格特質的形容詞而非名詞。",
+          "more rude": "此處僅為委婉道歉的客觀陳述，並無兩者之間的比較關係，無須使用比較級形式。"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "impolite",
+          "ill-mannered"
+        ],
+        "grammarCompare": "mean to be rude (be 動詞後接形容詞) vs speak rudely (修飾動作動詞 speak 用副詞)。",
+        "examVariations": "改錯題：I don't mean to be rudely to my classmates. (rudely -> rude)"
+      }
+    },
+    {
+      "id": "q_w12_rww6_u09_25",
+      "book_id": "rw6",
+      "unit_id": "rw6_9",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "choice",
+      "category_tag": "grammar",
+      "difficulty": "★★☆☆☆",
+      "difficulty_level": 3,
+      "question": "Choose the correct verb form for temporary polite behavior at this moment: \"Look at Alex! He is usually shy, but he is _______ very friendly to the new student right now.\"",
+      "options": [
+        "being",
+        "been",
+        "be",
+        "was"
+      ],
+      "answer": "being",
+      "explanation": {
+        "point": "暫時行為表達法：be being + Adj. 專門強調某人在當下時刻表現出的刻意舉止。",
+        "examPurpose": "測驗學生分辨「恆常性格特徵 (is friendly)」與「當下刻意表現 (is being friendly)」的文法差異。",
+        "correctReason": "句子後方有 right now 明確時間副詞，以現在進行式 is being friendly 表達 Alex 此刻刻意友善的舉動。",
+        "note": "Temporary Behavior: Subject + is/are + being + Adjective。",
+        "trap": "易受一般現在式常態思維影響，忽視了 right now 強調的是此時此刻的刻意行為。",
+        "distractorAnalysis": {
+          "been": "been 為過去分詞，前方助動詞為 is 時絕不能接 been（is been 為嚴重文法錯誤）。",
+          "be": "be 為原形動詞，現在進行式助動詞 is 後方應接現在分詞 being 以表當下的刻意行為。",
+          "was": "was 為過去式單數 be 動詞，句子已有現在式助動詞 is，不可連續使用兩個謂語動詞。"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "acting",
+          "behaving"
+        ],
+        "grammarCompare": "He is friendly (他天生親切，恆常特質) vs He is being friendly (他此刻刻意表現親切)。",
+        "examVariations": "語意辨析題：Why are you _______ so silly today? (正解：being)"
+      }
+    },
+    {
+      "id": "q_w12_rww6_u09_26",
+      "book_id": "rw6",
+      "unit_id": "rw6_9",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "choice",
+      "category_tag": "grammar",
+      "difficulty": "★★★☆☆",
+      "difficulty_level": 5,
+      "question": "Choose the correct verb form to complete the social etiquette rule: \"In polite communication, it is considered very rude _______ people while they are talking.\"",
+      "options": [
+        "to interrupt",
+        "interrupting",
+        "interrupted",
+        "interrupts"
+      ],
+      "answer": "to interrupt",
+      "explanation": {
+        "point": "虛主詞真主詞句型：It is + Adj. + to V，不定詞 to interrupt 作句子的真正主詞。",
+        "examPurpose": "考核學生在虛主詞 It is rude 後方精準選用不定詞片語 (to + 原形動詞) 的句型結構感知。",
+        "correctReason": "虛主詞 It 指代後方的不定詞片語，因此必須選用 to interrupt 表示打斷他人說話是不禮貌的。",
+        "note": "It is rude to + 原形動詞 V (打斷他人是不禮貌的)。",
+        "trap": "受中文「打斷這件事」影響，容易誤選動名詞 interrupting 當作受詞。",
+        "distractorAnalysis": {
+          "interrupting": "It is rude 後方虛主詞句型必須搭配不定詞 to + 原形動詞，不可直接接動名詞。",
+          "interrupted": "interrupted 為過去式或過去分詞，虛主詞句型的真主詞應使用不定詞 to interrupt。",
+          "interrupts": "interrupts 為第三人稱單數動詞，在形容詞 rude 後方不能直接並列動詞。"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "to cut in on",
+          "to break in on"
+        ],
+        "grammarCompare": "It is rude to interrupt (虛主詞句型) = Interrupting people is rude (動名詞當主詞)。",
+        "examVariations": "虛主詞轉換題：Interrupting the speaker is rude. -> It is rude _______ the speaker. (to interrupt)"
+      }
+    },
+    {
+      "id": "q_w12_rww6_u09_27",
+      "book_id": "rw6",
+      "unit_id": "rw6_9",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "choice",
+      "category_tag": "grammar",
+      "difficulty": "★★★★☆",
+      "difficulty_level": 7,
+      "question": "Choose the correct pair of words to maintain grammatical parallelism: \"Outgoing children usually prefer _______ soccer with friends to _______ quietly at home.\"",
+      "options": [
+        "playing / staying",
+        "play / stay",
+        "to play / stay",
+        "playing / stayed"
+      ],
+      "answer": "playing / staying",
+      "explanation": {
+        "point": "動名詞平行結構：prefer V-ing to V-ing，介系詞 to 兩端動詞必須保持動名詞平行對稱。",
+        "examPurpose": "測驗學生在進階選擇題中識別 prefer 動名詞平行對稱結構及介系詞後接動名詞的規則。",
+        "correctReason": "prefer 後接動名詞 playing，介系詞 to 後方同樣必須接動名詞 staying，維持結構平衡。",
+        "note": "prefer V-ing to V-ing (兩側動名詞平行對稱)。",
+        "trap": "常誤以為 to 後方只能接原形動詞 stay，忽略了此處的 to 是介系詞，後面必須接動名詞 staying。",
+        "distractorAnalysis": {
+          "play / stay": "prefer 後接原形動詞不符合動名詞平行結構，介系詞 to 後方必須接動名詞 staying。",
+          "to play / stay": "介系詞 to 後方若是動名詞 staying 才能與前方結構對稱，不可用原形動詞 stay。",
+          "playing / stayed": "stayed 為過去式動詞，介系詞 to 後方不能接過去式，必須保持動名詞平行對稱。"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "favor playing soccer over staying at home",
+          "like playing soccer better than staying at home"
+        ],
+        "grammarCompare": "此處 to 是介系詞，後接名詞或 V-ing；不同於不定詞 to + 原形動詞。",
+        "examVariations": "平行結構改錯：He prefers playing tennis to watch television. (watch -> watching)"
+      }
+    },
+    {
+      "id": "q_w12_rww6_u09_28",
+      "book_id": "rw6",
+      "unit_id": "rw6_9",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "choice",
+      "category_tag": "reading",
+      "difficulty": "★★★☆☆",
+      "difficulty_level": 5,
+      "question": "According to the story \"A Trip to Earth\", why did Rayyan talk almost nonstop all morning on the shuttle?",
+      "options": [
+        "He felt nervous about landing on Earth.",
+        "He was angry with his twin sister.",
+        "He wanted to practice speaking English.",
+        "He was giving a science speech to the explorers."
+      ],
+      "answer": "He felt nervous about landing on Earth.",
+      "explanation": {
+        "point": "閱讀細節與心理推論：Rayyan 整個早晨多話是因為他即將登陸地球感到緊張。",
+        "examPurpose": "考核學生檢索故事核心事實並將外在言行 (talked nonstop) 與心理動機 (nervous) 連結的能力。",
+        "correctReason": "故事第 4-6 行明確指出 Nora knew that Rayyan talked a lot when he was nervous，因此選項完全吻合。",
+        "note": "A Trip to Earth: Character Motivation Clues。",
+        "trap": "不可被表面上的興奮多話迷惑，以為他只是喜愛發表科學演講或在練口語。",
+        "distractorAnalysis": {
+          "He was angry with his twin sister.": "文中明確提到 Rayyan 與 Nora 感情深厚，他滔滔不絕說話是因為緊張而非對妹妹生氣。",
+          "He wanted to practice speaking English.": "故事中並未提及他在練習英文口語，而是他在緊張焦慮時的自然生理反應。",
+          "He was giving a science speech to the explorers.": "Rayyan 只是在太空梭上向眾人隨性聊天，並非向探險隊發表嚴肅的科學專題演講。"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "felt anxious about reaching Earth",
+          "was jittery about visiting their home planet"
+        ],
+        "grammarCompare": "talked nonstop 是外在行為線索 (Actions)；felt nervous 是內心情感 (Feelings)。",
+        "examVariations": "細節是非題：Did Rayyan talk a lot because he was bored? (No, because he was nervous.)"
+      }
+    },
+    {
+      "id": "q_w12_rww6_u09_29",
+      "book_id": "rw6",
+      "unit_id": "rw6_9",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "choice",
+      "category_tag": "reading",
+      "difficulty": "★★★☆☆",
+      "difficulty_level": 5,
+      "question": "What daring choice did Rayyan and Nora's parents make years before the story began?",
+      "options": [
+        "They left Earth with explorers to live on planet Regulus.",
+        "They built the largest space shuttle in the universe.",
+        "They traveled to Earth every two years for family reunions.",
+        "They opened a sports center on the moon for children."
+      ],
+      "answer": "They left Earth with explorers to live on planet Regulus.",
+      "explanation": {
+        "point": "故事背景檢索：雙胞胎勇敢大膽的父母跟隨探險家移居外太空軒轅十四星 (Regulus)。",
+        "examPurpose": "評量學生對科幻背景故事起點情節與形容詞 daring 語境實例的精準理解。",
+        "correctReason": "課文原文寫道 Their daring parents left Earth years before with a group of explorers, to live on the planet Regulus。",
+        "note": "daring parents -> explorers on planet Regulus。",
+        "trap": "每兩年舉辦大團圓的是 Family Get-together 文本中的 Miller 家族，勿張冠李戴混淆不同篇章。",
+        "distractorAnalysis": {
+          "They built the largest space shuttle in the universe.": "課文僅說明父母跟隨探險家前往 Regulus 星球定居，並未提及建造全宇宙最大的太空梭。",
+          "They traveled to Earth every two years for family reunions.": "每兩年團聚一次的是 Miller 家族的故事，並非 Rayyan 與 Nora 父母的經歷。",
+          "They opened a sports center on the moon for children.": "課文完全未提及在月球上開辦兒童體育中心，純屬無中生有的干擾選項。"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "ventured into deep space to settle on a distant planet",
+          "embarked on an adventurous colonization mission"
+        ],
+        "grammarCompare": "years before 用於過去完成背景敘述；planet Regulus 為同位語專有名詞。",
+        "examVariations": "背景細節題：Where did the twins grow up? -> On the planet Regulus."
+      }
+    },
+    {
+      "id": "q_w12_rww6_u09_30",
+      "book_id": "rw6",
+      "unit_id": "rw6_9",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "choice",
+      "category_tag": "reading",
+      "difficulty": "★★★★★",
+      "difficulty_level": 8,
+      "question": "How does the story demonstrate that Nora is observant, calm, and thoughtful rather than merely shy?",
+      "options": [
+        "She smiled thoughtfully and remembered cousin Irdina's name immediately.",
+        "She hid behind Rayyan and refused to greet anyone at the station.",
+        "She talked loudly to all the passengers during the shuttle flight.",
+        "She complained that she missed their home planet Regulus."
+      ],
+      "answer": "She smiled thoughtfully and remembered cousin Irdina's name immediately.",
+      "explanation": {
+        "point": "角色深度分析：Nora 微笑若有所思並第一時間認出堂姊名字，證明她沉著自信、長於觀察。",
+        "examPurpose": "考核學生超越單一角色的片面之詞（Rayyan 稱她害羞），綜合角色具體表現進行客觀人格分析的能力。",
+        "correctReason": "Nora 微笑且若有所思地立刻叫出 Hi, Irdina，展現敏銳記憶與冷靜自信，絕非單純膽怯怕生。",
+        "note": "Character Analysis: Overcoming Stereotypes through Evidence。",
+        "trap": "不可受 Rayyan 隨口說的 She's the shy one 誤導，應看 Nora 具體的言行證據。",
+        "distractorAnalysis": {
+          "She hid behind Rayyan and refused to greet anyone at the station.": "Nora 並沒有躲在哥哥身後拒絕打招呼，而是從容微笑並親切稱呼 Irdina 的名字。",
+          "She talked loudly to all the passengers during the shuttle flight.": "在太空梭上整早滔滔不絕講話的是 Rayyan，Nora 全程保持冷靜沉著、若有所思。",
+          "She complained that she missed their home planet Regulus.": "課文中 Nora 完全沒有抱怨想念母星 Regulus，而是靜靜觀察並體貼問候家人。"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "recognized her cousin promptly with a gentle smile",
+          "showed keen observation and self-confidence"
+        ],
+        "grammarCompare": "quiet, but confident 中，對等連接詞 but 形成強烈的正面性格反襯。",
+        "examVariations": "角色對比題：Who remembered cousin Irdina first? -> Nora did."
+      }
+    },
+    {
+      "id": "q_w12_rww6_u09_31",
+      "book_id": "rw6",
+      "unit_id": "rw6_9",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "choice",
+      "category_tag": "reading",
+      "difficulty": "★★★★☆",
+      "difficulty_level": 6,
+      "question": "According to the passage \"Personalities and Sports\", what does a person's choice of sports often reveal about them?",
+      "options": [
+        "Their personality traits and whether they prefer team or individual activities.",
+        "Their exact age and the planet where they were born.",
+        "How much money they spent on professional athletic equipment.",
+        "The number of languages their parents speak at home."
+      ],
+      "answer": "Their personality traits and whether they prefer team or individual activities.",
+      "explanation": {
+        "point": "篇章主旨歸納：運動選擇與參與方式能夠深刻反映一個人的性格特質與社交偏好。",
+        "examPurpose": "評量學生對說明文《Personalities and Sports》核心主題與首尾總結句的概括理解力。",
+        "correctReason": "文章總結句明確指出 The games we like to play, and how we play them, can say a lot about our personalities。",
+        "note": "say a lot about sth. 充分反映、清楚說明。",
+        "trap": "選項中提及的年齡、裝備費用或語言皆非文章探討重點，純屬無效干擾。",
+        "distractorAnalysis": {
+          "Their exact age and the planet where they were born.": "運動偏好反映的是個性特質（外向或文靜），與出生的年齡或星球毫無關聯。",
+          "How much money they spent on professional athletic equipment.": "課文重點在於性格與運動形式的關聯，完全未探討購買運動裝備的花費金額。",
+          "The number of languages their parents speak at home.": "篇章探討的是團隊與個人運動的心理偏好，與父母在家說幾種語言無關。"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "reflect their individual character and social style",
+          "indicate their disposition and athletic preferences"
+        ],
+        "grammarCompare": "say a lot about (充分說明) vs tell us little about (幾乎無法說明任何事)。",
+        "examVariations": "主旨歸納題：What is the main idea of Personalities and Sports? (Sports show our personality.)"
+      }
+    },
+    {
+      "id": "q_w12_rww6_u09_32",
+      "book_id": "rw6",
+      "unit_id": "rw6_9",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "choice",
+      "category_tag": "reading",
+      "difficulty": "★★★★★",
+      "difficulty_level": 8,
+      "question": "In the passage \"Family Get-together\", how do the adults show they are thoughtful toward the kids?",
+      "options": [
+        "They plan both quiet crafts and outdoor activities to suit different children.",
+        "They ask the younger kids to stay in their rooms all weekend.",
+        "They cancel all games so that the children can study math.",
+        "They travel to a far planet instead of meeting in the park."
+      ],
+      "answer": "They plan both quiet crafts and outdoor activities to suit different children.",
+      "explanation": {
+        "point": "家庭聚會篇章細節分析：大人們體貼安排室內勞作與戶外活動，照顧不同性格孩子的需求。",
+        "examPurpose": "考核學生分析記敘篇章中大人「體貼 (thoughtful)」特質具體行為證據的閱讀能力。",
+        "correctReason": "文章敘述大人為喜愛安靜的孩子準備手工藝和遊戲，為活潑好動的孩子準備戶外活動，充分展現體貼周到。",
+        "note": "make sure they have crafts to do and games to play。",
+        "trap": "不可將科幻小說情節（前往外星定居）混入現實題材的家族聚會篇章中。",
+        "distractorAnalysis": {
+          "They ask the younger kids to stay in their rooms all weekend.": "大人們熱心規劃豐富活動讓大家不無聊，並未要求年幼的孩子整週末關在房裡。",
+          "They cancel all games so that the children can study math.": "家族聚會充滿歡樂與多樣遊戲，大人並未取消遊戲要求孩子溫習數學。",
+          "They travel to a far planet instead of meeting in the park.": "Miller 家族是全美各地親人團聚，並非前往外太空星球定居聚會。"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "arrange varied programs catering to diverse preferences",
+          "provide engaging entertainment for both quiet and energetic youths"
+        ],
+        "grammarCompare": "make sure + that 子句 (確保某事發生)；so that + 子句 (以便、好讓)。",
+        "examVariations": "細節填空題：The adults plan activities so the kids don't get _______. (bored)"
+      }
+    },
+    {
+      "id": "q_w12_space_ch06_01",
+      "book_id": "rd6",
+      "unit_id": "rd6_6",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★☆☆☆☆",
+      "question": "Listen to the pronunciation and context sentence: \"Early astronomers thought they saw lines on Mars and believed they were great ________ built by aliens.\" Spell the target word for \"運河；人工水道\".",
+      "options": [],
+      "answer": "canal",
+      "vocab_card": {
+        "word": "canal",
+        "ipa": "/kəˈnæl/",
+        "phonetic": "/kəˈnæl/",
+        "syllables": "ca·nal",
+        "pos": "名詞 (Noun)",
+        "chi": "運河；人工水道",
+        "meaning": "人工開鑿供船隻航行或灌溉排水的長條水道",
+        "breakdown": "can-(蘆葦/管道) + -al -> 像管子般引水通航的人造水道",
+        "trick": "發音諧音「看鬧」-> 站在運河兩岸「看熱鬧」的人絡繹不絕！",
+        "scene": "一百年前天文學家誤把火星表面的陰影線條看成巨大的人工開鑿運河。",
+        "collocation": "Panama Canal, build canals, water canal",
+        "img": "🛶",
+        "context_eng": "Astronomers thought that they saw lines on the surface of Mars, and some people thought that they were canals.",
+        "example": "Astronomers thought that they saw lines on the surface of Mars, and some people thought that they were canals.",
+        "context_chi": "天文學家以為在火星表面看到了線條，有些人認為那是運河。",
+        "chant": "Big long canal, water deep and wide; boats and ships sail side by side!",
+        "compare": "canal (人工開鑿運河) vs river (天然形成的河流)",
+        "note": "重音在第二音節 /kəˈnæl/，不可讀成第一音節。"
+      },
+      "explanation": {
+        "point": "canal 為名詞「運河；人工水道」，重音在第二音節 /kəˈnæl/。",
+        "examPurpose": "考核學生依據語音特徵與天體歷史語境精確拼寫核心名詞 canal 的能力。",
+        "correctReason": "天文學家早期將火星地表線條誤認作人工開鑿之運河 (canals)，拼寫為 c-a-n-a-l。",
+        "note": "canal [n.] 運河；人工水道。",
+        "trap": "學生容易受到發音影響誤拼為 kennel 或 canel，請注意單字為 c-a-n-a-l。",
+        "commonTraps": [
+          "學生容易受到發音影響誤拼為 kennel 或 canel，請注意單字為 c-a-n-a-l。",
+          "部分學生誤將運河 canal 與天然河流 river 混淆，請牢記此處特指人工開鑿水道。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "artificial waterway",
+          "channel"
+        ],
+        "grammarCompare": "canal 特指人工開鑿的水道；river 指天然形成的水流；ocean 指大洋。",
+        "examVariations": "名詞定義考題：An artificial waterway built for boats or irrigation is a canal."
+      },
+      "target_chi": "運河；人工水道",
+      "target_pos": "名詞 (Noun)",
+      "masked_example": "Early astronomers thought they saw lines on Mars and believed they were great ________ built by aliens."
+    },
+    {
+      "id": "q_w12_space_ch06_02",
+      "book_id": "rd6",
+      "unit_id": "rd6_6",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★☆☆☆☆",
+      "question": "Listen to the pronunciation and context sentence: \"People wrote stories and made exciting movies about aliens from Mars called ________ visiting Earth.\" Spell the target word for \"火星人；火星的\".",
+      "options": [],
+      "answer": "Martian",
+      "vocab_card": {
+        "word": "Martian",
+        "ipa": "/ˈmɑːrʃən/",
+        "phonetic": "/ˈmɑːrʃən/",
+        "syllables": "Mar·tian",
+        "pos": "名詞 (Noun) / 形容詞",
+        "chi": "火星人；火星的",
+        "meaning": "科幻故事中來自火星的外星智慧生物",
+        "breakdown": "Mars(火星) + -ian(表示...居民或來源的字尾) -> 火星人",
+        "trick": "聯想記憶：Mars (火星) 加上 -tian 就是住在火星上的「馬星人 (Martian)」！",
+        "scene": "科幻電影中從紅色飛碟走下來、長著大腦袋綠皮膚的火星訪客。",
+        "collocation": "aliens from Mars called Martians, Martian movie",
+        "img": "👽",
+        "context_eng": "People wrote stories and made movies about aliens from Mars, called Martians, visiting Earth.",
+        "example": "People wrote stories and made movies about aliens from Mars, called Martians, visiting Earth.",
+        "context_chi": "人們寫故事並拍電影，描述被稱為火星人的外星訪客造訪地球。",
+        "chant": "Martians fly and Martians run; visiting Earth under the golden sun!",
+        "compare": "Martian (特指火星人) vs alien (泛指一切地外外星人)",
+        "note": "專有名詞大寫首字母 M；字尾 -tian 發音為 /ʃən/。"
+      },
+      "explanation": {
+        "point": "Martian 為專有名詞「火星人」或形容詞「火星的」，首字母必須大寫。",
+        "examPurpose": "評量學生掌握源自行星名稱 Mars 之專有衍生名詞 Martian 的拼寫規範。",
+        "correctReason": "指來自火星的外星生命，字根為 Mars 加上字尾 -tian，拼寫為 M-a-r-t-i-a-n。",
+        "note": "Martian [n.] 火星人；[adj.] 火星的。",
+        "trap": "字首 M 必須大寫，字尾為 -tian 而非 -sion 或 -cian。",
+        "commonTraps": [
+          "專有名詞源自 Mars，首字母 M 必須大寫，結尾字尾為 -tian 而非 -sion。",
+          "學生常受發音 /ʃən/ 誤導而拼成 Marchian 或 Marschen，正確拼寫為 M-a-r-t-i-a-n。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "inhabitant of Mars",
+          "Martian being"
+        ],
+        "grammarCompare": "Martian 特指火星人；alien 泛指一切地外生命體；terrestrial 指地球生物。",
+        "examVariations": "大寫與拼字題：Stories about aliens from Mars called (Martians) entertained readers."
+      },
+      "target_chi": "火星人；火星的",
+      "target_pos": "名詞 (Noun) / 形容詞",
+      "masked_example": "People wrote stories and made exciting movies about aliens from Mars called ________ visiting Earth."
+    },
+    {
+      "id": "q_w12_space_ch06_03",
+      "book_id": "rd6",
+      "unit_id": "rd6_6",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★☆☆☆☆",
+      "question": "Listen to the pronunciation and context sentence: \"________ are simple living things on Earth, and they can live even inside solid rocks.\" Spell the target word for \"細菌 (複數)\".",
+      "options": [],
+      "answer": "bacteria",
+      "vocab_card": {
+        "word": "bacteria",
+        "ipa": "/bækˈtɪriə/",
+        "phonetic": "/bækˈtɪriə/",
+        "syllables": "bac·te·ri·a",
+        "pos": "名詞 (Noun, 複數)",
+        "chi": "細菌 (單數 bacterium)",
+        "meaning": "微小的單細胞微生物，能適應極度嚴酷的高溫、極寒或岩石環境",
+        "breakdown": "bacter-(桿狀小棍棒) + -ia(複數名詞字尾) -> 顯微鏡下像小棍子的細菌群",
+        "trick": "發音諧音「百克體力」-> 細菌雖然微小，卻有一百克超強體力能在岩石裡生存！",
+        "scene": "科學家在極地冰層深處與火星土壤採樣中，用顯微鏡尋找微小活體細菌。",
+        "collocation": "simple bacteria, live inside rocks, look for bacteria",
+        "img": "🔬",
+        "context_eng": "Bacteria are simple living things on Earth, and they can live in very hot and cold places, and even inside rocks.",
+        "example": "Bacteria are simple living things on Earth, and they can live in very hot and cold places, and even inside rocks.",
+        "context_chi": "細菌是地球上的簡單生物，能在極熱或極冷處甚至岩石內部生存。",
+        "chant": "Bacteria small, bacteria tough; living in rocks where life is rough!",
+        "compare": "bacteria (複數動詞用 are) vs bacterium (單數動詞用 is)",
+        "note": "學術名詞，課本中作複數使用，後接複數動詞 are。"
+      },
+      "explanation": {
+        "point": "bacteria 是能在極端嚴苛環境生存的單細胞微生物「細菌 (複數)」。",
+        "examPurpose": "測驗學生在無提示情境下精準拼寫生命科學核心拉丁借詞名詞 bacteria 的能力。",
+        "correctReason": "課文原文明確指出 Bacteria are simple living things，作主詞時謂語動詞搭配 are。",
+        "note": "bacteria [n. pl.] 細菌 (單數 bacterium)。",
+        "trap": "注意拼寫為 b-a-c-t-e-r-i-a，切勿誤拼為單數 bacterium 或遺漏字母 c。",
+        "commonTraps": [
+          "此字為拉丁複數名詞，結尾為 -ia，學生常誤拼為單數形 bacterium 或 bacterier。",
+          "部分學生容易遺漏中間的字母 c 而誤拼成 bateria，正確拼寫為 b-a-c-t-e-r-i-a。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "microorganisms",
+          "microbes"
+        ],
+        "grammarCompare": "bacteria 為複數形搭配 are；單數形為 bacterium 搭配 is。",
+        "examVariations": "克漏字填空：Astrobiologists are searching for fossilized (bacteria) on Mars."
+      },
+      "target_chi": "細菌 (複數)",
+      "target_pos": "名詞 (Noun, 複數)",
+      "masked_example": "________ are simple living things on Earth, and they can live even inside solid rocks."
+    },
+    {
+      "id": "q_w12_space_ch06_04",
+      "book_id": "rd6",
+      "unit_id": "rd6_6",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★☆☆☆☆",
+      "question": "Listen to the pronunciation and context sentence: \"Scientists think that there might be liquid water in the soil or even in ________ rivers on Mars.\" Spell the target word for \"地下的；在地底\".",
+      "options": [],
+      "answer": "underground",
+      "vocab_card": {
+        "word": "underground",
+        "ipa": "/ˌʌndərˈɡraʊnd/",
+        "phonetic": "/ˌʌndərˈɡraʊnd/",
+        "syllables": "un·der·ground",
+        "pos": "形容詞 (Adjective) / 副詞",
+        "chi": "地下的；在地底",
+        "meaning": "位於地表面之下的空間或暗河環境",
+        "breakdown": "under(在...下方) + ground(地面/土壤) -> 地表之下的",
+        "trick": "合成詞：under (在下面) + ground (泥土地) = underground (地下)！",
+        "scene": "火星地表極度嚴寒結成厚冰，但在地底深處可能流動著溫暖的地下河流。",
+        "collocation": "underground rivers, underground water, deep underground",
+        "img": "⛏️",
+        "context_eng": "Many scientists think that there is liquid water in the soil or even in underground rivers.",
+        "example": "Many scientists think that there is liquid water in the soil or even in underground rivers.",
+        "context_chi": "許多科學家認為土壤中甚至地下河流中存在著液態水。",
+        "chant": "Under the ground, dark and deep; underground rivers secretly flow and seep!",
+        "compare": "underground (地下的) vs underwater (水下的) vs surface (地表的)",
+        "note": "可做形容詞修飾名詞 (underground rivers)，也可做副詞 (live underground)。"
+      },
+      "explanation": {
+        "point": "underground 為複合字，可作形容詞「地下的」或副詞「在地底」。",
+        "examPurpose": "考核學生對複合空間形容詞 underground 之拼讀與在行星地質語境中運用的能力。",
+        "correctReason": "修飾河流名詞 rivers，表示地表之下的暗河，由 under + ground 合成。",
+        "note": "underground [adj./adv.] 地下的；在地底。",
+        "trap": "underground 必須連寫為單一單字，切勿拆開成 under ground。",
+        "commonTraps": [
+          "複合字 underground 必須連寫為一個單字，學生常錯誤拆開寫成 under ground。",
+          "部分學生容易將地下 underground 與水下 underwater 混淆，此處特指地表土壤之下。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "subterranean",
+          "subsurface"
+        ],
+        "grammarCompare": "underground rivers 作形容詞修飾名詞；live underground 作副詞修飾動詞。",
+        "examVariations": "地質形容詞選擇：Liquid water might flow in (underground) channels on Mars."
+      },
+      "target_chi": "地下的；在地底",
+      "target_pos": "形容詞 (Adjective) / 副詞",
+      "masked_example": "Scientists think that there might be liquid water in the soil or even in ________ rivers on Mars."
+    },
+    {
+      "id": "q_w12_space_ch06_05",
+      "book_id": "rd6",
+      "unit_id": "rd6_6",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★☆☆☆☆",
+      "question": "Listen to the pronunciation and context sentence: \"When scientists look for life on other planets, they always look for places that have ________ water.\" Spell the target word for \"液態的；液體\".",
+      "options": [],
+      "answer": "liquid",
+      "vocab_card": {
+        "word": "liquid",
+        "ipa": "/ˈlɪkwɪd/",
+        "phonetic": "/ˈlɪkwɪd/",
+        "syllables": "liq·uid",
+        "pos": "形容詞 (Adjective) / 名詞",
+        "chi": "液態的；液體",
+        "meaning": "具有流動性、體積固定但無固定形狀的物質狀態",
+        "breakdown": "liqu-(流動/液體) + -id(形容詞字尾) -> 會流動的液態",
+        "trick": "發音諧音「立刻的」-> 倒水在桌上，液體 (liquid)「立刻地」流開了！",
+        "scene": "科學家尋找外星生命時，將「流動的液態水」列為最重要的第一生命指標。",
+        "collocation": "liquid water, liquid chemicals, liquid form",
+        "img": "💧",
+        "context_eng": "When scientists look for life on other planets, they look for places that have liquid water.",
+        "example": "When scientists look for life on other planets, they look for places that have liquid water.",
+        "context_chi": "當科學家在其他行星尋找生命時，他們會尋找有液態水的地方。",
+        "chant": "Liquid water, smooth and clear; brings alive the atmosphere here!",
+        "compare": "liquid (液態的) vs solid (固態的，如 ice) vs gas (氣態的，如 vapor)",
+        "note": "物質三態：solid (固體), liquid (液體), gas (氣體)。"
+      },
+      "explanation": {
+        "point": "liquid 為形容詞「液態的」或名詞「液體」，指可流動的物質狀態。",
+        "examPurpose": "測驗學生對外星宜居第一生命指標形容詞 liquid 之精準聽寫與拼字能力。",
+        "correctReason": "科學家尋找地外生命時，關鍵在於尋找流動的液態水 (liquid water)，拼寫為 l-i-q-u-i-d。",
+        "note": "liquid [adj.] 液態的；[n.] 液體。",
+        "trap": "注意字母組合為 -qu-，母音結尾為 -id，切勿誤拼成 liqued 或 likwid。",
+        "commonTraps": [
+          "學生常受發音影響將中間的 -qu- 誤寫成 -kw- 或 -k-，如 likwid 或 licuid。",
+          "尾端母音字母為 i，學生常受 solid 結尾影響而誤拼成 liqued 或 liquod。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "fluid",
+          "aqueous"
+        ],
+        "grammarCompare": "物質三態形容詞對比：solid (固態), liquid (液態), gas/gaseous (氣態)。",
+        "examVariations": "常考科普克漏字：Life cannot survive without (liquid) water to dissolve nutrients."
+      },
+      "target_chi": "液態的；液體",
+      "target_pos": "形容詞 (Adjective) / 名詞",
+      "masked_example": "When scientists look for life on other planets, they always look for places that have ________ water."
+    },
+    {
+      "id": "q_w12_space_ch06_06",
+      "book_id": "rd6",
+      "unit_id": "rd6_6",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★☆☆☆☆",
+      "question": "Listen to the pronunciation and context sentence: \"Saturn's largest moon, Titan, is the only moon in our solar system with a thick ________.\" Spell the target word for \"大氣層；大氣\".",
+      "options": [],
+      "answer": "atmosphere",
+      "vocab_card": {
+        "word": "atmosphere",
+        "ipa": "/ˈætməsfɪr/",
+        "phonetic": "/ˈætməsfɪr/",
+        "syllables": "at·mos·phere",
+        "pos": "名詞 (Noun)",
+        "chi": "大氣層；大氣氣壓",
+        "meaning": "包圍著行星或天體的氣體層",
+        "breakdown": "atmos-(蒸汽/氣體) + sphere(球體) -> 環繞星球氣體球層",
+        "trick": "字根記憶：atmos (水氣/大氣) + sphere (球體) -> 包裹整個星球的大氣層！",
+        "scene": "土衛六泰坦擁有濃厚混濁的黃色大氣層，成為太陽系唯一擁有大氣的衛星。",
+        "collocation": "have an atmosphere, Earth's atmosphere, dense atmosphere",
+        "img": "🌫️",
+        "context_eng": "Saturn's largest moon, Titan, is the only moon in the solar system with atmosphere.",
+        "example": "Saturn's largest moon, Titan, is the only moon in the solar system with atmosphere.",
+        "context_chi": "土星最大的衛星土衛六是太陽系中唯一擁有大氣層的衛星。",
+        "chant": "Atmosphere wraps round the planet high; holding clouds across the sky!",
+        "compare": "atmosphere (包裹行星的大氣層) vs space (完全真空的外部宇宙空間)",
+        "note": "注意 ph 發 /f/ 音；字首重音在 at- /ˈætməsfɪr/。"
+      },
+      "explanation": {
+        "point": "atmosphere 為名詞「大氣層；氣體包層」，重音在第一音節 /ˈætməsfɪr/。",
+        "examPurpose": "考核學生對行星物理核心詞彙 atmosphere 希臘字根拼讀結構之掌握。",
+        "correctReason": "土衛六 Titan 是太陽系中唯一自帶濃厚大氣層的衛星，拼寫為 a-t-m-o-s-p-h-e-r-e。",
+        "note": "atmosphere [n.] 大氣；大氣層。",
+        "trap": "注意 ph 發 /f/ 音，切勿依照發音拼寫成 atmosfere；中間母音為 o。",
+        "commonTraps": [
+          "單字源自希臘字根 sphere (球體)，ph 發 /f/ 音，切勿誤拼成 atmosfere。",
+          "部分學生容易在中間漏掉字母 o 誤拼為 atmsphere，正確拼寫為 a-t-m-o-s-p-h-e-r-e。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "gaseous envelope",
+          "planetary air"
+        ],
+        "grammarCompare": "字根解析：atmos (水氣/蒸汽) + sphere (球體) -> 包裹球體星球之大氣層。",
+        "examVariations": "定義題：The dense layer of gases that envelops Titan is its (atmosphere)."
+      },
+      "target_chi": "大氣層；大氣",
+      "target_pos": "名詞 (Noun)",
+      "masked_example": "Saturn's largest moon, Titan, is the only moon in our solar system with a thick ________."
+    },
+    {
+      "id": "q_w12_space_ch06_07",
+      "book_id": "rd6",
+      "unit_id": "rd6_6",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★☆☆☆☆",
+      "question": "Listen to the pronunciation and context sentence: \"The rivers, lakes, and clouds on Saturn's moon Titan are made of chemicals called ________.\" Spell the target word for \"碳氫化合物 (複數)\".",
+      "options": [],
+      "answer": "hydrocarbons",
+      "vocab_card": {
+        "word": "hydrocarbons",
+        "ipa": "/ˌhaɪdrəˈkɑːrbənz/",
+        "phonetic": "/ˌhaɪdrəˈkɑːrbənz/",
+        "syllables": "hy·dro·car·bons",
+        "pos": "名詞 (Noun, 複數)",
+        "chi": "碳氫化合物；烴類化合物",
+        "meaning": "由氫原子與碳原子構成的有機化學物質，如甲烷與乙烷",
+        "breakdown": "hydro-(水/氫) + carbon(碳) + -s -> 氫與碳結合的有機分子",
+        "trick": "拆詞記憶：hydro (氫) + carbon (碳) = 碳氫化合物 (hydrocarbons)！",
+        "scene": "土衛六泰坦表面下著甲烷雨，匯聚成完全由碳氫化合物構成的湖泊與河流。",
+        "collocation": "made of hydrocarbons, hydrocarbons and water",
+        "img": "⚗️",
+        "context_eng": "These are made of chemicals called hydrocarbons, and scientists think that there is water under the surface of Titan, too.",
+        "example": "These are made of chemicals called hydrocarbons, and scientists think that there is water under the surface of Titan, too.",
+        "context_chi": "這些是由稱為碳氫化合物的化學物質組成的，科學家認為土衛六地表下也有水。",
+        "chant": "Hydrocarbons make the rain; lakes of methane on Titan's plain!",
+        "compare": "hydrocarbons (有機碳氫化合物) vs pure water (無機水分子 H2O)",
+        "note": "高中與大學化學必備核心字彙，在天體生物學中為生命前驅分子。"
+      },
+      "explanation": {
+        "point": "hydrocarbons 為複數名詞「碳氫化合物；烴類」，由氫與碳構成的有機化合物。",
+        "examPurpose": "考查小六學生拼寫進階長單字及掌握天體生物學化學核心詞彙的能力。",
+        "correctReason": "泰坦星上的液態河流與湖泊由甲烷乙烷等碳氫化合物構成，課本固定以複數出現。",
+        "note": "hydrocarbons [n. pl.] 碳氫化合物。",
+        "trap": "注意字尾有複數 s，字首為 hydro- (氫)，切勿拼成 hydrocarbon 或 hendrocarbons。",
+        "commonTraps": [
+          "字長達 12 個字母，學生常漏寫字尾複數 s 誤拼為單數形 hydrocarbon。",
+          "字首 hydro- 常被誤寫為 hendro- 或 hyro-，請依 hydro (氫) + carbon (碳) + s 拆解記憶。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "organic chemicals",
+          "methane compounds"
+        ],
+        "grammarCompare": "hydrocarbons (碳氫化合物) vs carbohydrates (碳水化合物/醣類)，兩者概念截然不同。",
+        "examVariations": "科普專用詞拼寫：The lakes of Titan are composed of liquid (hydrocarbons)."
+      },
+      "target_chi": "碳氫化合物 (複數)",
+      "target_pos": "名詞 (Noun, 複數)",
+      "masked_example": "The rivers, lakes, and clouds on Saturn's moon Titan are made of chemicals called ________."
+    },
+    {
+      "id": "q_w12_space_ch06_08",
+      "book_id": "rd6",
+      "unit_id": "rd6_6",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★★☆☆☆",
+      "question": "Listen to the pronunciation and context sentence: \"In science fiction stories, ________ are intelligent living things visiting us from another world.\" Spell the target word for \"外星人；外來的\".",
+      "options": [],
+      "answer": "alien",
+      "vocab_card": {
+        "word": "alien",
+        "ipa": "/ˈeɪliən/",
+        "phonetic": "/ˈeɪliən/",
+        "syllables": "al·ien",
+        "pos": "名詞 (Noun) / 形容詞",
+        "chi": "外星人；外來的",
+        "meaning": "來自地球以外其他星球的智慧生命體",
+        "breakdown": "ali-(其他/不同) + -en -> 來自另一個異域世界的存在",
+        "trick": "趣味諧音「愛臉」-> 科幻電影裡的外星人 (alien) 最愛把大臉湊在窗前！",
+        "scene": "電影與科幻小說常描繪從外太空駕駛幽浮造訪地球的綠色小外星人。",
+        "collocation": "alien spacecraft, alien astronomers, stories about aliens",
+        "img": "👾",
+        "context_eng": "In stories, aliens are living things from another world, but are they real?",
+        "example": "In stories, aliens are living things from another world, but are they real?",
+        "context_chi": "在故事中外星人是來自另一個世界的生物，但他們是真的嗎？",
+        "chant": "Alien, alien in the night; flying saucers shining bright!",
+        "compare": "alien (泛指一切地外生命或外星人) vs human (人類)",
+        "note": "字首發雙母音 /ˈeɪ/，注意母音拼寫為 a-l-i-e-n。"
+      },
+      "explanation": {
+        "point": "alien 為名詞「外星人」或形容詞「外來的；地外的」，音標為 /ˈeɪliən/。",
+        "examPurpose": "測驗學生對科幻與天文高頻詞彙 alien 母音拼讀與詞性概念的掌握。",
+        "correctReason": "指來自地球以外世界的生物，母音拼寫為 a-l-i-e-n。",
+        "note": "alien [n.] 外星人；[adj.] 外來的。",
+        "trap": "注意中間母音為 i 在 e 之前 (i-e)，切勿顛倒拼成 alein 或 alian。",
+        "commonTraps": [
+          "注意母音字母順序為 a-l-i-e-n，學生常因拼讀混淆而顛倒成 alian 或 alein。",
+          "部分學生誤將外星人 alien 與太空人 astronaut 混為一談，需辨別外星生物與人類太空人。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "extraterrestrial",
+          "ET"
+        ],
+        "grammarCompare": "an alien (冠詞用 an 因開頭為雙母音 /eɪ/)；aliens from another world 為常見搭配。",
+        "examVariations": "字彙替換題：Beings from other planets are often called (aliens) in movies."
+      },
+      "target_chi": "外星人；外來的",
+      "target_pos": "名詞 (Noun) / 形容詞",
+      "masked_example": "In science fiction stories, ________ are intelligent living things visiting us from another world."
+    },
+    {
+      "id": "q_w12_space_ch06_09",
+      "book_id": "rd6",
+      "unit_id": "rd6_6",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★★☆☆☆",
+      "question": "Listen to the pronunciation and context sentence: \"Sometimes people see unusual flying objects in the sky called ________, but they are usually weather balloons.\" Spell the target word for \"幽浮；不明飛行物體 (單數縮寫)\".",
+      "options": [],
+      "answer": "UFO",
+      "vocab_card": {
+        "word": "UFO",
+        "ipa": "/ˌjuː ef ˈoʊ/",
+        "phonetic": "/ˌjuː ef ˈoʊ/",
+        "syllables": "U·F·O",
+        "pos": "名詞 (Noun, 縮寫)",
+        "chi": "幽浮；不明飛行物體",
+        "meaning": "Unidentified Flying Object 的縮寫，指夜空中無法立即辨識的飛行發光物",
+        "breakdown": "U(Unidentified 未確認) + F(Flying 飛行) + O(Object 物體)",
+        "trick": "首字母縮寫：三個字母分開唸 U-F-O，就是台灣學生耳熟能詳的「幽浮」！",
+        "scene": "目擊者在夜空中看見高速盤旋閃爍的飛碟光點，後來證實只是氣象氣球或彗星。",
+        "collocation": "called UFOs, see UFOs in the sky, UFO sighting",
+        "img": "🛸",
+        "context_eng": "Sometimes, people see unusual objects in the sky, called UFOs.",
+        "example": "Sometimes, people see unusual objects in the sky, called UFOs.",
+        "context_chi": "有時候人們會在天空中看見不尋常的物體，被稱為幽浮（UFO）。",
+        "chant": "U-F-O in the evening glow; is it a spaceship? We don't know!",
+        "compare": "UFO (未確認飛行物，通常為氣球/彗星) vs airplane (普通民航客機)",
+        "note": "通常全大寫 UFO，複數加小寫 s 寫成 UFOs。冠詞搭配 a UFO (因開頭為輔音音標 /j/)。"
+      },
+      "explanation": {
+        "point": "UFO 為專有名詞首字母縮寫「不明飛行物；幽浮」，全大寫三個字母。",
+        "examPurpose": "考核學生對天體常識專有名詞縮寫形式與單複數書寫規範的理解。",
+        "correctReason": "Unidentified Flying Object 之首字母縮寫，單數形式書寫為全大寫 U-F-O。",
+        "note": "UFO [n. acronym] 幽浮；不明飛行物體。",
+        "trap": "本題要求單數縮寫，不可在結尾加上小寫 s 寫成 UFOs。",
+        "commonTraps": [
+          "UFO 為三個大寫英文字母之縮寫 (Unidentified Flying Object)，必須全大寫。",
+          "題目要求填寫單數縮寫 UFO，學生常習慣性加上複數 s 寫成 UFOs 而失分。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "flying saucer",
+          "unidentified craft"
+        ],
+        "grammarCompare": "冠詞搭配 a UFO (因開頭字母 U 發輔音音標 /juː/)，不可誤用 an UFO。",
+        "examVariations": "首字母縮寫辨析：The acronym for an unidentified flying object is (UFO)."
+      },
+      "target_chi": "幽浮；不明飛行物體 (單數縮寫)",
+      "target_pos": "名詞 (Noun, 縮寫)",
+      "masked_example": "Sometimes people see unusual flying objects in the sky called ________, but they are usually weather balloons."
+    },
+    {
+      "id": "q_w12_space_ch06_10",
+      "book_id": "rd6",
+      "unit_id": "rd6_6",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★★☆☆☆",
+      "question": "Listen to the pronunciation and context sentence: \"Early astronomers could only ________ aliens building cities and canals across the red planet.\" Spell the target word for \"想像；設想\".",
+      "options": [],
+      "answer": "imagine",
+      "vocab_card": {
+        "word": "imagine",
+        "ipa": "/ɪˈmædʒɪn/",
+        "phonetic": "/ɪˈmædʒɪn/",
+        "syllables": "im·ag·ine",
+        "pos": "動詞 (Verb)",
+        "chi": "想像；設想",
+        "meaning": "在心靈腦海中形成前所未見的形象或情景",
+        "breakdown": "im-(進入) + mag/image(圖像) + -ine -> 在腦海中描繪出畫面",
+        "trick": "字根聯想：image (圖像) ➔ imagine (在心裡把圖像畫出來，想像)！",
+        "scene": "古代天文學家望著望遠鏡中的微弱光點，想像著火星上宏偉的外星城市。",
+        "collocation": "imagine aliens building, imagine life on other worlds",
+        "img": "💭",
+        "context_eng": "Some astronomers imagined aliens building these canals and living in cities on Mars.",
+        "example": "Some astronomers imagined aliens building these canals and living in cities on Mars.",
+        "context_chi": "有些天文學家想像外星人建造了這些運河並住在火星城市裡。",
+        "chant": "Imagine high, imagine far; imagine life around a star!",
+        "compare": "imagine (想像未見之事) vs discover (發現客觀已存在之物)",
+        "note": "常接受詞加 V-ing：imagine somebody doing something。"
+      },
+      "explanation": {
+        "point": "imagine 為動詞「想像；設想」，其後常接名詞或受詞加動名詞 V-ing。",
+        "examPurpose": "評量學生對心智動詞 imagine 的語音聽辨與詞尾不發音 e 的拼寫掌握。",
+        "correctReason": "天文學家在缺乏精密儀器時想像外星人修建運河，動詞拼寫為 i-m-a-g-i-n-e。",
+        "note": "imagine [v.] 想像；設想。",
+        "trap": "字尾有不發音的字母 e，切勿誤拼為 imagin 或與名詞 image 混淆。",
+        "commonTraps": [
+          "動詞字尾必須保留不發音的 e，學生常誤拼為 imagin 或與名詞 image 混淆。",
+          "部分學生受到名詞 imagination 干擾，在原形動詞後面誤加字尾寫成 imaginate。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "picture",
+          "visualize"
+        ],
+        "grammarCompare": "imagine + O + V-ing：Some astronomers imagined aliens building canals.",
+        "examVariations": "動詞形式改寫：We can easily (imagine) what living on Mars would be like."
+      },
+      "target_chi": "想像；設想",
+      "target_pos": "動詞 (Verb)",
+      "masked_example": "Early astronomers could only ________ aliens building cities and canals across the red planet."
+    },
+    {
+      "id": "q_w12_space_ch06_11",
+      "book_id": "rd6",
+      "unit_id": "rd6_6",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★★☆☆☆",
+      "question": "Listen to the pronunciation and context sentence: \"An ________ uses powerful optical and space telescopes to observe distant stars and planets.\" Spell the target word for \"天文學家\".",
+      "options": [],
+      "answer": "astronomer",
+      "vocab_card": {
+        "word": "astronomer",
+        "ipa": "/əˈstrɑːnəmər/",
+        "phonetic": "/əˈstrɑːnəmər/",
+        "syllables": "as·tron·o·mer",
+        "pos": "名詞 (Noun)",
+        "chi": "天文學家",
+        "meaning": "專門使用望遠鏡與科學儀器觀測並研究恆星、行星與宇宙的科學家",
+        "breakdown": "astro-(星星) + nom(規律/法則) + -er(人) -> 研究星體運行規律的學者",
+        "trick": "拆詞法：astro (星際) + nomer (命名研究者) = 天文學家！",
+        "scene": "天文學家整夜守在大型深空光學望遠鏡前，捕捉遙遠星系傳來的微弱星光。",
+        "collocation": "alien astronomers, ancient astronomers, astronomers use telescopes",
+        "img": "🔭",
+        "context_eng": "Astronomers are looking for life in our solar system, and on planets around other stars.",
+        "example": "Astronomers are looking for life in our solar system, and on planets around other stars.",
+        "context_chi": "天文學家正在我們的太陽系以及圍繞其他恆星的行星上尋找生命。",
+        "chant": "Astronomers look with giant eyes; watching planets in the skies!",
+        "compare": "astronomer (天文學家) vs astronaut (太空人) vs astrologer (占星術士)",
+        "note": "注意名詞重音在第二音節 /əˈstrɑːnəmər/。"
+      },
+      "explanation": {
+        "point": "astronomer 為名詞「天文學家」，指專門觀測與研究天體的科學家。",
+        "examPurpose": "測驗學生區分不同科學職業名稱並精準拼寫 astronomer 的能力。",
+        "correctReason": "研究星空天體的科學家稱為 astronomer，重音在第二音節 /əˈstrɑːnəmər/。",
+        "note": "astronomer [n.] 天文學家。",
+        "trap": "字尾職業人後綴為 -er，切勿誤拼為 -or (astronomor) 或與太空人 astronaut 混淆。",
+        "commonTraps": [
+          "字尾表職業的人為 -er，學生常受 doctor 影響而誤拼為 astronomor。",
+          "容易與太空人 astronaut (宇航員) 混淆，astronomer 為地面或觀測台研究星體的天文學家。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "stargazer",
+          "astrophysicist"
+        ],
+        "grammarCompare": "astronomer (天文學家觀測星空) vs astronaut (太空人實際進入太空飛行)。",
+        "examVariations": "職業定義題：A scientist who studies stars and planets is an (astronomer)."
+      },
+      "target_chi": "天文學家",
+      "target_pos": "名詞 (Noun)",
+      "masked_example": "An ________ uses powerful optical and space telescopes to observe distant stars and planets."
+    },
+    {
+      "id": "q_w12_space_ch06_12",
+      "book_id": "rd6",
+      "unit_id": "rd6_6",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★★☆☆☆",
+      "question": "Listen to the pronunciation and context sentence: \"Scientists believe there are billions of galaxies and millions of Earth-like planets in the ________.\" Spell the target word for \"宇宙；萬物天地\".",
+      "options": [],
+      "answer": "universe",
+      "vocab_card": {
+        "word": "universe",
+        "ipa": "/ˈjuːnɪvɜːrs/",
+        "phonetic": "/ˈjuːnɪvɜːrs/",
+        "syllables": "u·ni·verse",
+        "pos": "名詞 (Noun)",
+        "chi": "宇宙；萬物天地",
+        "meaning": "包含所有物質、能量、恆星、星系與整個時空的整體總和",
+        "breakdown": "uni-(單一/整體) + vers-(轉動) -> 萬物共同旋轉化為一體的廣袤宇宙",
+        "trick": "前綴聯想：uni- (一個整體，如 uniform 制服) ➔ universe (包羅萬象的唯一宇宙)！",
+        "scene": "在無邊無際的宇宙深空中，蘊藏著數千億個星系與無數可能孕育生命的星球。",
+        "collocation": "in the universe, expand across the universe, millions in the universe",
+        "img": "🌌",
+        "context_eng": "Some scientists think that there are lots of planets like Earth in our galaxy, and millions in the universe.",
+        "example": "Some scientists think that there are lots of planets like Earth in our galaxy, and millions in the universe.",
+        "context_chi": "有些科學家認為在我們的銀河系有很多類地行星，而在整個宇宙中則有數百萬顆。",
+        "chant": "Universe wide, universe deep; millions of secrets it will keep!",
+        "compare": "universe (整個宇宙，包容所有星系) vs galaxy (單個星系，如銀河系)",
+        "note": "宇宙只有一個，通常搭配定冠詞 the universe。"
+      },
+      "explanation": {
+        "point": "universe 為名詞「宇宙」，指包含所有物質、星系與時空的整體空間。",
+        "examPurpose": "考核學生對宏觀天文巨觀名詞 universe 詞根組合與拼寫規範的認知。",
+        "correctReason": "包含所有星系的唯一宇宙，單字拼寫為 u-n-i-v-e-r-s-e。",
+        "note": "universe [n.] 宇宙；萬物天地。",
+        "trap": "字尾為 -erse，切勿誤拼成 univers 或 univerce；在句中通常搭配 the universe。",
+        "commonTraps": [
+          "結尾字母為 -verse，學生常因發音混淆誤拼為 univers 或 univerce。",
+          "宇宙在自然界中為唯一存在，在句子中作專有概念時前面常搭配定冠詞 the universe。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "cosmos",
+          "outer space"
+        ],
+        "grammarCompare": "尺度階層：planet (行星) < solar system (恆星系) < galaxy (星系) < universe (宇宙)。",
+        "examVariations": "克漏字填空：There are millions of planets like Earth in the (universe)."
+      },
+      "target_chi": "宇宙；萬物天地",
+      "target_pos": "名詞 (Noun)",
+      "masked_example": "Scientists believe there are billions of galaxies and millions of Earth-like planets in the ________."
+    },
+    {
+      "id": "q_w12_space_ch06_13",
+      "book_id": "rd6",
+      "unit_id": "rd6_6",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★★☆☆☆",
+      "question": "Listen to the pronunciation and context sentence: \"Our solar system is just a tiny part of a massive spiral system of stars called the Milky Way ________.\" Spell the target word for \"星系；銀河系\".",
+      "options": [],
+      "answer": "galaxy",
+      "vocab_card": {
+        "word": "galaxy",
+        "ipa": "/ˈɡæləksi/",
+        "phonetic": "/ˈɡæləksi/",
+        "syllables": "gal·ax·y",
+        "pos": "名詞 (Noun)",
+        "chi": "星系；銀河系",
+        "meaning": "由數以百億甚至千億計的恆星、氣體與塵埃在萬有引力束縛下聚集而成的龐大天體系統",
+        "breakdown": "galax-(牛奶/銀河) + -y -> 像牛奶光帶灑在夜空中的星系",
+        "trick": "聯想記憶：Galaxy 手機取名自「銀河星系」，由數億顆閃耀恆星匯聚！",
+        "scene": "我們居住的銀河系呈螺旋狀盤旋，中心聚集著成千上萬億顆明亮恆星。",
+        "collocation": "our galaxy, the Milky Way galaxy, billions of galaxies",
+        "img": "🌀",
+        "context_eng": "Some scientists think that there are lots of planets like Earth in our galaxy.",
+        "example": "Some scientists think that there are lots of planets like Earth in our galaxy.",
+        "context_chi": "有些科學家認為在我們的銀河系中有很多像地球一樣的行星。",
+        "chant": "Spinning galaxy in the night; billions of stars of silver light!",
+        "compare": "galaxy (星系，如 Milky Way) vs solar system (太陽系，僅單一恆星系統)",
+        "note": "複數形去 y 加 -ies 變 galaxies。"
+      },
+      "explanation": {
+        "point": "galaxy 為名詞「星系；銀河系」，指由數千億顆恆星聚成的龐大天體系統。",
+        "examPurpose": "測驗學生對星體系統階層名詞 galaxy 之拼讀記憶與單複數變化的掌握。",
+        "correctReason": "太陽系所在的龐大星系稱為 galaxy，字尾為 -xy，拼寫為 g-a-l-a-x-y。",
+        "note": "galaxy [n.] 星系；銀河系 (複數 galaxies)。",
+        "trap": "字尾為 -xy，母音為 a，切勿誤拼為 galexy 或 galaxie。",
+        "commonTraps": [
+          "字尾字母為 -xy，學生常誤拼為 galexy 或 galaxie (後者為複數去 y 加 ies 的形式)。",
+          "需注意宇宙尺度階層：一個 galaxy (星系) 包含千億恆星，而 universe (宇宙) 包含數百億個星系。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "star system",
+          "spiral nebula"
+        ],
+        "grammarCompare": "galaxy 單數為 galaxy，複數去 y 加 ies 變 galaxies；The Milky Way 為專有名詞。",
+        "examVariations": "天文常識配合題：Our solar system is located inside the Milky Way (galaxy)."
+      },
+      "target_chi": "星系；銀河系",
+      "target_pos": "名詞 (Noun)",
+      "masked_example": "Our solar system is just a tiny part of a massive spiral system of stars called the Milky Way ________."
+    },
+    {
+      "id": "q_w12_space_ch06_14",
+      "book_id": "rd6",
+      "unit_id": "rd6_6",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★★☆☆☆",
+      "question": "Listen to the pronunciation and context sentence: \"Some people thought the glowing lights were alien ________, but they were actually high-altitude balloons.\" Spell the target word for \"太空船；太空探測載具\".",
+      "options": [],
+      "answer": "spacecraft",
+      "vocab_card": {
+        "word": "spacecraft",
+        "ipa": "/ˈspeɪskræft/",
+        "phonetic": "/ˈspeɪskræft/",
+        "syllables": "space·craft",
+        "pos": "名詞 (Noun, 單複數同形)",
+        "chi": "太空船；太空探測載具",
+        "meaning": "航行於地球大氣層之外、用於探索太空或其他天體的人造飛行載具",
+        "breakdown": "space(太空) + craft(載具/飛艇) -> 航行太空中之載具",
+        "trick": "合成詞：space (太空) + craft (飛行船隻) = spacecraft (太空船)！",
+        "scene": "人類發射無人深空探測太空船，歷經數年航行飛越木星與土星探測冰封衛星。",
+        "collocation": "alien spacecraft, robotic spacecraft, send a spacecraft",
+        "img": "🚀",
+        "context_eng": "Some people think that they are alien spacecraft, but they are usually things like balloons or comets.",
+        "example": "Some people think that they are alien spacecraft, but they are usually things like balloons or comets.",
+        "context_chi": "有些人認為幽浮是外星太空船，但它們通常只是氣球或彗星之類的事物。",
+        "chant": "Spacecraft flies beyond the blue; exploring planets strange and new!",
+        "compare": "spacecraft (單複數同形：one spacecraft, two spacecraft) vs airplane (普通大氣內飛機)",
+        "note": "craft 結尾名詞單複數同形，複數不可加 -s。"
+      },
+      "explanation": {
+        "point": "spacecraft 為名詞「太空船；探測載具」，且為單複數同形名詞。",
+        "examPurpose": "考查小六學生掌握複合名詞 spacecraft 之拼寫及其特殊單複數同形文法特徵。",
+        "correctReason": "航行於太空的航天器稱為 spacecraft，由 space + craft 連寫而成。",
+        "note": "spacecraft [n. 單複數同形] 太空船；航天器。",
+        "trap": "craft 結尾名詞單複數同形，複數不可在字尾加 s，且必須連寫為單一單字。",
+        "commonTraps": [
+          "craft 結尾的名詞單複數同形，學生常在字尾誤加 s 寫成 spacecrafts。",
+          "複合字 spacecraft 必須連寫為一個單字，學生常誤拆開寫成 space craft。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "spaceship",
+          "space vehicle"
+        ],
+        "grammarCompare": "單複數同形名詞：one spacecraft, three spacecraft (不可加 s)；同 aircraft。",
+        "examVariations": "改錯題：Scientists tracked two alien (spacecrafts -> spacecraft) in the movie."
+      },
+      "target_chi": "太空船；太空探測載具",
+      "target_pos": "名詞 (Noun, 單複數同形)",
+      "masked_example": "Some people thought the glowing lights were alien ________, but they were actually high-altitude balloons."
+    },
+    {
+      "id": "q_w12_space_ch06_15",
+      "book_id": "rd6",
+      "unit_id": "rd6_6",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "difficulty": "★★★☆☆",
+      "part_title": "Part II. Guided Science Q&A & Sentence Transformation (科普問答與句型改寫)",
+      "part_instructions": "請依據天體生物學事實，運用完整的主從複合句結構回答問題，確保原因子句主謂一致且標點完整。",
+      "sentence_form": "Liquid water is essential because living things need it to survive and carry out life processes.",
+      "question": "[3C Handwritten Q&A · Science Short Answer] Answer the question in a complete sentence: \"Why is liquid water essential for life on a planet?\" (Use: Liquid water is essential because...)",
+      "options": [],
+      "answer": "Liquid water is essential because living things need it to survive and carry out life processes.",
+      "self_check": [
+        "1. 句子開頭是否以完整主詞與動詞 (Liquid water is essential because...) 起頭，而非簡短片段？",
+        "2. because 後方的原因子句是否包含完整主詞 living things 與動詞 need it to survive？",
+        "3. 句首字母大寫，句尾標點符號完整，單字拼寫無遺漏？"
+      ],
+      "explanation": {
+        "point": "生命必備要素論述：液態水能溶解化學物質並促進細胞內部代謝生長。",
+        "examPurpose": "檢驗小六學生在手寫卷中依據生物科學核心常識組織因果完整論述句的能力。",
+        "correctReason": "課文指出 Life on Earth needs liquid water，生命需要液態水維持生理機能與生存。",
+        "note": "essential [adj.] 必不可少的；極其重要的。",
+        "trap": "切勿只簡答 Because it needs water，手寫卷要求完整主從複合句結構。",
+        "commonTraps": [
+          "學生常只寫 Because living things need water，缺少主要子句而成為殘缺句 (sentence fragment)。",
+          "部分學生遺漏 liquid 而只寫 water，但天體物理強調固態冰無法取代液態水的溶劑功能。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "indispensable for life",
+          "crucial for survival"
+        ],
+        "grammarCompare": "essential to/for + N；because 引導副詞子句修飾主要子句形容詞原因。",
+        "examVariations": "問答題變形：What do astrobiologists search for first when exploring planets? -> Liquid water."
+      }
+    },
+    {
+      "id": "q_w12_space_ch06_16",
+      "book_id": "rd6",
+      "unit_id": "rd6_6",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "difficulty": "★★★☆☆",
+      "part_title": "Part II. Guided Science Q&A & Sentence Transformation (科普問答與句型改寫)",
+      "part_instructions": "請以關係副詞 where 引導的修飾子句，清楚定義適居帶的溫度條件與液態水存在之關聯。",
+      "sentence_form": "The habitable zone is the area around a star where the temperature is not too hot and not too cold for liquid water to exist.",
+      "question": "[3C Handwritten Q&A · Science Short Answer] Answer the question in a complete sentence: \"What is the habitable zone (Goldilocks zone) around a star?\" (Use: The habitable zone is the area where...)",
+      "options": [],
+      "answer": "The habitable zone is the area around a star where the temperature is not too hot and not too cold for liquid water to exist.",
+      "self_check": [
+        "1. 是否精確寫出適居帶的核心定義「圍繞恆星的區域」(the area around a star)？",
+        "2. 是否清楚表述溫度條件「不熱也不冷」(not too hot and not too cold for liquid water to exist)？",
+        "3. 關係副詞 where 引導的修飾子句主詞動詞完整一致，拼寫正確？"
+      ],
+      "explanation": {
+        "point": "適居帶定義：距離恆星不遠不近、溫度恰好能讓水以液態形式存在的軌道範圍。",
+        "examPurpose": "考核學生用精準科學英語下定義並熟練運用 not too... and not too... 句型的技能。",
+        "correctReason": "適居帶俗稱金髮女孩帶 (Goldilocks zone)，其核心指標即為允許液態水在地表穩定存在。",
+        "note": "habitable zone (適居帶；宜居帶)。",
+        "trap": "關係副詞 where 後方不可再加介系詞 in，避免地方狀語重複。",
+        "commonTraps": [
+          "學生常遺漏 liquid water 的存在條件，只模糊回答 it is a nice place around a star。",
+          "關係子句中忘記使用 where 引導地點，或者在 not too hot and not too cold 後方漏掉 to exist。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "Goldilocks zone",
+          "circumstellar habitable zone"
+        ],
+        "grammarCompare": "the area where + S + V (where 作關係副詞表地點，子句內部結構完整)。",
+        "examVariations": "名詞解釋題：Explain why Earth is in the habitable zone while Venus and Mars are not."
+      }
+    },
+    {
+      "id": "q_w12_space_ch06_17",
+      "book_id": "rd6",
+      "unit_id": "rd6_6",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "difficulty": "★★★☆☆",
+      "part_title": "Part II. Guided Science Q&A & Sentence Transformation (科普問答與句型改寫)",
+      "part_instructions": "請根據火星探測的地質證據，以名詞子句 that 陳述火星過去曾有液態水的事實。",
+      "sentence_form": "Dried riverbeds and channels show that Mars once had liquid water on its surface.",
+      "question": "[3C Handwritten Q&A · Science Short Answer] Answer the question in a complete sentence: \"What evidence shows that Mars once had liquid water on its surface?\" (Use: Dried riverbeds and channels show that...)",
+      "options": [],
+      "answer": "Dried riverbeds and channels show that Mars once had liquid water on its surface.",
+      "self_check": [
+        "1. 主詞是否列出客觀地質證據「乾涸的河床與水道」(Dried riverbeds and channels)？",
+        "2. that 子句中的時態是否正確使用過去式 had (Mars once had liquid water)？",
+        "3. 地點介系詞片語 on its surface 是否拼寫正確無殘缺？"
+      ],
+      "explanation": {
+        "point": "火星遠古流水證據：火星地表殘存乾涸河道與沖積扇，證明過去曾有溫暖多水的時期。",
+        "examPurpose": "評量學生結合地質觀測事實與名詞子句受詞結構進行科學論證的能力。",
+        "correctReason": "探測器拍攝到的乾涸河床 (dried riverbeds) 與水沖刷痕跡是火星曾有液態水的最強證據。",
+        "note": "dried riverbeds (乾涸的河床)。",
+        "trap": "表示過去曾經擁有，that 子句內必須使用過去式動詞 had，不可寫成 has。",
+        "commonTraps": [
+          "學生常在 that 子句中誤用現在式 has，忽略了題幹中 once (曾經) 要求使用過去式 had。",
+          "介系詞搭配錯誤：受中文影響將表面介系詞 on its surface 誤寫成 in its surface。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "ancient waterways",
+          "dry valleys and river valleys"
+        ],
+        "grammarCompare": "show that + S + V (that 引導名詞子句陳述科學客觀事實或歷史推論)。",
+        "examVariations": "閱讀理解改寫：What geological clues prove that Mars was once a wet planet?"
+      }
+    },
+    {
+      "id": "q_w12_space_ch06_18",
+      "book_id": "rd6",
+      "unit_id": "rd6_6",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "difficulty": "★★★☆☆",
+      "part_title": "Part II. Guided Science Q&A & Sentence Transformation (科普問答與句型改寫)",
+      "part_instructions": "請運用 because 連接木衛二內部溫暖與冰下海洋兩項關鍵科學論據，寫出完整回答。",
+      "sentence_form": "Scientists think there might be life on Europa because it is warmer inside and there may be liquid oceans under the ice.",
+      "question": "[3C Handwritten Q&A · Science Short Answer] Answer the question in a complete sentence: \"Why do scientists think there might be life on Jupiter's moon Europa?\" (Use: Scientists think there might be life on Europa because...)",
+      "options": [],
+      "answer": "Scientists think there might be life on Europa because it is warmer inside and there may be liquid oceans under the ice.",
+      "self_check": [
+        "1. 是否正確陳述木衛二內部較暖的客觀推論 (it is warmer inside)？",
+        "2. 是否點出厚冰下方可能存在液態海洋 (there may be liquid oceans under the ice)？",
+        "3. 專有名詞 Europa 首字母大寫，主從子句連接詞 because 使用恰當？"
+      ],
+      "explanation": {
+        "point": "木衛二生命潛力：雖然表面極寒封凍，但內部潮汐熱力可維持龐大的冰下液態海洋。",
+        "examPurpose": "考核學生整合天體內部構造特徵並以複合格局表達科學假說的能力。",
+        "correctReason": "課文原文記載 scientists think it's warmer inside. Maybe there are oceans under the ice。",
+        "note": "warmer inside (內部較為溫暖)。",
+        "trap": "切勿將 warmer inside 誤記為 colder inside，地熱保溫是液態海洋存在的關鍵。",
+        "commonTraps": [
+          "很多學生誤將內部溫度寫成 colder，事實上內部因潮汐摩擦生熱而比極寒表面更 warmer。",
+          "部分學生遺漏 under the ice，未能指出海洋是深藏於地表冰殼之下的地下大洋。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "subsurface ocean",
+          "internal tidal heating"
+        ],
+        "grammarCompare": "it is warmer inside (內部比較級形容詞作補語)；under the ice (介系詞片語作位置狀語)。",
+        "examVariations": "是非推論題：True or False: Europa has liquid oceans on its outer surface. (False)"
+      }
+    },
+    {
+      "id": "q_w12_space_ch06_19",
+      "book_id": "rd6",
+      "unit_id": "rd6_6",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "difficulty": "★★★★☆",
+      "part_title": "Part II. Guided Science Q&A & Sentence Transformation (科普問答與句型改寫)",
+      "part_instructions": "請運用介系詞片語「by + V-ing 平行結構」，條理列舉無人探測載具的三大科學探測功能。",
+      "sentence_form": "Space probes and rovers help astronomers by taking clear photos, analyzing soil and rocks, and exploring harsh environments.",
+      "question": "[3C Handwritten Q&A · Science Short Answer] Answer the question in a complete sentence: \"How do space probes and rovers help astronomers search for life on other planets?\" (Use: Space probes and rovers help astronomers by...)",
+      "options": [],
+      "answer": "Space probes and rovers help astronomers by taking clear photos, analyzing soil and rocks, and exploring harsh environments.",
+      "self_check": [
+        "1. 介系詞 by 後方是否一致使用動名詞平行結構 (taking..., analyzing..., and exploring...)？",
+        "2. 是否具體列舉探測車的科學任務（拍攝照片、分析土壤岩石、探索嚴酷環境）？",
+        "3. 主詞 probes and rovers 複數動詞 help 一致，全句結構完整？"
+      ],
+      "explanation": {
+        "point": "無人太空探測價值：機器人探測車能承受外星極端高低溫與輻射，替人類執行實地考察。",
+        "examPurpose": "測驗學生在回答方式副詞片語時熟練運用動名詞對稱平行結構的高階寫作實力。",
+        "correctReason": "探測車透過高清拍攝、土壤岩石成分光譜化驗以及無人巡視，為科學家傳回第一線數據。",
+        "note": "by + V-ing (藉由...方式)。",
+        "trap": "介系詞 by 後接動名詞，三個動作 taking, analyzing, exploring 必須維持平行一致。",
+        "commonTraps": [
+          "介系詞 by 後方動詞忘記加 -ing，誤寫成 by take photos and analyze soil 的平行失調錯誤。",
+          "部分學生將 rovers 誤寫為 robots from airplane，需注意探測車為地面輪式機器載具。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "robotic rovers",
+          "unmanned exploration probes"
+        ],
+        "grammarCompare": "by doing sth 表手段方法；in doing sth 表在...過程中；with + 工具名詞。",
+        "examVariations": "寫作句型應用：How can robots assist scientists in extreme environments?"
+      }
+    },
+    {
+      "id": "q_w12_space_ch06_20",
+      "book_id": "rd6",
+      "unit_id": "rd6_6",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "difficulty": "★★★★☆",
+      "part_title": "Part II. Guided Science Q&A & Sentence Transformation (科普問答與句型改寫)",
+      "part_instructions": "請以虛主詞 It 開頭，並在 because 原因子句中結合距離與恆星光芒雙重因素回答問題。",
+      "sentence_form": "It is difficult to see exoplanets directly because they are billions of kilometers away and the bright light of their stars hides them.",
+      "question": "[3C Handwritten Q&A · Science Short Answer] Answer the question in a complete sentence: \"Why is it difficult to see exoplanets directly through a telescope?\" (Use: It is difficult to see exoplanets directly because...)",
+      "options": [],
+      "answer": "It is difficult to see exoplanets directly because they are billions of kilometers away and the bright light of their stars hides them.",
+      "self_check": [
+        "1. 是否以虛主詞完整結構 (It is difficult to see exoplanets directly because...) 作答？",
+        "2. 是否說明系外行星距離遙遠 (billions of kilometers away) 與母星光芒掩蓋 (bright light hides them) 兩大原因？",
+        "3. because 原因子句主詞動詞完整，代名詞 they 與 them 指代清晰？"
+      ],
+      "explanation": {
+        "point": "系外行星觀測難點：行星本身不發光且距離地球動輒數十光年，完全被母恆星耀眼光芒所淹沒。",
+        "examPurpose": "考核學生用虛主詞 it 與原因子句完整闡述光學觀測物理限制的邏輯表達力。",
+        "correctReason": "系外行星距離以數十億公里計，且恆星亮度是行星的數百萬倍，直接望遠鏡成像極端困難。",
+        "note": "exoplanets (太陽系外行星)。",
+        "trap": "修飾動詞 see 必須使用副詞 directly，切勿漏寫 -ly 誤填形容詞 direct。",
+        "commonTraps": [
+          "學生常只寫 Because they are far，回答過於簡略且未提及恆星強光掩蓋的關鍵物理限制。",
+          "部分學生將直接觀測 directly 誤寫為 direct，修飾動詞 see 必須使用副詞 directly。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "extrasolar planets",
+          "distant worlds"
+        ],
+        "grammarCompare": "It is + Adj + to V + because... 結合虛主詞與因果從屬子句，為學術寫作經典句型。",
+        "examVariations": "閱讀問答題：Why do astronomers need space telescopes to detect Earth-like exoplanets?"
+      }
+    },
+    {
+      "id": "q_w12_space_ch06_21",
+      "book_id": "rd6",
+      "unit_id": "rd6_6",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "difficulty": "★★★★☆",
+      "part_title": "Part II. Guided Science Q&A & Sentence Transformation (科普問答與句型改寫)",
+      "part_instructions": "請將含有推測副詞 Perhaps 的句子改寫為使用情態助動詞 might 的科學推論句型。",
+      "sentence_form": "Subject + might + Base Verb + Prepositional Phrase.",
+      "question": "[Tiger 3C Handwritten Section · Sentence Transformation] Rewrite the speculative sentence using the modal verb \"might\" followed by the base verb: \"Perhaps simple bacteria exist deep inside the frozen soil of Mars.\" (Begin with: \"Simple bacteria...\")",
+      "options": [],
+      "answer": "Simple bacteria might exist deep inside the frozen soil of Mars.",
+      "self_check": [
+        "1. 是否已將推測副詞 Perhaps 去除，並正確置換為情態助動詞 might？",
+        "2. might 後方是否嚴格搭配原形動詞 exist（不可加 -s 或 -ed）？",
+        "3. 專有名詞 Mars 首字母大寫，地方介系詞片語保持原樣無變形？"
+      ],
+      "explanation": {
+        "point": "句型轉換：Perhaps + S + V ➔ S + might + 原形動詞，表達科學推測可能。",
+        "examPurpose": "評量學生靈活轉換推測副詞與情態助動詞句構的精準造句與語法控制能力。",
+        "correctReason": "用情態助動詞 might 代替副詞 Perhaps，might 後接動詞原形 exist。",
+        "note": "might + Base Verb (可能做某事)。",
+        "trap": "改寫後必須去掉 Perhaps，且 might 後方絕不可加 -s (不可寫 might exists)。",
+        "commonTraps": [
+          "學生改寫時常忘記刪除句首的 Perhaps，造成 Perhaps simple bacteria might exist 的語氣冗贅。",
+          "部分學生受第三人稱單數或過去式干擾，在 might 後方誤寫成 might exists 或 might existed。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "could exist",
+          "may possibly exist"
+        ],
+        "grammarCompare": "Perhaps there is... (副詞推測) vs S + might/could + V (助動詞推論)。",
+        "examVariations": "句型轉換題：Perhaps alien life exists on Europa. -> Alien life might exist on Europa."
+      }
+    },
+    {
+      "id": "q_w12_space_ch06_22",
+      "book_id": "rd6",
+      "unit_id": "rd6_6",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "difficulty": "★★★★☆",
+      "part_title": "Part II. Guided Science Q&A & Sentence Transformation (科普問答與句型改寫)",
+      "part_instructions": "請將兩個分句合併改寫為一個句子，熟練運用「too + 形容詞 + to + 原形動詞」結構。",
+      "sentence_form": "Subject + is too + Adj + to + Base Verb + Object.",
+      "question": "[Tiger 3C Handwritten Section · Sentence Transformation] Combine and rewrite the two sentences into a single sentence using the pattern \"too + adjective + to + base verb\": \"The surface of Mars is very cold. It cannot keep liquid water on its surface.\" (Use: too cold to keep)",
+      "options": [],
+      "answer": "The surface of Mars is too cold to keep liquid water on its surface.",
+      "self_check": [
+        "1. 是否正確運用 too cold to keep 結構，將第二句的 cannot 去除並化為不定詞？",
+        "2. to keep 後方接原形動詞 keep，受詞 liquid water on its surface 保持完整？",
+        "3. 句首 The surface of Mars 主詞與單數 be 動詞 is 正確呼應？"
+      ],
+      "explanation": {
+        "point": "雙句合併：too + Adj + to + V 表示「太...以致於無法...」，自帶否定含義。",
+        "examPurpose": "考核學生運用高階否定句型結構濃縮與合併科學說明文因果句子的技能。",
+        "correctReason": "第一句 very cold 改為 too cold，第二句 cannot keep 改為不定詞 to keep，語意精煉。",
+        "note": "too + Adj + to + V (太...而不能...)。",
+        "trap": "合併後千萬不要在 to 後方保留 not 或 cannot，這會造成雙重否定語病。",
+        "commonTraps": [
+          "學生常把原句的否定詞 cannot 誤留下來寫成 too cold to cannot keep，造成語法嚴重矛盾。",
+          "部分學生將不定詞 to 誤接動名詞 keeping，牢記 too... to... 後方必須接原形動詞。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "so cold that it cannot maintain",
+          "too freezing to support"
+        ],
+        "grammarCompare": "too + Adj + to + V = so + Adj + that + cannot + V (兩大因果否定經典句型互換)。",
+        "examVariations": "段考句型改寫：Venus is so hot that it cannot have liquid oceans. -> Venus is too hot to have liquid oceans."
+      }
+    },
+    {
+      "id": "q_w12_space_ch06_23",
+      "book_id": "rd6",
+      "unit_id": "rd6_6",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "choice",
+      "category_tag": "grammar",
+      "difficulty": "★★★☆☆",
+      "question": "Planetary scientists think that there _______ oceans of liquid water hidden beneath the frozen shell of Europa.",
+      "options": [
+        "could be",
+        "could being",
+        "could to be",
+        "could been"
+      ],
+      "answer": "could be",
+      "explanation": {
+        "point": "情態助動詞 could 後方必須嚴格接原形動詞 be，表達科學假設推論。",
+        "examPurpose": "評量學生掌握情態助動詞 could 接原形動詞的基本語法規則與推測語態。",
+        "correctReason": "there could be 為 there is/are 加入情態助動詞後的標準推論形式，could 後接原形 be。",
+        "note": "could + Base Verb (可能...)。",
+        "trap": "切勿在 could 後方多加 to 或誤填現在分詞 being / 過去分詞 been。",
+        "distractorAnalysis": {
+          "could being": "情態助動詞 could 後方必須嚴格接原形動詞 be，絕不能接現在分詞 being！",
+          "could to be": "could 本身即為情態助動詞，後方直接接原形動詞，切勿多加不定詞符號 to！",
+          "could been": "could been 缺少助動詞 have，在語法上完全不合規範，不能單獨作謂語！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "might exist",
+          "may possibly be"
+        ],
+        "grammarCompare": "there is (客觀確定事實) vs there could/might be (基於數據的科學推測)。",
+        "examVariations": "時態選擇題：Astronomers think that there (could be) life in subterranean oceans."
+      }
+    },
+    {
+      "id": "q_w12_space_ch06_24",
+      "book_id": "rd6",
+      "unit_id": "rd6_6",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "choice",
+      "category_tag": "grammar",
+      "difficulty": "★★★☆☆",
+      "question": "The surface of the red planet is far too cold _______ liquid water, so all water on the surface freezes into ice.",
+      "options": [
+        "to maintain",
+        "maintaining",
+        "maintained",
+        "to maintained"
+      ],
+      "answer": "to maintain",
+      "explanation": {
+        "point": "too + Adj + to + Base Verb 句型表示「太...以至於無法保持」。",
+        "examPurpose": "考核學生對 too... to... 結構中不定詞 to 接原形動詞文法規則的掌握。",
+        "correctReason": "too cold 後方必須接不定詞 to maintain，表示火星地表溫度過低無法維持液態水。",
+        "note": "too + cold + to maintain (太寒冷而無法維持)。",
+        "trap": "注意不定詞符號 to 後方必須接原形動詞 maintain，不可接 -ing 或 -ed。",
+        "distractorAnalysis": {
+          "maintaining": "too... to... 句型中的 to 為不定詞，後方必須接原形動詞，不能接動名詞 maintaining！",
+          "maintained": "maintained 為過去式或過去分詞，不能置於 too cold 之後表達結果或目的！",
+          "to maintained": "不定詞符號 to 後方必須搭配原形動詞 maintain，絕不可接過去式 maintained！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "to keep",
+          "to support"
+        ],
+        "grammarCompare": "too cold to maintain = so cold that it cannot maintain (否定因果轉換)。",
+        "examVariations": "非選擇改寫：The lake was too frozen to sail. = The lake was so frozen that boats could not sail."
+      }
+    },
+    {
+      "id": "q_w12_space_ch06_25",
+      "book_id": "rd6",
+      "unit_id": "rd6_6",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "choice",
+      "category_tag": "grammar",
+      "difficulty": "★★★★☆",
+      "question": "A hundred years ago, optical telescopes were _______ small that early astronomers could not see Mars clearly.",
+      "options": [
+        "so",
+        "very",
+        "too",
+        "such"
+      ],
+      "answer": "so",
+      "explanation": {
+        "point": "so + 形容詞 + that + 結果子句表示「如此...以至於...」。",
+        "examPurpose": "測驗學生在有 that 結果子句情境下精準選用程度副詞 so 的能力。",
+        "correctReason": "後方有 that early astronomers could not see... 引導結果子句，前面形容詞 small 只能搭配 so。",
+        "note": "so + Adj + that + S + V (如此...以至於...)。",
+        "trap": "易受日常口語 very 干擾，但 very 不能與 that 引導的結果從屬子句連用。",
+        "distractorAnalysis": {
+          "very": "very 只能作程度副詞修飾形容詞，不能與後方結果子句 that... 構成因果連詞結構！",
+          "too": "too 習慣與不定詞 to 搭配 (too... to...)，不能與 that 引導的結果子句連用！",
+          "such": "such 用於修飾名詞片語 (such + a/an + Adj + N)，此處 small 為單純形容詞，應選 so！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "so tiny that",
+          "so limited that"
+        ],
+        "grammarCompare": "so + Adj + that... 對比 such + a/an + Adj + N + that... 的名詞搭配差異。",
+        "examVariations": "克漏字填空：The planet was (so) faint that ordinary equipment could not detect it."
+      }
+    },
+    {
+      "id": "q_w12_space_ch06_26",
+      "book_id": "rd6",
+      "unit_id": "rd6_6",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "choice",
+      "category_tag": "grammar",
+      "difficulty": "★★★★☆",
+      "question": "Europa is one of Jupiter's giant moons, and its entire planetary surface is completely covered _______ thick ice.",
+      "options": [
+        "in",
+        "at",
+        "into",
+        "from"
+      ],
+      "answer": "in",
+      "explanation": {
+        "point": "自然界大面積被冰雪深陷覆蓋，教材標準慣用介系詞搭配為 be covered in ice。",
+        "examPurpose": "考查小六學生掌握科普被動描繪中固定介系詞搭配的精準度。",
+        "correctReason": "課本原文直述 it's covered in ice，英文中描述星球地表全面包覆冰層固定用 in。",
+        "note": "be covered in ice / snow (被冰雪所覆蓋)。",
+        "trap": "受中文直譯「在...上面覆蓋」影響，學生容易誤選 at 或 from。",
+        "distractorAnalysis": {
+          "at": "at 通常表示點狀的時間或空間位置，不能與 covered 連用表達全面包覆狀態！",
+          "into": "into 表示由外向內的動態穿透動作，與描述表面靜態冰層覆蓋之語境不符！",
+          "from": "from 表示來源、起點或出處，covered from 在英文地質描寫中屬於嚴重搭配錯誤！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "blanketed in",
+          "encased in"
+        ],
+        "grammarCompare": "be covered in ice (強調厚重包覆沉浸) vs be covered with dust (表面沾染)。",
+        "examVariations": "介系詞克漏字：The northern polar cap of Mars is covered (in) frozen carbon dioxide."
+      }
+    },
+    {
+      "id": "q_w12_space_ch06_27",
+      "book_id": "rd6",
+      "unit_id": "rd6_6",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "choice",
+      "category_tag": "grammar",
+      "difficulty": "★★★★★",
+      "question": "On Saturn's moon Titan, rain and rivers are filled with organic chemical liquids _______ hydrocarbons.",
+      "options": [
+        "called",
+        "calling",
+        "were called",
+        "to call"
+      ],
+      "answer": "called",
+      "explanation": {
+        "point": "過去分詞片語 called hydrocarbons 作後置修飾，省略了 which are。",
+        "examPurpose": "考核學生關係代名詞簡化為分詞後置修飾語的高階文法結構辨析力。",
+        "correctReason": "化學液體是被稱作碳氫化合物，被動關係保留過去分詞 called，簡潔修飾前面的 liquids。",
+        "note": "名詞 + called + 專有名稱 (被稱為...的某事物)。",
+        "trap": "切勿選 were called，這會造成句子出現兩個謂語動詞 (are filled 與 were called) 的重大語法錯誤。",
+        "distractorAnalysis": {
+          "calling": "calling 是現在分詞表主動呼叫，化學物質是被人類稱為碳氫化合物，應使用被動分詞！",
+          "were called": "were called 為完整謂語動詞，填入後會與前方的 are filled 造成雙動詞結構錯誤！",
+          "to call": "to call 是不定詞表目的或未來，無法作為靜態名詞的同位分詞後置修飾語！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "known as",
+          "termed"
+        ],
+        "grammarCompare": "chemicals that are called hydrocarbons 簡化為 chemicals called hydrocarbons。",
+        "examVariations": "句子改寫：Astronomers observed mysterious flying objects (called) UFOs in the sky."
+      }
+    },
+    {
+      "id": "q_w12_space_ch06_28",
+      "book_id": "rd6",
+      "unit_id": "rd6_6",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "choice",
+      "category_tag": "reading",
+      "difficulty": "★★★☆☆",
+      "question": "Saturn's largest moon, Titan, is biologically and astronomically unique because it is the only moon in our solar system with _______ .",
+      "options": [
+        "an atmosphere",
+        "rings of ice",
+        "active volcanoes",
+        "artificial canals"
+      ],
+      "answer": "an atmosphere",
+      "explanation": {
+        "point": "土衛六 Titan 是太陽系中「唯一擁有大氣層的衛星」。",
+        "examPurpose": "考核學生對太陽系各大衛星特殊天文物理事實的記憶與細節理解力。",
+        "correctReason": "課文原文記載 Titan, is the only moon in the solar system with atmosphere，這是其最核心的科學標誌。",
+        "note": "the only moon ... with atmosphere (唯一有大氣層的衛星)。",
+        "trap": "切勿選 rings of ice，光環是行星土星的特徵，土衛六是一顆衛星。",
+        "distractorAnalysis": {
+          "rings of ice": "光環 (rings) 是土星等巨行星的天體特徵，土衛六泰坦是衛星，本身並未擁有冰環！",
+          "active volcanoes": "活火山並非土衛六在太陽系眾多衛星中最獨特的科學標籤，其最大特徵是大氣層！",
+          "artificial canals": "人工運河是百年前對火星的誤解傳說，土衛六地表只有天然的碳氫化合物河流！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "dense gaseous layer",
+          "nitrogen atmosphere"
+        ],
+        "grammarCompare": "with atmosphere 作介系詞片語修飾 moon，表「附帶有、具備某特徵」。",
+        "examVariations": "閱讀是非題：Titan is unique because it is the only moon in the solar system with atmosphere. (True)"
+      }
+    },
+    {
+      "id": "q_w12_space_ch06_29",
+      "book_id": "rd6",
+      "unit_id": "rd6_6",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "choice",
+      "category_tag": "reading",
+      "difficulty": "★★★★☆",
+      "question": "According to astrobiological science, what three fundamental elements are required for life on Earth to survive?",
+      "options": [
+        "liquid water, carbon, and gases like oxygen and nitrogen",
+        "frozen ice, pure gold, and helium gas",
+        "methane gas, volcanic lava, and heavy metals",
+        "dry soil, acid rain, and hydrogen clouds"
+      ],
+      "answer": "liquid water, carbon, and gases like oxygen and nitrogen",
+      "explanation": {
+        "point": "地球生命三大基本要素：液態水 (liquid water)、碳 (carbon) 以及氧氣與氮氣。",
+        "examPurpose": "評量學生對天體生物學界定生命生存三大必備物質條件的精準掌握。",
+        "correctReason": "課文第 25 節開宗明義列舉 Life on Earth needs liquid water, carbon, and gases like oxygen and nitrogen。",
+        "note": "liquid water, carbon, oxygen, nitrogen (生命基本元素)。",
+        "trap": "干擾項常混入固態冰 (frozen ice) 或重金屬，需牢記只有液態水才能充當生命代謝溶劑。",
+        "distractorAnalysis": {
+          "frozen ice, pure gold, and helium gas": "固態冰無法自由流動代謝，黃金與氦氣亦非構成碳基生命細胞所必需的基礎物質！",
+          "methane gas, volcanic lava, and heavy metals": "高溫火山熔岩與重金屬會破壞細胞有機分子，並非地球生物生存的核心三要素！",
+          "dry soil, acid rain, and hydrogen clouds": "乾燥土壤缺乏液態水溶劑，酸雨更具腐蝕殺傷力，無法支持基礎生命繁衍！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "building blocks of life",
+          "vital conditions for life"
+        ],
+        "grammarCompare": "needs + N1, N2, and N3 (名詞對稱並列結構，最後一項前加 and)。",
+        "examVariations": "多選配合題：Which of the following is NOT an essential requirement for Earth life? -> Gold."
+      }
+    },
+    {
+      "id": "q_w12_space_ch06_30",
+      "book_id": "rd6",
+      "unit_id": "rd6_6",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "choice",
+      "category_tag": "reading",
+      "difficulty": "★★★★★",
+      "question": "Why did astronomers a hundred years ago mistakenly imagine that aliens were building canals on the red planet Mars?",
+      "options": [
+        "Telescopes were small and lines on Mars reminded people of great canals on Earth",
+        "Martian spacecraft sent radio signals with detailed maps to Earth",
+        "Early cameras captured photographs of large alien cities on Mars",
+        "Astronauts landed on Mars and observed water flowing in canals"
+      ],
+      "answer": "Telescopes were small and lines on Mars reminded people of great canals on Earth",
+      "explanation": {
+        "point": "火星運河迷思源於早期望遠鏡口徑小看成線條，加上地球正修建巴拿馬運河引發聯想。",
+        "examPurpose": "考核學生對火星歷史天文觀測誤區與時代背景相互關聯的深度閱讀理解力。",
+        "correctReason": "課本指出 telescopes were smaller... thought they saw lines... at the time, people were building great canals on Earth。",
+        "note": "historical misconceptions of astronomy (歷史天文迷思)。",
+        "trap": "不要被科幻飛船 (spacecraft) 或太空人登陸等虛假情節干擾，百年前人類尚未具備太空飛行技術。",
+        "distractorAnalysis": {
+          "Martian spacecraft sent radio signals with detailed maps to Earth": "火星上根本沒有火星人或外星飛船發射訊號，這純屬二十世紀初科幻小說的情節！",
+          "Early cameras captured photographs of large alien cities on Mars": "早期望遠鏡口徑小且解析度低，完全不可能拍攝到任何所謂的火星外星城市！",
+          "Astronauts landed on Mars and observed water flowing in canals": "人類宇航員至今尚未親自登陸火星，百年前更是完全缺乏載人航天火箭技術！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "optical illusions",
+          "planetary misinterpretations"
+        ],
+        "grammarCompare": "imagine + O + V-ing：astronomers imagined aliens building canals。",
+        "examVariations": "閱讀問答：What famous Earth canal inspired the idea of Martian waterways? -> The Panama Canal."
+      }
+    },
+    {
+      "id": "q_w12_space_ch06_31",
+      "book_id": "rd6",
+      "unit_id": "rd6_6",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "choice",
+      "category_tag": "reading",
+      "difficulty": "★★★★★",
+      "question": "Why do planetary scientists consider Jupiter's moon Europa to be one of the most promising places to look for living bacteria?",
+      "options": [
+        "Its internal warmth may create vast liquid oceans under its thick ice shell",
+        "Europa has a warm tropical surface with green vegetation",
+        "Europa is closer to the Sun than Earth and receives abundant solar heat",
+        "Robots have already discovered alien fossils in Europa's craters"
+      ],
+      "answer": "Its internal warmth may create vast liquid oceans under its thick ice shell",
+      "explanation": {
+        "point": "木衛二科學假說：內部比表面更溫暖，厚重冰層底下極可能存在著液態大洋與細菌。",
+        "examPurpose": "評量學生對木衛二冰下海洋假說及其支持微生物生存潛力的天體物理理解。",
+        "correctReason": "課文原文敘述 The surface is very cold, but scientists think it's warmer inside. Maybe there are oceans under the ice。",
+        "note": "subsurface oceans on Europa (木衛二冰下海洋)。",
+        "trap": "切勿誤選熱帶表面或已發現化石，木衛二表面完全封凍且人類探測器尚未採集到化石樣本。",
+        "distractorAnalysis": {
+          "Europa has a warm tropical surface with green vegetation": "木衛二表面溫度極低且完全被冰層覆蓋，絕非溫暖的熱帶雨林地貌！",
+          "Europa is closer to the Sun than Earth and receives abundant solar heat": "木衛二是木星的衛星，距離太陽比地球遠得多，表面接收到的太陽輻射微乎其微！",
+          "Robots have already discovered alien fossils in Europa's craters": "人類目前尚未派遣登陸探測車採集木衛二化石，科學家目前正籌劃未來的探測計畫！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "sub-ice oceans",
+          "extraterrestrial marine habitats"
+        ],
+        "grammarCompare": "warmer inside 表示內部溫度比較級；under the ice 表示冰層下方的垂直空間關係。",
+        "examVariations": "推理選擇題：What makes Europa attractive to astrobiologists? -> The presence of subsurface liquid water."
+      }
+    },
+    {
+      "id": "q_w12_space_ch06_32",
+      "book_id": "rd6",
+      "unit_id": "rd6_6",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "choice",
+      "category_tag": "reading",
+      "difficulty": "★★★★★",
+      "question": "What do scientists and astronomers conclude about unusual flying objects in the sky that are commonly called UFOs?",
+      "options": [
+        "They are usually ordinary objects such as weather balloons, aircraft, or comets",
+        "They have been confirmed by global observatories as alien spaceships",
+        "They are proven to be ancient robotic rovers returning from Mars",
+        "They are military time machines traveling from distant future galaxies"
+      ],
+      "answer": "They are usually ordinary objects such as weather balloons, aircraft, or comets",
+      "explanation": {
+        "point": "科學批判思維：天空中被稱為 UFO 的不明飛行物，絕大多數只是氣球或彗星等普通自然/人造物。",
+        "examPurpose": "考核學生辨別科幻狂想與客觀科學事實的能力，培養基於證據的理性思維。",
+        "correctReason": "課本 Discover 專欄明載 they are usually things like balloons or comets，並非證實的外星飛船。",
+        "note": "scientific skepticism toward UFOs (對幽浮的科學理性審查)。",
+        "trap": "不要受電影科幻娛樂影響而誤選「已證實為外星太空船」，科學需要嚴謹的客觀實證。",
+        "distractorAnalysis": {
+          "They have been confirmed by global observatories as alien spaceships": "科學界與各大天文台從未證實任何幽浮為外星智慧生命發射的太空探測飛船！",
+          "They are proven to be ancient robotic rovers returning from Mars": "火星探測車是由地球發射並留在火星表面執行任務，並不會自行飛回地球！",
+          "They are military time machines traveling from distant future galaxies": "時光機與未來星系穿越純屬科幻幻想，毫無客觀實驗與天文物理觀測依據！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "unidentified aerial phenomena",
+          "weather balloons and astronomical events"
+        ],
+        "grammarCompare": "things like + N1 or N2 (介系詞 like 表舉例說明，後接名詞對稱)。",
+        "examVariations": "閱讀是非題：Most reported UFOs are confirmed to be alien spacecraft. -> False (usually balloons or comets)."
+      }
+    },
+    {
+      "id": "q_w12_wr3_u06_01",
+      "book_id": "wr3",
+      "unit_id": "wr3_6",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★☆☆☆☆",
+      "question": "Listen to the pronunciation and sentence: \"Thomas Edison was a world-famous American creator who made over one thousand new machines, including the phonograph and the light bulb.\" Spell the target word for \"發明家\".",
+      "options": [],
+      "answer": "inventor",
+      "vocab_card": {
+        "word": "inventor",
+        "ipa": "/ɪnˈventər/",
+        "phonetic": "/ɪnˈventər/",
+        "syllables": "in·ven·tor",
+        "pos": "名詞 (Noun)",
+        "chi": "發明家",
+        "meaning": "設計或製造新事物、新設備的人",
+        "breakdown": "in-(進入/朝向) + vent(來) + -or(人) -> 讓新事物到來的人",
+        "trick": "諧音「因問他」-> 發明家總是好奇「因為問他」才有了新點子！",
+        "scene": "Thomas Edison 在實驗室研發耐用白熾電燈泡的專注場景。",
+        "collocation": "an inventor from..., famous inventor, great inventor",
+        "img": "💡",
+        "context_eng": "Thomas Edison was an inventor from the United States.",
+        "example": "Thomas Edison was an inventor from the United States.",
+        "context_chi": "湯瑪斯·愛迪生是一位來自美國的發明家。",
+        "chant": "Inventor, inventor, make new things! Light the dark and joy it brings!",
+        "compare": "inventor (發明家 - 創造新事物) vs discoverer (發現者 - 找出本已存在的事物)",
+        "note": "inventor 開頭為母音音素 /ɪ/，前面不定冠詞必須用 an (an inventor)。"
+      },
+      "explanation": {
+        "point": "inventor 為名詞「發明家」，由動詞 invent (發明) 加上表人的字尾 -or 構成。",
+        "examPurpose": "評量學生依據語音特徵與語境線索精確拼寫職業核心單字 inventor 的能力。",
+        "correctReason": "在歷史傳記中研製新機器與設備的創作者稱為 inventor，注意字首為母音音素，字尾為 -or。",
+        "note": "inventor [n.] 發明家；字尾為 -or。",
+        "trap": "最常將字尾 -or 誤拼成 -er (inventer)，或漏掉字母 n 寫成 iventor。",
+        "commonTraps": [
+          "將字尾名詞後綴 -or 誤寫成 -er，錯誤拼寫成 inventer。",
+          "受到母音音素影響，容易漏掉鼻音字母 n 而誤拼為 iventor。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "creator",
+          "innovator"
+        ],
+        "grammarCompare": "inventor 是母音音素 /ɪ/ 開頭，前面不定冠詞必須用 an inventor；動詞為 invent。",
+        "examVariations": "字彙定義題：A person who designs and creates new machines is an inventor."
+      },
+      "target_chi": "發明家",
+      "target_pos": "名詞 (Noun)",
+      "masked_example": "Thomas Edison was an ________ from the United States.",
+      "masked_example_chi": "湯瑪斯·愛迪生是一位來自美國的發明家。"
+    },
+    {
+      "id": "q_w12_wr3_u06_02",
+      "book_id": "wr3",
+      "unit_id": "wr3_6",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★☆☆☆☆",
+      "question": "Listen to the pronunciation and sentence: \"Wolfgang Amadeus Mozart was an Austrian musical genius who wrote over six hundred symphonies and operas.\" Spell the target word for \"作曲家\".",
+      "options": [],
+      "answer": "composer",
+      "vocab_card": {
+        "word": "composer",
+        "ipa": "/kəmˈpoʊzər/",
+        "phonetic": "/kəmˈpoʊzər/",
+        "syllables": "com·pos·er",
+        "pos": "名詞 (Noun)",
+        "chi": "作曲家",
+        "meaning": "創作音樂作品（特別是古典樂曲或歌劇）的人",
+        "breakdown": "com-(共同) + pos(放置) + -er(人) -> 將各種音符組合在一起的人",
+        "trick": "諧音「看譜者」-> 作曲家看著樂譜譜寫宏偉樂章！",
+        "scene": "Mozart 在鋼琴前彈奏並振筆譜寫歌劇與交響樂。",
+        "collocation": "famous composer, classical composer, compose music",
+        "img": "🎼",
+        "context_eng": "Wolfgang Amadeus Mozart was a composer from Austria.",
+        "example": "Wolfgang Amadeus Mozart was a composer from Austria.",
+        "context_chi": "沃夫岡·阿瑪迪斯·莫札特是一位來自奧地利的作曲家。",
+        "chant": "Composer, composer, notes in a row, making beautiful music flow!",
+        "compare": "composer (作曲家 - 創作音符) vs conductor (指揮家 - 指揮樂團演出)",
+        "note": "動詞為 compose (創作樂曲)，名詞為 composition (作品)。"
+      },
+      "explanation": {
+        "point": "composer 為名詞「作曲家」，由動詞 compose (創作樂曲) 去 e 加 -er 構成。",
+        "examPurpose": "測驗學生聽辨古典音樂藝術家身分並精確拼寫職業單字 composer 的能力。",
+        "correctReason": "譜寫交響曲、協奏曲與歌劇的音樂創作者稱為 composer，字尾後綴為 -er。",
+        "note": "composer [n.] 作曲家；動詞為 compose。",
+        "trap": "拼寫時容易混淆字中母音 o 與 a，或將動詞 compose 誤拼成 compozer。",
+        "commonTraps": [
+          "將單字中間的字母 s 誤拼成發音相近的字母 z (compozer)。",
+          "受到指揮家 conductor 混淆，將名詞結尾 -er 誤寫為 -or (composor)。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "musician",
+          "songwriter"
+        ],
+        "grammarCompare": "composer 指譜寫音符樂章的作曲家；conductor 則是指揮樂團演奏的指揮家。",
+        "examVariations": "職責搭配題：A composer writes great symphonies, while an artist paints pictures."
+      },
+      "target_chi": "作曲家",
+      "target_pos": "名詞 (Noun)",
+      "masked_example": "Wolfgang Amadeus Mozart was a ________ from Austria.",
+      "masked_example_chi": "沃夫岡·阿瑪迪斯·莫札特是一位來自奧地利的作曲家。"
+    },
+    {
+      "id": "q_w12_wr3_u06_03",
+      "book_id": "wr3",
+      "unit_id": "wr3_6",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★☆☆☆☆",
+      "question": "Listen to the pronunciation and sentence: \"Sir Isaac Newton was an English scholar who investigated nature and formulated the universal laws of motion.\" Spell the target word for \"科學家\".",
+      "options": [],
+      "answer": "scientist",
+      "vocab_card": {
+        "word": "scientist",
+        "ipa": "/ˈsaɪəntɪst/",
+        "phonetic": "/ˈsaɪəntɪst/",
+        "syllables": "sci·en·tist",
+        "pos": "名詞 (Noun)",
+        "chi": "科學家",
+        "meaning": "從事科學研究、探求自然法則與真理的專家",
+        "breakdown": "sci-(知道) + -ent(名詞後綴) + -ist(專家) -> 追求知識與真理的學者",
+        "trick": "諧音「賽恩提斯」-> 像奧特曼一樣探索科學奧秘！",
+        "scene": "Isaac Newton 在蘋果樹下思索萬有引力定律。",
+        "collocation": "make scientific discoveries, a scientist from..., brilliant scientist",
+        "img": "🔬",
+        "context_eng": "Isaac Newton was a scientist from England.",
+        "example": "Isaac Newton was a scientist from England.",
+        "context_chi": "艾薩克·牛頓是一位來自英國的科學家。",
+        "chant": "Scientist, scientist, searching high and low, finding facts we want to know!",
+        "compare": "scientist (科學家 - 研究理論規律) vs engineer (工程師 - 應用技術建造)",
+        "note": "形容詞為 scientific，常用搭配為 make scientific discoveries。"
+      },
+      "explanation": {
+        "point": "scientist 為名詞「科學家」，源自 science (科學) 加上專家字尾 -ist。",
+        "examPurpose": "檢驗小六學生掌握基礎學術專業職業詞彙 scientist 的拼寫與發音規則。",
+        "correctReason": "從事科學研究並提出萬有引力與力學定律的專家稱為 scientist，注意開頭拼寫為 sci-。",
+        "note": "scientist [n.] 科學家；形容詞為 scientific。",
+        "trap": "學生最容易漏掉開頭字母 c 誤拼成 sientist，或在字尾漏寫 t 寫成 scientis。",
+        "commonTraps": [
+          "漏掉開頭的不發音字母 c，錯誤拼寫成 sientist。",
+          "受發音 /st/ 混淆，將結尾 -ist 誤寫成 -est 或 -ast。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "researcher",
+          "scholar"
+        ],
+        "grammarCompare": "scientist 為名詞人；形容詞為 scientific (scientific discoveries)；學科名詞為 science。",
+        "examVariations": "片語填空：Isaac Newton made many important _______ discoveries. (正解：scientific)"
+      },
+      "target_chi": "科學家",
+      "target_pos": "名詞 (Noun)",
+      "masked_example": "Isaac Newton was a ________ from England.",
+      "masked_example_chi": "艾薩克·牛頓是一位來自英國的科學家。"
+    },
+    {
+      "id": "q_w12_wr3_u06_04",
+      "book_id": "wr3",
+      "unit_id": "wr3_6",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★★☆☆☆",
+      "question": "Listen to the pronunciation and sentence: \"Mohandas Gandhi was a dedicated statesman from India who guided his people toward freedom through peaceful civil resistance.\" Spell the target phrase for \"政治領袖\".",
+      "options": [],
+      "answer": "political leader",
+      "vocab_card": {
+        "word": "political leader",
+        "ipa": "/pəˈlɪtɪkəl ˈliːdər/",
+        "phonetic": "/pəˈlɪtɪkəl ˈliːdər/",
+        "syllables": "po·lit·i·cal lead·er",
+        "pos": "名詞片語 (Noun Phrase)",
+        "chi": "政治領袖",
+        "meaning": "在國家或社會運動中發揮領導與決策作用的人物",
+        "breakdown": "political (國家的/政治的) + leader (帶領者/領袖)",
+        "trick": "聯想「帶領 (lead) 人民走出困境的領袖 (leader)」",
+        "scene": "Gandhi 帶領印度人民以和平非暴力方式爭取國家獨立。",
+        "collocation": "lead the nation, work for independence, great political leader",
+        "img": "🏛️",
+        "context_eng": "Mohandas Gandhi was a political leader from India.",
+        "example": "Mohandas Gandhi was a political leader from India.",
+        "context_chi": "莫罕達斯·甘地是一位來自印度的政治領袖。",
+        "chant": "Political leader, standing tall and strong, helping the nation all along!",
+        "compare": "political leader (政治領袖 - 治國領導) vs president (總統 - 國家元首具體職稱)",
+        "note": "動詞搭配為 lead the nation (領導國家)。"
+      },
+      "explanation": {
+        "point": "political leader 為複合名詞片語「政治領袖」，由形容詞 political 修飾名詞 leader。",
+        "examPurpose": "考查學生拼寫雙字複合名詞片語 political leader 的精準度與單字間空格。",
+        "correctReason": "領導國家追求獨立與和平改革的重要人物稱為 political leader，兩字之間需有空格。",
+        "note": "political leader [n. phr.] 政治領袖；動詞片語為 lead the nation。",
+        "trap": "容易將 political 的字尾 -cal 誤寫成 -cle，或將兩字黏在一起漏寫空格。",
+        "commonTraps": [
+          "將形容詞 political 結尾 -cal 誤拼為 -cle 或 -col (politicle)。",
+          "忘記兩個單字之間應留有一個空格，直接黏寫成 politicalleader。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "statesman",
+          "national leader"
+        ],
+        "grammarCompare": "political 為形容詞修飾 leader；名詞形式為 politics (政治) 或 politician (政客)。",
+        "examVariations": "動詞搭配：A great political leader works hard to lead the nation to peace."
+      },
+      "target_chi": "政治領袖",
+      "target_pos": "名詞片語 (Noun Phrase)",
+      "masked_example": "Mohandas Gandhi was a ________ from India.",
+      "masked_example_chi": "莫罕達斯·甘地是一位來自印度的政治領袖。"
+    },
+    {
+      "id": "q_w12_wr3_u06_05",
+      "book_id": "wr3",
+      "unit_id": "wr3_6",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★★☆☆☆",
+      "question": "Listen to the pronunciation and sentence: \"Socrates was an ancient Greek thinker who taught the deep meaning of life, truth, and moral wisdom.\" Spell the target word for \"哲學家\".",
+      "options": [],
+      "answer": "philosopher",
+      "vocab_card": {
+        "word": "philosopher",
+        "ipa": "/fɪˈlɑːsəfər/",
+        "phonetic": "/fɪˈlɑːsəfər/",
+        "syllables": "phi·los·o·pher",
+        "pos": "名詞 (Noun)",
+        "chi": "哲學家",
+        "meaning": "探求思想、智慧、倫理與人生深層意義的學者",
+        "breakdown": "philo-(喜愛) + soph-(智慧) + -er(人) -> 喜愛智慧與追求真理的人",
+        "trick": "字根 philo (愛) + soph (智慧) -> 喜愛智慧之人就是哲學家！",
+        "scene": "古代希臘哲學家在廣場與學子探討生命的意義與真理。",
+        "collocation": "teach the meaning of life, ancient philosopher, great philosopher",
+        "img": "🤔",
+        "context_eng": "A philosopher is someone who teaches the meaning of life.",
+        "example": "A philosopher is someone who teaches the meaning of life.",
+        "context_chi": "哲學家是教導人們生命意義的人。",
+        "chant": "Philosopher, philosopher, thinking deep and bright, searching for the truth and light!",
+        "compare": "philosopher (哲學家 - 思索本質與智慧) vs psychologist (心理學家 - 研究行為與心智)",
+        "note": "名詞為 philosophy (哲學)，動詞搭配為 teach the meaning of life。"
+      },
+      "explanation": {
+        "point": "philosopher 為名詞「哲學家」，由字根 philo- (喜愛) 與 soph- (智慧) 加上 -er 構成。",
+        "examPurpose": "評量學生辨析哲學思想職業詞彙 philosopher 的拼讀對應與正確字形。",
+        "correctReason": "探討生命的本質、道德智慧與真理的學者稱為 philosopher，開頭與中間皆有字母 ph。",
+        "note": "philosopher [n.] 哲學家；名詞為 philosophy (哲學)。",
+        "trap": "發音 /f/ 容易受直覺誤拼為 f (filosofer)，務必牢記兩處皆為 ph。",
+        "commonTraps": [
+          "將 /f/ 的發音用字母 f 代替，錯誤拼寫為 filosofer 或 philosofer。",
+          "中間母音字母 o 與 a 混淆，誤拼為 philosipher 或 philasopher。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "thinker",
+          "sage"
+        ],
+        "grammarCompare": "philosopher (哲學家) 代表追求智慧之人；psychologist 則是研究心理與行為的心理學家。",
+        "examVariations": "句子釋義：A philosopher is someone who spends time thinking and teaching the meaning of life."
+      },
+      "target_chi": "哲學家",
+      "target_pos": "名詞 (Noun)",
+      "masked_example": "A ________ is someone who teaches the meaning of life.",
+      "masked_example_chi": "哲學家是教導人們生命意義的人。"
+    },
+    {
+      "id": "q_w12_wr3_u06_06",
+      "book_id": "wr3",
+      "unit_id": "wr3_6",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★☆☆☆☆",
+      "question": "Listen to the pronunciation and sentence: \"The historical figure I look up to and respect the most in my life is Thomas Edison.\" Spell the target word for \"欽佩；欣賞\".",
+      "options": [],
+      "answer": "admire",
+      "vocab_card": {
+        "word": "admire",
+        "ipa": "/ədˈmaɪər/",
+        "phonetic": "/ədˈmaɪər/",
+        "syllables": "ad·mire",
+        "pos": "動詞 (Verb)",
+        "chi": "欽佩；欣賞",
+        "meaning": "對某人的成就、才華或高尚品格深表敬佩與讚賞",
+        "breakdown": "ad-(朝向) + mire(驚嘆/奇蹟) -> 朝著令人驚嘆的事物投以敬意",
+        "trick": "諧音「額頭買」-> 令人佩服到額頭點地致敬！",
+        "scene": "學生在演講台上滿懷敬意地介紹自己最崇拜的偉人。",
+        "collocation": "admire ... the most, admire someone most of all, admire for",
+        "img": "👏",
+        "context_eng": "The person I admire the most is Thomas Edison.",
+        "example": "The person I admire the most is Thomas Edison.",
+        "context_chi": "我最欽佩的人是湯瑪斯·愛迪生。",
+        "chant": "Admire, admire, look up with respect! Great deeds and courage we protect!",
+        "compare": "admire (欽佩 - 帶著敬意與肯定) vs respect (尊敬 - 禮貌與遵循規矩)",
+        "note": "最高級搭配常為 the person I admire the most 或 admire X most of all。"
+      },
+      "explanation": {
+        "point": "admire 為動詞「欽佩；欣賞；敬佩」，常與 the most 或 most of all 連用。",
+        "examPurpose": "測驗小六學生掌握傳記主題核心情感動詞 admire 的發音與標準拼寫。",
+        "correctReason": "表達對偉人人格特質或輝煌成就由衷敬仰時使用 admire，字尾為不發音的 e。",
+        "note": "admire [v.] 欽佩；形容詞為 admirable，名詞為 admiration。",
+        "trap": "拼寫時容易將字首 ad- 誤寫成 ed- (edmire)，或漏掉結尾不發音的 e。",
+        "commonTraps": [
+          "受母音發音影響，將字首 ad- 錯誤拼寫為 ed- (edmire)。",
+          "結尾漏掉不發音的 e，拼成 ad-mir (admir)。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "respect",
+          "look up to"
+        ],
+        "grammarCompare": "admire 表示帶著由衷讚嘆的敬佩；look up to 為同義口語動詞片語。",
+        "examVariations": "傳記主旨句：The person I admire the most is Helen Keller."
+      },
+      "target_chi": "欽佩；欣賞",
+      "target_pos": "動詞 (Verb)",
+      "masked_example": "The person I ________ the most is Thomas Edison.",
+      "masked_example_chi": "我最欽佩的人是湯瑪斯·愛迪生。"
+    },
+    {
+      "id": "q_w12_wr3_u06_07",
+      "book_id": "wr3",
+      "unit_id": "wr3_6",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★★☆☆☆",
+      "question": "Listen to the pronunciation and sentence: \"Isaac Newton made a groundbreaking finding when he realized the force pulling the apple down was gravity.\" Spell the target word for \"發現\".",
+      "options": [],
+      "answer": "discovery",
+      "vocab_card": {
+        "word": "discovery",
+        "ipa": "/dɪˈskʌvəri/",
+        "phonetic": "/dɪˈskʌvəri/",
+        "syllables": "dis·cov·er·y",
+        "pos": "名詞 (Noun)",
+        "chi": "發現",
+        "meaning": "首次找到、看見或了解未知事物或自然現象的事實",
+        "breakdown": "dis-(解開/移除) + cover(覆蓋) + -y(名詞後綴) -> 掀開遮蔽物顯露真理",
+        "trick": "拆解 dis + cover -> 把蓋子掀開 (uncover)，重大發現就出現了！",
+        "scene": "Newton 看見蘋果落地，揭示了萬有引力存在的重大發現。",
+        "collocation": "make scientific discoveries, great discovery, discovery of gravity",
+        "img": "🔍",
+        "context_eng": "Isaac Newton made many important scientific discoveries.",
+        "example": "Isaac Newton made many important scientific discoveries.",
+        "context_chi": "艾薩克·牛頓做出了許多重要的科學發現。",
+        "chant": "Discovery, discovery, hidden in the ground, open up your eyes and truth is found!",
+        "compare": "discovery (發現 - 本來存在被找到) vs invention (發明 - 本來不存在被創造)",
+        "note": "動詞為 discover，複數型態為去 y 加 ies -> discoveries。"
+      },
+      "explanation": {
+        "point": "discovery 為名詞「發現」，由動詞 discover 加上名詞字尾 -y 構成。",
+        "examPurpose": "考查學生將動詞 discover 轉化為抽象名詞 discovery 的拼寫能力與複數概念。",
+        "correctReason": "找到大自然中原本存在但未被察覺的規律稱為 discovery，複數形式為 discoveries。",
+        "note": "discovery [n.] 發現；動詞搭配為 make a discovery / make discoveries。",
+        "trap": "容易與「發明」(invention) 概念混淆，或將字尾 -y 誤拼成 -ey (discoverey)。",
+        "commonTraps": [
+          "受發音影響，將字尾名詞後綴 -y 誤寫成 -ey (discoverey)。",
+          "在複數形式中忘記去 y 加 ies，錯誤寫成 discoverys。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "finding",
+          "breakthrough"
+        ],
+        "grammarCompare": "discovery (發現已有事物) vs invention (創造前所未有的新事物)。",
+        "examVariations": "名詞動詞搭配：Scientists around the world make exciting new discoveries every day."
+      },
+      "target_chi": "發現",
+      "target_pos": "名詞 (Noun)",
+      "masked_example": "Isaac Newton made many important scientific ________.",
+      "masked_example_chi": "艾薩克·牛頓做出了許多重要的科學發現。"
+    },
+    {
+      "id": "q_w12_wr3_u06_08",
+      "book_id": "wr3",
+      "unit_id": "wr3_6",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★★☆☆☆",
+      "question": "Listen to the pronunciation and sentence: \"Ludwig van Beethoven's most celebrated orchestral musical work is his legendary Fifth Symphony.\" Spell the target word for \"音樂作品；創作\".",
+      "options": [],
+      "answer": "composition",
+      "vocab_card": {
+        "word": "composition",
+        "ipa": "/ˌkɑːmpəˈzɪʃən/",
+        "phonetic": "/ˌkɑːmpəˈzɪʃən/",
+        "syllables": "com·po·si·tion",
+        "pos": "名詞 (Noun)",
+        "chi": "音樂作品；創作",
+        "meaning": "由作曲家譜寫的樂曲或由作家創作的文章、藝術品",
+        "breakdown": "com-(共同) + posit(放置) + -ion(名詞後綴) -> 組合樂符成章",
+        "trick": "動詞 compose (創作) 加上名詞字尾 -ition -> 音樂作品！",
+        "scene": "貝多芬的《第五號交響曲》手稿上工整排列的音符。",
+        "collocation": "famous composition, musical composition, composition is...",
+        "img": "🎼",
+        "context_eng": "His most famous composition is the Fifth Symphony.",
+        "example": "His most famous composition is the Fifth Symphony.",
+        "context_chi": "他最著名的音樂作品是《第五號交響曲》。",
+        "chant": "Composition, note by note, finest melody ever wrote!",
+        "compare": "composition (樂曲/作文 - 完整作品) vs song (歌曲 - 通常含人聲歌唱)",
+        "note": "在傳記寫作中專指作曲家的代表樂曲作品。"
+      },
+      "explanation": {
+        "point": "composition 為名詞「音樂作品；樂曲」，在傳記中專指作曲家的代表傑作。",
+        "examPurpose": "評量學生對多音節名詞 composition 之音節結構與名詞後綴 -tion 的精確拼寫。",
+        "correctReason": "作曲家創作的樂章、交響曲或協奏曲稱為 composition，由動詞 compose 衍生而來。",
+        "note": "composition [n.] 音樂作品；作文；構成。",
+        "trap": "拼寫時容易將中間的 -si- 誤拼為 -ci- (compocition) 或 -zi-。",
+        "commonTraps": [
+          "將中間的字母 s 誤寫為字母 c，錯誤拼寫成 compocition。",
+          "受發音影響將 -tion 字尾誤寫為 -sion (composision)。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "musical piece",
+          "masterpiece"
+        ],
+        "grammarCompare": "composition 專指譜寫成的完整作品；song 則通常帶有人聲演唱。",
+        "examVariations": "句型代換：His most famous composition is the Fifth Symphony."
+      },
+      "target_chi": "音樂作品；創作",
+      "target_pos": "名詞 (Noun)",
+      "masked_example": "His most famous ________ is the Fifth Symphony.",
+      "masked_example_chi": "他最著名的音樂作品是《第五號交響曲》。"
+    },
+    {
+      "id": "q_w12_wr3_u06_09",
+      "book_id": "wr3",
+      "unit_id": "wr3_6",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★★☆☆☆",
+      "question": "Listen to the pronunciation and sentence: \"Helping his beloved country gain independence was Mohandas Gandhi's greatest and most enduring achievement.\" Spell the target word for \"成就；功績\".",
+      "options": [],
+      "answer": "accomplishment",
+      "vocab_card": {
+        "word": "accomplishment",
+        "ipa": "/əˈkɑːmplɪʃmənt/",
+        "phonetic": "/əˈkɑːmplɪʃmənt/",
+        "syllables": "ac·com·plish·ment",
+        "pos": "名詞 (Noun)",
+        "chi": "成就；功績",
+        "meaning": "透過努力、技能或勇氣成功達成的重大事情",
+        "breakdown": "ac-(去/朝向) + compl-(填滿/完成) + -ish(動詞) + -ment(名詞)",
+        "trick": "諧音「一顆滿滿石」-> 每一顆基石都象徵一項重大的成就！",
+        "scene": "Lincoln 簽署《解放奴隸宣言》，為自由寫下不朽的歷史成就。",
+        "collocation": "great accomplishment, most famous accomplishment, proud accomplishment",
+        "img": "🏆",
+        "context_eng": "His most famous accomplishment is helping India become free.",
+        "example": "His most famous accomplishment is helping India become free.",
+        "context_chi": "他最著名的功績是協助印度贏得自由與獨立。",
+        "chant": "Accomplishment, work done right, shining like a trophy bright!",
+        "compare": "accomplishment (成就 - 歷經艱辛達成的壯舉) vs success (成功 - 廣泛的順利成果)",
+        "note": "動詞為 accomplish (達成、完成)。"
+      },
+      "explanation": {
+        "point": "accomplishment 為名詞「成就；功績」，由動詞 accomplish 加上名詞字尾 -ment。",
+        "examPurpose": "考查小六學生拼寫四音節長單字 accomplishment 與雙子音 cc 的能力。",
+        "correctReason": "歷經多年艱苦努力完成的重大事業稱為 accomplishment，注意開頭有雙寫字母 cc。",
+        "note": "accomplishment [n.] 成就；功績；動詞為 accomplish。",
+        "trap": "最常漏掉第二個 c 誤寫為 acomplishment，或將 -ment 誤寫為 -mant。",
+        "commonTraps": [
+          "漏掉字首的雙寫字母 c，錯誤拼寫成單個 c (acomplishment)。",
+          "將名詞字尾 -ment 誤拼成 -mant 或 -mint (accomplishmant)。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "achievement",
+          "triumph"
+        ],
+        "grammarCompare": "accomplishment 強調克服困難後達成的重大壯舉；success 則指廣義的成功。",
+        "examVariations": "句型改寫：His most famous accomplishment is helping India become free."
+      },
+      "target_chi": "成就；功績",
+      "target_pos": "名詞 (Noun)",
+      "masked_example": "His most famous ________ is helping India become free.",
+      "masked_example_chi": "他最著名的功績是協助印度贏得自由與獨立。"
+    },
+    {
+      "id": "q_w12_wr3_u06_10",
+      "book_id": "wr3",
+      "unit_id": "wr3_6",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★★☆☆☆",
+      "question": "Listen to the pronunciation and sentence: \"Although Helen Keller could neither see nor hear, she never let physical impairment prevent her from learning.\" Spell the target word for \"身體障礙；殘疾\".",
+      "options": [],
+      "answer": "disability",
+      "vocab_card": {
+        "word": "disability",
+        "ipa": "/ˌdɪsəˈbɪləti/",
+        "phonetic": "/ˌdɪsəˈbɪləti/",
+        "syllables": "dis·a·bil·i·ty",
+        "pos": "名詞 (Noun)",
+        "chi": "身體障礙；殘疾",
+        "meaning": "使人在日常活動或感官上有困難的身體或心理狀況",
+        "breakdown": "dis-(否定/缺乏) + ability(能力) -> 某種身體機能的限制",
+        "trick": "拆解 dis (不) + ability (能力) -> 身體受限但心智依然堅強！",
+        "scene": "Helen Keller 克服失聰與失明的雙重障礙，激勵全球無數人。",
+        "collocation": "overcome disabilities, disabled people, live with a disability",
+        "img": "♿",
+        "context_eng": "Helen Keller overcame her disabilities and inspired the world.",
+        "example": "Helen Keller overcame her disabilities and inspired the world.",
+        "context_chi": "海倫·凱勒克服了自身的身體障礙，並激勵了全世界。",
+        "chant": "Disability cannot hold us down, courage earns the golden crown!",
+        "compare": "disability (身體機能障礙) vs illness (短期生病、疾病)",
+        "note": "複數型態去 y 加 ies -> disabilities；形容詞為 disabled (disabled people)。"
+      },
+      "explanation": {
+        "point": "disability 為名詞「身體障礙；殘疾」，由否定前綴 dis- 加上 ability 構成。",
+        "examPurpose": "檢測學生掌握否定前綴構詞法並精確拼寫感官與身體障礙名詞 disability 的能力。",
+        "correctReason": "指使人在視覺、聽覺或肢體行動上受限制的身體狀況稱為 disability，複數為 disabilities。",
+        "note": "disability [n.] 身體障礙；形容詞為 disabled (disabled people)。",
+        "trap": "拼寫時容易將中間的 i 漏掉或誤寫為 e (disabelity)。",
+        "commonTraps": [
+          "將中間的母音字母 i 誤寫為字母 e，錯誤拼成 disabelity。",
+          "受形容詞 disabled 影響，誤將名詞寫成 disabledy。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "impairment",
+          "handicap"
+        ],
+        "grammarCompare": "disability 為抽象名詞；disabled 為形容詞，常用片語為 disabled people。",
+        "examVariations": "片語填空：Thanks to Helen Keller, disabled people have more _______ today. (正解：hope)"
+      },
+      "target_chi": "身體障礙；殘疾",
+      "target_pos": "名詞 (Noun)",
+      "masked_example": "Helen Keller overcame her ________ and inspired the world.",
+      "masked_example_chi": "海倫·凱勒克服了自身的身體障礙，並激勵了全世界。"
+    },
+    {
+      "id": "q_w12_wr3_u06_11",
+      "book_id": "wr3",
+      "unit_id": "wr3_6",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★☆☆☆☆",
+      "question": "Listen to the pronunciation and sentence: \"Thanks to Sir Isaac Newton, we can clearly explain the natural force that draws physical objects toward Earth.\" Spell the target word for \"地心引力；重力\".",
+      "options": [],
+      "answer": "gravity",
+      "vocab_card": {
+        "word": "gravity",
+        "ipa": "/ˈɡrævəti/",
+        "phonetic": "/ˈɡrævəti/",
+        "syllables": "grav·i·ty",
+        "pos": "名詞 (Noun)",
+        "chi": "地心引力；重力",
+        "meaning": "將物體拉向地球或天體中心的天體物理引力",
+        "breakdown": "grav-(沉重) + -ity(狀態名詞後綴) -> 讓物體有重量的吸引力",
+        "trick": "字根 grav- 意為 heavy (沉重) -> 抓住沉重萬物的力量就是地心引力！",
+        "scene": "成熟的蘋果從枝頭垂直墜落地面，引導牛頓提出引力理論。",
+        "collocation": "theory of gravity, understand gravity, center of gravity",
+        "img": "🍎",
+        "context_eng": "Thanks to Newton, we understand gravity better.",
+        "example": "Thanks to Newton, we understand gravity better.",
+        "context_chi": "多虧了牛頓，我們才能更深入理解地心引力。",
+        "chant": "Gravity pulls, what goes up comes down, keeping our feet upon the ground!",
+        "compare": "gravity (重力/引力) vs weight (重量 - 受引力作用測量出的質量重量)",
+        "note": "the theory of gravity (萬有引力理論) 是 Newton 最著名的科學理論。"
+      },
+      "explanation": {
+        "point": "gravity 為名詞「地心引力；重力」，源自拉丁字根 grav- (沉重的)。",
+        "examPurpose": "評量學生拼寫牛頓物理學核心科學名詞 gravity 的準確性。",
+        "correctReason": "將萬物拉向地表的無形自然力量稱為 gravity，常出現在 the theory of gravity。",
+        "note": "gravity [n.] 地心引力；形容詞為 gravitational。",
+        "trap": "容易將字尾 -ity 誤拼為 -ety (gravety) 或將 a 誤拼為 e (grevity)。",
+        "commonTraps": [
+          "受發音影響，將結尾 -ity 錯誤拼寫成 -ety (gravety)。",
+          "將第一個母音字母 a 誤寫為 e，拼成 grevity。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "gravitational force",
+          "gravitation"
+        ],
+        "grammarCompare": "gravity 為不可數名詞；常用於固定片語 the theory of gravity (萬有引力理論)。",
+        "examVariations": "課文核心句：Thanks to Newton, we understand gravity better."
+      },
+      "target_chi": "地心引力；重力",
+      "target_pos": "名詞 (Noun)",
+      "masked_example": "Thanks to Newton, we understand ________ better.",
+      "masked_example_chi": "多虧了牛頓，我們才能更深入理解地心引力。"
+    },
+    {
+      "id": "q_w12_wr3_u06_12",
+      "book_id": "wr3",
+      "unit_id": "wr3_6",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★★☆☆☆",
+      "question": "Listen to the pronunciation and sentence: \"A grand, multi-movement classical masterpiece performed by a complete orchestra is known as a musical work.\" Spell the target word for \"交響樂；交響曲\".",
+      "options": [],
+      "answer": "symphony",
+      "vocab_card": {
+        "word": "symphony",
+        "ipa": "/ˈsɪmfəni/",
+        "phonetic": "/ˈsɪmfəni/",
+        "syllables": "sym·pho·ny",
+        "pos": "名詞 (Noun)",
+        "chi": "交響樂；交響曲",
+        "meaning": "由大型管弦樂團演奏的長篇多樂章古典樂曲",
+        "breakdown": "sym-(共同/和諧) + phon-(聲音) + -y(名詞後綴) -> 眾聲和鳴的和諧樂章",
+        "trick": "字根 sym (一起) + phon (聲音) -> 幾十種樂器一起發聲的和鳴！",
+        "scene": "管弦樂團全員盛裝演奏貝多芬第五號《命運》交響曲。",
+        "collocation": "compose symphonies, the Fifth Symphony, symphony orchestra",
+        "img": "🎻",
+        "context_eng": "Beethoven composed the famous Fifth Symphony.",
+        "example": "Beethoven composed the famous Fifth Symphony.",
+        "context_chi": "貝多芬創作了著名的《第五號交響曲》。",
+        "chant": "Symphony sounds, loud and clear, sweetest music you can hear!",
+        "compare": "symphony (交響曲 - 大型管弦多樂章) vs concerto (協奏曲 - 獨奏樂器與樂團對應)",
+        "note": "複數為 symphonies；大寫 Symphony 用於專有名詞標題 (the Fifth Symphony)。"
+      },
+      "explanation": {
+        "point": "symphony 為名詞「交響曲；交響樂」，由 sym- (共同) 與 phon- (聲音) 加 -y 構成。",
+        "examPurpose": "測驗小六學生聽辨管弦樂曲詞彙 symphony 之拼寫與 ph 發音 /f/ 的對應。",
+        "correctReason": "由大型管弦樂團演奏的宏偉多樂章長篇古典樂曲稱為 symphony，複數為 symphonies。",
+        "note": "symphony [n.] 交響曲；大寫 Symphony 用於專有名稱 (Fifth Symphony)。",
+        "trap": "發音 /f/ 容易誤拼成 f (symfony)，或漏掉結尾字母 y。",
+        "commonTraps": [
+          "將中間發 /f/ 音的字母組合 ph 誤寫為字母 f (symfony)。",
+          "將第二個音節的母音 o 誤寫為 a 或 e (symphany)。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "orchestral suite",
+          "concert piece"
+        ],
+        "grammarCompare": "symphony (管弦交響曲) vs concerto (協奏曲，強調個人獨奏與樂隊對話)。",
+        "examVariations": "填空題：Beethoven composed the world-famous Fifth _______ in C minor. (正解：Symphony)"
+      },
+      "target_chi": "交響樂；交響曲",
+      "target_pos": "名詞 (Noun)",
+      "masked_example": "Beethoven composed the famous Fifth ________.",
+      "masked_example_chi": "貝多芬創作了著名的《第五號交響曲》。"
+    },
+    {
+      "id": "q_w12_wr3_u06_13",
+      "book_id": "wr3",
+      "unit_id": "wr3_6",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★☆☆☆☆",
+      "question": "Listen to the pronunciation and sentence: \"Even though Thomas Edison failed countless times while making the bulb, he refused to surrender and quit on his lifelong goals.\" Spell the target phrasal verb for \"放棄\".",
+      "options": [],
+      "answer": "give up",
+      "vocab_card": {
+        "word": "give up",
+        "ipa": "/ɡɪv ʌp/",
+        "phonetic": "/ɡɪv ʌp/",
+        "syllables": "give up",
+        "pos": "動詞片語 (Phrasal Verb)",
+        "chi": "放棄",
+        "meaning": "在困難面前停止努力、認輸或丟棄目標與夢想",
+        "breakdown": "give (給予) + up (往上/徹底放棄所有權)",
+        "trick": "聯想「把雙手高舉 (hands up) 投降交出 (give up)」-> 放棄！",
+        "scene": "愛迪生經歷上千次燈絲實驗失敗，依然堅定不移絕不放棄。",
+        "collocation": "never give up on, gave up on his dreams, give up easily",
+        "img": "💪",
+        "context_eng": "He became successful because he never gave up on his dreams.",
+        "example": "He became successful because he never gave up on his dreams.",
+        "context_chi": "他之所以成功，是因為他從未放棄過自己的夢想。",
+        "chant": "Never give up, keep trying every day, brighter tomorrow is on the way!",
+        "compare": "give up on (放棄某人或夢想希望) vs give in (向強權或壓力屈服)",
+        "note": "過去式為 gave up；後接對象夢想時常用介系詞 on (gave up on his dreams)。"
+      },
+      "explanation": {
+        "point": "give up 為動詞片語「放棄」，在傳記中常用過去式 gave up on his dreams。",
+        "examPurpose": "檢驗學生拼寫高頻雙字動詞片語 give up 的精準度與單字間隔。",
+        "correctReason": "在挫折困境面前停止奮鬥或認輸稱為 give up，後接夢想時常搭配介系詞 on。",
+        "note": "give up [phr. v.] 放棄；過去式為 gave up。",
+        "trap": "拼寫時容易將兩字黏合在一起寫成 giveup，或受過去式混淆寫成 gave up。",
+        "commonTraps": [
+          "漏掉兩字之間的空格，錯誤拼寫成一個單字 giveup。",
+          "受題目語境過去時態影響，誤將原形動詞 give 拼寫成過去式 gave。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "quit",
+          "surrender"
+        ],
+        "grammarCompare": "give up on (放棄某人或夢想) vs give in (向壓力或強權屈服妥協)。",
+        "examVariations": "句型填空：He became a great inventor because he never gave _______ on his dreams. (正解：up)"
+      },
+      "target_chi": "放棄",
+      "target_pos": "動詞片語 (Phrasal Verb)",
+      "masked_example": "He became successful because he never ________ on his dreams.",
+      "masked_example_chi": "他之所以成功，是因為他從未放棄過自己的夢想。"
+    },
+    {
+      "id": "q_w12_wr3_u06_14",
+      "book_id": "wr3",
+      "unit_id": "wr3_6",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★★☆☆☆",
+      "question": "Listen to the pronunciation and sentence: \"Writers use transition words such as 'therefore' and 'as a result' to connect their ideas and demonstrate logical outcome.\" Spell the target word for \"結果；因果影響\".",
+      "options": [],
+      "answer": "consequence",
+      "vocab_card": {
+        "word": "consequence",
+        "ipa": "/ˈkɑːnsəkwens/",
+        "phonetic": "/ˈkɑːnsəkwens/",
+        "syllables": "con·se·quence",
+        "pos": "名詞 (Noun)",
+        "chi": "結果；因果影響",
+        "meaning": "由某種行動或事件所引發的必然結果或後果",
+        "breakdown": "con-(共同) + sequ-(跟隨) + -ence(名詞後綴) -> 緊緊跟隨在原因之後的事物",
+        "trick": "拆解 sequ- (跟隨 sequence) -> 一連串跟在後面產生的就是「結果」！",
+        "scene": "在文章結尾使用轉折詞因此 (therefore / as a consequence) 總結全篇。",
+        "collocation": "as a consequence, words of consequence, suffer the consequences",
+        "img": "➡️",
+        "context_eng": "Transition words show consequence and connect ideas logically.",
+        "example": "Transition words show consequence and connect ideas logically.",
+        "context_chi": "因果轉折詞能展現因果影響並將不同觀點合乎邏輯地串聯起來。",
+        "chant": "Cause and consequence, hand in hand, reason and result across the land!",
+        "compare": "consequence (因果結果/影響) vs cause (起因/理由)",
+        "note": "副詞為 consequently (結果是；因此)；片語為 as a consequence。"
+      },
+      "explanation": {
+        "point": "consequence 為名詞「結果；因果影響」，在寫作中專指因果轉折詞的邏輯功能。",
+        "examPurpose": "考查學生拼寫三音節寫作文法術語 consequence 與後綴 -ence 的能力。",
+        "correctReason": "事物發展之後所產生的必然結果或影響稱為 consequence，片語為 as a consequence。",
+        "note": "consequence [n.] 結果；因果影響；副詞為 consequently。",
+        "trap": "字尾容易受 -ance 混淆誤寫為 consequance，或將 qu 誤寫為 kw。",
+        "commonTraps": [
+          "將名詞字尾後綴 -ence 誤寫為 -ance，錯誤拼成 consequance。",
+          "受發音 /kw/ 影響，誤將字母組合 qu 拼寫成 kw (conskwence)。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "result",
+          "outcome"
+        ],
+        "grammarCompare": "consequence 表示因果推導出的必然結果；cause 則是起因、緣由。",
+        "examVariations": "寫作提示題：Transition words of consequence show the result or effect of something."
+      },
+      "target_chi": "結果；因果影響",
+      "target_pos": "名詞 (Noun)",
+      "masked_example": "Transition words show ________ and connect ideas logically.",
+      "masked_example_chi": "因果轉折詞能展現因果影響並將不同觀點合乎邏輯地串聯起來。"
+    },
+    {
+      "id": "q_w12_wr3_u06_15",
+      "book_id": "wr3",
+      "unit_id": "wr3_6",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "difficulty": "★★★☆☆",
+      "part_title": "Part II. Guided Biography Writing (歷史偉人傳記引導寫作)",
+      "part_instructions": "依據括號內的歷史資料提示，運用標準傳記句型寫出完整句子，精確搭配出生日期介系詞 on、年份介系詞 in 以及成長地點 grew up in。",
+      "sentence_form": "Subject + was born on [Date], [Year], in [State], and grew up in [Place].",
+      "question": "[Tiger 3C Handwritten Section · Biography Sentence Writing] Write a complete biography sentence based on the factual notes about Thomas Edison: \"(Thomas Edison / born on February 11, 1847 / in Ohio / grew up in Michigan)\". Ensure correct capitalization, past tense, and prepositions.",
+      "options": [],
+      "answer": "Thomas Edison was born on February 11, 1847, in Ohio, and grew up in Michigan.",
+      "self_check": [
+        "1. 是否使用正確的過去式被動形式 was born，且在具體月日前搭配介系詞 on（不可寫 in February 11）？",
+        "2. 是否在州名 Ohio 前搭配介系詞 in，並使用過去式動詞短語 grew up in Michigan（不可寫 grow up）？",
+        "3. 專有名詞（Thomas Edison, February, Ohio, Michigan）字首大寫，標點逗號與句號完整無誤？"
+      ],
+      "explanation": {
+        "point": "傳記生平句型：was born on + 月日年份，以及 grew up in + 地點。",
+        "examPurpose": "評量小六學生在手寫傳記卷中精確運用時間與地點介系詞組織偉人生平句的能力。",
+        "correctReason": "具體月日 February 11 前用 on，年份 1847 前有逗號，州名前用 in，成長童年動詞用過去式 grew up in。",
+        "note": "was born on [Date], in [Place], and grew up in [Place]。",
+        "trap": "最容易將具體日期前的 on 誤寫成 in，或將動詞 grew 誤寫為現在式 grow。",
+        "commonTraps": [
+          "時間介系詞混淆：看見有年份就直覺填 in，忽略了前面有具體日期 February 11 必須使用 on。",
+          "時態不一致錯誤：將後半句的過去式 grew up 誤寫成現在式 grow up。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "spent his childhood in",
+          "was raised in"
+        ],
+        "grammarCompare": "was born on + 具體日期 (on July 4th) vs was born in + 純年份或純月份 (in 1847, in February)。",
+        "examVariations": "仿寫練習：Isaac Newton was born on January 4, 1643, in Woolsthorpe, England."
+      }
+    },
+    {
+      "id": "q_w12_wr3_u06_16",
+      "book_id": "wr3",
+      "unit_id": "wr3_6",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "difficulty": "★★★☆☆",
+      "part_title": "Part II. Guided Biography Writing (歷史偉人傳記引導寫作)",
+      "part_instructions": "運用「be famous for + 動名詞/名詞」句型合併提示要點，敘述偉人以某項成就聞名於世，注意動詞時態與介系詞搭配。",
+      "sentence_form": "Subject + was famous for + discovering / inventing + Noun.",
+      "question": "[Tiger 3C Handwritten Section · Biography Sentence Writing] Combine the prompt cues into one complete sentence using \"famous for\": \"(Isaac Newton / be famous for / discover / the theory of gravity)\".",
+      "options": [],
+      "answer": "Isaac Newton was famous for discovering the theory of gravity.",
+      "self_check": [
+        "1. be 動詞是否正確選用過去式 was（不可寫 is 或 were）？",
+        "2. famous 後方是否正確使用介系詞 for，且介系詞後接動名詞 discovering（不可寫原形 discover）？",
+        "3. 專有名詞 Isaac Newton 大寫正確，受詞 the theory of gravity 拼寫完整且句尾加上句號？"
+      ],
+      "explanation": {
+        "point": "代表成就句型：be famous for + V-ing/N，介系詞 for 後必須接動名詞。",
+        "examPurpose": "檢驗學生在人物傳記述事中熟練轉換介系詞後接動名詞 (famous for discovering) 的寫作能力。",
+        "correctReason": "主詞 Isaac Newton 為單數歷史人物，be 動詞用 was；famous for 接動名詞 discovering the theory of gravity。",
+        "note": "be famous for + V-ing / N (因...而著名)。",
+        "trap": "介系詞 for 後方忘記加 -ing 寫成 famous for discover，或誤將 for 寫成 about。",
+        "commonTraps": [
+          "介系詞搭配錯誤：受中文直譯影響，誤將 famous for 寫成 famous about 或 famous with。",
+          "動詞形式錯誤：忘記介系詞後方必須接動名詞，誤寫為 famous for discover。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "well-known for",
+          "renowned for"
+        ],
+        "grammarCompare": "famous for + 成就/作品 (因...聞名) vs famous as + 身分職業 (以...身分聞名，如 famous as an inventor)。",
+        "examVariations": "身分與成就對比：He was famous as a scientist, and was famous for discovering gravity."
+      }
+    },
+    {
+      "id": "q_w12_wr3_u06_17",
+      "book_id": "wr3",
+      "unit_id": "wr3_6",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "difficulty": "★★★☆☆",
+      "part_title": "Part II. Guided Biography Writing (歷史偉人傳記引導寫作)",
+      "part_instructions": "運用「was one of the + 最高級形容詞 + 複數名詞」句型，依據提示完整書寫莫札特的崇高音樂歷史地位，特別注意名詞複數形態。",
+      "sentence_form": "Subject + was one of the greatest + [Plural Noun] + in history.",
+      "question": "[Tiger 3C Handwritten Section · Biography Sentence Writing] Write a complete biography sentence honoring Mozart's historical status using the cues: \"(Wolfgang Amadeus Mozart / be / one of the greatest composers / in musical history)\".",
+      "options": [],
+      "answer": "Wolfgang Amadeus Mozart was one of the greatest composers in musical history.",
+      "self_check": [
+        "1. 主詞與過去式 be 動詞 was 一致（不可誤用 現在式 is）？",
+        "2. one of the 后方最高級 greatest 是否搭配複數名詞 composers（不可遺漏字尾 s 寫成 composer）？",
+        "3. 專有名詞字首大寫無誤，句尾加句號？"
+      ],
+      "explanation": {
+        "point": "最高歷史地位句型：one of the + 最高級 + 複數名詞 (one of the greatest composers)。",
+        "examPurpose": "測驗學生在英文手寫作答時能否避免 Chinglish 陷阱，在 one of the 後精確書寫複數名詞。",
+        "correctReason": "莫札特為眾多偉大作曲家之一，因此在 one of the greatest 之後必須使用複數名詞 composers。",
+        "note": "one of the + superlative + plural noun。",
+        "trap": "學生最常漏掉名詞結尾的複數 s，誤寫成 one of the greatest composer。",
+        "commonTraps": [
+          "名詞單複數錯誤：受中文「最偉大作曲家之一」影響，漏掉名詞複數 s 誤寫成 composer。",
+          "定冠詞遺漏：在最高級前忘記加上定冠詞 the，誤寫為 one of greatest composers。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "among the most distinguished composers",
+          "one of the foremost musicians"
+        ],
+        "grammarCompare": "one of the + 複數名詞 (one of the greatest composers)；主詞若為 One of the composers，動詞則用單數 was。",
+        "examVariations": "克漏字改錯：Thomas Edison was one of the greatest (inventor / inventors) in the world."
+      }
+    },
+    {
+      "id": "q_w12_wr3_u06_18",
+      "book_id": "wr3",
+      "unit_id": "wr3_6",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "difficulty": "★★★★☆",
+      "part_title": "Part II. Guided Biography Writing (歷史偉人傳記引導寫作)",
+      "part_instructions": "結合年齡介系詞片語「at the age of + 數字」與年份介系詞「in + 西元年」，以完整句子敘述莫札特在幼年時期完成第一首交響曲的早熟事蹟。",
+      "sentence_form": "Subject + composed + his first symphony + at the age of [Number] + in [Year].",
+      "question": "[Tiger 3C Handwritten Section · Biography Sentence Writing] Write a complete biography sentence combining the age and year of Mozart's early achievement: \"(Mozart / compose / his first symphony / at the age of eight / in 1764)\". Use correct past tense.",
+      "options": [],
+      "answer": "Mozart composed his first symphony at the age of eight in 1764.",
+      "self_check": [
+        "1. 動詞是否正確使用過去式 composed（不可寫原形 compose）？",
+        "2. 年齡片語是否正確使用介系詞 at (at the age of eight，不可寫 on the age 或 in the age)？",
+        "3. 西元年前是否正確使用介系詞 in (in 1764，不可寫 on 1764)，大小寫與標點完整？"
+      ],
+      "explanation": {
+        "point": "生平年齡與年份句型：composed ... at the age of + 數字 + in + 年份。",
+        "examPurpose": "考核學生精確搭配年齡介系詞 at 與年份介系詞 in，並保持敘事動詞過去式一致性。",
+        "correctReason": "表示在幾歲時固定片語為 at the age of eight，年份前使用介系詞 in 1764，動詞 compose 轉為規則過去式 composed。",
+        "note": "at the age of [number] (在...歲時)；in [year] (在...年)。",
+        "trap": "年齡介系詞常誤填 on (on the age of)，或年份前誤填 on。",
+        "commonTraps": [
+          "年齡介系詞誤用：將固定片語 at the age of 誤寫為 on the age of 或 in the age of。",
+          "時態未轉過去式：直接抄寫提示中的原形動詞 compose，忘記加上 -d 變成 composed。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "when he was eight years old",
+          "at age eight"
+        ],
+        "grammarCompare": "at the age of eight = when he was eight years old = at age eight。",
+        "examVariations": "句型轉換：Mozart wrote his first symphony when he was only eight years old."
+      }
+    },
+    {
+      "id": "q_w12_wr3_u06_19",
+      "book_id": "wr3",
+      "unit_id": "wr3_6",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "difficulty": "★★★★☆",
+      "part_title": "Part II. Guided Biography Writing (歷史偉人傳記引導寫作)",
+      "part_instructions": "運用「Thanks to + 人物」句型引導因果影響，敘述蘇利文老師 (Anne Sullivan) 的悉心教導如何讓海倫·凱勒 (Helen Keller) 學會閱讀與書寫，注意逗號與動詞形式。",
+      "sentence_form": "Thanks to [Person], Subject + learned + how to read and write.",
+      "question": "[Tiger 3C Handwritten Section · Biography Sentence Writing] Write a complete biography impact sentence using \"Thanks to\": \"(Thanks to / Anne Sullivan / Helen Keller / learn / how to read and write)\". Use appropriate punctuation and past tense.",
+      "options": [],
+      "answer": "Thanks to Anne Sullivan, Helen Keller learned how to read and write.",
+      "self_check": [
+        "1. 歸功片語是否使用 Thanks to（首字母大寫，不可誤寫 Thanks for）？",
+        "2. Thanks to Anne Sullivan 之後是否加上逗號隔開主要子句？",
+        "3. 主要子句動詞是否使用過去式 learned，且 how to 後接原形動詞 read and write？"
+      ],
+      "explanation": {
+        "point": "功績影響句型：Thanks to + 人物，主要子句說明學習與成就成果。",
+        "examPurpose": "評量學生在手寫傳記中運用 Thanks to 句型歸納歷史導師深遠影響的能力。",
+        "correctReason": "Thanks to Anne Sullivan 表達「多虧了安·蘇利文老師」，主要子句陳述過去歷史事實，動詞使用 learned how to read and write。",
+        "note": "Thanks to + Person, S + V...。",
+        "trap": "容易受日常口語誤導寫出 Thanks for Anne Sullivan，或逗號後忘記將動詞轉過去式 learned。",
+        "commonTraps": [
+          "介系詞混淆：誤將歸功於某人的 Thanks to 寫成表示感謝某事的 Thanks for。",
+          "動詞時態遺漏：主要子句忘記轉為過去式動詞 learned，誤寫成現在式 learn。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "Owing to",
+          "Because of the guidance of"
+        ],
+        "grammarCompare": "Thanks to 接名詞片語 (Thanks to Anne Sullivan)；Because 接完整主從子句 (Because Anne Sullivan taught her patiently)。",
+        "examVariations": "課文原句比對：Thanks to Keller, disabled people have more hope."
+      }
+    },
+    {
+      "id": "q_w12_wr3_u06_20",
+      "book_id": "wr3",
+      "unit_id": "wr3_6",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "difficulty": "★★★★☆",
+      "part_title": "Part II. Guided Biography Writing (歷史偉人傳記引導寫作)",
+      "part_instructions": "將萊特兄弟 (The Wright brothers) 的偉大發明與現代影響合併為一句連貫的複合句，前半句使用 were famous for inventing，後半句使用 and thanks to them, people can travel by plane。",
+      "sentence_form": "Subject + were famous for inventing + Noun, and thanks to them, people can + Verb.",
+      "question": "[Tiger 3C Handwritten Section · Biography Sentence Writing] Combine the biographical facts about the Wright brothers into one compound sentence: \"(The Wright brothers / be famous for / invent the first airplane / and thanks to them / people can travel by plane)\".",
+      "options": [],
+      "answer": "The Wright brothers were famous for inventing the first airplane, and thanks to them, people can travel by plane.",
+      "self_check": [
+        "1. 主詞 The Wright brothers 為複數，be 動詞是否正確選用過去式 were（不可寫 was）？",
+        "2. famous for 後方是否接動名詞 inventing（不可寫 invent）？",
+        "3. 後半句連接詞 and 與 thanks to them 搭配得當，情態助動詞 can 後接原形 travel？"
+      ],
+      "explanation": {
+        "point": "複合傳記句型：複數主詞 were famous for inventing... 與 and thanks to them 結合。",
+        "examPurpose": "檢驗學生綜合組織複合傳記長句、協調主詞動詞一致性 (The Wright brothers were) 與現代效益描述的能力。",
+        "correctReason": "主詞 The Wright brothers 包含兩人為複數，be 動詞用 were；famous for 接動名詞 inventing；後半句以 and thanks to them 帶出現代生活便利。",
+        "note": "The Wright brothers were famous for inventing..., and thanks to them, people can...。",
+        "trap": "學生最常誤用單數 was (The Wright brothers was) 或漏掉 inventing 的 -ing。",
+        "commonTraps": [
+          "主動一致性錯誤：誤將雙人複數主詞 The Wright brothers 當作單數而搭配 was。",
+          "介系詞後接原形：在 famous for 後方漏加 -ing 寫成 famous for invent。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "are renowned for creating",
+          "achieved fame by inventing"
+        ],
+        "grammarCompare": "前半句描述過去歷史事實用過去式 were famous for；後半句描述今日現代世界事實用現在式 people can travel。",
+        "examVariations": "發明家事蹟配對：Thanks to the Wright brothers, modern air travel is fast and convenient."
+      }
+    },
+    {
+      "id": "q_w12_wr3_u06_21",
+      "book_id": "wr3",
+      "unit_id": "wr3_6",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "difficulty": "★★★☆☆",
+      "part_title": "Part II. Biography Error Correction & Proofreading (傳記改錯與潤飾)",
+      "part_instructions": "找出下列歷史傳記句子中的文法錯誤，並將訂正後的完整句子正確寫出，特別注意出生被動語態 was born。",
+      "sentence_form": "Subject + was born in [Year] in [Country].",
+      "question": "[Tiger 3C Handwritten Section · Biography Proofreading] Find the grammatical error in the biography sentence and write the corrected full sentence: \"Thomas Edison born in 1847 in the United States.\"",
+      "options": [],
+      "answer": "Thomas Edison was born in 1847 in the United States.",
+      "self_check": [
+        "1. 是否在 Edison 與 born 之間補上過去式 be 動詞 was（不可寫 is born 或 has born）？",
+        "2. 年份 1847 前是否保留介系詞 in，國名 the United States 大小寫與冠詞保留完整？",
+        "3. 句子書寫完整無漏字，句末標點符號正確？"
+      ],
+      "explanation": {
+        "point": "出生被動式核心句型：born 是過去分詞，前方必須搭配過去式 be 動詞 was。",
+        "examPurpose": "測驗學生在傳記校對改錯題中敏銳識別「漏掉 be 動詞 was born」典型 Chinglish 錯誤的能力。",
+        "correctReason": "中文常講「愛迪生 1847 年出生」，學生誤把 born 當成一般及物動詞；英語表達出生必用過去被動態 was born in 1847。",
+        "note": "was born in [year] (出生於...年)。",
+        "trap": "直接略過錯誤，或者把 born 改成 bore 或 was borne。",
+        "commonTraps": [
+          "受母語負遷移影響：中文無被動標記，直覺認為 Edison born in 1847 是正確完整的句子。",
+          "誤補現在式：將 be 動詞寫成現在式 is born，忽略生平年份 1847 為過去歷史事實。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "came into the world in",
+          "entered life in"
+        ],
+        "grammarCompare": "bear (生小孩，現在式) - bore (過去式) - born (過去分詞，專用於出生 be born) - borne (負擔/承受之過去分詞)。",
+        "examVariations": "選擇題題型：Thomas Edison _______ in Ohio in 1847. (A) born (B) was born (C) is born (D) has born (正解：B)"
+      }
+    },
+    {
+      "id": "q_w12_wr3_u06_22",
+      "book_id": "wr3",
+      "unit_id": "wr3_6",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "difficulty": "★★★☆☆",
+      "part_title": "Part II. Biography Error Correction & Proofreading (傳記改錯與潤飾)",
+      "part_instructions": "找出下列句子中時間介系詞的錯誤，並將訂正後的完整句子寫出，確保純西元年前使用正確的介系詞 in。",
+      "sentence_form": "Subject + was born in [Year] and died in [Year].",
+      "question": "[Tiger 3C Handwritten Section · Biography Proofreading] Find the grammatical error in the biography sentence and write the corrected full sentence: \"Wolfgang Amadeus Mozart was born on 1756 in Austria.\"",
+      "options": [],
+      "answer": "Wolfgang Amadeus Mozart was born in 1756 in Austria.",
+      "self_check": [
+        "1. 是否將純年份 1756 前面的介系詞 on 正確改正為 in？",
+        "2. 主詞 Wolfgang Amadeus Mozart 與地點 in Austria 拼寫大小寫完全正確？",
+        "3. 全句動詞 was born 維持過去被動語態，標點符號正確無殘缺？"
+      ],
+      "explanation": {
+        "point": "年份時間介系詞：在純年份 (1756) 或純月份前一律使用介系詞 in。",
+        "examPurpose": "評量小六學生在英文手寫中精準修正時間介系詞 (in vs on) 的校對除錯能力。",
+        "correctReason": "年份為長時間跨度，前面固定搭配介系詞 in 1756；只有具體指明某月某日（含日期）時才使用 on。",
+        "note": "in + 年份/月份/季節；on + 具體日期/星期幾。",
+        "trap": "容易忽視 on 1756 的錯誤，誤以為表示時間都可以通用 on。",
+        "commonTraps": [
+          "時間介系詞混淆：誤將修飾特定日期的 on 拿來修飾西元純年份。",
+          "誤改地點介系詞：誤以為錯誤在於 in Austria 而將其改為 at Austria。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "during the year of 1756",
+          "back in 1756"
+        ],
+        "grammarCompare": "in 1756 (年份) vs in January (月份) vs on January 27, 1756 (具體完整月日)。",
+        "examVariations": "文法改錯：The great composer died on 1791 at age 35. (on -> in)"
+      }
+    },
+    {
+      "id": "q_w12_wr3_u06_23",
+      "book_id": "wr3",
+      "unit_id": "wr3_6",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "difficulty": "★★★☆☆",
+      "part_title": "Part II. Biography Error Correction & Proofreading (傳記改錯與潤飾)",
+      "part_instructions": "找出下列偉人地位敘述句中的名詞單複數錯誤，並將訂正後的完整句子正確寫出，特別注意「one of the + 最高級 + 複數名詞」規則。",
+      "sentence_form": "Subject + was one of the greatest + [Plural Noun] + in history.",
+      "question": "[Tiger 3C Handwritten Section · Biography Proofreading] Find the grammatical error in the biography sentence and write the corrected full sentence: \"Isaac Newton was one of the greatest scientist in history.\"",
+      "options": [],
+      "answer": "Isaac Newton was one of the greatest scientists in history.",
+      "self_check": [
+        "1. 是否將單數名詞 scientist 改正為複數名詞 scientists（補上複數字母 s）？",
+        "2. 是否保留最高級形容詞 the greatest 與過去式 be 動詞 was？",
+        "3. 句子大小寫與句尾標點句號正確無誤？"
+      ],
+      "explanation": {
+        "point": "名詞單複數一致性：「one of the + 最高級形容詞」後方必須搭配複數名詞 (scientists)。",
+        "examPurpose": "檢驗學生是否能辨識「one of the + 單數名詞」的常見語病，並落實複數名詞修正。",
+        "correctReason": "one of 表示「在眾多...中的一個」，因此後方所屬群體必須是複數名詞，scientist 必須改為 scientists。",
+        "note": "one of the + superlative + plural noun (最...的其中之一)。",
+        "trap": "受中文「最偉大科學家之一」沒有複數後綴的思維干擾，難以一眼看出 scientist 漏了 s。",
+        "commonTraps": [
+          "中文無名詞複數形態概念，導致學生在校對時往往忽略名詞字尾應加 s。",
+          "誤將注意力放在 greatest 上，誤以為應該改成 more great 或 most greatest。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "one of the leading scientists",
+          "ranked among the greatest scientists"
+        ],
+        "grammarCompare": "one of the greatest scientists (名詞用複數)；但若作為主詞：One of the greatest scientists was Newton (動詞用單數 was)。",
+        "examVariations": "填空題：Helen Keller is one of the most famous (writer / writers) in the world. (正解：writers)"
+      }
+    },
+    {
+      "id": "q_w12_wr3_u06_24",
+      "book_id": "wr3",
+      "unit_id": "wr3_6",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "difficulty": "★★★★☆",
+      "part_title": "Part II. Biography Error Correction & Proofreading (傳記改錯與潤飾)",
+      "part_instructions": "找出傳記欽佩原因子句中的動詞時態錯誤，並將訂正後的完整句子正確寫出，描述歷史偉人生前事蹟必須嚴格使用過去式。",
+      "sentence_form": "I admire [Person] most of all because he never gave up on his dreams.",
+      "question": "[Tiger 3C Handwritten Section · Biography Proofreading] Find the grammatical error in the biography sentence and write the corrected full sentence: \"I admire Edison most of all because he never give up on his dreams.\"",
+      "options": [],
+      "answer": "I admire Edison most of all because he never gave up on his dreams.",
+      "self_check": [
+        "1. 是否將 because 子句中的現在式動詞 give 正確改為過去式動詞 gave？",
+        "2. 是否保留固定介系詞片語 on his dreams（不可刪除介系詞 on）？",
+        "3. 主要子句 I admire Edison most of all 與標點符號完整正確？"
+      ],
+      "explanation": {
+        "point": "時態一致性：because 子句描述已故歷史人物生前的奮鬥行徑，動詞必須使用簡單過去式 (gave up)。",
+        "examPurpose": "考查學生在長句閱讀與寫作中對動詞時態一致性（過去式不規則動詞變化 gave）的敏銳校對能力。",
+        "correctReason": "愛迪生為十九世紀歷史人物，其「從不放棄夢想」是發生在過去一生的歷史事實，動詞 give 必須改為過去式 gave。",
+        "note": "admire ... because Subject + [Past Tense Verb]...。",
+        "trap": "前面 I admire 是現在式，學生容易誤以為 because 後面也必須用現在式 give，忽略了偉人事蹟發生在過去。",
+        "commonTraps": [
+          "時態僵化對稱：誤以為前面 I admire 是現在式，後面就必須一致寫 give，忘記愛迪生奮鬥是過去的事實。",
+          "介系詞遺漏：改動詞時不小心漏掉介系詞 on，誤寫成 gave up his dreams。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "never abandoned his ambitions",
+          "persisted through every failure"
+        ],
+        "grammarCompare": "I admire (我現在欽佩) + because he never gave up (他過去奮鬥從不放棄)。",
+        "examVariations": "類似句型改錯：I admire Keller because she never complain about her disabilities. (complain -> complained)"
+      }
+    },
+    {
+      "id": "q_w12_wr3_u06_25",
+      "book_id": "wr3",
+      "unit_id": "wr3_6",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "choice",
+      "category_tag": "grammar",
+      "difficulty": "★★★☆☆",
+      "question": "Choose the correct preposition to complete the sentence: \"_______ Thomas Edison, people all over the world can light up their homes and see at night.\"",
+      "options": [
+        "Thanks to",
+        "Thanks for",
+        "Because to",
+        "Owing for"
+      ],
+      "answer": "Thanks to",
+      "explanation": {
+        "point": "貢獻與歸功介系詞片語：Thanks to + 名詞，表示「幸虧、多虧了某人」。",
+        "examPurpose": "評量學生對傳記寫作中「Thanks to + 人物」功績歸屬句型的理解與精準介系詞選用。",
+        "correctReason": "「Thanks to + 人」為固定成語介系詞片語，表達正面感激與深遠影響，意為「多虧了某人」。",
+        "note": "Thanks to + N (多虧了...；歸功於...)。",
+        "trap": "學生極常受日常口語「Thank you for」影響而誤選 Thanks for。",
+        "distractorAnalysis": {
+          "Thanks for": "Thanks for 用於為了某事或具體禮物向某人致謝（如 Thanks for your help），不能用於表達成就歸屬。",
+          "Because to": "Because 後方接完整句子，或與 of 連用成 Because of，英語文法中不存在 Because to 結構。",
+          "Owing for": "表示因為、歸因於的成語介系詞為 Owing to，英語中無 Owing for 之固定文法搭配。"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "Owing to",
+          "Because of"
+        ],
+        "grammarCompare": "Thanks to + N (正面感激歸功) vs Because of + N (中性因果說明)。",
+        "examVariations": "選詞填空：_______ Isaac Newton, we understand gravity better. (正解：Thanks to)"
+      }
+    },
+    {
+      "id": "q_w12_wr3_u06_26",
+      "book_id": "wr3",
+      "unit_id": "wr3_6",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "choice",
+      "category_tag": "grammar",
+      "difficulty": "★★★☆☆",
+      "question": "Choose the correct verb form to complete the sentence: \"Thomas Edison invented many brilliant devices, but his most famous invention _______ the incandescent electric light bulb.\"",
+      "options": [
+        "is",
+        "are",
+        "were",
+        "be"
+      ],
+      "answer": "is",
+      "explanation": {
+        "point": "代表作成就主動一致性：invention 為單數名詞，be 動詞使用現在式 is。",
+        "examPurpose": "測驗學生在傳記代表作句型中識別主詞核心名詞單複數及動詞時態一致性的能力。",
+        "correctReason": "主詞核心為單數名詞 his most famous invention，且代表作品至今日仍最具盛名，故動詞使用單數現在式 is。",
+        "note": "His/Her most famous [invention] is [Noun]。",
+        "trap": "最容易因為前面有 most 或看見後方長受詞而誤填複數 are 或過去式 were。",
+        "distractorAnalysis": {
+          "are": "主詞核心名詞是單數 invention，不可因前方有 most 或後方受詞而誤用複數 are。",
+          "were": "代表作至今仍是其最著名的代表，且主詞為單數名詞，不可搭配複數過去式 were。",
+          "be": "主要子句缺少限定動詞，不可在無助動詞的情況下直接使用動詞原形 be。"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "remains",
+          "stands as"
+        ],
+        "grammarCompare": "His most famous invention is... (單數) vs His most famous inventions are... (複數)。",
+        "examVariations": "句型代換：His most famous composition _______ the Fifth Symphony. (正解：is)"
+      }
+    },
+    {
+      "id": "q_w12_wr3_u06_27",
+      "book_id": "wr3",
+      "unit_id": "wr3_6",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "choice",
+      "category_tag": "grammar",
+      "difficulty": "★★★★☆",
+      "question": "Choose the grammatically correct noun form: \"With over one thousand patents, Thomas Edison was widely regarded as one of the greatest _______ in human history.\"",
+      "options": [
+        "inventors",
+        "inventor",
+        "inventing",
+        "inventions"
+      ],
+      "answer": "inventors",
+      "explanation": {
+        "point": "偉人地位文法結構：「one of the + 最高級形容詞」後方必須搭配複數名詞。",
+        "examPurpose": "考核學生在最高級比較結構中對名詞複數型態 (inventors) 的掌握與 Chinglish 語病排除。",
+        "correctReason": "one of 表示在眾多群體中的一位，因此形容詞 greatest 後方必須接指人的複數名詞 inventors。",
+        "note": "one of the greatest + plural noun。",
+        "trap": "學生極常受中文「最偉大發明家之一」沒有複數後綴的思維影響而誤選單數 inventor。",
+        "distractorAnalysis": {
+          "inventor": "在「one of the + 最高級」結構後必須使用複數名詞，不可使用單數名詞 inventor。",
+          "inventing": "此處語境需要指稱人的複數名詞作為身分同位受詞，動名詞 inventing 不合文法。",
+          "inventions": "inventions 意為「發明物」，而主詞 Thomas Edison 是人，不可說某人是發明物之一。"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "creators",
+          "innovators"
+        ],
+        "grammarCompare": "one of the greatest inventors (複數名詞)；但若作主詞 One of the greatest inventors was Edison (單數動詞)。",
+        "examVariations": "改錯題：Isaac Newton was one of the greatest scientist in history. (scientist -> scientists)"
+      }
+    },
+    {
+      "id": "q_w12_wr3_u06_28",
+      "book_id": "wr3",
+      "unit_id": "wr3_6",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "choice",
+      "category_tag": "grammar",
+      "difficulty": "★★★★☆",
+      "question": "Choose the correct consequence transition phrase to complete the biography conclusion: \"Edison was remarkably persistent, and he made our modern world brighter. _______, I believe Thomas Edison was a truly great person.\"",
+      "options": [
+        "For these reasons",
+        "Although",
+        "Because of",
+        "Even though"
+      ],
+      "answer": "For these reasons",
+      "explanation": {
+        "point": "傳記結論因果轉折詞：For these reasons 用於全文結尾段引導總結評價。",
+        "examPurpose": "評量學生對傳記寫作架構中因果轉折詞 (Transitions of Consequence) 之語篇銜接功能理解。",
+        "correctReason": "「For these reasons, 主詞 + think...」為課本標準傳記結尾總結句型，意為「基於這些原因」。",
+        "note": "For these reasons / Therefore / As a result (因果轉折詞)。",
+        "trap": "容易誤選連接詞 Although 或介系詞 Because of，忽略句首需要副詞性因果轉折片語。",
+        "distractorAnalysis": {
+          "Although": "Although 為讓步轉折連接詞（雖然），後接從屬子句，不能作為結論段的因果副詞片語。",
+          "Because of": "Because of 為介系詞片語，後方必須接名詞受詞，不能單獨置於句首後接完整獨立子句。",
+          "Even though": "Even though 為從屬連接詞（即使），引導讓步子句，不能用於總結全文因果結論。"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "Therefore",
+          "As a consequence"
+        ],
+        "grammarCompare": "For these reasons (副詞性轉折片語，後接完整句子) vs Because of these reasons (介系詞片語)。",
+        "examVariations": "寫作提示：Transition words like \"therefore\" and \"for these reasons\" show consequence."
+      }
+    },
+    {
+      "id": "q_w12_wr3_u06_29",
+      "book_id": "wr3",
+      "unit_id": "wr3_6",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "choice",
+      "category_tag": "reading",
+      "difficulty": "★★★★★",
+      "question": "Based on the model biography \"The Person I Admire\", what is the primary reason the author admires Thomas Edison most of all?",
+      "options": [
+        "Because he never gave up on his dreams despite failing many times.",
+        "Because he was the wealthiest inventor in the United States.",
+        "Because he never experienced any failure while inventing the light bulb.",
+        "Because he invented all modern musical instruments by himself."
+      ],
+      "answer": "Because he never gave up on his dreams despite failing many times.",
+      "explanation": {
+        "point": "傳記核心段落細節理解：作者欽佩愛迪生的核心原因在於其面對失敗從不放棄夢想的堅毅精神。",
+        "examPurpose": "考查小六學生深入理解傳記主體段中轉折詞 However 引導出的核心精神品格。",
+        "correctReason": "課文第二段明示：\"However, I admire Edison most of all because he never gave up on his dreams. He failed many times before he invented the light bulb.\"",
+        "note": "The Person I Admire: Core Reason for Admiration。",
+        "trap": "容易誤選「從未經歷失敗」的相反選項，或誤以為作者欽佩他單純是因為財富或發明了樂器。",
+        "distractorAnalysis": {
+          "Because he was the wealthiest inventor in the United States.": "課文讚美的是愛迪生的智慧與堅毅品格，從未提及他是美國最富有的發明家。",
+          "Because he never experienced any failure while inventing the light bulb.": "課文明確指出他經歷無數次失敗 (failed many times)，並非從未遭遇失敗。",
+          "Because he invented all modern musical instruments by himself.": "愛迪生並未發明所有現代樂器，該選項與課文傳記內文完全背道而馳。"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "perseverance",
+          "resilience"
+        ],
+        "grammarCompare": "never gave up on (從不放棄，接受詞 dreams) vs failed many times (失敗多次，不及物動詞)。",
+        "examVariations": "閱讀問答：Why does Ella admire Thomas Edison most of all?"
+      }
+    },
+    {
+      "id": "q_w12_wr3_u06_30",
+      "book_id": "wr3",
+      "unit_id": "wr3_6",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "choice",
+      "category_tag": "reading",
+      "difficulty": "★★★★★",
+      "question": "According to the biographical reading on Sir Isaac Newton, what was his most famous scientific theory, and how did it change human understanding?",
+      "options": [
+        "His most famous theory is gravity, which helps us understand physical forces better.",
+        "His most famous theory is electricity, which allows people to see clearly at night.",
+        "His most famous theory is the symphony, which created the Fifth Symphony.",
+        "His most famous theory is nonviolence, which helped India win independence."
+      ],
+      "answer": "His most famous theory is gravity, which helps us understand physical forces better.",
+      "explanation": {
+        "point": "科學傳記跨學科成就理解：牛頓最著名的科學理論是重力理論 (theory of gravity)，深化了人類對自然法則的理解。",
+        "examPurpose": "檢驗學生對科學家傳記中代表成就及其深遠歷史影響的閱讀歸納與跨人物事實辨析能力。",
+        "correctReason": "傳記原文指出：\"His most famous scientific theory is the theory of gravity. Thanks to Newton, we understand gravity better.\"",
+        "note": "Isaac Newton: Theory of Gravity & Impact。",
+        "trap": "混淆愛迪生 (夜間照明/電燈)、莫札特 (交響樂) 或甘地 (非暴力獨立) 的事蹟。",
+        "distractorAnalysis": {
+          "His most famous theory is electricity, which allows people to see clearly at night.": "電燈與夜間照明是愛迪生 (Edison) 的成就，而非牛頓 (Newton) 的科學理論。",
+          "His most famous theory is the symphony, which created the Fifth Symphony.": "交響樂與第五號交響曲是貝多芬或莫札特的音樂成就，與牛頓的科學理論無關。",
+          "His most famous theory is nonviolence, which helped India win independence.": "非暴力爭取印度獨立是政治領袖甘地 (Gandhi) 的歷史功績，非牛頓的理論。"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "universal gravitation",
+          "laws of physics"
+        ],
+        "grammarCompare": "the theory of gravity (名詞片語) vs understand gravity better (動詞修飾比較級副詞)。",
+        "examVariations": "人物事蹟配對：Match Isaac Newton with \"discovered gravity and formulated laws of motion\"."
+      }
+    },
+    {
+      "id": "q_w12_wr3_u06_31",
+      "book_id": "wr3",
+      "unit_id": "wr3_6",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "choice",
+      "category_tag": "reading",
+      "difficulty": "★★★★★",
+      "question": "According to the model biography of Helen Keller, which statement accurately reflects why she is remembered as an enduring inspiration to humanity?",
+      "options": [
+        "She overcame severe disabilities without complaining and brought great hope to disabled people.",
+        "She was famous for inventing the electric light bulb after failing many times.",
+        "She traveled across Europe to compose the opera Don Giovanni.",
+        "She led a national political revolution to gain independence for her country."
+      ],
+      "answer": "She overcame severe disabilities without complaining and brought great hope to disabled people.",
+      "explanation": {
+        "point": "人物精神主旨理解：海倫·凱勒克服失明失聰重障，從不抱怨，為全世界身心障礙人士帶來無窮希望。",
+        "examPurpose": "評量學生對海倫·凱勒傳記主題思想、深遠歷史影響與正向品格特質的深度閱讀理解。",
+        "correctReason": "課文原文寫道：\"Thanks to Keller, disabled people have more hope... she never complained about her disabilities. She worked hard to learn how to speak and write.\"",
+        "note": "Helen Keller: Overcoming Disabilities & Beacon of Hope。",
+        "trap": "將其他偉人（愛迪生發明電燈、莫札特創作歌劇、甘地政治領導）的功績張冠李戴。",
+        "distractorAnalysis": {
+          "She was famous for inventing the electric light bulb after failing many times.": "發明電燈泡是愛迪生 (Edison) 的發明成就，不是海倫·凱勒的事蹟。",
+          "She traveled across Europe to compose the opera Don Giovanni.": "譜寫歌劇《唐·喬望尼》是莫札特 (Mozart) 的音樂成就，與凱勒完全無關。",
+          "She led a national political revolution to gain independence for her country.": "領導國家爭取獨立是甘地 (Gandhi) 的政治成就，並非海倫·凱勒的生平。"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "beacon of courage",
+          "inspirational role model"
+        ],
+        "grammarCompare": "overcame her disabilities (克服障礙，過去式) vs never complained about (從不抱怨)。",
+        "examVariations": "閱讀問答：How did Helen Keller help people with disabilities around the world?"
+      }
+    },
+    {
+      "id": "q_w12_wr3_u06_32",
+      "book_id": "wr3",
+      "unit_id": "wr3_6",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "choice",
+      "category_tag": "reading",
+      "difficulty": "★★★★★",
+      "question": "In a standard three-part historical biography essay (Introduction, Body, Conclusion), what is the main purpose of the concluding paragraph?",
+      "options": [
+        "To use consequence transition words and summarize why the historical figure was truly great.",
+        "To list the figure's birth date, birth city, and exact childhood school names for the first time.",
+        "To introduce a brand-new historical person that the author admires even more.",
+        "To complain about how difficult it is to invent brand-new machines."
+      ],
+      "answer": "To use consequence transition words and summarize why the historical figure was truly great.",
+      "explanation": {
+        "point": "傳記寫作篇章結構理解：結論段旨在運用因果轉折詞總結全篇，確立偉人的崇高歷史地位。",
+        "examPurpose": "考查小六學生對傳記寫作三段式架構（引言段、主體生平段、結論總結段）的宏觀篇章思維。",
+        "correctReason": "傳記寫作規範指出，結論段使用因果轉折詞 (For these reasons / Therefore) 呼應主體段事蹟，重申「I think [Person] was a great person」。",
+        "note": "Biography Essay Structure: Conclusion & Consequence Transitions。",
+        "trap": "誤以為結論段應該引出全新人物或重新羅列生卒年細節，違背寫作收尾原則。",
+        "distractorAnalysis": {
+          "To list the figure's birth date, birth city, and exact childhood school names for the first time.": "生卒年與出生背景應在主體段第一段交代，而非延至結論段才首次提出。",
+          "To introduce a brand-new historical person that the author admires even more.": "結論段必須緊扣全篇焦點人物進行總結，絕不可突兀引入全新的人物。",
+          "To complain about how difficult it is to invent brand-new machines.": "傳記旨在讚美偉人奉獻與品格，結論段絕非用來抱怨發明過程的艱辛困難。"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "reiterate thesis",
+          "synthesize arguments"
+        ],
+        "grammarCompare": "Introduction (引出人物) -> Body (生平成就與欽佩原因) -> Conclusion (因果總結評價)。",
+        "examVariations": "寫作步驟排序：Organize a biography: 1. Introduce admired person 2. Explain deeds 3. Conclude with reasons."
+      }
     }
   ]
 };
