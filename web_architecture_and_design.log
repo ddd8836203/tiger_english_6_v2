@@ -1,10 +1,10 @@
 # 六年級英語特訓網頁 — 詳細設計架構、目標與設計原因 (web_architecture_and_design.log)
 
 ⚡ 0. 當下狀態快照 (TL;DR Current Snapshot)
-- **最後更新**：2026-11-14
-- **架構版本**：Zero-Build Vanilla SPA (`v2.3.0-week12-stem-ux` — **Phase 9~10 題庫零洩漏富化、三層題幹視覺卡片與課本全名統一已完成並通過驗收**)
+- **最後更新**：2026-11-18
+- **架構版本**：Zero-Build Vanilla SPA (`v2.4.0-ipad-landscape-ux` — **Phase 11 10.2" iPad 橫向排版、4 段字體控制器、A/B 雙模式課文、護眼暖紙底與抓錯 CSS 已完成並通過驗收**)
 - **前端核心檔案**：`index.html`, `style.css`, `app.js`, `english_data.js`, `midterm_data.js`, `build_exam_bank.js`, `data/units/*.js`
-- **設計鐵律提醒**：保留雙速 TTS 防抖 cancel、顯式三態自評計分（翻牌與選選項皆不自動計分，僅點擊 `[data-rate]` 寫入）、零鍵盤打字 Mistake Buster、純淨英文例句 TTS 清洗 (`extractCleanEnglishForSpeech`)、聽寫雙層零洩漏防護、Firebase + LocalStorage 雙向同步。
+- **設計鐵律提醒**：保留雙速 TTS 防抖 cancel、顯式三態自評計分（翻牌與選選項皆不自動計分，僅點擊 `[data-rate]` 寫入）、零鍵盤打字 Mistake Buster、純淨英文例句 TTS 清洗 (`extractCleanEnglishForSpeech`)、聽寫雙層零洩漏防護、Topbar 與 `@media print` 嚴格鎖定 `--text-scale: 1` 不隨螢幕字體縮放跑版、Firebase + LocalStorage 雙向同步。
 
 ---
 
@@ -17,6 +17,7 @@
 - [#SPEC-2] KET 4D 四維詳解系統、Week 12 衝刺專區與顯式自評閉環：每題強制具備目的/正解邏輯/逐選項誘答或雙陷阱 + 可折疊延伸學習，且翻牌不自動計分。
 - [#SPEC-3] Phase 5~8 視覺化文法積木、課文逐句點讀與 3C 手寫實戰四膠囊架構：寬卡公式/膠囊/正反對比 + 純淨例句 TTS、課文句子 `.speaking-active` 點讀、`paper_rewrite` 紙筆引導與 `unit_custom` 動態 A4 列印。
 - [#SPEC-4] Phase 9~10 題庫零洩漏富化、三層呼吸感題幹卡片與課本全名統一架構：資料層與 UI 層雙重遮罩聽寫答案（含 `target_pos`/`masked_example_chi`）、Strip 內部 `[Tiger 3C ...]` 標籤、三層積木卡排版與五書全名零縮寫。
+- [#SPEC-5] Phase 11 10.2" iPad 橫向響應式排版、雙層字體縮放與 A/B 可切換課文架構：以 `--text-scale`/`--ui-scale` 驅動全內容縮放並隔離 Topbar 與 A4 列印；實作 A 雙欄逐句聯動／B 單欄逐句條列切換、專注閱讀、護眼暖紙底、1150px 文法單欄、2×2 選項與抓錯 CSS 補完。
 
 ---
 
@@ -367,3 +368,26 @@
   3. 選擇與填空（`.stem-choice-card`）：強化 `.stem-blank-slot` 視覺底線槽與 `.stem-word-hint` 提示詞標籤。
 - **友善中文題型徽章與大題去重 (`renderActiveQuizView`)**：`getQuizTypeBadgeLabel(q)` 取代英文列舉標籤，`partBannerText` 自動檢查重複前綴，消滅 `Part : Part II:` 疊字。
 - **五書完整名稱統一**：於 `BOOK_META`、`tea_midterm` 單元卡片、`.banner-week12`（並將 `.w12-grid` 欄寬調整至 `minmax(215px, 1fr)`）與 `WEEK12_ALL` 標題全面使用完整書名（`Oxford Discover Grammar 3`、`Write Right 3`、`Reading with Writing 6`、`Read and Discover 6: Space`、`Oxford Discover 3`）。
+
+---
+
+================================================================================
+### [#SPEC-5] 十二、Phase 11 10.2" iPad 橫向排版、雙層字體縮放與 A/B 可切換閱讀架構 (2026-11-18 新增)
+================================================================================
+
+### 12.1 雙層字體縮放體系 (`--text-scale` / `--ui-scale`) 與雙重隔離
+- **[#WHY-SCALE] 為什麼不改 `html { font-size }` 而採用雙層 CSS 縮放變數？**
+  - 原有 `style.css` 與 `app.js` inline style 大量使用 `px`，單改 root font-size 無效；改為「閱讀／題幹／選項／詳解／文法／抓錯」乘上 `--text-scale`（`1` / `1.15` / `1.3` / `1.45`，平板視窗預設 `1.15`），而結構卡片與統計數值乘上溫和的 `--ui-scale: calc(1 + (var(--text-scale, 1) - 1) * 0.45)` 避免特大字體撐破網格。
+  - **隔離 1（Topbar 固定）**：`.topbar` 固定字級不乘 `--text-scale`，在 `1080px` 寬度下即便開啟 `1.45x` 仍穩居單列不折行；`#fontControlPopover` 內點擊事件使用 `stopPropagation()` 防止 DOM 重繪造成事件冒泡誤關。
+  - **隔離 2（A4 列印鎖定）**：`.paper` 維持 `pt` 絕對單位，且 `@media print` 強制鎖定 `--text-scale: 1 !important; --ui-scale: 1 !important;`，防止螢幕放大導致實體 A4 考卷溢頁。
+  - **WebKit 保護與觸控減負**：`body` 加入 `-webkit-text-size-adjust: 100%` 防止 iPadOS Safari 旋轉自動亂放字；於觸控裝置停用 `.bg-blobs` 漂浮動畫確保捲動流暢，並提供 `body.warm-paper` (`#f4efe4` / `#fdfbf7`) 護眼暖紙底切換。
+
+### 12.2 課文 A/B 雙模式切換與 10.2" iPad 橫向全模組優化
+- **課文閱讀雙模式 (`state.readingLayout`: `'split'` vs `'focus'`)**：
+  - **樣式 A（`mode-split` 左右雙欄對照）**：左欄限寬 `62ch` 並隱藏干擾性行內喇叭圖示（點擊整句發音），右欄 `.reading-split-right` sticky 獨立捲動呈現逐句聯動中文（`.reading-zh-sent` 雙向點選同步 `.speaking-active` 高亮，老單元無逐句 `zh` 時自動回退整段翻譯）與考點解析。
+  - **樣式 B（`mode-focus` 單欄置中逐句條列）**：`max-width: 820px` 置中，每句獨立 `.reading-sentence-row` 配置左側 `44×44px` 圓形 `.reading-sent-speak-btn` 與句下逐句中文翻譯。
+  - **首屏壓縮與專注閱讀**：收斂首頁非互動偽篩選標籤、壓縮 `.unit-hub-hero` 與單列 `.reading-toolbar`，並提供「📖 專注閱讀」(`.reading-focus-active`) 一鍵隱藏上方導覽與 Hero。
+- **跨模組觸控與一屏同框修復**：
+  - `@media (max-width: 1150px)` 將 `.grammar-cards-grid` 改為 `1fr` 單欄寬卡（同時保留桌機 `minmax(460px, 1fr)` 與 `@media (max-width: 960px)` 相容舊檢核）。
+  - 補齊神探抓錯 `.mistake-buster-card`、`.token-chip.strike`、`.token-chip.wrong-pick`、`.mb-feedback-box` 缺失 CSS，提升點擊熱區至 `>= 44px`。
+  - 短四選一自動套用 `.options-grid-2x2`（`>= 720px` 雙欄大按鈕）、選擇題 `Directions` 預設收合於 `<details class="exam-banner-details">`（手寫題維持預設 `open`），並於切頁與切題時呼叫 `scrollPageToTop()`（展開抽屜與選選項不跳頁）。

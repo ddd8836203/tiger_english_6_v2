@@ -1,10 +1,10 @@
 # 專案執行對話與歷程完整記憶檔 (memory.log)
 
 ⚡ 0. 當下狀態快照 (TL;DR Current Snapshot)
-- **最後更新**：2026-11-14
-- **最新里程碑**：**Phase 9~10 已完成並通過全套驗收 (`verify_phase_1..10.js` 全數通過)**；徹底清除全庫 368 題聽寫答案洩漏（含 Week 12 四單元、`TEA_QUIZ_REVIEW` 中文例句與三態詞性標籤）、補齊 `RWW6_U06/U08` 行號引用原文、將課本簡寫全面改為完整英文書名，並將題幹重構為三層呼吸感視覺卡片。
-- **最近一次上線**：GitHub `https://github.com/ddd8836203/tiger_english_6_v2`（2026-11-14 已將 Phase 1~10 推送至遠端 `main` 分支）。
-- **Next Actions**：向使用者回報 Phase 9~10 完成成果與體驗改進，確認 OK 後啟動後續 Phase 11~12（`OD3 U13~15` 轉錄、期中舊單元 4D 與視覺文法升級、異質審查與 GitHub 推送）。
+- **最後更新**：2026-11-18
+- **最新里程碑**：**Phase 11 已完成並通過全套驗收 (`verify_phase_1..11.js` 全數通過 + `1080×680` 真實 Chromium 視窗量測通過)**；依據小朋友 10.2 吋 iPad 橫向回饋完成雙層字體控制器（1.0x~1.45x，平板預設 1.15x）、課文「A 雙欄聯動對照／B 單欄逐句條列」即時切換、專注閱讀模式、護眼暖紙底、1080px 文法單欄寬卡、2×2 測驗選項與神探抓錯樣式修復。
+- **最近一次上線**：GitHub `https://github.com/ddd8836203/tiger_english_6_v2`（2026-11-18 已將 Phase 11 推送至遠端 `main` 分支）。
+- **Next Actions**：向使用者回報 Phase 11 完成成果與實測數據，確認 OK 後可直接推送至 GitHub 或接續啟動舊單元 4D 擴充（`OD3 U13~15` 等）。
 
 ---
 
@@ -33,6 +33,7 @@
 - [#MEM-22] 階段二十二 (2026-11-14)：匯入 `AGENTS.md` 與 KET 4D 三層 Log/驗證規範，完成 Phase 1~4（107 張照片轉正、Week 12 五大單元雙層 MD 與 100 題 4D 題庫編譯、前台 Week 12 衝刺專區與 4D 詳解抽屜並全數通過驗收）。
 - [#MEM-23] 階段二十三 (2026-11-14)：完成無人值守第一梯次 Phase 5~8 — 文法積木寬卡與純淨例句發音、課文保留整篇+單句點擊高亮點讀、Week 12 全面升級 156 題仿真 3C 手寫/聽寫/選擇題型並通過 `verify_phase_1..8.js`。
 - [#MEM-24] 階段二十四 (2026-11-14)：執行 Phase 9~10 — 掃除 368 題聽寫資料與 UI 雙層洩漏、補齊 `RWW6_U06/U08` 行號引用原文、統一五書完整英文名稱、重構三層呼吸感題幹卡片與 `Part` 去重，全套 `verify_phase_1..10.js` 全過。
+- [#MEM-25] 階段二十五 (2026-11-18)：執行 Phase 11 — 依 10.2 吋 iPad 橫向回饋先建置 A/B 互動原型確認方向，隨即落地 4 段雙層字體控制器、A 雙欄／B 單欄可切換課文、專注閱讀、護眼暖紙底、1080px 文法單欄、2×2 測驗網格與抓錯 CSS 修復，通過 `verify_phase_1..11.js` 與 1080×680 實機瀏覽器測試。
 
 ---
 
@@ -557,3 +558,23 @@
   - 全面將 `BOOK_META` (`gra3`, `wr3`, `rw6`, `rd6`, `od3`)、`tea_midterm` 單元說明與 `.banner-week12`（`.w12-grid` 欄寬升級為 `minmax(215px, 1fr)`）替換為完整課本名稱，保留 `(635 題)`..`(152 題)` 與各書測驗筆數統計不變。
   - 實裝 `getQuizTypeBadgeLabel(q)`（中文化題型徽章）、`partBannerText`（消除 `Part : Part II:` 重複）與 `[data-speak-stem]` 原句朗讀事件綁定；重構 `renderStructuredStemHtml(q)` 分支 5/6/7 及 `style.css` 三層視覺卡片（`.stem-listen-card`、`.stem-rewrite-card`、`.stem-notes-box` / `.stem-note-chip`、`.stem-quote-box`、`.stem-cue-pill`、`.stem-choice-card`、`.stem-blank-slot`、`.stem-word-hint`）。
   - 獨立驗收 `verify_phase_10.js`（VM 實測全庫 **2,580** 筆渲染：`368` 聽寫、`238` 手寫、`48` 提示膠囊、`161` 挖空選擇，**PASS: 86 | FAIL: 0**）及全回歸 `verify_phase_1.js` ~ `verify_phase_10.js` 全數 0 failures 通過。
+
+---
+
+### [#MEM-25] 25. 階段二十五 (2026-11-18)：Phase 11 10.2 吋 iPad 橫向易讀排版、字體控制器與 A/B 可切換課文升級 (✅ 全數通過 `verify_phase_1..11.js` + `1080×680` 實機瀏覽器驗收)
+- **使用者回饋與對齊定案**：
+  1. 針對學童以 **10.2 吋 iPad 橫向（1080×810，Safari 可視內容約 680px）** 使用網頁覺得字型過小與閱讀區佔比不佳，產出獨立互動原型 `ipad_reading_layout_ab.html` 實測對比後，使用者拍板將課文改為 **「A 雙欄對照／B 單欄逐句」可切換**。
+  2. 同步定案：平板視窗預設字體 `1.15x (舒適)` + 4 段可調（`1.0x / 1.15x / 1.30x / 1.45x`）、測驗短四選一 2×2 雙欄大按鈕與選擇題 Directions 收合、補齊神探點詞抓錯缺漏 CSS、換題/切頁自動 `scrollTo(0, 0)` 與護眼暖紙底開關。
+- **核心技術實作與除錯紀錄**：
+  1. **字體控制器與雙重隔離 (`index.html`, `style.css`, `app.js`)**：
+     - 於 `index.html` Topbar 新增 `#nav-font` 與 `#fontControlPopover`（含 `mobile-web-app-capable` 補全並更新 `style.css`/`app.js` 快取版號至 `20261118_p11`）。
+     - 轉換 `style.css` 內容字級為 `calc(Xpx * var(--text-scale, 1))` 與 UI 框架 `calc(Xpx * var(--ui-scale, 1))`、移除 `app.js` 33 處寫死 inline px 並統一課文基礎為 `17.5px / line-height: 2.05`；嚴格鎖定 `.topbar` 與 `@media print` (`--text-scale: 1 !important`) 不隨縮放跑版。
+     - 透過真實瀏覽器實測抓出並修復「點擊 `#fontControlPopover` 內按鈕時因重繪 DOM 導致 `e.target` 脫離而被 `document` 點擊監聽誤關」的冒泡 Bug（加入 `stopPropagation()`）。
+  2. **A/B 可切換課文與 10.2" iPad 橫向排版壓縮 (`style.css`, `app.js`)**：
+     - 實作 `state.readingLayout`（`'split'` vs `'focus'`）與 `localStorage` 記憶：樣式 A 左英文（`62ch`）＋右逐句聯動中文對照與考點；樣式 B 單欄置中（`820px`）逐句條列＋左側 `44×44px` 獨立發音鈕＋句下中文（皆相容無逐句 `zh` 舊單元回退）。
+     - 實機瀏覽器初測發現未開專注模式時 `.reading-split-left` 位在 `570.6px`，隨即優化 `.unit-hub-title-row` 不折行與精簡 `.reading-toolbar` 成單列（降至 `54.93px`），將課文起始位置大幅拉升至 `top: 465.34px`（首屏直接露出超過 `214px` 課文），並內建「📖 專注閱讀」一鍵收合 Hero。
+  3. **文法單欄、抓錯 CSS 與測驗 2×2**：
+     - 新增 `@media (max-width: 1150px)` 將文法卡切為單欄 `840px` 寬卡；補齊 `.mistake-buster-card` / `.token-chip.strike` / `.wrong-pick` / `.mb-feedback-box` 樣式；短四選一啟用 `.options-grid-2x2` 並對切題與換頁加上 `scrollPageToTop()`（開關抽屜盤不跳捲）。
+- **驗收結果**：
+  - `verify_phase_1.js` ~ `verify_phase_11.js` 全數 `0 Failures` 通過（`verify_phase_11.js` PASS: 64 | FAIL: 0）。
+  - 實機 Chromium `1080×680` 驗證：Topbar 維持單列 `64.53px`（於 `1.45x` + 暖紙底亦無溢位 `scrollWidth 1065 === 1065`）、A/B 切換與逐句雙向高亮、專注模式收合、文法 1 欄 `840px`、抓錯標記、測驗 2×2 與手寫題預設展開 `<details>` 全數通過，JS 錯誤 `0`、棄用警告 `0`。

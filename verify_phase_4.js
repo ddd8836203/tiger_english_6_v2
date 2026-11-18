@@ -128,7 +128,7 @@ assert(w12Quizzes.length >= 100, `ENGLISH_DATA Week 12 quizzes expected >= 100, 
 // 4. Validate index.html cache-busters
 const indexHtml = fs.readFileSync(path.join(ROOT, 'index.html'), 'utf8');
 for (const assetName of ['style.css', 'english_data.js', 'midterm_data.js', 'app.js']) {
-  const re = new RegExp(`${assetName.replace('.', '\\.')}\\?v=20261114_(w12|p5|p8)`);
+  const re = new RegExp(`${assetName.replace('.', '\\.')}\\?v=(?:20261114_(?:w12|p5|p8)|20261118_p11)`);
   assert(re.test(indexHtml), `index.html missing cache-buster asset for ${assetName}`);
 }
 

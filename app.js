@@ -35,6 +35,13 @@
     fullHistory: [],
     currentSubtab: 'reading',      // 'reading' | 'mistake' | 'quiz' | 'braingym'
     ttsSpeed: 1.0,                 // 1.0 | 0.8
+    fontScale: '1.15',             // '1' | '1.15' | '1.3' | '1.45'
+    readingLayout: 'split',        // 'split' (樣式 A 雙欄) | 'focus' (樣式 B 單欄逐句)
+    warmPaper: false,              // 護眼暖紙底開關
+    readingFocusMode: false,       // 課文專注閱讀收合上方列
+    showReadingChi: true,          // 課文是否顯示中文對照
+    showReadingNotes: true,        // 課文是否顯示段考考點
+    activeSentenceKey: null,       // 'pIdx-sIdx' 當前點讀高亮句
     selectedBatches: ['期中考核心', '文法專修', '寫作專攻', '讀寫進階', '太空科普', '岱崙週考'],
 
     // 測驗執行期狀態
@@ -86,7 +93,10 @@
   const GLOBAL_KEYS = {
     currentUser: 'tiger6_eng_current_user',
     ttsSpeed: 'tiger6_eng_tts_speed',
-    cloudDbUrl: 'tiger6_eng_cloud_db_url'
+    cloudDbUrl: 'tiger6_eng_cloud_db_url',
+    fontScale: 'tiger6_eng_font_scale',
+    readingLayout: 'tiger6_eng_reading_layout',
+    warmPaper: 'tiger6_eng_warm_paper'
   };
 
 
@@ -667,6 +677,185 @@
     return USERS.find(u => u.id === state.currentUser) || USERS[0];
   }
 
+  // ==========================================================================
+  // 2.5 顯示偏好設定：4 段字體控制器、A/B 課文版型切換、護眼暖紙底與捲頂輔助
+  // ==========================================================================
+  const FONT_SCALE_PRESETS = [
+    { val: '1',    label: '標準', sub: '1.0x' },
+    { val: '1.15', label: '舒適', sub: '1.15x' },
+    { val: '1.3',  label: '大字', sub: '1.30x' },
+    { val: '1.45', label: '特大', sub: '1.45x' }
+  ];
+
+  function isTabletViewport() {
+    if (typeof window === 'undefined') return false;
+    const coarse = window.matchMedia && window.matchMedia('(pointer: coarse)').matches;
+    const ua = (typeof navigator !== 'undefined' && navigator.userAgent) ? navigator.userAgent : '';
+    return window.innerWidth <= 1200 || coarse || /iPad|Tablet/i.test(ua);
+  }
+
+  function getFontPresetObj(val = state.fontScale) {
+    return FONT_SCALE_PRESETS.find(p => p.val === String(val)) || FONT_SCALE_PRESETS[1];
+  }
+
+  function applyDisplayPreferences() {
+    if (typeof document === 'undefined') return;
+    const preset = getFontPresetObj(state.fontScale);
+    state.fontScale = preset.val;
+    document.documentElement.style.setProperty('--text-scale', preset.val);
+    document.documentElement.setAttribute('data-font-scale', preset.val);
+    if (document.body) {
+      document.body.classList.toggle('warm-paper', !!state.warmPaper);
+    }
+    const navFontLabel = document.getElementById('nav-font-label');
+    if (navFontLabel) {
+      navFontLabel.textContent = `字體：${preset.label}`;
+    }
+  }
+
+  function initDisplayPreferences() {
+    try {
+      const savedScale = localStorage.getItem(GLOBAL_KEYS.fontScale);
+      if (savedScale && FONT_SCALE_PRESETS.some(p => p.val === savedScale)) {
+        state.fontScale = savedScale;
+      } else {
+        state.fontScale = isTabletViewport() ? '1.15' : '1';
+      }
+      const savedLayout = localStorage.getItem(GLOBAL_KEYS.readingLayout);
+      state.readingLayout = (savedLayout === 'focus' || savedLayout === 'split') ? savedLayout : 'split';
+      state.warmPaper = localStorage.getItem(GLOBAL_KEYS.warmPaper) === '1';
+    } catch (e) {
+      state.fontScale = '1.15';
+      state.readingLayout = 'split';
+      state.warmPaper = false;
+    }
+    applyDisplayPreferences();
+  }
+
+  function setFontScale(val, announce = true) {
+    const preset = getFontPresetObj(val);
+    state.fontScale = preset.val;
+    try {
+      localStorage.setItem(GLOBAL_KEYS.fontScale, preset.val);
+    } catch (e) {}
+    applyDisplayPreferences();
+    renderFontPopoverContent();
+    if (announce) showToast(`字體已切換為「${preset.label}」(${preset.sub})`);
+  }
+
+  function stepFontScale(delta) {
+    let idx = FONT_SCALE_PRESETS.findIndex(p => p.val === String(state.fontScale));
+    if (idx < 0) idx = 1;
+    const nextIdx = Math.max(0, Math.min(FONT_SCALE_PRESETS.length - 1, idx + delta));
+    if (nextIdx === idx) {
+      const edgeMsg = delta < 0 ? '已經是最小「標準」字體' : '已經是最大「特大」字體';
+      showToast(edgeMsg);
+      return;
+    }
+    setFontScale(FONT_SCALE_PRESETS[nextIdx].val, true);
+  }
+
+  function setReadingLayout(layoutMode, announce = true) {
+    state.readingLayout = (layoutMode === 'focus') ? 'focus' : 'split';
+    try {
+      localStorage.setItem(GLOBAL_KEYS.readingLayout, state.readingLayout);
+    } catch (e) {}
+    renderFontPopoverContent();
+    if (state.view === 'unit_hub' && state.currentSubtab === 'reading') {
+      const appEl = document.getElementById('app');
+      if (appEl) renderUnitHubView(appEl, state.currentBookId, state.currentUnitId, 'reading');
+    }
+    if (announce) {
+      showToast(state.readingLayout === 'split' ? '課文切換為：🅰️ 雙欄對照模式' : '課文切換為：🅱️ 單欄逐句模式');
+    }
+  }
+
+  function toggleWarmPaper(announce = true) {
+    state.warmPaper = !state.warmPaper;
+    try {
+      localStorage.setItem(GLOBAL_KEYS.warmPaper, state.warmPaper ? '1' : '0');
+    } catch (e) {}
+    applyDisplayPreferences();
+    renderFontPopoverContent();
+    if (announce) showToast(state.warmPaper ? '已開啟「📖 護眼暖紙底」模式' : '已切換回「☀️ 清亮白底」模式');
+  }
+
+  function renderFontPopoverContent() {
+    const pop = document.getElementById('fontControlPopover');
+    if (!pop) return;
+    const preset = getFontPresetObj(state.fontScale);
+    pop.innerHTML = `
+      <div class="font-popover-head">
+        <strong>🔠 閱讀字體與護眼設定</strong>
+        <button type="button" class="btn-close-drawer" id="btn-close-font-popover" aria-label="關閉設定">✕</button>
+      </div>
+      <div class="font-popover-section">
+        <span class="font-popover-label">字體大小（目前：${preset.label} ${preset.sub}，不影響 A4 列印）</span>
+        <div class="font-scale-grid">
+          ${FONT_SCALE_PRESETS.map(p => `
+            <button type="button" class="font-scale-btn ${p.val === state.fontScale ? 'active' : ''}" data-pick-scale="${p.val}">
+              <span>${p.label}</span>
+              <small>${p.sub}</small>
+            </button>
+          `).join('')}
+        </div>
+      </div>
+      <div class="font-popover-section">
+        <span class="font-popover-label">課文閱讀版面（10.2" iPad 橫向推薦切換）</span>
+        <div class="font-layout-row">
+          <button type="button" class="font-opt-toggle ${state.readingLayout === 'split' ? 'active' : ''}" data-pick-reading-layout="split">
+            🅰️ 左右雙欄對照
+          </button>
+          <button type="button" class="font-opt-toggle ${state.readingLayout === 'focus' ? 'active' : ''}" data-pick-reading-layout="focus">
+            🅱️ 單欄逐句條列
+          </button>
+        </div>
+      </div>
+      <div class="font-popover-section">
+        <button type="button" class="warm-paper-toggle ${state.warmPaper ? 'active' : ''}" id="btn-toggle-warm-paper">
+          <span>📖 護眼暖紙底（降低純白反光）</span>
+          <span>${state.warmPaper ? '已開啟 ✓' : '開啟'}</span>
+        </button>
+      </div>
+    `;
+
+    const closeBtn = document.getElementById('btn-close-font-popover');
+    if (closeBtn) closeBtn.onclick = closeFontControlPopover;
+
+    pop.onclick = (e) => { e.stopPropagation(); };
+    pop.querySelectorAll('[data-pick-scale]').forEach(btn => {
+      btn.onclick = (e) => { e.stopPropagation(); setFontScale(btn.getAttribute('data-pick-scale'), true); };
+    });
+    pop.querySelectorAll('[data-pick-reading-layout]').forEach(btn => {
+      btn.onclick = (e) => { e.stopPropagation(); setReadingLayout(btn.getAttribute('data-pick-reading-layout'), true); };
+    });
+    const warmBtn = document.getElementById('btn-toggle-warm-paper');
+    if (warmBtn) {
+      warmBtn.onclick = (e) => { e.stopPropagation(); toggleWarmPaper(true); };
+    }
+  }
+
+  function openFontControlPopover() {
+    const pop = document.getElementById('fontControlPopover');
+    if (!pop) return;
+    renderFontPopoverContent();
+    pop.style.display = 'block';
+  }
+
+  function closeFontControlPopover() {
+    const pop = document.getElementById('fontControlPopover');
+    if (pop) pop.style.display = 'none';
+  }
+
+  function scrollPageToTop() {
+    if (typeof window === 'undefined' || typeof window.scrollTo !== 'function') return;
+    try {
+      window.scrollTo({ top: 0, behavior: 'instant' });
+    } catch (e) {
+      window.scrollTo(0, 0);
+    }
+  }
+
   function getUserKey(baseKey, userId = state.currentUser) {
     return `${baseKey}__${userId}`;
   }
@@ -931,12 +1120,14 @@
 
       utt.onend = () => {
         activeSpeech = null;
-        document.querySelectorAll('.reading-sentence.speaking-active').forEach(el => el.classList.remove('speaking-active'));
+        state.activeSentenceKey = null;
+        document.querySelectorAll('.reading-sentence.speaking-active, .reading-zh-sent.speaking-active, .reading-sentence-row.speaking-active').forEach(el => el.classList.remove('speaking-active'));
         if (typeof onEndCallback === 'function') onEndCallback();
       };
       utt.onerror = () => {
         activeSpeech = null;
-        document.querySelectorAll('.reading-sentence.speaking-active').forEach(el => el.classList.remove('speaking-active'));
+        state.activeSentenceKey = null;
+        document.querySelectorAll('.reading-sentence.speaking-active, .reading-zh-sent.speaking-active, .reading-sentence-row.speaking-active').forEach(el => el.classList.remove('speaking-active'));
         if (typeof onEndCallback === 'function') onEndCallback();
       };
 
@@ -952,7 +1143,8 @@
       window.speechSynthesis.cancel();
       activeSpeech = null;
     }
-    document.querySelectorAll('.reading-sentence.speaking-active').forEach(el => el.classList.remove('speaking-active'));
+    state.activeSentenceKey = null;
+    document.querySelectorAll('.reading-sentence.speaking-active, .reading-zh-sent.speaking-active, .reading-sentence-row.speaking-active').forEach(el => el.classList.remove('speaking-active'));
   }
 
   // ==========================================================================
@@ -1431,6 +1623,7 @@
     const app = document.getElementById('app');
     if (!app) return;
     updateNavBadges();
+    applyDisplayPreferences();
     stopAllSpeech();
 
     if (state.view === 'dashboard') {
@@ -1449,6 +1642,7 @@
       state.view = 'dashboard';
       renderDashboardView(app);
     }
+    scrollPageToTop();
   }
 
   // ==========================================================================
@@ -1521,15 +1715,7 @@
         <section class="glass hero">
           <div>
             <h2>${curUser.icon} ${curUser.name} 的英語特訓 <span class="grad">核心素養精熟特訓</span></h2>
-            <p>5 大書系完整課文・7 大記憶錨點・神探點詞抓錯・雙軌紙筆測驗・岱崙小考歷史真題全收錄。</p>
-            <div class="filters">
-              <span class="label">教材範圍：</span>
-              <span class="chip on"><span class="dot"></span>📘 文法專修</span>
-              <span class="chip on"><span class="dot"></span>📝 寫作專攻</span>
-              <span class="chip on"><span class="dot"></span>📖 讀寫進階</span>
-              <span class="chip on"><span class="dot"></span>🚀 太空科普</span>
-              <span class="chip on"><span class="dot"></span>🏆 岱崙週考真卷</span>
-            </div>
+            <p class="hero-subtitle">5 大書系完整課文・7 大記憶錨點・神探點詞抓錯・雙軌紙筆測驗・岱崙小考歷史真題全收錄。</p>
           </div>
           <div class="stats">
             <div class="stat pri"><b>${g.pct}%</b><span>全冊掌握度</span></div>
@@ -1816,9 +2002,13 @@
       else if (mistakes.length > 0) activeSubtab = 'mistake';
       state.currentSubtab = activeSubtab;
     }
+    if (activeSubtab !== 'reading') {
+      state.readingFocusMode = false;
+    }
+    const isFocusReading = (activeSubtab === 'reading' && state.readingFocusMode);
 
     container.innerHTML = `
-      <div class="view unit-hub">
+      <div class="view unit-hub ${isFocusReading ? 'reading-focus-active' : ''}">
         <!-- 麵包屑導航 -->
         <nav class="breadcrumb-bar">
           <button class="crumb-link" id="btn-crumb-home">🏠 首頁</button>
@@ -1831,13 +2021,13 @@
         <!-- 單元 Hero 橫幅 -->
         <section class="unit-hub-hero">
           <div class="unit-hub-title-row">
-            <div>
-              <span class="b-badge" style="background:#ede9fe; color:#5b4bdb; font-weight:800; font-size:12px; padding:2px 8px; border-radius:999px;">${book.category}</span>
-              <h2 style="margin-top:6px;">${unit.title}</h2>
-              <p class="unit-hub-bq">${unit.desc}</p>
+            <div class="unit-hub-title-meta">
+              <span class="b-badge" style="background:#ede9fe; color:#5b4bdb; font-weight:800; font-size:calc(12px * var(--ui-scale, 1)); padding:2px 8px; border-radius:999px;">${book.category}</span>
+              <h2 style="margin-top:4px;">${unit.title}</h2>
+              <p class="unit-hub-bq" title="${escapeHtml(unit.desc)}">${unit.desc}</p>
             </div>
-            <div style="display:flex; gap:8px;">
-              <button class="btn btn-primary" id="btn-quick-quiz-launch">🎯 啟動全單元綜合測驗 (${allQuizzes.length} 題)</button>
+            <div class="unit-hub-actions">
+              <button class="btn btn-primary" id="btn-quick-quiz-launch">🎯 全單元測驗 (${allQuizzes.length} 題)</button>
               <button class="btn btn-ghost" id="btn-quick-print-launch">🖨️ A4 出卷</button>
             </div>
           </div>
@@ -1909,12 +2099,27 @@
           </div>
         </section>
 
+        ${isFocusReading ? `
+          <div class="reading-focus-bar">
+            <span>📖 專注閱讀中：${escapeHtml(unit.title)}</span>
+            <button type="button" class="btn btn-sm btn-ghost" id="btn-exit-focus-mode">✕ 退出專注模式</button>
+          </div>
+        ` : ''}
+
         <!-- 子面板容器 -->
         <div id="subtab-panel-container">
           <!-- 動態渲染各學習子面板 -->
         </div>
       </div>
     `;
+
+    const exitFocusBtn = document.getElementById('btn-exit-focus-mode');
+    if (exitFocusBtn) {
+      exitFocusBtn.onclick = () => {
+        state.readingFocusMode = false;
+        renderUnitHubView(container, bookId, unitId, 'reading');
+      };
+    }
 
     // 麵包屑導航與捷徑
     document.getElementById('btn-crumb-home').onclick = () => {
@@ -1970,7 +2175,7 @@
   // --------------------------------------------------------------------------
   function renderReadingSubpanel(container, bookId, unitId, passages, vocabs) {
     if (!passages || passages.length === 0) {
-      container.innerHTML = '<div class="glass" style="padding:40px; text-align:center; font-size:15px; color:var(--ink-2);">本單元目前以專題字彙與文法測驗為主，無獨立長篇課文段落。</div>';
+      container.innerHTML = '<div class="glass" style="padding:40px; text-align:center; font-size:calc(15px * var(--text-scale, 1)); color:var(--ink-2);">本單元目前以專題字彙與文法測驗為主，無獨立長篇課文段落。</div>';
       return;
     }
 
@@ -1997,7 +2202,10 @@
       return out;
     }
 
-    // 建立段落清單 (保留整段朗讀 + 新增點擊任一句子單獨朗讀與高亮跟讀)
+    const isSplitMode = state.readingLayout !== 'focus';
+    const showChi = state.showReadingChi !== false;
+    const showNotes = state.showReadingNotes !== false;
+
     const passagesHtml = passages.map((p, idx) => {
       const engText = p.eng || '';
       const chiText = p.chi || '';
@@ -2006,62 +2214,152 @@
       const sentenceObjs = (Array.isArray(p.sentences) && p.sentences.length > 0)
         ? p.sentences.filter(s => s && s.en && String(s.en).trim())
         : splitSentencesFallback(engText);
+      const hasPerSentenceZh = sentenceObjs.length > 0 && sentenceObjs.some(s => s && (s.zh || s.chi) && String(s.zh || s.chi).trim());
 
-      const sentencesHtml = sentenceObjs.length > 0
-        ? sentenceObjs.map((sObj, sIdx) => {
-            const cleanSent = String(sObj.en || '').trim();
-            return `<span class="reading-sentence" data-speak-sentence="1" data-sent-en="${escapeHtml(cleanSent)}" data-p-idx="${idx}" data-s-idx="${sIdx}" title="點擊單獨朗讀此句"><i class="sent-speaker-ico" aria-hidden="true">🔊</i>${decorateSentenceTokens(cleanSent)}</span> `;
-          }).join('')
-        : decorateSentenceTokens(engText).replace(/\n\n/g, '<br><br>');
-
-      return `
-        <article class="reading-passage-card">
-          <div class="reading-passage-head">
-            <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
-              <span class="reading-seq">Paragraph ${p.sequence || (idx + 1)}</span>
-              <h4 style="margin:0; font-size:15.5px;">${title}</h4>
+      const keyNotesHtml = (showNotes && keySentences.length > 0) ? `
+        <div class="reading-key-notes-box">
+          ${keySentences.map(ks => `
+            <div class="reading-key-note-item">
+              <span class="note-tag">🎯 段考考點解析</span>
+              <strong style="color:var(--ink);">${ks.sentence || ''}</strong>
+              ${(ks.note || ks.point) ? `<div style="color:#78350f; font-size:calc(13.5px * var(--text-scale, 1)); margin-top:3px;">💡 解析：${ks.note || ks.point}</div>` : ''}
             </div>
-            <button class="btn btn-sm btn-ghost" data-speak-passage="${idx}" title="朗讀此段落">🔊 朗讀此段</button>
+          `).join('')}
+        </div>
+      ` : '';
+
+      const headHtml = `
+        <div class="reading-passage-head">
+          <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
+            <span class="reading-seq">Paragraph ${p.sequence || (idx + 1)}</span>
+            <h4 style="margin:0; font-size:calc(16px * var(--text-scale, 1));">${title}</h4>
           </div>
-          <div class="reading-passage-body">
-            ${sentencesHtml}
-          </div>
-          ${chiText ? `
-            <div class="reading-translation-box">
+          <button class="btn btn-sm btn-ghost" data-speak-passage="${idx}" title="朗讀此段落">🔊 朗讀此段</button>
+        </div>
+      `;
+
+      if (isSplitMode) {
+        // 樣式 A：左右雙欄對照（左英文限寬 + 右側中文逐句聯動高亮 / 考點）
+        const sentencesHtml = sentenceObjs.length > 0
+          ? sentenceObjs.map((sObj, sIdx) => {
+              const cleanSent = String(sObj.en || '').trim();
+              const isAct = state.activeSentenceKey === `${idx}-${sIdx}`;
+              return `<span class="reading-sentence ${isAct ? 'speaking-active' : ''}" data-speak-sentence="1" data-sent-en="${escapeHtml(cleanSent)}" data-p-idx="${idx}" data-s-idx="${sIdx}" title="點擊單獨朗讀此句"><i class="sent-speaker-ico" aria-hidden="true">🔊</i>${decorateSentenceTokens(cleanSent)}</span> `;
+            }).join('')
+          : decorateSentenceTokens(engText).replace(/\n\n/g, '<br><br>');
+
+        const rightChiHtml = showChi ? (
+          hasPerSentenceZh ? `
+            <div class="reading-split-zh-wrap">
+              <div class="reading-split-right-head">
+                <span>🌐 逐句聯動中文對照</span>
+                <span class="reading-split-right-hint">點中文可聽英文</span>
+              </div>
+              <div class="reading-zh-synced-list">
+                ${sentenceObjs.map((sObj, sIdx) => {
+                  const zhStr = String(sObj.zh || sObj.chi || '').trim();
+                  if (!zhStr) return '';
+                  const isAct = state.activeSentenceKey === `${idx}-${sIdx}`;
+                  return `<span class="reading-zh-sent ${isAct ? 'speaking-active' : ''}" data-zh-p-idx="${idx}" data-zh-s-idx="${sIdx}">${escapeHtml(zhStr)}</span>`;
+                }).join('')}
+              </div>
+            </div>
+          ` : (chiText ? `
+            <div class="reading-translation-box" style="margin-top:0;">
               <strong style="color:var(--primary);">🌐 中文對照翻譯：</strong><br>
               <span>${chiText.replace(/\n/g, '<br>')}</span>
             </div>
-          ` : ''}
-          ${keySentences.length > 0 ? `
-            <div class="reading-key-notes-box">
-              ${keySentences.map(ks => `
-                <div class="reading-key-note-item">
-                  <span class="note-tag">🎯 段考考點解析</span>
-                  <strong style="color:#1e293b;">${ks.sentence || ''}</strong>
-                  ${(ks.note || ks.point) ? `<div style="color:#78350f; font-size:13px; margin-top:2px;">💡 解析：${ks.note || ks.point}</div>` : ''}
+          ` : '')
+        ) : '';
+
+        const hasRightCol = Boolean(rightChiHtml || keyNotesHtml);
+
+        return `
+          <article class="reading-passage-card mode-split">
+            ${headHtml}
+            <div class="${hasRightCol ? 'reading-split-grid' : ''}">
+              <div class="reading-split-left">
+                <div class="reading-passage-body">
+                  ${sentencesHtml}
                 </div>
-              `).join('')}
+              </div>
+              ${hasRightCol ? `
+                <aside class="reading-split-right">
+                  ${rightChiHtml}
+                  ${keyNotesHtml}
+                </aside>
+              ` : ''}
             </div>
-          ` : ''}
-        </article>
-      `;
+          </article>
+        `;
+      } else {
+        // 樣式 B：單欄置中最適行寬 (~64ch) + 逐句條列 + 左側獨立 44px 發音鈕
+        const rowsHtml = sentenceObjs.length > 0
+          ? `<div class="reading-sentence-rows">
+              ${sentenceObjs.map((sObj, sIdx) => {
+                const cleanSent = String(sObj.en || '').trim();
+                const zhStr = String(sObj.zh || sObj.chi || '').trim();
+                const isAct = state.activeSentenceKey === `${idx}-${sIdx}`;
+                return `
+                  <div class="reading-sentence-row ${isAct ? 'speaking-active' : ''}" data-row-p-idx="${idx}" data-row-s-idx="${sIdx}">
+                    <button type="button" class="reading-sent-speak-btn" data-speak-sentence="1" data-sent-en="${escapeHtml(cleanSent)}" data-p-idx="${idx}" data-s-idx="${sIdx}" title="朗讀這一句">
+                      <i class="sent-speaker-ico" aria-hidden="true">🔊</i>
+                    </button>
+                    <div class="reading-row-content">
+                      <span class="reading-sentence reading-row-eng ${isAct ? 'speaking-active' : ''}" data-speak-sentence="1" data-sent-en="${escapeHtml(cleanSent)}" data-p-idx="${idx}" data-s-idx="${sIdx}">${decorateSentenceTokens(cleanSent)}</span>
+                      ${(showChi && zhStr) ? `<div class="reading-row-zh">${escapeHtml(zhStr)}</div>` : ''}
+                    </div>
+                  </div>
+                `;
+              }).join('')}
+            </div>`
+          : `<div class="reading-passage-body">${decorateSentenceTokens(engText).replace(/\n\n/g, '<br><br>')}</div>`;
+
+        const fallbackParaChiHtml = (showChi && !hasPerSentenceZh && chiText) ? `
+          <div class="reading-translation-box">
+            <strong style="color:var(--primary);">🌐 中文對照翻譯：</strong><br>
+            <span>${chiText.replace(/\n/g, '<br>')}</span>
+          </div>
+        ` : '';
+
+        return `
+          <article class="reading-passage-card mode-focus">
+            ${headHtml}
+            ${rowsHtml}
+            ${fallbackParaChiHtml}
+            ${keyNotesHtml}
+          </article>
+        `;
+      }
     }).join('');
 
     container.innerHTML = `
       <div class="reading-toolbar glass">
-        <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
-          <button class="btn btn-primary btn-sm" id="btn-play-all-passages">🔊 連續朗讀全篇</button>
-          <button class="btn btn-ghost btn-sm" id="btn-stop-tts">⏹️ 停止朗讀</button>
+        <div class="reading-toolbar-controls">
+          <button class="btn btn-primary btn-sm" id="btn-play-all-passages">🔊 連續朗讀</button>
+          <button class="btn btn-ghost btn-sm" id="btn-stop-tts">⏹️ 停止</button>
           <label class="toolbar-checkbox-label">
-            <input type="checkbox" id="chk-toggle-chi" checked>
-            <span>顯示中文對照翻譯</span>
+            <input type="checkbox" id="chk-toggle-chi" ${showChi ? 'checked' : ''}>
+            <span>中文翻譯</span>
           </label>
           <label class="toolbar-checkbox-label">
-            <input type="checkbox" id="chk-toggle-notes" checked>
-            <span>標註段考考點解析</span>
+            <input type="checkbox" id="chk-toggle-notes" ${showNotes ? 'checked' : ''}>
+            <span>段考考點</span>
           </label>
         </div>
-        <span class="muted" style="font-size:13px;">💡 提示：點擊<strong>任一句子 (🔊)</strong> 可單句朗讀跟讀；點擊<strong>藍色高亮生字</strong>可發音並彈出「7 大錨點單字卡」！</span>
+        <div class="reading-toolbar-actions">
+          <div class="reading-layout-switch" role="group" aria-label="課文閱讀版面切換">
+            <button type="button" class="reading-layout-btn ${isSplitMode ? 'active' : ''}" data-reading-layout="split">🅰️ 雙欄對照</button>
+            <button type="button" class="reading-layout-btn ${!isSplitMode ? 'active' : ''}" data-reading-layout="focus">🅱️ 單欄逐句</button>
+          </div>
+          <div class="reading-inline-font-group" aria-label="快速調整字體">
+            <button type="button" class="btn-inline-font" id="btn-reading-font-dec" title="縮小字體">A-</button>
+            <button type="button" class="btn-inline-font" id="btn-reading-font-inc" title="放大字體">A+</button>
+          </div>
+          <button type="button" class="btn btn-sm btn-ghost btn-focus-toggle ${state.readingFocusMode ? 'active' : ''}" id="btn-reading-focus-mode" title="收合上方單元選單，專心看課文">
+            ${state.readingFocusMode ? '✕ 退出專注' : '📖 專注閱讀'}
+          </button>
+        </div>
       </div>
       <div class="reading-passages-list">
         ${passagesHtml}
@@ -2069,31 +2367,76 @@
     `;
 
     // 朗讀與開關事件
-    const chiBoxes = container.querySelectorAll('.reading-translation-box');
     const chkChi = document.getElementById('chk-toggle-chi');
     if (chkChi) {
       chkChi.onchange = () => {
-        chiBoxes.forEach(box => { box.style.display = chkChi.checked ? 'block' : 'none'; });
+        state.showReadingChi = chkChi.checked;
+        renderReadingSubpanel(container, bookId, unitId, passages, vocabs);
       };
     }
 
-    const noteBoxes = container.querySelectorAll('.reading-key-notes-box');
     const chkNotes = document.getElementById('chk-toggle-notes');
     if (chkNotes) {
       chkNotes.onchange = () => {
-        noteBoxes.forEach(box => { box.style.display = chkNotes.checked ? 'block' : 'none'; });
+        state.showReadingNotes = chkNotes.checked;
+        renderReadingSubpanel(container, bookId, unitId, passages, vocabs);
       };
     }
 
-    container.querySelectorAll('.reading-sentence').forEach(sentEl => {
-      sentEl.onclick = () => {
+    container.querySelectorAll('[data-reading-layout]').forEach(btn => {
+      btn.onclick = () => {
+        const nextLayout = btn.getAttribute('data-reading-layout');
+        setReadingLayout(nextLayout, true);
+      };
+    });
+
+    const fontDecBtn = document.getElementById('btn-reading-font-dec');
+    if (fontDecBtn) fontDecBtn.onclick = () => stepFontScale(-1);
+    const fontIncBtn = document.getElementById('btn-reading-font-inc');
+    if (fontIncBtn) fontIncBtn.onclick = () => stepFontScale(1);
+
+    const focusToggleBtn = document.getElementById('btn-reading-focus-mode');
+    if (focusToggleBtn) {
+      focusToggleBtn.onclick = () => {
+        state.readingFocusMode = !state.readingFocusMode;
+        const appEl = document.getElementById('app');
+        if (appEl) renderUnitHubView(appEl, bookId, unitId, 'reading');
+      };
+    }
+
+    function activateSentenceHighlight(pIdx, sIdx) {
+      document.querySelectorAll('.reading-sentence.speaking-active, .reading-zh-sent.speaking-active, .reading-sentence-row.speaking-active').forEach(el => el.classList.remove('speaking-active'));
+      state.activeSentenceKey = `${pIdx}-${sIdx}`;
+      container.querySelectorAll(`[data-p-idx="${pIdx}"][data-s-idx="${sIdx}"]`).forEach(el => el.classList.add('speaking-active'));
+      const rowEl = container.querySelector(`.reading-sentence-row[data-row-p-idx="${pIdx}"][data-row-s-idx="${sIdx}"]`);
+      if (rowEl) rowEl.classList.add('speaking-active');
+      const zhEl = container.querySelector(`.reading-zh-sent[data-zh-p-idx="${pIdx}"][data-zh-s-idx="${sIdx}"]`);
+      if (zhEl) {
+        zhEl.classList.add('speaking-active');
+        try { zhEl.scrollIntoView({ block: 'nearest', behavior: 'smooth' }); } catch (e) {}
+      }
+    }
+
+    container.querySelectorAll('[data-speak-sentence]').forEach(sentEl => {
+      sentEl.onclick = (e) => {
+        if (e.target && e.target.closest && e.target.closest('.reading-vocab-token')) return;
         const sentEn = sentEl.getAttribute('data-sent-en');
+        const pIdx = sentEl.getAttribute('data-p-idx');
+        const sIdx = sentEl.getAttribute('data-s-idx');
         if (!sentEn) return;
-        document.querySelectorAll('.reading-sentence.speaking-active').forEach(el => el.classList.remove('speaking-active'));
-        sentEl.classList.add('speaking-active');
+        activateSentenceHighlight(pIdx, sIdx);
         speakText(sentEn, state.ttsSpeed, () => {
-          sentEl.classList.remove('speaking-active');
+          stopAllSpeech();
         });
+      };
+    });
+
+    container.querySelectorAll('.reading-zh-sent').forEach(zhEl => {
+      zhEl.onclick = () => {
+        const pIdx = zhEl.getAttribute('data-zh-p-idx');
+        const sIdx = zhEl.getAttribute('data-zh-s-idx');
+        const matchEng = container.querySelector(`.reading-sentence[data-p-idx="${pIdx}"][data-s-idx="${sIdx}"]`);
+        if (matchEng) matchEng.click();
       };
     });
 
@@ -2139,7 +2482,7 @@
   // --------------------------------------------------------------------------
   function renderVocabSubpanel(container, bookId, unitId, vocabs) {
     if (!vocabs || vocabs.length === 0) {
-      container.innerHTML = '<div class="glass" style="padding:40px; text-align:center; font-size:15px; color:var(--ink-2);">本單元無獨立單字列表，請參閱課文閱聽或直接進行雙軌測驗。</div>';
+      container.innerHTML = '<div class="glass" style="padding:40px; text-align:center; font-size:calc(15px * var(--text-scale, 1)); color:var(--ink-2);">本單元無獨立單字列表，請參閱課文閱聽或直接進行雙軌測驗。</div>';
       return;
     }
 
@@ -2172,7 +2515,7 @@
               <span class="v-tag" style="background:#ede9fe; color:#5b21b6;">📝 課文例句</span>
               <div>
                 <strong>${v.context_eng}</strong>
-                ${v.context_chi ? `<div style="color:var(--ink-3); font-size:12.5px; margin-top:2px;">${v.context_chi}</div>` : ''}
+                ${v.context_chi ? `<div style="color:var(--ink-3); font-size:calc(12.5px * var(--text-scale, 1)); margin-top:2px;">${v.context_chi}</div>` : ''}
               </div>
             </div>
           ` : ''}
@@ -2209,7 +2552,7 @@
   // --------------------------------------------------------------------------
   function renderGrammarSubpanel(container, bookId, unitId, grammars) {
     if (!grammars || grammars.length === 0) {
-      container.innerHTML = '<div class="glass" style="padding:40px; text-align:center; font-size:15px; color:var(--ink-2);">本單元未配置文法避坑卡，請參閱課文或進行實戰題庫測驗。</div>';
+      container.innerHTML = '<div class="glass" style="padding:40px; text-align:center; font-size:calc(15px * var(--text-scale, 1)); color:var(--ink-2);">本單元未配置文法避坑卡，請參閱課文或進行實戰題庫測驗。</div>';
       return;
     }
 
@@ -2227,7 +2570,7 @@
       return `
         <article class="grammar-focus-card glass">
           <div class="grammar-card-head">
-            <span class="b-badge" style="background:#ede9fe; color:#5b21b6; font-size:12px;">文法專修</span>
+            <span class="b-badge" style="background:#ede9fe; color:#5b21b6; font-size:calc(12px * var(--text-scale, 1));">文法專修</span>
             <h4>${escapeHtml(title)}</h4>
           </div>
 
@@ -2240,9 +2583,9 @@
 
           ${(parsed.categories.length > 0 || chiExp) ? `
             <div class="grammar-exp-box">
-              <strong style="color:var(--ink-1); font-size:14px;">💡 核心觀念分段解析：</strong>
+              <strong style="color:var(--ink-1); font-size:calc(14px * var(--text-scale, 1));">💡 核心觀念分段解析：</strong>
               ${parsed.categories.length > 0 ? `
-                ${parsed.intro ? `<p style="margin:6px 0 4px; line-height:1.6; color:var(--ink-2); font-size:14px;">${escapeHtml(parsed.intro)}</p>` : ''}
+                ${parsed.intro ? `<p style="margin:6px 0 4px; line-height:1.6; color:var(--ink-2); font-size:calc(14px * var(--text-scale, 1));">${escapeHtml(parsed.intro)}</p>` : ''}
                 <div class="grammar-cat-list">
                   ${parsed.categories.map(cat => `
                     <div class="grammar-cat-row">
@@ -2252,12 +2595,12 @@
                           ${cat.items.map(chip => `<span class="grammar-chip">${escapeHtml(chip)}</span>`).join('')}
                         </div>
                       ` : ''}
-                      ${cat.note ? `<div style="font-size:12.5px; color:#64748b; margin-top:4px;">${escapeHtml(cat.note)}</div>` : ''}
+                      ${cat.note ? `<div style="font-size:calc(12.5px * var(--text-scale, 1)); color:#64748b; margin-top:4px;">${escapeHtml(cat.note)}</div>` : ''}
                     </div>
                   `).join('')}
                 </div>
               ` : `
-                <p style="margin:6px 0 0; line-height:1.7; color:var(--ink-2); font-size:14.5px;">${escapeHtml(chiExp)}</p>
+                <p style="margin:6px 0 0; line-height:1.7; color:var(--ink-2); font-size:calc(14.5px * var(--text-scale, 1));">${escapeHtml(chiExp)}</p>
               `}
             </div>
           ` : ''}
@@ -2283,7 +2626,7 @@
 
           ${examples.length > 0 ? `
             <div class="grammar-examples-box" style="margin-top:14px;">
-              <strong style="color:var(--primary); font-size:13.5px;">🌟 經典正反範例與例句 (點擊 🔊 聆聽標準發音)：</strong>
+              <strong style="color:var(--primary); font-size:calc(13.5px * var(--text-scale, 1));">🌟 經典正反範例與例句 (點擊 🔊 聆聽標準發音)：</strong>
               <div class="grammar-examples-list" style="margin-top:8px; display:grid; gap:8px;">
                 ${examples.map(ex => {
                   const rawStr = typeof ex === 'object' ? (ex.en || '') : String(ex || '');
@@ -2331,7 +2674,7 @@
   // --------------------------------------------------------------------------
   function renderMistakeSubpanel(container, mistakes) {
     if (!mistakes || mistakes.length === 0) {
-      container.innerHTML = '<div class="glass" style="padding:40px; text-align:center; font-size:15px; color:var(--ink-2);">本單元未配置改錯題目，請進行雙軌題庫測驗。</div>';
+      container.innerHTML = '<div class="glass" style="padding:40px; text-align:center; font-size:calc(15px * var(--text-scale, 1)); color:var(--ink-2);">本單元未配置改錯題目，請進行雙軌題庫測驗。</div>';
       return;
     }
 
@@ -2357,7 +2700,7 @@
           <div class="mb-feedback-box" id="mb-feed-${idx}" style="display:none;">
             <div class="mb-correct-line">
               <span class="badge-ok">✓ 修正形式：</span>
-              <strong style="color:var(--ok); font-size:16px;">${m.correct_text || m.fixed_sentence || m.correction || m.correct_word || ''}</strong>
+              <strong style="color:var(--ok); font-size:calc(16px * var(--text-scale, 1));">${m.correct_text || m.fixed_sentence || m.correction || m.correct_word || ''}</strong>
             </div>
             <p class="mb-exp-text">💡 <strong>神探解析：</strong>${m.explanation || m.reason || ''}</p>
           </div>
@@ -2608,16 +2951,24 @@
       : (rawPartTitle.toLowerCase().startsWith(rawPart.toLowerCase()) || /^part\s+[ivx0-9]/i.test(rawPartTitle))
         ? rawPartTitle
         : `${rawPart}：${rawPartTitle}`;
+    const use2x2Grid = !q.is_count_noncount && options.length === 4 && options.every(o => String(o || '').length <= 44);
+    const keepDirectionsOpen = (options.length === 0);
 
     container.innerHTML = `
       <div class="view active-quiz-view">
         <!-- 頂部題號列與抽屜開關 -->
         <div class="quiz-topbar">
-          <button class="btn btn-ghost btn-sm" id="btn-exit-quiz">⬅️ 結束並返回</button>
-          <button type="button" class="count-badge-btn" id="btn-toggle-drawer">
-            第 ${state.quizIndex + 1} / ${state.quizQuestions.length} 題 ${state.drawerOpen ? '▲ 收起抽屜盤' : '▼ 快速跳題抽屜盤'}
-          </button>
-          <span class="tag ${isError ? 'bad' : 'ok'}">${isError ? '🔥 曾有錯題紀錄' : '✨ 熟練良好'}</span>
+          <div class="quiz-topbar-left">
+            <button class="btn btn-ghost btn-sm" id="btn-exit-quiz">⬅️ 結束並返回</button>
+            <button type="button" class="count-badge-btn" id="btn-toggle-drawer">
+              第 ${state.quizIndex + 1} / ${state.quizQuestions.length} 題 ${state.drawerOpen ? '▲ 收起抽屜盤' : '▼ 快速跳題抽屜盤'}
+            </button>
+            <span class="tag ${isError ? 'bad' : 'ok'}">${isError ? '🔥 曾有錯題紀錄' : '✨ 熟練良好'}</span>
+          </div>
+          <div class="quiz-inline-font-group" aria-label="作答字體大小調整">
+            <button type="button" class="btn-inline-font" id="btn-quiz-font-dec" title="縮小題目字體">A-</button>
+            <button type="button" class="btn-inline-font" id="btn-quiz-font-inc" title="放大題目字體">A+</button>
+          </div>
         </div>
 
         <!-- 題號抽屜盤 (展開時呈現) -->
@@ -2642,18 +2993,21 @@
         <div class="quiz-card">
           <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
             <span class="tag pri">${getQuizTypeBadgeLabel(q)}</span>
-            <span style="font-size:13px; color:var(--ink-3);">難度：${q.difficulty || '★★★☆☆'}</span>
+            <span style="font-size:calc(13px * var(--text-scale, 1)); color:var(--ink-3);">難度：${q.difficulty || '★★★☆☆'}</span>
           </div>
 
-                    <!-- 岱崙實體真卷大題指南橫幅 -->
+          <!-- 岱崙實體真卷大題指南橫幅 (選擇題時預設收合 Directions 節省平板高度) -->
           ${(q.part_instructions || q.sentence_form || q.word_bank) ? `
             <div class="exam-section-banner">
               <div class="es-badge">📄 ${escapeHtml(partBannerText)}</div>
               ${q.part_instructions ? `
-                <blockquote class="es-instructions">
-                  <strong>Directions:</strong> ${escapeHtml(q.part_instructions)}
-                  ${q.tense_hint ? `<div class="es-tense-warning">⚠️ ${escapeHtml(q.tense_hint)}</div>` : ''}
-                </blockquote>
+                <details class="exam-banner-details" ${keepDirectionsOpen ? 'open' : ''}>
+                  <summary>📋 作答說明 Directions（點擊展開／收合 ▾）</summary>
+                  <blockquote class="es-instructions">
+                    <strong>Directions:</strong> ${escapeHtml(q.part_instructions)}
+                    ${q.tense_hint ? `<div class="es-tense-warning">⚠️ ${escapeHtml(q.tense_hint)}</div>` : ''}
+                  </blockquote>
+                </details>
               ` : ''}
               ${q.word_bank ? `
                 <div class="es-row">
@@ -2677,7 +3031,7 @@
                 <button class="btn-listen-audio" id="btn-play-word">🔊 朗讀單字 (1.0x)</button>
                 <button class="btn-listen-slow" id="btn-play-word-slow">🐢 慢速精聽 (0.8x)</button>
               </div>
-              <div style="font-size:14.5px; color:#475569; margin-top:4px;">
+              <div style="font-size:calc(14.5px * var(--text-scale, 1)); color:#475569; margin-top:4px;">
                 音標：<code>${escapeHtml(ipaStr) || '請聽音拼寫'}</code> ｜ 請在紙上寫出單字拼寫再對答案！
               </div>
             </div>
@@ -2688,7 +3042,7 @@
             ${renderStructuredStemHtml(q)}
           </div>
 
-          <!-- iPad 互動選項 (四選一 或 可數/不可數二選一) -->
+          <!-- iPad 互動選項 (四選一 2x2/單欄 或 可數/不可數二選一) -->
           ${options.length > 0 ? `
             ${q.is_count_noncount ? `
               <div class="count-noncount-grid" id="quiz-options-group">
@@ -2704,7 +3058,7 @@
                 }).join('')}
               </div>
             ` : `
-              <div class="quiz-interactive-options" id="quiz-options-group">
+              <div class="quiz-interactive-options ${use2x2Grid ? 'options-grid-2x2' : ''}" id="quiz-options-group">
                 ${options.map((opt, oi) => `
                   <button class="interactive-opt-btn" data-opt-idx="${oi}">
                     (${String.fromCharCode(65 + oi)}) ${opt}
@@ -2733,8 +3087,8 @@
           <!-- 詳解抽屜 (翻牌後展開) -->
           <div id="quiz-answer-drawer" style="display:none; animation:rise .25s ease;">
             <div style="padding:16px 20px; border-radius:14px; background:#ecfdf5; border:1.5px solid #a7f3d0; margin-bottom:14px;">
-              <span style="font-size:13px; font-weight:800; color:#047857;">🎯 標準正解：</span>
-              <div style="font-size:22px; font-weight:900; color:#065f46; margin-top:2px;">
+              <span style="font-size:calc(13px * var(--text-scale, 1)); font-weight:800; color:#047857;">🎯 標準正解：</span>
+              <div style="font-size:calc(22px * var(--text-scale, 1)); font-weight:900; color:#065f46; margin-top:2px;">
                 ${q.answer || ''}
                 <button class="btn btn-sm btn-ghost" id="btn-speak-ans" style="margin-left:8px;">🔊 聽發音</button>
               </div>
@@ -2829,6 +3183,11 @@
     `;
 
     // 抽屜盤展開與收起
+    const quizFontDec = document.getElementById('btn-quiz-font-dec');
+    if (quizFontDec) quizFontDec.onclick = () => stepFontScale(-1);
+    const quizFontInc = document.getElementById('btn-quiz-font-inc');
+    if (quizFontInc) quizFontInc.onclick = () => stepFontScale(1);
+
     const drawerBtn = document.getElementById('btn-toggle-drawer');
     if (drawerBtn) {
       drawerBtn.onclick = () => {
@@ -2849,6 +3208,7 @@
         state.quizIndex = parseInt(btn.getAttribute('data-jump-idx'), 10);
         state.drawerOpen = false;
         renderActiveQuizView(container);
+        scrollPageToTop();
       };
     });
 
@@ -2906,6 +3266,7 @@
         recordAnswerResult(q, rate);
         state.quizIndex++;
         renderActiveQuizView(container);
+        scrollPageToTop();
       };
     });
 
@@ -2957,9 +3318,9 @@
   function renderQuizSummaryView(container) {
     container.innerHTML = `
       <div class="view result glass" style="padding:48px 32px; text-align:center;">
-        <span style="font-size:64px;">🏆</span>
-        <h2 style="font-size:28px; font-weight:900; margin:12px 0;">恭喜完成本輪特訓！</h2>
-        <p class="muted" style="font-size:16px;">所有答題紀錄已自動更新至學習進度與專屬錯題本。</p>
+        <span style="font-size:calc(64px * var(--ui-scale, 1));">🏆</span>
+        <h2 style="font-size:calc(28px * var(--ui-scale, 1)); font-weight:900; margin:12px 0;">恭喜完成本輪特訓！</h2>
+        <p class="muted" style="font-size:calc(16px * var(--text-scale, 1));">所有答題紀錄已自動更新至學習進度與專屬錯題本。</p>
         <div style="display:flex; justify-content:center; gap:12px; margin-top:24px;">
           <button class="btn btn-primary" id="btn-summary-done">返回單元主頁</button>
           <button class="btn btn-ghost" id="btn-summary-home">回首頁總覽</button>
@@ -3626,6 +3987,26 @@
       };
     }
 
+    const fontNavBtn = document.getElementById('nav-font');
+    if (fontNavBtn) {
+      fontNavBtn.onclick = (e) => {
+        e.stopPropagation();
+        const pop = document.getElementById('fontControlPopover');
+        if (pop && pop.style.display === 'block') closeFontControlPopover();
+        else openFontControlPopover();
+      };
+    }
+    document.addEventListener('click', (e) => {
+      const pop = document.getElementById('fontControlPopover');
+      const btn = document.getElementById('nav-font');
+      if (!pop || pop.style.display !== 'block') return;
+      if (pop.contains(e.target) || (btn && btn.contains(e.target))) return;
+      closeFontControlPopover();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeFontControlPopover();
+    });
+
     const errBtn = document.getElementById('nav-errors');
     if (errBtn) {
       errBtn.onclick = () => {
@@ -3642,11 +4023,12 @@
       };
     }
 
+    initDisplayPreferences();
     initAiPromptModal();
     render();
     // 開啟網頁自動背景與雲端 Firebase 同步最新進度
     syncFromCloud(state.currentUser, false).catch(() => {});
   });
 
-  window.App = { state, render, USERS, loadState, saveState, switchUser, resetTestUser, pushToCloud, syncFromCloud, pushAnswerLog, speakText, getBooksList, getUnitsForBook };
+  window.App = { state, render, USERS, loadState, saveState, switchUser, resetTestUser, pushToCloud, syncFromCloud, pushAnswerLog, speakText, getBooksList, getUnitsForBook, setFontScale, stepFontScale, setReadingLayout, toggleWarmPaper };
 })();

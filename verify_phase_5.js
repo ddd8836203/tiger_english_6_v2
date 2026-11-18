@@ -32,13 +32,9 @@ try {
 
 // 2. index.html cache-busters
 const indexHtml = fs.readFileSync(path.join(ROOT, 'index.html'), 'utf8');
-for (const asset of [
-  'style.css?v=20261114_p5',
-  'english_data.js?v=20261114_p5',
-  'midterm_data.js?v=20261114_p5',
-  'app.js?v=20261114_p5'
-]) {
-  assert(indexHtml.includes(asset), `index.html missing cache-buster asset: ${asset}`);
+for (const assetName of ['style.css', 'english_data.js', 'midterm_data.js', 'app.js']) {
+  const re = new RegExp(`${assetName.replace('.', '\\.')}\\?v=(?:20261114_p5|20261118_p11)`);
+  assert(re.test(indexHtml), `index.html missing cache-buster asset for ${assetName}`);
 }
 
 // 3. style.css Phase 5 selectors & responsive rules

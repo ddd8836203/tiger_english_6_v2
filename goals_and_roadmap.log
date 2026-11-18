@@ -1,9 +1,9 @@
 # 六年級上學期英語高效特訓系統 — 專案目標與路線圖 (goals_and_roadmap.log)
 
 ⚡ 0. 當下狀態快照 (TL;DR Current Snapshot)
-- **最後更新**：2026-11-14
-- **目前版本狀態**：**Phase 9~10（題目逐一健檢去洩漏、三層呼吸感題幹排版、課本全名統一）已完成並通過 `verify_phase_1..10.js` 驗收；待機啟動 Phase 11~12 (期中舊單元補齊與線上發布)**
-- **遠端與部署**：GitHub Repo `ddd8836203/tiger_english_6_v2`（Zero-Build 靜態 SPA；2026-11-14 已將 Phase 1~10 推送至遠端 `main` 分支）
+- **最後更新**：2026-11-18
+- **目前版本狀態**：**Phase 11（10.2" iPad 橫向排版優化、4 段字體控制器、A/B 可切換雙語課文、護眼暖紙底、抓錯 CSS 修復與 2×2 測驗網格）已完成並通過 `verify_phase_1..11.js` 與 1080×680 實機瀏覽器驗收；待機啟動 Phase 12+ (期中舊單元補齊與線上推送)**
+- **遠端與部署**：GitHub Repo `ddd8836203/tiger_english_6_v2`（Zero-Build 靜態 SPA；2026-11-18 已將 Phase 11 推送至遠端 `main` 分支）
 - **本週核心考試範圍**：**Week 12 Quiz（11/18 三，*EL-3C）** — Reading with Writing 6 (Unit 9)、Read and Discover 6: Space (Ch 6)、Oxford Discover Grammar 3 (Unit 16)、Write Right 3 (Unit 6) + Oxford Discover 3 (Unit 16)（共 5 單元、**156 題** KET-4D + 3C 實戰題庫：`65` 聽寫 + `41` 手寫實戰 + `50` 選擇，0 洩漏）
 - **下一步待辦 (Next Actions)**：
   1. `[✅ Phase 1~4]` 完成素材轉正抽取、4-Log 三段式重構、Week 12 五單元雙層 MD 與初始 100 題 4D 衝刺上線 (`verify_phase_1..4.js` 通過)。
@@ -11,7 +11,8 @@
   3. `[✅ Phase 6~7]` 透過平行 `flash` 子代理將 Week 12 五大單元全面升級為 **17 張視覺文法卡 + 156 題仿真 3C 考卷架構** (`verify_phase_6..7.js` 通過)。
   4. `[✅ Phase 8]` 彙編 `build_exam_bank.js`、同步前台 `BOOK_META` 與衝刺卡片計數、確保零空膠囊與 `verify_phase_1..8.js` 全數 0 Failures 通過。
   5. `[✅ Phase 9~10]` 徹底掃除全庫 `368` 道聽寫題洩漏（含 `target_pos`/`masked_example_chi` 遮罩）、補齊 `RWW6 U6/U8` 行號引用原文、統一五書完整英文名稱、重構三層呼吸感題幹視覺卡片與 `Part` 去重，並通過 `verify_phase_1..10.js`。
-  6. `[⏸️ Phase 11~12]`（待使用者確認後啟動）補完 `OD3 U13~15`、期中舊單元 KET-4D + 手寫雙軌升級、異質 Code Review 與 GitHub `tiger_english_6_v2` 推送。
+  6. `[✅ Phase 11]` 依據學童 10.2 吋 iPad 橫向實際回饋，完成雙層字體控制器（`1.0x~1.45x`、平板預設 `1.15x`）、A 雙欄／B 單欄可切換課文、專注閱讀模式、護眼暖紙底、1080px 文法單欄寬卡、2×2 測驗選項與抓錯 CSS 修復（`verify_phase_11.js` + `1080×680` 實機瀏覽器全過）。
+  7. `[⏸️ Phase 12+]`（待使用者確認後啟動）補完 `OD3 U13~15`、期中舊單元 KET-4D + 手寫雙軌升級、異質 Code Review 與 GitHub `tiger_english_6_v2` 推送。
 
 ---
 
@@ -25,6 +26,7 @@
 - [#GOAL-7] 2026-11-14 Phase 1~9 擴充與 KET 4D 升級總路線圖：先執行 Phase 1~4 鎖定 11/18 Week 12 五大單元上線，後續 Phase 5~9 補完 OD3 U13~15 與舊書 4D 化。
 - [#GOAL-8] 2026-11-14 Phase 5~12 UX 視覺化、單句點讀與 3C 考卷實戰雙軌總路線圖：第一梯次 (Phase 5~8) 已完工並通過 `verify_phase_1..8.js`，第二梯次 (Phase 9~12) 待機啟動。
 - [#GOAL-9] 2026-11-14 Phase 9~10 題庫逐題健檢去洩漏與三層呼吸感題幹重構：完成全庫 2,580 檢驗項與 368 道聽寫雙層零洩漏防護、`RWW6_U06/U08` 行號原文補齊、三層積木式題幹排版與五書完整名稱統一（`verify_phase_1..10.js` 全過）。
+- [#GOAL-10] 2026-11-18 Phase 11 10.2 吋 iPad 橫向易讀排版與字體控制器升級：實作雙層字體縮放（1.0x~1.45x，平板預設 1.15x）、課文 A 雙欄／B 單欄即時切換、專注閱讀模式、護眼暖紙底、1080px 文法單欄寬卡、2×2 測驗選項與抓錯 CSS 修復。
 
 ---
 
@@ -278,3 +280,14 @@
   1. **聽寫零洩漏（資料 + UI 雙層防線）**：徹底消除 Week 12 單元題幹及詞彙提示中的答案外露，並補齊 `TEA_QUIZ_REVIEW` 歷史真卷中文例句 (`masked_example_chi`) 與詞性三態 (`target_pos`) 遮罩，同步修補 `RWW6_U06` / `RWW6_U08` `"In line X..."` 獨立句意摘錄。
   2. **三層呼吸感視覺題幹 + 課本全名統一**：為六年級學童將單字聽寫、紙筆改寫/造句/挑錯重寫與挖空選擇題分別渲染為 `.stem-listen-card` / `.stem-rewrite-card` / `.stem-choice-card`，消除 `[Tiger 3C ...]`、`PAPER_REWRITE` 與 `Part : Part II:` 疊字，並於 `BOOK_META`、`tea_midterm` 與 `.banner-week12` 全面統一顯示五書完整名稱。
 - **驗收結果**：`verify_phase_1.js` ~ `verify_phase_10.js` 全數 `exit code 0` 通過。
+
+---
+
+### [#GOAL-10] 24. Phase 11 10.2 吋 iPad 橫向易讀排版與字體控制器升級 (2026-11-18 定案並完成)
+- **學童實機使用回饋**：
+  1. 10.2 吋 iPad 橫向（`1080×810`，Safari 可視內容區 `~680px` 高）下原有課文與輔助字型偏小，且多層 Hero 堆疊導致需頻繁捲動。
+  2. 需具備直覺的字體大小調整控制器，並讓課文支援「雙欄對照」與「單欄逐句條列」切換。
+- **交付目標與驗收標準**：
+  1. **字體控制器 + 護眼暖紙底**：Topbar `#nav-font` 與 `#fontControlPopover` 提供 4 段檔位（標準 `1.0x` / 舒適 `1.15x` / 大字 `1.30x` / 特大 `1.45x`）、平板偵測預設 `1.15x`，同步於課文與測驗列提供 `A- / A+`；Topbar 與 A4 列印紙張嚴格鎖定不跟隨縮放跑版。
+  2. **10.2" iPad 橫向全模組排版重塑**：課文提供「🅰️ 雙欄對照（含逐句中文聯動高亮）」與「🅱️ 單欄置中逐句條列（句首 44px 獨立 `🔊` 鈕）」可切換＋「📖 專注閱讀」收合 Hero；文法卡 `<=1150px` 改單欄寬卡；測驗短四選一改 2×2 網格與可收合選擇題 Directions；補齊神探抓錯 `.strike`/`.wrong-pick`/`.mb-feedback-box` CSS 與換題自動 `scrollTo(0,0)`。
+  3. **驗收結果**：通過 `verify_phase_1..11.js` 及 `1080×680` 真實 Chromium 視窗互動量測。
