@@ -9,7 +9,7 @@ module.exports = {
   "book_id": "wr3",
   "book": "Write Right Level 3",
   "display_title": "Unit 06: A Great Person in History (歷史偉人傳記寫作)",
-  "unit_title": "🚨 Week 12 · Unit 06: A Great Person in History",
+  "unit_title": "🚨 Week 12–13 · Unit 06: A Great Person in History",
   "big_question": "How do we write a well-organized biography essay about a person we admire?",
   "category": "寫作專攻",
   "category_icon": "✍️",
@@ -17,6 +17,7 @@ module.exports = {
   "pages": "p.46 - p.53",
   "is_midterm": true,
   "is_week12": true,
+  "is_week13": true,
   "page_images": [
     "六年級上/課本/04_Write_Right_3/images/wr3_u5_pdf_p09.png",
     "六年級上/課本/04_Write_Right_3/images/wr3_u5_pdf_p10.png",
@@ -998,6 +999,89 @@ module.exports = {
       "correct_word": "at",
       "fixed_sentence": "Wolfgang Mozart began composing music at the age of five.",
       "reason": "表示「在幾歲時」固定介系詞片語為 at the age of，不可受中文直譯影響誤用 on！"
+    },
+    {
+      "trap_id": "WR3_U06_ERR_9",
+      "sentence": "Leonardo da Vinci was an artist from the Italy.",
+      "tokens": [
+        "Leonardo",
+        "da",
+        "Vinci",
+        "was",
+        "an",
+        "artist",
+        "from",
+        "the",
+        "Italy."
+      ],
+      "wrong_index": 7,
+      "wrong_word": "the",
+      "correct_word": "(刪去)",
+      "fixed_sentence": "Leonardo da Vinci was an artist from Italy.",
+      "reason": "一般單一國名（如 Italy、England、Austria、India）前面不加定冠詞 the（零冠詞）；只有複數或聯合政體國名如 the United States 才須加 the！"
+    },
+    {
+      "trap_id": "WR3_U06_ERR_10",
+      "sentence": "He make many great drawings and paintings during his life.",
+      "tokens": [
+        "He",
+        "make",
+        "many",
+        "great",
+        "drawings",
+        "and",
+        "paintings",
+        "during",
+        "his",
+        "life."
+      ],
+      "wrong_index": 1,
+      "wrong_word": "make",
+      "correct_word": "made",
+      "fixed_sentence": "He made many great drawings and paintings during his life.",
+      "reason": "敘述已故歷史人物（達文西 1452–1519）生平創作事蹟，動詞必須使用簡單過去式 made，不可誤寫現在式原形 make！"
+    },
+    {
+      "trap_id": "WR3_U06_ERR_11",
+      "sentence": "He made one of the greatest artists of his time.",
+      "tokens": [
+        "He",
+        "made",
+        "one",
+        "of",
+        "the",
+        "greatest",
+        "artists",
+        "of",
+        "his",
+        "time."
+      ],
+      "wrong_index": 1,
+      "wrong_word": "made",
+      "correct_word": "was",
+      "fixed_sentence": "He was one of the greatest artists of his time.",
+      "reason": "表達人物歷史身分評價「他是當時最偉大的藝術家之一」必須使用 be 動詞 was，不可套用「make 作品」誤寫成 He made one of the greatest artists！"
+    },
+    {
+      "trap_id": "WR3_U06_ERR_12",
+      "sentence": "For these reasons, I think Tomas was a great person.",
+      "tokens": [
+        "For",
+        "these",
+        "reasons,",
+        "I",
+        "think",
+        "Tomas",
+        "was",
+        "a",
+        "great",
+        "person."
+      ],
+      "wrong_index": 5,
+      "wrong_word": "Tomas",
+      "correct_word": "Leonardo da Vinci",
+      "fixed_sentence": "For these reasons, I think Leonardo da Vinci was a great person.",
+      "reason": "撰寫指定人物傳記結尾時，切忌直接套背愛迪生範文模板而誤寫成 Tomas（且 Thomas 亦拼錯），務必替換為該篇主角 Leonardo da Vinci！"
     }
   ],
   "quizzes": [
@@ -1738,6 +1822,15 @@ module.exports = {
       "type": "paper_rewrite",
       "category_tag": "rewrite",
       "difficulty": "★★★☆☆",
+      "trapCodes": [
+        "ENG_PREP_COLLOCATION",
+        "ENG_TENSE_MISMATCH"
+      ],
+      "triadGroup": {
+        "groupId": "WR3_U06_T1",
+        "tier": "L4-6",
+        "role": "twist"
+      },
       "part_title": "Part II. Guided Biography Writing (歷史偉人傳記引導寫作)",
       "part_instructions": "依據括號內的歷史資料提示，運用標準傳記句型寫出完整句子，精確搭配出生日期介系詞 on、年份介系詞 in 以及成長地點 grew up in。",
       "sentence_form": "Subject + was born on [Date], [Year], in [State], and grew up in [Place].",
@@ -1758,7 +1851,47 @@ module.exports = {
         "commonTraps": [
           "時間介系詞混淆：看見有年份就直覺填 in，忽略了前面有具體日期 February 11 必須使用 on。",
           "時態不一致錯誤：將後半句的過去式 grew up 誤寫成現在式 grow up。"
-        ]
+        ],
+        "steps": [
+          "① 先寫出生動詞：歷史人物生平固定用過去式 was born",
+          "② 檢查時間介系詞：看到完整月日 February 11 就鎖定 on；州名 Ohio 前用 in",
+          "③ 檢查第二個動詞：成長地點 grew up in 必須同步使用過去式 grew"
+        ],
+        "insight": "💡 有「月＋日」用 on，只有「年份／月份／地點」用 in，特定歲數用 at！",
+        "visualBlock": {
+          "kind": "prep_ladder",
+          "title": "🧭 傳記生平時間與年齡介系詞階梯",
+          "data": {
+            "levels": [
+              {
+                "prep": "in",
+                "scope": "純年份 / 月份 / 城市國家（大範圍）",
+                "examples": [
+                  "was born in 1847",
+                  "grew up in Michigan"
+                ],
+                "highlight": false
+              },
+              {
+                "prep": "on",
+                "scope": "具體月日（含「日」的精確日期）",
+                "examples": [
+                  "was born on February 11, 1847"
+                ],
+                "highlight": true
+              },
+              {
+                "prep": "at",
+                "scope": "特定年齡節點",
+                "examples": [
+                  "at the age of five"
+                ],
+                "highlight": false
+              }
+            ]
+          },
+          "caption": "📊 寫出生日期先看有沒有「幾號」：有日期就用 on，只有年份一定用 in！"
+        }
       },
       "extensionStudy": {
         "synonyms": [
@@ -1778,6 +1911,15 @@ module.exports = {
       "type": "paper_rewrite",
       "category_tag": "rewrite",
       "difficulty": "★★★☆☆",
+      "trapCodes": [
+        "ENG_PREP_COLLOCATION",
+        "ENG_TENSE_MISMATCH"
+      ],
+      "triadGroup": {
+        "groupId": "WR3_U06_T1",
+        "tier": "L4-6",
+        "role": "twist"
+      },
       "part_title": "Part II. Guided Biography Writing (歷史偉人傳記引導寫作)",
       "part_instructions": "運用「be famous for + 動名詞/名詞」句型合併提示要點，敘述偉人以某項成就聞名於世，注意動詞時態與介系詞搭配。",
       "sentence_form": "Subject + was famous for + discovering / inventing + Noun.",
@@ -1798,7 +1940,47 @@ module.exports = {
         "commonTraps": [
           "介系詞搭配錯誤：受中文直譯影響，誤將 famous for 寫成 famous about 或 famous with。",
           "動詞形式錯誤：忘記介系詞後方必須接動名詞，誤寫為 famous for discover。"
-        ]
+        ],
+        "steps": [
+          "① 決定時態：Newton 是已故科學家，be 動詞用過去式 was",
+          "② 鎖定搭配：因成就聞名固定用 famous for（不可寫 famous about）",
+          "③ 檢查介系詞後動詞：for 是介系詞，後方動作 discover 必須加 -ing 變 discovering"
+        ],
+        "insight": "💡 介系詞 for 後面不能直接放原形動詞，一定要變成動名詞 V-ing！",
+        "visualBlock": {
+          "kind": "slot_box",
+          "title": "📦 「以……成就聞名」句構積木槽",
+          "data": {
+            "slots": [
+              {
+                "role": "主詞",
+                "text": "Isaac Newton",
+                "accent": "pri"
+              },
+              {
+                "role": "過去式 be",
+                "text": "was",
+                "accent": "ok"
+              },
+              {
+                "role": "聞名片語",
+                "text": "famous for",
+                "accent": "warn"
+              },
+              {
+                "role": "動名詞 V-ing",
+                "text": "discovering",
+                "accent": "ok"
+              },
+              {
+                "role": "受詞",
+                "text": "the theory of gravity.",
+                "accent": "pri"
+              }
+            ]
+          },
+          "caption": "📊 第 3 格用 for、第 4 格立刻把 discover 加上 -ing！"
+        }
       },
       "extensionStudy": {
         "synonyms": [
@@ -1818,6 +2000,15 @@ module.exports = {
       "type": "paper_rewrite",
       "category_tag": "rewrite",
       "difficulty": "★★★☆☆",
+      "trapCodes": [
+        "ENG_PREP_COLLOCATION",
+        "ENG_TENSE_MISMATCH"
+      ],
+      "triadGroup": {
+        "groupId": "WR3_U06_T1",
+        "tier": "L4-6",
+        "role": "twist"
+      },
       "part_title": "Part II. Guided Biography Writing (歷史偉人傳記引導寫作)",
       "part_instructions": "運用「was one of the + 最高級形容詞 + 複數名詞」句型，依據提示完整書寫莫札特的崇高音樂歷史地位，特別注意名詞複數形態。",
       "sentence_form": "Subject + was one of the greatest + [Plural Noun] + in history.",
@@ -1838,7 +2029,37 @@ module.exports = {
         "commonTraps": [
           "名詞單複數錯誤：受中文「最偉大作曲家之一」影響，漏掉名詞複數 s 誤寫成 composer。",
           "定冠詞遺漏：在最高級前忘記加上定冠詞 the，誤寫為 one of greatest composers。"
-        ]
+        ],
+        "steps": [
+          "① 確認動詞：表達歷史身分評價用 was，切勿受「make 作品」干擾寫成 made",
+          "② 鎖定最高級框：one of the + greatest 必加定冠詞 the",
+          "③ 檢查名詞複數：既然是「其中之一」，後面群體名詞 composers 必須加 -s"
+        ],
+        "insight": "💡 「one of the + 最高級」後面名詞永遠要加複數 -s，而且前面動詞用 was 不用 made！",
+        "visualBlock": {
+          "kind": "compare_table",
+          "title": "⚖️ 偉人地位句「兩大真卷地雷」紅綠燈",
+          "data": {
+            "headers": [
+              "常見誤寫 ❌",
+              "正確寫法 ✅",
+              "核心原因"
+            ],
+            "rows": [
+              [
+                "He made one of the greatest artists.",
+                "He was one of the greatest artists.",
+                "評價人物身分要用 be 動詞 was，不是「製作」made"
+              ],
+              [
+                "was one of the greatest composer",
+                "was one of the greatest composers",
+                "one of the 最高級後方名詞一定要複數 (+s)"
+              ]
+            ]
+          },
+          "caption": "📊 Rex W12 真卷提醒：看到 one of the greatest 立刻檢查動詞 was 與名詞複數 -s！"
+        }
       },
       "extensionStudy": {
         "synonyms": [
@@ -1858,6 +2079,15 @@ module.exports = {
       "type": "paper_rewrite",
       "category_tag": "rewrite",
       "difficulty": "★★★★☆",
+      "trapCodes": [
+        "ENG_PREP_COLLOCATION",
+        "ENG_TENSE_MISMATCH"
+      ],
+      "triadGroup": {
+        "groupId": "WR3_U06_T1",
+        "tier": "L4-6",
+        "role": "twist"
+      },
       "part_title": "Part II. Guided Biography Writing (歷史偉人傳記引導寫作)",
       "part_instructions": "結合年齡介系詞片語「at the age of + 數字」與年份介系詞「in + 西元年」，以完整句子敘述莫札特在幼年時期完成第一首交響曲的早熟事蹟。",
       "sentence_form": "Subject + composed + his first symphony + at the age of [Number] + in [Year].",
@@ -1878,7 +2108,48 @@ module.exports = {
         "commonTraps": [
           "年齡介系詞誤用：將固定片語 at the age of 誤寫為 on the age of 或 in the age of。",
           "時態未轉過去式：直接抄寫提示中的原形動詞 compose，忘記加上 -d 變成 composed。"
-        ]
+        ],
+        "steps": [
+          "① 過去式動詞：1764 年是過去時間，compose 改為 composed",
+          "② 年齡介系詞：固定片語 at the age of eight 用 at（不可用 on/in）",
+          "③ 年份介系詞：純西元年 1764 前用 in（不可用 on）"
+        ],
+        "insight": "💡 「在幾歲」用 at the age of、「純年份」用 in + 年份，過去事實動詞必轉過去式！",
+        "visualBlock": {
+          "kind": "prep_ladder",
+          "title": "🧭 年齡與年份介系詞階梯 (at vs in)",
+          "data": {
+            "levels": [
+              {
+                "prep": "at",
+                "scope": "特定年齡節點（在幾歲時）",
+                "examples": [
+                  "at the age of eight",
+                  "at age five"
+                ],
+                "highlight": true
+              },
+              {
+                "prep": "in",
+                "scope": "純西元年份 / 月份",
+                "examples": [
+                  "in 1764",
+                  "in 1756"
+                ],
+                "highlight": true
+              },
+              {
+                "prep": "on",
+                "scope": "具體日期（含月與日）",
+                "examples": [
+                  "on January 27, 1756"
+                ],
+                "highlight": false
+              }
+            ]
+          },
+          "caption": "📊 先年齡 (at)、再年份 (in)，介系詞絕對不打架！"
+        }
       },
       "extensionStudy": {
         "synonyms": [
@@ -1898,6 +2169,15 @@ module.exports = {
       "type": "paper_rewrite",
       "category_tag": "rewrite",
       "difficulty": "★★★★☆",
+      "trapCodes": [
+        "ENG_PREP_COLLOCATION",
+        "ENG_TENSE_MISMATCH"
+      ],
+      "triadGroup": {
+        "groupId": "WR3_U06_T4",
+        "tier": "L4-6",
+        "role": "twist"
+      },
       "part_title": "Part II. Guided Biography Writing (歷史偉人傳記引導寫作)",
       "part_instructions": "運用「Thanks to + 人物」句型引導因果影響，敘述蘇利文老師 (Anne Sullivan) 的悉心教導如何讓海倫·凱勒 (Helen Keller) 學會閱讀與書寫，注意逗號與動詞形式。",
       "sentence_form": "Thanks to [Person], Subject + learned + how to read and write.",
@@ -1918,7 +2198,37 @@ module.exports = {
         "commonTraps": [
           "介系詞混淆：誤將歸功於某人的 Thanks to 寫成表示感謝某事的 Thanks for。",
           "動詞時態遺漏：主要子句忘記轉為過去式動詞 learned，誤寫成現在式 learn。"
-        ]
+        ],
+        "steps": [
+          "① 歸功開頭：表達「多虧了蘇利文老師」必須用 Thanks to Anne Sullivan,",
+          "② 加上逗號：介系詞片語置句首後須接逗號",
+          "③ 主要子句過去式：Helen Keller 在過去學會讀寫，動詞用 learned how to read and write"
+        ],
+        "insight": "💡 「多虧了某人」用 Thanks to + 人（不是 Thanks for）！",
+        "visualBlock": {
+          "kind": "compare_table",
+          "title": "⚖️ Thanks to vs Thanks for 紅綠燈對照表",
+          "data": {
+            "headers": [
+              "常見誤寫 ❌",
+              "正確寫法 ✅",
+              "語意與用法差異"
+            ],
+            "rows": [
+              [
+                "Thanks for Anne Sullivan, ...",
+                "Thanks to Anne Sullivan, ...",
+                "Thanks to = 多虧了（歸功因果）；Thanks for = 感謝某事/禮物"
+              ],
+              [
+                "Helen Keller learn how to read",
+                "Helen Keller learned how to read",
+                "過去歷史學習事件必須使用過去式 learned"
+              ]
+            ]
+          },
+          "caption": "📊 寫到「多虧了……」先確認後面是 to 不是 for！"
+        }
       },
       "extensionStudy": {
         "synonyms": [
@@ -1938,6 +2248,15 @@ module.exports = {
       "type": "paper_rewrite",
       "category_tag": "rewrite",
       "difficulty": "★★★★☆",
+      "trapCodes": [
+        "ENG_TENSE_MISMATCH",
+        "ENG_POS_CONFUSION"
+      ],
+      "triadGroup": {
+        "groupId": "WR3_U06_T2",
+        "tier": "L4-6",
+        "role": "twist"
+      },
       "part_title": "Part II. Guided Biography Writing (歷史偉人傳記引導寫作)",
       "part_instructions": "將萊特兄弟 (The Wright brothers) 的偉大發明與現代影響合併為一句連貫的複合句，前半句使用 were famous for inventing，後半句使用 and thanks to them, people can travel by plane。",
       "sentence_form": "Subject + were famous for inventing + Noun, and thanks to them, people can + Verb.",
@@ -1958,7 +2277,33 @@ module.exports = {
         "commonTraps": [
           "主動一致性錯誤：誤將雙人複數主詞 The Wright brothers 當作單數而搭配 was。",
           "介系詞後接原形：在 famous for 後方漏加 -ing 寫成 famous for invent。"
-        ]
+        ],
+        "steps": [
+          "① 複數主詞配複數 be 動詞：The Wright brothers 兩人用 were（非 was）",
+          "② 介系詞後接 V-ing：famous for 後面接 inventing",
+          "③ 時態時間軸切換：前半句過去成就用 were famous，後半句現代人類受惠用 people can travel"
+        ],
+        "insight": "💡 傳記常見「前半過去式 (were/invented) ➔ 後半現在影響 (can travel)」雙時態切換！",
+        "visualBlock": {
+          "kind": "timeline",
+          "title": "⏳ 傳記「過去成就 ➔ 至今影響」雙時態時間軸",
+          "data": {
+            "events": [
+              {
+                "time": "Past (歷史成就)",
+                "label": "The Wright brothers were famous for inventing...",
+                "highlight": true
+              },
+              {
+                "time": "Now (現代受惠)",
+                "label": "thanks to them, people can travel by plane",
+                "highlight": true
+              }
+            ],
+            "rule": "歷史人物生平／作為用過去式 (was/were/invented)；至今仍享受的影響用現在式 (can/is)"
+          },
+          "caption": "📊 先看時間軸：過去成就用 were，現代人搭飛機用 can travel！"
+        }
       },
       "extensionStudy": {
         "synonyms": [
@@ -1978,6 +2323,15 @@ module.exports = {
       "type": "paper_rewrite",
       "category_tag": "rewrite",
       "difficulty": "★★★☆☆",
+      "trapCodes": [
+        "ENG_VERB_OMISSION",
+        "ENG_TENSE_MISMATCH"
+      ],
+      "triadGroup": {
+        "groupId": "WR3_U06_T1",
+        "tier": "L4-6",
+        "role": "twist"
+      },
       "part_title": "Part II. Biography Error Correction & Proofreading (傳記改錯與潤飾)",
       "part_instructions": "找出下列歷史傳記句子中的文法錯誤，並將訂正後的完整句子正確寫出，特別注意出生被動語態 was born。",
       "sentence_form": "Subject + was born in [Year] in [Country].",
@@ -1998,7 +2352,37 @@ module.exports = {
         "commonTraps": [
           "受母語負遷移影響：中文無被動標記，直覺認為 Edison born in 1847 是正確完整的句子。",
           "誤補現在式：將 be 動詞寫成現在式 is born，忽略生平年份 1847 為過去歷史事實。"
-        ]
+        ],
+        "steps": [
+          "① 抓出缺漏動詞：born 是過去分詞，不能單獨當動詞",
+          "② 依年份決定 be 動詞時態：1847 年是過去，補上單數過去式 was",
+          "③ 檢查國名：the United States 為聯合國名，保留定冠詞 the"
+        ],
+        "insight": "💡 英文沒有 \"He born in...\"！出生永遠是被動式 was/were born！",
+        "visualBlock": {
+          "kind": "compare_table",
+          "title": "⚖️ 出生句型「漏 be 動詞」與國名冠詞紅綠燈",
+          "data": {
+            "headers": [
+              "常見中式錯寫 ❌",
+              "正確寫法 ✅",
+              "核心規則"
+            ],
+            "rows": [
+              [
+                "Edison born in 1847",
+                "Edison was born in 1847",
+                "born 是過去分詞，必須搭配過去式 be 動詞 was"
+              ],
+              [
+                "from the Italy",
+                "from Italy / from the United States",
+                "單一國名不加 the；複數/聯合國名 (the US) 才加 the"
+              ]
+            ]
+          },
+          "caption": "📊 寫出生先檢查 was，寫國名先檢查要不要 the！"
+        }
       },
       "extensionStudy": {
         "synonyms": [
@@ -2018,6 +2402,14 @@ module.exports = {
       "type": "paper_rewrite",
       "category_tag": "rewrite",
       "difficulty": "★★★☆☆",
+      "trapCodes": [
+        "ENG_PREP_COLLOCATION"
+      ],
+      "triadGroup": {
+        "groupId": "WR3_U06_T1",
+        "tier": "L4-6",
+        "role": "twist"
+      },
       "part_title": "Part II. Biography Error Correction & Proofreading (傳記改錯與潤飾)",
       "part_instructions": "找出下列句子中時間介系詞的錯誤，並將訂正後的完整句子寫出，確保純西元年前使用正確的介系詞 in。",
       "sentence_form": "Subject + was born in [Year] and died in [Year].",
@@ -2038,7 +2430,47 @@ module.exports = {
         "commonTraps": [
           "時間介系詞混淆：誤將修飾特定日期的 on 拿來修飾西元純年份。",
           "誤改地點介系詞：誤以為錯誤在於 in Austria 而將其改為 at Austria。"
-        ]
+        ],
+        "steps": [
+          "① 圈出時間名詞：1756 是純西元年份（沒有寫幾月幾號）",
+          "② 對照階梯選介系詞：純年份用 in（on 只用於含「幾號」的具體日期）",
+          "③ 檢查國名零冠詞：in Austria 正確，單一國名不加 the"
+        ],
+        "insight": "💡 純年份 1756 用 in，有「月＋日」才用 on；單一國名 Austria 不加 the！",
+        "visualBlock": {
+          "kind": "prep_ladder",
+          "title": "🧭 傳記年份 vs 日期介系詞階梯",
+          "data": {
+            "levels": [
+              {
+                "prep": "in",
+                "scope": "純西元年份 / 月份 / 國家",
+                "examples": [
+                  "was born in 1756",
+                  "in Austria"
+                ],
+                "highlight": true
+              },
+              {
+                "prep": "on",
+                "scope": "具體日期（含月與日）",
+                "examples": [
+                  "on January 27, 1756"
+                ],
+                "highlight": false
+              },
+              {
+                "prep": "at",
+                "scope": "特定歲數",
+                "examples": [
+                  "at the age of five"
+                ],
+                "highlight": false
+              }
+            ]
+          },
+          "caption": "📊 W13 改錯必考點：看到 was born on 1756/1847 立刻把 on 改成 in！"
+        }
       },
       "extensionStudy": {
         "synonyms": [
@@ -2098,6 +2530,14 @@ module.exports = {
       "type": "paper_rewrite",
       "category_tag": "rewrite",
       "difficulty": "★★★★☆",
+      "trapCodes": [
+        "ENG_TENSE_MISMATCH"
+      ],
+      "triadGroup": {
+        "groupId": "WR3_U06_T5",
+        "tier": "L4-6",
+        "role": "twist"
+      },
       "part_title": "Part II. Biography Error Correction & Proofreading (傳記改錯與潤飾)",
       "part_instructions": "找出傳記欽佩原因子句中的動詞時態錯誤，並將訂正後的完整句子正確寫出，描述歷史偉人生前事蹟必須嚴格使用過去式。",
       "sentence_form": "I admire [Person] most of all because he never gave up on his dreams.",
@@ -2118,7 +2558,33 @@ module.exports = {
         "commonTraps": [
           "時態僵化對稱：誤以為前面 I admire 是現在式，後面就必須一致寫 give，忘記愛迪生奮鬥是過去的事實。",
           "介系詞遺漏：改動詞時不小心漏掉介系詞 on，誤寫成 gave up his dreams。"
-        ]
+        ],
+        "steps": [
+          "① 分開看兩個子句：前半句 I admire（我現在欽佩）用現在式",
+          "② 判斷時間軸：後半句他從不放棄夢想發生在生前（1847–1931），屬於過去歷史",
+          "③ 動詞切換過去式：give 改為不規則過去式 gave，保留片語 on his dreams"
+        ],
+        "insight": "💡 「我現在欽佩 (admire)」是因為「他過去做到 (gave up / studied / worked)」！",
+        "visualBlock": {
+          "kind": "timeline",
+          "title": "⏳ 欽佩原因雙時態時間軸 (admire vs gave up)",
+          "data": {
+            "events": [
+              {
+                "time": "Past (1847–1931 生前奮鬥)",
+                "label": "because he never gave up on his dreams",
+                "highlight": true
+              },
+              {
+                "time": "Now (現在寫作文評價)",
+                "label": "I admire Edison most of all",
+                "highlight": false
+              }
+            ],
+            "rule": "主句表達作者現在的欽佩 (admire)；because 子句敘述已故偉人生前行為，一律用過去式 (gave/made/was)"
+          },
+          "caption": "📊 寫傳記與改錯最易中招：never give up ➔ never gave up！"
+        }
       },
       "extensionStudy": {
         "synonyms": [
@@ -2138,6 +2604,14 @@ module.exports = {
       "type": "choice",
       "category_tag": "grammar",
       "difficulty": "★★★☆☆",
+      "trapCodes": [
+        "ENG_PREP_COLLOCATION"
+      ],
+      "triadGroup": {
+        "groupId": "WR3_U06_T4",
+        "tier": "L4-6",
+        "role": "twist"
+      },
       "question": "Choose the correct preposition to complete the sentence: \"_______ Thomas Edison, people all over the world can light up their homes and see at night.\"",
       "options": [
         "Thanks to",
@@ -2156,6 +2630,46 @@ module.exports = {
           "Thanks for": "Thanks for 用於為了某事或具體禮物向某人致謝（如 Thanks for your help），不能用於表達成就歸屬。",
           "Because to": "Because 後方接完整句子，或與 of 連用成 Because of，英語文法中不存在 Because to 結構。",
           "Owing for": "表示因為、歸因於的成語介系詞為 Owing to，英語中無 Owing for 之固定文法搭配。"
+        },
+        "steps": [
+          "① 看逗號後句意：全世界人都能在夜晚照明看見（正面受惠結果）",
+          "② 選歸功介系詞：表達「多虧了某人的發明／貢獻」必用 Thanks to + 人物",
+          "③ 排除干擾：Thanks for 用於當面道謝；Because to 與 Owing for 皆為錯誤搭配"
+        ],
+        "insight": "💡 「多虧了偉人，我們現在可以……」＝ Thanks to [Person], we can + 原形 V！",
+        "visualBlock": {
+          "kind": "slot_box",
+          "title": "📦 Thanks to 現代影響句構積木槽",
+          "data": {
+            "slots": [
+              {
+                "role": "歸功片語",
+                "text": "Thanks to",
+                "accent": "warn"
+              },
+              {
+                "role": "人物名詞",
+                "text": "Thomas Edison,",
+                "accent": "pri"
+              },
+              {
+                "role": "現代受惠主詞",
+                "text": "people",
+                "accent": "pri"
+              },
+              {
+                "role": "情態助動詞",
+                "text": "can",
+                "accent": "ok"
+              },
+              {
+                "role": "原形動詞",
+                "text": "light up & see at night.",
+                "accent": "ok"
+              }
+            ]
+          },
+          "caption": "📊 第 1 格用 Thanks to（切勿寫成 Thanks for），第 4 格用現在式 can！"
         }
       },
       "extensionStudy": {
@@ -2176,6 +2690,15 @@ module.exports = {
       "type": "choice",
       "category_tag": "grammar",
       "difficulty": "★★★☆☆",
+      "trapCodes": [
+        "ENG_UNCOUNTABLE_SVA",
+        "ENG_TENSE_MISMATCH"
+      ],
+      "triadGroup": {
+        "groupId": "WR3_U06_T3",
+        "tier": "L4-6",
+        "role": "twist"
+      },
       "question": "Choose the correct verb form to complete the sentence: \"Thomas Edison invented many brilliant devices, but his most famous invention _______ the incandescent electric light bulb.\"",
       "options": [
         "is",
@@ -2194,6 +2717,41 @@ module.exports = {
           "are": "主詞核心名詞是單數 invention，不可因前方有 most 或後方受詞而誤用複數 are。",
           "were": "代表作至今仍是其最著名的代表，且主詞為單數名詞，不可搭配複數過去式 were。",
           "be": "主要子句缺少限定動詞，不可在無助動詞的情況下直接使用動詞原形 be。"
+        },
+        "steps": [
+          "① 抓出主詞核心：his most famous invention（單數，無 s）",
+          "② 判斷時態：代表作至今在歷史上仍是最著名的，用現在式",
+          "③ 配對單數 be 動詞：單數現在式選擇 is（不可選 are / were）"
+        ],
+        "insight": "💡 His most famous + 單數名詞 (invention / painting / composition) + is + 代表作！",
+        "visualBlock": {
+          "kind": "slot_box",
+          "title": "📦 His most famous X is Y 單數代表作積木槽",
+          "data": {
+            "slots": [
+              {
+                "role": "所有格＋最高級",
+                "text": "His most famous",
+                "accent": "pri"
+              },
+              {
+                "role": "單數代表名詞",
+                "text": "invention / painting",
+                "accent": "warn"
+              },
+              {
+                "role": "單數現在式 be",
+                "text": "is",
+                "accent": "ok"
+              },
+              {
+                "role": "代表作名稱",
+                "text": "the light bulb / the Mona Lisa.",
+                "accent": "pri"
+              }
+            ]
+          },
+          "caption": "📊 第 2 格沒有 s，第 3 格就一定用 is（切勿誤填 are）！"
         }
       },
       "extensionStudy": {
@@ -2214,6 +2772,14 @@ module.exports = {
       "type": "choice",
       "category_tag": "grammar",
       "difficulty": "★★★★☆",
+      "trapCodes": [
+        "ENG_UNCOUNTABLE_SVA"
+      ],
+      "triadGroup": {
+        "groupId": "WR3_U06_T3",
+        "tier": "L4-6",
+        "role": "twist"
+      },
       "question": "Choose the grammatically correct noun form: \"With over one thousand patents, Thomas Edison was widely regarded as one of the greatest _______ in human history.\"",
       "options": [
         "inventors",
@@ -2232,6 +2798,46 @@ module.exports = {
           "inventor": "在「one of the + 最高級」結構後必須使用複數名詞，不可使用單數名詞 inventor。",
           "inventing": "此處語境需要指稱人的複數名詞作為身分同位受詞，動名詞 inventing 不合文法。",
           "inventions": "inventions 意為「發明物」，而主詞 Thomas Edison 是人，不可說某人是發明物之一。"
+        },
+        "steps": [
+          "① 圈出關鍵句構：one of the greatest _______",
+          "② 確定詞性語意：主詞 Thomas Edison 是人，不能選物 (inventions) 或 V-ing",
+          "③ 套用複數規則：one of the + 最高級 後方必接複數名詞 inventors"
+        ],
+        "insight": "💡 「one of the + 最高級」＝ 眾多之中的一個，所以後面名詞一定要加 -s！",
+        "visualBlock": {
+          "kind": "slot_box",
+          "title": "📦 one of the greatest + 複數名詞 積木槽",
+          "data": {
+            "slots": [
+              {
+                "role": "主詞",
+                "text": "Thomas Edison",
+                "accent": "pri"
+              },
+              {
+                "role": "be 動詞（非 made!）",
+                "text": "was",
+                "accent": "ok"
+              },
+              {
+                "role": "最高級框",
+                "text": "one of the greatest",
+                "accent": "warn"
+              },
+              {
+                "role": "複數人物名詞",
+                "text": "inventors",
+                "accent": "ok"
+              },
+              {
+                "role": "範圍",
+                "text": "in human history.",
+                "accent": "pri"
+              }
+            ]
+          },
+          "caption": "📊 第 2 格用 was（不可寫 made），第 4 格名詞必加 s！"
         }
       },
       "extensionStudy": {
@@ -2252,6 +2858,15 @@ module.exports = {
       "type": "choice",
       "category_tag": "grammar",
       "difficulty": "★★★★☆",
+      "trapCodes": [
+        "ENG_POS_CONFUSION",
+        "ENG_CHINGLISH_LITERAL"
+      ],
+      "triadGroup": {
+        "groupId": "WR3_U06_T5",
+        "tier": "L4-6",
+        "role": "twist"
+      },
       "question": "Choose the correct consequence transition phrase to complete the biography conclusion: \"Edison was remarkably persistent, and he made our modern world brighter. _______, I believe Thomas Edison was a truly great person.\"",
       "options": [
         "For these reasons",
@@ -2270,6 +2885,41 @@ module.exports = {
           "Although": "Although 為讓步轉折連接詞（雖然），後接從屬子句，不能作為結論段的因果副詞片語。",
           "Because of": "Because of 為介系詞片語，後方必須接名詞受詞，不能單獨置於句首後接完整獨立子句。",
           "Even though": "Even though 為從屬連接詞（即使），引導讓步子句，不能用於總結全文因果結論。"
+        },
+        "steps": [
+          "① 看位置與標點：空格後有逗號並接完整獨立句 I believe...",
+          "② 判別詞性：Although / Even though 不可單獨加逗號；Because of 後只能接名詞",
+          "③ 選因果結論片語：For these reasons（基於這些原因）引導傳記結論段"
+        ],
+        "insight": "💡 傳記結論段開頭固定用 For these reasons, / Therefore, ＋ I think [該篇主角] was a great person！",
+        "visualBlock": {
+          "kind": "slot_box",
+          "title": "📦 傳記結論段「因果收尾」積木槽",
+          "data": {
+            "slots": [
+              {
+                "role": "因果轉折詞",
+                "text": "For these reasons,",
+                "accent": "warn"
+              },
+              {
+                "role": "作者觀點",
+                "text": "I think / I believe",
+                "accent": "pri"
+              },
+              {
+                "role": "該篇主角全名",
+                "text": "Thomas Edison",
+                "accent": "ok"
+              },
+              {
+                "role": "過去式評價",
+                "text": "was a great person.",
+                "accent": "pri"
+              }
+            ]
+          },
+          "caption": "📊 第 1 格注意 reasons 複數；第 3 格務必核對是本篇主角（別背錯人名）！"
         }
       },
       "extensionStudy": {
@@ -2431,6 +3081,441 @@ module.exports = {
         ],
         "grammarCompare": "Introduction (引出人物) -> Body (生平成就與欽佩原因) -> Conclusion (因果總結評價)。",
         "examVariations": "寫作步驟排序：Organize a biography: 1. Introduce admired person 2. Explain deeds 3. Conclude with reasons."
+      }
+    },
+    {
+      "id": "q_w13_wr3_u06_33",
+      "book_id": "wr3",
+      "unit_id": "wr3_6",
+      "is_midterm": true,
+      "is_week12": true,
+      "is_week13": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "difficulty": "★★★★☆",
+      "trapCodes": [
+        "ENG_TENSE_MISMATCH",
+        "ENG_ARTICLE_ERROR",
+        "ENG_CHINGLISH_LITERAL"
+      ],
+      "triadGroup": {
+        "groupId": "WR3_U06_T6",
+        "tier": "L4-6",
+        "role": "twist"
+      },
+      "part_title": "Part C. Outline to 3-Paragraph Biography Essay Writing (六欄提綱➔三段式傳記實戰)",
+      "part_instructions": "Use the 6-column Outline below to write a complete 3-paragraph biography essay (Introduction, Body, Conclusion). Think about your verb tenses (past tense for life events vs. present tense for lasting impact), and check zero-article country names (Italy, NOT the Italy) and consistent person names.",
+      "sentence_form": "Intro: The person I admire the most is [Name]. | Body: [Name] was [a/an + occupation] from [Country]. He was born in [Year] and died in [Year]. He [past actions]. His most famous [work] is [Work]. Thanks to [Name], [present impact]. However, I admire [Name] most of all because [past reason]. | Conclusion: For these reasons, I think [Name] was a great person.",
+      "question": "[3C Full-Story Outline Writing · No. 1: Leonardo da Vinci]\nRead the 6-column Outline and complete the 3-paragraph biography essay. Remember to think about your verb tenses and check zero-article country names.\n\n【6-Column Biography Outline】\n• Name: Leonardo da Vinci\n• Occupation: artist\n• Country: Italy\n• Born / Died: 1452 / 1519\n• Accomplishments & Impact: made many great drawings and paintings / most famous painting: the \"Mona Lisa\" / Thanks to da Vinci: we have beautiful works of art\n• Personality & Why Admire: smart and curious / curious about many things / never gave up on his ideas\n\n【Guided 3-Paragraph Draft】\nThe person I admire the most is ______________________.\n______________________ was ______________________ from ______________________. He was born in _______ and died in _______. He _______ many great drawings and paintings. His most famous painting _______ the \"Mona Lisa.\" _______ da Vinci, we have beautiful works of art. Da Vinci was smart and curious. He _______ one of the greatest _______ in history. However, I admire da Vinci most of all because he was curious about many things and never _______ up on his ideas.\nFor these reasons, I think ______________________ was a great person.",
+      "options": [],
+      "answer": "The person I admire the most is Leonardo da Vinci.\nLeonardo da Vinci was an artist from Italy. He was born in 1452 and died in 1519. He made many great drawings and paintings. His most famous painting is the \"Mona Lisa.\" Thanks to da Vinci, we have beautiful works of art. Da Vinci was smart and curious. He was one of the greatest artists in history. However, I admire da Vinci most of all because he was curious about many things and never gave up on his ideas.\nFor these reasons, I think Leonardo da Vinci was a great person.",
+      "self_check": [
+        "1. 國名與職業冠詞檢查：是否寫成 an artist from Italy（不可誤加定冠詞寫 from the Italy，且 artist 前用 an）？",
+        "2. 過去式與身分動詞檢查：是否寫成 He made many great drawings 與 He was one of the greatest artists（不可誤寫 He make 或 He made one of the greatest）？",
+        "3. 雙時態與人名一致性檢查：His most famous painting is... / Thanks to da Vinci, we have... 用現在式，且結尾主角寫 Leonardo da Vinci（不可誤背範文寫 Tomas / Thomas Edison）？"
+      ],
+      "explanation": {
+        "point": "六欄 Outline 轉三段式傳記寫作：精準切換歷史過去式與現存影響現在式，並嚴守國名零冠詞與人名一致。",
+        "examPurpose": "完整對標 3C 手寫作文真卷考法，訓練學生將六欄 Outline 資訊化為流暢三段傳記並避開四大高頻扣分雷區。",
+        "correctReason": "Introduction 點出主角 Leonardo da Vinci；Body 依序填入 an artist from Italy（零冠詞）、was born in 1452 and died in 1519、made（過去式）、His most famous painting is（單數現在式）、Thanks to da Vinci, we have（現在式影響）、was one of the greatest artists（身分用 was＋複數 artists）與 gave up（過去式）；Conclusion 重申 Leonardo da Vinci。",
+        "note": "Outline 寫作黃金檢核：國名 (Italy 不加 the)、動詞 (made/gave)、身分 (was one of...)、結論主角全名一致。",
+        "trap": "實戰最容易踩中四大真卷扣分點：(1) from the Italy 多加 the；(2) He make 漏改過去式 made；(3) He made one of the greatest artists 動詞錯用 made；(4) 結尾背模板錯寫 Tomas / Thomas Edison。",
+        "commonTraps": [
+          "冠詞與人名模板干擾：誤寫成 from the Italy，或在最後一句照抄愛迪生範文誤寫成 Tomas / Thomas Edison。",
+          "動詞時態與句型混用：把 He made many drawings 漏寫成現在式 make，或把 He was one of the greatest artists 誤寫成 He made one of..."
+        ],
+        "steps": [
+          "① 開頭與結尾鎖定同一主角：Leonardo da Vinci（禁止寫成 Tomas / Edison）",
+          "② 國名零冠詞檢查：Italy / England / Austria 前面都不加 the（只有 the United States 加 the）",
+          "③ 動詞過去式逐字過篩：was born / died / made / was one of / gave up 全部用過去式",
+          "④ 現存代表作與影響保持現在式：His most famous painting is / Thanks to da Vinci, we have"
+        ],
+        "insight": "💡 交卷前 30 秒四檢：國名不加 the、動作變 made/gave、地位用 was＋複數、結尾名字沒背錯！",
+        "visualBlock": {
+          "kind": "compare_table",
+          "title": "⚖️ 達文西 Outline 作文「真卷四大實戰雷區」對照表",
+          "data": {
+            "headers": [
+              "真卷常見扣分錯寫 ❌",
+              "正確寫法 ✅",
+              "扣分盲點"
+            ],
+            "rows": [
+              [
+                "an artist from the Italy",
+                "an artist from Italy",
+                "單一國名零冠詞，不可受 the United States 影響加 the"
+              ],
+              [
+                "He make many great drawings",
+                "He made many great drawings",
+                "已故偉人生平動作必須改過去式 made"
+              ],
+              [
+                "He made one of the greatest artists",
+                "He was one of the greatest artists",
+                "描述身分地位要用 be 動詞 was，不是 made"
+              ],
+              [
+                "I think Tomas was a great person.",
+                "I think Leonardo da Vinci was a great person.",
+                "結尾主角必須與本篇主角一致，切勿套錯模板"
+              ]
+            ]
+          },
+          "caption": "📊 這四行正是 W12 真卷最容易失分的 4 個地方，寫完達文西傳記必逐條勾檢！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "biographical outline",
+          "three-paragraph essay"
+        ],
+        "grammarCompare": "單一國名零冠詞 (from Italy / England / Austria) vs 聯合複數國名 (from the United States)。",
+        "examVariations": "換角仿寫：將 Outline 換成 Galileo Galilei from Italy，同樣檢查 from Italy 不加 the 與 made/was 過去式。"
+      }
+    },
+    {
+      "id": "q_w13_wr3_u06_34",
+      "book_id": "wr3",
+      "unit_id": "wr3_6",
+      "is_midterm": true,
+      "is_week12": true,
+      "is_week13": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "difficulty": "★★★★☆",
+      "trapCodes": [
+        "ENG_TENSE_MISMATCH",
+        "ENG_ARTICLE_ERROR",
+        "ENG_PREP_COLLOCATION"
+      ],
+      "triadGroup": {
+        "groupId": "WR3_U06_T6",
+        "tier": "L4-6",
+        "role": "twist"
+      },
+      "part_title": "Part C. Outline to 3-Paragraph Biography Essay Writing (六欄提綱➔三段式傳記實戰)",
+      "part_instructions": "Use the variant Outline below to write a complete 3-paragraph biography essay about Isaac Newton. Think about your verb tenses (was born / made / was not afraid vs. is / Thanks to..., we understand), and check zero-article country names (England) and plural nouns after \"one of the greatest\".",
+      "sentence_form": "Intro: The person I admire the most is [Name]. | Body: [Name] was a [occupation] from [Country]. He was born in [Year] and died in [Year]. He [made...]. His most famous [noun] is [Work]. Thanks to [Name], [present clause]. However, I admire [Name] most of all because [past clause]. | Conclusion: For these reasons, I think [Name] was a great person.",
+      "question": "[3C Full-Story Outline Writing · No. 2: Isaac Newton]\nUse the Outline below to write a complete 3-paragraph biography essay about Isaac Newton. Remember to think about your verb tenses and check country names and plural nouns.\n\n【Variant Biography Outline】\n• Name: Isaac Newton\n• Occupation: scientist\n• Country: England\n• Born: 1643 | Died: 1727\n• Accomplishments: made many scientific discoveries / most famous scientific theory: the theory of gravity\n• Impact (Thanks to): we understand gravity better\n• Character & Why Admire: brilliant and dedicated / was not afraid to be different\n\n【Guided 3-Paragraph Prompt】\nWrite Paragraph 1 (Introduction), Paragraph 2 (Body: life, scientific discoveries, theory of gravity, Thanks to impact, and why you admire him), and Paragraph 3 (Conclusion starting with \"For these reasons,\").",
+      "options": [],
+      "answer": "The person I admire the most is Isaac Newton.\nIsaac Newton was a scientist from England. He was born in 1643 and died in 1727. Newton made many scientific discoveries, and he was one of the greatest scientists in history. His most famous scientific theory is the theory of gravity. Thanks to Newton, we understand gravity better. Newton was brilliant and dedicated. However, I admire Newton most of all because he was not afraid to be different.\nFor these reasons, I think Isaac Newton was a great person.",
+      "self_check": [
+        "1. 國名與職業冠詞檢查：是否寫成 a scientist from England（England 前不可加 the）？",
+        "2. 雙時態時間軸檢查：was born in 1643 / died in 1727 / made many scientific discoveries / was not afraid 用過去式；His most famous scientific theory is / Thanks to Newton, we understand 用現在式？",
+        "3. 結構與主角名稱檢查：是否包含 Introduction / Body (含 However 轉折) / Conclusion (For these reasons, I think Isaac Newton was a great person.)？"
+      ],
+      "explanation": {
+        "point": "變式 Outline 三段式傳記寫作（牛頓篇）：掌握 make scientific discoveries 過去式、theory of gravity 與「過去事蹟 vs 至今影響」時間軸。",
+        "examPurpose": "評量學生在無逐字挖空提示的變式 Outline 條件下，獨立架構完整三段式人物傳記與切換時態的能力。",
+        "correctReason": "文章依序完成三段：開頭點出 Isaac Newton；主體寫出 a scientist from England（零冠詞）、was born in 1643 and died in 1727、made many scientific discoveries（過去式）、His most famous scientific theory is（單數現在式）、Thanks to Newton, we understand gravity better（現在式）及 However, I admire Newton most of all because he was not afraid to be different（過去式）；結論以 For these reasons 收尾。",
+        "note": "make scientific discoveries 的過去式為 made；England 前面不加 the；theory of gravity 後接單數 is。",
+        "trap": "容易受中文影響寫出 from the England、Newton make many discoveries，或將 Thanks to Newton 誤寫為 Thanks for Newton。",
+        "commonTraps": [
+          "動詞過去式漏改或介系詞錯配：把 made 寫回 make、把 was not afraid 寫成 is not afraid，或將 Thanks to 誤寫為 Thanks for。",
+          "國名冠詞與代表作單複數錯誤：誤寫 from the England 或 His most famous scientific theory are..."
+        ],
+        "steps": [
+          "① 第 1 段寫主題句：The person I admire the most is Isaac Newton.",
+          "② 第 2 段前半（過去生平）：was a scientist from England / was born in 1643 and died in 1727 / made many scientific discoveries",
+          "③ 第 2 段中後（代表作＋現代影響＋欽佩原因）：His most famous scientific theory is... / Thanks to Newton, we understand... / However, I admire Newton most of all because he was not afraid to be different.",
+          "④ 第 3 段結論：For these reasons, I think Isaac Newton was a great person."
+        ],
+        "insight": "💡 用時間軸切兩半：1643–1727 牛頓生前動作全用過去式；代表作與「我們今日理解重力」用現在式！",
+        "visualBlock": {
+          "kind": "timeline",
+          "title": "⏳ 牛頓傳記「過去生平 vs 今日影響」時態時間軸",
+          "data": {
+            "events": [
+              {
+                "time": "Past (1643–1727)",
+                "label": "was born / made discoveries / died / was not afraid",
+                "highlight": true
+              },
+              {
+                "time": "Now (至今價值)",
+                "label": "His most famous theory is... / Thanks to Newton, we understand...",
+                "highlight": true
+              }
+            ],
+            "rule": "生平年份、成就動作與欽佩原因子句用過去式；代表作定位與人類今日受益用現在式"
+          },
+          "caption": "📊 下筆前先畫時間線：1643–1727 發生過的事用過去式，現在還成立的影響用現在式！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "scientific breakthrough",
+          "universal gravitation"
+        ],
+        "grammarCompare": "made scientific discoveries (發現本已存在之自然律) vs invented new machines (發明創造新裝置)。",
+        "examVariations": "句型擴充：寫作時可額外加入 He was one of the greatest scientists in history. 強化主體段評價。"
+      }
+    },
+    {
+      "id": "q_w13_wr3_u06_35",
+      "book_id": "wr3",
+      "unit_id": "wr3_6",
+      "is_midterm": true,
+      "is_week12": true,
+      "is_week13": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "difficulty": "★★★★★",
+      "trapCodes": [
+        "ENG_TENSE_MISMATCH",
+        "ENG_ARTICLE_ERROR",
+        "ENG_UNCOUNTABLE_SVA",
+        "ENG_PREP_COLLOCATION"
+      ],
+      "triadGroup": {
+        "groupId": "WR3_U06_T6",
+        "tier": "L7-10",
+        "role": "challenge"
+      },
+      "part_title": "Part C. Outline to 3-Paragraph Biography Essay Writing (六欄提綱➔三段式傳記實戰)",
+      "part_instructions": "Use the variant Outline below to write a complete 3-paragraph biography essay about Wolfgang Amadeus Mozart. Think carefully about your verb tenses (composed / began / studied vs. is / can listen), zero-article country names (Austria), and age preposition (at the age of five).",
+      "sentence_form": "Intro: The person I admire the most is [Name]. | Body: [Name] was a [occupation] from [Country]. He was born in [Year] and died in [Year]. He [composed... / began... at the age of...]. His most famous [composition] is [Work]. Thanks to [Name], [present impact]. However, I admire [Name] most of all because [past reason]. | Conclusion: For these reasons, I think [Name] was a great person.",
+      "question": "[3C Full-Story Outline Writing · No. 3: Wolfgang Amadeus Mozart]\nUse the variant Outline below to write a complete 3-paragraph biography essay about Wolfgang Amadeus Mozart. Think about your verb tenses, zero-article country names, and exact prepositions.\n\n【Variant Biography Outline】\n• Name: Wolfgang Amadeus Mozart\n• Occupation: composer\n• Country: Austria\n• Born: 1756 | Died: 1791\n• Early Talent & Accomplishments: began composing music at the age of five / composed many symphonies and operas / one of the greatest composers\n• Most Famous Work & Impact: composition = the opera \"Don Giovanni\" / Thanks to Mozart: we can listen to great music\n• Character & Why Admire: brilliant and hardworking / studied music very hard\n\n【Task】\nWrite the full 3-paragraph biography essay independently, including all details from the Outline and a consequence transition word in the Conclusion.",
+      "options": [],
+      "answer": "The person I admire the most is Wolfgang Amadeus Mozart.\nWolfgang Amadeus Mozart was a composer from Austria. He was born in 1756 and died in 1791. He began composing music at the age of five, and he composed many symphonies and operas. He was one of the greatest composers in history. His most famous composition is the opera \"Don Giovanni.\" Thanks to Mozart, we can listen to great music. Mozart was brilliant and hardworking. However, I admire Mozart most of all because he studied music very hard.\nFor these reasons, I think Wolfgang Amadeus Mozart was a great person.",
+      "self_check": [
+        "1. 國名與介系詞檢查：是否寫成 from Austria（零冠詞）與 at the age of five（不可寫 on the age of five）？",
+        "2. 不規則與規則過去式檢查：began / composed / was one of the greatest composers / studied（去 y 加 ied）是否全部寫對？",
+        "3. 三段完整結構與結論主角檢查：是否包含 Introduction、Body（含代表作單數 is、Thanks to Mozart 與 However 轉折）與 Conclusion（For these reasons, I think Wolfgang Amadeus Mozart was a great person.）？"
+      ],
+      "explanation": {
+        "point": "高階整合 Outline 傳記寫作（莫札特篇）：融合年齡片語 at the age of、規則／不規則過去式 (began / composed / studied) 與複數地位句型。",
+        "examPurpose": "測驗學生獨立整合多欄變式提綱撰寫完整三段英文傳記、並同時控管時態、冠詞、介系詞與單複數的高階寫作能力。",
+        "correctReason": "文章結合六欄資訊與進階細節：from Austria 不加 the；began composing music at the age of five 精準使用 at 與過去式 began；one of the greatest composers 動詞用 was、名詞用複數 composers；His most famous composition is 保持單數 is；Thanks to Mozart, we can listen 用現在式；because he studied music very hard 轉為過去式 studied；結尾用 For these reasons 與完整主角名收尾。",
+        "note": "study 的過去式去 y 加 ied -> studied；begin 的過去式 -> began；Austria 前不加 the。",
+        "trap": "最容易在長文寫作中失誤：把 Austria 寫成 the Austria、把 at the age of 寫成 on the age of、把 studied 漏寫為 studyed 或 study，或將 Mozart 寫成 Beethoven。",
+        "commonTraps": [
+          "動詞變化與拼寫失誤：將不規則過去式 began 寫成 begin，或將 studied 誤拼為 studyed / study。",
+          "介系詞與國名冠詞誤植：將 at the age of five 誤寫為 on the age of five，或在 Austria 前誤加定冠詞 the。"
+        ],
+        "steps": [
+          "① 套入三段積木槽：Intro (1 句) ➔ Body (生平＋成就＋代表作＋影響＋However 欽佩原因) ➔ Conclusion (For these reasons)",
+          "② 檢查早熟細節：began composing music at the age of five（began 過去式＋at 年齡）",
+          "③ 檢查過去式拼寫：composed（加 d）、studied（去 y 加 ied）、was one of the greatest composers（加 s）",
+          "④ 全文最後掃描：from Austria（無 the）、Thanks to Mozart（用 to）、結論全名 Wolfgang Amadeus Mozart"
+        ],
+        "insight": "💡 把三段式傳記當成「5 個結構槽」，每寫完一格就檢查「過去式／零冠詞／單複數」！",
+        "visualBlock": {
+          "kind": "slot_box",
+          "title": "📦 三段式傳記完整寫作「五槽檢核框」",
+          "data": {
+            "slots": [
+              {
+                "role": "1. Intro 開頭",
+                "text": "The person I admire the most is [Name].",
+                "accent": "pri"
+              },
+              {
+                "role": "2. Body 生平",
+                "text": "was [a/an 職業] from [零冠詞國名] / was born in... and died in...",
+                "accent": "warn"
+              },
+              {
+                "role": "3. Body 成就",
+                "text": "composed/made... / was one of the greatest + 複數 / most famous X is Y",
+                "accent": "ok"
+              },
+              {
+                "role": "4. Body 影響與原因",
+                "text": "Thanks to [Name], we can... / However, I admire... because he studied...",
+                "accent": "ok"
+              },
+              {
+                "role": "5. Conclusion 收尾",
+                "text": "For these reasons, I think [本篇主角] was a great person.",
+                "accent": "pri"
+              }
+            ]
+          },
+          "caption": "📊 五個積木槽缺一不可，寫完依序核對每個槽內的紅色提醒點！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "prodigy",
+          "virtuoso composer"
+        ],
+        "grammarCompare": "study -> studied (子音 + y 去 y 加 ied) vs compose -> composed (字尾 e 直接加 d)。",
+        "examVariations": "轉折詞替換：結論句首的 For these reasons, 可換寫為 Therefore, 或 As a result,。"
+      }
+    },
+    {
+      "id": "q_w13_wr3_u06_36",
+      "book_id": "wr3",
+      "unit_id": "wr3_6",
+      "is_midterm": true,
+      "is_week12": true,
+      "is_week13": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "difficulty": "★★★★★",
+      "trapCodes": [
+        "ENG_TENSE_MISMATCH",
+        "ENG_ARTICLE_ERROR",
+        "ENG_PREP_COLLOCATION",
+        "ENG_UNCOUNTABLE_SVA"
+      ],
+      "triadGroup": {
+        "groupId": "WR3_U06_T7",
+        "tier": "L7-10",
+        "role": "challenge"
+      },
+      "part_title": "Part C (Predicted W13): Biography Proofreading — Correct the 12/14 Errors",
+      "part_instructions": "Correct the 14 errors in the text below. Rewrite the fully corrected 3-paragraph biography essay and list each of the 14 corrections clearly (Check verb tenses, zero-article country names, prepositions, singular/plural nouns, and consistent person names!).",
+      "sentence_form": "Proofreading Checklist: [1] SVA (is/are) | [2] a/an | [3] Country zero-article | [4] in+year | [5-6] Past verbs | [7] Singular work+is | [8] Thanks to | [9-10] was one of the greatest + plural | [11] curious about | [12] gave up | [13] these reasons | [14] Protagonist name",
+      "question": "[Predicted Week 13 · 14-Error Biography Proofreading #1: Leonardo da Vinci]\nThe biography below contains exactly 14 grammatical and writing errors (based on high-frequency midterm traps). Find all 14 errors and write out the fully corrected essay:\n\n\"The person I admire the most are Leonardo da Vinci.\nLeonardo da Vinci was a artist from the Italy. He was born on 1452 and die in 1519. He make many great drawings and paintings during his life. His most famous painting are the \"Mona Lisa.\" Thanks for da Vinci, we have beautiful works of art.\nDa Vinci was smart and curious. He made one of the greatest artist in history. However, I admire da Vinci most of all because he was curious with many things and never give up on his ideas.\nFor this reasons, I think Tomas was a great person.\"",
+      "options": [],
+      "answer": "【Corrected Biography Essay】\nThe person I admire the most is Leonardo da Vinci.\nLeonardo da Vinci was an artist from Italy. He was born in 1452 and died in 1519. He made many great drawings and paintings during his life. His most famous painting is the \"Mona Lisa.\" Thanks to da Vinci, we have beautiful works of art.\nDa Vinci was smart and curious. He was one of the greatest artists in history. However, I admire da Vinci most of all because he was curious about many things and never gave up on his ideas.\nFor these reasons, I think Leonardo da Vinci was a great person.\n\n【14 Corrections List】\n(1) are -> is (The person 為單數)\n(2) a -> an (artist 母音開頭)\n(3) the Italy -> Italy (單一國名零冠詞，刪去 the)\n(4) on 1452 -> in 1452 (純西元年份用 in)\n(5) die -> died (過去式)\n(6) make -> made (過去式)\n(7) are -> is (His most famous painting 為單數)\n(8) Thanks for -> Thanks to (歸功於某人用 Thanks to)\n(9) made -> was (He was one of... 表身分評價，非 made)\n(10) artist -> artists (one of the greatest + 複數名詞)\n(11) with -> about (be curious about 固定介系詞搭配)\n(12) give -> gave (過去式 gave up on)\n(13) this -> these (For these reasons)\n(14) Tomas -> Leonardo da Vinci (主角名稱前後一致，切勿誤寫愛迪生範文拼錯名)",
+      "self_check": [
+        "1. 是否找齊全部 14 處錯誤，沒有漏掉第 (3) 處 from the Italy（刪 the）、第 (9) 處 made -> was 與第 (14) 處 Tomas -> Leonardo da Vinci？",
+        "2. 是否修正所有過去式動詞（died, made, gave）與主詞動詞單複數一致（The person... is, painting is, greatest artists）？",
+        "3. 是否修正介系詞錯誤（in 1452, Thanks to, curious about）與不定冠詞／指示詞（an artist, these reasons）？"
+      ],
+      "explanation": {
+        "point": "Week 13 連考預判實戰（14 錯短文改錯）：全面掃描冠詞、國名零冠詞、過去式動詞、介系詞搭配、單複數一致性與人物一致性。",
+        "examPurpose": "承襲 3C 考卷「前週考作文 ➔ 次週考 12–14 錯同主題短文改錯」命題規律，將 Rex W12 真卷盲點與課本核心陷阱濃縮為 14 處密集校對實戰。",
+        "correctReason": "逐句精準排除 14 處錯誤：(1) The person... is；(2) an artist；(3) from Italy（刪 the）；(4) in 1452；(5) died；(6) made；(7) painting is；(8) Thanks to；(9) He was one of；(10) greatest artists；(11) curious about；(12) gave up；(13) For these reasons；(14) Leonardo da Vinci。",
+        "note": "短文改錯四輪掃描法：第 1 輪抓時態 (died/made/gave/was) ➔ 第 2 輪抓冠詞與國名 (an/Italy) ➔ 第 3 輪抓介系詞 (in/to/about) ➔ 第 4 輪抓單複數與人名 (is/artists/these/主角名)。",
+        "trap": "整篇長達 4 段、14 個錯誤，學生常只改出 9–10 個就停手，最容易漏抓「from the Italy」、「He made one of...」、「curious with」與結尾名字「Tomas」。",
+        "commonTraps": [
+          "只改明顯動詞而漏改隱藏陷阱：常看到 die/make/give 就改，卻放過「He made one of the greatest artist」中的兩個錯（made->was 與 artist->artists）。",
+          "忽略前後文一致性與固定片語：未發現結尾人名寫成 Tomas，或把 curious with 當成正確搭配而未改成 curious about。"
+        ],
+        "steps": [
+          "① 第 1 輪掃動詞時態與身分：die->died、make->made、He made->He was、give->gave",
+          "② 第 2 輪掃冠詞與單複數：person...is、a->an artist、the Italy->Italy、painting is、greatest artists、this->these reasons",
+          "③ 第 3 輪掃介系詞搭配：on 1452->in 1452、Thanks for->Thanks to、curious with->curious about",
+          "④ 第 4 輪掃主角一致性：結尾 Tomas ➔ 改回 Leonardo da Vinci，數滿 14 個才交卷！"
+        ],
+        "insight": "💡 14 錯改錯一定要「分輪掃描＋邊改邊編號」，數到 14 才算完，最防漏抓 made/was 與 the Italy！",
+        "visualBlock": {
+          "kind": "compare_table",
+          "title": "⚖️ W13 傳記 14 錯改錯「高頻隱形地雷」對照表",
+          "data": {
+            "headers": [
+              "原文隱藏錯點 ❌",
+              "正確訂正 ✅",
+              "所屬掃描類別"
+            ],
+            "rows": [
+              [
+                "from the Italy",
+                "from Italy (刪 the)",
+                "國名零冠詞 (ENG_ARTICLE_ERROR)"
+              ],
+              [
+                "He made one of the greatest artist",
+                "He was one of the greatest artists",
+                "身分動詞 was + 複數名詞"
+              ],
+              [
+                "curious with / Thanks for",
+                "curious about / Thanks to",
+                "固定介系詞搭配"
+              ],
+              [
+                "I think Tomas was...",
+                "I think Leonardo da Vinci was...",
+                "全篇主角名稱一致性"
+              ]
+            ]
+          },
+          "caption": "📊 先掃動詞、再掃冠詞單複數、再掃介系詞，最後核對人名，14 處一個都不漏！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "error-identification passage",
+          "comprehensive proofreading"
+        ],
+        "grammarCompare": "be curious about sth (對……感到好奇) vs complain about sth (抱怨某事)，兩者皆搭配介系詞 about。",
+        "examVariations": "出題預判：老師常把上週學生寫作卷最常錯的 12–14 個句子拼成一篇短文作為次週 Proofreading 考題。"
+      }
+    },
+    {
+      "id": "q_w13_wr3_u06_37",
+      "book_id": "wr3",
+      "unit_id": "wr3_6",
+      "is_midterm": true,
+      "is_week12": true,
+      "is_week13": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "difficulty": "★★★★★",
+      "trapCodes": [
+        "ENG_TENSE_MISMATCH",
+        "ENG_ARTICLE_ERROR",
+        "ENG_PREP_COLLOCATION",
+        "ENG_POS_CONFUSION",
+        "ENG_UNCOUNTABLE_SVA"
+      ],
+      "triadGroup": {
+        "groupId": "WR3_U06_T7",
+        "tier": "L7-10",
+        "role": "challenge"
+      },
+      "part_title": "Part C (Predicted W13): Biography Proofreading — Correct the 12/14 Errors",
+      "part_instructions": "Correct the 12 errors in the text below. Rewrite the fully corrected 3-paragraph biography essay and list each of the 12 corrections clearly (Pay special attention to \"the United States\", past tense verbs, modal + base verb, and singular/plural agreement!).",
+      "sentence_form": "Proofreading Checklist: [1] a/an | [2] the United States | [3] in+year | [4] Past verb | [5] Singular invention+is | [6] Thanks to | [7] can + V | [8-9] was one of the greatest + plural | [10-11] Past verbs | [12] these reasons",
+      "question": "[Predicted Week 13 · 12-Error Biography Proofreading #2: Thomas Edison]\nThe biography below contains exactly 12 grammatical errors modeled on Week 12 exam traps. Find all 12 errors and write out the fully corrected essay:\n\n\"The person I admire the most is Thomas Edison.\nThomas Edison was a inventor from United States. He was born on 1847 and died in 1931. Edison invent many useful things. His most famous invention are the light bulb. Thanks for Edison, we can seeing at night.\nEdison was smart and wise, and he made one of the greatest inventor in history. However, I admire Edison most of all because he never give up on his dreams. He fail many times before he invented the light bulb.\nFor these reason, I think Thomas Edison was a great person.\"",
+      "options": [],
+      "answer": "【Corrected Biography Essay】\nThe person I admire the most is Thomas Edison.\nThomas Edison was an inventor from the United States. He was born in 1847 and died in 1931. Edison invented many useful things. His most famous invention is the light bulb. Thanks to Edison, we can see at night.\nEdison was smart and wise, and he was one of the greatest inventors in history. However, I admire Edison most of all because he never gave up on his dreams. He failed many times before he invented the light bulb.\nFor these reasons, I think Thomas Edison was a great person.\n\n【12 Corrections List】\n(1) a -> an (inventor 母音開頭)\n(2) United States -> the United States (聯合國名須加定冠詞 the)\n(3) on 1847 -> in 1847 (純西元年份用 in)\n(4) invent -> invented (過去式)\n(5) are -> is (His most famous invention 為單數)\n(6) Thanks for -> Thanks to (歸功於某人用 Thanks to)\n(7) seeing -> see (情態助動詞 can 後接原形動詞)\n(8) made -> was (He was one of... 身分評價用 was，非 made)\n(9) inventor -> inventors (one of the greatest + 複數名詞)\n(10) give -> gave (過去式 gave up on)\n(11) fail -> failed (過去式)\n(12) reason -> reasons (For these reasons 複數)",
+      "self_check": [
+        "1. 國名定冠詞正反對照：是否將 United States 補回 the（the United States 必須有 the，和 Italy 不加 the 形成對比）？",
+        "2. 是否找齊全部 12 處錯誤，特別是容易被忽略的 (7) can seeing -> can see、(8) made -> was 與 (12) these reason -> reasons？",
+        "3. 是否完整修正所有過去式（invented, gave, failed）與主詞動詞單複數一致（invention is, greatest inventors）？"
+      ],
+      "explanation": {
+        "point": "Week 13 連考預判實戰（12 錯短文改錯）：對比 the United States 必加 the、情態助動詞 can＋原形 V 與傳記過去式動詞群。",
+        "examPurpose": "強化學生在 12 處錯誤密集的短文校對題中區分「單一國名無 the vs 聯合國名有 the」及助動詞後接原形動詞的精準度。",
+        "correctReason": "逐一訂正 12 處：(1) an inventor；(2) the United States；(3) in 1847；(4) invented；(5) invention is；(6) Thanks to；(7) can see；(8) was one of；(9) greatest inventors；(10) gave up；(11) failed；(12) these reasons。",
+        "note": "Italy / England / Austria / India 不加 the；但 the United States / the UK 必須加 the！can 後面接原形動詞 see。",
+        "trap": "學生剛背完「Italy 不加 the」，容易矯枉過正把 the United States 的 the 也誤刪，或忽略「He made one of the greatest inventor」同時錯了兩個地方。",
+        "commonTraps": [
+          "國名冠詞規則過度類推：記得 Italy 不加 the，卻忘記 United States 是聯合國名必須加上定冠詞 the。",
+          "同一句雙重錯誤只改一半：看到 one of the greatest inventor 只改出 inventors，卻沒發現前面的動詞 made 必須改成 was。"
+        ],
+        "steps": [
+          "① 過去生平動詞線：on 1847->in 1847、invent->invented、made->was、give->gave、fail->failed",
+          "② 至今影響現在式線：His most famous invention are->is、Thanks for->Thanks to、can seeing->can see",
+          "③ 冠詞與單複數檢查：a->an inventor、United States->the United States、greatest inventor->inventors、these reason->reasons"
+        ],
+        "insight": "💡 雙線並查＋國名口訣：「單一國家不加 the，聯合複數才加 the（the United States）」！",
+        "visualBlock": {
+          "kind": "timeline",
+          "title": "⏳ 愛迪生 12 錯改錯「過去生平線 vs 現在影響線」雙檢軸",
+          "data": {
+            "events": [
+              {
+                "time": "Past (1847–1931 生平線)",
+                "label": "was born in 1847 / invented / was one of / gave up / failed",
+                "highlight": true
+              },
+              {
+                "time": "Now (至今代表作與影響線)",
+                "label": "His most famous invention is... / Thanks to Edison, we can see",
+                "highlight": true
+              }
+            ],
+            "rule": "生平線抓出 invent/give/fail 漏改過去式與 made->was；現在影響線抓出 invention are->is、Thanks for->to 與 can seeing->see"
+          },
+          "caption": "📊 把 12 錯拆成「過去生平線」與「現在影響線」檢查，再補查 a/an 與 the United States，12 處全破！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "proofreading drill",
+          "error correction essay"
+        ],
+        "grammarCompare": "單一國名 (Italy, England, Austria, India) 零冠詞 vs 複數/聯合政體國名 (the United States, the Philippines) 必加 the。",
+        "examVariations": "考前口訣測驗：比較 \"an artist from Italy\" 與 \"an inventor from the United States\" 的兩處冠詞規則。"
       }
     }
   ]

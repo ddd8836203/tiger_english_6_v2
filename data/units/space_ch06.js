@@ -895,6 +895,109 @@ module.exports = {
       "correct_word": "Jupiter's",
       "fixed_sentence": "Europa is one of Jupiter's moons and it is covered in ice.",
       "reason": "修飾名詞 moons 表示「木星的衛星」，Jupiter 必須使用所有格 Jupiter's！"
+    },
+    {
+      "trap_id": "SPACE_CH06_ERR_9",
+      "sentence": "Because there aren't any water on the surface of Mars.",
+      "tokens": [
+        "Because",
+        "there",
+        "aren't",
+        "any",
+        "water",
+        "on",
+        "the",
+        "surface",
+        "of",
+        "Mars."
+      ],
+      "wrong_index": 2,
+      "wrong_word": "aren't",
+      "correct_word": "isn't",
+      "fixed_sentence": "Because there isn't any water on the surface of Mars.",
+      "reason": "water 為不可數名詞，there be 存在句必須搭配單數 be 動詞 isn't，不可誤用複數 aren't！"
+    },
+    {
+      "trap_id": "SPACE_CH06_ERR_10",
+      "sentence": "There only have frozen ice on the surface of Mars.",
+      "tokens": [
+        "There",
+        "only",
+        "have",
+        "frozen",
+        "ice",
+        "on",
+        "the",
+        "surface",
+        "of",
+        "Mars."
+      ],
+      "wrong_index": 2,
+      "wrong_word": "have",
+      "correct_word": "is",
+      "fixed_sentence": "There is only frozen ice on the surface of Mars.",
+      "reason": "中式英文常誤用「There have」表達「某處有...」；英文存在句必須用 There is + 不可數名詞 (frozen ice)！"
+    },
+    {
+      "trap_id": "SPACE_CH06_ERR_11",
+      "sentence": "Astronomers didn't see any life on the Mars.",
+      "tokens": [
+        "Astronomers",
+        "didn't",
+        "see",
+        "any",
+        "life",
+        "on",
+        "the",
+        "Mars."
+      ],
+      "wrong_index": 6,
+      "wrong_word": "the",
+      "correct_word": "(刪去)",
+      "fixed_sentence": "Astronomers didn't see any life on Mars.",
+      "reason": "行星專有名詞 Mars（火星）、Earth（地球）、Jupiter（木星）前面不可加定冠詞 the！"
+    },
+    {
+      "trap_id": "SPACE_CH06_ERR_12",
+      "sentence": "Scientists think they would first find the bacteria on other worlds.",
+      "tokens": [
+        "Scientists",
+        "think",
+        "they",
+        "would",
+        "first",
+        "find",
+        "the",
+        "bacteria",
+        "on",
+        "other",
+        "worlds."
+      ],
+      "wrong_index": 6,
+      "wrong_word": "the",
+      "correct_word": "(刪去)",
+      "fixed_sentence": "Scientists think they would first find bacteria on other worlds.",
+      "reason": "此處泛指「細菌這類微生物」，複數名詞 bacteria 前不可隨意加上特指冠詞 the！"
+    },
+    {
+      "trap_id": "SPACE_CH06_ERR_13",
+      "sentence": "Maybe the aliens will eat the humans in movies.",
+      "tokens": [
+        "Maybe",
+        "the",
+        "aliens",
+        "will",
+        "eat",
+        "the",
+        "humans",
+        "in",
+        "movies."
+      ],
+      "wrong_index": 1,
+      "wrong_word": "the",
+      "correct_word": "(刪去)",
+      "fixed_sentence": "Maybe aliens will eat humans in movies.",
+      "reason": "泛指電影裡的「外星人」與「人類」這兩類生物群體時，複數名詞 aliens 與 humans 前面都不應濫加定冠詞 the！"
     }
   ],
   "quizzes": [
@@ -1655,7 +1758,20 @@ module.exports = {
         "commonTraps": [
           "學生常只寫 Because living things need water，缺少主要子句而成為殘缺句 (sentence fragment)。",
           "部分學生遺漏 liquid 而只寫 water，但天體物理強調固態冰無法取代液態水的溶劑功能。"
-        ]
+        ],
+        "visualBlock": {
+          "kind": "slot_box",
+          "title": "📦 科普問答完整因果句構槽",
+          "data": {
+            "slots": [
+              { "role": "主句主詞", "text": "Liquid water", "accent": "pri" },
+              { "role": "主句動詞+補語", "text": "is essential", "accent": "ok" },
+              { "role": "因果連接詞", "text": "because", "accent": "warn" },
+              { "role": "原因子句 (S+V)", "text": "living things need it to survive.", "accent": "pri" }
+            ]
+          },
+          "caption": "📊 手寫問答不可只寫 Because... 半句，必須有完整主句＋原因子句！"
+        }
       },
       "extensionStudy": {
         "synonyms": [
@@ -1735,7 +1851,19 @@ module.exports = {
         "commonTraps": [
           "學生常在 that 子句中誤用現在式 has，忽略了題幹中 once (曾經) 要求使用過去式 had。",
           "介系詞搭配錯誤：受中文影響將表面介系詞 on its surface 誤寫成 in its surface。"
-        ]
+        ],
+        "visualBlock": {
+          "kind": "timeline",
+          "title": "⏳ 火星水分時態與狀態時間軸",
+          "data": {
+            "events": [
+              { "time": "Once (遠古過去)", "label": "Mars had liquid water / dried riverbeds formed", "highlight": true },
+              { "time": "Today (現在)", "label": "is very cold; surface water is frozen ice", "highlight": false }
+            ],
+            "rule": "看到時間訊號 once（曾經）描寫火星遠古狀態，動詞必須用過去式 had！"
+          },
+          "caption": "📊 用過去式描述火星遠古流水，用現在式描述今日冰封地表。"
+        }
       },
       "extensionStudy": {
         "synonyms": [
@@ -1775,7 +1903,19 @@ module.exports = {
         "commonTraps": [
           "很多學生誤將內部溫度寫成 colder，事實上內部因潮汐摩擦生熱而比極寒表面更 warmer。",
           "部分學生遺漏 under the ice，未能指出海洋是深藏於地表冰殼之下的地下大洋。"
-        ]
+        ],
+        "visualBlock": {
+          "kind": "compare_table",
+          "title": "⚖️ 木衛二 Europa 表層 vs 內部環境對照",
+          "data": {
+            "headers": ["部位位置", "溫度與型態", "關鍵英文表達"],
+            "rows": [
+              ["Surface (表面)", "極度寒冷、覆蓋厚冰", "covered in ice / very cold"],
+              ["Inside (內部)", "較為溫暖、可能有液態海洋", "warmer inside / liquid oceans under the ice"]
+            ]
+          },
+          "caption": "📊 外冷內暖是木衛二冰下海洋可能孕育生命的核心證據！"
+        }
       },
       "extensionStudy": {
         "synonyms": [
@@ -1895,7 +2035,20 @@ module.exports = {
         "commonTraps": [
           "學生改寫時常忘記刪除句首的 Perhaps，造成 Perhaps simple bacteria might exist 的語氣冗贅。",
           "部分學生受第三人稱單數或過去式干擾，在 might 後方誤寫成 might exists 或 might existed。"
-        ]
+        ],
+        "visualBlock": {
+          "kind": "slot_box",
+          "title": "📦 科學推測句型轉換槽 (Perhaps ➔ might)",
+          "data": {
+            "slots": [
+              { "role": "主詞", "text": "Simple bacteria", "accent": "pri" },
+              { "role": "情態助動詞", "text": "might", "accent": "warn" },
+              { "role": "原形動詞", "text": "exist", "accent": "ok" },
+              { "role": "地點片語", "text": "deep inside the frozen soil of Mars.", "accent": "pri" }
+            ]
+          },
+          "caption": "📊 使用 might 後須刪除 Perhaps，且後面動詞必用原形！"
+        }
       },
       "extensionStudy": {
         "synonyms": [
@@ -1935,7 +2088,19 @@ module.exports = {
         "commonTraps": [
           "學生常把原句的否定詞 cannot 誤留下來寫成 too cold to cannot keep，造成語法嚴重矛盾。",
           "部分學生將不定詞 to 誤接動名詞 keeping，牢記 too... to... 後方必須接原形動詞。"
-        ]
+        ],
+        "visualBlock": {
+          "kind": "compare_table",
+          "title": "⚖️ too... to... 否定合併紅綠燈表",
+          "data": {
+            "headers": ["常見錯寫 ❌", "道地正確寫法 ✅", "核心原因"],
+            "rows": [
+              ["too cold to cannot keep", "too cold to keep", "too... to... 本身已含否定意涵，不可再留 cannot"],
+              ["too cold to keeping", "too cold to keep", "不定詞符號 to 後方必接原形動詞"]
+            ]
+          },
+          "caption": "📊 合併後要把 cannot 刪掉，保留原形動詞 keep！"
+        }
       },
       "extensionStudy": {
         "synonyms": [
@@ -1973,6 +2138,19 @@ module.exports = {
           "could being": "情態助動詞 could 後方必須嚴格接原形動詞 be，絕不能接現在分詞 being！",
           "could to be": "could 本身即為情態助動詞，後方直接接原形動詞，切勿多加不定詞符號 to！",
           "could been": "could been 缺少助動詞 have，在語法上完全不合規範，不能單獨作謂語！"
+        },
+        "visualBlock": {
+          "kind": "slot_box",
+          "title": "📦 存在推論句型槽 (there could be)",
+          "data": {
+            "slots": [
+              { "role": "引導詞", "text": "there", "accent": "pri" },
+              { "role": "情態助動詞", "text": "could", "accent": "warn" },
+              { "role": "原形 be 動詞", "text": "be", "accent": "ok" },
+              { "role": "推論名詞", "text": "oceans of liquid water", "accent": "pri" }
+            ]
+          },
+          "caption": "📊 there could + be（原形），絕不加 to 或 -ing！"
         }
       },
       "extensionStudy": {
@@ -2011,6 +2189,19 @@ module.exports = {
           "maintaining": "too... to... 句型中的 to 為不定詞，後方必須接原形動詞，不能接動名詞 maintaining！",
           "maintained": "maintained 為過去式或過去分詞，不能置於 too cold 之後表達結果或目的！",
           "to maintained": "不定詞符號 to 後方必須搭配原形動詞 maintain，絕不可接過去式 maintained！"
+        },
+        "visualBlock": {
+          "kind": "slot_box",
+          "title": "📦 極端限制句型槽 (too + Adj + to + V)",
+          "data": {
+            "slots": [
+              { "role": "程度副詞", "text": "far too", "accent": "warn" },
+              { "role": "形容詞", "text": "cold", "accent": "pri" },
+              { "role": "不定詞", "text": "to maintain", "accent": "ok" },
+              { "role": "受詞", "text": "liquid water", "accent": "pri" }
+            ]
+          },
+          "caption": "📊 too + Adj + to + 原形動詞，表示「太...而無法...」。"
         }
       },
       "extensionStudy": {
@@ -2125,6 +2316,18 @@ module.exports = {
           "calling": "calling 是現在分詞表主動呼叫，化學物質是被人類稱為碳氫化合物，應使用被動分詞！",
           "were called": "were called 為完整謂語動詞，填入後會與前方的 are filled 造成雙動詞結構錯誤！",
           "to call": "to call 是不定詞表目的或未來，無法作為靜態名詞的同位分詞後置修飾語！"
+        },
+        "visualBlock": {
+          "kind": "compare_table",
+          "title": "⚖️ 關係子句簡化為過去分詞片語",
+          "data": {
+            "headers": ["完整關係子句", "簡化後分詞片語 ✅", "語法重點"],
+            "rows": [
+              ["liquids that are called hydrocarbons", "liquids called hydrocarbons", "主句已有動詞 are filled，修飾語須去 be 保留 V-ed"],
+              ["aliens that were called Martians", "aliens called Martians", "表「被稱為...」，不可重複保留 were/are"]
+            ]
+          },
+          "caption": "📊 句中已有主要動詞 are filled，不可再選 were called！"
         }
       },
       "extensionStudy": {
@@ -2239,6 +2442,18 @@ module.exports = {
           "Martian spacecraft sent radio signals with detailed maps to Earth": "火星上根本沒有火星人或外星飛船發射訊號，這純屬二十世紀初科幻小說的情節！",
           "Early cameras captured photographs of large alien cities on Mars": "早期望遠鏡口徑小且解析度低，完全不可能拍攝到任何所謂的火星外星城市！",
           "Astronauts landed on Mars and observed water flowing in canals": "人類宇航員至今尚未親自登陸火星，百年前更是完全缺乏載人航天火箭技術！"
+        },
+        "visualBlock": {
+          "kind": "timeline",
+          "title": "⏳ 火星人傳說百年認知演變時間軸",
+          "data": {
+            "events": [
+              { "time": "100 Years Ago", "label": "Telescopes were smaller; saw lines ➔ imagined canals & Martians", "highlight": true },
+              { "time": "Today (Now)", "label": "Robots explore Mars; we know there aren't any Martians", "highlight": false }
+            ],
+            "rule": "百年前受限望遠鏡與巴拿馬運河工程引發聯想；今日科學證實並無火星人。"
+          },
+          "caption": "📊 對比百年前過去式 (were / thought / imagined) 與今日現在式 (know / aren't)。"
         }
       },
       "extensionStudy": {
@@ -2324,6 +2539,345 @@ module.exports = {
         ],
         "grammarCompare": "things like + N1 or N2 (介系詞 like 表舉例說明，後接名詞對稱)。",
         "examVariations": "閱讀是非題：Most reported UFOs are confirmed to be alien spacecraft. -> False (usually balloons or comets)."
+      }
+    },
+    {
+      "id": "q_w12_space_ch06_33",
+      "book_id": "rd6",
+      "unit_id": "rd6_6",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "difficulty": "★★★★☆",
+      "part_title": "Part III. W12 Open-Book Evidence Q&A & Pronoun Mastery (證據問答與代名詞實戰)",
+      "part_instructions": "請先閱讀題幹附帶之課文核心證據，以完整英文句子作答，並善用代名詞（they / them / it）取代重複名詞。",
+      "sentence_form": "They thought Martians lived there because telescopes were smaller, and they saw lines on Mars that looked like canals.",
+      "trapCodes": [
+        "ENG_TENSE_MISMATCH",
+        "ENG_ARTICLE_ERROR"
+      ],
+      "triadGroup": {
+        "groupId": "SPACE_CH06_OPEN_T1",
+        "tier": "L4-6",
+        "role": "twist"
+      },
+      "question": "[W12 Part B · Open-Book Evidence Q&A] Evidence Summary: \"A hundred years ago, telescopes were smaller, and it was difficult to see Mars clearly. Astronomers thought that they saw lines on the surface of Mars, and some people thought that they were canals, like the Panama Canal on Earth. Some astronomers imagined aliens building them and living in cities on Mars.\" — Answer in complete sentences: Why did astronomers 100 years ago think Martians lived on Mars? Use pronouns wherever you can.",
+      "options": [],
+      "answer": "They thought Martians lived there because telescopes were smaller and they thought the lines they saw on its surface were canals built by aliens.",
+      "self_check": [
+        "1. 開頭是否使用代名詞 They 指代 astronomers 100 years ago，並用 there / its 避免重複 Mars？",
+        "2. 過去時態是否全程一致（thought / lived / were / saw）？",
+        "3. Mars 與 Martians 前是否沒有誤加定冠詞 the？"
+      ],
+      "explanation": {
+        "point": "Open-Book 證據整合與代名詞替換：利用 they / them / there / its 避免重複名詞，並保持過去式時態一致。",
+        "examPurpose": "對標 Week 12 真卷 Part B：評量學生從課文提取雙重因果證據並靈活使用代名詞簡化句子的能力。",
+        "correctReason": "題問 100 years ago，整句須使用過去式（thought / lived / were / saw），並以 They 指代 astronomers、its/there 指代 Mars。",
+        "note": "Use pronouns wherever you can（盡可能使用代名詞指代前文名詞）。",
+        "trap": "切勿把 astronomers、Mars 在每一個子句都重抄一遍，也不可在 Mars 前加定冠詞寫成 on the Mars。",
+        "commonTraps": [
+          "忽略題目要求 Use pronouns wherever you can，反覆抄寫 astronomers 與 on Mars 導致扣分。",
+          "在行星名稱前誤加定冠詞 the（寫成 on the Mars），或在過去問句下誤用現在式 think。"
+        ],
+        "steps": [
+          "① 鎖定主詞與代名詞：astronomers ➔ They；on Mars ➔ there / on its surface",
+          "② 圈出時間訊號 100 years ago ➔ 確認所有動詞用過去式 (thought, lived, were, saw)",
+          "③ 整合雙證據：望遠鏡較小看不清 ＋ 把地表線條誤認為像巴拿馬運河的人工運河"
+        ],
+        "insight": "💡 代名詞替換公式：Astronomers ➔ They；lines ➔ them；Mars ➔ it / there！",
+        "visualBlock": {
+          "kind": "timeline",
+          "title": "⏳ 百年前火星運河推論時態與代名詞線",
+          "data": {
+            "events": [
+              { "time": "100 Years Ago (Past)", "label": "They (astronomers) thought they saw lines on its surface (Mars).", "highlight": true },
+              { "time": "Today (Present)", "label": "We know there aren't any Martians there.", "highlight": false }
+            ],
+            "rule": "問句為 did... think（100年前），回答主句與原因子句動詞必須維持過去式！"
+          },
+          "caption": "📊 先用代名詞指代已知主體，再檢查過去式動詞是否漏改。"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "early skywatchers believed",
+          "mistook surface lines for canals"
+        ],
+        "grammarCompare": "there（地方副詞，代替 on Mars）vs its surface（所有格，代替 Mars's surface）。",
+        "examVariations": "問答變體：Why was it difficult for astronomers 100 years ago to see Mars clearly?"
+      }
+    },
+    {
+      "id": "q_w12_space_ch06_34",
+      "book_id": "rd6",
+      "unit_id": "rd6_6",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "difficulty": "★★★★☆",
+      "part_title": "Part III. W12 Open-Book Evidence Q&A & Pronoun Mastery (證據問答與代名詞實戰)",
+      "part_instructions": "請結合課文證據與代名詞回答火星地表缺乏生命的原因，務必嚴格檢查不可數名詞主謂一致與 there be 句型。",
+      "sentence_form": "There isn't any life on its surface because it is very cold there, so all the water on it is frozen ice and there isn't any liquid water.",
+      "trapCodes": [
+        "ENG_UNCOUNTABLE_SVA",
+        "ENG_THERE_BE_VS_HAVE",
+        "ENG_ARTICLE_ERROR"
+      ],
+      "triadGroup": {
+        "groupId": "SPACE_CH06_OPEN_T1",
+        "tier": "L4-6",
+        "role": "twist"
+      },
+      "question": "[W12 Part B · Open-Book Evidence Q&A] Evidence Summary: \"Life on Earth needs liquid water, carbon, and gases like oxygen and nitrogen. It's very cold on Mars, so all the water on the surface is ice.\" — Answer in complete sentences: Why isn't there any life on the surface of Mars today? Use pronouns and explain clearly.",
+      "options": [],
+      "answer": "There isn't any life on its surface today because it is very cold there, so there isn't any liquid water—all of it is frozen ice.",
+      "self_check": [
+        "1. 不可數名詞 water / life 的存在句是否使用單數 isn't，而非 aren't？",
+        "2. 是否使用 there is/isn't 表達「存在沒有...」，而沒有中式誤寫成 There only have ice？",
+        "3. 是否用 its / there / it 等代名詞指代 Mars 與 water，並清楚說明「太冷導致只有冰、沒有液態水」？"
+      ],
+      "explanation": {
+        "point": "狙擊 W12 真卷三大失分陷阱：不可數名詞 water 主謂一致 (isn't)、there is vs have、專有名詞零冠詞 (Mars)。",
+        "examPurpose": "針對 Rex W12 Page 25 Part B 高頻失分點進行精準矯正，訓練科學因果推論與精確文法輸出。",
+        "correctReason": "water 與 life 皆為不可數名詞，存在句必用 there isn't；太冷使地表只有固態冰，缺乏生命必需的液態水。",
+        "note": "there isn't any water / there is only ice（不可數名詞配單數動詞）。",
+        "trap": "嚴防寫出 because there aren't any water、there only have ice 或 on the Mars。",
+        "commonTraps": [
+          "受 any 複數錯覺影響誤寫成 there aren't any water（water 不可數，必須用 isn't）。",
+          "中式直譯誤寫成 there only have ice（存在句只能用 there is，不可用 have）。",
+          "行星名 Mars 前誤加定冠詞寫成 on the Mars。"
+        ],
+        "steps": [
+          "① 檢查主句結構：不可只寫 Because...，須補齊 There isn't any life on its surface today because...",
+          "② 套用物理因果：it is very cold ➔ all the water is ice ➔ there isn't any liquid water",
+          "③ 掃描三大地雷：isn't any water（非 aren't）、there is only ice（非 have）、on Mars（非 the Mars）"
+        ],
+        "insight": "💡 看到 water / life / ice 永遠當單數（isn't / is）；「某地有」永遠用 there is，絕不用 have！",
+        "visualBlock": {
+          "kind": "compare_table",
+          "title": "⚖️ W12 真卷火星水份三大錯誤紅綠燈表",
+          "data": {
+            "headers": ["常見錯寫 ❌", "正確寫法 ✅", "核心原因"],
+            "rows": [
+              ["there aren't any water", "there isn't any water", "water 為不可數名詞，搭配單數 isn't"],
+              ["there only have ice", "there is only ice", "存在句固定用 there is，不用 have"],
+              ["on the Mars", "on Mars / on its surface", "行星專有名詞前不加定冠詞 the"]
+            ]
+          },
+          "caption": "📊 交卷前務必逐一核對這三條高頻扣分紅線！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "frozen solid",
+          "devoid of liquid surface water"
+        ],
+        "grammarCompare": "there isn't any water（沒有任何液態水）vs there aren't any Martians（複數可數用 aren't）。",
+        "examVariations": "改錯練習：Because there aren't any water on the Mars, it only have ice."
+      }
+    },
+    {
+      "id": "q_w12_space_ch06_35",
+      "book_id": "rd6",
+      "unit_id": "rd6_6",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "difficulty": "★★★★★",
+      "part_title": "Part III. W12 Open-Book Evidence Q&A & Pronoun Mastery (證據問答與代名詞實戰)",
+      "part_instructions": "請仔細閱讀括號提示與地下液態水證據，判斷正確立場並寫出完整理由（Explain your answer）。",
+      "sentence_form": "Yes, there could be life beneath its surface because scientists think there is liquid water in the soil or underground rivers, and bacteria can live inside rocks.",
+      "trapCodes": [
+        "ENG_THERE_BE_VS_HAVE",
+        "ENG_VERB_OMISSION"
+      ],
+      "triadGroup": {
+        "groupId": "SPACE_CH06_OPEN_T2",
+        "tier": "L7-10",
+        "role": "challenge"
+      },
+      "question": "[W12 Part B · Open-Book Evidence Q&A] Evidence Summary: \"It's very cold on Mars, so all the water on the surface is ice. However, many scientists think that there is liquid water in the soil or even in underground rivers. Bacteria can live in very hot and cold places, and even inside rocks.\" — Answer completely: Could there be any life on Mars (or beneath its surface)? Explain your answer.",
+      "options": [],
+      "answer": "Yes, there could be life on Mars beneath its surface because scientists think there is liquid water in the soil or underground rivers, and simple bacteria can live inside rocks.",
+      "self_check": [
+        "1. 是否沒有被「表面太冷」誤導而答 No，而是根據「地表下」線索正確回答 Yes, there could be...？",
+        "2. 是否有完整寫出 Explain your answer 的雙重依據（地下液態水＋細菌能在寒冷與岩石中生存）？",
+        "3. could 後方是否接原形動詞 be（there could be），且無遺漏主句動詞？"
+      ],
+      "explanation": {
+        "point": "狙擊 W12 Q3 誤答 No 盲點：題目問「火星或其地表下 (beneath its surface)」，課文明確指出地下土壤與暗河可能有液態水與細菌。",
+        "examPurpose": "測驗學生區分「地表 (surface)」與「地底 (beneath its surface / underground)」證據差異的高階閱讀推論與完整論證能力。",
+        "correctReason": "雖然表面全是冰，但題目特別包含 beneath its surface，而科學家推測土壤與地下河有液態水，因此答案應為肯定推論 Yes, there could be...。",
+        "note": "Yes, there could be... because...（表層無液態水 ≠ 地下無生命）。",
+        "trap": "切勿只看到前面表面結冰就反射寫 No，必須讀完 beneath its surface 與地下河流證據！",
+        "commonTraps": [
+          "未看清 (or beneath its surface) 條件而直接誤答 No，忽略火星地下暗河與土壤液態水證據。",
+          "只寫 Yes, there could be. 而完全漏掉 Explain your answer 所需的科學原因子句。"
+        ],
+        "steps": [
+          "① 精讀題目範圍：不只問表面，還問 beneath its surface（地表之下）",
+          "② 核對課文證據：soil / underground rivers 可能有液態水 ＋ bacteria 可活在寒冷環境與岩石內",
+          "③ 組織完整句：Yes, there could be life beneath its surface because..."
+        ],
+        "insight": "💡 題目出現 (or beneath its surface) 就是給你台階答 Yes！記得補上地下液態水與岩石細菌兩大理由。",
+        "visualBlock": {
+          "kind": "compare_table",
+          "title": "⚖️ 火星表層 vs 地底生命推論對照表",
+          "data": {
+            "headers": ["觀察層面", "環境與水分狀態", "推論結論"],
+            "rows": [
+              ["On the surface (地表)", "極寒，所有水都是固態冰", "地表目前無液態水支持生命"],
+              ["Beneath its surface (地底)", "土壤與地下河流可能有液態水", "Yes! 可能有簡單細菌存活於岩石或土壤中"]
+            ]
+          },
+          "caption": "📊 先分清「地表」與「地底」，就不會被誤導寫錯 Yes/No！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "underneath the Martian crust",
+          "subsurface habitats"
+        ],
+        "grammarCompare": "beneath its surface（在地表之下，介系詞片語）= underground（地下的/在地底）。",
+        "examVariations": "推論對比題：Why might bacteria survive underground on Mars even though the surface is frozen?"
+      }
+    },
+    {
+      "id": "q_w12_space_ch06_36",
+      "book_id": "rd6",
+      "unit_id": "rd6_6",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "difficulty": "★★★★★",
+      "part_title": "Part III. W12 Open-Book Evidence Q&A & Pronoun Mastery (證據問答與代名詞實戰)",
+      "part_instructions": "請先直接回答科學家最可能優先發現的生命類型，並務必補上 Explain your answer 的生物特性依據。",
+      "sentence_form": "Scientists think we will discover simple bacteria first because they can live in extreme hot or cold places and even inside rocks.",
+      "trapCodes": [
+        "ENG_ARTICLE_ERROR",
+        "ENG_TENSE_MISMATCH"
+      ],
+      "triadGroup": {
+        "groupId": "SPACE_CH06_OPEN_T2",
+        "tier": "L7-10",
+        "role": "challenge"
+      },
+      "question": "[W12 Part B · Open-Book Evidence Q&A] Evidence Summary: \"Bacteria are simple living things on Earth, and they can live in very hot and cold places, and even inside rocks. Scientists are looking for bacteria on Mars and in other places in our solar system.\" — Answer completely: What type of alien life do scientists think we will discover first? Explain your answer.",
+      "options": [],
+      "answer": "Scientists think we will discover simple bacteria first because they are simple living things that can survive in very hot or cold places and even inside rocks.",
+      "self_check": [
+        "1. 複數泛指 bacteria 前是否沒有誤加定冠詞 the（不寫 the bacteria）？",
+        "2. 是否同時完成兩項任務：① 回答 simple bacteria；② 加上 because 說明其耐極端高低溫與岩石內生存能力？",
+        "3. 回指 bacteria 時是否使用複數代名詞 they 與複數動詞 are / can live？"
+      ],
+      "explanation": {
+        "point": "狙擊 W12 Q4 雙盲點：泛指名詞 bacteria 不加 the，且題末有 Explain your answer 必須寫出原因子句。",
+        "examPurpose": "檢驗學生面對兩段式問句（What... + Explain your answer）時，能否兼顧冠詞正確性與證據完整性。",
+        "correctReason": "泛指「細菌」一類生物時用複數 bacteria 即可，不加 the；原因則是細菌構造簡單且能耐極寒酷熱甚至活在岩石中。",
+        "note": "bacteria（泛指不加 the；複數代名詞用 they）。",
+        "trap": "切勿誤寫成 the bacteria，也千萬別寫完名詞就停筆而漏掉 Explain your answer！",
+        "commonTraps": [
+          "在泛指複數名詞 bacteria 前誤加定冠詞寫成 the bacteria。",
+          "只回答了前半題型 Scientists think we will discover bacteria first，完全漏寫後半 Explain your answer 的原因。"
+        ],
+        "steps": [
+          "① 拆解雙重指令：問題一 What type? ➔ (simple) bacteria；問題二 Explain your answer ➔ because...",
+          "② 檢查冠詞地雷：泛指生物群體不加 the（寫 bacteria，不寫 the bacteria）",
+          "③ 用代名詞連接理由：because they can live in very hot and cold places and even inside rocks"
+        ],
+        "insight": "💡 看到 Explain your answer 一定要圈起來！少寫 because... 直接少一半甚至全題分數。",
+        "visualBlock": {
+          "kind": "slot_box",
+          "title": "📦 兩段式問答＋Explain your answer 必勝結構槽",
+          "data": {
+            "slots": [
+              { "role": "1. 直接回答 (What)", "text": "Scientists think we will discover bacteria first", "accent": "pri" },
+              { "role": "2. 冠詞紅線檢查", "text": "bacteria (不加 the!)", "accent": "warn" },
+              { "role": "3. 理由連接 (Explain)", "text": "because they can live in extreme places and inside rocks.", "accent": "ok" }
+            ]
+          },
+          "caption": "📊 第 1 格回答 what，第 3 格完成 Explain your answer，一格都不能少！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "single-celled microbes",
+          "microscopic organisms"
+        ],
+        "grammarCompare": "find bacteria first（泛指細菌）vs the bacteria in the lab（特指實驗室裡的那些細菌）。",
+        "examVariations": "是非與改錯：Scientists expect to find intelligent human-like aliens before bacteria. (False)"
+      }
+    },
+    {
+      "id": "q_w12_space_ch06_37",
+      "book_id": "rd6",
+      "unit_id": "rd6_6",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "difficulty": "★★★★★",
+      "part_title": "Part III. W12 Open-Book Evidence Q&A & Pronoun Mastery (證據問答與代名詞實戰)",
+      "part_instructions": "請運用代名詞 it 代替 Europa，完整回答「為何適合生命」與「可能住著什麼生物」兩個問題，並加以解釋。",
+      "sentence_form": "It is considered a possible home for life because it is warmer inside and may have oceans under the ice, and bacteria or other living things might live there.",
+      "trapCodes": [
+        "ENG_TENSE_MISMATCH",
+        "ENG_CHINGLISH_LITERAL",
+        "ENG_ARTICLE_ERROR"
+      ],
+      "triadGroup": {
+        "groupId": "SPACE_CH06_OPEN_T2",
+        "tier": "L7-10",
+        "role": "challenge"
+      },
+      "question": "[W12 Part B · Open-Book Evidence Q&A] Evidence Summary: \"Europa is one of Jupiter's moons and it's covered in ice. The surface is very cold, but scientists think it's warmer inside. Maybe there are oceans under the ice. Maybe there are bacteria or other living things in the oceans, too.\" — Answer completely: Why is Europa considered a possible home for alien life, and what might live there? Explain your answer.",
+      "options": [],
+      "answer": "It is considered a possible home for alien life because scientists think it is warmer inside and there may be oceans under its ice, so bacteria or other living things might live in them.",
+      "self_check": [
+        "1. 是否同時回答了兩個問題：① Why（內部較暖、冰下可能有海洋）；② What might live there（細菌或其他生物）？",
+        "2. 是否善用代名詞 it（指代 Europa）與 in them / there（指代冰下海洋）？",
+        "3. 情態助動詞 may / might 後方是否皆使用原形動詞（may be / might live）？"
+      ],
+      "explanation": {
+        "point": "複合雙問句整合：回答 Why（內部溫暖＋冰下海洋）與 What（細菌或其他生物），並用 it / them 精簡句構。",
+        "examPurpose": "壓軸整合木衛二歐羅巴科學證據與雙問句作答結構，杜絕「漏答第二個子問題」或「漏寫解釋」的考場失分。",
+        "correctReason": "木衛二外冷內暖，厚冰下方可能蘊含液態海洋，提供生命所需的液態水環境，故可能存在細菌或其他生物。",
+        "note": "warmer inside（內部較暖）+ oceans under the ice（冰下海洋）。",
+        "trap": "注意問句包含「and what might live there?」，學生常回答完原因就忘記寫「什麼生物可能住在那裡」。",
+        "commonTraps": [
+          "遺漏第二問「and what might live there?」，沒寫出 bacteria or other living things。",
+          "誤記木衛二內部溫度為 colder inside，或忘記使用 it / them 代替 Europa 與 oceans。"
+        ],
+        "steps": [
+          "① 圈出雙問號要素：① Why is it a possible home? ＋ ② What might live there?",
+          "② 填入科學依據：warmer inside ➔ liquid oceans under its ice（液態水＝生命關鍵）",
+          "③ 補上潛在生物與代名詞：bacteria or other living things might live in them (the oceans)"
+        ],
+        "insight": "💡 遇到 A and B 雙問句，寫完前段先回頭檢查問號前的第二個疑問詞 (what) 有沒有答到！",
+        "visualBlock": {
+          "kind": "slot_box",
+          "title": "📦 木衛二雙問句＋證據整合句構槽",
+          "data": {
+            "slots": [
+              { "role": "主句 (代名詞 it)", "text": "It is a possible home", "accent": "pri" },
+              { "role": "Why (內部熱+冰下海)", "text": "because it is warmer inside with oceans under its ice,", "accent": "ok" },
+              { "role": "What (潛在生物)", "text": "so bacteria or other living things might live in them.", "accent": "warn" }
+            ]
+          },
+          "caption": "📊 it 指代 Europa，them 指代 oceans，一次滿足代名詞＋雙問句要求！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "subsurface liquid ocean",
+          "potential extraterrestrial habitat"
+        ],
+        "grammarCompare": "might live in them（in them 指代前文的 oceans）= might live there（地方副詞）。",
+        "examVariations": "比較問答：Compare why Titan and Europa are both exciting targets in the search for life."
       }
     }
   ]

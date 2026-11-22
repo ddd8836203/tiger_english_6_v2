@@ -1,10 +1,10 @@
 # 專案執行對話與歷程完整記憶檔 (memory.log)
 
 ⚡ 0. 當下狀態快照 (TL;DR Current Snapshot)
-- **最後更新**：2026-11-18
-- **最新里程碑**：**Phase 11 已完成並通過全套驗收 (`verify_phase_1..11.js` 全數通過 + `1080×680` 真實 Chromium 視窗量測通過)**；依據小朋友 10.2 吋 iPad 橫向回饋完成雙層字體控制器（1.0x~1.45x，平板預設 1.15x）、課文「A 雙欄聯動對照／B 單欄逐句條列」即時切換、專注閱讀模式、護眼暖紙底、1080px 文法單欄寬卡、2×2 測驗選項與神探抓錯樣式修復。
-- **最近一次上線**：GitHub `https://github.com/ddd8836203/tiger_english_6_v2`（2026-11-18 已將 Phase 11 推送至遠端 `main` 分支）。
-- **Next Actions**：向使用者回報 Phase 11 完成成果與實測數據，確認 OK 後可直接推送至 GitHub 或接續啟動舊單元 4D 擴充（`OD3 U13~15` 等）。
+- **最後更新**：2026-11-22
+- **最新里程碑**：**Phase 12 已完成並通過全套驗收 (`verify_phase_1/2/3/12.js` 全數 0 Failures，PASS 191/191 + `1080×680` 真實 Chromium 視窗驗收 Console 0 Error)**；完成 Week 12 實體真卷 Page 25–26 四層數位化 (`38/46`)、依真卷全面校正 `ODG3_U16`/`WR3_U06`/`SPACE_CH06` 模擬考、新建 `RWW6_U06` 段落逐句盲聽、建立 `4D_英文科_出題與詳解規範.md` 與前端 D4 視覺圖解渲染器，並將首頁衝刺專區升級為可切換週次膠囊 (`SPRINT_WEEKS`：預設 W13，可切換 W12 + 真卷抓錯與 A4 出卷)。
+- **最近一次上線**：GitHub `https://github.com/ddd8836203/tiger_english_6_v2`（目前本地變更位於分支 `feat/w13-4d-sprint`，還原基準 Tag `pre-w13-4d-sprint`，待使用者確認後推送）。
+- **Next Actions**：向使用者輸出 Phase 12 結案報告與待確認之 commit / push 指示。
 
 ---
 
@@ -34,6 +34,7 @@
 - [#MEM-23] 階段二十三 (2026-11-14)：完成無人值守第一梯次 Phase 5~8 — 文法積木寬卡與純淨例句發音、課文保留整篇+單句點擊高亮點讀、Week 12 全面升級 156 題仿真 3C 手寫/聽寫/選擇題型並通過 `verify_phase_1..8.js`。
 - [#MEM-24] 階段二十四 (2026-11-14)：執行 Phase 9~10 — 掃除 368 題聽寫資料與 UI 雙層洩漏、補齊 `RWW6_U06/U08` 行號引用原文、統一五書完整英文名稱、重構三層呼吸感題幹卡片與 `Part` 去重，全套 `verify_phase_1..10.js` 全過。
 - [#MEM-25] 階段二十五 (2026-11-18)：執行 Phase 11 — 依 10.2 吋 iPad 橫向回饋先建置 A/B 互動原型確認方向，隨即落地 4 段雙層字體控制器、A 雙欄／B 單欄可切換課文、專注閱讀、護眼暖紙底、1080px 文法單欄、2×2 測驗網格與抓錯 CSS 修復，通過 `verify_phase_1..11.js` 與 1080×680 實機瀏覽器測試。
+- [#MEM-26] 階段二十六 (2026-11-22)：執行 Phase 12 (`PLAN_W13_4D_Sprint` P0~P7) — 數位化 W12 真卷 Page 25–26 (`38/46`)、建立 `4D_英文科_出題與詳解規範.md`、升級前端 `SPRINT_WEEKS` 週次切換膠囊與 D4 視覺圖解渲染器、新建 `RWW6_U06` 段落逐句盲聽 (`passage_dictation`) 並依真卷盲點校正 W12/W13 模擬考與 Mistake Buster，全數通過 `verify_phase_1/2/3/12.js` 與 `1080×680` 實機瀏覽器驗收。
 
 ---
 
@@ -578,3 +579,20 @@
 - **驗收結果**：
   - `verify_phase_1.js` ~ `verify_phase_11.js` 全數 `0 Failures` 通過（`verify_phase_11.js` PASS: 64 | FAIL: 0）。
   - 實機 Chromium `1080×680` 驗證：Topbar 維持單列 `64.53px`（於 `1.45x` + 暖紙底亦無溢位 `scrollWidth 1065 === 1065`）、A/B 切換與逐句雙向高亮、專注模式收合、文法 1 欄 `840px`、抓錯標記、測驗 2×2 與手寫題預設展開 `<details>` 全數通過，JS 錯誤 `0`、棄用警告 `0`。
+
+---
+
+### [#MEM-26] 26. 階段二十六 (2026-11-22)：Phase 12 Week 13 衝刺、4D 英文科視覺圖解、段落逐句盲聽與 Week 12 真卷閉環 (✅ 全數通過 `verify_phase_1/2/3/12.js` + `1080×680` 實機瀏覽器驗收)
+- **先計畫後施工與安全網 (`AGENTS.md` §1/§5)**：
+  - 建立 `./plans/PLAN_W13_4D_Sprint.md` 拍板 5 大決議後以全自動 P0~P7 推進；建立還原 Tag `pre-w13-4d-sprint` 並切換分支 `feat/w13-4d-sprint`。
+  - 修正 `4D_跨學科通用_深度出題與詳解總綱.md` 第 43 行錯字與非選擇題對接，並新建 `4D_英文科_出題與詳解規範.md`（10 大 `trapCode` + 4 種 `visualBlock` 契約 + 同源三階映射 `1★~5★`）。
+- **平行產出與 W12 真卷閉環（P1~P3 5 路獨立寫檔零互撞）**：
+  - **P1 (`tea_w12`)**：轉檔 `IMG_4385.jpg` / `IMG_4386.jpg`，完成四層分離 MD `考券_六上_Week12_Page25.md`（Part A 13/16 + Part B 7/10）& `Page26.md`（Part C Da Vinci 18/20，全卷 `38/46 = 82%`），建立 `data/exams/tea_w12.js`（10 題原卷重測 + 18 道紅筆抓錯 + 2 篇範文檢討）。
+  - **P2 (`RWW6_U06`)**：新建 `data/units/rww6_u06.js`（14 單字、5 段落 p.40–41 全文、3 文法卡、8 抓錯、33 題含 5 題 `passage_dictation` 覆蓋 p.40–41 全段 + 12 題 `visualBlock`）。
+  - **P3 (`ODG3_U16`, `WR3_U06`, `SPACE_CH06`)**：依 Rex W12 真卷失分盲點全面校正模擬考：`odg3_u16.js` 增至 36 題（+8 題 `because` 公式造句 + 4 抓錯，17 `visualBlock`）；`wr3_u06.js` 增至 37 題（+3 Outline 三段傳記寫作 + 2 篇預判 W13 12/14 錯改錯 + 4 抓錯，18 `visualBlock`）；`space_ch06.js` 增至 37 題（+5 Open-book `Explain` & 代名詞題 + 5 抓錯，14 `visualBlock`）。
+- **編譯與前端升級（P4~P5）**：
+  - 升級 `build_exam_bank.js` 冪等編譯 `midterm_data.js`（19 單元：`WEEK12_ALL=174`, `WEEK13_ALL=106`, `TEA_QUIZ_REVIEW=174/76`）與 `english_data.js`（44 單元 / 719 單字 / 98 文法 / 174 段落 / 1,850 題庫，保留 `rw6_6` 原 `brain_gym` 題）。
+  - 實裝 `app.js` + `style.css`：`SPRINT_WEEKS` 首頁膠囊切換（預設 W13，可切換 W12 + `📄 W12 真卷回顧` + `🖨️ 本週 A4 出卷`）、`renderVisualBlockHtml` 四種圖解、`.dictation-passage-player` 段落逐句盲聽與翻牌前零洩漏隔離（實測抓出並修復 `punct_focus` 外露）、A4 `unit_custom` 段落聽寫橫線列印，並將 `index.html` 四項資源同步更新至 `?v=20261122_p12`。
+- **雙軌驗收結果（P6）**：
+  - 自動化腳本：`verify_phase_1.js`, `verify_phase_2.js`, `verify_phase_3.js`, `verify_phase_12.js` (`PASS: 191 | FAIL: 0`) 全數 0 Failures。
+  - 實機 Chromium (`1080×680` iPad 橫向)：Console `0` Error；W13/W12 膠囊切換、W12 真卷 18 關抓錯、`RWW6_U06` 段落盲聽翻牌前零英文洩漏、1.30x 大字體下 `.vb-card` 寬 `589.23px <= 714.13px` 無水平溢位、以及 Week 13 A4 出卷預覽皆通過驗證。

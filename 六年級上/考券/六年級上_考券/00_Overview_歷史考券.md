@@ -1,13 +1,13 @@
 # 國小六年級上學期 英語歷史考券總綱與數位化清冊 (00_Overview_歷史考券.md)
-建立日期：2026-10-19
-資料來源：岱崙美語 (Tiger English Academy) 3C Quiz 歷史實體考卷（共 6 頁實拍圖）
+建立日期：2026-10-19（最後更新：2026-11-22，納入 Week 12 雙頁真卷）
+資料來源：岱崙美語 (Tiger English Academy) 3C Quiz 歷史實體考卷（共 12 頁實拍圖）
 受測學生：Rex
 數位化規範：四層筆跡嚴格分離架構 (Four-Layer Decoupled Architecture)
 
 ================================================================================
 目錄導覽 (Overview Index)
 ================================================================================
-一、6 頁考券全景清查與跳轉索引
+一、12 頁考券全景清查與跳轉索引
 二、四層筆跡分離標準定義 (Four Layers Standard)
 三、學生歷史成績與失分盲點總矩陣 (Error Diagnostics Matrix)
 四、後續教研應用：AI 針對性測驗出題與錯題狙擊器 (Mistake Buster)
@@ -15,7 +15,7 @@
 
 ---
 
-## 一、6 頁考券全景清查與跳轉索引
+## 一、12 頁考券全景清查與跳轉索引
 
 | 週次 | 頁碼 | 原始影像檔 | 考查教材與大題板塊 | 學生得分 | 得分率 | 獨立四層分離 MD 檔案連結 |
 |:---:|:---:|:---:|:---|:---:|:---:|:---|
@@ -29,6 +29,8 @@
 | **Week 6** | Page 10 | `IMG_4069.HEIC` / `.jpg` | Write Right 3 U5 短文 14 錯改錯 (If I Had $3000) + Grammar 3 How much/many (3題) | 17 / 19 | 89.5% | [考券_六上_Week06_Page10.md](file:///c:/@植善課業/AI/英語學習網頁/六年級上/考券/六年級上_考券/考券_六上_Week06_Page10.md) |
 | **Week 7** | Page 11 | `IMG_4070.HEIC` / `.jpg` | Grammar 3 U15 容器計量詞看圖造句 (Measure Words 10題) | 17.5 / 20 | 87.5% | [考券_六上_Week07_Page11.md](file:///c:/@植善課業/AI/英語學習網頁/六年級上/考券/六年級上_考券/考券_六上_Week07_Page11.md) |
 | **Week 7** | Page 12 | `IMG_4071.HEIC` / `.jpg` | Grammar 3 U13 倒裝附和句 (4題) + Grammar 3 U14 副詞三級比較問答 (5題) | 24 / 30 | 80.0% | [考券_六上_Week07_Page12.md](file:///c:/@植善課業/AI/英語學習網頁/六年級上/考券/六年級上_考券/考券_六上_Week07_Page12.md) |
+| **Week 12** | Page 25 | `IMG_4385.HEIC` / `.jpg` | Grammar 3 U16 形容詞介系詞+because造句 (4題, 13/16) + Space Ch6 Open-book問答 (5題, 7/10) | 20 / 26 | 76.9% | [考券_六上_Week12_Page25.md](file:///c:/@植善課業/AI/英語學習網頁/六年級上/考券/六年級上_考券/考券_六上_Week12_Page25.md) |
+| **Week 12** | Page 26 | `IMG_4386.HEIC` / `.jpg` | Write Right 3 U6 歷史人物提綱傳記寫作 (Leonardo da Vinci; 全卷 38/46) | 18 / 20 | **90.0%** | [考券_六上_Week12_Page26.md](file:///c:/@植善課業/AI/英語學習網頁/六年級上/考券/六年級上_考券/考券_六上_Week12_Page26.md) |
 
 ---
 
@@ -64,6 +66,12 @@
    - *現象*：附和句寫出 `Michael are too`、否定過去式寫出 `Ray are not pass quiz`；現在式問句 `How do they laugh?` 答句全寫成過去式 `laughed`。
 4. **單數名詞與冠詞漏加 (`TRAP_ARTICLE_OMISSION_A`)**：
    - *現象*：經常裸奔名詞，如 `lion can run fastest`（漏 a）、`with sister`（漏 my）、`to amusement park`（漏 an）。
+5. **Week 12 新發掘高頻盲點群組（Page 25–26 實卷診斷，38/46 = 82%）**：
+   - **`because` 原因子句漏寫動詞 (`ENG_VERB_OMISSION` / `ENG_CHINGLISH_LITERAL`)**：受中文「因為它很好笑」直譯影響寫出 `because it funny`（漏 `is/was`）；寫作提綱身份句寫出 `He made one of the greatest artists`（應為 `was`）。
+   - **專有名詞與泛指複數冠詞濫加 (`ENG_ARTICLE_ERROR`)**：Week 12 出現「反向過度補冠詞」現象，國名寫 `from the Italy`、行星寫 `on the Mars`、泛指複數名詞寫 `the bacteria / the aliens / the humans`，以及單複數衝突 `a bad points`。
+   - **存在句誤用 `only have` (`ENG_THERE_BE_VS_HAVE`)**：受中文「只有冰」影響寫出 `only have ice`，應使用 `there is only ice`。
+   - **不可數名詞主詞動詞不一致 (`ENG_UNCOUNTABLE_SVA`)**：寫出 `there aren't any water`（`water` 不可數必用 `isn't`）。
+   - **形容詞介系詞搭配與過去式轉換 (`ENG_PREP_COLLOCATION` / `ENG_TENSE_MISMATCH`)**：誤寫 `disappointed of`（應 `with`）、`confused with`（應 `about`）、`don't know how understand`（應 `didn't understand`）、傳記動詞 `He make`（應 `made`）。
 
 ---
 

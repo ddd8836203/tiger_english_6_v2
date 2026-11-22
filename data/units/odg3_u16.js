@@ -12,6 +12,7 @@ module.exports = {
   "pages": "p.80 - p.83",
   "is_midterm": true,
   "is_week12": true,
+  "is_week13": true,
   "page_images": [
     "六年級上/課本/02_Oxford_Discover_Grammar_3/images/odg3_pdf_p070.png",
     "六年級上/課本/02_Oxford_Discover_Grammar_3/images/odg3_pdf_p071.png",
@@ -976,6 +977,97 @@ module.exports = {
       "correct_word": "of",
       "fixed_sentence": "It was very silly of me to use salt.",
       "reason": "形容某人做某事愚蠢糊塗用 It is silly of someone to do sth，不可使用 with！"
+    },
+    {
+      "trap_id": "ODG16_ERR_10",
+      "sentence": "He is disappointed of the quiz, because he got a bad score.",
+      "tokens": [
+        "He",
+        "is",
+        "disappointed",
+        "of",
+        "the",
+        "quiz,",
+        "because",
+        "he",
+        "got",
+        "a",
+        "bad",
+        "score."
+      ],
+      "wrong_index": 3,
+      "wrong_word": "of",
+      "correct_word": "with",
+      "fixed_sentence": "He is disappointed with the quiz, because he got a bad score.",
+      "reason": "【Rex W12 真錯】對測驗成績或具體事物感到失望，應使用 disappointed with（對人表現則用 in），絕不可受中文直譯影響誤用 of！"
+    },
+    {
+      "trap_id": "ODG16_ERR_11",
+      "sentence": "He was excited about the movie, because it very funny.",
+      "tokens": [
+        "He",
+        "was",
+        "excited",
+        "about",
+        "the",
+        "movie,",
+        "because",
+        "it",
+        "very",
+        "funny."
+      ],
+      "wrong_index": 8,
+      "wrong_word": "very",
+      "correct_word": "was",
+      "fixed_sentence": "He was excited about the movie, because it was funny.",
+      "reason": "【Rex W12 真錯】because 引導原因子句必須有完整「主詞＋動詞」；英文形容詞 funny 不可直接當動詞使用，不可漏掉 be 動詞 was（受中式英文「因為它很好笑」漏寫 be 動詞干擾）！"
+    },
+    {
+      "trap_id": "ODG16_ERR_12",
+      "sentence": "She is confused with her quiz, because she didn't understand.",
+      "tokens": [
+        "She",
+        "is",
+        "confused",
+        "with",
+        "her",
+        "quiz,",
+        "because",
+        "she",
+        "didn't",
+        "understand."
+      ],
+      "wrong_index": 3,
+      "wrong_word": "with",
+      "correct_word": "about",
+      "fixed_sentence": "She is confused about her quiz, because she didn't understand.",
+      "reason": "【Rex W12 真錯】對某件事感到困惑搞不清楚，課本標準搭配為 confused about（或被某物搞糊塗 confused by），不可誤用 with！"
+    },
+    {
+      "trap_id": "ODG16_ERR_13",
+      "sentence": "He is disappointed with the quiz because he got a bad points on the test.",
+      "tokens": [
+        "He",
+        "is",
+        "disappointed",
+        "with",
+        "the",
+        "quiz",
+        "because",
+        "he",
+        "got",
+        "a",
+        "bad",
+        "points",
+        "on",
+        "the",
+        "test."
+      ],
+      "wrong_index": 11,
+      "wrong_word": "points",
+      "correct_word": "score",
+      "fixed_sentence": "He is disappointed with the quiz because he got a bad score on the test.",
+      "reason": "【Rex W12 真錯】不定冠詞 a 只能搭配單數可數名詞（a bad score 或 a bad grade），不可直接接複數名詞 points！"
     }
   ],
   "quizzes": [
@@ -1527,6 +1619,10 @@ module.exports = {
       "sentence_form": "It + is/was + Adjective + of + Object Pronoun/Noun + to + Base Verb",
       "difficulty": "★★★★☆",
       "difficulty_level": 6,
+      "trapCodes": [
+        "ENG_PREP_COLLOCATION",
+        "ENG_TENSE_MISMATCH"
+      ],
       "question": "Rewrite the sentence using \"It was nice of... to...\": Grandma made us a delicious chocolate cake yesterday.",
       "answer": "It was nice of Grandma to make us a delicious chocolate cake yesterday.",
       "options": [],
@@ -1544,7 +1640,37 @@ module.exports = {
         "commonTraps": [
           "介系詞誤用陷阱：受中文「對奶奶來說很好」直譯干擾，誤寫成 It was nice with/for Grandma。",
           "動詞時態陷阱：不定詞 to 後面必須接原形動詞 make，學生常粗心照抄原句的過去式 made。"
-        ]
+        ],
+        "steps": [
+          "① 確認評價對象為 Grandma（人的善良特質）➔ 介系詞選用 of",
+          "② 檢查時間副詞 yesterday ➔ 虛主詞搭配過去式 It was",
+          "③ 不定詞 to 後方把過去式 made 還原為原形動詞 make"
+        ],
+        "insight": "💡 評價人物品格用 of，且「to + 原形動詞」絕不保留過去式 -ed/-d！",
+        "visualBlock": {
+          "kind": "compare_table",
+          "title": "⚖️ 虛主詞評價句型雙陷阱對照",
+          "data": {
+            "headers": [
+              "常見錯寫 ❌",
+              "正確寫法 ✅",
+              "核心原因"
+            ],
+            "rows": [
+              [
+                "It was nice with Grandma",
+                "It was nice of Grandma",
+                "評價人的性格／善意行為固定用 of，不用 with/for"
+              ],
+              [
+                "to made us a cake",
+                "to make us a cake",
+                "不定詞 to 後方必須還原為原形動詞 make"
+              ]
+            ]
+          },
+          "caption": "📊 先定介系詞 of，再把 made 還原成 make！"
+        }
       },
       "extensionStudy": {
         "synonyms": [
@@ -1650,6 +1776,10 @@ module.exports = {
       "sentence_form": "V-ing (Gerund Subject) + Singular Verb / Preposition + V-ing",
       "difficulty": "★★★★★",
       "difficulty_level": 8,
+      "trapCodes": [
+        "ENG_UNCOUNTABLE_SVA",
+        "ENG_POS_CONFUSION"
+      ],
       "question": "Combine the prompt words into a complete sentence using a gerund subject: (Read) food labels (help) us choose healthy food.",
       "answer": "Reading food labels helps us choose healthy food.",
       "options": [],
@@ -1667,7 +1797,37 @@ module.exports = {
         "commonTraps": [
           "主述一致陷阱：學生常被靠近動詞的複數名詞 labels 誘騙而誤填原形動詞 help，動名詞主詞動詞必加 -s。",
           "動名詞大小寫陷阱：句首動名詞 Reading 的字首 R 必須大寫，忘記大寫會被扣分。"
-        ]
+        ],
+        "steps": [
+          "① 把句首動詞 Read 改寫成動名詞主詞 Reading",
+          "② 鎖定真正主詞是「閱讀這件事」（單數），不受 labels 複數干擾",
+          "③ 謂語動詞配合單數主詞加上 -s ➔ helps"
+        ],
+        "insight": "💡 動名詞片語當主詞＝「一件事」＝永遠配單數動詞（helps / is）！",
+        "visualBlock": {
+          "kind": "slot_box",
+          "title": "📦 動名詞主詞單數動詞句構槽",
+          "data": {
+            "slots": [
+              {
+                "role": "動名詞主詞（視為單數）",
+                "text": "Reading food labels",
+                "accent": "pri"
+              },
+              {
+                "role": "單數動詞（+s）",
+                "text": "helps",
+                "accent": "ok"
+              },
+              {
+                "role": "受詞＋原形補語",
+                "text": "us choose healthy food.",
+                "accent": "warn"
+              }
+            ]
+          },
+          "caption": "📊 labels 只是 Reading 的受詞，決定動詞單複數的是 Reading！"
+        }
       },
       "extensionStudy": {
         "synonyms": [
@@ -1770,6 +1930,15 @@ module.exports = {
       "category_tag": "grammar",
       "difficulty": "★☆☆☆☆",
       "difficulty_level": 1,
+      "triadGroup": {
+        "groupId": "ODG3_U16_T1",
+        "tier": "L1-3",
+        "role": "foundation"
+      },
+      "trapCodes": [
+        "ENG_PREP_COLLOCATION",
+        "ENG_CHINGLISH_LITERAL"
+      ],
       "question": "If you are interested _____ eating healthily, you should always check the nutrition facts on the label.",
       "options": [
         "in",
@@ -1788,6 +1957,49 @@ module.exports = {
           "about": "受中文「對...感興趣」直譯誤導，英語中 interested 絕不能搭配 about。",
           "at": "at 用於技能擅長 (good at)，不能與 interested 搭配表示興趣。",
           "with": "with 用於滿意度 (happy with)，不能與 interested 搭配表達興趣。"
+        },
+        "steps": [
+          "① 圈出關鍵形容詞 interested",
+          "② 對照情緒／態度介系詞階梯：興趣領域專屬搭配 in",
+          "③ 確認後方接動名詞 eating healthily ➔ 選 in"
+        ],
+        "insight": "💡 「有興趣」用 interested in，「擅長」才用 good at，兩者常在段考互為誘答項！",
+        "visualBlock": {
+          "kind": "prep_ladder",
+          "title": "🧭 興趣、能力與情緒介系詞階梯",
+          "data": {
+            "levels": [
+              {
+                "prep": "in",
+                "scope": "興趣投入／領域（對...感興趣）",
+                "examples": [
+                  "interested in cooking",
+                  "interested in eating healthily"
+                ],
+                "highlight": true
+              },
+              {
+                "prep": "at",
+                "scope": "能力專長（擅長／不擅長）",
+                "examples": [
+                  "good at baking",
+                  "bad at math"
+                ],
+                "highlight": false
+              },
+              {
+                "prep": "about",
+                "scope": "情緒事件（興奮／擔心／困惑）",
+                "examples": [
+                  "excited about",
+                  "worried about",
+                  "confused about"
+                ],
+                "highlight": false
+              }
+            ]
+          },
+          "caption": "📊 看到 interested 先反射搭配 in！"
         }
       },
       "extensionStudy": {
@@ -1810,6 +2022,14 @@ module.exports = {
       "category_tag": "grammar",
       "difficulty": "★★☆☆☆",
       "difficulty_level": 2,
+      "triadGroup": {
+        "groupId": "ODG3_U16_T4",
+        "tier": "L1-3",
+        "role": "foundation"
+      },
+      "trapCodes": [
+        "ENG_PREP_COLLOCATION"
+      ],
       "question": "It was very kind _____ Grandma to bake delicious fruit tarts for all of us.",
       "options": [
         "of",
@@ -1828,6 +2048,36 @@ module.exports = {
           "for": "for 用於客觀事物難易度 (easy for me)，不能用於評價人的性格 (kind of sb)。",
           "with": "受中文「對某人來說很好」影響誤用 with，英語評價人性格絕不用 with。",
           "to": "to 為不定詞引導詞或方向介系詞，不能置於人稱名詞前表示評價歸屬。"
+        },
+        "steps": [
+          "① 看空格前的形容詞 kind（修飾人還是修飾事？）",
+          "② kind／nice／silly／sensible 皆為評價「人的品格」，非事件難易度",
+          "③ 評價人品格必選 of ➔ kind of Grandma"
+        ],
+        "insight": "💡 判別祕訣：能說 Grandma is kind（奶奶人真好）就用 of；只能說 It is easy（事很簡單）才用 for！",
+        "visualBlock": {
+          "kind": "compare_table",
+          "title": "⚖️ It is + adj + OF vs FOR 黃金判別表",
+          "data": {
+            "headers": [
+              "句型結構",
+              "形容詞類型",
+              "正確例句"
+            ],
+            "rows": [
+              [
+                "It is/was + adj + OF + 人 + to V",
+                "評價人的品格／聰明／糊塗（kind, nice, silly, sensible）",
+                "It was kind of Grandma to bake tarts."
+              ],
+              [
+                "It is/was + adj + FOR + 人 + to V",
+                "評價事情本身的難易度／重要性（easy, hard, important）",
+                "It is important for us to read labels."
+              ]
+            ]
+          },
+          "caption": "📊 先問「這個形容詞能直接拿來誇獎或批評那個人嗎？」可以就選 of！"
         }
       },
       "extensionStudy": {
@@ -1850,6 +2100,15 @@ module.exports = {
       "category_tag": "grammar",
       "difficulty": "★★☆☆☆",
       "difficulty_level": 3,
+      "triadGroup": {
+        "groupId": "ODG3_U16_T2",
+        "tier": "L1-3",
+        "role": "foundation"
+      },
+      "trapCodes": [
+        "ENG_PREP_COLLOCATION",
+        "ENG_CHINGLISH_LITERAL"
+      ],
       "question": "Many shoppers were surprised _____ how much sugar was contained in a single bottle of soda.",
       "options": [
         "by",
@@ -1868,6 +2127,50 @@ module.exports = {
           "of": "課本除錯大題特別糾錯的典型陷阱！surprised 絕不能搭配 of。",
           "about": "受中文直譯「關於...感到驚訝」影響，但在標準用法中必為 surprised by。",
           "with": "with 用於滿意或厭煩 (happy/bored with)，不能與 surprised 搭配。"
+        },
+        "steps": [
+          "① 圈出關鍵字 surprised（被外在事實震撼的過去分詞形容詞）",
+          "② 排除中式直譯誘答選項 of 與 about",
+          "③ 確認受驚訝來源為「含糖量數據」➔ 選用介系詞 by"
+        ],
+        "insight": "💡 surprised / amazed 被「某件事震撼到」就像被動受影響，固定用 by（或 at），絕不可用 of！",
+        "visualBlock": {
+          "kind": "prep_ladder",
+          "title": "🧭 被動衝擊 vs 滿意／失望介系詞階梯",
+          "data": {
+            "levels": [
+              {
+                "prep": "by / at",
+                "scope": "被外在事實／數據震撼驚訝",
+                "examples": [
+                  "surprised by",
+                  "amazed by",
+                  "confused by"
+                ],
+                "highlight": true
+              },
+              {
+                "prep": "with",
+                "scope": "對成果／測驗／產品滿意或失望",
+                "examples": [
+                  "happy with",
+                  "disappointed with",
+                  "bored with"
+                ],
+                "highlight": false
+              },
+              {
+                "prep": "of (禁區❌)",
+                "scope": "不可與 surprised / disappointed 連用",
+                "examples": [
+                  "❌ surprised of",
+                  "❌ disappointed of"
+                ],
+                "highlight": false
+              }
+            ]
+          },
+          "caption": "📊 看見 surprised / amazed 優先鎖定 by！"
         }
       },
       "extensionStudy": {
@@ -1890,6 +2193,15 @@ module.exports = {
       "category_tag": "grammar",
       "difficulty": "★★☆☆☆",
       "difficulty_level": 3,
+      "triadGroup": {
+        "groupId": "ODG3_U16_T2",
+        "tier": "L1-3",
+        "role": "foundation"
+      },
+      "trapCodes": [
+        "ENG_PREP_COLLOCATION",
+        "ENG_CHINGLISH_LITERAL"
+      ],
       "question": "Italy and France are world-famous _____ their traditional food culture and delicious cheeses.",
       "options": [
         "for",
@@ -1908,6 +2220,41 @@ module.exports = {
           "about": "受中文「關於...很有名」直譯影響，英語表以特產聞名必須用 for。",
           "with": "with 表示伴隨或滿意，不能用在 famous 後面表達聞名的原因。",
           "at": "at 表示在某技能上的專長 (good at)，不能用於表達國家以特產聞名。"
+        },
+        "steps": [
+          "① 圈出關鍵形容詞 famous",
+          "② 確認後方為聞名原因／特產（traditional food culture and cheeses）",
+          "③ 「以某特色聞名」固定搭配 for ➔ famous for"
+        ],
+        "insight": "💡 famous for＋名產／原因（以⋯⋯出名）；famous as＋身分頭銜（以⋯⋯身分出名）！",
+        "visualBlock": {
+          "kind": "slot_box",
+          "title": "📦 famous for 特產原因句構槽",
+          "data": {
+            "slots": [
+              {
+                "role": "主詞（國家／人物）",
+                "text": "Italy and France",
+                "accent": "pri"
+              },
+              {
+                "role": "be 動詞",
+                "text": "are",
+                "accent": "ok"
+              },
+              {
+                "role": "形容詞＋專屬介系詞",
+                "text": "world-famous for",
+                "accent": "warn"
+              },
+              {
+                "role": "聞名特色／名產",
+                "text": "their traditional food culture...",
+                "accent": "ok"
+              }
+            ]
+          },
+          "caption": "📊 記住「為了這個特色而出名」➔ famous FOR！"
         }
       },
       "extensionStudy": {
@@ -1930,6 +2277,14 @@ module.exports = {
       "category_tag": "grammar",
       "difficulty": "★★☆☆☆",
       "difficulty_level": 3,
+      "triadGroup": {
+        "groupId": "ODG3_U16_T4",
+        "tier": "L1-3",
+        "role": "foundation"
+      },
+      "trapCodes": [
+        "ENG_PREP_COLLOCATION"
+      ],
       "question": "The cake tasted completely awful because the mixing bowl was full _____ salt instead of sugar.",
       "options": [
         "of",
@@ -1948,6 +2303,36 @@ module.exports = {
           "with": "受 filled with 混淆！full 固定搭配 of，只有 filled 才能搭配 with。",
           "in": "in 表示在...裡面，不能與 full 連用構成「裝滿」的固定搭配片語。",
           "about": "about 表示關於或情緒引發原因，不能用於具體物質充滿容器的語境。"
+        },
+        "steps": [
+          "① 看清前面是形容詞 full，還是動詞分詞 filled",
+          "② 本題為 full，固定配對介系詞 of",
+          "③ 驗證句意：was full of salt（滿滿都是鹽）➔ 選 of"
+        ],
+        "insight": "💡 「full 配 of、filled 配 with」——四個字口訣救回所有克漏字與改錯題！",
+        "visualBlock": {
+          "kind": "compare_table",
+          "title": "⚖️ full of vs filled with 雙胞胎對照",
+          "data": {
+            "headers": [
+              "正確寫法 ✅",
+              "詞性來源",
+              "常見誤寫 ❌"
+            ],
+            "rows": [
+              [
+                "be full of salt",
+                "full（純形容詞）",
+                "be full with salt"
+              ],
+              [
+                "be filled with salt",
+                "fill 的過去分詞 filled",
+                "be filled of salt"
+              ]
+            ]
+          },
+          "caption": "📊 看見 full 就選 of，絕不手滑選 with！"
         }
       },
       "extensionStudy": {
@@ -1970,6 +2355,15 @@ module.exports = {
       "category_tag": "grammar",
       "difficulty": "★★★★★",
       "difficulty_level": 8,
+      "triadGroup": {
+        "groupId": "ODG3_U16_T5",
+        "tier": "L7-10",
+        "role": "challenge"
+      },
+      "trapCodes": [
+        "ENG_POS_CONFUSION",
+        "ENG_UNCOUNTABLE_SVA"
+      ],
       "question": "_____ food labels before buying snacks helps children avoid dangerous food allergies.",
       "options": [
         "Reading",
@@ -1988,6 +2382,36 @@ module.exports = {
           "Read": "原形動詞不能直接擔任句子的主詞，若為祈使句後方不應出現謂語動詞 helps。",
           "To reading": "英語中無 To reading 這種錯誤的不定詞結構，不定詞應為 to read。",
           "Reads": "三單動詞 Reads 不能置於句首充當主詞，主詞必須為名詞或動名詞。"
+        },
+        "steps": [
+          "① 往後掃描全句動詞：找到真正的三單動詞 helps",
+          "② 推論空格到 snacks 為整個句子的「主詞片語」",
+          "③ 動詞當主詞必須名詞化 ➔ 選動名詞 Reading"
+        ],
+        "insight": "💡 句首看起來像祈使句，但後面又冒出三單動詞 helps？那就表示前面整個動作是「動名詞主詞」！",
+        "visualBlock": {
+          "kind": "slot_box",
+          "title": "📦 動名詞主詞 vs 祈使句 結構辨析",
+          "data": {
+            "slots": [
+              {
+                "role": "主詞位置（必用 V-ing）",
+                "text": "Reading food labels before buying snacks",
+                "accent": "pri"
+              },
+              {
+                "role": "單數謂語動詞",
+                "text": "helps",
+                "accent": "ok"
+              },
+              {
+                "role": "受詞＋結果",
+                "text": "children avoid dangerous food allergies.",
+                "accent": "warn"
+              }
+            ]
+          },
+          "caption": "📊 若選原形 Read 會變成兩套動詞衝突；選 Reading 才能與 helps 完美搭配！"
         }
       },
       "extensionStudy": {
@@ -2166,6 +2590,15 @@ module.exports = {
       "category_tag": "reading",
       "difficulty": "★★★★☆",
       "difficulty_level": 7,
+      "triadGroup": {
+        "groupId": "ODG3_U16_T5",
+        "tier": "L4-6",
+        "role": "twist"
+      },
+      "trapCodes": [
+        "ENG_TENSE_MISMATCH",
+        "ENG_PREP_COLLOCATION"
+      ],
       "question": "In the story \"Lisa's Salty Cake Adventure\", why did Lisa's sister exclaim \"Ugh!\" after tasting the cake?",
       "options": [
         "Because Lisa accidentally gave her sister a cup of salt instead of sugar.",
@@ -2184,6 +2617,32 @@ module.exports = {
           "Because the oven was too cold and the cake was not baked at all.": "故事中烤箱正常運轉且蛋糕已烤好 (When the cake was ready)，烤箱溫度無問題。",
           "Because Lisa dropped the whole cake onto the dirty kitchen floor.": "故事中蛋糕並未掉到地板上，姊姊是在餐桌品嚐切片時發現問題。",
           "Because the cake was full of hot chili powder and bitter medicine.": "故事中加入的是鹽巴 (salt)，絕非辣椒粉或苦藥，此為捏造選項。"
+        },
+        "steps": [
+          "① 回到故事中姊姊驚叫 \"Ugh! It is full of salt!\" 的段落",
+          "② 往前追蹤原因句：I had given my sister a cup of salt, not a cup of sugar.",
+          "③ 比對選項中「誤把鹽巴當糖 (salt instead of sugar)」即為正解"
+        ],
+        "insight": "💡 故事中的過去完成式 had given 表示「在姊姊吃蛋糕之前」早已把鹽巴倒進麵糊裡！",
+        "visualBlock": {
+          "kind": "timeline",
+          "title": "⏳ Lisa 鹹蛋糕事件先後順序時間軸",
+          "data": {
+            "events": [
+              {
+                "time": "更早之前 (Past Perfect)",
+                "label": "Lisa had given her sister a cup of salt",
+                "highlight": true
+              },
+              {
+                "time": "烘烤完成 (Simple Past)",
+                "label": "Sister tried a piece & exclaimed \"Ugh!\"",
+                "highlight": false
+              }
+            ],
+            "rule": "先發生的動作（拿錯鹽巴）用過去完成式 had given，後發生的反應（試吃驚呼）用過去式"
+          },
+          "caption": "📊 用時間軸看懂 why 因果與 had given 的時態關係！"
         }
       },
       "extensionStudy": {
@@ -2205,6 +2664,14 @@ module.exports = {
       "category_tag": "reading",
       "difficulty": "★★★★★",
       "difficulty_level": 8,
+      "triadGroup": {
+        "groupId": "ODG3_U16_T5",
+        "tier": "L7-10",
+        "role": "challenge"
+      },
+      "trapCodes": [
+        "ENG_TENSE_MISMATCH"
+      ],
       "question": "How did Lisa's sister react when she discovered that Lisa made the mistake with the salt?",
       "options": [
         "She thought it was funny and was not angry with Lisa.",
@@ -2232,6 +2699,730 @@ module.exports = {
         ],
         "grammarCompare": "sorry about making that mistake (為犯錯抱歉) 與 thought it was funny (覺得很有趣) 形成生動的情感對比。",
         "examVariations": "題型常見於角色態度推論題、故事主旨總結題及課後閱讀素養評量。"
+      }
+    },
+    {
+      "id": "q_w12_odg3_u16_29",
+      "book_id": "gra3",
+      "unit_id": "gra3_16",
+      "is_midterm": true,
+      "is_week12": true,
+      "is_week13": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "part_title": "Part A: Write a sentence using Adjective + Preposition + because...",
+      "part_instructions": "Choose a preposition from the box to go with the given adjective, and write a sentence about something or someone you know. Your sentence must give a reason.",
+      "word_bank": "by   at   about   in   with   of   for",
+      "sentence_form": "<subject> + <verb \"to be\"> + <adjective + preposition> + <object> + because ...",
+      "tense_hint": "Check both the preposition (with/about/for/by/in/at/of) AND the verb inside your because-clause (never omit 'is/was')!",
+      "difficulty": "★★☆☆☆",
+      "difficulty_level": 2,
+      "triadGroup": {
+        "groupId": "ODG3_U16_T3",
+        "tier": "L1-3",
+        "role": "foundation"
+      },
+      "trapCodes": [
+        "ENG_PREP_COLLOCATION",
+        "ENG_VERB_OMISSION",
+        "ENG_CHINGLISH_LITERAL"
+      ],
+      "question": "Write a complete sentence using [excited] + the correct preposition from the box, and give a reason starting with \"because...\".",
+      "answer": "He is excited about the new movie because it is very funny.",
+      "options": [],
+      "self_check": [
+        "是否選擇正確介系詞 about 與 excited 搭配（excited about，絕不用 with 或 for）",
+        "主句主詞後是否寫出 be 動詞（如 He is / I am / He was）",
+        "because 後方原因子句是否包含完整「主詞＋動詞」（絕不可漏寫 is/was 而誤寫成 *because it funny）"
+      ],
+      "explanation": {
+        "point": "3C 公式造句實戰：be excited about + 受詞 + because + 主詞 + 動詞",
+        "examPurpose": "考核學生套用 W12 真卷五段式造句公式，精準搭配 excited about 並於 because 子句中完整補出 be 動詞的實戰書寫力。",
+        "correctReason": "形容對即將發生或喜歡的事物感到興奮，固定搭配 excited about；原因子句 because it is very funny 必須包含主詞 it 與動詞 is。",
+        "note": "英文的形容詞（funny / good / bad）不能直接當動詞用，前面一定要有 be 動詞（is / was）。",
+        "trap": "Rex W12 真卷常見扣分點：寫出 because it funny（漏掉 be 動詞 is），或將 excited about 誤寫為 excited with。",
+        "commonTraps": [
+          "because 子句漏動詞陷阱（ENG_VERB_OMISSION）：受中文「因為它很好笑」直譯影響，常漏掉 is 寫成 *because it funny。",
+          "介系詞搭配陷阱（ENG_PREP_COLLOCATION）：受 excited with 混淆，對某事件或電影感到興奮應固定使用 excited about。"
+        ],
+        "steps": [
+          "① 先套入前兩格：<He> + <is>（或過去式 was）",
+          "② 配對詞庫介系詞：[excited] 固定搭配 about ➔ excited about",
+          "③ 寫入受詞（the new movie）並接上完整原因子句：because it is very funny（檢查 it 後必有 is！）"
+        ],
+        "insight": "💡 寫完 because 馬上用筆圈出它的「主詞＋動詞」，再也不用怕寫出 *because it funny 被扣分！",
+        "visualBlock": {
+          "kind": "slot_box",
+          "title": "📦 形容詞＋介系詞＋because 完整五格句構槽",
+          "data": {
+            "slots": [
+              {
+                "role": "1. 主詞",
+                "text": "He",
+                "accent": "pri"
+              },
+              {
+                "role": "2. be 動詞",
+                "text": "is",
+                "accent": "ok"
+              },
+              {
+                "role": "3. 形容詞＋介系詞",
+                "text": "excited about",
+                "accent": "warn"
+              },
+              {
+                "role": "4. 受詞",
+                "text": "the new movie",
+                "accent": "pri"
+              },
+              {
+                "role": "5. 完整原因子句",
+                "text": "because it is very funny.",
+                "accent": "ok"
+              }
+            ]
+          },
+          "caption": "📊 第 2 格與第 5 格都要有動詞，句子才算完整滿分！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "thrilled about ... because ...",
+          "happy about ... because ..."
+        ],
+        "grammarCompare": "excited about 後接名詞（the movie）或動名詞（watching the movie）；注意 excited 修飾人，exciting 修飾事物。",
+        "examVariations": "考卷常考五格公式造句、錯題抓漏（補出 because 子句中的 be 動詞）及看圖寫句。"
+      }
+    },
+    {
+      "id": "q_w12_odg3_u16_30",
+      "book_id": "gra3",
+      "unit_id": "gra3_16",
+      "is_midterm": true,
+      "is_week12": true,
+      "is_week13": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "part_title": "Part A: Write a sentence using Adjective + Preposition + because...",
+      "part_instructions": "Choose a preposition from the box to go with the given adjective, and write a sentence about something or someone you know. Your sentence must give a reason.",
+      "word_bank": "by   at   about   in   with   of   for",
+      "sentence_form": "<subject> + <verb \"to be\"> + <adjective + preposition> + <object> + because ...",
+      "tense_hint": "Check both the preposition (with/about/for/by/in/at/of) AND the verb inside your because-clause (never omit 'is/was')!",
+      "difficulty": "★★★☆☆",
+      "difficulty_level": 5,
+      "triadGroup": {
+        "groupId": "ODG3_U16_T4",
+        "tier": "L4-6",
+        "role": "twist"
+      },
+      "trapCodes": [
+        "ENG_PREP_COLLOCATION",
+        "ENG_UNCOUNTABLE_SVA",
+        "ENG_VERB_OMISSION"
+      ],
+      "question": "Write a complete sentence using [disappointed] + the correct preposition from the box, and give a reason starting with \"because...\".",
+      "answer": "He is disappointed with his quiz because he got a bad score.",
+      "options": [],
+      "self_check": [
+        "是否使用 disappointed with（對測驗／物品失望）而非 *disappointed of",
+        "若寫到分數，是否正確寫成單數 a bad score / a low grade（不可寫 *a bad points）",
+        "because 子句是否具備完整「主詞＋動詞」（如 because he got ... 或 because it was ...）"
+      ],
+      "explanation": {
+        "point": "3C 公式造句實戰：be disappointed with + 事物 + because + 原因子句",
+        "examPurpose": "針對 W12 真卷最高頻失分點，訓練學生同時過關「disappointed 介系詞搭配」、「單複數名詞一致」與「because 子句動詞完整性」。",
+        "correctReason": "對測驗成績或具體成果感到失望應使用 disappointed with（對人的表現則用 in）；「一個低分」用單數名詞 a bad score，且 because 後方需有主詞 he 與動詞 got。",
+        "note": "若要表達對「人」失望（例如隊友或自己），也可寫 disappointed in。",
+        "trap": "W12 真卷一次踩三雷：*disappointed of、*a bad points、或 *because it too hard（漏動詞）。",
+        "commonTraps": [
+          "介系詞誤用陷阱（ENG_PREP_COLLOCATION）：受中文直譯影響常誤寫成 *disappointed of，正確必為 with（對物）或 in（對人）。",
+          "冠詞與單複數陷阱（ENG_UNCOUNTABLE_SVA）：不定冠詞 a 只能接單數名詞 a bad score，絕不可寫成 *a bad points。"
+        ],
+        "steps": [
+          "① 決定對象：對測驗失望用 disappointed with（對人失望用 disappointed in）",
+          "② 寫出主句：He is disappointed with his quiz",
+          "③ 補上原因子句並檢查單複數：because he got a bad score.（a + 單數 score！）"
+        ],
+        "insight": "💡 記住三道防線：disappointed WITH（不寫 of）➔ got a bad SCORE（不寫 a points）➔ because 主詞＋動詞！",
+        "visualBlock": {
+          "kind": "compare_table",
+          "title": "⚖️ disappointed 真卷三大地雷排除表",
+          "data": {
+            "headers": [
+              "常見失分錯寫 ❌",
+              "滿分正確寫法 ✅",
+              "避雷口訣"
+            ],
+            "rows": [
+              [
+                "disappointed of the quiz",
+                "disappointed with the quiz",
+                "對物失望用 with、對人失望用 in，禁寫 of"
+              ],
+              [
+                "got a bad points",
+                "got a bad score / bad grades",
+                "有冠詞 a 就用單數 score，不可接複數 points"
+              ],
+              [
+                "because the quiz hard",
+                "because the quiz was hard",
+                "because 子句形容詞前必補 be 動詞 was/is"
+              ]
+            ]
+          },
+          "caption": "📊 對照紅綠燈檢查一遍，就能避開整大題所有扣分地雷！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "unhappy with ... because ...",
+          "upset about ... because ..."
+        ],
+        "grammarCompare": "disappointed with + 事物／結果（the quiz / the cake）；disappointed in + 人（my brother / myself）；disappointed about + 事件消息。",
+        "examVariations": "常見於 W12/W13 真卷造句題、錯題訂正及單複數名詞辨析題。"
+      }
+    },
+    {
+      "id": "q_w12_odg3_u16_31",
+      "book_id": "gra3",
+      "unit_id": "gra3_16",
+      "is_midterm": true,
+      "is_week12": true,
+      "is_week13": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "part_title": "Part A: Write a sentence using Adjective + Preposition + because...",
+      "part_instructions": "Choose a preposition from the box to go with the given adjective, and write a sentence about something or someone you know. Your sentence must give a reason.",
+      "word_bank": "by   at   about   in   with   of   for",
+      "sentence_form": "<subject> + <verb \"to be\"> + <adjective + preposition> + <object> + because ...",
+      "tense_hint": "Check both the preposition (with/about/for/by/in/at/of) AND the verb inside your because-clause (never omit 'is/was')!",
+      "difficulty": "★★★☆☆",
+      "difficulty_level": 5,
+      "triadGroup": {
+        "groupId": "ODG3_U16_T3",
+        "tier": "L4-6",
+        "role": "twist"
+      },
+      "trapCodes": [
+        "ENG_PREP_COLLOCATION",
+        "ENG_POS_CONFUSION",
+        "ENG_VERB_OMISSION"
+      ],
+      "question": "Write a complete sentence using [confused] + the correct preposition from the box, and give a reason starting with \"because...\".",
+      "answer": "She is confused about the science homework because she didn't know how to solve it.",
+      "options": [],
+      "self_check": [
+        "是否使用 confused about（或 confused by），而非誤寫成 *confused with",
+        "若寫到 how，是否記得接上不定詞 to（know how to solve / understand），不可漏掉 to",
+        "because 子句是否包含完整主詞與動詞（且時態與主句情境合理一致）"
+      ],
+      "explanation": {
+        "point": "3C 公式造句實戰：be confused about/by + 受詞 + because + 原因子句",
+        "examPurpose": "考核學生區分 confused about/by（不誤用 with）以及在原因子句中正確使用疑問詞不定詞結構 how to + V 的精確寫作力。",
+        "correctReason": "對某件事感到困惑應搭配 confused about（或被某個難題搞糊塗用 confused by）；原因子句中「知道如何做」必為 know how to + 原形動詞。",
+        "note": "若要表達「把 A 和 B 搞混」，才會用 confuse A with B（動詞用法）；形容詞狀態 be confused 則配 about 或 by。",
+        "trap": "W12 真卷常見兩大錯誤：誤用 *confused with the quiz，以及漏掉 to 寫成 *didn't know how understand。",
+        "commonTraps": [
+          "介系詞誤用陷阱（ENG_PREP_COLLOCATION）：be confused 搭配 about 或 by，不可與 happy with 混淆而誤寫 *confused with。",
+          "不定詞漏 to 陷阱（ENG_POS_CONFUSION）：在「疑問詞 + 不定詞」結構中，不可寫成 *how understand，必須寫為 how to understand / how to solve。"
+        ],
+        "steps": [
+          "① 選定搭配：對作業或問題感到困惑 ➔ confused about（或被複雜規則搞糊塗 ➔ confused by）",
+          "② 檢查連接詞後句子：because + 主詞 she + 動詞 didn't know",
+          "③ 若接 how，必補上不定詞 to + 原形動詞：how to solve it"
+        ],
+        "insight": "💡 「be confused」配 about / by，絕不寫 with；寫「如何做」必寫 how TO + 原形動詞！",
+        "visualBlock": {
+          "kind": "compare_table",
+          "title": "⚖️ confused 雙誤區矯正對照表",
+          "data": {
+            "headers": [
+              "常見失分錯寫 ❌",
+              "正確寫法 ✅",
+              "核心規則"
+            ],
+            "rows": [
+              [
+                "confused with her quiz",
+                "confused about / by her quiz",
+                "形容詞 confused 固定搭配 about 或 by"
+              ],
+              [
+                "didn't know how understand",
+                "didn't know how to understand",
+                "疑問詞 how 後接動詞必須加 to + 原形動詞"
+              ]
+            ]
+          },
+          "caption": "📊 檢查介系詞 about/by 與 how to + V，一次修掉兩個失分點！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "puzzled by ... because ...",
+          "uncertain about ... because ..."
+        ],
+        "grammarCompare": "confused about（對某主題或題目不解）vs confused by（受到複雜指示或外觀相似事物影響而糊塗），兩者皆屬課本正解。",
+        "examVariations": "常考於介系詞選填、how to + V 不定詞結構改錯及閱讀測驗詞義辨析。"
+      }
+    },
+    {
+      "id": "q_w12_odg3_u16_32",
+      "book_id": "gra3",
+      "unit_id": "gra3_16",
+      "is_midterm": true,
+      "is_week12": true,
+      "is_week13": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "part_title": "Part A: Write a sentence using Adjective + Preposition + because...",
+      "part_instructions": "Choose a preposition from the box to go with the given adjective, and write a sentence about something or someone you know. Your sentence must give a reason.",
+      "word_bank": "by   at   about   in   with   of   for",
+      "sentence_form": "<subject> + <verb \"to be\"> + <adjective + preposition> + <object> + because ...",
+      "tense_hint": "Check both the preposition (with/about/for/by/in/at/of) AND the verb inside your because-clause (never omit 'is/was')!",
+      "difficulty": "★★★☆☆",
+      "difficulty_level": 4,
+      "triadGroup": {
+        "groupId": "ODG3_U16_T2",
+        "tier": "L4-6",
+        "role": "twist"
+      },
+      "trapCodes": [
+        "ENG_PREP_COLLOCATION",
+        "ENG_VERB_OMISSION",
+        "ENG_ARTICLE_ERROR"
+      ],
+      "question": "Write a complete sentence using [famous] + the correct preposition from the box, and give a reason starting with \"because...\".",
+      "answer": "Taiwan is famous for its night markets because the street food is delicious.",
+      "options": [],
+      "self_check": [
+        "是否使用 famous for（以...聞名），而非誤寫成 *famous about 或 *famous with",
+        "國名（如 Taiwan / Italy / Japan）前面是否維持零冠詞（不加 *the Taiwan）",
+        "because 後方原因子句是否包含完整「主詞＋動詞」（如 the street food is delicious）"
+      ],
+      "explanation": {
+        "point": "3C 公式造句實戰：be famous for + 特色名產 + because + 原因子句",
+        "examPurpose": "考核學生使用 famous for 表達國家或城市名聲特產，並結合跨單元「國名零冠詞」與「because 完整子句」的綜合造句力。",
+        "correctReason": "表達某地或某人「以某項特色／產品而聞名」固定搭配 famous for；主詞若為一般國名（Taiwan / Italy），前面不可加冠詞 the。",
+        "note": "注意不可寫成 *Italy is famous for it pizza（代名詞 it 誤用，所有格應為 its）。",
+        "trap": "中文直譯「關於...很有名」誤寫 famous about，或在國名前誤加 the（*the Italy），以及 because 子句漏寫 be 動詞。",
+        "commonTraps": [
+          "介系詞誤用陷阱（ENG_PREP_COLLOCATION）：「以某特產聞名」必為 famous for，絕不可受中文干擾寫成 *famous about。",
+          "國名冠詞陷阱（ENG_ARTICLE_ERROR）：單一國名如 Taiwan / Italy / Japan 前面不加 the（僅 United States / UK 等複數或縮寫國名例外）。"
+        ],
+        "steps": [
+          "① 選定主詞與 be 動詞：Taiwan + is（單數國家用 is）",
+          "② 配對專屬介系詞：[famous] 固定搭配 for ➔ famous for",
+          "③ 補上特色受詞與完整原因子句：its night markets because the street food is delicious."
+        ],
+        "insight": "💡 記住：國名不加 the、名產搭配 famous FOR、because 後面必有主詞＋動詞！",
+        "visualBlock": {
+          "kind": "slot_box",
+          "title": "📦 famous for 名產原因句構槽",
+          "data": {
+            "slots": [
+              {
+                "role": "1. 主詞（國名零冠詞）",
+                "text": "Taiwan",
+                "accent": "pri"
+              },
+              {
+                "role": "2. be 動詞",
+                "text": "is",
+                "accent": "ok"
+              },
+              {
+                "role": "3. 形容詞＋介系詞",
+                "text": "famous for",
+                "accent": "warn"
+              },
+              {
+                "role": "4. 特色受詞",
+                "text": "its night markets",
+                "accent": "pri"
+              },
+              {
+                "role": "5. 完整原因子句",
+                "text": "because the street food is delicious.",
+                "accent": "ok"
+              }
+            ]
+          },
+          "caption": "📊 第 1 格國名不加 the，第 5 格 street food 後必補 is！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "well-known for ... because ...",
+          "celebrated for ... because ..."
+        ],
+        "grammarCompare": "famous for＋特色事物（Taiwan is famous for bubble tea）；famous as＋身分角色（He is famous as an artist）。",
+        "examVariations": "常與 Write Right 傳記寫作跨單元連動：介紹歷史人物以哪項成就聞名（was famous for his paintings）。"
+      }
+    },
+    {
+      "id": "q_w12_odg3_u16_33",
+      "book_id": "gra3",
+      "unit_id": "gra3_16",
+      "is_midterm": true,
+      "is_week12": true,
+      "is_week13": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "part_title": "Part A: Write a sentence using Adjective + Preposition + because...",
+      "part_instructions": "Choose a preposition from the box to go with the given adjective, and write a sentence about something or someone you know. Your sentence must give a reason.",
+      "word_bank": "by   at   about   in   with   of   for",
+      "sentence_form": "<subject> + <verb \"to be\"> + <adjective + preposition> + <object> + because ...",
+      "tense_hint": "Check both the preposition (with/about/for/by/in/at/of) AND the verb inside your because-clause (never omit 'is/was')!",
+      "difficulty": "★★★☆☆",
+      "difficulty_level": 4,
+      "triadGroup": {
+        "groupId": "ODG3_U16_T1",
+        "tier": "L4-6",
+        "role": "twist"
+      },
+      "trapCodes": [
+        "ENG_PREP_COLLOCATION",
+        "ENG_POS_CONFUSION",
+        "ENG_VERB_OMISSION"
+      ],
+      "question": "Write a complete sentence using [interested] + the correct preposition from the box, and give a reason starting with \"because...\".",
+      "answer": "My sister is interested in cooking healthy meals because she loves fresh vegetables.",
+      "options": [],
+      "self_check": [
+        "是否使用 interested in（對...感興趣），而非誤寫成 *interested about 或 *interested at",
+        "若 in 後方接動作，動詞是否轉為動名詞 V-ing（如 in cooking / in reading）",
+        "because 後方原因子句是否包含完整「主詞＋動詞」（如 she loves ... 或 it is ...）"
+      ],
+      "explanation": {
+        "point": "3C 公式造句實戰：be interested in + 名詞/V-ing + because + 原因子句",
+        "examPurpose": "考核學生將基礎介系詞搭配 interested in 進階運用到完整長句寫作中，同時正確處理介系詞後接 V-ing 及原因子句動詞。",
+        "correctReason": "interested 固定搭配介系詞 in；介系詞 in 後若接動詞必須變為動名詞 V-ing（cooking）；because 後方需有完整主詞 she 與三單動詞 loves。",
+        "note": "若主詞是第三人稱單數（she / he / my sister），現在式一般動詞記得加 -s（loves / likes）。",
+        "trap": "將 interested in 誤寫成 *interested about，或漏掉動名詞 -ing（*interested in cook）及三單 -s（*she love）。",
+        "commonTraps": [
+          "介系詞誤用陷阱（ENG_PREP_COLLOCATION）：中文「對...有興趣」常誘使寫出 *interested about，正確固定搭配為 interested in。",
+          "介系詞後動詞型態陷阱（ENG_POS_CONFUSION）：in 為介系詞，後方若接動詞必須加 -ing（cooking），不可用原形或 to + V。"
+        ],
+        "steps": [
+          "① 搭配詞庫介系詞：[interested] 固定配 in ➔ is interested in",
+          "② 接名詞或動名詞：cooking healthy meals（介系詞後動詞加 -ing）",
+          "③ 補上完整原因子句：because she loves fresh vegetables.（檢查主詞＋動詞與三單 -s！）"
+        ],
+        "insight": "💡 「interested IN ＋ V-ing」一次記兩件事：介系詞用 in、後面動詞要加 -ing！",
+        "visualBlock": {
+          "kind": "prep_ladder",
+          "title": "🧭 常用形容詞介系詞搭配階梯總覽",
+          "data": {
+            "levels": [
+              {
+                "prep": "in",
+                "scope": "興趣投入（必接名詞或 V-ing）",
+                "examples": [
+                  "interested in cooking",
+                  "interested in science"
+                ],
+                "highlight": true
+              },
+              {
+                "prep": "at",
+                "scope": "能力擅長程度（必接名詞或 V-ing）",
+                "examples": [
+                  "good at baking",
+                  "bad at swimming"
+                ],
+                "highlight": false
+              },
+              {
+                "prep": "about",
+                "scope": "心理情緒起伏（興奮／擔憂／困惑）",
+                "examples": [
+                  "excited about",
+                  "worried about",
+                  "confused about"
+                ],
+                "highlight": false
+              },
+              {
+                "prep": "for",
+                "scope": "特色名產聞名",
+                "examples": [
+                  "famous for its pizza"
+                ],
+                "highlight": false
+              }
+            ]
+          },
+          "caption": "📊 四層階梯幫你秒區分 in / at / about / for！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "keen on ... because ...",
+          "curious about ... because ..."
+        ],
+        "grammarCompare": "interested（感到有興趣，修飾人）必須搭配 in；interesting（令人感興趣的，修飾事物）則不需要固定配 in。",
+        "examVariations": "常與 good at 並列出現在對比對話填空、造句與改錯題中。"
+      }
+    },
+    {
+      "id": "q_w12_odg3_u16_34",
+      "book_id": "gra3",
+      "unit_id": "gra3_16",
+      "is_midterm": true,
+      "is_week12": true,
+      "is_week13": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "part_title": "Part A: Write a sentence using Adjective + Preposition + because...",
+      "part_instructions": "Choose a preposition from the box to go with the given adjective, and write a sentence about something or someone you know. Your sentence must give a reason.",
+      "word_bank": "by   at   about   in   with   of   for",
+      "sentence_form": "<subject> + <verb \"to be\"> + <adjective + preposition> + <object> + because ...",
+      "tense_hint": "Check both the preposition (with/about/for/by/in/at/of) AND the verb inside your because-clause (never omit 'is/was')!",
+      "difficulty": "★★★★☆",
+      "difficulty_level": 6,
+      "triadGroup": {
+        "groupId": "ODG3_U16_T3",
+        "tier": "L4-6",
+        "role": "twist"
+      },
+      "trapCodes": [
+        "ENG_PREP_COLLOCATION",
+        "ENG_POS_CONFUSION",
+        "ENG_VERB_OMISSION"
+      ],
+      "question": "Write a complete sentence using [worried] + the correct preposition from the box, and give a reason starting with \"because...\".",
+      "answer": "Mom is worried about eating junk food because it is full of chemicals.",
+      "options": [],
+      "self_check": [
+        "是否使用 worried about（而非誤寫成 *worried with 或 *worried of）",
+        "若 about 後方接動作，動詞是否轉為動名詞 V-ing（如 about eating / about failing）",
+        "because 後方原因子句是否包含完整「主詞＋動詞」（如 it is full of chemicals，不可漏寫 is）"
+      ],
+      "explanation": {
+        "point": "3C 公式造句實戰：be worried about + V-ing/名詞 + because + 原因子句",
+        "examPurpose": "考核學生整合 worried about、介系詞接動名詞 eating 以及課文核心片語 full of 於一體的複合造句能力。",
+        "correctReason": "表達對某情況或潛在問題感到擔憂固定搭配 worried about；介系詞 about 後接動詞 eat 需改為 eating；原因子句 it is full of chemicals 具備完整主詞＋動詞與固定搭配 full of。",
+        "note": "注意 worried about 後面絕對不能接原形動詞（不可寫 *worried about eat）。",
+        "trap": "受 afraid of 影響誤寫 *worried of，或介系詞後忘記將動詞加 -ing，以及在 *because it full of chemicals 中漏掉 be 動詞 is。",
+        "commonTraps": [
+          "介系詞雙重混淆陷阱（ENG_PREP_COLLOCATION）：worried 搭配 about（不可用 of/with）；原因子句中 full 搭配 of（不可用 *full with）。",
+          "原因子句漏 be 動詞陷阱（ENG_VERB_OMISSION）：full 是形容詞，寫成 *because it full of chemicals 會缺動詞，必須補上 is。"
+        ],
+        "steps": [
+          "① 決定情緒搭配：[worried] 固定配 about ➔ is worried about",
+          "② 填入受詞或動名詞：eating junk food（about 後動詞必加 -ing）",
+          "③ 串接原因子句並檢查形容詞前補 be 動詞：because it is full of chemicals."
+        ],
+        "insight": "💡 這句一石三鳥：worried ABOUT ＋ eatING ＋ because it IS full OF！三個高頻考點全包了！",
+        "visualBlock": {
+          "kind": "slot_box",
+          "title": "📦 worried about ＋ full of 雙搭配五格句構槽",
+          "data": {
+            "slots": [
+              {
+                "role": "1. 主詞",
+                "text": "Mom",
+                "accent": "pri"
+              },
+              {
+                "role": "2. be 動詞",
+                "text": "is",
+                "accent": "ok"
+              },
+              {
+                "role": "3. 形容詞＋介系詞",
+                "text": "worried about",
+                "accent": "warn"
+              },
+              {
+                "role": "4. 動名詞受詞",
+                "text": "eating junk food",
+                "accent": "pri"
+              },
+              {
+                "role": "5. 完整原因子句",
+                "text": "because it is full of chemicals.",
+                "accent": "ok"
+              }
+            ]
+          },
+          "caption": "📊 第 4 格檢查 -ing，第 5 格檢查 is 與 full of！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "concerned about ... because ...",
+          "anxious about ... because ..."
+        ],
+        "grammarCompare": "worried about（心裡焦急擔憂）vs afraid of（害怕恐懼），介系詞完全不同；worried about 後接動名詞，afraid of 亦接動名詞。",
+        "examVariations": "常出現於食品安全閱讀寫作題、介系詞與動名詞雙空填充題及短文改錯題。"
+      }
+    },
+    {
+      "id": "q_w12_odg3_u16_35",
+      "book_id": "gra3",
+      "unit_id": "gra3_16",
+      "is_midterm": true,
+      "is_week12": true,
+      "is_week13": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "part_title": "Part A: Write a sentence using Adjective + Preposition + because...",
+      "part_instructions": "Choose a preposition from the box to go with the given adjective, and write a sentence about something or someone you know. Your sentence must give a reason.",
+      "word_bank": "by   at   about   in   with   of   for",
+      "sentence_form": "<subject> + <verb \"to be\"> + <adjective + preposition> + <object> + because ...",
+      "tense_hint": "Check both the preposition (with/about/for/by/in/at/of) AND the verb inside your because-clause (never omit 'is/was')!",
+      "difficulty": "★★★★★",
+      "difficulty_level": 8,
+      "triadGroup": {
+        "groupId": "ODG3_U16_T2",
+        "tier": "L7-10",
+        "role": "challenge"
+      },
+      "trapCodes": [
+        "ENG_PREP_COLLOCATION",
+        "ENG_TENSE_MISMATCH",
+        "ENG_THERE_BE_VS_HAVE"
+      ],
+      "question": "Write a complete sentence using [surprised] + the correct preposition from the box, and give a reason starting with \"because...\" (pay attention to past tense and \"there is/was\").",
+      "answer": "We were surprised by the food label because there was so much sugar in the juice.",
+      "options": [],
+      "self_check": [
+        "是否使用 surprised by（課本標準搭配），而非誤寫成 *surprised of",
+        "若使用過去式（were surprised），because 子句時態是否同步使用過去式（was / had / were）",
+        "若表達「某處有某物」，是否正確使用 there was / there is 而非誤用 *only have"
+      ],
+      "explanation": {
+        "point": "3C 公式造句高階實戰：were surprised by + 受詞 + because + there was + 不可數名詞",
+        "examPurpose": "結合 W12 多項高難度盲點：surprised by 搭配、前後句過去式時態一致，以及「存在句 there was + 不可數名詞 sugar」不誤用 have。",
+        "correctReason": "受事實震驚用 surprised by；主句為過去式 We were surprised，因此原因子句配合使用過去式 there was；sugar 為不可數名詞，存在句固定搭配單數 was。",
+        "note": "表達「飲料裡面有很多糖」不能寫 *because it have so much sugar 或 *because there have，必用 there was / there is。",
+        "trap": "一題四個連動陷阱：*surprised of、前後時態混用（were 配 is）、誤用 *there have、以及不可數名詞 sugar 誤配複數 were。",
+        "commonTraps": [
+          "存在句誤用 have 陷阱（ENG_THERE_BE_VS_HAVE）：中式英文常誤寫 *because it have / *there have，存在句必須使用 there was / there is。",
+          "時態與不可數主謂一致陷阱（ENG_TENSE_MISMATCH / ENG_UNCOUNTABLE_SVA）：past tense 搭不可數名詞 sugar 必須用單數 there was。"
+        ],
+        "steps": [
+          "① 設定過去事件主句：We were surprised by the food label（注意 surprised 搭 by，不用 of！）",
+          "② 檢查時態一致性：主句用了 were，原因子句也對齊過去式",
+          "③ 表達「果汁裡有大量糖」：用存在句 there was（不可數名詞 sugar 用單數 was，不用 have！）"
+        ],
+        "insight": "💡 高手造句三連擊：surprised BY ＋ 過去式一致 were/was ＋ 存在句 there WAS（不用 have）！",
+        "visualBlock": {
+          "kind": "timeline",
+          "title": "⏳ 過去反應與原因事實時態一致軸",
+          "data": {
+            "events": [
+              {
+                "time": "當時看到標籤 (Past)",
+                "label": "We were surprised by the food label",
+                "highlight": true
+              },
+              {
+                "time": "當時瓶中事實 (Past)",
+                "label": "because there was so much sugar in the juice",
+                "highlight": true
+              }
+            ],
+            "rule": "主句使用過去式 were 時，because 原因子句描述當時情境亦須同步維持過去式 was（不可混寫現在式或誤用 have）"
+          },
+          "caption": "📊 先對齊時間軸（過去式），再檢查不可數名詞 sugar 配單數 was！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "amazed by ... because ...",
+          "shocked by ... because ..."
+        ],
+        "grammarCompare": "surprised by＋名詞／子句（被某事驚訝）vs surprised to＋原形動詞（驚訝地發現／看到某事，如 surprised to see）。",
+        "examVariations": "屬於 L7-10 綜合素養寫作題型，常同時檢核介系詞、時態一致性與存在句 there be。"
+      }
+    },
+    {
+      "id": "q_w12_odg3_u16_36",
+      "book_id": "gra3",
+      "unit_id": "gra3_16",
+      "is_midterm": true,
+      "is_week12": true,
+      "is_week13": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "part_title": "Part A: Write a sentence using Adjective + Preposition + because...",
+      "part_instructions": "Choose a preposition from the box to go with the given adjective, and write a sentence about something or someone you know. Your sentence must give a reason.",
+      "word_bank": "by   at   about   in   with   of   for",
+      "sentence_form": "<subject> + <verb \"to be\"> + <adjective + preposition> + <object> + because ...",
+      "tense_hint": "Check both the preposition (with/about/for/by/in/at/of) AND the verb inside your because-clause (never omit 'is/was')!",
+      "difficulty": "★★★★★",
+      "difficulty_level": 8,
+      "triadGroup": {
+        "groupId": "ODG3_U16_T1",
+        "tier": "L7-10",
+        "role": "challenge"
+      },
+      "trapCodes": [
+        "ENG_PREP_COLLOCATION",
+        "ENG_POS_CONFUSION",
+        "ENG_TENSE_MISMATCH"
+      ],
+      "question": "Write a complete sentence using [good] + the correct preposition from the box, a gerund (V-ing) or noun, and a reason clause starting with \"because...\".",
+      "answer": "Lisa is not good at baking cakes because she mixed up the salt and sugar.",
+      "options": [],
+      "self_check": [
+        "是否使用 good at（擅長某項技能），而非受中文影響誤用 *good in",
+        "at 後方若接動詞（如 bake / cook / draw），是否轉為動名詞 V-ing（baking / cooking / drawing）",
+        "because 後方原因子句是否包含完整「主詞＋動詞」，且描述過去失誤時動詞是否轉為過去式（如 mixed / forgot）"
+      ],
+      "explanation": {
+        "point": "3C 公式造句高階實戰：be (not) good at + V-ing + because + 過去式原因子句",
+        "examPurpose": "考核學生區分 good at（能力）與 interested in（興趣）、介系詞後接去 e 加 ing 動名詞（baking），及跨時態原因敘述（現在能力＋過去事證）的高階寫作力。",
+        "correctReason": "表達擅長或不擅長某項技能固定搭配 good at；介系詞 at 後接動詞 bake 需去 e 加 -ing 變為 baking；原因子句說明過去發生的佐證事件，使用過去式動詞 mixed up。",
+        "note": "也可以描述人物品格：It is good of you to help me（評價人好用 good of）；但「擅長某技能」必用 good at！",
+        "trap": "中文「在烘培方面不好」常誘使寫成 *good in bake，既錯介系詞又漏動名詞 -ing；原因子句講過去事件卻忘改過去式（*she mix up）。",
+        "commonTraps": [
+          "能力介系詞與詞性雙錯（ENG_PREP_COLLOCATION / ENG_POS_CONFUSION）：不可寫 *good in bake，必須同時寫對介系詞 at 與動名詞 baking。",
+          "跨時態原因漏改過去式（ENG_TENSE_MISMATCH）：主句講現在能力（is not good at），但舉過去曾犯的錯當理由時，because 子句必須改用過去式（mixed / forgot）。"
+        ],
+        "steps": [
+          "① 確認語意是「擅長技能」➔ 選用 good at（非 good in）",
+          "② 把技能動詞 bake 去 e 加 -ing ➔ baking cakes",
+          "③ 寫入過去佐證原因：because she mixed up the salt and sugar.（檢查主詞＋過去式動詞！）"
+        ],
+        "insight": "💡 「現在能力（is good at ＋ V-ing）」＋「過去證據（because ＋ 過去式）」是最地道的高階考場寫法！",
+        "visualBlock": {
+          "kind": "compare_table",
+          "title": "⚖️ good at 造句常見連環錯 vs 高分寫法",
+          "data": {
+            "headers": [
+              "常見失分錯寫 ❌",
+              "高分正確寫法 ✅",
+              "失分原因診斷"
+            ],
+            "rows": [
+              [
+                "not good in bake cakes",
+                "not good at baking cakes",
+                "擅長用 at 不用 in；介系詞後動詞必用 V-ing"
+              ],
+              [
+                "because she forget the recipe",
+                "because she mixed up / forgot...",
+                "描述過去出錯事實，第三人稱或過去事件不可漏改動詞時態"
+              ]
+            ]
+          },
+          "caption": "📊 先檢視 at + V-ing，再核對 because 子句的動詞時態！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "skilled at ... because ...",
+          "terrible at ... because ..."
+        ],
+        "grammarCompare": "be good at（擅長某技藝）vs be good for（對健康有益，如 Milk is good for you）vs be good of sb（某人真好，如 good of you to help）。",
+        "examVariations": "大考極常將 good at（擅長）、good for（有益）與 good of（人品好）放在同一題組進行介系詞辨析。"
       }
     }
   ]

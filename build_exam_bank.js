@@ -8,6 +8,7 @@
 const fs = require('fs');
 const path = require('path');
 const { validateUnit } = require('./verify_phase_2.js');
+const { validateModularUnit, hasDictationPhraseLeak } = require('./verify_phase_12.js');
 
 const ROOT = __dirname;
 
@@ -15,34 +16,51 @@ const WEEK12_SPECS = [
   {
     mdRel: '六年級上/課本/02_Oxford_Discover_Grammar_3/Unit_16_Food_Facts.md',
     jsRel: 'data/units/odg3_u16.js',
-    expected: { id: 'ODG3_U16', unit_id: 'gra3_16', book_id: 'gra3' },
+    expected: { id: 'ODG3_U16', unit_id: 'gra3_16', book_id: 'gra3', is_week13: true },
+    requireWeek12: true,
   },
   {
     mdRel: '六年級上/課本/01_Oxford_Discover_3/Unit_16_The_Garden_of_Happiness.md',
     jsRel: 'data/units/od3_u16.js',
     expected: { id: 'OD3_U16', unit_id: 'od3_16', book_id: 'od3' },
+    requireWeek12: true,
   },
   {
     mdRel: '六年級上/課本/03_Reading_with_Writing_6/Unit_09_Getting_to_Know_You.md',
     jsRel: 'data/units/rww6_u09.js',
     expected: { id: 'RWW6_U09', unit_id: 'rw6_9', book_id: 'rw6' },
+    requireWeek12: true,
   },
   {
     mdRel: '六年級上/課本/05_Read_and_Discover_6_Space/Chapter_06_Life_on_Other_Planets.md',
     jsRel: 'data/units/space_ch06.js',
     expected: { id: 'SPACE_CH06', unit_id: 'rd6_6', book_id: 'rd6' },
+    requireWeek12: true,
   },
   {
     mdRel: '六年級上/課本/04_Write_Right_3/Unit_06_A_Great_Person_in_History.md',
     jsRel: 'data/units/wr3_u06.js',
-    expected: { id: 'WR3_U06', unit_id: 'wr3_6', book_id: 'wr3' },
+    expected: { id: 'WR3_U06', unit_id: 'wr3_6', book_id: 'wr3', is_week13: true },
+    requireWeek12: true,
   },
 ];
+
+const WEEK13_EXTRA_SPECS = [
+  {
+    mdRel: '六年級上/課本/03_Reading_with_Writing_6/Unit_06_Amazing_Journeys.md',
+    jsRel: 'data/units/rww6_u06.js',
+    expected: { id: 'RWW6_U06', unit_id: 'rw6_6', book_id: 'rw6', is_week13: true },
+    requireWeek12: false,
+  },
+];
+
+const MODULAR_UNIT_SPECS = [...WEEK12_SPECS, ...WEEK13_EXTRA_SPECS];
 
 const FULL_BOOK_NAME_BY_UNIT_ID = {
   ODG3_U16: 'Oxford Discover Grammar 3 • Unit 16',
   OD3_U16: 'Oxford Discover 3 • Unit 16',
   RWW6_U09: 'Reading with Writing 6 • Unit 9',
+  RWW6_U06: 'Reading with Writing 6 • Unit 6',
   SPACE_CH06: 'Read and Discover 6: Space • Chapter 6',
   WR3_U06: 'Write Right 3 • Unit 6',
 };
@@ -241,6 +259,8 @@ function enrichQuizItem(q, unitVocabMap, globalVocabMap, unitIdKey) {
 
 function normalizeUnit(raw, globalVocabMap) {
   const u = clone(raw);
+  const isW12 = u.is_week12 === true;
+  const isW13 = u.is_week13 === true;
 
   u.passages = (u.passages || []).map((p, idx) => ({
     ...p,
@@ -249,7 +269,7 @@ function normalizeUnit(raw, globalVocabMap) {
     chi: p.chi || (Array.isArray(p.sentences) ? p.sentences.map((s) => s.zh).join(' ') : ''),
     key_sentences: (p.key_sentences || []).map((ks) => ({
       sentence: ks.sentence || '',
-      tag: ks.tag || '⭐ Week 12 核心考點',
+      tag: ks.tag || (isW13 && !isW12 ? '⭐ Week 13 核心考點' : '⭐ Week 12 核心考點'),
       note: ks.note || ks.point || '',
       point: ks.point || ks.note || '',
     })),
@@ -257,11 +277,12 @@ function normalizeUnit(raw, globalVocabMap) {
 
   u.vocab = (u.vocab || []).map((v, idx) => ({
     ...v,
-    id: v.id || `voc_w12_${u.unit_id}_${idx + 1}`,
+    id: v.id || `voc_${isW13 && !isW12 ? 'w13' : 'w12'}_${u.unit_id}_${idx + 1}`,
     book_id: u.book_id,
     unit_id: u.unit_id,
     is_midterm: true,
-    is_week12: true,
+    is_week12: isW12,
+    is_week13: isW13,
     ipa: v.ipa || v.phonetic || '',
     phonetic: v.phonetic || v.ipa || '',
     chi: v.chi || v.meaning || '',
@@ -272,10 +293,11 @@ function normalizeUnit(raw, globalVocabMap) {
 
   u.grammar = (u.grammar || []).map((g, idx) => ({
     ...g,
-    id: g.id || `gra_w12_${u.unit_id}_${idx + 1}`,
+    id: g.id || `gra_${isW13 && !isW12 ? 'w13' : 'w12'}_${u.unit_id}_${idx + 1}`,
     book_id: u.book_id,
     unit_id: u.unit_id,
-    is_week12: true,
+    is_week12: isW12,
+    is_week13: isW13,
   }));
 
   u.mistake_buster = (u.mistake_buster || []).map((m) => ({
@@ -292,12 +314,22 @@ function normalizeUnit(raw, globalVocabMap) {
   const vocabByWord = new Map((u.vocab || []).map((v) => [String(v.word || '').toLowerCase().trim(), v]));
   u.quizzes = (u.quizzes || []).map((q) => {
     const enriched = enrichQuizItem(q, vocabByWord, globalVocabMap, u.id);
+    if (enriched.type === 'passage_dictation') {
+      const leak = hasDictationPhraseLeak(
+        `${enriched.question || ''} ${enriched.target_chi || ''} ${enriched.part_instructions || ''}`,
+        enriched.dictation_sentences
+      );
+      if (leak) {
+        throw new Error(`passage_dictation leak detected in ${u.id} ${enriched.id}: "${leak}"`);
+      }
+    }
     return {
       ...enriched,
       book_id: u.book_id,
       unit_id: u.unit_id,
       is_midterm: true,
-      is_week12: true,
+      is_week12: isW12,
+      is_week13: isW13,
     };
   });
 
@@ -305,13 +337,14 @@ function normalizeUnit(raw, globalVocabMap) {
 }
 
 function buildCompositeWeek12(units) {
+  const totalQ = units.reduce((acc, u) => acc + u.quizzes.length, 0);
   return {
     id: 'WEEK12_ALL',
     unit_id: 'week12_all',
     book_id: 'tea_midterm',
     book: 'Week 12 Quiz (*EL-3C) 五科全範圍大模考',
-    display_title: '🚨 Week 12 (11/18 三) *EL-3C 五科全範圍 156 題大模考 (含聽寫+手寫+選擇)',
-    unit_title: '🚨 Week 12 Quiz (11/18 三) *EL-3C 五科全範圍總複習 (156 題)',
+    display_title: `🚨 Week 12 (11/18 三) *EL-3C 五科全範圍 ${totalQ} 題大模考 (含聽寫+手寫+選擇)`,
+    unit_title: `🚨 Week 12 Quiz (11/18 三) *EL-3C 五科全範圍總複習 (${totalQ} 題)`,
     big_question: '涵蓋 Reading with Writing 6 (Unit 9) + Read and Discover 6: Space (Chapter 6) + Oxford Discover Grammar 3 (Unit 16) + Write Right 3 (Unit 6) + Oxford Discover 3 (Unit 16) 全部 4D 實戰題',
     category: 'Week 12 必考衝刺',
     category_icon: '🚨',
@@ -333,11 +366,82 @@ function buildCompositeWeek12(units) {
   };
 }
 
+function buildCompositeWeek13(units) {
+  const totalQ = units.reduce((acc, u) => acc + u.quizzes.length, 0);
+  return {
+    id: 'WEEK13_ALL',
+    unit_id: 'week13_all',
+    book_id: 'tea_midterm',
+    book: 'Week 13 Quiz (*EL-3C) 三科全範圍大模考',
+    display_title: `🚨 Week 13 (11/25 三) *EL-3C 三科全範圍 ${totalQ} 題大模考 (含段落盲聽+公式造句+傳記改錯)`,
+    unit_title: `🚨 Week 13 Quiz (11/25 三) *EL-3C 三科全範圍總複習 (${totalQ} 題)`,
+    big_question: '涵蓋 Reading with Writing 6 (Unit 6 段落聽寫) + Oxford Discover Grammar 3 (Unit 16) + Write Right 3 (Unit 6) 全部 4D 實戰題',
+    category: 'Week 13 必考衝刺',
+    category_icon: '🚨',
+    cefr: 'A2+ ~ B1',
+    pages: 'Reading with Writing 6 p.40–43 · Oxford Discover Grammar 3 p.80–83 · Write Right 3 p.46–53',
+    is_midterm: true,
+    is_week12: false,
+    is_week13: true,
+    page_images: units.flatMap((u) => u.page_images || []),
+    passages: units.flatMap((u) =>
+      u.passages.map((p) => ({
+        ...p,
+        section_title: `【${FULL_BOOK_NAME_BY_UNIT_ID[u.id] || u.book}】${p.section_title}`,
+      }))
+    ),
+    vocab: units.flatMap((u) => u.vocab),
+    grammar: units.flatMap((u) => u.grammar),
+    mistake_buster: units.flatMap((u) => u.mistake_buster),
+    quizzes: units.flatMap((u) => u.quizzes),
+  };
+}
+
+function mergeTeaW12IntoReview(teaReview, teaW12) {
+  if (!teaReview || !teaW12) return teaReview;
+  const next = clone(teaReview);
+  next.quizzes = [
+    ...(next.quizzes || []).filter((q) => !String(q.id || '').startsWith('TEA_W12_')),
+    ...(teaW12.quizzes || []).map((q) => ({ ...clone(q), week: q.week || 'W12' })),
+  ];
+  next.mistake_buster = [
+    ...(next.mistake_buster || []).filter((m) => !String(m.id || '').startsWith('MB_TEA_W12_')),
+    ...(teaW12.mistake_buster || []).map((m) => ({
+      ...clone(m),
+      week: m.week || 'W12',
+      wrong_index: m.wrong_index !== undefined ? m.wrong_index : m.error_token_index,
+      error_token_index: m.error_token_index !== undefined ? m.error_token_index : m.wrong_index,
+      fixed_sentence: m.fixed_sentence || m.correct_text || '',
+      correct_text: m.correct_text || m.fixed_sentence || '',
+      reason: m.reason || m.explanation || '',
+      explanation: m.explanation || m.reason || '',
+    })),
+  ];
+  next.passages = [
+    ...(next.passages || []).filter((p) => !String(p.section_title || '').includes('Week 12 真卷')),
+    ...(teaW12.passages || []).map((p) => ({
+      ...clone(p),
+      section_title: String(p.section_title || '').includes('Week 12 真卷')
+        ? p.section_title
+        : `【Week 12 真卷】${p.section_title}`,
+    })),
+  ];
+  return next;
+}
+
 function main() {
-  console.log('=== Step 1: Validating all 5 Week 12 unit modules ===');
+  console.log('=== Step 1: Validating all 6 modular unit modules + tea_w12 ===');
   let errCount = 0;
   for (const spec of WEEK12_SPECS) {
     errCount += validateUnit(spec);
+  }
+  for (const spec of WEEK13_EXTRA_SPECS) {
+    errCount += validateModularUnit(spec);
+  }
+  const teaW12Path = path.join(ROOT, 'data/exams/tea_w12.js');
+  if (!fs.existsSync(teaW12Path)) {
+    console.error('Missing data/exams/tea_w12.js');
+    errCount++;
   }
   if (errCount > 0) {
     console.error(`Aborting build: ${errCount} unit validation error(s).`);
@@ -355,7 +459,13 @@ function main() {
   delete require.cache[require.resolve(englishPath)];
   const ed = require(englishPath);
 
-  const rawWeek12Units = WEEK12_SPECS.map((spec) => require(path.join(ROOT, spec.jsRel)));
+  const rawModularUnits = MODULAR_UNIT_SPECS.map((spec) => {
+    const p = path.join(ROOT, spec.jsRel);
+    delete require.cache[require.resolve(p)];
+    return require(p);
+  });
+  delete require.cache[require.resolve(teaW12Path)];
+  const teaW12Data = require(teaW12Path);
 
   const globalVocabMap = new Map();
   const addVocabToMap = (v) => {
@@ -370,18 +480,24 @@ function main() {
   };
   (ed.vocabulary || []).forEach(addVocabToMap);
   existingMidterm.forEach((u) => (u.vocab || []).forEach(addVocabToMap));
-  rawWeek12Units.forEach((u) => (u.vocab || []).forEach(addVocabToMap));
+  rawModularUnits.forEach((u) => (u.vocab || []).forEach(addVocabToMap));
 
-  const normalizedUnits = rawWeek12Units.map((raw) => normalizeUnit(raw, globalVocabMap));
-  const week12All = buildCompositeWeek12(normalizedUnits);
+  const normalizedUnits = rawModularUnits.map((raw) => normalizeUnit(raw, globalVocabMap));
+  const week12Units = normalizedUnits.filter((u) => u.is_week12 === true);
+  const week13Units = normalizedUnits.filter((u) => u.is_week13 === true);
+  const week12All = buildCompositeWeek12(week12Units);
+  const week13All = buildCompositeWeek13(week13Units);
 
   // --- Update midterm_data.js ---
   console.log('\n=== Step 2: Updating midterm_data.js ===');
-  const targetIds = new Set([...normalizedUnits.map((u) => u.id), 'WEEK12_ALL']);
+  const targetIds = new Set([...normalizedUnits.map((u) => u.id), 'WEEK12_ALL', 'WEEK13_ALL']);
   const preservedMidterm = existingMidterm
     .filter((u) => !targetIds.has(u.id))
     .map((u) => {
-      const nextU = clone(u);
+      let nextU = clone(u);
+      if (nextU.id === 'TEA_QUIZ_REVIEW') {
+        nextU = mergeTeaW12IntoReview(nextU, teaW12Data);
+      }
       const unitVocabMap = new Map();
       (nextU.vocab || []).forEach((v) => {
         if (v && v.word) unitVocabMap.set(String(v.word).toLowerCase().trim(), v);
@@ -403,7 +519,8 @@ function main() {
       cefr: u.cefr,
       pages: u.pages,
       is_midterm: true,
-      is_week12: true,
+      is_week12: u.is_week12 === true,
+      is_week13: u.is_week13 === true,
       page_images: u.page_images,
       passages: u.passages,
       vocab: u.vocab,
@@ -412,6 +529,7 @@ function main() {
       quizzes: u.quizzes,
     })),
     week12All,
+    week13All,
   ];
 
   const midtermOut =
@@ -420,24 +538,27 @@ function main() {
     `  module.exports = window.MIDTERM_DATABASE;\n` +
     `}\n`;
   fs.writeFileSync(midtermPath, midtermOut, 'utf8');
-  console.log(`Updated midterm_data.js: ${nextMidterm.length} units (upserted 5 Week 12 units + WEEK12_ALL, enriched ${preservedMidterm.length} preserved units)`);
+  const teaRevOut = nextMidterm.find((u) => u.id === 'TEA_QUIZ_REVIEW');
+  console.log(
+    `Updated midterm_data.js: ${nextMidterm.length} units (WEEK12_ALL=${week12All.quizzes.length}, WEEK13_ALL=${week13All.quizzes.length}, TEA_QUIZ_REVIEW=${teaRevOut?.quizzes?.length}/${teaRevOut?.mistake_buster?.length})`
+  );
 
   // --- Update english_data.js ---
   console.log('\n=== Step 3: Updating english_data.js ===');
-  const w12UnitIds = new Set(normalizedUnits.map((u) => u.unit_id));
+  const modularUnitIds = new Set(normalizedUnits.map((u) => u.unit_id));
 
-  // Update book titles & is_midterm status cleanly
+  // Update book titles & is_midterm status cleanly (no abbreviations)
   const bookTitleUpdates = {
-    gra3: { book_name: '📘 Oxford Discover Grammar 3 (含 Week 12 U16 & U13~U15)', is_midterm: true },
-    wr3: { book_name: '📝 Write Right Level 3 (含 Week 12 U6 & U4~U5)', is_midterm: true },
-    rw6: { book_name: '📖 Reading with Writing Level 6 (含 Week 12 U9 & U5~U8)', is_midterm: true },
+    gra3: { book_name: '📘 Oxford Discover Grammar 3 (含 Week 12–13 U16 & U13~U15)', is_midterm: true },
+    wr3: { book_name: '📝 Write Right Level 3 (含 Week 12–13 U6 & U4~U5)', is_midterm: true },
+    rw6: { book_name: '📖 Reading with Writing Level 6 (含 Week 13 U6 · Week 12 U9 & U5~U8)', is_midterm: true },
     rd6: { book_name: '🚀 Read and Discover 6: Space (含 Week 12 Ch6 & Ch4~Ch5)', is_midterm: true },
     od3: { book_name: '📚 Oxford Discover 3 (含 Week 12 U16 & 延伸 U7~U8)', is_midterm: true },
   };
   ed.books = (ed.books || []).map((b) => (bookTitleUpdates[b.book_id] ? { ...b, ...bookTitleUpdates[b.book_id] } : b));
 
-  // Idempotent upsert on units, reading_content, vocabulary, grammar, quizzes
-  ed.units = (ed.units || []).filter((u) => !w12UnitIds.has(u.unit_id));
+  // Idempotent upsert on units, reading_content, vocabulary, grammar, quizzes (preserving brain_gym)
+  ed.units = (ed.units || []).filter((u) => !modularUnitIds.has(u.unit_id));
   for (const u of normalizedUnits) {
     ed.units.push({
       book_id: u.book_id,
@@ -445,13 +566,14 @@ function main() {
       unit_title: u.unit_title,
       big_question: u.big_question,
       is_midterm: true,
-      is_week12: true,
+      is_week12: u.is_week12 === true,
+      is_week13: u.is_week13 === true,
       midterm_unit_id: u.id,
       page_images: u.page_images,
     });
   }
 
-  ed.reading_content = (ed.reading_content || []).filter((r) => !w12UnitIds.has(r.unit_id));
+  ed.reading_content = (ed.reading_content || []).filter((r) => !modularUnitIds.has(r.unit_id));
   for (const u of normalizedUnits) {
     u.passages.forEach((p, idx) => {
       ed.reading_content.push({
@@ -465,12 +587,13 @@ function main() {
         key_sentences: p.key_sentences,
         exp_eng: '',
         exp_chi: '',
-        is_week12: true,
+        is_week12: u.is_week12 === true,
+        is_week13: u.is_week13 === true,
       });
     });
   }
 
-  ed.vocabulary = (ed.vocabulary || []).filter((v) => !w12UnitIds.has(v.unit_id));
+  ed.vocabulary = (ed.vocabulary || []).filter((v) => !modularUnitIds.has(v.unit_id));
   for (const u of normalizedUnits) {
     for (const v of u.vocab) {
       ed.vocabulary.push({
@@ -491,12 +614,13 @@ function main() {
         chant: v.chant,
         compare: v.compare,
         is_midterm: true,
-        is_week12: true,
+        is_week12: u.is_week12 === true,
+        is_week13: u.is_week13 === true,
       });
     }
   }
 
-  ed.grammar = (ed.grammar || []).filter((g) => !w12UnitIds.has(g.unit_id));
+  ed.grammar = (ed.grammar || []).filter((g) => !modularUnitIds.has(g.unit_id));
   for (const u of normalizedUnits) {
     for (const g of u.grammar) {
       ed.grammar.push({
@@ -512,7 +636,8 @@ function main() {
         pitfalls: g.pitfalls || [],
         examples: g.examples || [],
         trap: g.trap || '',
-        is_week12: true,
+        is_week12: u.is_week12 === true,
+        is_week13: u.is_week13 === true,
       });
     }
   }
@@ -525,7 +650,7 @@ function main() {
   }
   const edUnitToMid = { rw6_6: 'RWW6_U06', rw6_8: 'RWW6_U08' };
   ed.quizzes = (ed.quizzes || [])
-    .filter((q) => !w12UnitIds.has(q.unit_id))
+    .filter((q) => !(modularUnitIds.has(q.unit_id) && q.type !== 'brain_gym'))
     .map((q) => enrichQuizItem(q, edVocabByUnit.get(q.unit_id) || null, globalVocabMap, edUnitToMid[q.unit_id] || q.unit_id));
   for (const u of normalizedUnits) {
     for (const q of u.quizzes) {
@@ -535,7 +660,7 @@ function main() {
 
   ed.metadata = {
     ...(ed.metadata || {}),
-    version: '2.2.0-week12-4d',
+    version: '2.5.0-week13-4d',
     generated_at: new Date().toISOString().slice(0, 10),
     total_books: ed.books.length,
     total_units: ed.units.length,
@@ -543,13 +668,14 @@ function main() {
     total_grammar: ed.grammar.length,
     total_reading: ed.reading_content.length,
     total_quizzes: ed.quizzes.length,
-    week12_quizzes: normalizedUnits.reduce((acc, u) => acc + u.quizzes.length, 0),
+    week12_quizzes: week12Units.reduce((acc, u) => acc + u.quizzes.length, 0),
+    week13_quizzes: week13Units.reduce((acc, u) => acc + u.quizzes.length, 0),
   };
 
   const englishBanner =
     `/**\n` +
-    ` * 六年級英語特訓系統 — 全域資料層 (v2.2.0 Week 12 KET-4D 整合版)\n` +
-    ` * 包含：7大記憶錨點單字卡、100% 課本完整原文、KET-4D 四維詳解與衍伸學習重點\n` +
+    ` * 六年級英語特訓系統 — 全域資料層 (v2.5.0 Week 13 KET-4D 整合版)\n` +
+    ` * 包含：7大記憶錨點單字卡、100% 課本完整原文、KET-4D 四維詳解、D4 視覺圖解與段落盲聽\n` +
     ` */\n`;
   const englishOut =
     `${englishBanner}` +

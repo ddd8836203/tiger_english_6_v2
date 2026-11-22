@@ -1,10 +1,10 @@
 # 六年級英語特訓網頁 — 詳細設計架構、目標與設計原因 (web_architecture_and_design.log)
 
 ⚡ 0. 當下狀態快照 (TL;DR Current Snapshot)
-- **最後更新**：2026-11-18
-- **架構版本**：Zero-Build Vanilla SPA (`v2.4.0-ipad-landscape-ux` — **Phase 11 10.2" iPad 橫向排版、4 段字體控制器、A/B 雙模式課文、護眼暖紙底與抓錯 CSS 已完成並通過驗收**)
-- **前端核心檔案**：`index.html`, `style.css`, `app.js`, `english_data.js`, `midterm_data.js`, `build_exam_bank.js`, `data/units/*.js`
-- **設計鐵律提醒**：保留雙速 TTS 防抖 cancel、顯式三態自評計分（翻牌與選選項皆不自動計分，僅點擊 `[data-rate]` 寫入）、零鍵盤打字 Mistake Buster、純淨英文例句 TTS 清洗 (`extractCleanEnglishForSpeech`)、聽寫雙層零洩漏防護、Topbar 與 `@media print` 嚴格鎖定 `--text-scale: 1` 不隨螢幕字體縮放跑版、Firebase + LocalStorage 雙向同步。
+- **最後更新**：2026-11-22
+- **架構版本**：Zero-Build Vanilla SPA (`v2.5.0-week13-4d-sprint` — **Phase 12 `SPRINT_WEEKS` 週次切換膠囊、4D 視覺圖解渲染器、`passage_dictation` 段落逐句盲聽與 Week 12 真卷閉環已完成並通過驗收**)
+- **前端核心檔案**：`index.html` (`?v=20261122_p12`), `style.css`, `app.js`, `english_data.js`, `midterm_data.js`, `build_exam_bank.js`, `data/units/*.js`, `data/exams/tea_w12.js`
+- **設計鐵律提醒**：保留雙速 TTS 防抖 cancel、顯式三態自評計分（翻牌與選選項皆不自動計分，僅點擊 `[data-rate]` 寫入）、零鍵盤打字 Mistake Buster、純淨英文例句 TTS 清洗 (`extractCleanEnglishForSpeech`)、聽寫與 `passage_dictation` 翻牌前雙層零洩漏防護、Topbar 與 `@media print` 嚴格鎖定 `--text-scale: 1`、Firebase + LocalStorage 雙向同步。
 
 ---
 
@@ -18,6 +18,7 @@
 - [#SPEC-3] Phase 5~8 視覺化文法積木、課文逐句點讀與 3C 手寫實戰四膠囊架構：寬卡公式/膠囊/正反對比 + 純淨例句 TTS、課文句子 `.speaking-active` 點讀、`paper_rewrite` 紙筆引導與 `unit_custom` 動態 A4 列印。
 - [#SPEC-4] Phase 9~10 題庫零洩漏富化、三層呼吸感題幹卡片與課本全名統一架構：資料層與 UI 層雙重遮罩聽寫答案（含 `target_pos`/`masked_example_chi`）、Strip 內部 `[Tiger 3C ...]` 標籤、三層積木卡排版與五書全名零縮寫。
 - [#SPEC-5] Phase 11 10.2" iPad 橫向響應式排版、雙層字體縮放與 A/B 可切換課文架構：以 `--text-scale`/`--ui-scale` 驅動全內容縮放並隔離 Topbar 與 A4 列印；實作 A 雙欄逐句聯動／B 單欄逐句條列切換、專注閱讀、護眼暖紙底、1150px 文法單欄、2×2 選項與抓錯 CSS 補完。
+- [#SPEC-6] Phase 12 `SPRINT_WEEKS` 週次切換膠囊、D4 英文科視覺圖解 (`visualBlock`) 與 `passage_dictation` 段落逐句盲聽架構：將衝刺橫幅改為資料驅動切換並持久化於 `eng_sprint_week_v1`，實作 4 種視覺圖解渲染器與零洩漏段落盲聽／A4 多行橫線列印。
 
 ---
 
@@ -391,3 +392,22 @@
   - `@media (max-width: 1150px)` 將 `.grammar-cards-grid` 改為 `1fr` 單欄寬卡（同時保留桌機 `minmax(460px, 1fr)` 與 `@media (max-width: 960px)` 相容舊檢核）。
   - 補齊神探抓錯 `.mistake-buster-card`、`.token-chip.strike`、`.token-chip.wrong-pick`、`.mb-feedback-box` 缺失 CSS，提升點擊熱區至 `>= 44px`。
   - 短四選一自動套用 `.options-grid-2x2`（`>= 720px` 雙欄大按鈕）、選擇題 `Directions` 預設收合於 `<details class="exam-banner-details">`（手寫題維持預設 `open`），並於切頁與切題時呼叫 `scrollPageToTop()`（展開抽屜與選選項不跳頁）。
+
+---
+
+================================================================================
+### [#SPEC-6] 十三、Phase 12 `SPRINT_WEEKS` 週次切換、D4 視覺圖解與段落盲聽架構 (2026-11-22 新增)
+================================================================================
+
+### 13.1 資料驅動週次註冊表 (`SPRINT_WEEKS`)
+- `app.js` 內建 `SPRINT_WEEKS` 註冊表（預設 `'w13'`，可切換 `'w12'`，狀態存於 `localStorage['eng_sprint_week_v1']`）。
+- 保留 `.banner-week12`、`#btn-launch-w12-mock`、`[data-open-w12-unit]` 相容層，同時動態計算各單元與總模考題數（聽寫 / 段落盲聽 / 手寫實戰 / 選擇），已考週次附帶 `📄 W12 真卷回顧 & 抓錯` 與 `🖨️ 本週 A4 出卷` 直達鈕。
+- `build_exam_bank.js` 採 `is_week12` 與 `is_week13` 雙旗標編譯出 `WEEK12_ALL`（5 單元 174 題）與 `WEEK13_ALL`（3 單元 106 題），並將 `data/exams/tea_w12.js` 冪等併入 `TEA_QUIZ_REVIEW`（保留 `ed.quizzes` 既有 `brain_gym` 題目不誤刪）。
+
+### 13.2 D4 視覺化圖解積木 (`renderVisualBlockHtml`)
+- 向下相容既有 `explanation` 結構，新增可選 `steps[]`、`insight` 與 `visualBlock`（`timeline` / `slot_box` / `prep_ladder` / `compare_table`），所有圖解元件外層具 `max-width: 100%; overflow-x: auto;` 與 `flex-wrap: wrap`，在 `1080×680` + `1.30x` 大字下不溢位並相容暖紙模式。
+
+### 13.3 段落逐句盲聽 (`passage_dictation`) 與零洩漏鐵律
+- 新增題型 `passage_dictation`（`dictation_sentences[]` + `full_audio_text`），提供 `.dictation-passage-player`（1.0x / 0.8x 整段連播＋逐句點播按鈕）。
+- 翻牌前只渲染中文情境與純中文標點提示，`dictation_sentences[].punct_focus` 與英文原句嚴格隔離於翻牌抽屜 `#quiz-answer-drawer` 內，並由 `build_exam_bank.js` 與 `verify_phase_12.js` 進行英文 trigram 零洩漏靜態掃描。
+- A4 出卷 (`unit_custom`) 自動將 `passage_dictation` 排版為 `Part I-B` 並依句數輸出 6~12 行手寫橫線。
