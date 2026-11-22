@@ -1,18 +1,14 @@
 # 六年級上學期英語高效特訓系統 — 專案目標與路線圖 (goals_and_roadmap.log)
 
 ⚡ 0. 當下狀態快照 (TL;DR Current Snapshot)
-- **最後更新**：2026-11-18
-- **目前版本狀態**：**Phase 11（10.2" iPad 橫向排版優化、4 段字體控制器、A/B 可切換雙語課文、護眼暖紙底、抓錯 CSS 修復與 2×2 測驗網格）已完成並通過 `verify_phase_1..11.js` 與 1080×680 實機瀏覽器驗收；待機啟動 Phase 12+ (期中舊單元補齊與線上推送)**
-- **遠端與部署**：GitHub Repo `ddd8836203/tiger_english_6_v2`（Zero-Build 靜態 SPA；2026-11-18 已將 Phase 11 推送至遠端 `main` 分支）
-- **本週核心考試範圍**：**Week 12 Quiz（11/18 三，*EL-3C）** — Reading with Writing 6 (Unit 9)、Read and Discover 6: Space (Ch 6)、Oxford Discover Grammar 3 (Unit 16)、Write Right 3 (Unit 6) + Oxford Discover 3 (Unit 16)（共 5 單元、**156 題** KET-4D + 3C 實戰題庫：`65` 聽寫 + `41` 手寫實戰 + `50` 選擇，0 洩漏）
+- **最後更新**：2026-11-22
+- **目前版本狀態**：**Phase 12（Week 13 衝刺週次切換膠囊、4D 英文科視覺圖解積木、RWW6 U6 段落逐句盲聽與 Week 12 實體真卷 Page 25–26 閉環校正）已完成並通過 `verify_phase_1/2/3/12.js`（PASS 191 / FAIL 0）與 1080×680 實機瀏覽器驗收（分支 `feat/w13-4d-sprint`）**
+- **遠端與部署**：GitHub Repo `ddd8836203/tiger_english_6_v2`（Zero-Build 靜態 SPA；當前位於本機 `feat/w13-4d-sprint`，基準 tag `pre-w13-4d-sprint`，待使用者確認後推送）
+- **本週核心考試範圍**：**Week 13 Quiz（11/25 三，*EL-3C）** — Reading with Writing 6 (Unit 6 段落盲聽)、Oxford Discover Grammar 3 (Unit 16 `because` 造句強化)、Write Right 3 (Unit 6 傳記寫作與改錯預測)（共 3 單元、**106 題**；同時可透過首頁膠囊切換回 **Week 12** 174 題 + `tea_w12` 真卷 38/46 抓錯複習）
 - **下一步待辦 (Next Actions)**：
-  1. `[✅ Phase 1~4]` 完成素材轉正抽取、4-Log 三段式重構、Week 12 五單元雙層 MD 與初始 100 題 4D 衝刺上線 (`verify_phase_1..4.js` 通過)。
-  2. `[✅ Phase 5]` 升級文法寬卡積木排版 + 例句純淨 TTS、課文逐句點讀與 `.speaking-active` 高亮、紙筆手寫自檢引導與 `unit_custom` 動態 A4 出卷 (`verify_phase_5.js` 通過)。
-  3. `[✅ Phase 6~7]` 透過平行 `flash` 子代理將 Week 12 五大單元全面升級為 **17 張視覺文法卡 + 156 題仿真 3C 考卷架構** (`verify_phase_6..7.js` 通過)。
-  4. `[✅ Phase 8]` 彙編 `build_exam_bank.js`、同步前台 `BOOK_META` 與衝刺卡片計數、確保零空膠囊與 `verify_phase_1..8.js` 全數 0 Failures 通過。
-  5. `[✅ Phase 9~10]` 徹底掃除全庫 `368` 道聽寫題洩漏（含 `target_pos`/`masked_example_chi` 遮罩）、補齊 `RWW6 U6/U8` 行號引用原文、統一五書完整英文名稱、重構三層呼吸感題幹視覺卡片與 `Part` 去重，並通過 `verify_phase_1..10.js`。
-  6. `[✅ Phase 11]` 依據學童 10.2 吋 iPad 橫向實際回饋，完成雙層字體控制器（`1.0x~1.45x`、平板預設 `1.15x`）、A 雙欄／B 單欄可切換課文、專注閱讀模式、護眼暖紙底、1080px 文法單欄寬卡、2×2 測驗選項與抓錯 CSS 修復（`verify_phase_11.js` + `1080×680` 實機瀏覽器全過）。
-  7. `[⏸️ Phase 12+]`（待使用者確認後啟動）補完 `OD3 U13~15`、期中舊單元 KET-4D + 手寫雙軌升級、異質 Code Review 與 GitHub `tiger_english_6_v2` 推送。
+  1. `[✅ Phase 1~11]` 完成素材轉正、4-Log、Week 12 五大單元 156 題 4D、視覺文法積木、聽寫零洩漏、10.2" iPad 橫向字體縮放與 A/B 雙模式課文。
+  2. `[✅ Phase 12 (2026-11-22)]` 完成 Week 12 實體真卷（`38/46`）四層數位化與 18 道抓錯入庫；建立 `4D_英文科_出題與詳解規範.md`；新建 `RWW6_U06` 段落逐句盲聽 (`passage_dictation`)；依真卷升級 `ODG3_U16` (`36題`)、`WR3_U06` (`37題`)、`SPACE_CH06` (`37題`)；上線首頁可切換週次膠囊 (`SPRINT_WEEKS`) 與 4 種 D4 視覺圖解渲染器，通過全套自動化與實機檢核。
+  3. `[⏸️ 後續規劃]`（待使用者確認後啟動）補完 `OD3 U13~15`、期中舊單元 4D 升級，以及視需求推送 `feat/w13-4d-sprint` 至遠端。
 
 ---
 
@@ -27,6 +23,7 @@
 - [#GOAL-8] 2026-11-14 Phase 5~12 UX 視覺化、單句點讀與 3C 考卷實戰雙軌總路線圖：第一梯次 (Phase 5~8) 已完工並通過 `verify_phase_1..8.js`，第二梯次 (Phase 9~12) 待機啟動。
 - [#GOAL-9] 2026-11-14 Phase 9~10 題庫逐題健檢去洩漏與三層呼吸感題幹重構：完成全庫 2,580 檢驗項與 368 道聽寫雙層零洩漏防護、`RWW6_U06/U08` 行號原文補齊、三層積木式題幹排版與五書完整名稱統一（`verify_phase_1..10.js` 全過）。
 - [#GOAL-10] 2026-11-18 Phase 11 10.2 吋 iPad 橫向易讀排版與字體控制器升級：實作雙層字體縮放（1.0x~1.45x，平板預設 1.15x）、課文 A 雙欄／B 單欄即時切換、專注閱讀模式、護眼暖紙底、1080px 文法單欄寬卡、2×2 測驗選項與抓錯 CSS 修復。
+- [#GOAL-11] 2026-11-22 Phase 12 Week 13 衝刺、4D 英文科視覺圖解與 Week 12 真卷閉環：建立 `4D_英文科_出題與詳解規範.md` 與 `SPRINT_WEEKS` 可切換週次膠囊，上線 `RWW6_U06` 段落逐句盲聽、4 種 D4 視覺圖解積木、Week 12 真卷 (`38/46`) 入庫並依真卷失分校正 `ODG3 U16` / `WR3 U6` / `SPACE Ch6` 模擬考。
 
 ---
 
@@ -291,3 +288,12 @@
   1. **字體控制器 + 護眼暖紙底**：Topbar `#nav-font` 與 `#fontControlPopover` 提供 4 段檔位（標準 `1.0x` / 舒適 `1.15x` / 大字 `1.30x` / 特大 `1.45x`）、平板偵測預設 `1.15x`，同步於課文與測驗列提供 `A- / A+`；Topbar 與 A4 列印紙張嚴格鎖定不跟隨縮放跑版。
   2. **10.2" iPad 橫向全模組排版重塑**：課文提供「🅰️ 雙欄對照（含逐句中文聯動高亮）」與「🅱️ 單欄置中逐句條列（句首 44px 獨立 `🔊` 鈕）」可切換＋「📖 專注閱讀」收合 Hero；文法卡 `<=1150px` 改單欄寬卡；測驗短四選一改 2×2 網格與可收合選擇題 Directions；補齊神探抓錯 `.strike`/`.wrong-pick`/`.mb-feedback-box` CSS 與換題自動 `scrollTo(0,0)`。
   3. **驗收結果**：通過 `verify_phase_1..11.js` 及 `1080×680` 真實 Chromium 視窗互動量測。
+
+---
+
+### [#GOAL-11] 25. Phase 12 Week 13 衝刺、4D 英文科視覺圖解與 Week 12 真卷閉環 (2026-11-22 定案並完成)
+- **核心目標**：
+  1. 依 `4D_跨學科通用_深度出題與詳解總綱.md` 延伸建立 `4D_英文科_出題與詳解規範.md`，納管 10 大英文高頻 `trapCode`、非選擇題 4D 格式與 4 種視覺圖解 (`timeline` / `slot_box` / `prep_ladder` / `compare_table`)，以及選擇題與文法實戰題同源三階 (`L1-3/L4-6/L7-10` 映射 `1★~5★`)。
+  2. 將首頁衝刺區改為資料驅動 `SPRINT_WEEKS` 週次膠囊切換（預設 **Week 13** `11/25` 三科 106 題，可一鍵切回 **Week 12** `11/18` 五科 174 題＋真卷抓錯回顧入口），並連動 A4 出卷。
+  3. 數位化 Week 12 實體真卷 Page 25–26（Rex `38/46`），並把實戰盲點（`because` 子句漏動詞、介系詞誤搭、冠詞濫加 `the Italy / the Mars`、不可數主謂一致與傳記過去式）直接寫回模擬考與 Mistake Buster，同時預判 W13 `WR3 U6` 傳記 12–14 錯改錯與新增 `RWW6 U6` 段落逐句盲聽 (`passage_dictation`)。
+- **驗收結果**：`verify_phase_1/2/3/12.js`（PASS 191 / FAIL 0）及 `1080×680` iPad 橫向實機瀏覽器 Console 0 Error 全數通過。

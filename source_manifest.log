@@ -1,15 +1,15 @@
 # 教材與題庫資產清冊 (source_manifest.log)
 
 ⚡ 0. 當下狀態快照 (TL;DR Current Snapshot)
-- **最後更新**：2026-11-14
-- **總資產狀態**：**Phase 9~10 已完成並通過 `verify_phase_1..10.js` 驗收（全庫 2,580 檢驗項 / 368 道聽寫 0 洩漏、課本全名統一與三層呼吸感題幹落地）**；Week 12 五大單元雙層 MD 與 `data/units/*.js` 已全面對齊 3C 考卷架構並編譯入主題庫（共 **156 題 4D** [65 聽寫 + 41 手寫實戰 + 50 選擇] + 71 單字 + 17 張視覺文法卡 + 17 課文段落 + 39 抓錯）。
-- **本周必考清單 (Week 12 Quiz, \*EL-3C)**：
-  1. `ODG3_U16`: Oxford Discover Grammar 3 U16 *Food Facts* — `[✅ Phase 6/8/9/10 完成]` (12 字彙 / 4 視覺文法卡 / 3 段落 / 9 抓錯 / **28 題**：6 聽寫 + 10 手寫 + 12 選擇)
-  2. `OD3_U16`: Oxford Discover 3 U16 *The Garden of Happiness* — `[✅ Phase 6/8/9/10 完成]` (17 字彙 / 3 視覺文法卡 / 3 段落 / 8 抓錯 / **32 題**：17 聽寫全覆蓋 + 5 手寫 + 10 選擇)
-  3. `RWW6_U09`: Reading with Writing 6 U9 *Getting to Know You / A Trip to Earth* — `[✅ Phase 7/8/9/10 完成]` (14 字彙 / 3 視覺文法卡 / 3 段落 / 6 抓錯 / **32 題**：14 聽寫全覆蓋 + 8 手寫 + 10 選擇)
-  4. `SPACE_CH06`: Read and Discover 6: Space Ch6 *Life on Other Planets* — `[✅ Phase 7/8/9/10 完成]` (14 字彙 / 3 視覺文法卡 / 4 段落 / 8 抓錯 / **32 題**：14 聽寫全覆蓋 + 8 手寫 + 10 選擇)
-  5. `WR3_U06`: Write Right 3 U6 *A Great Person in History* — `[✅ Phase 7/8/9/10 完成]` (14 字彙 / 4 視覺文法卡 / 4 段落 / 8 抓錯 / **32 題**：14 聽寫全覆蓋 + 10 手寫 + 8 選擇)
-- **Next Actions**：向使用者彙報 Phase 9~10 完成成果與實測數據，待確認後啟動 Phase 11~12（`OD3 U13~U15` 補完、期中舊書 11 單元 4D 與視覺文法升級、異質審查與 GitHub 推送）。
+- **最後更新**：2026-11-22
+- **總資產狀態**：**Phase 12 已完成並通過 `verify_phase_1/2/3/12.js` 驗收（`MIDTERM_DATABASE` 19 單元、`ENGLISH_DATA` 44 單元 / 719 單字 / 98 文法 / 174 段落 / 1,850 題庫，全庫聽寫與 `passage_dictation` 0 洩漏）**。
+- **本周必考清單 (Week 13 Quiz, 11/25 三, \*EL-3C)**：
+  1. `RWW6_U06`: Reading with Writing 6 U6 *The World of Orienteering* — `[✅ Phase 12 模組化]` (14 字彙 / 3 視覺文法卡 / 5 段落 / 8 抓錯 / **33 題**：5 段落盲聽 + 12 單字聽寫 + 4 手寫 + 12 選擇 / 12 `visualBlock`)
+  2. `ODG3_U16`: Oxford Discover Grammar 3 U16 *Food Facts* — `[✅ W12+W13 雙週強化]` (12 字彙 / 4 視覺文法卡 / 3 段落 / 13 抓錯 / **36 題**：6 聽寫 + 18 手寫含 8 題 `because` 造句 + 12 選擇 / 17 `visualBlock`)
+  3. `WR3_U06`: Write Right 3 U6 *A Great Person in History* — `[✅ W12+W13 雙週強化]` (14 字彙 / 4 視覺文法卡 / 4 段落 / 12 抓錯 / **37 題**：14 聽寫 + 15 手寫含 3 Outline 寫作 & 2 篇 W13 短文改錯預測 + 8 選擇 / 18 `visualBlock`)
+- **第 12 週實考真卷歸檔 & 模擬考升級**：
+  - `TEA_W12`（Page 25–26，Rex `38/46` = 82%）：10 題原卷重測 + 18 道紅筆抓錯已入庫 `TEA_QUIZ_REVIEW`（總計 174 題 / 76 抓錯）；`SPACE_CH06` 同步升級至 **37 題**（+5 Open-book `Explain` / 代名詞題、+5 Rex 真錯抓錯、14 `visualBlock`）。
+- **Next Actions**：待使用者確認後可推至 GitHub，或排程補完 `OD3 U13~U15` 與期中舊書 4D 升級。
 
 ---
 
@@ -19,6 +19,7 @@
 - [#MAN-3] `02_ODG3` / `03_RWW6` / `04_WR3` / `05_Space` 數位教材清冊：期中 11 單元已有雙層 MD，Week 12 新補抽取 RWW6 `p15~28`、WR3 `p13~22` 與 Space `p27~30`。
 - [#MAN-4] 歷史考卷 (`W2~W7`) 與 Phase 5~8 待升級 4D 清冊：現有 W2~W7 10 頁考卷四層分離 MD 已上線，舊版 4 套書與 OD3 U13~15 排定 Phase 5~8 進行 4D 升級與 20 題精煉。
 - [#MAN-5] Phase 9~10 全庫 368 道聽寫零洩漏檢核與跨題富化資產清冊：完成 `odg3_u16`/`od3_u16`/`rww6_u09`/`space_ch06`/`wr3_u06` 遮罩、`TEA_QUIZ_REVIEW` 中文例句與三態標籤淨化及 `RWW6_U06/U08` 行號引用原文補齊。
+- [#MAN-6] Phase 12 (2026-11-22) Week 12 真卷數位化、`RWW6_U06` 段落盲聽與 W12/W13 模擬考全面校正清冊：產出 `IMG_4385/4386.jpg`、四層 MD、`tea_w12.js`、`rww6_u06.js` 與升級版 `odg3_u16`/`wr3_u06`/`space_ch06`（`WEEK12_ALL=174`, `WEEK13_ALL=106`）。
 
 ---
 
@@ -27,11 +28,11 @@
 ### [#MAN-1] 一、Week 12 Quiz (11/18 三, \*EL-3C) 5 大必考單元資產狀態
 | 單元代碼 | 書名與單元標題 | 課本頁碼 | 驗證圖檔清冊 | 雙層 MD | 4D JS (`data/units/`) |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| `ODG3_U16` | Oxford Discover Grammar 3 U16: Food Facts | p.80–83 | `odg3_pdf_p070.png` ~ `odg3_pdf_p073.png` | `[✅ Phase 2 完成]` | `odg3_u16.js` `[✅ Phase 6: 28 題 / 4 文法卡]` |
+| `ODG3_U16` | Oxford Discover Grammar 3 U16: Food Facts | p.80–83 | `odg3_pdf_p070.png` ~ `odg3_pdf_p073.png` | `[✅ Phase 2 完成]` | `odg3_u16.js` `[✅ Phase 12: 36 題 / 4 文法卡]` |
 | `OD3_U16` | Oxford Discover 3 U16: The Garden of Happiness | p.156–163 | `od3_p156.jpg` ~ `od3_p163.jpg` | `[✅ Phase 2 完成]` | `od3_u16.js` `[✅ Phase 6: 32 題 / 3 文法卡]` |
 | `RWW6_U09` | Reading with Writing 6 U9: A Trip to Earth | p.62–67 | `rww6_u710_pdf_p15.png` ~ `rww6_u710_pdf_p20.png` | `[✅ Phase 3 完成]` | `rww6_u09.js` `[✅ Phase 7: 32 題 / 3 文法卡]` |
-| `SPACE_CH06` | Read and Discover 6 Space Ch6: Life on Other Planets | p.24–27, p.46–47 | `space_pdf_p24`~`27.png`, `space_act_p46`~`47.png` | `[✅ Phase 3 完成]` | `space_ch06.js` `[✅ Phase 7: 32 題 / 3 文法卡]` |
-| `WR3_U06` | Write Right 3 U6: A Great Person in History | p.46–53 | `wr3_u5_pdf_p09.png` ~ `wr3_u5_pdf_p16.png` | `[✅ Phase 3 完成]` | `wr3_u06.js` `[✅ Phase 7: 32 題 / 4 文法卡]` |
+| `SPACE_CH06` | Read and Discover 6 Space Ch6: Life on Other Planets | p.24–27, p.46–47 | `space_pdf_p24`~`27.png`, `space_act_p46`~`47.png` | `[✅ Phase 3 完成]` | `space_ch06.js` `[✅ Phase 12: 37 題 / 3 文法卡]` |
+| `WR3_U06` | Write Right 3 U6: A Great Person in History | p.46–53 | `wr3_u5_pdf_p09.png` ~ `wr3_u5_pdf_p16.png` | `[✅ Phase 3 完成]` | `wr3_u06.js` `[✅ Phase 12: 37 題 / 4 文法卡]` |
 
 ---
 
@@ -43,37 +44,36 @@
   - 物理轉正處理：透過 `build_phase_1_assets.py` 將原始像素順時針旋轉 90° (`ROTATE_270`) 並清除殘留 EXIF 方向標記，輸出為正向直立肖像（`width < height`）至 `01_Oxford_Discover_3/images/od3_p086.jpg` ~ `od3_p192.jpg`（對照公式：`課本頁碼 = 照片編號 - 4120`）。
 - **單元涵蓋與狀態**：
   - `Unit_01_Having_Fun.md` (U1)：`[✅ 已完工]`（含 `page_001..006.jpeg`）
-  - `Unit 13` (*Tools, Inventions*, p.128–135 / `od3_p128..135.jpg`)：`[⏳ 待 Phase 5 補完]`
-  - `Unit 14` (*Music / The Mystery*, p.136–143 / `od3_p136..143.jpg`)：`[⏳ 待 Phase 5 補完]`
-  - `Unit 15` (*Plants*, p.148–155 / `od3_p148..155.jpg`)：`[⏳ 待 Phase 5 補完]`
+  - `Unit 13` (*Tools, Inventions*, p.128–135 / `od3_p128..135.jpg`)：`[⏳ 待後續補完]`
+  - `Unit 14` (*Music / The Mystery*, p.136–143 / `od3_p136..143.jpg`)：`[⏳ 待後續補完]`
+  - `Unit 15` (*Plants*, p.148–155 / `od3_p148..155.jpg`)：`[⏳ 待後續補完]`
   - `Unit 16` (*The Garden of Happiness*, p.156–163 / `od3_p156..163.jpg`)：`[✅ Phase 2/4 完成]` (`Unit_16_The_Garden_of_Happiness.md` + `data/units/od3_u16.js`)
 
 ---
 
 ### [#MAN-3] 三、其餘四大教材資料夾與 PDF 抽圖清冊
 1. **`02_Oxford_Discover_Grammar_3`** (`00_Overview.md` ✅)
-   - 已轉錄：`Unit_13_Making_History.md` ✅、`Unit_14_Success_Stories.md` ✅、`Unit_15_Tasty_Treats.md` ✅（U13~U15 舊版 20 題已於 Stage 21 完成瘦身，待 Phase 6 升級 KET 4D）。
-   - Week 12 新增：`Unit_16_Food_Facts.md` (`odg3_pdf_p070..073.png`, `[✅ Phase 2/4 完成]` + `data/units/odg3_u16.js`)。
+   - 已轉錄：`Unit_13_Making_History.md` ✅、`Unit_14_Success_Stories.md` ✅、`Unit_15_Tasty_Treats.md` ✅（U13~U15 舊版 20 題已於 Stage 21 完成瘦身，待後續升級 KET 4D）。
+   - Week 12 & 13：`Unit_16_Food_Facts.md` (`odg3_pdf_p070..073.png`, `[✅ Phase 12 升級]` + `data/units/odg3_u16.js`)。
 2. **`03_Reading_with_Writing_6`** (`00_Overview.md` ✅)
    - PDF 來源：`Reading with writing_6_unit 7_10.pdf`（共 28 頁，2026-11-14 補齊抽出 `rww6_u710_pdf_p15.png` ~ `p28.png`）。
-   - 已轉錄：`Unit_05` ~ `Unit_08` ✅（待 Phase 7 升級 KET 4D）。
-   - Week 12 新增：`Unit_09_Getting_to_Know_You.md` (`p15..20.png`, `[✅ Phase 3/4 完成]` + `data/units/rww6_u09.js`)。
+   - 已轉錄：`Unit_05` ~ `Unit_08` ✅（其中 `Unit_06_Amazing_Journeys.md` 已於 Phase 12 模組化至 `data/units/rww6_u06.js`）。
+   - Week 12：`Unit_09_Getting_to_Know_You.md` (`p15..20.png`, `[✅ Phase 3/4 完成]` + `data/units/rww6_u09.js`)。
 3. **`04_Write_Right_3`** (`00_Overview.md` ✅)
    - PDF 來源：`Write right 3_05_08.pdf`（共 42 頁，2026-11-14 補齊抽出 `wr3_u5_pdf_p13.png` ~ `p22.png`）。
-   - 已轉錄：`Unit_04` ✅、`Unit_05` ✅（待 Phase 8 升級 KET 4D）。
-   - Week 12 新增：`Unit_06_A_Great_Person_in_History.md` (`p09..16.png`, `[✅ Phase 3/4 完成]` + `data/units/wr3_u06.js`)。
+   - 已轉錄：`Unit_04` ✅、`Unit_05` ✅（待後續升級 KET 4D）。
+   - Week 12 & 13：`Unit_06_A_Great_Person_in_History.md` (`p09..16.png`, `[✅ Phase 12 升級]` + `data/units/wr3_u06.js`)。
 4. **`05_Read_and_Discover_6_Space`** (`00_Overview.md` ✅)
    - PDF 來源：`discover 6_Read and discover_all about space.pdf`（共 53 頁，2026-11-14 補齊抽出 `space_pdf_p27.png` ~ `p30.png`）。
-   - 已轉錄：`Chapter_04_Rocks_and_Ice.md` ✅、`Chapter_05_Astronomy.md` ✅（待 Phase 8 升級 KET 4D）。
-   - Week 12 新增：`Chapter_06_Life_on_Other_Planets.md` (`space_pdf_p24..27.png` + `space_act_p46..47.png`, `[✅ Phase 3/4 完成]` + `data/units/space_ch06.js`)。
+   - 已轉錄：`Chapter_04_Rocks_and_Ice.md` ✅、`Chapter_05_Astronomy.md` ✅（待後續升級 KET 4D）。
+   - Week 12：`Chapter_06_Life_on_Other_Planets.md` (`space_pdf_p24..27.png` + `space_act_p46..47.png`, `[✅ Phase 12 升級]` + `data/units/space_ch06.js`)。
 
 ---
 
 ### [#MAN-4] 四、歷史考券 (`W2~W7`) 與舊資料庫清冊
 - **既有資料庫參考**：`Tiger 5th 2ndBooks.xlsx`（600 單字 + 1,612 題基準庫，轉譯匯入 `english_data.js`）。
 - **歷史考券 (`六年級上/考試考卷/` & `六年級上/考券/`)**：
-  - `00_Overview_歷史考券.md` ✅ + `考券_六上_Week02_Page01~02.md`、`Week04_Page05~06.md`、`Week05_Page07~08.md`、`Week06_Page09~10.md`、`Week07_Page11~12.md` 共 10 頁 ✅。
-  - 待後續排程 (`Phase 5~8`)：將期中 11 課本單元 + OD3 U13~U15 全面模組化至 `data/units/*.js` 並對標 20 題 KET 4D 詳解格式。
+  - `00_Overview_歷史考券.md` ✅ + `考券_六上_Week02_Page01~02.md`、`Week04_Page05~06.md`、`Week05_Page07~08.md`、`Week06_Page09~10.md`、`Week07_Page11~12.md`、`Week12_Page25~26.md` 共 12 頁 ✅。
 
 ---
 
@@ -84,3 +84,17 @@
   - 其餘 29 題 `TEA_W2/W4/W6` 聽寫題之 `masked_example_chi` 與 `TEA_W6_P09_B_5` 之 `target_pos` 完成答案遮罩，消滅 `midterm_data.js` 內 30 筆跨欄位外露。
 - **獨立句意自足化 (`RWW6_U06` & `RWW6_U08`)**：於 `build_exam_bank.js` 建立 `LINE_EXCERPT_LOOKUP`，為 `"In line X..."` 題型注入 `passage_excerpt` 原句摘錄與 `definition_clue` 提示。
 - **全庫驗證覆蓋統計**：`verify_phase_9.js` 與 `verify_phase_10.js` 實測 `midterm_data.js`（18 單元）與 `english_data.js`（44 單元）共 **2,580** 筆題目渲染檢驗項，其中 `368` 道 `spelling_listen`、`238` 道 `paper_rewrite`、`48` 道含 `cue_pill` 手寫題與 `161` 道底線挖空選擇/填空題皆 0 失敗、0 洩漏。
+
+---
+
+### [#MAN-6] 六、Phase 12 (2026-11-22) Week 12 真卷數位化、`RWW6_U06` 段落盲聽與 W12/W13 模擬考全面校正清冊
+- **Week 12 實體考券 (`六年級上/考券/六年級上_考券/`)**：
+  - `preview_jpg/IMG_4385.jpg` (Page 25) & `preview_jpg/IMG_4386.jpg` (Page 26)：4284×5712 正向直立轉檔。
+  - `考券_六上_Week12_Page25.md`（Part A ODG3 U16 13/16 + Part B Space Ch6 7/10）、`考券_六上_Week12_Page26.md`（Part C WR3 U6 Da Vinci 18/20，總分 38/46 = 82%），已索引至 `00_Overview_歷史考券.md`。
+  - `data/exams/tea_w12.js`：10 題原卷重測 (`TEA_W12_*`) + 18 道紅筆實戰抓錯 (`MB_TEA_W12_*`) + 2 篇真卷檢討範文，併入 `TEA_QUIZ_REVIEW`（總計 174 題 / 76 抓錯）。
+- **Week 13 & Week 12 單元模組清冊 (`data/units/`)**：
+  - `rww6_u06.js` (`RWW6_U06`, `rw6_6`, `is_week13: true`, `is_week12: false`)：14 字彙、5 段落（含 p.40–41 全文）、3 文法卡、8 抓錯、33 題（5 `passage_dictation` + 12 `spelling_listen` + 12 `choice` + 4 `paper_rewrite`，12 `visualBlock`）。
+  - `odg3_u16.js` (`ODG3_U16`, `is_week12: true, is_week13: true`)：13 抓錯 (+4)、36 題 (+8 題 `<S>+<be>+<adj+prep>+<O>+because...` 公式造句，17 `visualBlock`)。
+  - `wr3_u06.js` (`WR3_U06`, `is_week12: true, is_week13: true`)：12 抓錯 (+4)、37 題 (+3 題 Outline 三段傳記寫作 + 2 篇預判 W13 之 12–14 錯短文改錯，18 `visualBlock`)。
+  - `space_ch06.js` (`SPACE_CH06`, `is_week12: true`)：13 抓錯 (+5)、37 題 (+5 題 Open-book `Explain your answer` & pronouns 思辨題，14 `visualBlock`)。
+- **規範文件**：新增 `4D_英文科_出題與詳解規範.md`，並修正 `4D_跨學科通用_深度出題與詳解總綱.md` 第 43 行錯字與非選擇題對接。

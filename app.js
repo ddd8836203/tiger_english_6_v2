@@ -35,6 +35,7 @@
     fullHistory: [],
     currentSubtab: 'reading',      // 'reading' | 'mistake' | 'quiz' | 'braingym'
     ttsSpeed: 1.0,                 // 1.0 | 0.8
+    sprintWeek: 'w13',             // 'w13' | 'w12' (首頁小考衝刺週次切換)
     fontScale: '1.15',             // '1' | '1.15' | '1.3' | '1.45'
     readingLayout: 'split',        // 'split' (樣式 A 雙欄) | 'focus' (樣式 B 單欄逐句)
     warmPaper: false,              // 護眼暖紙底開關
@@ -96,7 +97,8 @@
     cloudDbUrl: 'tiger6_eng_cloud_db_url',
     fontScale: 'tiger6_eng_font_scale',
     readingLayout: 'tiger6_eng_reading_layout',
-    warmPaper: 'tiger6_eng_warm_paper'
+    warmPaper: 'tiger6_eng_warm_paper',
+    sprintWeek: 'eng_sprint_week_v1'
   };
 
 
@@ -250,6 +252,7 @@
     if (!q) return '🎯 綜合實戰';
     const t = String(q.type || '').toLowerCase();
     const cat = String(q.category_tag || '').toLowerCase();
+    if (t === 'passage_dictation') return '📝 課文段落盲聽';
     if (t === 'paper_rewrite' || t === 'rewrite') return '✍️ 考卷手寫實戰';
     if (t === 'spelling_listen' || t === 'spelling') return '🎧 考卷單字聽寫';
     if (t === 'fill' || t === 'cloze') return '✏️ 克漏字填空';
@@ -258,6 +261,78 @@
     if (t === 'grammar' || cat === 'grammar') return '📐 文法觀念四選一';
     if (t === 'vocab') return '🔤 核心單字測驗';
     return '🎯 觀念四選一';
+  }
+
+  function renderVisualBlockHtml(vb) {
+    if (!vb || typeof vb !== 'object' || !vb.data) return '';
+    const title = escapeHtml(vb.title || '📊 視覺化圖解');
+    const caption = vb.caption ? `<div class="vb-caption">${escapeHtml(vb.caption)}</div>` : '';
+    let bodyHtml = '';
+
+    if (vb.kind === 'timeline' && Array.isArray(vb.data.events)) {
+      const ruleHtml = vb.data.rule ? `<div class="vb-timeline-rule">📌 ${escapeHtml(vb.data.rule)}</div>` : '';
+      bodyHtml = `
+        <div class="vb-timeline">
+          ${vb.data.events.map(ev => `
+            <div class="vb-tl-node ${ev.highlight ? 'is-highlight' : ''}">
+              <div class="vb-tl-time">${escapeHtml(ev.time || '')}</div>
+              <div class="vb-tl-dot" aria-hidden="true"></div>
+              <div class="vb-tl-label">${escapeHtml(ev.label || '')}</div>
+            </div>
+          `).join('')}
+        </div>
+        ${ruleHtml}
+      `;
+    } else if (vb.kind === 'slot_box' && Array.isArray(vb.data.slots)) {
+      bodyHtml = `
+        <div class="vb-slot-grid">
+          ${vb.data.slots.map((sl, i) => `
+            ${i > 0 ? '<span class="vb-slot-plus" aria-hidden="true">+</span>' : ''}
+            <div class="vb-slot-item accent-${escapeHtml(sl.accent || 'pri')}">
+              <span class="vb-slot-role">${escapeHtml(sl.role || '')}</span>
+              <span class="vb-slot-text">${escapeHtml(sl.text || '')}</span>
+            </div>
+          `).join('')}
+        </div>
+      `;
+    } else if (vb.kind === 'prep_ladder' && Array.isArray(vb.data.levels)) {
+      bodyHtml = `
+        <div class="vb-ladder">
+          ${vb.data.levels.map(lv => `
+            <div class="vb-ladder-row ${lv.highlight ? 'is-highlight' : ''}">
+              <span class="vb-ladder-prep">${escapeHtml(lv.prep || '')}</span>
+              <span class="vb-ladder-scope">${escapeHtml(lv.scope || '')}</span>
+              <div class="vb-ladder-examples">
+                ${(Array.isArray(lv.examples) ? lv.examples : []).map(ex => `<span class="vb-ex-chip">${escapeHtml(ex)}</span>`).join('')}
+              </div>
+            </div>
+          `).join('')}
+        </div>
+      `;
+    } else if (vb.kind === 'compare_table' && Array.isArray(vb.data.headers) && Array.isArray(vb.data.rows)) {
+      bodyHtml = `
+        <div class="vb-table-wrap">
+          <table class="vb-compare-table">
+            <thead>
+              <tr>${vb.data.headers.map(h => `<th>${escapeHtml(h)}</th>`).join('')}</tr>
+            </thead>
+            <tbody>
+              ${vb.data.rows.map(row => `<tr>${(Array.isArray(row) ? row : []).map(cell => `<td>${escapeHtml(cell)}</td>`).join('')}</tr>`).join('')}
+            </tbody>
+          </table>
+        </div>
+      `;
+    } else {
+      return '';
+    }
+
+    return `
+      <div class="vb-card vb-kind-${escapeHtml(vb.kind || 'box')}">
+        <div class="vb-title">${title}</div>
+        ${bodyHtml}
+        ${caption}
+      </div>
+    `;
   }
 
   function highlightBlanksAndWordHints(rawText) {
@@ -532,6 +607,25 @@
       `;
     }
 
+    // 5.5 段落逐句盲聽題 (Passage Dictation — 翻牌前絕不顯示任何英文原句)
+    if (q.type === 'passage_dictation') {
+      const sentCount = Array.isArray(q.dictation_sentences) ? q.dictation_sentences.length : 0;
+      return `
+        <div class="q-stem-card stem-listen-card stem-passage-dict-card">
+          ${badgeHtml}
+          <div class="stem-task-header">📝 【長篇課文段落聽寫】請準備紙筆，聽音逐句默寫完整英文段落與正確標點！</div>
+          <div class="stem-listen-meaning-box">
+            <span class="stem-listen-label">🎯 段落情境引導（共 ${sentCount} 句）</span>
+            <span class="stem-listen-chi">${escapeHtml(q.target_chi || q.question || '請聆聽上方音檔完整寫出段落句子與標點符號')}</span>
+          </div>
+          <div class="stem-cue-pill">
+            <span class="cue-tag">⚠️ 標點與拼寫挑戰</span>
+            <span class="cue-text">請依自然語調自行判斷句點、逗號、雙引號、驚嘆號與括號，寫完再點下方「看詳解」逐句核對！</span>
+          </div>
+        </div>
+      `;
+    }
+
     // 6. 考卷手寫實戰 / 改寫 / 造句 / 簡答 (三層視覺積木卡)
     if (q.type === 'paper_rewrite' || q.type === 'rewrite') {
       let work = rest.replace(/^\[(?:Tiger\s+3C|3C)[^\]]*\]\s*/i, '').trim();
@@ -724,10 +818,17 @@
       const savedLayout = localStorage.getItem(GLOBAL_KEYS.readingLayout);
       state.readingLayout = (savedLayout === 'focus' || savedLayout === 'split') ? savedLayout : 'split';
       state.warmPaper = localStorage.getItem(GLOBAL_KEYS.warmPaper) === '1';
+      const savedWeek = localStorage.getItem(GLOBAL_KEYS.sprintWeek);
+      if (savedWeek === 'w12' || savedWeek === 'w13') {
+        state.sprintWeek = savedWeek;
+      } else {
+        state.sprintWeek = 'w13';
+      }
     } catch (e) {
       state.fontScale = '1.15';
       state.readingLayout = 'split';
       state.warmPaper = false;
+      state.sprintWeek = 'w13';
     }
     applyDisplayPreferences();
   }
@@ -1156,7 +1257,7 @@
       id: 'tea_midterm',
       name: '🏆 岱崙美語 3C Quiz 歷史考券',
       shortName: '岱崙歷史考券',
-      desc: 'Week 2~7 實戰小考 1:1 復原重測、紅黑對照與全週次大模考 (55 題)',
+      desc: 'Week 2~12 實戰小考 1:1 復原重測、紅黑對照與 Week 12/13 全週次大模考',
       hue: 45,
       isMidterm: true,
       category: '岱崙週考'
@@ -1165,7 +1266,7 @@
       id: 'gra3',
       name: '📘 Oxford Discover Grammar 3',
       shortName: 'Oxford Discover Grammar 3',
-      desc: '全冊 12 單元：時態變化、倒裝附和句、副詞三級比較、名詞計量、動名詞與飲食事實 (635 題)',
+      desc: '全冊 12 單元：時態變化、倒裝附和句、副詞三級比較、名詞計量、動名詞與飲食事實',
       hue: 245,
       isMidterm: true,
       category: '文法專修'
@@ -1174,7 +1275,7 @@
       id: 'wr3',
       name: '📝 Write Right 3',
       shortName: 'Write Right 3',
-      desc: '全冊 6 單元：出國旅遊、最愛課堂、朋友爭執、社區空間、假設語氣與歷史偉人 (343 題)',
+      desc: '全冊 6 單元：出國旅遊、最愛課堂、朋友爭執、社區空間、假設語氣與歷史偉人傳記',
       hue: 285,
       isMidterm: true,
       category: '寫作專攻'
@@ -1183,7 +1284,7 @@
       id: 'rw6',
       name: '📖 Reading with Writing 6',
       shortName: 'Reading with Writing 6',
-      desc: '全冊 9 單元：水中世界、鯊魚攝影師、時空背景分析、定向越野、多國語言與認識地球 (304 題)',
+      desc: '全冊 9 單元：水中世界、鯊魚攝影師、時空背景分析、定向越野段落聽寫、多國語言與認識地球',
       hue: 165,
       isMidterm: true,
       category: '讀寫進階'
@@ -1192,7 +1293,7 @@
       id: 'rd6',
       name: '🚀 Read and Discover 6: Space',
       shortName: 'Read and Discover 6: Space',
-      desc: '全冊 5 章節：宇宙起源、地球與月球、岩石與冰、外星生命探索與天文學史 (259 題)',
+      desc: '全冊 5 章節：宇宙起源、地球與月球、岩石與冰、外星生命探索與天文學史',
       hue: 345,
       isMidterm: true,
       category: '太空科普'
@@ -1201,7 +1302,7 @@
       id: 'od3',
       name: '📚 Oxford Discover 3',
       shortName: 'Oxford Discover 3',
-      desc: '核心課本：時間與地球 (Unit 7)、茉莉醫生 (Unit 8)、快樂花園 (Unit 16) 深度閱讀與字彙 (152 題)',
+      desc: '核心課本：時間與地球 (Unit 7)、茉莉醫生 (Unit 8)、快樂花園 (Unit 16) 深度閱讀與字彙',
       hue: 200,
       isMidterm: true,
       category: '課本閱讀'
@@ -1210,12 +1311,65 @@
       id: 'tiger_5b',
       name: '📚 Tiger 五下歷史單字庫',
       shortName: '五下歷史庫',
-      desc: '五下單字回溯鞏固：D3 U10~12、RW5 U11、RW6 U1~4 核心字彙專題測驗 (92 題)',
+      desc: '五下單字回溯鞏固：D3 U10~12、RW5 U11、RW6 U1~4 核心字彙專題測驗',
       hue: 120,
       isMidterm: false,
       category: '單字專題'
     }
   };
+
+  // 小考週次衝刺註冊表 (未來新增 W14+ 僅需於此擴充)
+  const SPRINT_WEEKS = [
+    {
+      id: 'w13',
+      shortLabel: '🚨 W13 (11/25)',
+      badgeLabel: '🚨 下週三 11/25 (W13) *EL-3C 小考總衝刺',
+      title: 'Week 13 必考三大範圍',
+      subtitle: '含 Reading with Writing 6 (Unit 6) 段落盲聽＋Oxford Discover Grammar 3 (Unit 16) because 造句＋Write Right 3 (Unit 6) 傳記寫作與改錯預判。',
+      mockUnitId: 'week13_all',
+      mockBtnLabel: '🚀 三合一模擬大考',
+      reviewUnitId: null,
+      reviewBtnLabel: '',
+      units: [
+        { bookId: 'rw6', unitId: 'rw6_6', icon: '📖', bookName: 'Reading with Writing 6', title: 'Unit 6：定向越野（段落盲聽）' },
+        { bookId: 'gra3', unitId: 'gra3_16', icon: '📘', bookName: 'Oxford Discover Grammar 3', title: 'Unit 16：飲食事實（because 造句）' },
+        { bookId: 'wr3', unitId: 'wr3_6', icon: '📝', bookName: 'Write Right 3', title: 'Unit 6：歷史偉人（寫作＋改錯）' }
+      ]
+    },
+    {
+      id: 'w12',
+      shortLabel: '✅ W12 (11/18)',
+      badgeLabel: '✅ 第 12 週 11/18 (W12) *EL-3C 已考複習 & 真卷檢討',
+      title: 'Week 12 必考五大範圍',
+      subtitle: '含五書範圍全真複習題庫＋Week 12 實考真卷 (38/46) 紅筆訂正回顧與錯題狙擊閉環。',
+      mockUnitId: 'week12_all',
+      mockBtnLabel: '🚀 五合一全範圍大模考',
+      reviewUnitId: 'tea_w12',
+      reviewBtnLabel: '📄 W12 真卷回顧 & 抓錯 (38/46)',
+      units: [
+        { bookId: 'rw6', unitId: 'rw6_9', icon: '📖', bookName: 'Reading with Writing 6', title: 'Unit 9：認識地球與人際' },
+        { bookId: 'rd6', unitId: 'rd6_6', icon: '🚀', bookName: 'Read and Discover 6: Space', title: 'Ch 6：外星生命探索' },
+        { bookId: 'gra3', unitId: 'gra3_16', icon: '📘', bookName: 'Oxford Discover Grammar 3', title: 'Unit 16：飲食事實 Facts' },
+        { bookId: 'wr3', unitId: 'wr3_6', icon: '📝', bookName: 'Write Right 3', title: 'Unit 6：歷史偉人傳記' },
+        { bookId: 'od3', unitId: 'od3_16', icon: '📚', bookName: 'Oxford Discover 3', title: 'Unit 16：快樂花園' }
+      ]
+    }
+  ];
+
+  function getActiveSprintWeek() {
+    return SPRINT_WEEKS.find(w => w.id === state.sprintWeek) || SPRINT_WEEKS[0];
+  }
+
+  function setSprintWeek(weekId) {
+    if (!SPRINT_WEEKS.some(w => w.id === weekId)) return;
+    state.sprintWeek = weekId;
+    try {
+      localStorage.setItem(GLOBAL_KEYS.sprintWeek, weekId);
+    } catch (e) {}
+    if (state.view === 'dashboard') {
+      render();
+    }
+  }
 
   // 取得課本清單
   function getBooksList() {
@@ -1225,22 +1379,45 @@
   // 取得某課本下的單元列表 (Units List，涵蓋全書所有單元)
   function getUnitsForBook(bookId) {
     if (bookId === 'tea_midterm') {
+      const w13Unit = getMidtermDataUnit('WEEK13_ALL');
+      const w12Unit = getMidtermDataUnit('WEEK12_ALL');
+      const w13Count = (w13Unit && w13Unit.quizzes) ? w13Unit.quizzes.length : 106;
+      const w12Count = (w12Unit && w12Unit.quizzes) ? w12Unit.quizzes.length : 174;
       return [
+        {
+          id: 'week13_all',
+          bookId: 'tea_midterm',
+          title: '🚨 Week 13 (11/25 三) 小考三合一總複習模擬考',
+          desc: `Reading with Writing 6 (U6 段落聽寫) + Oxford Discover Grammar 3 (U16) + Write Right 3 (U6)（共 ${w13Count} 題 KET-4D 實戰題）`,
+          week: 'W13',
+          badge: '🚨 Week 13 必考',
+          is_midterm: true,
+          is_week13: true
+        },
         {
           id: 'week12_all',
           bookId: 'tea_midterm',
-          title: '🚨 Week 12 (11/18 三) 小考五合一總複習模擬考',
-          desc: 'Oxford Discover Grammar 3 (U16) + Oxford Discover 3 (U16) + Reading with Writing 6 (U9) + Read and Discover 6: Space (Ch6) + Write Right 3 (U6)（共 156 題 KET-4D 新題）',
+          title: '✅ Week 12 (11/18 三) 小考五合一總複習模擬考',
+          desc: `Oxford Discover Grammar 3 (U16) + Oxford Discover 3 (U16) + Reading with Writing 6 (U9) + Read and Discover 6: Space (Ch6) + Write Right 3 (U6)（共 ${w12Count} 題 KET-4D 題庫）`,
           week: 'W12',
-          badge: '🚨 Week 12 必考',
+          badge: '✅ Week 12 必考',
           is_midterm: true,
           is_week12: true
         },
         {
+          id: 'tea_w12',
+          bookId: 'tea_midterm',
+          title: '📄 Week 12 真卷 (38/46)：because 造句 + 太空 Open-Book + 達文西作文',
+          desc: 'Oxford Discover Grammar 3 (U16) 造句 (4) + Read and Discover 6: Space (Ch6) 問答 (5) + Write Right 3 (U6) 傳記提綱 (1) + 18 道紅筆實戰抓錯',
+          week: 'W12',
+          badge: 'Week 12 真卷',
+          is_midterm: true
+        },
+        {
           id: 'tea_all',
           bookId: 'tea_midterm',
-          title: '🎲 Week 2~7 全週次綜合全真大模考',
-          desc: '收錄全部 164 道考券真題、58 道改錯題與 3 篇實體真卷精讀',
+          title: '🎲 Week 2~12 全週次綜合全真大模考',
+          desc: '收錄歷週 3C 考券全部原卷重測題、神探抓錯與真卷範文精讀',
           week: 'ALL',
           badge: '全真模考',
           is_midterm: true
@@ -1299,12 +1476,18 @@
     const list = window.ENGLISH_DATA.units.filter(u => u.book_id === bookId);
     
     const WEEK12_UNIT_IDS = ['gra3_16', 'od3_16', 'rw6_9', 'rd6_6', 'wr3_6'];
+    const WEEK13_UNIT_IDS = ['rw6_6', 'gra3_16', 'wr3_6'];
     return list.map(u => {
       const isWeek12 = !!(u.is_week12 || WEEK12_UNIT_IDS.includes(u.unit_id));
-      let badge = isWeek12 ? '🚨 Week 12 必考' : (u.is_midterm ? '🔥 期中核心' : '📚 實力精熟');
+      const isWeek13 = !!(u.is_week13 || WEEK13_UNIT_IDS.includes(u.unit_id));
+      let badge = isWeek13 ? '🚨 Week 13 必考' : (isWeek12 ? '✅ Week 12 必考' : (u.is_midterm ? '🔥 期中核心' : '📚 實力精熟'));
       const uNumMatch = u.unit_id.match(/_(\d+)$/);
-      if (isWeek12) {
-        badge = '🚨 Week 12 必考';
+      if (isWeek13 && isWeek12) {
+        badge = '🚨 Week 12·13 必考';
+      } else if (isWeek13) {
+        badge = '🚨 Week 13 必考';
+      } else if (isWeek12) {
+        badge = '✅ Week 12 必考';
       } else if (uNumMatch) {
         badge = (u.is_midterm ? '🔥 ' : '') + `Unit ${uNumMatch[1]}`;
       } else if (u.unit_id.includes('tiger_5b')) {
@@ -1318,7 +1501,8 @@
         midtermId: u.midterm_unit_id,
         badge: badge,
         is_midterm: !!u.is_midterm,
-        is_week12: isWeek12
+        is_week12: isWeek12,
+        is_week13: isWeek13
       };
     });
   }
@@ -1345,7 +1529,7 @@
 
     const isVocab = t === 'vocab' || t === 'spelling_listen' || t === 'spelling' || cat === 'listening';
     const isHandwrite = !isVocab && (
-      t === 'paper_rewrite' || t === 'rewrite' || t === 'cloze' || t === 'fill' ||
+      t === 'passage_dictation' || t === 'paper_rewrite' || t === 'rewrite' || t === 'cloze' || t === 'fill' ||
       cat === 'rewrite' || cat === 'fill' ||
       ((t === 'grammar' || t === 'reading') && (!Array.isArray(q.options) || q.options.length === 0))
     );
@@ -1362,6 +1546,9 @@
   // 取得某單元之單字庫清單 (7 大錨點單字卡)
   function getVocabsForUnit(bookId, unitId) {
     if (!window.ENGLISH_DATA || !window.ENGLISH_DATA.vocabulary) return [];
+    if (unitId === 'week13_all') {
+      return window.ENGLISH_DATA.vocabulary.filter(v => v.is_week13 || ['rw6_6', 'gra3_16', 'wr3_6'].includes(v.unit_id));
+    }
     if (unitId === 'week12_all') {
       return window.ENGLISH_DATA.vocabulary.filter(v => v.is_week12);
     }
@@ -1371,6 +1558,7 @@
       if (unitId === 'tea_w5') return window.ENGLISH_DATA.vocabulary.filter(v => v.unit_id === 'rw6_6');
       if (unitId === 'tea_w6') return window.ENGLISH_DATA.vocabulary.filter(v => v.unit_id === 'rw6_7' || v.unit_id === 'rw6_8');
       if (unitId === 'tea_w7') return window.ENGLISH_DATA.vocabulary.filter(v => v.unit_id === 'gra3_15');
+      if (unitId === 'tea_w12') return window.ENGLISH_DATA.vocabulary.filter(v => ['gra3_16', 'rd6_6', 'wr3_6'].includes(v.unit_id));
       return window.ENGLISH_DATA.vocabulary.filter(v => v.is_midterm || v.unit_id.startsWith('gra3_1') || v.unit_id.startsWith('rw6_'));
     }
     return window.ENGLISH_DATA.vocabulary.filter(v => v.unit_id === unitId || (bookId && v.book_id === bookId && v.unit_id === unitId));
@@ -1379,6 +1567,9 @@
   // 取得某單元之文法焦點清單
   function getGrammarForUnit(bookId, unitId) {
     if (!window.ENGLISH_DATA || !window.ENGLISH_DATA.grammar) return [];
+    if (unitId === 'week13_all') {
+      return window.ENGLISH_DATA.grammar.filter(g => g.is_week13 || ['rw6_6', 'gra3_16', 'wr3_6'].includes(g.unit_id));
+    }
     if (unitId === 'week12_all') {
       return window.ENGLISH_DATA.grammar.filter(g => g.is_week12);
     }
@@ -1388,6 +1579,7 @@
       if (unitId === 'tea_w5') return window.ENGLISH_DATA.grammar.filter(g => g.unit_id === 'gra3_14');
       if (unitId === 'tea_w6') return window.ENGLISH_DATA.grammar.filter(g => g.unit_id === 'gra3_15');
       if (unitId === 'tea_w7') return window.ENGLISH_DATA.grammar.filter(g => g.unit_id === 'gra3_13' || g.unit_id === 'gra3_14' || g.unit_id === 'gra3_15');
+      if (unitId === 'tea_w12') return window.ENGLISH_DATA.grammar.filter(g => ['gra3_16', 'rd6_6', 'wr3_6'].includes(g.unit_id));
       return window.ENGLISH_DATA.grammar.filter(g => g.unit_id.startsWith('gra3_1'));
     }
     return window.ENGLISH_DATA.grammar.filter(g => g.unit_id === unitId || (bookId && g.book_id === bookId && g.unit_id === unitId));
@@ -1395,12 +1587,13 @@
 
   // 取得某單元之課文清單 (優先取完整課文，若來自 MIDTERM_DATABASE 則自動組合句子)
   function getPassagesForUnit(bookId, unitId) {
-    if (unitId === 'week12_all') {
-      const w12 = getMidtermDataUnit('WEEK12_ALL');
-      if (!w12 || !w12.passages) return [];
-      return w12.passages.map((p, idx) => ({
+    if (unitId === 'week13_all' || unitId === 'week12_all') {
+      const targetId = unitId === 'week13_all' ? 'WEEK13_ALL' : 'WEEK12_ALL';
+      const comp = getMidtermDataUnit(targetId);
+      if (!comp || !comp.passages) return [];
+      return comp.passages.map((p, idx) => ({
         sequence: p.sequence || (idx + 1),
-        section_title: p.section_title || p.title || `Week 12 課文精讀 #${idx + 1}`,
+        section_title: p.section_title || p.title || `${targetId} 課文精讀 #${idx + 1}`,
         eng: p.eng || (Array.isArray(p.sentences) ? p.sentences.map(s => s.en).join(' ') : (Array.isArray(p.paragraphs) ? p.paragraphs.join('\n\n') : (p.text || ''))),
         chi: p.chi || (Array.isArray(p.sentences) ? p.sentences.map(s => s.zh).join(' ') : (p.chinese || p.translation || '')),
         sentences: Array.isArray(p.sentences) ? p.sentences : [],
@@ -1411,12 +1604,13 @@
       const tea = getMidtermDataUnit('TEA_QUIZ_REVIEW');
       if (!tea || !tea.passages) return [];
       let rawList = [];
-      if (unitId === 'tea_w2') rawList = []; // Week 2 has no reading comprehension passage
-      else if (unitId === 'tea_w4') rawList = []; // Week 4 has no reading comprehension passage
-      else if (unitId === 'tea_w5') rawList = tea.passages.filter((_, idx) => idx === 0 || idx === 2); // W5 Orienteering Dictation & $6000 Essay
-      else if (unitId === 'tea_w6') rawList = tea.passages.filter((_, idx) => idx === 3); // W6 3000 Dollars Proofreading
-      else if (unitId === 'tea_w7') rawList = []; // Week 7 has no reading comprehension passage
-      else rawList = tea.passages.filter((_, idx) => idx === 0 || idx === 2 || idx === 3);
+      if (unitId === 'tea_w2') rawList = [];
+      else if (unitId === 'tea_w4') rawList = [];
+      else if (unitId === 'tea_w5') rawList = tea.passages.filter((_, idx) => idx === 0 || idx === 2);
+      else if (unitId === 'tea_w6') rawList = tea.passages.filter((_, idx) => idx === 3);
+      else if (unitId === 'tea_w7') rawList = [];
+      else if (unitId === 'tea_w12') rawList = tea.passages.filter(p => String(p.section_title || '').includes('Week 12'));
+      else rawList = tea.passages.filter((p, idx) => idx === 0 || idx === 2 || idx === 3 || String(p.section_title || '').includes('Week 12'));
 
       return rawList.map((p, idx) => ({
         sequence: p.sequence || (idx + 1),
@@ -1460,6 +1654,10 @@
   }
 
   function getMistakesForUnit(bookId, unitId) {
+    if (unitId === 'week13_all') {
+      const w13 = getMidtermDataUnit('WEEK13_ALL');
+      return (w13 && w13.mistake_buster) ? w13.mistake_buster : [];
+    }
     if (unitId === 'week12_all') {
       const w12 = getMidtermDataUnit('WEEK12_ALL');
       return (w12 && w12.mistake_buster) ? w12.mistake_buster : [];
@@ -1468,10 +1666,10 @@
       const tea = getMidtermDataUnit('TEA_QUIZ_REVIEW');
       if (!tea || !tea.mistake_buster) return [];
       if (unitId === 'tea_all') return tea.mistake_buster;
-      const wMap = { tea_w2: 'W2', tea_w4: 'W4', tea_w5: 'W5', tea_w6: 'W6', tea_w7: 'W7' };
+      const wMap = { tea_w2: 'W2', tea_w4: 'W4', tea_w5: 'W5', tea_w6: 'W6', tea_w7: 'W7', tea_w12: 'W12' };
       const targetWeek = wMap[unitId];
       if (targetWeek) {
-        const targetW0 = 'W0' + targetWeek.slice(1);
+        const targetW0 = targetWeek.length === 2 ? 'W0' + targetWeek.slice(1) : targetWeek;
         return tea.mistake_buster.filter(m => {
           if (m.week === targetWeek || m.week === targetW0) return true;
           if (m.id && (m.id.toUpperCase().includes('_' + targetWeek + '_') || m.id.toUpperCase().includes('_' + targetW0 + '_'))) return true;
@@ -1487,8 +1685,16 @@
     return (mid && mid.mistake_buster) ? mid.mistake_buster : [];
   }
 
-  // 取得某單元之測驗題庫清單 (支援 1,711 道全題庫 + 考券真題)
+  // 取得某單元之測驗題庫清單 (支援全題庫 + 考券真題)
   function getQuizzesForUnit(bookId, unitId) {
+    if (unitId === 'week13_all') {
+      const w13 = getMidtermDataUnit('WEEK13_ALL');
+      if (w13 && w13.quizzes && w13.quizzes.length > 0) return w13.quizzes;
+      if (window.ENGLISH_DATA && window.ENGLISH_DATA.quizzes) {
+        return window.ENGLISH_DATA.quizzes.filter(q => q.is_week13 || ['rw6_6', 'gra3_16', 'wr3_6'].includes(q.unit_id));
+      }
+      return [];
+    }
     if (unitId === 'week12_all') {
       const w12 = getMidtermDataUnit('WEEK12_ALL');
       if (w12 && w12.quizzes && w12.quizzes.length > 0) return w12.quizzes;
@@ -1501,7 +1707,7 @@
       const tea = getMidtermDataUnit('TEA_QUIZ_REVIEW');
       if (!tea || !tea.quizzes) return [];
       if (unitId === 'tea_all') return tea.quizzes;
-      const wMap = { tea_w2: 'W2', tea_w4: 'W4', tea_w5: 'W5', tea_w6: 'W6', tea_w7: 'W7' };
+      const wMap = { tea_w2: 'W2', tea_w4: 'W4', tea_w5: 'W5', tea_w6: 'W6', tea_w7: 'W7', tea_w12: 'W12' };
       const targetWeek = wMap[unitId];
       if (targetWeek) {
         return tea.quizzes.filter(q => {
@@ -1707,6 +1913,40 @@
       </section>
     `;
 
+    const activeWeek = getActiveSprintWeek();
+    const sprintUnitCardsHtml = activeWeek.units.map(su => {
+      const qs = getQuizzesForUnit(su.bookId, su.unitId);
+      const cntListen = qs.filter(q => q.type === 'spelling_listen').length;
+      const cntPassageDict = qs.filter(q => q.type === 'passage_dictation').length;
+      const cntHand = qs.filter(q => q.type === 'paper_rewrite' || q.type === 'rewrite' || q.type === 'fill' || q.type === 'cloze').length;
+      const cntChoice = qs.length - cntListen - cntPassageDict - cntHand;
+      const parts = [];
+      if (cntPassageDict > 0) parts.push(`${cntPassageDict} 段落盲聽`);
+      if (cntListen > 0) parts.push(`${cntListen} 聽寫`);
+      if (cntHand > 0) parts.push(`${cntHand} 手寫`);
+      if (cntChoice > 0) parts.push(`${cntChoice} 選擇`);
+      const breakdown = `${parts.join(' + ')} (${qs.length} 題)`;
+      return `
+        <button type="button" class="w12-chip" data-open-w12-book="${su.bookId}" data-open-w12-unit="${su.unitId}">
+          <span class="w12-chip-top">${su.icon} ${escapeHtml(su.bookName)}</span>
+          <strong>${escapeHtml(su.title)}</strong>
+          <small>${escapeHtml(breakdown)}</small>
+        </button>
+      `;
+    }).join('');
+
+    const activeMockQs = getQuizzesForUnit('tea_midterm', activeWeek.mockUnitId);
+    const mockListen = activeMockQs.filter(q => q.type === 'spelling_listen').length;
+    const mockPassageDict = activeMockQs.filter(q => q.type === 'passage_dictation').length;
+    const mockHand = activeMockQs.filter(q => q.type === 'paper_rewrite' || q.type === 'rewrite' || q.type === 'fill' || q.type === 'cloze').length;
+    const mockChoice = activeMockQs.length - mockListen - mockPassageDict - mockHand;
+    const mockParts = [];
+    if (mockPassageDict > 0) mockParts.push(`${mockPassageDict} 段落盲聽`);
+    if (mockListen > 0) mockParts.push(`${mockListen} 聽寫`);
+    if (mockHand > 0) mockParts.push(`${mockHand} 手寫實戰`);
+    if (mockChoice > 0) mockParts.push(`${mockChoice} 選擇`);
+    const mockTotal = activeMockQs.length;
+
     container.innerHTML = `
       <div class="view dashboard">
         ${userSwitcherHtml}
@@ -1724,42 +1964,31 @@
           </div>
         </section>
 
-        <!-- 🚨 Week 12 (11/18 三) 小考五合一衝刺專區 -->
-        <aside class="banner-week12">
+        <!-- 🚨 可切換週次之小考衝刺專區 (W13 / W12) -->
+        <aside class="banner-week12 banner-sprint">
+          <div class="sprint-week-tabs" role="tablist" aria-label="小考週次切換">
+            ${SPRINT_WEEKS.map(sw => `
+              <button type="button" class="sprint-week-pill ${sw.id === activeWeek.id ? 'active' : ''}" data-sprint-week="${sw.id}" role="tab" aria-selected="${sw.id === activeWeek.id}">
+                ${escapeHtml(sw.shortLabel)}
+              </button>
+            `).join('')}
+          </div>
           <div class="w12-header">
             <div>
-              <span class="w12-badge-pill">🚨 下週三 11/18 (W12) *EL-3C 小考總衝刺</span>
-              <h3>Week 12 必考五大範圍 &times; 156 道 KET-4D 全真複習題庫（65 聽寫 + 41 手寫實戰 + 50 選擇）</h3>
-              <p>含四書範圍 + Oxford Discover 3 (Unit 16) 主課本單字，逐題附命題核心目標、正解推導與錯選項排除分析。</p>
+              <span class="w12-badge-pill">${escapeHtml(activeWeek.badgeLabel)}</span>
+              <h3>${escapeHtml(activeWeek.title)} &times; ${mockTotal} 道 KET-4D 全真複習題庫（${mockParts.join(' + ')}）</h3>
+              <p>${escapeHtml(activeWeek.subtitle)}</p>
             </div>
-            <button class="btn btn-primary" id="btn-launch-w12-mock">🚀 五合一 156 題大模考</button>
+            <div class="sprint-header-actions">
+              <button class="btn btn-primary" id="btn-launch-w12-mock">${escapeHtml(activeWeek.mockBtnLabel)} (${mockTotal} 題)</button>
+              <button class="btn btn-ghost btn-sm" id="btn-launch-sprint-print" title="一鍵列印本週模擬 A4 考卷">🖨️ 本週 A4 出卷</button>
+              ${activeWeek.reviewUnitId ? `
+                <button class="btn btn-ghost btn-sm sprint-review-btn" id="btn-launch-sprint-review">${escapeHtml(activeWeek.reviewBtnLabel)}</button>
+              ` : ''}
+            </div>
           </div>
           <div class="w12-grid">
-            <button type="button" class="w12-chip" data-open-w12-book="rw6" data-open-w12-unit="rw6_9">
-              <span class="w12-chip-top">📖 Reading with Writing 6</span>
-              <strong>Unit 9：認識地球與人際</strong>
-              <small>14 聽寫 + 8 手寫 + 10 選擇 (32 題)</small>
-            </button>
-            <button type="button" class="w12-chip" data-open-w12-book="rd6" data-open-w12-unit="rd6_6">
-              <span class="w12-chip-top">🚀 Read and Discover 6: Space</span>
-              <strong>Ch 6：外星生命探索</strong>
-              <small>14 聽寫 + 8 手寫 + 10 選擇 (32 題)</small>
-            </button>
-            <button type="button" class="w12-chip" data-open-w12-book="gra3" data-open-w12-unit="gra3_16">
-              <span class="w12-chip-top">📘 Oxford Discover Grammar 3</span>
-              <strong>Unit 16：飲食事實 Facts</strong>
-              <small>6 聽寫 + 10 手寫 + 12 選擇 (28 題)</small>
-            </button>
-            <button type="button" class="w12-chip" data-open-w12-book="wr3" data-open-w12-unit="wr3_6">
-              <span class="w12-chip-top">📝 Write Right 3</span>
-              <strong>Unit 6：歷史偉人傳記</strong>
-              <small>14 聽寫 + 10 手寫 + 8 選擇 (32 題)</small>
-            </button>
-            <button type="button" class="w12-chip" data-open-w12-book="od3" data-open-w12-unit="od3_16">
-              <span class="w12-chip-top">📚 Oxford Discover 3</span>
-              <strong>Unit 16：快樂花園</strong>
-              <small>17 聽寫 + 5 手寫 + 10 選擇 (32 題)</small>
-            </button>
+            ${sprintUnitCardsHtml}
           </div>
         </aside>
 
@@ -1829,12 +2058,45 @@
     const modalBtn = document.getElementById('btn-open-user-modal');
     if (modalBtn) modalBtn.onclick = openUserModal;
 
+    container.querySelectorAll('[data-sprint-week]').forEach(btn => {
+      btn.onclick = () => {
+        const wId = btn.getAttribute('data-sprint-week');
+        setSprintWeek(wId);
+      };
+    });
+
     const w12MockBtn = document.getElementById('btn-launch-w12-mock');
     if (w12MockBtn) {
       w12MockBtn.onclick = () => {
+        const aw = getActiveSprintWeek();
         state.currentBookId = 'tea_midterm';
-        state.currentUnitId = 'week12_all';
-        startQuizSession('unit', 'tea_midterm', 'week12_all', 'all', 'all');
+        state.currentUnitId = aw.mockUnitId;
+        startQuizSession('unit', 'tea_midterm', aw.mockUnitId, 'all', 'all');
+      };
+    }
+
+    const sprintPrintBtn = document.getElementById('btn-launch-sprint-print');
+    if (sprintPrintBtn) {
+      sprintPrintBtn.onclick = () => {
+        const aw = getActiveSprintWeek();
+        state.printConfig.bookId = 'tea_midterm';
+        state.printConfig.unitId = aw.mockUnitId;
+        state.printConfig.printType = 'unit_custom';
+        state.view = 'print';
+        render();
+      };
+    }
+
+    const sprintReviewBtn = document.getElementById('btn-launch-sprint-review');
+    if (sprintReviewBtn) {
+      sprintReviewBtn.onclick = () => {
+        const aw = getActiveSprintWeek();
+        if (!aw.reviewUnitId) return;
+        state.currentBookId = 'tea_midterm';
+        state.currentUnitId = aw.reviewUnitId;
+        state.currentSubtab = 'mistake';
+        state.view = 'unit_hub';
+        render();
       };
     }
 
@@ -2813,21 +3075,25 @@
     }).join('');
 
     const isListenMode = (q.type === 'spelling_listen');
+    const isPassageDictation = (q.type === 'passage_dictation');
     const isRewrite = (q.type === 'rewrite' || q.type === 'paper_rewrite');
     const options = q.options || [];
 
-    // 解析詳解與錨點單字卡 (支援舊版 3 色詳解與 KET-4D 四維詳解 + extensionStudy)
+    // 解析詳解與錨點單字卡 (支援舊版 3 色詳解與 KET-4D 四維詳解 + D4 視覺圖解 + extensionStudy)
     const expObj = typeof q.explanation === 'object' && q.explanation !== null ? q.explanation : { point: q.explanation || '文法規則與語境考核' };
     const expPoint = expObj.point || '文法規則與語境考核';
     const expTrap = expObj.trap || '';
     const expNote = expObj.note || '';
     const expPurpose = expObj.examPurpose || '';
     const expCorrectReason = expObj.correctReason || '';
+    const expSteps = Array.isArray(expObj.steps) ? expObj.steps.filter(Boolean) : [];
+    const expInsight = expObj.insight || '';
+    const expVisualBlockHtml = expObj.visualBlock ? renderVisualBlockHtml(expObj.visualBlock) : '';
     const expDistractors = expObj.distractorAnalysis || null;
     const expCommonTraps = Array.isArray(expObj.commonTraps)
       ? expObj.commonTraps
       : (typeof expObj.commonTraps === 'string' && expObj.commonTraps ? [expObj.commonTraps] : []);
-    const has4DExp = !!(expPurpose || expCorrectReason || expDistractors || expCommonTraps.length > 0);
+    const has4DExp = !!(expPurpose || expCorrectReason || expDistractors || expCommonTraps.length > 0 || expSteps.length > 0 || expVisualBlockHtml || expInsight);
     const extObj = (q.extensionStudy && typeof q.extensionStudy === 'object') ? q.extensionStudy : null;
 
     let vocabCard = q.vocab_card;
@@ -2875,14 +3141,20 @@
               ${(expPurpose && expPoint && expPoint !== expPurpose) ? `<div class="exp-pill-sub">📌 核心考點：${escapeHtml(expPoint)}</div>` : ''}
             </div>
           </div>
-          ${(expCorrectReason || expNote) ? `
+          ${(expCorrectReason || expNote || expSteps.length > 0) ? `
             <div class="exp-row exp-correct">
-              <div>
+              <div style="width:100%;">
                 <strong>✅ 正解邏輯推導：</strong><span>${escapeHtml(expCorrectReason || expNote)}</span>
+                ${expSteps.length > 0 ? `
+                  <ol class="exp-steps-list">
+                    ${expSteps.map(st => `<li>${escapeHtml(st)}</li>`).join('')}
+                  </ol>
+                ` : ''}
                 ${(expCorrectReason && expNote) ? `<div class="exp-pill-sub">💡 考點公式：${escapeHtml(expNote)}</div>` : ''}
               </div>
             </div>
           ` : ''}
+          ${expVisualBlockHtml ? `<div class="exp-row exp-visual">${expVisualBlockHtml}</div>` : ''}
           ${(distractorItemsHtml || expTrap) ? `
             <div class="exp-row exp-distractors">
               <div style="width:100%;">
@@ -2890,6 +3162,11 @@
                 ${expTrap ? `<div class="exp-pill-sub">⚠️ 考場陷阱：${escapeHtml(expTrap)}</div>` : ''}
                 ${distractorItemsHtml ? `<div class="distractor-list">${distractorItemsHtml}</div>` : ''}
               </div>
+            </div>
+          ` : ''}
+          ${expInsight ? `
+            <div class="exp-row exp-insight">
+              <div><strong>⚡ 秒殺口訣：</strong><span>${escapeHtml(expInsight)}</span></div>
             </div>
           ` : ''}
         </div>
@@ -3037,6 +3314,24 @@
             </div>
           ` : ''}
 
+          <!-- 段落逐句盲聽播放器 (若為 passage_dictation，翻牌前絕不顯示任何英文原句) -->
+          ${isPassageDictation ? `
+            <div class="dictation-passage-player">
+              <div class="dp-controls-main">
+                <button type="button" class="btn-listen-audio" id="btn-play-passage-full">🔊 整段連播 (1.0x)</button>
+                <button type="button" class="btn-listen-slow" id="btn-play-passage-slow">🐢 整段慢速 (0.8x)</button>
+              </div>
+              <div class="dp-sentence-pills">
+                <span class="dp-label">逐句聽寫播放：</span>
+                ${(Array.isArray(q.dictation_sentences) ? q.dictation_sentences : []).map((ds, dsIdx) => `
+                  <button type="button" class="dp-sent-btn" data-speak-dict-idx="${dsIdx}" title="點擊聆聽第 ${dsIdx + 1} 句">
+                    🔊 第 ${dsIdx + 1} 句
+                  </button>
+                `).join('')}
+              </div>
+            </div>
+          ` : ''}
+
           <!-- 題幹 (結構化排版) -->
           <div class="q-stem-container">
             ${renderStructuredStemHtml(q)}
@@ -3139,6 +3434,20 @@
                 </div>
               </div>
             ` : ''}
+            ${isPassageDictation && Array.isArray(q.dictation_sentences) ? `
+              <div class="dp-answer-breakdown">
+                <strong>📝 逐句對照與標點檢核：</strong>
+                <ol class="dp-sent-check-list">
+                  ${q.dictation_sentences.map((ds, dsIdx) => `
+                    <li>
+                      <div class="dp-ans-en">${escapeHtml(ds.en || '')}</div>
+                      ${ds.zh_cue ? `<div class="dp-ans-zh">中譯提示：${escapeHtml(ds.zh_cue)}</div>` : ''}
+                      ${ds.punct_focus ? `<div class="dp-ans-punct">⚠️ 標點／拼寫重點：${escapeHtml(ds.punct_focus)}</div>` : ''}
+                    </li>
+                  `).join('')}
+                </ol>
+              </div>
+            ` : ''}
             ${expDetailHtml}
             ${extStudyHtml}
 
@@ -3219,6 +3528,23 @@
       if (btnPlayWord) btnPlayWord.onclick = () => speakText(q.answer, 1.0);
       const btnPlaySlow = document.getElementById('btn-play-word-slow');
       if (btnPlaySlow) btnPlaySlow.onclick = () => speakText(q.answer, 0.8);
+    }
+
+    // 段落逐句盲聽播放器綁定
+    if (isPassageDictation) {
+      const fullTxt = q.full_audio_text || q.answer || '';
+      const btnFull = document.getElementById('btn-play-passage-full');
+      if (btnFull) btnFull.onclick = () => speakText(fullTxt, 1.0);
+      const btnSlow = document.getElementById('btn-play-passage-slow');
+      if (btnSlow) btnSlow.onclick = () => speakText(fullTxt, 0.8);
+      const dictSents = Array.isArray(q.dictation_sentences) ? q.dictation_sentences : [];
+      container.querySelectorAll('[data-speak-dict-idx]').forEach(btn => {
+        btn.onclick = () => {
+          const i = parseInt(btn.getAttribute('data-speak-dict-idx'), 10);
+          const item = dictSents[i];
+          if (item && item.en) speakText(item.en, state.ttsSpeed);
+        };
+      });
     }
 
     // 翻牌對答案
@@ -3543,10 +3869,11 @@
       const uQuizzes = uMeta ? getQuizzesForUnit(bMeta.id, uMeta.id) : [];
       const uVocabs = uMeta ? getVocabsForUnit(bMeta.id, uMeta.id) : [];
       const pListen = uQuizzes.filter(q => matchQuizType(q, 'vocab'));
-      const pHand = uQuizzes.filter(q => matchQuizType(q, 'handwrite'));
+      const pPassageDict = uQuizzes.filter(q => q.type === 'passage_dictation');
+      const pHand = uQuizzes.filter(q => matchQuizType(q, 'handwrite') && q.type !== 'passage_dictation');
       const pChoice = uQuizzes.filter(q => !matchQuizType(q, 'vocab') && !matchQuizType(q, 'handwrite'));
       const dictItems = pListen.length > 0
-        ? pListen.map(q => ({ zh: (q.vocab_card && q.vocab_card.chi) || q.question, ans: q.answer }))
+        ? pListen.map(q => ({ zh: q.target_chi || (q.vocab_card && q.vocab_card.chi) || q.question, ans: q.answer }))
         : uVocabs.map(v => ({ zh: v.chi || v.meaning || '', ans: v.word }));
 
       sheetEl.innerHTML = `
@@ -3576,6 +3903,26 @@
                 ${i + 1}. ${escapeHtml(item.zh)}：${isTeacher ? `<strong style="color:#dc2626;">${escapeHtml(item.ans)}</strong>` : '__________________'}
               </div>
             `).join('')}
+          </div>
+        ` : ''}
+
+        ${pPassageDict.length > 0 ? `
+          <div style="font-weight:900; margin:7mm 0 3mm; border-bottom:1.5px solid #000; padding-bottom:1mm;">
+            Part I-B. Passage Dictation 長篇課文段落聽寫（含自然標點）(${pPassageDict.length} 題)
+          </div>
+          <div>
+            ${pPassageDict.slice(0, 3).map((q, i) => {
+              const sCnt = Array.isArray(q.dictation_sentences) ? q.dictation_sentences.length : 4;
+              const lineCnt = Math.min(12, Math.max(6, sCnt * 2));
+              return `
+                <div class="pq" style="margin-bottom:5mm;">
+                  <div><strong>${i + 1}.</strong> ${escapeHtml(q.target_chi || q.question)}</div>
+                  ${isTeacher
+                    ? `<div style="color:#dc2626; font-weight:bold; margin-top:2mm; line-height:1.6;">${escapeHtml(q.answer)}</div>`
+                    : Array.from({ length: lineCnt }, () => '<div style="height:22px; border-bottom:1px solid #333; margin-top:2mm;"></div>').join('')}
+                </div>
+              `;
+            }).join('')}
           </div>
         ` : ''}
 

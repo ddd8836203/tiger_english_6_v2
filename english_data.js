@@ -1,33 +1,34 @@
 /**
- * 六年級英語特訓系統 — 全域資料層 (v2.2.0 Week 12 KET-4D 整合版)
- * 包含：7大記憶錨點單字卡、100% 課本完整原文、KET-4D 四維詳解與衍伸學習重點
+ * 六年級英語特訓系統 — 全域資料層 (v2.5.0 Week 13 KET-4D 整合版)
+ * 包含：7大記憶錨點單字卡、100% 課本完整原文、KET-4D 四維詳解、D4 視覺圖解與段落盲聽
  */
 const ENGLISH_DATA = {
   "metadata": {
-    "version": "2.2.0-week12-4d",
-    "generated_at": "2026-11-14",
+    "version": "2.5.0-week13-4d",
+    "generated_at": "2026-11-22",
     "total_books": 7,
     "total_units": 44,
-    "total_vocab": 715,
-    "total_grammar": 97,
-    "total_reading": 172,
-    "total_quizzes": 1807,
-    "week12_quizzes": 156
+    "total_vocab": 719,
+    "total_grammar": 98,
+    "total_reading": 174,
+    "total_quizzes": 1850,
+    "week12_quizzes": 174,
+    "week13_quizzes": 106
   },
   "books": [
     {
       "book_id": "gra3",
-      "book_name": "📘 Oxford Discover Grammar 3 (含 Week 12 U16 & U13~U15)",
+      "book_name": "📘 Oxford Discover Grammar 3 (含 Week 12–13 U16 & U13~U15)",
       "is_midterm": true
     },
     {
       "book_id": "wr3",
-      "book_name": "📝 Write Right Level 3 (含 Week 12 U6 & U4~U5)",
+      "book_name": "📝 Write Right Level 3 (含 Week 12–13 U6 & U4~U5)",
       "is_midterm": true
     },
     {
       "book_id": "rw6",
-      "book_name": "📖 Reading with Writing Level 6 (含 Week 12 U9 & U5~U8)",
+      "book_name": "📖 Reading with Writing Level 6 (含 Week 13 U6 · Week 12 U9 & U5~U8)",
       "is_midterm": true
     },
     {
@@ -99,14 +100,6 @@ const ENGLISH_DATA = {
       "big_question": "Reading Goal: Identify and Analyze the Setting (Time, Place & Weather)",
       "is_midterm": true,
       "midterm_unit_id": "RWW6_U05"
-    },
-    {
-      "book_id": "rw6",
-      "unit_id": "rw6_6",
-      "unit_title": "🔥 Unit 6: The World of Orienteering (定向越野與視覺圖表 Visuals)",
-      "big_question": "Reading Goal: Use Visuals (Diagrams, Control Flags & 18-Box Card)",
-      "is_midterm": true,
-      "midterm_unit_id": "RWW6_U06"
     },
     {
       "book_id": "rw6",
@@ -344,6 +337,7 @@ const ENGLISH_DATA = {
       "big_question": "How can we express feelings & evaluations with Adjectives + Prepositions?",
       "is_midterm": true,
       "is_week12": true,
+      "is_week13": true,
       "midterm_unit_id": "ODG3_U16",
       "page_images": [
         "六年級上/課本/02_Oxford_Discover_Grammar_3/images/odg3_pdf_p070.png",
@@ -359,6 +353,7 @@ const ENGLISH_DATA = {
       "big_question": "Why do we need plants? — Community Garden, Plot, Synonyms & Location Phrases",
       "is_midterm": true,
       "is_week12": true,
+      "is_week13": false,
       "midterm_unit_id": "OD3_U16",
       "page_images": [
         "六年級上/課本/01_Oxford_Discover_3/images/od3_p156.jpg",
@@ -378,6 +373,7 @@ const ENGLISH_DATA = {
       "big_question": "How do words and actions help us analyze characters and personalities?",
       "is_midterm": true,
       "is_week12": true,
+      "is_week13": false,
       "midterm_unit_id": "RWW6_U09",
       "page_images": [
         "六年級上/課本/03_Reading_with_Writing_6/images/rww6_u710_pdf_p15.png",
@@ -395,6 +391,7 @@ const ENGLISH_DATA = {
       "big_question": "Could there be life on Mars, Europa, Titan, or exoplanets in other solar systems?",
       "is_midterm": true,
       "is_week12": true,
+      "is_week13": false,
       "midterm_unit_id": "SPACE_CH06",
       "page_images": [
         "六年級上/課本/05_Read_and_Discover_6_Space/images/space_pdf_p24.png",
@@ -408,10 +405,11 @@ const ENGLISH_DATA = {
     {
       "book_id": "wr3",
       "unit_id": "wr3_6",
-      "unit_title": "🚨 Week 12 · Unit 06: A Great Person in History",
+      "unit_title": "🚨 Week 12–13 · Unit 06: A Great Person in History",
       "big_question": "How do we write a well-organized biography essay about a person we admire?",
       "is_midterm": true,
       "is_week12": true,
+      "is_week13": true,
       "midterm_unit_id": "WR3_U06",
       "page_images": [
         "六年級上/課本/04_Write_Right_3/images/wr3_u5_pdf_p09.png",
@@ -422,6 +420,22 @@ const ENGLISH_DATA = {
         "六年級上/課本/04_Write_Right_3/images/wr3_u5_pdf_p14.png",
         "六年級上/課本/04_Write_Right_3/images/wr3_u5_pdf_p15.png",
         "六年級上/課本/04_Write_Right_3/images/wr3_u5_pdf_p16.png"
+      ]
+    },
+    {
+      "book_id": "rw6",
+      "unit_id": "rw6_6",
+      "unit_title": "🚨 Week 13 · Unit 06: The World of Orienteering",
+      "big_question": "How do visuals and spatial directions help us understand informational texts and navigate outdoors?",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": true,
+      "midterm_unit_id": "RWW6_U06",
+      "page_images": [
+        "六年級上/課本/03_Reading_with_Writing_6/images/rww6_u36_pdf_p21.png",
+        "六年級上/課本/03_Reading_with_Writing_6/images/rww6_u36_pdf_p22.png",
+        "六年級上/課本/03_Reading_with_Writing_6/images/rww6_u36_pdf_p23.png",
+        "六年級上/課本/03_Reading_with_Writing_6/images/rww6_u36_pdf_p24.png"
       ]
     }
   ],
@@ -1862,67 +1876,6 @@ const ENGLISH_DATA = {
     },
     {
       "book_id": "rw6",
-      "unit_id": "rw6_6",
-      "sequence": 1,
-      "section_title": "📖 課本主課文全文 Part 1 (p.40)：The World of Orienteering (岱崙 W5 聽寫 25 分原篇！)",
-      "eng": "Imagine you are in a new city. Standing on a corner, you ask someone how to get to a store. They tell you to \"go two blocks north, turn left, and you'll be across the street from the bookstore.\" Now imagine you are in an outdoor race. Instead of directions, you have only a map and a compass, and instead of running down a marked road, you run around in the woods. Welcome to orienteering!\nIn the sport of orienteering, racers use a map and compass to find stations, which are called controls. A special flag marks each control (see Figure 1). Controls are placed so you can't see them easily from all directions. They may be in front of a big rock or behind a tree, which means racers must use their maps and compasses to find controls.",
-      "chi": "想像你身在一座陌生的城市。站在街角，你向路人詢問如何前往一家商店。他們告訴你：「往北走兩個街區，左轉，你就會在書店的對街。」現在想像你正在參加一場戶外競賽。沒有方向指引，你只有一張地圖和一個指北針；而且不是沿著標示好的馬路跑，你是在樹林裡四處奔跑。歡迎來到定向越野運動！\n在定向越野這項運動中，參賽者使用地圖和指北針來尋找稱為「控制點（controls）」的站點。一面特殊的旗幟標記著每個控制點（見圖 1）。控制點的放置方式讓你無法輕易從各個方向看見它們。它們可能位於巨石前方或大樹後面，這意味著參賽者必須運用地圖和指北針才能找到控制點。",
-      "key_sentences": [
-        {
-          "sentence": "Instead of directions, you have only a map and a compass, and instead of running down a marked road, you run around in the woods.",
-          "tag": "🔥 岱崙 W5 聽寫考卷原句",
-          "note": "注意介系詞片語 instead of + N/V-ing（代替/而不是），以及必備工具 a map and a compass（缺一不可）。"
-        },
-        {
-          "sentence": "They may be in front of a big rock or behind a tree,",
-          "tag": "⚠️ 岱崙 W4 小考真實失分片語",
-          "note": "in front of 是三個獨立單字，介系詞是單 f 的 of（Rex 曾誤寫成 infront off ❌）！"
-        }
-      ],
-      "exp_eng": "",
-      "exp_chi": ""
-    },
-    {
-      "book_id": "rw6",
-      "unit_id": "rw6_6",
-      "sequence": 2,
-      "section_title": "📖 課本主課文全文 Part 2 (p.41)：The World of Orienteering — Control Cards & Winning Rules",
-      "eng": "At each control, racers mark a card they carry with them (see Figure 2). The cards are very important because racers must find all the controls to win. If someone misses a control, they won't have that mark on their card. They might cross the finish line first, but the next person to finish with a full card will win the race.\nIn a race in a city, you might only need to cross the street to get to the finish line. In orienteering, you will likely run along a river, climb over rocks, and go up and down hills. And, after all that, you still have to use your compass to find the finish line!\n[Visual Info — Figure 1: A bright red-and-white triangular control flag hanging behind a tree. Figure 2: Orienteering Control Card with 18 numbered boxes for punching marks.]",
-      "chi": "在每個控制點，參賽者會在隨身攜帶的卡片上做記號（見圖 2）。這些卡片非常重要，因為參賽者必須找到所有的控制點才能獲勝。如果有人漏掉了一個控制點，他們的卡片上就不會有那個記號。他們也許會第一個衝過終點線，但下一位打滿整張卡片並完成比賽的人才會贏得比賽。\n在城市裡的比賽，你計算也許只需要過馬路就能抵達終點線。但在定向越野中，你很可能會沿著河邊奔跑、爬過岩石，並在山丘間上下穿梭。而且在經歷這一切之後，你仍然必須使用指北針來找到終點線！\n【視覺圖表補充 —— 圖 1：掛在樹後的紅白相間三角形控制旗。圖 2：共有 18 個編號打卡格的定向越野控制卡。】",
-      "key_sentences": [
-        {
-          "sentence": "They might cross the finish line first, but the next person to finish with a full card will win the race.",
-          "tag": "🔥 閱讀理解最大陷阱：誰才會贏？",
-          "note": "第一個衝過終點線的人不一定贏！必須『打滿全卡所有控制點 (with a full card — 共 18 點)』且最快完成的人才獲勝！"
-        },
-        {
-          "sentence": "In orienteering, you will likely run along a river, climb over rocks, and go up and down hills.",
-          "tag": "⭐ 地形移動片語三連發",
-          "note": "along a river（沿著河）、climb over rocks（爬過岩石）、go up and down hills（上下山丘）。"
-        }
-      ],
-      "exp_eng": "",
-      "exp_chi": ""
-    },
-    {
-      "book_id": "rw6",
-      "unit_id": "rw6_6",
-      "sequence": 3,
-      "section_title": "📖 課本副篇短文全文 (p.43)：Treasure Hunt (公園尋寶派對)",
-      "eng": "Treasure Hunt\nMy friend Bayani had the best party this weekend! He lives across the street from the park, and his family made a treasure hunt for us to do there. They gave us maps, compasses, and directions. My team's first direction said, \"Start at the north corner of the swings. Then walk east for 50 steps.\" We were the first group to find a treasure! We ate them before we got back to Bayani's house.",
-      "chi": "尋寶遊戲\n我的朋友巴亞尼（Bayani）這個週末舉辦了最棒的派對！他家住在公園對街，他的家人為我們在公園裡設計了一場尋寶遊戲。他們發給我們地圖、指北針和方向指引。我們這隊的第一條指引寫著：「從鞦韆的北角出發。然後向東走 50 步。」我們是第一組找到寶藏的隊伍！在回到巴亞尼家之前，我們就把寶藏吃光了。",
-      "key_sentences": [
-        {
-          "sentence": "He lives across the street from the park, and his family made a treasure hunt for us to do there.",
-          "tag": "⭐ 副篇細節推理",
-          "note": "Bayani 家在公園對面 (across from the park)；且因為『We ate them』加上插圖餅乾盒，可推論寶藏是 cookies！"
-        }
-      ],
-      "exp_eng": "",
-      "exp_chi": ""
-    },
-    {
-      "book_id": "rw6",
       "unit_id": "rw6_7",
       "sequence": 1,
       "section_title": "📖 課本單元導讀 (p.49)：Topic 4 Intro — How We Talk & Sign Languages (手語溝通)",
@@ -2373,7 +2326,8 @@ const ENGLISH_DATA = {
       ],
       "exp_eng": "",
       "exp_chi": "",
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": true
     },
     {
       "book_id": "gra3",
@@ -2442,7 +2396,8 @@ const ENGLISH_DATA = {
       ],
       "exp_eng": "",
       "exp_chi": "",
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": true
     },
     {
       "book_id": "gra3",
@@ -2537,7 +2492,8 @@ const ENGLISH_DATA = {
       ],
       "exp_eng": "",
       "exp_chi": "",
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": true
     },
     {
       "book_id": "od3",
@@ -2642,7 +2598,8 @@ const ENGLISH_DATA = {
       ],
       "exp_eng": "",
       "exp_chi": "",
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": false
     },
     {
       "book_id": "od3",
@@ -2755,7 +2712,8 @@ const ENGLISH_DATA = {
       ],
       "exp_eng": "",
       "exp_chi": "",
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": false
     },
     {
       "book_id": "od3",
@@ -2822,7 +2780,8 @@ const ENGLISH_DATA = {
       ],
       "exp_eng": "",
       "exp_chi": "",
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": false
     },
     {
       "book_id": "rw6",
@@ -2869,7 +2828,8 @@ const ENGLISH_DATA = {
       ],
       "exp_eng": "",
       "exp_chi": "",
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": false
     },
     {
       "book_id": "rw6",
@@ -2966,7 +2926,8 @@ const ENGLISH_DATA = {
       ],
       "exp_eng": "",
       "exp_chi": "",
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": false
     },
     {
       "book_id": "rw6",
@@ -3029,7 +2990,8 @@ const ENGLISH_DATA = {
       ],
       "exp_eng": "",
       "exp_chi": "",
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": false
     },
     {
       "book_id": "rd6",
@@ -3098,7 +3060,8 @@ const ENGLISH_DATA = {
       ],
       "exp_eng": "",
       "exp_chi": "",
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": false
     },
     {
       "book_id": "rd6",
@@ -3163,7 +3126,8 @@ const ENGLISH_DATA = {
       ],
       "exp_eng": "",
       "exp_chi": "",
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": false
     },
     {
       "book_id": "rd6",
@@ -3236,7 +3200,8 @@ const ENGLISH_DATA = {
       ],
       "exp_eng": "",
       "exp_chi": "",
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": false
     },
     {
       "book_id": "rd6",
@@ -3297,7 +3262,8 @@ const ENGLISH_DATA = {
       ],
       "exp_eng": "",
       "exp_chi": "",
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": false
     },
     {
       "book_id": "wr3",
@@ -3370,7 +3336,8 @@ const ENGLISH_DATA = {
       ],
       "exp_eng": "",
       "exp_chi": "",
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": true
     },
     {
       "book_id": "wr3",
@@ -3433,7 +3400,8 @@ const ENGLISH_DATA = {
       ],
       "exp_eng": "",
       "exp_chi": "",
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": true
     },
     {
       "book_id": "wr3",
@@ -3496,7 +3464,8 @@ const ENGLISH_DATA = {
       ],
       "exp_eng": "",
       "exp_chi": "",
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": true
     },
     {
       "book_id": "wr3",
@@ -3559,7 +3528,236 @@ const ENGLISH_DATA = {
       ],
       "exp_eng": "",
       "exp_chi": "",
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": true
+    },
+    {
+      "book_id": "rw6",
+      "unit_id": "rw6_6",
+      "sequence": 1,
+      "section_title": "Paragraph 1: City Directions vs. Orienteering (城市問路與戶外定向越野)",
+      "eng": "Imagine you are in a new city. Standing on a corner, you ask someone how to get to a store. They tell you to \"go two blocks north, turn left, and you'll be across the street from the bookstore.\" Now imagine you are in an outdoor race. Instead of directions, you have only a map and a compass, and instead of running down a marked road, you run around in the woods. Welcome to orienteering!",
+      "chi": "想像你正身處一座陌生的城市。站在街角時，你向路人詢問該如何前往一間商店。對方告訴你：「向北走兩個街區、左轉，你就會來到書店的對街。」現在想像你正在參加一場戶外競賽。沒有口頭報路指引，你手中只有一張地圖和一個指南針；而且你不是沿著有標線的馬路奔跑，而是在樹林裡穿梭探索。歡迎來到定向越野的世界！",
+      "sentences": [
+        {
+          "en": "Imagine you are in a new city.",
+          "zh": "想像你正身處一座陌生的城市。"
+        },
+        {
+          "en": "Standing on a corner, you ask someone how to get to a store.",
+          "zh": "站在街角時，你向路人詢問該如何前往一間商店。"
+        },
+        {
+          "en": "They tell you to \"go two blocks north, turn left, and you'll be across the street from the bookstore.\"",
+          "zh": "對方告訴你：「向北走兩個街區、左轉，你就會來到書店的對街。」"
+        },
+        {
+          "en": "Now imagine you are in an outdoor race.",
+          "zh": "現在想像你正在參加一場戶外競賽。"
+        },
+        {
+          "en": "Instead of directions, you have only a map and a compass, and instead of running down a marked road, you run around in the woods.",
+          "zh": "沒有口頭報路指引，你手中只有一張地圖和一個指南針；而且你不是沿著有標線的馬路奔跑，而是在樹林裡穿梭探索。"
+        },
+        {
+          "en": "Welcome to orienteering!",
+          "zh": "歡迎來到定向越野的世界！"
+        }
+      ],
+      "key_sentences": [
+        {
+          "sentence": "Standing on a corner, you ask someone how to get to a store.",
+          "tag": "⭐ Week 13 核心考點",
+          "note": "現在分詞片語 Standing on a corner 當時間/狀態背景，後面必須加逗號連接主要子句；疑問詞不定詞 how to get to 表示「如何到達」。",
+          "point": "現在分詞片語 Standing on a corner 當時間/狀態背景，後面必須加逗號連接主要子句；疑問詞不定詞 how to get to 表示「如何到達」。"
+        },
+        {
+          "sentence": "Instead of directions, you have only a map and a compass, and instead of running down a marked road, you run around in the woods.",
+          "tag": "⭐ Week 13 核心考點",
+          "note": "instead of 為介系詞片語，後方接名詞 directions 或動名詞 running，展現城市導航與戶外越野的對比。",
+          "point": "instead of 為介系詞片語，後方接名詞 directions 或動名詞 running，展現城市導航與戶外越野的對比。"
+        }
+      ],
+      "exp_eng": "",
+      "exp_chi": "",
+      "is_week12": false,
+      "is_week13": true
+    },
+    {
+      "book_id": "rw6",
+      "unit_id": "rw6_6",
+      "sequence": 2,
+      "section_title": "Paragraph 2: Controls & Hidden Flags (檢查點與隱蔽標誌旗)",
+      "eng": "In the sport of orienteering, racers use a map and compass to find stations, which are called controls. A special flag marks each control (see Figure 1). Controls are placed so you can't see them easily from all directions. They may be in front of a big rock or behind a tree, which means racers must use their maps and compasses to find controls.",
+      "chi": "在定向越野這項運動中，參賽者運用地圖和指南針尋找被稱為「控制點」的檢查站。每個控制點都有一面特製的旗幟作為標記（見圖 1）。控制點的設置方式讓你無法輕易從各個方向一眼看見它們。它們可能位在一塊大岩石前方或一棵大樹後方，這代表選手必須仰賴地圖和指南針才能找到控制點。",
+      "sentences": [
+        {
+          "en": "In the sport of orienteering, racers use a map and compass to find stations, which are called controls.",
+          "zh": "在定向越野這項運動中，參賽者運用地圖和指南針尋找被稱為「控制點」的檢查站。"
+        },
+        {
+          "en": "A special flag marks each control (see Figure 1).",
+          "zh": "每個控制點都有一面特製的旗幟作為標記（見圖 1）。"
+        },
+        {
+          "en": "Controls are placed so you can't see them easily from all directions.",
+          "zh": "控制點的設置方式讓你無法輕易從各個方向一眼看見它們。"
+        },
+        {
+          "en": "They may be in front of a big rock or behind a tree, which means racers must use their maps and compasses to find controls.",
+          "zh": "它們可能位在一塊大岩石前方或一棵大樹後方，這代表選手必須仰賴地圖和指南針才能找到控制點。"
+        }
+      ],
+      "key_sentences": [
+        {
+          "sentence": "In the sport of orienteering, racers use a map and compass to find stations, which are called controls.",
+          "tag": "⭐ Week 13 核心考點",
+          "note": "非限定關係子句 , which are called controls 用來補充說明 stations 的專有名稱，逗號不可省略且不可換成 that。",
+          "point": "非限定關係子句 , which are called controls 用來補充說明 stations 的專有名稱，逗號不可省略且不可換成 that。"
+        },
+        {
+          "sentence": "They may be in front of a big rock or behind a tree, which means racers must use their maps and compasses to find controls.",
+          "tag": "⭐ Week 13 核心考點",
+          "note": "逗號後接 which means... 指代前面整件事，說明為何不能只靠肉眼尋找。",
+          "point": "逗號後接 which means... 指代前面整件事，說明為何不能只靠肉眼尋找。"
+        }
+      ],
+      "exp_eng": "",
+      "exp_chi": "",
+      "is_week12": false,
+      "is_week13": true
+    },
+    {
+      "book_id": "rw6",
+      "unit_id": "rw6_6",
+      "sequence": 3,
+      "section_title": "Paragraph 3: Control Cards & Winning Rules (控制卡打卡與勝負鐵律)",
+      "eng": "At each control, racers mark a card they carry with them (see Figure 2). The cards are very important because racers must find all the controls to win. If someone misses a control, they won't have that mark on their card. They might cross the finish line first, but the next person to finish with a full card will win the race.",
+      "chi": "在每一個控制點，選手都會在隨身攜帶的卡片上留下打卡記號（見圖 2）。這些卡片至關重要，因為參賽者必須找齊所有的控制點才能獲勝。如果有人漏掉了一個控制點，卡片上就不會有該處的記號。他們也許能第一個衝過終點線，但下一位帶著完整打卡卡片完成比賽的人才會贏得競賽。",
+      "sentences": [
+        {
+          "en": "At each control, racers mark a card they carry with them (see Figure 2).",
+          "zh": "在每一個控制點，選手都會在隨身攜帶的卡片上留下打卡記號（見圖 2）。"
+        },
+        {
+          "en": "The cards are very important because racers must find all the controls to win.",
+          "zh": "這些卡片至關重要，因為參賽者必須找齊所有的控制點才能獲勝。"
+        },
+        {
+          "en": "If someone misses a control, they won't have that mark on their card.",
+          "zh": "如果有人漏掉了一個控制點，卡片上就不會有該處的記號。"
+        },
+        {
+          "en": "They might cross the finish line first, but the next person to finish with a full card will win the race.",
+          "zh": "他們也許能第一個衝過終點線，但下一位帶著完整打卡卡片完成比賽的人才會贏得競賽。"
+        }
+      ],
+      "key_sentences": [
+        {
+          "sentence": "If someone misses a control, they won't have that mark on their card.",
+          "tag": "⭐ Week 13 核心考點",
+          "note": "真實條件句「If + 現在簡單式 (misses), 主詞 + will/won't + 原形動詞」，闡述漏掉打卡點的後果。",
+          "point": "真實條件句「If + 現在簡單式 (misses), 主詞 + will/won't + 原形動詞」，闡述漏掉打卡點的後果。"
+        },
+        {
+          "sentence": "They might cross the finish line first, but the next person to finish with a full card will win the race.",
+          "tag": "⭐ Week 13 核心考點",
+          "note": "全課最關鍵勝負鐵律：先衝過終點線不等於贏家，必須「集滿全卡標記 (a full card)」且最快完成才算獲勝。",
+          "point": "全課最關鍵勝負鐵律：先衝過終點線不等於贏家，必須「集滿全卡標記 (a full card)」且最快完成才算獲勝。"
+        }
+      ],
+      "exp_eng": "",
+      "exp_chi": "",
+      "is_week12": false,
+      "is_week13": true
+    },
+    {
+      "book_id": "rw6",
+      "unit_id": "rw6_6",
+      "sequence": 4,
+      "section_title": "Paragraph 4: Outdoor Terrain & Finish Line (戶外地形挑戰與終點定位)",
+      "eng": "In a race in a city, you might only need to cross the street to get to the finish line. In orienteering, you will likely run along a river, climb over rocks, and go up and down hills. And, after all that, you still have to use your compass to find the finish line!",
+      "chi": "在城市裡的路跑比賽中，你可能只需要穿越馬路就能抵達終點線。而在定向越野中，你很可能會沿著河流奔跑、攀爬越過岩石，並在山丘間上上下下穿梭。而且，在歷經這一切體能挑戰之後，你仍然必須使用指南針來找出終點線的位置！",
+      "sentences": [
+        {
+          "en": "In a race in a city, you might only need to cross the street to get to the finish line.",
+          "zh": "在城市裡的路跑比賽中，你可能只需要穿越馬路就能抵達終點線。"
+        },
+        {
+          "en": "In orienteering, you will likely run along a river, climb over rocks, and go up and down hills.",
+          "zh": "而在定向越野中，你很可能會沿著河流奔跑、攀爬越過岩石，並在山丘間上上下下穿梭。"
+        },
+        {
+          "en": "And, after all that, you still have to use your compass to find the finish line!",
+          "zh": "而且，在歷經這一切體能挑戰之後，你仍然必須使用指南針來找出終點線的位置！"
+        }
+      ],
+      "key_sentences": [
+        {
+          "sentence": "In orienteering, you will likely run along a river, climb over rocks, and go up and down hills.",
+          "tag": "⭐ Week 13 核心考點",
+          "note": "三個並列動態空間片語 run along / climb over / go up and down 精準描繪戶外地形移動路徑。",
+          "point": "三個並列動態空間片語 run along / climb over / go up and down 精準描繪戶外地形移動路徑。"
+        },
+        {
+          "sentence": "And, after all that, you still have to use your compass to find the finish line!",
+          "tag": "⭐ Week 13 核心考點",
+          "note": "感嘆號強化語氣，點出定向越野連終點線都必須靠導航工具定位，而非一路直衝即可。",
+          "point": "感嘆號強化語氣，點出定向越野連終點線都必須靠導航工具定位，而非一路直衝即可。"
+        }
+      ],
+      "exp_eng": "",
+      "exp_chi": "",
+      "is_week12": false,
+      "is_week13": true
+    },
+    {
+      "book_id": "rw6",
+      "unit_id": "rw6_6",
+      "sequence": 5,
+      "section_title": "Informational Reading: Treasure Hunt (單元延伸閱讀：公園尋寶記)",
+      "eng": "My friend Bayani had the best party this weekend! He lives across the street from the park, and his family made a treasure hunt for us to do there. They gave us maps, compasses, and directions. My team's first direction said, \"Start at the north corner of the swings. Then walk east for 50 steps.\" We were the first group to find a treasure! We ate them before we got back to Bayani's house.",
+      "chi": "我的朋友巴亞尼這個週末辦了一場最棒的派對！他住在公園的對街，他的家人為我們設計了一場公園尋寶遊戲。他們發給我們地圖、指南針和路線指引。我們這一隊的第一條指引寫著：「從鞦韆區的北邊角落出發，接著往東走 50 步。」我們成為第一組找到寶藏的小隊！在回到巴亞尼家之前，我們就把寶藏（餅乾）吃光了。",
+      "sentences": [
+        {
+          "en": "My friend Bayani had the best party this weekend!",
+          "zh": "我的朋友巴亞尼這個週末辦了一場最棒的派對！"
+        },
+        {
+          "en": "He lives across the street from the park, and his family made a treasure hunt for us to do there.",
+          "zh": "他住在公園的對街，他的家人為我們設計了一場公園尋寶遊戲。"
+        },
+        {
+          "en": "They gave us maps, compasses, and directions.",
+          "zh": "他們發給我們地圖、指南針和路線指引。"
+        },
+        {
+          "en": "My team's first direction said, \"Start at the north corner of the swings. Then walk east for 50 steps.\"",
+          "zh": "我們這一隊的第一條指引寫著：「從鞦韆區的北邊角落出發，接著往東走 50 步。」"
+        },
+        {
+          "en": "We were the first group to find a treasure! We ate them before we got back to Bayani's house.",
+          "zh": "我們成為第一組找到寶藏的小隊！在回到巴亞尼家之前，我們就把寶藏吃光了。"
+        }
+      ],
+      "key_sentences": [
+        {
+          "sentence": "He lives across the street from the park, and his family made a treasure hunt for us to do there.",
+          "tag": "⭐ Week 13 核心考點",
+          "note": "across the street from 表示「在…對街」，與本課單元關鍵字片語完全呼應。",
+          "point": "across the street from 表示「在…對街」，與本課單元關鍵字片語完全呼應。"
+        },
+        {
+          "sentence": "We ate them before we got back to Bayani's house.",
+          "tag": "⭐ Week 13 核心考點",
+          "note": "代名詞 them 結合課本插圖（餅乾盒 COOKIES）即可推論出寶藏是能吃的點心，呼應 Use Visuals 策略。",
+          "point": "代名詞 them 結合課本插圖（餅乾盒 COOKIES）即可推論出寶藏是能吃的點心，呼應 Use Visuals 策略。"
+        }
+      ],
+      "exp_eng": "",
+      "exp_chi": "",
+      "is_week12": false,
+      "is_week13": true
     }
   ],
   "vocabulary": [
@@ -13628,176 +13826,6 @@ const ENGLISH_DATA = {
       "compare": "lighthouse (燈塔) vs. greenhouse (溫室)。"
     },
     {
-      "id": "voc_m601",
-      "book_id": "rw6",
-      "unit_id": "rw6_6",
-      "word": "orienteering",
-      "pos": "名詞 (Noun)",
-      "chi": "定向越野運動",
-      "breakdown": "orient (東方/確定方向) + -eer (從事...的人/活動) + -ing -> 結合地圖與指北針的野外尋標運動。",
-      "trick": "拆成 5 個音節記：o-ri-en-teer-ing！中間有 orient (方向)，後面有雙 e 的 teer + ing！",
-      "scene": "選手拿著地圖與指北針在森林裡奔跑，尋找樹後的紅白三角旗打卡。",
-      "collocation": "搭配: the sport of orienteering (定向越野運動)｜岱崙 W5 聽寫必考大字！",
-      "img": "🏃",
-      "context_eng": "In the sport of orienteering, racers use a map and compass to find stations.",
-      "context_chi": "在定向越野運動中，參賽者使用地圖和指北針尋找站點。",
-      "chant": "o-ri-en-teer-ing，森林尋寶我最行！",
-      "compare": "orienteering (定向越野) vs. engineering (工程學)。"
-    },
-    {
-      "id": "voc_m602",
-      "book_id": "rw6",
-      "unit_id": "rw6_6",
-      "word": "controls",
-      "pos": "名詞 (Noun, 複數)",
-      "chi": "（定向越野的）控制點 / 打卡站",
-      "breakdown": "con- (共同) + trol (滾動/檢核卷軸) -> 比賽中用來檢核選手是否到訪的「控制站點」。",
-      "trick": "平常 control 是「控制」，但在定向越野專指「必找的打卡控制點 (stations)」！",
-      "scene": "大樹後方掛著紅白相間的三角旗，旁邊有打孔器讓選手在卡片上打卡。",
-      "collocation": "課本定義: stations, which are called controls｜搭配: find all the controls to win",
-      "img": "🚩",
-      "context_eng": "Racers use a map and compass to find stations, which are called controls.",
-      "context_chi": "參賽者使用地圖和指北針尋找稱為「控制點」的站點。",
-      "chant": "紅白旗幟藏樹後，找到 controls 打卡走！",
-      "compare": "control card (控制打卡計分卡) vs. control flag (控制點標誌旗)。"
-    },
-    {
-      "id": "voc_m603",
-      "book_id": "rw6",
-      "unit_id": "rw6_6",
-      "word": "in front of",
-      "pos": "介系詞片語 (Prep. Phrase)",
-      "chi": "在...（外部）正前方",
-      "breakdown": "in + front (正面/前部) + of -> 三個獨立單字組成的方位介系詞！",
-      "trick": "⚠️ 岱崙 W4 小考真實失分王！Rex 曾寫成『infront off ❌』！切記：① in 與 front 中間要空格；② 最後是單 f 的 of！",
-      "scene": "定向越野的控制旗藏在一塊巨大岩石的正前方。",
-      "collocation": "反義詞: behind (在...後面)｜搭配: in front of a big rock (在巨石前面)",
-      "img": "🪨",
-      "context_eng": "They may be in front of a big rock or behind a tree.",
-      "context_chi": "它們可能位於巨石前方或大樹後面。",
-      "chant": "in、front、of 三個字，單 f 的 of 別寫錯！",
-      "compare": "in front of (在物體外部前方) vs. in the front of (在車廂/教室內部前排)。"
-    },
-    {
-      "id": "voc_m604",
-      "book_id": "rw6",
-      "unit_id": "rw6_6",
-      "word": "behind",
-      "pos": "介系詞 (Prep.)",
-      "chi": "在...後面",
-      "breakdown": "be- (在) + hind (後方的) -> 藏在某物的背後。",
-      "trick": "諧音「比害羞」。因為比別人害羞，所以躲在大樹「後面 (behind)」！",
-      "scene": "紅白相間的控制點旗幟被巧妙地掛在大樹幹正後方，從正面看不到。",
-      "collocation": "反義詞: in front of (在...前面)｜搭配: behind a tree (在樹後面)",
-      "img": "🌲",
-      "context_eng": "Controls may be in front of a big rock or behind a tree.",
-      "context_chi": "控制點可能位於巨石前方或大樹後面。",
-      "chant": "害羞躲在樹後面，behind 與 in front of 相對面！",
-      "compare": "behind (在...後面-位置) vs. go back (往回走-動作)。"
-    },
-    {
-      "id": "voc_m605",
-      "book_id": "rw6",
-      "unit_id": "rw6_6",
-      "word": "corner",
-      "pos": "名詞 (Noun)",
-      "chi": "街角 / 轉角 / 角落",
-      "breakdown": "源自拉丁文 cornu (角/號角) + -er -> 兩條街道交會形成的角 (a place where two roads meet)。",
-      "trick": "諧音「摳呢」。站在「街角 (corner)」摳著腦袋問路人商店怎麼走。",
-      "scene": "站在十字路口的紅綠燈轉角處，向路人詢問書店方向。",
-      "collocation": "課本英英定義: a place where two roads meet｜搭配: standing on a corner (站在街角)",
-      "img": "📐",
-      "context_eng": "Standing on a corner, you ask someone how to get to a store.",
-      "context_chi": "站在街角，你向某人詢問如何前往一家商店。",
-      "chant": "兩條馬路交會處，站在 corner 問問路！",
-      "compare": "on a corner (在戶外街角) vs. around the corner (即將到來/在轉角處)。"
-    },
-    {
-      "id": "voc_m606",
-      "book_id": "rw6",
-      "unit_id": "rw6_6",
-      "word": "go two blocks",
-      "pos": "動詞片語 (Phrase)",
-      "chi": "走兩個街區",
-      "breakdown": "go (走) + two blocks (兩個街區，超過一個街區 block 必加 s)。",
-      "trick": "課本英英定義題：『Go two blocks』means『move this far (移動這麼遠的距離)』！",
-      "scene": "沿著城市棋盤狀街道，經過兩個路口街區再左轉。",
-      "collocation": "延伸搭配: go two blocks north (往北走兩個街區), two blocks from my house",
-      "img": "🏙️",
-      "context_eng": "They tell you to \"go two blocks north, turn left.\"",
-      "context_chi": "他們告訴你：「往北走兩個街區，然後左轉。」",
-      "chant": "城市指路算街區，go two blocks 記心裡！",
-      "compare": "block (名詞：街區/積木；動詞：阻擋)。"
-    },
-    {
-      "id": "voc_m607",
-      "book_id": "rw6",
-      "unit_id": "rw6_6",
-      "word": "across from",
-      "pos": "介系詞片語 (Prep. Phrase)",
-      "chi": "在...對面 / 在...對街",
-      "breakdown": "across (橫越到對面) + from (從...算起) -> 在馬路或空間的正對面。",
-      "trick": "課本英英定義：『across the street from』means『on the other side (在另一側/對面)』！",
-      "scene": "站在馬路這一側，正對面就是那家書店與公園。",
-      "collocation": "同義片語: across the street from｜搭配: live across from the park (住在公園對面)",
-      "img": "🛣️",
-      "context_eng": "You'll be across the street from the bookstore.",
-      "context_chi": "你就會在書店的對街（對面）。",
-      "chant": "隔著馬路看對面，across from 最常見！",
-      "compare": "across from (介系詞：在...對面) vs. cross the street (動詞：過馬路)。"
-    },
-    {
-      "id": "voc_m608",
-      "book_id": "rw6",
-      "unit_id": "rw6_6",
-      "word": "cross the street",
-      "pos": "動詞片語 (Phrase)",
-      "chi": "過馬路 / 穿越街道",
-      "breakdown": "cross (動詞：穿越/橫渡) + the street (街道)。",
-      "trick": "課本英英定義：『cross the street』means『go to the other side (走到對面去)』！",
-      "scene": "在城市賽跑中，選手邁開大步穿越斑馬線跑到馬路對面的終點線。",
-      "collocation": "注意詞性：cross 是動詞（過馬路），across 是介系詞（在對面）！",
-      "img": "🚶",
-      "context_eng": "In a race in a city, you might only need to cross the street to get to the finish line.",
-      "context_chi": "在城市裡的比賽，你計算也許只需要過馬路就能抵達終點線。",
-      "chant": "動詞穿越用 cross，介系詞對面用 across！",
-      "compare": "cross the street (= go across the street)。"
-    },
-    {
-      "id": "voc_m609",
-      "book_id": "rw6",
-      "unit_id": "rw6_6",
-      "word": "along a river",
-      "pos": "介系詞片語 (Prep. Phrase)",
-      "chi": "沿著一條河",
-      "breakdown": "along (順著長條形物體的邊緣往前) + a river (河流)。",
-      "trick": "a + long (長長的) -> 順著「長長的」河岸或步道一路跑就是 along！",
-      "scene": "定向越野選手順著蜿蜒的溪流岸邊一路往前奔跑。",
-      "collocation": "搭配: run along a river (沿著河邊跑), walk along the street (沿著街走)",
-      "img": "🏞️",
-      "context_eng": "In orienteering, you will likely run along a river, climb over rocks, and go up and down hills.",
-      "context_chi": "在定向越野中，你很可能會沿著河邊奔跑、爬過岩石，並在山丘間上下穿梭。",
-      "chant": "順著長河岸邊跑，along a river 記得好！",
-      "compare": "along (沿著邊緣線條) vs. across (橫越到對岸)。"
-    },
-    {
-      "id": "voc_m610",
-      "book_id": "rw6",
-      "unit_id": "rw6_6",
-      "word": "visual",
-      "pos": "名詞 / 形容詞 (N. / Adj.)",
-      "chi": "視覺圖表（圖片、圖解、地圖） / 視覺的",
-      "breakdown": "源自拉丁文 videre (to see 看見) + -ual -> 看得見的視覺輔助圖表。",
-      "trick": "跟 video (影片)、vision (視力) 同字根！課本閱讀目標：Use visuals (善用視覺圖表獲取正文中沒寫出的資訊)！",
-      "scene": "閱讀課文時，旁邊附上的「圖 1 控制旗照片」與「圖 2 18格打卡表」就是 visuals。",
-      "collocation": "包含: pictures (圖片), diagrams (圖解), maps (地圖)",
-      "img": "📊",
-      "context_eng": "Visuals provide information that is not in a text.",
-      "context_chi": "視覺圖表提供正文中沒有寫出的補充資訊。",
-      "chant": "看文別忘看圖表，visuals 藏著得分寶！",
-      "compare": "visual (視覺圖表) vs. text (純文字正文)。"
-    },
-    {
       "id": "voc_m701",
       "book_id": "rw6",
       "unit_id": "rw6_7",
@@ -14529,7 +14557,8 @@ const ENGLISH_DATA = {
       "chant": "Interested, interested, interested in! Learning new things makes us grin!",
       "compare": "interested (人感到有興趣的，固定搭配 in) vs interesting (事物令人感興趣的)",
       "is_midterm": true,
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": true
     },
     {
       "id": "voc_w12_gra3_16_2",
@@ -14549,7 +14578,8 @@ const ENGLISH_DATA = {
       "chant": "Worried about, worried about, don't you fret! Check the label, you're all set!",
       "compare": "worried about (對某事憂慮) vs afraid of (對某物感到害怕恐懼)",
       "is_midterm": true,
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": true
     },
     {
       "id": "voc_w12_gra3_16_3",
@@ -14569,7 +14599,8 @@ const ENGLISH_DATA = {
       "chant": "Disappointed with, disappointed in, try once more and you will win!",
       "compare": "disappointed with (對物品/結果感到失望) vs disappointed in (對某人的表現失望)",
       "is_midterm": true,
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": true
     },
     {
       "id": "voc_w12_gra3_16_4",
@@ -14589,7 +14620,8 @@ const ENGLISH_DATA = {
       "chant": "Surprised by the facts, surprised by the news, reading food labels gives you clues!",
       "compare": "surprised by (對外在事實感到驚訝) vs amazed by (對神奇卓越的事物驚嘆佩服)",
       "is_midterm": true,
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": true
     },
     {
       "id": "voc_w12_gra3_16_5",
@@ -14609,7 +14641,8 @@ const ENGLISH_DATA = {
       "chant": "Amazed by the wonder, amazed by the skill, that giant chocolate cake gave us a thrill!",
       "compare": "amazed by (讚嘆佩服，程度高於 surprised) vs confused by (困惑不解)",
       "is_midterm": true,
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": true
     },
     {
       "id": "voc_w12_gra3_16_6",
@@ -14629,7 +14662,8 @@ const ENGLISH_DATA = {
       "chant": "Confused by the labels, confused about the rules, read them again to use proper tools!",
       "compare": "confused about (對某件事困惑) vs confused by (被某個外在事物搞糊塗)",
       "is_midterm": true,
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": true
     },
     {
       "id": "voc_w12_gra3_16_7",
@@ -14649,7 +14683,8 @@ const ENGLISH_DATA = {
       "chant": "Sensible, sensible, wise and clear! It is sensible of you to listen, my dear!",
       "compare": "sensible (明智理性的) vs sensitive (敏感的/易受刺激的)",
       "is_midterm": true,
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": true
     },
     {
       "id": "voc_w12_gra3_16_8",
@@ -14669,7 +14704,8 @@ const ENGLISH_DATA = {
       "chant": "Curious about this, curious about that, why did the kitten wear a funny chef hat?",
       "compare": "curious about (對某事好奇) vs interested in (對某事感興趣並願深入投入)",
       "is_midterm": true,
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": true
     },
     {
       "id": "voc_w12_gra3_16_9",
@@ -14689,7 +14725,8 @@ const ENGLISH_DATA = {
       "chant": "Concerned about health, concerned about sweet, eating good veggies is such a nice treat!",
       "compare": "concerned about (關切擔憂某事) vs worried about (更偏向焦慮害怕不安)",
       "is_midterm": true,
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": true
     },
     {
       "id": "voc_w12_gra3_16_10",
@@ -14709,7 +14746,8 @@ const ENGLISH_DATA = {
       "chant": "Chemicals, chemicals, read the can! Choose real food whenever you can!",
       "compare": "chemicals (化學物質) vs natural ingredients (天然食材成分)",
       "is_midterm": true,
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": true
     },
     {
       "id": "voc_w12_gra3_16_11",
@@ -14729,7 +14767,8 @@ const ENGLISH_DATA = {
       "chant": "Ingredients, ingredients, mix them slow! Flour, milk, and eggs make the dough!",
       "compare": "ingredients (食材成分) vs recipe (包含製作步驟與份量的完整食譜)",
       "is_midterm": true,
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": true
     },
     {
       "id": "voc_w12_gra3_16_12",
@@ -14749,7 +14788,8 @@ const ENGLISH_DATA = {
       "chant": "Labels, labels, on the box! Give us the facts from head to socks!",
       "compare": "label (貼在包裝上的資訊標籤) vs sticker (一般的貼紙/玩具貼)",
       "is_midterm": true,
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": true
     },
     {
       "id": "voc_w12_od3_16_1",
@@ -14769,7 +14809,8 @@ const ENGLISH_DATA = {
       "chant": "Gardener, gardener, tends the seeds; watering plants and pulling weeds!",
       "compare": "gardener (園丁) vs farmer (農夫，多指耕種大片農田作物的人)",
       "is_midterm": true,
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": false
     },
     {
       "id": "voc_w12_od3_16_2",
@@ -14789,7 +14830,8 @@ const ENGLISH_DATA = {
       "chant": "Sweet potato, orange and round; growing quietly in the ground!",
       "compare": "sweet potato (地瓜/甘藷) vs potato (馬鈴薯/洋芋)",
       "is_midterm": true,
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": false
     },
     {
       "id": "voc_w12_od3_16_3",
@@ -14809,7 +14851,8 @@ const ENGLISH_DATA = {
       "chant": "Beans on vines, beans in a pot; cook them healthy, eat them hot!",
       "compare": "beans (豆類) vs peas (豌豆，多指小圓形綠色豌豆)",
       "is_midterm": true,
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": false
     },
     {
       "id": "voc_w12_od3_16_4",
@@ -14829,7 +14872,8 @@ const ENGLISH_DATA = {
       "chant": "Climbing vines upon the wall; holding pumpkins green and tall!",
       "compare": "vines (藤蔓) vs branches (硬質樹枝)",
       "is_midterm": true,
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": false
     },
     {
       "id": "voc_w12_od3_16_5",
@@ -14849,7 +14893,8 @@ const ENGLISH_DATA = {
       "chant": "In the garden, green and bright; flowers bloom in summer light!",
       "compare": "garden (花園/菜圃) vs park (公園，多指供公眾休憩運動的大型綠地)",
       "is_midterm": true,
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": false
     },
     {
       "id": "voc_w12_od3_16_6",
@@ -14869,7 +14914,8 @@ const ENGLISH_DATA = {
       "chant": "Golden haze in morning light; street and houses shining bright!",
       "compare": "haze (薄霧/光暈，多指大氣朦朧或金光) vs fog (濃霧，能見度極低)",
       "is_midterm": true,
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": false
     },
     {
       "id": "voc_w12_od3_16_7",
@@ -14889,7 +14935,8 @@ const ENGLISH_DATA = {
       "chant": "Teenagers laugh and teenagers play; painting murals on a sunny day!",
       "compare": "teenagers (13-19歲青少年) vs children (兒童) vs adults (成年人)",
       "is_midterm": true,
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": false
     },
     {
       "id": "voc_w12_od3_16_8",
@@ -14909,7 +14956,8 @@ const ENGLISH_DATA = {
       "chant": "Community helpers, side by side; building gardens far and wide!",
       "compare": "community (社區，強調人際互助) vs society (整個社會，範圍更廣)",
       "is_midterm": true,
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": false
     },
     {
       "id": "voc_w12_od3_16_9",
@@ -14929,7 +14977,8 @@ const ENGLISH_DATA = {
       "chant": "A noisy crowd on the street today; clapping and cheering all the way!",
       "compare": "crowd (人群，強調聚集的一大群人) vs audience (觀眾/聽眾，強調特定表演席)",
       "is_midterm": true,
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": false
     },
     {
       "id": "voc_w12_od3_16_10",
@@ -14949,7 +14998,8 @@ const ENGLISH_DATA = {
       "chant": "Shopping cart rolling down the street; full of tasty things to eat!",
       "compare": "shopping cart (手推車) vs basket (手提籃子)",
       "is_midterm": true,
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": false
     },
     {
       "id": "voc_w12_od3_16_11",
@@ -14969,7 +15019,8 @@ const ENGLISH_DATA = {
       "chant": "Water the seed and watch it grow; green leaves appearing in a row!",
       "compare": "water (動詞澆水，例：She waters the flower) vs water (名詞飲用水，例：a glass of water)",
       "is_midterm": true,
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": false
     },
     {
       "id": "voc_w12_od3_16_12",
@@ -14989,7 +15040,8 @@ const ENGLISH_DATA = {
       "chant": "Curious about the earth and sky; always asking how and why!",
       "compare": "curious (好奇的) vs interested (感興趣的，搭配 in)",
       "is_midterm": true,
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": false
     },
     {
       "id": "voc_w12_od3_16_13",
@@ -15009,7 +15061,8 @@ const ENGLISH_DATA = {
       "chant": "Sunflowers bloom in yellow and gold; the happiest story ever told!",
       "compare": "bloom (指整株或多數花朵盛開綻放) vs blossom (特指果樹開花，如 cherry blossom)",
       "is_midterm": true,
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": false
     },
     {
       "id": "voc_w12_od3_16_14",
@@ -15029,7 +15082,8 @@ const ENGLISH_DATA = {
       "chant": "Empty boxes, empty space; bring some flowers to this place!",
       "compare": "empty (空的，通用日常詞) = vacant (空置無人的，多指房地產或職缺同義詞)",
       "is_midterm": true,
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": false
     },
     {
       "id": "voc_w12_od3_16_15",
@@ -15049,7 +15103,8 @@ const ENGLISH_DATA = {
       "chant": "Vacant lots with trees and seeds; turning empty dirt into lovely greens!",
       "compare": "vacant (強調未被租用、未被佔用) = empty (強調空間內無物)",
       "is_midterm": true,
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": false
     },
     {
       "id": "voc_w12_od3_16_16",
@@ -15069,7 +15124,8 @@ const ENGLISH_DATA = {
       "chant": "Unafraid and standing tall; brave and strong through it all!",
       "compare": "unafraid (不害怕的) = brave (勇敢的)；反義詞為 afraid / fearful",
       "is_midterm": true,
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": false
     },
     {
       "id": "voc_w12_od3_16_17",
@@ -15089,7 +15145,8 @@ const ENGLISH_DATA = {
       "chant": "Mature and ripe, ready to eat; fresh fruit tastes sweet and neat!",
       "compare": "mature (成熟的，可形容動植物與人) = ripe (熟透的，專門形容水果蔬菜熟了)",
       "is_midterm": true,
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": false
     },
     {
       "id": "voc_w12_rw6_9_1",
@@ -15109,7 +15166,8 @@ const ENGLISH_DATA = {
       "chant": "Calm and cool, keep your head; do not panic, think instead!",
       "compare": "calm (內心鎮定冷靜) vs. quiet (環境或人安靜不說話) vs. silent (完全無聲寂靜)",
       "is_midterm": true,
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": false
     },
     {
       "id": "voc_w12_rw6_9_2",
@@ -15129,7 +15187,8 @@ const ENGLISH_DATA = {
       "chant": "Stand up tall, stand up proud; confident and calm, in a crowd!",
       "compare": "confident (充滿自信的，褒義) vs. arrogant (傲慢自大的，貶義)",
       "is_midterm": true,
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": false
     },
     {
       "id": "voc_w12_rw6_9_3",
@@ -15149,7 +15208,8 @@ const ENGLISH_DATA = {
       "chant": "A friendly smile, a friendly wave; kind and polite is how we behave!",
       "compare": "friendly (形容詞：友善的) vs. kindly (副詞/形容詞：慈祥地)；注意 friendly 是形容詞非副詞！",
       "is_midterm": true,
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": false
     },
     {
       "id": "voc_w12_rw6_9_4",
@@ -15169,7 +15229,8 @@ const ENGLISH_DATA = {
       "chant": "Daring and bold, ready to explore; flying to the stars and seeking more!",
       "compare": "daring (大膽且富開創冒險精神) vs. brave (面對危險不退縮) vs. reckless (魯莽不顧後果)",
       "is_midterm": true,
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": false
     },
     {
       "id": "voc_w12_rw6_9_5",
@@ -15189,7 +15250,8 @@ const ENGLISH_DATA = {
       "chant": "Nervous hands, tapping feet; deep breath in, feel your heartbeat!",
       "compare": "nervous (當下的緊張不安) vs. anxious (長期的焦慮擔憂) vs. scared (感到害怕恐懼)",
       "is_midterm": true,
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": false
     },
     {
       "id": "voc_w12_rw6_9_6",
@@ -15209,7 +15271,8 @@ const ENGLISH_DATA = {
       "chant": "Do not be rude, be polite; saying thank you is always right!",
       "compare": "rude (粗魯無禮的) vs. polite (有禮貌的，反義詞) vs. impolite (不禮貌的)",
       "is_midterm": true,
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": false
     },
     {
       "id": "voc_w12_rw6_9_7",
@@ -15229,7 +15292,8 @@ const ENGLISH_DATA = {
       "chant": "A little shy, quiet and mild; a gentle heart in a thoughtful child!",
       "compare": "shy (害羞怕生的，常伴隨不自在) vs. quiet (安靜不多話，但不一定害怕人)",
       "is_midterm": true,
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": false
     },
     {
       "id": "voc_w12_rw6_9_8",
@@ -15249,7 +15313,8 @@ const ENGLISH_DATA = {
       "chant": "Thoughtful and kind, caring each day; helping your friends in every way!",
       "compare": "thoughtful (體貼周到的；若有所思的) vs. considerate (設想周到的) vs. thoughtless (粗心不顧人的，反義詞)",
       "is_midterm": true,
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": false
     },
     {
       "id": "voc_w12_rw6_9_9",
@@ -15269,7 +15334,8 @@ const ENGLISH_DATA = {
       "chant": "Outgoing and bright, talking with cheer; making new friends everywhere near!",
       "compare": "outgoing (外向熱絡好社交) vs. introverted (內向內省的) vs. shy (害羞怕生的)",
       "is_midterm": true,
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": false
     },
     {
       "id": "voc_w12_rw6_9_10",
@@ -15289,7 +15355,8 @@ const ENGLISH_DATA = {
       "chant": "Which one do you prefer? Tea or coffee, him or her?",
       "compare": "prefer A to B (比起 B 更喜歡 A，介系詞用 to！) vs. like A better than B (比較級搭配 than)",
       "is_midterm": true,
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": false
     },
     {
       "id": "voc_w12_rw6_9_11",
@@ -15309,7 +15376,8 @@ const ENGLISH_DATA = {
       "chant": "Serious face, eyes so bright; thinking through both day and night!",
       "compare": "serious (嚴肅認真的) vs. humorous (幽默風趣的，反義詞) vs. playful (愛開玩笑的)",
       "is_midterm": true,
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": false
     },
     {
       "id": "voc_w12_rw6_9_12",
@@ -15329,7 +15397,8 @@ const ENGLISH_DATA = {
       "chant": "Adults guide and lend a hand, helping kids throughout the land!",
       "compare": "adult (正式名詞：成年人) vs. grown-up (日常口語名詞：大人) vs. child (兒童)",
       "is_midterm": true,
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": false
     },
     {
       "id": "voc_w12_rw6_9_13",
@@ -15349,7 +15418,8 @@ const ENGLISH_DATA = {
       "chant": "Individual skills, one by one; playing hard until you have won!",
       "compare": "individual sport (個人運動) vs. team sport (團隊運動)；individual 也可作名詞表示「個人、個體」。",
       "is_midterm": true,
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": false
     },
     {
       "id": "voc_w12_rw6_9_14",
@@ -15369,7 +15439,8 @@ const ENGLISH_DATA = {
       "chant": "Talking nonstop day and night, full of words and full of light!",
       "compare": "nonstop (副詞/形容詞：不間斷地) vs. continuously (副詞：持續不斷地)",
       "is_midterm": true,
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": false
     },
     {
       "id": "voc_w12_rd6_6_1",
@@ -15389,7 +15460,8 @@ const ENGLISH_DATA = {
       "chant": "Big long canal, water deep and wide; boats and ships sail side by side!",
       "compare": "canal (人工開鑿運河) vs river (天然形成的河流)",
       "is_midterm": true,
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": false
     },
     {
       "id": "voc_w12_rd6_6_2",
@@ -15409,7 +15481,8 @@ const ENGLISH_DATA = {
       "chant": "Martians fly and Martians run; visiting Earth under the golden sun!",
       "compare": "Martian (特指火星人) vs alien (泛指一切地外外星人)",
       "is_midterm": true,
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": false
     },
     {
       "id": "voc_w12_rd6_6_3",
@@ -15429,7 +15502,8 @@ const ENGLISH_DATA = {
       "chant": "Bacteria small, bacteria tough; living in rocks where life is rough!",
       "compare": "bacteria (複數動詞用 are) vs bacterium (單數動詞用 is)",
       "is_midterm": true,
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": false
     },
     {
       "id": "voc_w12_rd6_6_4",
@@ -15449,7 +15523,8 @@ const ENGLISH_DATA = {
       "chant": "Under the ground, dark and deep; underground rivers secretly flow and seep!",
       "compare": "underground (地下的) vs underwater (水下的) vs surface (地表的)",
       "is_midterm": true,
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": false
     },
     {
       "id": "voc_w12_rd6_6_5",
@@ -15469,7 +15544,8 @@ const ENGLISH_DATA = {
       "chant": "Liquid water, smooth and clear; brings alive the atmosphere here!",
       "compare": "liquid (液態的) vs solid (固態的，如 ice) vs gas (氣態的，如 vapor)",
       "is_midterm": true,
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": false
     },
     {
       "id": "voc_w12_rd6_6_6",
@@ -15489,7 +15565,8 @@ const ENGLISH_DATA = {
       "chant": "Atmosphere wraps round the planet high; holding clouds across the sky!",
       "compare": "atmosphere (包裹行星的大氣層) vs space (完全真空的外部宇宙空間)",
       "is_midterm": true,
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": false
     },
     {
       "id": "voc_w12_rd6_6_7",
@@ -15509,7 +15586,8 @@ const ENGLISH_DATA = {
       "chant": "Hydrocarbons make the rain; lakes of methane on Titan's plain!",
       "compare": "hydrocarbons (有機碳氫化合物) vs pure water (無機水分子 H2O)",
       "is_midterm": true,
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": false
     },
     {
       "id": "voc_w12_rd6_6_8",
@@ -15529,7 +15607,8 @@ const ENGLISH_DATA = {
       "chant": "Alien, alien in the night; flying saucers shining bright!",
       "compare": "alien (泛指一切地外生命或外星人) vs human (人類)",
       "is_midterm": true,
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": false
     },
     {
       "id": "voc_w12_rd6_6_9",
@@ -15549,7 +15628,8 @@ const ENGLISH_DATA = {
       "chant": "U-F-O in the evening glow; is it a spaceship? We don't know!",
       "compare": "UFO (未確認飛行物，通常為氣球/彗星) vs airplane (普通民航客機)",
       "is_midterm": true,
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": false
     },
     {
       "id": "voc_w12_rd6_6_10",
@@ -15569,7 +15649,8 @@ const ENGLISH_DATA = {
       "chant": "Imagine high, imagine far; imagine life around a star!",
       "compare": "imagine (想像未見之事) vs discover (發現客觀已存在之物)",
       "is_midterm": true,
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": false
     },
     {
       "id": "voc_w12_rd6_6_11",
@@ -15589,7 +15670,8 @@ const ENGLISH_DATA = {
       "chant": "Astronomers look with giant eyes; watching planets in the skies!",
       "compare": "astronomer (天文學家) vs astronaut (太空人) vs astrologer (占星術士)",
       "is_midterm": true,
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": false
     },
     {
       "id": "voc_w12_rd6_6_12",
@@ -15609,7 +15691,8 @@ const ENGLISH_DATA = {
       "chant": "Universe wide, universe deep; millions of secrets it will keep!",
       "compare": "universe (整個宇宙，包容所有星系) vs galaxy (單個星系，如銀河系)",
       "is_midterm": true,
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": false
     },
     {
       "id": "voc_w12_rd6_6_13",
@@ -15629,7 +15712,8 @@ const ENGLISH_DATA = {
       "chant": "Spinning galaxy in the night; billions of stars of silver light!",
       "compare": "galaxy (星系，如 Milky Way) vs solar system (太陽系，僅單一恆星系統)",
       "is_midterm": true,
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": false
     },
     {
       "id": "voc_w12_rd6_6_14",
@@ -15649,7 +15733,8 @@ const ENGLISH_DATA = {
       "chant": "Spacecraft flies beyond the blue; exploring planets strange and new!",
       "compare": "spacecraft (單複數同形：one spacecraft, two spacecraft) vs airplane (普通大氣內飛機)",
       "is_midterm": true,
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": false
     },
     {
       "id": "voc_w12_wr3_6_1",
@@ -15669,7 +15754,8 @@ const ENGLISH_DATA = {
       "chant": "Inventor, inventor, make new things! Light the dark and joy it brings!",
       "compare": "inventor (發明家 - 創造新事物) vs discoverer (發現者 - 找出本已存在的事物)",
       "is_midterm": true,
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": true
     },
     {
       "id": "voc_w12_wr3_6_2",
@@ -15689,7 +15775,8 @@ const ENGLISH_DATA = {
       "chant": "Composer, composer, notes in a row, making beautiful music flow!",
       "compare": "composer (作曲家 - 創作音符) vs conductor (指揮家 - 指揮樂團演出)",
       "is_midterm": true,
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": true
     },
     {
       "id": "voc_w12_wr3_6_3",
@@ -15709,7 +15796,8 @@ const ENGLISH_DATA = {
       "chant": "Scientist, scientist, searching high and low, finding facts we want to know!",
       "compare": "scientist (科學家 - 研究理論規律) vs engineer (工程師 - 應用技術建造)",
       "is_midterm": true,
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": true
     },
     {
       "id": "voc_w12_wr3_6_4",
@@ -15729,7 +15817,8 @@ const ENGLISH_DATA = {
       "chant": "Political leader, standing tall and strong, helping the nation all along!",
       "compare": "political leader (政治領袖 - 治國領導) vs president (總統 - 國家元首具體職稱)",
       "is_midterm": true,
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": true
     },
     {
       "id": "voc_w12_wr3_6_5",
@@ -15749,7 +15838,8 @@ const ENGLISH_DATA = {
       "chant": "Philosopher, philosopher, thinking deep and bright, searching for the truth and light!",
       "compare": "philosopher (哲學家 - 思索本質與智慧) vs psychologist (心理學家 - 研究行為與心智)",
       "is_midterm": true,
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": true
     },
     {
       "id": "voc_w12_wr3_6_6",
@@ -15769,7 +15859,8 @@ const ENGLISH_DATA = {
       "chant": "Admire, admire, look up with respect! Great deeds and courage we protect!",
       "compare": "admire (欽佩 - 帶著敬意與肯定) vs respect (尊敬 - 禮貌與遵循規矩)",
       "is_midterm": true,
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": true
     },
     {
       "id": "voc_w12_wr3_6_7",
@@ -15789,7 +15880,8 @@ const ENGLISH_DATA = {
       "chant": "Discovery, discovery, hidden in the ground, open up your eyes and truth is found!",
       "compare": "discovery (發現 - 本來存在被找到) vs invention (發明 - 本來不存在被創造)",
       "is_midterm": true,
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": true
     },
     {
       "id": "voc_w12_wr3_6_8",
@@ -15809,7 +15901,8 @@ const ENGLISH_DATA = {
       "chant": "Composition, note by note, finest melody ever wrote!",
       "compare": "composition (樂曲/作文 - 完整作品) vs song (歌曲 - 通常含人聲歌唱)",
       "is_midterm": true,
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": true
     },
     {
       "id": "voc_w12_wr3_6_9",
@@ -15829,7 +15922,8 @@ const ENGLISH_DATA = {
       "chant": "Accomplishment, work done right, shining like a trophy bright!",
       "compare": "accomplishment (成就 - 歷經艱辛達成的壯舉) vs success (成功 - 廣泛的順利成果)",
       "is_midterm": true,
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": true
     },
     {
       "id": "voc_w12_wr3_6_10",
@@ -15849,7 +15943,8 @@ const ENGLISH_DATA = {
       "chant": "Disability cannot hold us down, courage earns the golden crown!",
       "compare": "disability (身體機能障礙) vs illness (短期生病、疾病)",
       "is_midterm": true,
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": true
     },
     {
       "id": "voc_w12_wr3_6_11",
@@ -15869,7 +15964,8 @@ const ENGLISH_DATA = {
       "chant": "Gravity pulls, what goes up comes down, keeping our feet upon the ground!",
       "compare": "gravity (重力/引力) vs weight (重量 - 受引力作用測量出的質量重量)",
       "is_midterm": true,
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": true
     },
     {
       "id": "voc_w12_wr3_6_12",
@@ -15889,7 +15985,8 @@ const ENGLISH_DATA = {
       "chant": "Symphony sounds, loud and clear, sweetest music you can hear!",
       "compare": "symphony (交響曲 - 大型管弦多樂章) vs concerto (協奏曲 - 獨奏樂器與樂團對應)",
       "is_midterm": true,
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": true
     },
     {
       "id": "voc_w12_wr3_6_13",
@@ -15909,7 +16006,8 @@ const ENGLISH_DATA = {
       "chant": "Never give up, keep trying every day, brighter tomorrow is on the way!",
       "compare": "give up on (放棄某人或夢想希望) vs give in (向強權或壓力屈服)",
       "is_midterm": true,
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": true
     },
     {
       "id": "voc_w12_wr3_6_14",
@@ -15929,7 +16027,302 @@ const ENGLISH_DATA = {
       "chant": "Cause and consequence, hand in hand, reason and result across the land!",
       "compare": "consequence (因果結果/影響) vs cause (起因/理由)",
       "is_midterm": true,
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": true
+    },
+    {
+      "id": "voc_w13_rw6_6_1",
+      "book_id": "rw6",
+      "unit_id": "rw6_6",
+      "word": "orienteering",
+      "ipa": "/ˌɔːriənˈtɪərɪŋ/",
+      "pos": "名詞 (Noun)",
+      "chi": "定向越野運動",
+      "breakdown": "orient(東方、定位方向) + -eer(從事…者) + -ing(運動名稱字尾) -> 尋找方向的戶外競技",
+      "trick": "拆記 orient(定方向) + eering(雙 ee 像兩隻眼睛盯著地圖) -> 邊看地圖邊跑的「定向越野」！",
+      "scene": "選手手持指北針與地形圖，在樹林、溪畔與岩石間高速奔跑尋找紅白旗幟。",
+      "collocation": "the sport of orienteering (定向越野運動), orienteering race (定向越野賽), orienteering map (定向地圖)",
+      "img": "🏃",
+      "context_eng": "Instead of running down a marked road, you run around in the woods. Welcome to orienteering!",
+      "context_chi": "在定向越野這項運動中，選手必須找到所有控制點才能獲勝。",
+      "chant": "Map in hand, compass bright; orienteering feels just right!",
+      "compare": "orienteering (須自行導航打卡的野外賽) vs. marathon (沿固定標線道路奔跑的馬拉松)",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": true
+    },
+    {
+      "id": "voc_w13_rw6_6_2",
+      "book_id": "rw6",
+      "unit_id": "rw6_6",
+      "word": "compass",
+      "ipa": "/ˈkʌmpəs/",
+      "pos": "名詞 (Noun)",
+      "chi": "指南針；指北針；圓規",
+      "breakdown": "com-(一起) + pass(步伐、圓周跨度) -> 量測方位圓周的工具",
+      "trick": "諧音「看北司」-> 迷路時看它就能找出北方！字中只有 com + pass，絕不加 e！",
+      "scene": "站在沒有路標的森林深處，手上的磁針穩穩指向北方，指引前進路線。",
+      "collocation": "a map and a compass (地圖與指南針), magnetic compass (磁力指南針), use a compass (使用指南針)",
+      "img": "🧭",
+      "context_eng": "Instead of directions, you have only a map and a compass.",
+      "context_chi": "你仍然必須使用指南針來找到終點線！",
+      "chant": "North, south, east, and west; my little compass knows the best!",
+      "compare": "compass (指示方向的指南針；單數) vs. compasses (複數形須加 -es)",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": true
+    },
+    {
+      "id": "voc_w13_rw6_6_3",
+      "book_id": "rw6",
+      "unit_id": "rw6_6",
+      "word": "control",
+      "ipa": "/kənˈtrəʊl/",
+      "pos": "名詞 (Noun) / 動詞 (Verb)",
+      "chi": "控制點（定向運動檢查站）；控制",
+      "breakdown": "contra-(對照) + roll(名冊捲軸) -> 原指核對名冊的檢查站",
+      "trick": "拆記 con(一起) + trol(檢查捲軸) -> 每個檢查站「控制」你的路線有沒有作弊漏跑！",
+      "scene": "大樹背後掛著一面亮眼的紅白三角旗，旁邊附有可以幫卡片壓印記號的打卡器。",
+      "collocation": "control flag (控制點旗幟), control card (控制卡), miss a control (漏掉一個檢查點)",
+      "img": "🚩",
+      "context_eng": "In the sport of orienteering, racers use a map and compass to find stations, which are called controls.",
+      "context_chi": "在每一個控制點，選手都會在隨身攜帶的卡片上做記號。",
+      "chant": "Find the flag, punch the card; every control makes you work hard!",
+      "compare": "station (一般車站或站點) vs. control (定向越野專用的檢查打卡點)",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": true
+    },
+    {
+      "id": "voc_w13_rw6_6_4",
+      "book_id": "rw6",
+      "unit_id": "rw6_6",
+      "word": "direction",
+      "ipa": "/dəˈrekʃn/",
+      "pos": "名詞 (Noun)",
+      "chi": "方向；路線指引（常用複數）",
+      "breakdown": "di-(分開/引導) + rect-(直的、引導) + -ion(名詞字尾) -> 引導你走直路的方位說明",
+      "trick": "拆記 direct(直接指引) + ion(名詞) -> 告訴你怎麼走的「方向指引」，複數直接加 -s！",
+      "scene": "在陌生城市問路時，路人伸手指引你往北走兩個街區再左轉的指示。",
+      "collocation": "ask for directions (問路), follow directions (依照指示), from all directions (從四面八方)",
+      "img": "🪧",
+      "context_eng": "Instead of directions, you have only a map and a compass.",
+      "context_chi": "控制點的設置讓你無法輕易從四面八方一眼看見。",
+      "chant": "Left or right, north or south; follow directions from someone's mouth!",
+      "compare": "direction (單數：某一個方向) vs. directions (複數：指路說明、操作指示)",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": true
+    },
+    {
+      "id": "voc_w13_rw6_6_5",
+      "book_id": "rw6",
+      "unit_id": "rw6_6",
+      "word": "corner",
+      "ipa": "/ˈkɔːnə(r)/",
+      "pos": "名詞 (Noun)",
+      "chi": "街角；轉角處；角落",
+      "breakdown": "源自拉丁語 cornu (動物的角、尖角) -> 兩條線交會形成尖角的地方",
+      "trick": "諧音「扣呢」-> 兩條馬路「扣」在一起的尖角處，就是街角 (corner)！",
+      "scene": "站在十字路口的轉角人行道上，一邊看著街牌一邊向路人打聽書店位置。",
+      "collocation": "on a corner (在街角), around the corner (就在轉角處/即將來臨), north corner (北邊角落)",
+      "img": "🏙️",
+      "context_eng": "Standing on a corner, you ask someone how to get to a store.",
+      "context_chi": "從鞦韆區的北邊角落出發，然後往東走 50 步。",
+      "chant": "Turn the corner, look around; soon the bookstore will be found!",
+      "compare": "on the corner (在戶外街道轉角) vs. in the corner (在室內房間角落)",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": true
+    },
+    {
+      "id": "voc_w13_rw6_6_6",
+      "book_id": "rw6",
+      "unit_id": "rw6_6",
+      "word": "woods",
+      "ipa": "/wʊdz/",
+      "pos": "名詞 (Noun，恆用複數)",
+      "chi": "樹林；森林",
+      "breakdown": "wood(木材、樹木) + -s(集合複數) -> 許多樹木聚集在一起的樹林",
+      "trick": "一根木頭叫 wood（不可數：木材），一大堆樹湊成複數 woods 就變成「樹林」！",
+      "scene": "陽光透過高大的樹冠灑落林間小徑，定向越野選手在樹幹之間快速奔跑。",
+      "collocation": "in the woods (在樹林裡), out of the woods (脫離險境), walk through the woods (穿過樹林)",
+      "img": "🌲",
+      "context_eng": "Instead of running down a marked road, you run around in the woods.",
+      "context_chi": "控制點旗幟經常隱藏在樹林裡的大樹後方。",
+      "chant": "Out of the city, into the woods; nature and running feel so good!",
+      "compare": "wood (不可數：木頭材料) vs. woods (恆複數：樹林) vs. forest (面積廣大的大森林)",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": true
+    },
+    {
+      "id": "voc_w13_rw6_6_7",
+      "book_id": "rw6",
+      "unit_id": "rw6_6",
+      "word": "finish line",
+      "ipa": "/ˈfɪnɪʃ laɪn/",
+      "pos": "名詞片語 (Noun Phrase)",
+      "chi": "終點線",
+      "breakdown": "finish(完成、結束) + line(線條) -> 標誌比賽結束的那一條線",
+      "trick": "finish(完成) + line(線) -> 只要越過這條線，比賽就「完成」了！",
+      "scene": "衝出樹林看見遠處拉起的終點布條，手中卻還得先確認卡片 18 格是否全部打滿。",
+      "collocation": "cross the finish line (衝過終點線), reach the finish line (抵達終點線), starting line (起跑線)",
+      "img": "🏁",
+      "context_eng": "They might cross the finish line first, but the next person to finish with a full card will win the race.",
+      "context_chi": "而且，在歷經這一切之後，你仍然必須使用指南針來找到終點線！",
+      "chant": "Check your card, run with pride; cross the finish line in stride!",
+      "compare": "starting line (起跑線) vs. finish line (終點線)；cross the finish line 動詞 cross 前不加介系詞。",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": true
+    },
+    {
+      "id": "voc_w13_rw6_6_8",
+      "book_id": "rw6",
+      "unit_id": "rw6_6",
+      "word": "across the street",
+      "ipa": "/əˈkrɒs ðə striːt/",
+      "pos": "介系詞片語 (Prepositional Phrase)",
+      "chi": "在街對面；穿越馬路到對街",
+      "breakdown": "across(從這一邊橫越到那一邊，介系詞) + the street(街道)",
+      "trick": "a + cross = 「跨在對面」！across 是介系詞，前面一定要有 be 動詞或動作動詞（如 walk across）！",
+      "scene": "向北走兩個街區並左轉後，一抬頭就看見書店正好位在馬路的對面。",
+      "collocation": "across the street from (在…的對街), live across the street (住在對街), run across the street (跑過馬路)",
+      "img": "🏬",
+      "context_eng": "They tell you to \"go two blocks north, turn left, and you'll be across the street from the bookstore.\"",
+      "context_chi": "巴亞尼住在公園的對街。",
+      "chant": "Across the street, on the other side; walk with care and look both sides!",
+      "compare": "across (介系詞：在對面/橫越，不能單獨當動詞) vs. cross (動詞：穿越，如 cross the street)",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": true
+    },
+    {
+      "id": "voc_w13_rw6_6_9",
+      "book_id": "rw6",
+      "unit_id": "rw6_6",
+      "word": "in front of",
+      "ipa": "/ɪn frʌnt əv/",
+      "pos": "複合介系詞 (Prepositional Phrase)",
+      "chi": "在…的前方（外部前面）",
+      "breakdown": "in(在) + front(前面) + of(…的) -> 在某物的正面外部",
+      "trick": "front 就是「前門、正面」，加上 in...of 就構成「在…的正前方」，反義詞就是 behind！",
+      "scene": "控制旗幟就立在一塊巨大岩石的正面前方，從岩石背後走過來的人完全看不到它。",
+      "collocation": "in front of a big rock (在大岩石前方), stand in front of (站在…前面), right in front of (就在…正前方)",
+      "img": "🪨",
+      "context_eng": "They may be in front of a big rock or behind a tree.",
+      "context_chi": "控制點旗幟就放置在一塊大岩石的正前方。",
+      "chant": "In front of the rock, behind the tree; look carefully so you can see!",
+      "compare": "in front of (在某物體外部的前面) vs. in the front of (在某空間內部的前排，如教室前排)",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": true
+    },
+    {
+      "id": "voc_w13_rw6_6_10",
+      "book_id": "rw6",
+      "unit_id": "rw6_6",
+      "word": "go two blocks north",
+      "ipa": "/ɡəʊ tuː blɒks nɔːθ/",
+      "pos": "動詞片語 (Verb Phrase)",
+      "chi": "向北走兩個街區",
+      "breakdown": "go(走) + two blocks(兩個街區距離) + north(向北副詞) -> 移動這麼遠的距離",
+      "trick": "block 是四條馬路圍成的方塊「街區」，go two blocks 就是「往前移動兩個方塊的距離」！",
+      "scene": "站在街角打開手機或詢問路人時，對方給出明確的街區數與東西南北方位。",
+      "collocation": "go two blocks north (向北走兩個街區), walk three blocks east (向東走三個街區), turn left (向左轉)",
+      "img": "🧭",
+      "context_eng": "They tell you to \"go two blocks north, turn left, and you'll be across the street from the bookstore.\"",
+      "context_chi": "向北走兩個街區，然後在轉角左轉就能找到那間商店。",
+      "chant": "Two blocks north, then turn left; finding your way is a skill that's deft!",
+      "compare": "go two blocks (移動距離) vs. turn left (改變方向)；課本 Context Clues 定義為 move this far。",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": true
+    },
+    {
+      "id": "voc_w13_rw6_6_11",
+      "book_id": "rw6",
+      "unit_id": "rw6_6",
+      "word": "along a river",
+      "ipa": "/əˈlɒŋ ə ˈrɪvə(r)/",
+      "pos": "介系詞片語 (Prepositional Phrase)",
+      "chi": "沿著一條河流",
+      "breakdown": "a-(在…狀態) + long(長的) -> 順著一條長長的線條邊緣移動",
+      "trick": "a + long(長長的) -> 順著「長長的」河岸或馬路一直跑，就是「沿著 (along)」！",
+      "scene": "定向越野選手順著清澈溪流的岸邊小徑加速奔跑，不偏離水岸線。",
+      "collocation": "run along a river (沿著河流奔跑), walk along the beach (沿著海灘散步), trees along the road (路旁的樹木)",
+      "img": "🏞️",
+      "context_eng": "In orienteering, you will likely run along a river, climb over rocks, and go up and down hills.",
+      "context_chi": "參賽者在進入森林之前必須先沿著一條河流奔跑。",
+      "chant": "Run along the river, splash and dash; keep your map dry from every splash!",
+      "compare": "along (順著邊緣平行移動) vs. across (從一邊橫渡到對岸)",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": true
+    },
+    {
+      "id": "voc_w13_rw6_6_12",
+      "book_id": "rw6",
+      "unit_id": "rw6_6",
+      "word": "climb over rocks",
+      "ipa": "/klaɪm ˈəʊvə(r) rɒks/",
+      "pos": "動詞片語 (Verb Phrase)",
+      "chi": "爬過岩石；翻越石塊",
+      "breakdown": "climb(攀爬，b 不發音) + over(從上方越過) + rocks(岩石)",
+      "trick": "climb 字尾的 b 躲在後面不發音！over 像一道彩虹弧線，表示從石頭「上方翻越過去」！",
+      "scene": "野外路徑被幾塊巨石擋住去路，選手踩穩腳步翻越岩石繼續前進。",
+      "collocation": "climb over rocks (翻越岩石), climb over a fence (翻過圍籬), climb up a mountain (爬上高山)",
+      "img": "🧗",
+      "context_eng": "In orienteering, you will likely run along a river, climb over rocks, and go up and down hills.",
+      "context_chi": "你必須小心地爬過岩石，才不會扭傷腳踝。",
+      "chant": "Climb over rocks, step by step; steady and strong, full of pep!",
+      "compare": "climb over (從障礙物上方翻越) vs. go through (從隧道或樹叢內部穿過)",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": true
+    },
+    {
+      "id": "voc_w13_rw6_6_13",
+      "book_id": "rw6",
+      "unit_id": "rw6_6",
+      "word": "up and down hills",
+      "ipa": "/ʌp ənd daʊn hɪlz/",
+      "pos": "介系詞片語 (Prepositional Phrase)",
+      "chi": "在山丘間上下起伏穿梭",
+      "breakdown": "up(向上) + and + down(向下) + hills(小山丘)",
+      "trick": "畫一條波浪線：先 up 再 down，跑過連綿的小山丘 (hills)，超級考驗體力！",
+      "scene": "定向越野賽道並非平坦操場，選手必須翻過一個山坡又衝下另一個山谷。",
+      "collocation": "go up and down hills (在山丘上下穿梭), jump up and down (跳上跳下), run up the hill (跑上山坡)",
+      "img": "⛰️",
+      "context_eng": "In orienteering, you will likely run along a river, climb over rocks, and go up and down hills.",
+      "context_chi": "在山丘間上下奔跑讓定向越野比城市路跑困難許多。",
+      "chant": "Up the hill and down again; orienteering tests every friend!",
+      "compare": "hill (海拔較低、坡度較緩的小山丘) vs. mountain (高大陡峭的高山)",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": true
+    },
+    {
+      "id": "voc_w13_rw6_6_14",
+      "book_id": "rw6",
+      "unit_id": "rw6_6",
+      "word": "visual",
+      "ipa": "/ˈvɪʒuəl/",
+      "pos": "名詞 (Noun) / 形容詞 (Adjective)",
+      "chi": "視覺圖表（圖片、圖示、地圖）；視覺的",
+      "breakdown": "vis-(看見，同 vision) + -ual(與…相關的) -> 用眼睛觀看理解的圖像資料",
+      "trick": "vis 就是「視力、看 (vision)」，在課文中 visuals 就是「讓你用眼睛看懂更多細節的圖表」！",
+      "scene": "課文只寫每個控制點有旗幟與卡片，看 Figure 1 和 Figure 2 才知道旗子是紅白色且卡片有 18 格！",
+      "collocation": "use visuals (運用圖像), visual details (視覺細節), visual information (圖像資訊)",
+      "img": "🖼️",
+      "context_eng": "Pictures, diagrams, and maps are visuals. Visuals provide information that is not in a text.",
+      "context_chi": "閱讀時，觀察視覺圖表能幫助你更深入了解文章中的概念。",
+      "chant": "Pictures, diagrams, maps so clear; visuals tell us what's not written here!",
+      "compare": "visual (統稱各類視覺圖像) vs. text (純文字內容)；兩者是互補而非單純重複！",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": true
     }
   ],
   "grammar": [
@@ -17006,33 +17399,6 @@ const ENGLISH_DATA = {
       ]
     },
     {
-      "id": "gra_m601",
-      "book_id": "rw6",
-      "unit_id": "rw6_6",
-      "rule_title": "Reading Strategy: Use Visuals & Orienteering Rules (善用視覺圖表與定向越野致勝規則) 🚩",
-      "eng_exp": "Pictures, diagrams, and maps are visuals. Visuals provide extra information that is NOT in the text! In 'The World of Orienteering', Figure 1 shows the red-and-white flag, and Figure 2 shows the control card has 18 controls. To win, a racer MUST find and mark ALL controls (a full card)!",
-      "chi_exp": "【閱讀與是非題兩大魔王陷阱】\n⚠️ 陷阱 1：課本是非題問『A visual gives the same information that is in a text.』答案是 **FALSE (錯)**！因為視覺圖表提供的是「正文中沒寫出的額外補充資訊（例如從 Figure 2 才知道控制卡共有 18 格）」！\n⚠️ 陷阱 2：課本是非題問『You must finish first to win an orienteering event.』答案是 **FALSE (錯)**！因為如果漏掉任何一個控制點 (misses a control)，就算第一個衝過終點線也不算贏，必須是「打滿全卡所有控制點 (with a full card)」最快完成的人才會贏！",
-      "examples": [
-        "Visual Clue 1: Figure 1 shows a bright red-and-white control flag hanging behind a tree. (圖 1 顯示紅白相間的控制旗。)",
-        "Visual Clue 2: Looking at Figure 2 (Orienteering Control Card), we can see there are 18 controls in total. (從圖 2 可讀出共有 18 個控制點。)",
-        "Winning Rule: They might cross the finish line first, but the next person to finish with a full card will win the race! (打滿全卡者才獲勝！)",
-        "Gear Rule: Racers must use BOTH a map and a compass (not only a compass) to find controls and the finish line. (必須同時使用地圖與指北針。)"
-      ]
-    },
-    {
-      "id": "gra_m602",
-      "book_id": "rw6",
-      "unit_id": "rw6_6",
-      "rule_title": "Context Clues & Prepositions of Terrain (上下文詞義推論與地形方位介系詞) 🏞️",
-      "eng_exp": "Master the difference between urban directions (standing on a corner, go two blocks north, across the street from, cross the street) and outdoor terrain navigation (in front of a rock, behind a tree, run along a river, climb over rocks, go up and down hills).",
-      "chi_exp": "【岱崙 W4 考卷扣分陷阱與課本英英定義】\n1. ⚠️ `in front of`（在...正前方）：三個字必須分開寫，且是單 f 的 `of`（千萬別像小考寫成 `infront off` ❌）！\n2. 課本 p.43 必考 4 大英英同義配對：\n   • `corner` = a place where two roads meet（兩條路交會處）\n   • `go two blocks` = move this far（移動這麼遠的街區距離）\n   • `across the street from` = on the other side（在馬路對面）\n   • `cross the street` = go to the other side（穿越馬路走到對面去）",
-      "examples": [
-        "Go two blocks north, turn left, and you'll be across the street from the bookstore. (往北走兩個街區左轉，就在書店對街。)",
-        "Controls may be in front of a big rock or behind a tree. (控制點可能在巨石前或大樹後。)",
-        "You will likely run along a river, climb over rocks, and go up and down hills. (沿著河跑、爬過岩石、上下山丘。)"
-      ]
-    },
-    {
       "id": "gra_m701",
       "book_id": "rw6",
       "unit_id": "rw6_7",
@@ -17170,7 +17536,8 @@ const ENGLISH_DATA = {
         }
       ],
       "trap": "受中文直譯「關於...感到驚訝」影響，常誤寫成 surprised about 或 surprised of。課本標準用法必為 surprised by / at！",
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": true
     },
     {
       "id": "odg3_u16_g02",
@@ -17254,7 +17621,8 @@ const ENGLISH_DATA = {
         }
       ],
       "trap": "最致命的大考陷阱！學生常看見 It is easy for me，就誤以為所有 It is adj 都要接 for。記住：形容事物性質難易用 for；評價人的性格智慧用 of！",
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": true
     },
     {
       "id": "odg3_u16_g03",
@@ -17357,7 +17725,8 @@ const ENGLISH_DATA = {
         }
       ],
       "trap": "中文「在...方面很棒」常誤寫成 good in；「關於...很有名」常誤寫成 famous about。切記：能力用 at，名氣用 for，充滿用 of！",
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": true
     },
     {
       "id": "odg3_u16_g04",
@@ -17431,7 +17800,8 @@ const ENGLISH_DATA = {
         }
       ],
       "trap": "兩大段考扣分黑洞：(1) 介系詞後忘記動詞加 -ing；(2) 看到動名詞後面接複數著名詞（如 food labels / chemicals），就誤用複數動詞 are，記住主詞是動名詞本身，動詞必用單數！",
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": true
     },
     {
       "id": "OD3_U16_G1",
@@ -17511,7 +17881,8 @@ const ENGLISH_DATA = {
         }
       ],
       "trap": "受中文直譯「對...感到好奇/滿意」影響，學生最常把所有介系詞通通誤寫為 to 或 at。務必牢記：curious about, surprised at/by, happy with, proud of, full of！",
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": false
     },
     {
       "id": "OD3_U16_G2",
@@ -17587,7 +17958,8 @@ const ENGLISH_DATA = {
         }
       ],
       "trap": "段考同義字大題最容易誤選反義字（Antonyms，如把 empty 選成 crowded，或把 unafraid 選成 fearful）。作答時務必看清題目是要求「同義字 (Synonym)」還是「反義字 (Antonym)」！",
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": false
     },
     {
       "id": "OD3_U16_G3",
@@ -17658,7 +18030,8 @@ const ENGLISH_DATA = {
         }
       ],
       "trap": "中文常說「長在地上」，學生常不假思索寫 on the ground。地瓜與胡蘿蔔是地下根，在土壤「內部」，英文絕對必須使用 in the ground！",
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": false
     },
     {
       "id": "RWW6_U09_G1",
@@ -17739,7 +18112,8 @@ const ENGLISH_DATA = {
         }
       ],
       "trap": "切勿只看單一表面舉止就武斷下結論。例如 Rayyan 說 Nora 是「害羞的 (shy)」，但堂姊 Irdina 卻指出她是「安靜但有自信 (quiet, but confident)」；讀者必須綜合全篇線索進行交叉比對。",
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": false
     },
     {
       "id": "RWW6_U09_G2",
@@ -17811,7 +18185,8 @@ const ENGLISH_DATA = {
         }
       ],
       "trap": "三大高頻盲點：1. prefer 誤接 than（受中文「比起…」干擾）；2. mean to be 後面誤接副詞 rudely（be 動詞後應接形容詞 rude）；3. prefer 在第三人稱單數時忘記加 s（He prefers...）。",
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": false
     },
     {
       "id": "RWW6_U09_G3",
@@ -17888,7 +18263,8 @@ const ENGLISH_DATA = {
         }
       ],
       "trap": "be being + Adj. 只能用於人類「可以自主意志控制的言行」（如 friendly, rude, polite, silly），絕不能用於無法控制的客觀狀態（如不可說 He is being tall 或 She is being young）。虛主詞 It is rude/polite 後方必須接 to + 原形動詞。",
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": false
     },
     {
       "id": "space_ch06_g01",
@@ -17956,7 +18332,8 @@ const ENGLISH_DATA = {
         }
       ],
       "trap": "台灣學生最容易在 could / might 後方誤加 to（如 could to have）或誤用動名詞 being；此外常混淆副詞 Maybe 與動詞片語 may be。",
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": false
     },
     {
       "id": "space_ch06_g02",
@@ -18025,7 +18402,8 @@ const ENGLISH_DATA = {
         }
       ],
       "trap": "學生常在 too... to... 句型中誤加 not 形成雙重否定語病（如 too cold not to have），或在 to 後方誤填動名詞；需牢記 too... to... 本身即代表否定意涵。",
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": false
     },
     {
       "id": "space_ch06_g03",
@@ -18094,7 +18472,8 @@ const ENGLISH_DATA = {
         }
       ],
       "trap": "分詞修飾時最忌諱加上 be 動詞變成雙動詞（chemicals are called hydrocarbons）；此外受中文直譯影響，常將 be covered in 誤寫成 covered at 或 covered by。",
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": false
     },
     {
       "id": "WR3_U06_G01",
@@ -18173,7 +18552,8 @@ const ENGLISH_DATA = {
         }
       ],
       "trap": "中文常說「他 1847 年出生」，學生容易把 born 誤當成動詞而寫出 \"He born in 1847\"；或將年份介系詞誤寫為 on (was born on 1847)。務必牢記 was born in + 年份！",
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": true
     },
     {
       "id": "WR3_U06_G02",
@@ -18253,7 +18633,8 @@ const ENGLISH_DATA = {
         }
       ],
       "trap": "學生極常受日常口語「Thank you for your help」影響而誤寫出 \"Thanks for Edison\"；或在 Because 子句後重複寫出 so。記住：歸功於某人必用 Thanks to + 名詞！",
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": true
     },
     {
       "id": "WR3_U06_G03",
@@ -18332,7 +18713,8 @@ const ENGLISH_DATA = {
         }
       ],
       "trap": "大考最常見致命陷阱：在 \"one of the greatest...\" 後面漏寫名詞複數 s (誤寫 one of the greatest inventor)；以及在 His most famous invention 後方誤填 are！",
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": true
     },
     {
       "id": "WR3_U06_G04",
@@ -18414,7 +18796,230 @@ const ENGLISH_DATA = {
         }
       ],
       "trap": "學生最常在 because 子句中忘記轉過去式動詞 (寫成 never give up 或 never complain)；以及將 For these reasons 的 reasons 漏寫複數 s！",
-      "is_week12": true
+      "is_week12": true,
+      "is_week13": true
+    },
+    {
+      "id": "RWW6_U06_G1",
+      "book_id": "rw6",
+      "unit_id": "rw6_6",
+      "rule_title": "Spatial Prepositions & Movement Commands (方位介系詞與地形移動指令)",
+      "eng_exp": "Use precise spatial prepositions to describe static positions (in front of a big rock, behind a tree, across the street from the bookstore) and dynamic movement across terrains (go two blocks north, cross the street, run along a river, climb over rocks, go up and down hills). Be careful not to confuse the verb 'cross' with the preposition 'across'.",
+      "chi_exp": "本課整合「靜態位置介系詞」與「動態移動片語」。靜態位置用 `in front of`（外部前方）、`behind`（後方）、`across the street from`（在…對街）；動態路徑用 `run along`（沿著線性邊緣）、`climb over`（從上方翻越）、`go up and down`（上下起伏）以及城市指路 `go two blocks north`（向北走兩個街區）。最常考的文法陷阱是動詞 `cross` 與介系詞 `across` 的詞性切換！",
+      "formula": "靜態位置: be + in front of / behind / across the street from + N | 動態路徑: V + along / over / up and down + 地形名詞",
+      "intro": "",
+      "categories": [
+        {
+          "label": "靜態相對位置 (Static Positions)",
+          "items": [
+            "be across the street from the bookstore",
+            "in front of a big rock",
+            "behind a tree",
+            "standing on a corner"
+          ],
+          "note": "across 是介系詞，前面通常有 be 動詞或位置動詞"
+        },
+        {
+          "label": "城市街道指令 (Urban Directions)",
+          "items": [
+            "go two blocks north",
+            "turn left at the corner",
+            "cross the street to the finish line"
+          ],
+          "note": "cross 是及物動詞，後面直接接受詞 the street，不加介系詞"
+        },
+        {
+          "label": "戶外地形移動 (Outdoor Terrain Movement)",
+          "items": [
+            "run along a river (沿著河流)",
+            "climb over rocks (翻越岩石)",
+            "go up and down hills (在山丘間上下穿梭)"
+          ],
+          "note": "三個片語精準對應水平線性、垂直翻越與起伏地形"
+        }
+      ],
+      "pitfalls": [
+        {
+          "wrong": "You might only need to across the street to get to the finish line.",
+          "right": "You might only need to cross the street to get to the finish line.",
+          "tip": "不定詞 to 後面必須接原形動詞 cross！across 是介系詞，不能接在 need to 後面當動詞用。"
+        },
+        {
+          "wrong": "You will be cross the street from the bookstore.",
+          "right": "You will be across the street from the bookstore.",
+          "tip": "be 動詞後面要表示「在對街」的位置狀態，必須用介系詞 across，不可寫成動詞 cross！"
+        },
+        {
+          "wrong": "In orienteering, runners run alone a river in the woods.",
+          "right": "In orienteering, runners run along a river in the woods.",
+          "tip": "along 是「沿著」，alone 是「孤單獨自」，拼寫一字之差語意完全不同！"
+        }
+      ],
+      "examples": [
+        {
+          "en": "Go two blocks north, turn left, and you'll be across the street from the bookstore.",
+          "zh": "向北走兩個街區、左轉，你就會來到書店的對街。",
+          "highlight": "across the street from"
+        },
+        {
+          "en": "Controls may be in front of a big rock or behind a tree.",
+          "zh": "控制點可能位在大岩石前方或大樹後方。",
+          "highlight": "in front of ... behind"
+        },
+        {
+          "en": "In orienteering, you will likely run along a river, climb over rocks, and go up and down hills.",
+          "zh": "在定向越野中，你很可能會沿著河流奔跑、翻越岩石，並在山丘間上下穿梭。",
+          "highlight": "along a river, climb over rocks, and go up and down hills"
+        }
+      ],
+      "trap": "考試必考詞性陷阱：`need to cross the street`（to 後接動詞 cross）vs. `be across the street`（be 後接介系詞 across）。另外注意 `along`（沿著）勿誤拼為 `alone`（獨自）。",
+      "is_week12": false,
+      "is_week13": true
+    },
+    {
+      "id": "RWW6_U06_G2",
+      "book_id": "rw6",
+      "unit_id": "rw6_6",
+      "rule_title": "Non-defining Relative Clauses (, which...) & Conditional Winning Rules (非限定關係子句與條件勝負句)",
+      "eng_exp": "In informational writing, a comma followed by 'which' (, which...) introduces extra information about a noun or the entire preceding clause. Never use 'that' after a comma! Also, use the first conditional (If + present simple, ... will/won't + V) to explain cause-and-effect rules in a competition.",
+      "chi_exp": "本課說明文大量運用兩大進階句構：(1) **逗號＋which 非限定關係子句**：用來補充說明專有名詞定義（`stations, which are called controls`）或指代前面整件事的推論結果（`..., which means racers must use...`）。切記**逗號後面絕對不能用 that**！(2) **真實條件句與轉折對比**：`If someone misses a control, they won't have that mark...` 搭配 `might ..., but ... will win` 明確規範定向越野的勝負條件。",
+      "formula": "先行詞/整句 + , + which + 動詞... (禁寫 , that!) | If + S + 現在式 (misses), S + won't / will + 原形動詞",
+      "intro": "",
+      "categories": [
+        {
+          "label": "補充名詞定義 (, which + V)",
+          "items": [
+            "find stations, which are called controls.",
+            "mark a card, which has 18 boxes."
+          ],
+          "note": "先行詞是複數 stations，which 後的 be 動詞用複數 are"
+        },
+        {
+          "label": "指代前文整句推論 (, which means...)",
+          "items": [
+            "..., which means racers must use their maps and compasses."
+          ],
+          "note": "which 指代「整件事情」視為單數，動詞 means 必須加 -s！"
+        },
+        {
+          "label": "勝負規則條件句 (If + 現在式, won't/will + V)",
+          "items": [
+            "If someone misses a control, they won't have that mark on their card.",
+            "They might cross the finish line first, but the next person to finish with a full card will win."
+          ],
+          "note": "If 條件子句用現在簡單式 misses，主要子句用未來式 won't / will"
+        }
+      ],
+      "pitfalls": [
+        {
+          "wrong": "Racers find stations, that are called controls.",
+          "right": "Racers find stations, which are called controls.",
+          "tip": "非限定關係子句在逗號後方絕對禁止使用 that，必須使用 which！"
+        },
+        {
+          "wrong": "Controls are hidden, which mean racers must use maps.",
+          "right": "Controls are hidden, which means racers must use maps.",
+          "tip": "當 , which 指代前面整個子句（「控制點被藏起來這件事」）時，視作單數，動詞必須加 s 寫成 means！"
+        },
+        {
+          "wrong": "If someone will miss a control, they won't win the race.",
+          "right": "If someone misses a control, they won't win the race.",
+          "tip": "在 If 引導的條件副詞子句中，必須用現在簡單式 misses 代替未來式，不可寫成 If someone will miss！"
+        }
+      ],
+      "examples": [
+        {
+          "en": "In the sport of orienteering, racers use a map and compass to find stations, which are called controls.",
+          "zh": "在定向越野運動中，選手使用地圖與指南針尋找稱為控制點的檢查站。",
+          "highlight": ", which are called controls"
+        },
+        {
+          "en": "They may be in front of a big rock or behind a tree, which means racers must use their maps and compasses to find controls.",
+          "zh": "它們可能在大岩石前或樹後，這代表選手必須使用地圖和指南針尋找控制點。",
+          "highlight": ", which means"
+        },
+        {
+          "en": "If someone misses a control, they won't have that mark on their card.",
+          "zh": "如果有人漏掉一個控制點，他們的卡片上就不會有那個記號。",
+          "highlight": "If someone misses ... won't have"
+        }
+      ],
+      "trap": "兩大高頻文法盲點：(1) 逗號後面誤填 `that`（規定必填 `which`）；(2) 只看到 `might cross the finish line first` 就誤以為跑最快就贏，忽略了條件句與 `with a full card` 的必要贏球條件。",
+      "is_week12": false,
+      "is_week13": true
+    },
+    {
+      "id": "RWW6_U06_G3",
+      "book_id": "rw6",
+      "unit_id": "rw6_6",
+      "rule_title": "Dictation Punctuation & 'Use Visuals' Strategy (段落聽寫標點規則與圖像閱讀策略)",
+      "eng_exp": "During extended passage dictation, listen carefully to intonation and pauses to insert commas after introductory participle phrases (Standing on a corner,), quotation marks around spoken directions (\"go two blocks north, turn left, and you'll be across the street from the bookstore.\"), parentheses for figure references ((see Figure 1).), and exclamation marks (!). Also remember: Visuals provide information NOT in the text.",
+      "chi_exp": "在 3C 考券長篇盲聽（Dictation）中，老師**不會唸出標點符號**，全靠語調停頓自行還原四大關鍵標點：(1) **開頭分詞片語逗號**：`Standing on a corner,`；(2) **引述語雙引號**：`to \"go two blocks ... bookstore.\"`，句點收在右引號內；(3) **圖表參照括號**：`(see Figure 1).` 與 `(see Figure 2).`，句點在右括號外；(4) **熱情歡迎感嘆號**：`Welcome to orienteering!`。同時牢記單元閱讀策略：`Visuals` 提供文章文字未寫出的重要細節（例如旗子紅白三角形、控制卡有 18 格）。",
+      "formula": "Participle Phrase, S + V | \"Direct Speech.\" | (see Figure 1). | Welcome to ...!",
+      "intro": "",
+      "categories": [
+        {
+          "label": "雙引號引述句 (Direct Speech Quotes)",
+          "items": [
+            "They tell you to \"go two blocks north, turn left, and you'll be across the street from the bookstore.\"",
+            "My team's first direction said, \"Start at the north corner of the swings. Then walk east for 50 steps.\""
+          ],
+          "note": "美式英文習慣將句點置於右引號之內 (bookstore.\")"
+        },
+        {
+          "label": "括號圖表參照 (Parenthetical Figure Reference)",
+          "items": [
+            "A special flag marks each control (see Figure 1).",
+            "At each control, racers mark a card they carry with them (see Figure 2)."
+          ],
+          "note": "整句附帶括號說明時，Figure 首字母大寫，句點置於右括號外側"
+        },
+        {
+          "label": "圖像策略核心 (Use Visuals)",
+          "items": [
+            "Figure 1 shows a bright red-and-white triangular control flag.",
+            "Figure 2 shows a control card with 18 numbered boxes."
+          ],
+          "note": "純文字沒有寫旗子顏色與卡片格數，必須靠看圖補齊資訊！"
+        }
+      ],
+      "pitfalls": [
+        {
+          "wrong": "A special flag marks each control. (see figure 1)",
+          "right": "A special flag marks each control (see Figure 1).",
+          "tip": "括號附屬於該句子結尾，前面不放句點，句點應放在右括號後方，且 Figure 的 F 須大寫！"
+        },
+        {
+          "wrong": "Instead of directiones, you have only a map and a comepass.",
+          "right": "Instead of directions, you have only a map and a compass.",
+          "tip": "複數 directions 直接加 -s（不加 e）；compass 中間無靜音 e（不是 comepass）。"
+        },
+        {
+          "wrong": "Visuals always give the exact same information that is already in the text.",
+          "right": "Visuals provide extra information that is not fully described in the text.",
+          "tip": "圖像與文字是「互補」關係而非「重複」，讀圖能抓出數字、外觀與位置細節。"
+        }
+      ],
+      "examples": [
+        {
+          "en": "Standing on a corner, you ask someone how to get to a store.",
+          "zh": "站在街角時，你向路人詢問如何前往商店。",
+          "highlight": "Standing on a corner,"
+        },
+        {
+          "en": "They tell you to \"go two blocks north, turn left, and you'll be across the street from the bookstore.\"",
+          "zh": "他們告訴你：「向北走兩個街區、左轉，你就會來到書店的對街。」",
+          "highlight": "\"... bookstore.\""
+        },
+        {
+          "en": "A special flag marks each control (see Figure 1).",
+          "zh": "每個控制點都有一面特製的旗幟作為標記（見圖 1）。",
+          "highlight": "(see Figure 1)."
+        }
+      ],
+      "trap": "段落聽寫最常扣分處：(1) 聽到 `see Figure 1` 卻漏掉左右括號，或將 `Figure` 小寫；(2) `directions` 誤加 `e` 拼成 `directiones`，`compass` 誤加 `e` 拼成 `comepass`；(3) 忘記為轉述路人的話加上雙引號。",
+      "is_week12": false,
+      "is_week13": true
     }
   ],
   "quizzes": [
@@ -43407,134 +44012,6 @@ const ENGLISH_DATA = {
       "explanation": "🟢 正解：compass（指北針）。\n📖 依據：Topic 3 導讀定義『A compass is an instrument you use to tell direction.』"
     },
     {
-      "id": "q_m601",
-      "book_id": "rw6",
-      "unit_id": "rw6_6",
-      "type": "reading",
-      "question": "True or False: 'A visual gives the exact same information that is already in a text.'",
-      "options": [
-        "False — Visuals provide extra information that is NOT in a text.",
-        "True — Visuals only repeat the words in the text.",
-        "True — You don't need to look at visuals while reading.",
-        "False — Visuals are only for decoration."
-      ],
-      "answer": "False — Visuals provide extra information that is NOT in a text.",
-      "difficulty": "★★★☆☆",
-      "explanation": "🟢 正解：False — Visuals provide extra information that is NOT in a text。\n📖 依據：課本 p.40 Reading Goal 明確定義『Visuals provide information that is not in a text.』"
-    },
-    {
-      "id": "q_m602",
-      "book_id": "rw6",
-      "unit_id": "rw6_6",
-      "type": "reading",
-      "question": "In orienteering, what are the hidden stations that racers must find called?",
-      "options": [
-        "Controls",
-        "Corners",
-        "Blocks",
-        "Compasses"
-      ],
-      "answer": "Controls",
-      "difficulty": "★★☆☆☆",
-      "explanation": "🟢 正解：Controls（控制點）。\n📖 依據：課文第 11-12 行『racers use a map and compass to find stations, which are called controls.』"
-    },
-    {
-      "id": "q_m603",
-      "book_id": "rw6",
-      "unit_id": "rw6_6",
-      "type": "reading",
-      "question": "Look at Figure 2 (Orienteering Control Card) in Unit 6. How many controls are there on the card?",
-      "options": [
-        "18 controls",
-        "10 controls",
-        "12 controls",
-        "25 controls"
-      ],
-      "answer": "18 controls",
-      "difficulty": "★★★☆☆",
-      "explanation": "🟢 正解：18 controls。\n📖 依據：課本 p.41 Figure 2 控制卡上的編號格子從 1 到 18，這是必須透過閱讀視覺圖表 (Use Visuals) 才能答出的經典考題！"
-    },
-    {
-      "id": "q_m604",
-      "book_id": "rw6",
-      "unit_id": "rw6_6",
-      "type": "reading",
-      "question": "Who wins an orienteering race?",
-      "options": [
-        "The fastest racer who finishes with a FULL card (all controls marked)",
-        "Anyone who crosses the finish line first, even if they missed a control",
-        "The racer who runs the furthest distance in the woods",
-        "The person who draws the best map"
-      ],
-      "answer": "The fastest racer who finishes with a FULL card (all controls marked)",
-      "difficulty": "★★★★☆",
-      "explanation": "🟢 正解：The fastest racer who finishes with a FULL card。\n⚠️ 陷阱：課本 p.42 是非題第 8 題『You must finish first to win』為 False！若漏掉控制點，就算先過終點線也不算贏，必須打滿全卡 (with a full card)！"
-    },
-    {
-      "id": "q_m605",
-      "book_id": "rw6",
-      "unit_id": "rw6_6",
-      "type": "vocab",
-      "question": "In the sentence 'Standing on a corner, you ask someone how to get to a store,' what does 'corner' mean?",
-      "options": [
-        "A place where two roads meet",
-        "A red and white flag in the woods",
-        "A spot behind a big rock",
-        "A card with 18 boxes"
-      ],
-      "answer": "A place where two roads meet",
-      "difficulty": "★★☆☆☆",
-      "explanation": "🟢 正解：A place where two roads meet（兩條道路交會的轉角處）。課本 p.43 Context Clues 第 1 題原題！"
-    },
-    {
-      "id": "q_m606",
-      "book_id": "rw6",
-      "unit_id": "rw6_6",
-      "type": "vocab",
-      "question": "In the sentence 'You'll be across the street from the bookstore,' what does 'across the street from' mean?",
-      "options": [
-        "On the other side of the street",
-        "Behind the bookstore",
-        "Two blocks north of the street",
-        "Inside the bookstore"
-      ],
-      "answer": "On the other side of the street",
-      "difficulty": "★★☆☆☆",
-      "explanation": "🟢 正解：On the other side of the street（在馬路的另一側/對面）。課本 p.43 Context Clues 第 3 題原題！"
-    },
-    {
-      "id": "q_m607",
-      "book_id": "rw6",
-      "unit_id": "rw6_6",
-      "type": "vocab",
-      "question": "Controls are hard to see. They may be ______ a big rock or behind a tree.",
-      "options": [
-        "in front of",
-        "infront off",
-        "in front off",
-        "infront of"
-      ],
-      "answer": "in front of",
-      "difficulty": "★★★★☆",
-      "explanation": "🟢 正解：in front of。\n⚠️ 考場真實失分：Rex 在 Week 4 小考寫成『infront off ❌』！切記是三個獨立單字 in + front + of（單 f）！"
-    },
-    {
-      "id": "q_m608",
-      "book_id": "rw6",
-      "unit_id": "rw6_6",
-      "type": "reading",
-      "question": "In the short passage 'Treasure Hunt' (p.43), where is Bayani's house, and what treasure did the team find?",
-      "options": [
-        "Across from the park; they found cookies (food they ate).",
-        "Behind the school; they found gold coins.",
-        "Next to the river; they found a new compass.",
-        "North of the swings; they found a map."
-      ],
-      "answer": "Across from the park; they found cookies (food they ate).",
-      "difficulty": "★★★☆☆",
-      "explanation": "🟢 正解：Across from the park; they found cookies。\n📖 依據：第一句『He lives across the street from the park』，最後一句『We ate them』搭配插圖餅乾盒可知寶藏是 cookies！"
-    },
-    {
       "id": "q_m701",
       "book_id": "rw6",
       "unit_id": "rw6_7",
@@ -44998,7 +45475,8 @@ const ENGLISH_DATA = {
       "target_chi": "對...感興趣的",
       "target_pos": "形容詞 (Adjective)",
       "masked_example": "My sister is very ________ in cooking international food.",
-      "masked_example_chi": "我姊姊對烹飪國際各國美食非常感興趣。"
+      "masked_example_chi": "我姊姊對烹飪國際各國美食非常感興趣。",
+      "is_week13": true
     },
     {
       "id": "q_w12_odg3_u16_02",
@@ -45056,7 +45534,8 @@ const ENGLISH_DATA = {
       "target_chi": "擔憂的；焦慮的",
       "target_pos": "形容詞 (Adjective)",
       "masked_example": "Mom is ________ about eating too many chemicals in snacks.",
-      "masked_example_chi": "媽媽很擔心零食裡面吃進太多化學添加物。"
+      "masked_example_chi": "媽媽很擔心零食裡面吃進太多化學添加物。",
+      "is_week13": true
     },
     {
       "id": "q_w12_odg3_u16_03",
@@ -45114,7 +45593,8 @@ const ENGLISH_DATA = {
       "target_chi": "感到失望的",
       "target_pos": "形容詞 (Adjective)",
       "masked_example": "I am ________ with these dry cookies because they have no flavor.",
-      "masked_example_chi": "我對這些乾巴巴的餅乾感到很失望，因為它們毫無風味。"
+      "masked_example_chi": "我對這些乾巴巴的餅乾感到很失望，因為它們毫無風味。",
+      "is_week13": true
     },
     {
       "id": "q_w12_odg3_u16_04",
@@ -45172,7 +45652,8 @@ const ENGLISH_DATA = {
       "target_chi": "感到驚訝的；感到意外的",
       "target_pos": "形容詞 (Adjective)",
       "masked_example": "We were ________ by how much sugar there was in the fruit juice.",
-      "masked_example_chi": "我們對果汁裡面竟然含有那麼多糖分感到非常驚訝。"
+      "masked_example_chi": "我們對果汁裡面竟然含有那麼多糖分感到非常驚訝。",
+      "is_week13": true
     },
     {
       "id": "q_w12_odg3_u16_05",
@@ -45230,7 +45711,8 @@ const ENGLISH_DATA = {
       "target_chi": "（食品）成分；原料",
       "target_pos": "名詞 (Noun, 複數)",
       "masked_example": "You can check the list of ________ before buying cereal.",
-      "masked_example_chi": "在購買麥片之前，你可以先檢查成分清單。"
+      "masked_example_chi": "在購買麥片之前，你可以先檢查成分清單。",
+      "is_week13": true
     },
     {
       "id": "q_w12_odg3_u16_06",
@@ -45288,7 +45770,8 @@ const ENGLISH_DATA = {
       "target_chi": "化學物質；化學添加劑",
       "target_pos": "名詞 (Noun, 複數)",
       "masked_example": "Many parents try to avoid buying foods that contain harmful ________.",
-      "masked_example_chi": "許多父母盡量避免購買含有有害化學物質的食品。"
+      "masked_example_chi": "許多父母盡量避免購買含有有害化學物質的食品。",
+      "is_week13": true
     },
     {
       "id": "q_w12_odg3_u16_07",
@@ -45340,7 +45823,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "good at 表示後天習得的擅長技能；interested in 表示內心對該領域抱持的主觀愛好，兩者句型均接動名詞。",
         "examVariations": "題型常見於紙筆造句填空、連貫句子改寫以及克漏字介系詞選填。"
-      }
+      },
+      "is_week13": true
     },
     {
       "id": "q_w12_odg3_u16_08",
@@ -45393,7 +45877,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "surprised by 後方可接名詞或疑問詞引導的名詞子句 (how many chemicals...)，表示受到該事實衝擊。",
         "examVariations": "常見題型包含紙筆填空、改錯題 (糾正 surprised of) 及食品標籤閱讀問答。"
-      }
+      },
+      "is_week13": true
     },
     {
       "id": "q_w12_odg3_u16_09",
@@ -45446,7 +45931,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "happy with 接事物表示「對其感到滿意」；happy about 則表達「因某件好消息或事情而感到欣喜」。",
         "examVariations": "常考於食品標籤購買建議對話、克漏字測驗及手寫整句翻譯。"
-      }
+      },
+      "is_week13": true
     },
     {
       "id": "q_w12_odg3_u16_10",
@@ -45499,7 +45985,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "full of (形容詞片語) 與 filled with (被動分詞片語) 意思皆為充滿，但介系詞搭配嚴格不同，不可混用。",
         "examVariations": "題型常見於烘焙篇章閱讀、克漏字選填、抓錯題及紙筆造句題。"
-      }
+      },
+      "is_week13": true
     },
     {
       "id": "q_w12_odg3_u16_11",
@@ -45514,6 +46001,10 @@ const ENGLISH_DATA = {
       "sentence_form": "It + is/was + Adjective + of + Object Pronoun/Noun + to + Base Verb",
       "difficulty": "★★★★☆",
       "difficulty_level": 6,
+      "trapCodes": [
+        "ENG_PREP_COLLOCATION",
+        "ENG_TENSE_MISMATCH"
+      ],
       "question": "Rewrite the sentence using \"It was nice of... to...\": Grandma made us a delicious chocolate cake yesterday.",
       "answer": "It was nice of Grandma to make us a delicious chocolate cake yesterday.",
       "options": [],
@@ -45531,7 +46022,37 @@ const ENGLISH_DATA = {
         "commonTraps": [
           "介系詞誤用陷阱：受中文「對奶奶來說很好」直譯干擾，誤寫成 It was nice with/for Grandma。",
           "動詞時態陷阱：不定詞 to 後面必須接原形動詞 make，學生常粗心照抄原句的過去式 made。"
-        ]
+        ],
+        "steps": [
+          "① 確認評價對象為 Grandma（人的善良特質）➔ 介系詞選用 of",
+          "② 檢查時間副詞 yesterday ➔ 虛主詞搭配過去式 It was",
+          "③ 不定詞 to 後方把過去式 made 還原為原形動詞 make"
+        ],
+        "insight": "💡 評價人物品格用 of，且「to + 原形動詞」絕不保留過去式 -ed/-d！",
+        "visualBlock": {
+          "kind": "compare_table",
+          "title": "⚖️ 虛主詞評價句型雙陷阱對照",
+          "data": {
+            "headers": [
+              "常見錯寫 ❌",
+              "正確寫法 ✅",
+              "核心原因"
+            ],
+            "rows": [
+              [
+                "It was nice with Grandma",
+                "It was nice of Grandma",
+                "評價人的性格／善意行為固定用 of，不用 with/for"
+              ],
+              [
+                "to made us a cake",
+                "to make us a cake",
+                "不定詞 to 後方必須還原為原形動詞 make"
+              ]
+            ]
+          },
+          "caption": "📊 先定介系詞 of，再把 made 還原成 make！"
+        }
       },
       "extensionStudy": {
         "synonyms": [
@@ -45540,7 +46061,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "It is nice of sb to do sth 評價人的性格舉止；It is easy for sb to do sth 則描述事情本身的客觀難易度。",
         "examVariations": "題型常見於段考句型轉換、手寫重組題及錯題訂正改寫。"
-      }
+      },
+      "is_week13": true
     },
     {
       "id": "q_w12_odg3_u16_12",
@@ -45581,7 +46103,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "silly of me 強調自身行為的糊塗粗心；若用 careless of me 則強調粗心大意未注意細節。",
         "examVariations": "常見題型包括紙筆句子改寫、代名詞格位填空題及連貫故事寫作翻譯。"
-      }
+      },
+      "is_week13": true
     },
     {
       "id": "q_w12_odg3_u16_13",
@@ -45622,7 +46145,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "I think it is silly of people to... 屬於個人主觀價值評價；It is unhealthy for people to eat... 則是事物對健康的客觀影響。",
         "examVariations": "題型常見於口語意見表達、對話題改寫、論說文開頭句型手寫運用。"
-      }
+      },
+      "is_week13": true
     },
     {
       "id": "q_w12_odg3_u16_14",
@@ -45637,6 +46161,10 @@ const ENGLISH_DATA = {
       "sentence_form": "V-ing (Gerund Subject) + Singular Verb / Preposition + V-ing",
       "difficulty": "★★★★★",
       "difficulty_level": 8,
+      "trapCodes": [
+        "ENG_UNCOUNTABLE_SVA",
+        "ENG_POS_CONFUSION"
+      ],
       "question": "Combine the prompt words into a complete sentence using a gerund subject: (Read) food labels (help) us choose healthy food.",
       "answer": "Reading food labels helps us choose healthy food.",
       "options": [],
@@ -45654,7 +46182,37 @@ const ENGLISH_DATA = {
         "commonTraps": [
           "主述一致陷阱：學生常被靠近動詞的複數名詞 labels 誘騙而誤填原形動詞 help，動名詞主詞動詞必加 -s。",
           "動名詞大小寫陷阱：句首動名詞 Reading 的字首 R 必須大寫，忘記大寫會被扣分。"
-        ]
+        ],
+        "steps": [
+          "① 把句首動詞 Read 改寫成動名詞主詞 Reading",
+          "② 鎖定真正主詞是「閱讀這件事」（單數），不受 labels 複數干擾",
+          "③ 謂語動詞配合單數主詞加上 -s ➔ helps"
+        ],
+        "insight": "💡 動名詞片語當主詞＝「一件事」＝永遠配單數動詞（helps / is）！",
+        "visualBlock": {
+          "kind": "slot_box",
+          "title": "📦 動名詞主詞單數動詞句構槽",
+          "data": {
+            "slots": [
+              {
+                "role": "動名詞主詞（視為單數）",
+                "text": "Reading food labels",
+                "accent": "pri"
+              },
+              {
+                "role": "單數動詞（+s）",
+                "text": "helps",
+                "accent": "ok"
+              },
+              {
+                "role": "受詞＋原形補語",
+                "text": "us choose healthy food.",
+                "accent": "warn"
+              }
+            ]
+          },
+          "caption": "📊 labels 只是 Reading 的受詞，決定動詞單複數的是 Reading！"
+        }
       },
       "extensionStudy": {
         "synonyms": [
@@ -45663,7 +46221,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "動名詞主詞 (Reading labels) 與不定詞主詞 (To read labels) 皆視為單數，但日常英語與標題中以動名詞最為自然普遍。",
         "examVariations": "題型常見於主謂一致填空題、提示字造句題、克漏字動詞型態選填題。"
-      }
+      },
+      "is_week13": true
     },
     {
       "id": "q_w12_odg3_u16_15",
@@ -45704,7 +46263,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "所有介系詞 (about, at, in, by, of, for, with, without) 後方動詞均需加 -ing，無一例外。",
         "examVariations": "題型常見於課文克漏字填空、括號動詞正確形式填空、烘焙情境句子重寫。"
-      }
+      },
+      "is_week13": true
     },
     {
       "id": "q_w12_odg3_u16_16",
@@ -45745,7 +46305,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "Eating chemicals is dangerous (動名詞做主詞用 is) vs Chemicals are dangerous (名詞複數做主詞用 are)。",
         "examVariations": "題型常見於段考進階除錯題、主謂一致造句題以及會考克漏字文法陷阱題。"
-      }
+      },
+      "is_week13": true
     },
     {
       "id": "q_w12_odg3_u16_17",
@@ -45757,6 +46318,15 @@ const ENGLISH_DATA = {
       "category_tag": "grammar",
       "difficulty": "★☆☆☆☆",
       "difficulty_level": 1,
+      "triadGroup": {
+        "groupId": "ODG3_U16_T1",
+        "tier": "L1-3",
+        "role": "foundation"
+      },
+      "trapCodes": [
+        "ENG_PREP_COLLOCATION",
+        "ENG_CHINGLISH_LITERAL"
+      ],
       "question": "If you are interested _____ eating healthily, you should always check the nutrition facts on the label.",
       "options": [
         "in",
@@ -45775,6 +46345,49 @@ const ENGLISH_DATA = {
           "about": "受中文「對...感興趣」直譯誤導，英語中 interested 絕不能搭配 about。",
           "at": "at 用於技能擅長 (good at)，不能與 interested 搭配表示興趣。",
           "with": "with 用於滿意度 (happy with)，不能與 interested 搭配表達興趣。"
+        },
+        "steps": [
+          "① 圈出關鍵形容詞 interested",
+          "② 對照情緒／態度介系詞階梯：興趣領域專屬搭配 in",
+          "③ 確認後方接動名詞 eating healthily ➔ 選 in"
+        ],
+        "insight": "💡 「有興趣」用 interested in，「擅長」才用 good at，兩者常在段考互為誘答項！",
+        "visualBlock": {
+          "kind": "prep_ladder",
+          "title": "🧭 興趣、能力與情緒介系詞階梯",
+          "data": {
+            "levels": [
+              {
+                "prep": "in",
+                "scope": "興趣投入／領域（對...感興趣）",
+                "examples": [
+                  "interested in cooking",
+                  "interested in eating healthily"
+                ],
+                "highlight": true
+              },
+              {
+                "prep": "at",
+                "scope": "能力專長（擅長／不擅長）",
+                "examples": [
+                  "good at baking",
+                  "bad at math"
+                ],
+                "highlight": false
+              },
+              {
+                "prep": "about",
+                "scope": "情緒事件（興奮／擔心／困惑）",
+                "examples": [
+                  "excited about",
+                  "worried about",
+                  "confused about"
+                ],
+                "highlight": false
+              }
+            ]
+          },
+          "caption": "📊 看到 interested 先反射搭配 in！"
         }
       },
       "extensionStudy": {
@@ -45785,7 +46398,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "be interested in 後接動名詞 (eating)；若是 interesting 則是形容事物本身有趣 (The food label is interesting)。",
         "examVariations": "題型常考介系詞四選一選擇題、動名詞型態選填題以及對話情境填空。"
-      }
+      },
+      "is_week13": true
     },
     {
       "id": "q_w12_odg3_u16_18",
@@ -45797,6 +46411,14 @@ const ENGLISH_DATA = {
       "category_tag": "grammar",
       "difficulty": "★★☆☆☆",
       "difficulty_level": 2,
+      "triadGroup": {
+        "groupId": "ODG3_U16_T4",
+        "tier": "L1-3",
+        "role": "foundation"
+      },
+      "trapCodes": [
+        "ENG_PREP_COLLOCATION"
+      ],
       "question": "It was very kind _____ Grandma to bake delicious fruit tarts for all of us.",
       "options": [
         "of",
@@ -45815,6 +46437,36 @@ const ENGLISH_DATA = {
           "for": "for 用於客觀事物難易度 (easy for me)，不能用於評價人的性格 (kind of sb)。",
           "with": "受中文「對某人來說很好」影響誤用 with，英語評價人性格絕不用 with。",
           "to": "to 為不定詞引導詞或方向介系詞，不能置於人稱名詞前表示評價歸屬。"
+        },
+        "steps": [
+          "① 看空格前的形容詞 kind（修飾人還是修飾事？）",
+          "② kind／nice／silly／sensible 皆為評價「人的品格」，非事件難易度",
+          "③ 評價人品格必選 of ➔ kind of Grandma"
+        ],
+        "insight": "💡 判別祕訣：能說 Grandma is kind（奶奶人真好）就用 of；只能說 It is easy（事很簡單）才用 for！",
+        "visualBlock": {
+          "kind": "compare_table",
+          "title": "⚖️ It is + adj + OF vs FOR 黃金判別表",
+          "data": {
+            "headers": [
+              "句型結構",
+              "形容詞類型",
+              "正確例句"
+            ],
+            "rows": [
+              [
+                "It is/was + adj + OF + 人 + to V",
+                "評價人的品格／聰明／糊塗（kind, nice, silly, sensible）",
+                "It was kind of Grandma to bake tarts."
+              ],
+              [
+                "It is/was + adj + FOR + 人 + to V",
+                "評價事情本身的難易度／重要性（easy, hard, important）",
+                "It is important for us to read labels."
+              ]
+            ]
+          },
+          "caption": "📊 先問「這個形容詞能直接拿來誇獎或批評那個人嗎？」可以就選 of！"
         }
       },
       "extensionStudy": {
@@ -45825,7 +46477,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "It is kind of you to help me (讚賞你的善良，用 of) vs It is important for you to study (強調讀書的重要性，用 for)。",
         "examVariations": "題型常見於 of vs for 辨析選擇題、段考錯題改錯題以及虛主詞重組題。"
-      }
+      },
+      "is_week13": true
     },
     {
       "id": "q_w12_odg3_u16_19",
@@ -45837,6 +46490,15 @@ const ENGLISH_DATA = {
       "category_tag": "grammar",
       "difficulty": "★★☆☆☆",
       "difficulty_level": 3,
+      "triadGroup": {
+        "groupId": "ODG3_U16_T2",
+        "tier": "L1-3",
+        "role": "foundation"
+      },
+      "trapCodes": [
+        "ENG_PREP_COLLOCATION",
+        "ENG_CHINGLISH_LITERAL"
+      ],
       "question": "Many shoppers were surprised _____ how much sugar was contained in a single bottle of soda.",
       "options": [
         "by",
@@ -45855,6 +46517,50 @@ const ENGLISH_DATA = {
           "of": "課本除錯大題特別糾錯的典型陷阱！surprised 絕不能搭配 of。",
           "about": "受中文直譯「關於...感到驚訝」影響，但在標準用法中必為 surprised by。",
           "with": "with 用於滿意或厭煩 (happy/bored with)，不能與 surprised 搭配。"
+        },
+        "steps": [
+          "① 圈出關鍵字 surprised（被外在事實震撼的過去分詞形容詞）",
+          "② 排除中式直譯誘答選項 of 與 about",
+          "③ 確認受驚訝來源為「含糖量數據」➔ 選用介系詞 by"
+        ],
+        "insight": "💡 surprised / amazed 被「某件事震撼到」就像被動受影響，固定用 by（或 at），絕不可用 of！",
+        "visualBlock": {
+          "kind": "prep_ladder",
+          "title": "🧭 被動衝擊 vs 滿意／失望介系詞階梯",
+          "data": {
+            "levels": [
+              {
+                "prep": "by / at",
+                "scope": "被外在事實／數據震撼驚訝",
+                "examples": [
+                  "surprised by",
+                  "amazed by",
+                  "confused by"
+                ],
+                "highlight": true
+              },
+              {
+                "prep": "with",
+                "scope": "對成果／測驗／產品滿意或失望",
+                "examples": [
+                  "happy with",
+                  "disappointed with",
+                  "bored with"
+                ],
+                "highlight": false
+              },
+              {
+                "prep": "of (禁區❌)",
+                "scope": "不可與 surprised / disappointed 連用",
+                "examples": [
+                  "❌ surprised of",
+                  "❌ disappointed of"
+                ],
+                "highlight": false
+              }
+            ]
+          },
+          "caption": "📊 看見 surprised / amazed 優先鎖定 by！"
         }
       },
       "extensionStudy": {
@@ -45865,7 +46571,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "surprised by 後方常接疑問詞引導的名詞子句 (how many/how much)，表達受到該事實的震驚。",
         "examVariations": "題型常見於食品科普閱讀克漏字、介系詞選擇題與抓錯訂正題。"
-      }
+      },
+      "is_week13": true
     },
     {
       "id": "q_w12_odg3_u16_20",
@@ -45877,6 +46584,15 @@ const ENGLISH_DATA = {
       "category_tag": "grammar",
       "difficulty": "★★☆☆☆",
       "difficulty_level": 3,
+      "triadGroup": {
+        "groupId": "ODG3_U16_T2",
+        "tier": "L1-3",
+        "role": "foundation"
+      },
+      "trapCodes": [
+        "ENG_PREP_COLLOCATION",
+        "ENG_CHINGLISH_LITERAL"
+      ],
       "question": "Italy and France are world-famous _____ their traditional food culture and delicious cheeses.",
       "options": [
         "for",
@@ -45895,6 +46611,41 @@ const ENGLISH_DATA = {
           "about": "受中文「關於...很有名」直譯影響，英語表以特產聞名必須用 for。",
           "with": "with 表示伴隨或滿意，不能用在 famous 後面表達聞名的原因。",
           "at": "at 表示在某技能上的專長 (good at)，不能用於表達國家以特產聞名。"
+        },
+        "steps": [
+          "① 圈出關鍵形容詞 famous",
+          "② 確認後方為聞名原因／特產（traditional food culture and cheeses）",
+          "③ 「以某特色聞名」固定搭配 for ➔ famous for"
+        ],
+        "insight": "💡 famous for＋名產／原因（以⋯⋯出名）；famous as＋身分頭銜（以⋯⋯身分出名）！",
+        "visualBlock": {
+          "kind": "slot_box",
+          "title": "📦 famous for 特產原因句構槽",
+          "data": {
+            "slots": [
+              {
+                "role": "主詞（國家／人物）",
+                "text": "Italy and France",
+                "accent": "pri"
+              },
+              {
+                "role": "be 動詞",
+                "text": "are",
+                "accent": "ok"
+              },
+              {
+                "role": "形容詞＋專屬介系詞",
+                "text": "world-famous for",
+                "accent": "warn"
+              },
+              {
+                "role": "聞名特色／名產",
+                "text": "their traditional food culture...",
+                "accent": "ok"
+              }
+            ]
+          },
+          "caption": "📊 記住「為了這個特色而出名」➔ famous FOR！"
         }
       },
       "extensionStudy": {
@@ -45905,7 +46656,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "famous for 表示「以某特色聞名」(famous for its pizza)；famous as 表示「以某身分聞名」(famous as a chef)。",
         "examVariations": "題型常考地理特產配對、形容詞介系詞選擇題及名詞短語填空。"
-      }
+      },
+      "is_week13": true
     },
     {
       "id": "q_w12_odg3_u16_21",
@@ -45917,6 +46669,14 @@ const ENGLISH_DATA = {
       "category_tag": "grammar",
       "difficulty": "★★☆☆☆",
       "difficulty_level": 3,
+      "triadGroup": {
+        "groupId": "ODG3_U16_T4",
+        "tier": "L1-3",
+        "role": "foundation"
+      },
+      "trapCodes": [
+        "ENG_PREP_COLLOCATION"
+      ],
       "question": "The cake tasted completely awful because the mixing bowl was full _____ salt instead of sugar.",
       "options": [
         "of",
@@ -45935,6 +46695,36 @@ const ENGLISH_DATA = {
           "with": "受 filled with 混淆！full 固定搭配 of，只有 filled 才能搭配 with。",
           "in": "in 表示在...裡面，不能與 full 連用構成「裝滿」的固定搭配片語。",
           "about": "about 表示關於或情緒引發原因，不能用於具體物質充滿容器的語境。"
+        },
+        "steps": [
+          "① 看清前面是形容詞 full，還是動詞分詞 filled",
+          "② 本題為 full，固定配對介系詞 of",
+          "③ 驗證句意：was full of salt（滿滿都是鹽）➔ 選 of"
+        ],
+        "insight": "💡 「full 配 of、filled 配 with」——四個字口訣救回所有克漏字與改錯題！",
+        "visualBlock": {
+          "kind": "compare_table",
+          "title": "⚖️ full of vs filled with 雙胞胎對照",
+          "data": {
+            "headers": [
+              "正確寫法 ✅",
+              "詞性來源",
+              "常見誤寫 ❌"
+            ],
+            "rows": [
+              [
+                "be full of salt",
+                "full（純形容詞）",
+                "be full with salt"
+              ],
+              [
+                "be filled with salt",
+                "fill 的過去分詞 filled",
+                "be filled of salt"
+              ]
+            ]
+          },
+          "caption": "📊 看見 full 就選 of，絕不手滑選 with！"
         }
       },
       "extensionStudy": {
@@ -45945,7 +46735,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "full of 是形容詞搭配 of；filled with 則是動詞 fill 的被動分詞搭配 with，兩者意思相同但介系詞不同。",
         "examVariations": "題型常見於故事閱讀理解、介系詞四選一選擇題及段考克漏字填空。"
-      }
+      },
+      "is_week13": true
     },
     {
       "id": "q_w12_odg3_u16_22",
@@ -45957,6 +46748,15 @@ const ENGLISH_DATA = {
       "category_tag": "grammar",
       "difficulty": "★★★★★",
       "difficulty_level": 8,
+      "triadGroup": {
+        "groupId": "ODG3_U16_T5",
+        "tier": "L7-10",
+        "role": "challenge"
+      },
+      "trapCodes": [
+        "ENG_POS_CONFUSION",
+        "ENG_UNCOUNTABLE_SVA"
+      ],
       "question": "_____ food labels before buying snacks helps children avoid dangerous food allergies.",
       "options": [
         "Reading",
@@ -45975,6 +46775,36 @@ const ENGLISH_DATA = {
           "Read": "原形動詞不能直接擔任句子的主詞，若為祈使句後方不應出現謂語動詞 helps。",
           "To reading": "英語中無 To reading 這種錯誤的不定詞結構，不定詞應為 to read。",
           "Reads": "三單動詞 Reads 不能置於句首充當主詞，主詞必須為名詞或動名詞。"
+        },
+        "steps": [
+          "① 往後掃描全句動詞：找到真正的三單動詞 helps",
+          "② 推論空格到 snacks 為整個句子的「主詞片語」",
+          "③ 動詞當主詞必須名詞化 ➔ 選動名詞 Reading"
+        ],
+        "insight": "💡 句首看起來像祈使句，但後面又冒出三單動詞 helps？那就表示前面整個動作是「動名詞主詞」！",
+        "visualBlock": {
+          "kind": "slot_box",
+          "title": "📦 動名詞主詞 vs 祈使句 結構辨析",
+          "data": {
+            "slots": [
+              {
+                "role": "主詞位置（必用 V-ing）",
+                "text": "Reading food labels before buying snacks",
+                "accent": "pri"
+              },
+              {
+                "role": "單數謂語動詞",
+                "text": "helps",
+                "accent": "ok"
+              },
+              {
+                "role": "受詞＋結果",
+                "text": "children avoid dangerous food allergies.",
+                "accent": "warn"
+              }
+            ]
+          },
+          "caption": "📊 若選原形 Read 會變成兩套動詞衝突；選 Reading 才能與 helps 完美搭配！"
         }
       },
       "extensionStudy": {
@@ -45985,7 +46815,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "Reading labels helps us (動名詞主詞) vs If you read labels, you will know (條件子句動詞)。",
         "examVariations": "題型常見於會考第一大題文法選擇、非謂語動詞形式判斷題及段考長句結構分析。"
-      }
+      },
+      "is_week13": true
     },
     {
       "id": "q_w12_odg3_u16_23",
@@ -46024,7 +46855,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "afraid of eating something that you are allergic to 包含介系詞接動名詞 (afraid of eating) 及關係子句 (that you are allergic to)。",
         "examVariations": "題型常見於素養閱讀理解、細節事實定位題及生活健康常識英文推論題。"
-      }
+      },
+      "is_week13": true
     },
     {
       "id": "q_w12_odg3_u16_24",
@@ -46063,7 +46895,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "curious about how to cook 包含形容詞搭配介系詞 about 及「疑問詞 + to + 原形動詞」的名詞片語結構。",
         "examVariations": "題型常見於說明文閱讀測驗、標籤圖文資訊對照題及條件句細節匹配題。"
-      }
+      },
+      "is_week13": true
     },
     {
       "id": "q_w12_odg3_u16_25",
@@ -46102,7 +46935,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "angry about the number of chemicals 中的 that 引導關係代名詞子句修飾先行詞 chemicals。",
         "examVariations": "題型常見於角色情感動機推論題、對話細節檢索題及因果關係配對題。"
-      }
+      },
+      "is_week13": true
     },
     {
       "id": "q_w12_odg3_u16_26",
@@ -46141,7 +46975,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "excited about the food for our party 展示了形容詞搭配介系詞 about 接名詞片語的標準日常用法。",
         "examVariations": "題型常見於對話主旨推論、末句情感轉折題及篇章跨段落細節辨析。"
-      }
+      },
+      "is_week13": true
     },
     {
       "id": "q_w12_odg3_u16_27",
@@ -46153,6 +46988,15 @@ const ENGLISH_DATA = {
       "category_tag": "reading",
       "difficulty": "★★★★☆",
       "difficulty_level": 7,
+      "triadGroup": {
+        "groupId": "ODG3_U16_T5",
+        "tier": "L4-6",
+        "role": "twist"
+      },
+      "trapCodes": [
+        "ENG_TENSE_MISMATCH",
+        "ENG_PREP_COLLOCATION"
+      ],
       "question": "In the story \"Lisa's Salty Cake Adventure\", why did Lisa's sister exclaim \"Ugh!\" after tasting the cake?",
       "options": [
         "Because Lisa accidentally gave her sister a cup of salt instead of sugar.",
@@ -46171,6 +47015,32 @@ const ENGLISH_DATA = {
           "Because the oven was too cold and the cake was not baked at all.": "故事中烤箱正常運轉且蛋糕已烤好 (When the cake was ready)，烤箱溫度無問題。",
           "Because Lisa dropped the whole cake onto the dirty kitchen floor.": "故事中蛋糕並未掉到地板上，姊姊是在餐桌品嚐切片時發現問題。",
           "Because the cake was full of hot chili powder and bitter medicine.": "故事中加入的是鹽巴 (salt)，絕非辣椒粉或苦藥，此為捏造選項。"
+        },
+        "steps": [
+          "① 回到故事中姊姊驚叫 \"Ugh! It is full of salt!\" 的段落",
+          "② 往前追蹤原因句：I had given my sister a cup of salt, not a cup of sugar.",
+          "③ 比對選項中「誤把鹽巴當糖 (salt instead of sugar)」即為正解"
+        ],
+        "insight": "💡 故事中的過去完成式 had given 表示「在姊姊吃蛋糕之前」早已把鹽巴倒進麵糊裡！",
+        "visualBlock": {
+          "kind": "timeline",
+          "title": "⏳ Lisa 鹹蛋糕事件先後順序時間軸",
+          "data": {
+            "events": [
+              {
+                "time": "更早之前 (Past Perfect)",
+                "label": "Lisa had given her sister a cup of salt",
+                "highlight": true
+              },
+              {
+                "time": "烘烤完成 (Simple Past)",
+                "label": "Sister tried a piece & exclaimed \"Ugh!\"",
+                "highlight": false
+              }
+            ],
+            "rule": "先發生的動作（拿錯鹽巴）用過去完成式 had given，後發生的反應（試吃驚呼）用過去式"
+          },
+          "caption": "📊 用時間軸看懂 why 因果與 had given 的時態關係！"
         }
       },
       "extensionStudy": {
@@ -46180,7 +47050,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "had given 是過去完成式，表示「在姊姊嚐蛋糕之前」就已經發生的動作，搭配 instead of (代替)。",
         "examVariations": "題型常考故事原因分析、順序排列題及篇章代名詞指涉題。"
-      }
+      },
+      "is_week13": true
     },
     {
       "id": "q_w12_odg3_u16_28",
@@ -46192,6 +47063,14 @@ const ENGLISH_DATA = {
       "category_tag": "reading",
       "difficulty": "★★★★★",
       "difficulty_level": 8,
+      "triadGroup": {
+        "groupId": "ODG3_U16_T5",
+        "tier": "L7-10",
+        "role": "challenge"
+      },
+      "trapCodes": [
+        "ENG_TENSE_MISMATCH"
+      ],
       "question": "How did Lisa's sister react when she discovered that Lisa made the mistake with the salt?",
       "options": [
         "She thought it was funny and was not angry with Lisa.",
@@ -46219,6 +47098,731 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "sorry about making that mistake (為犯錯抱歉) 與 thought it was funny (覺得很有趣) 形成生動的情感對比。",
         "examVariations": "題型常見於角色態度推論題、故事主旨總結題及課後閱讀素養評量。"
+      },
+      "is_week13": true
+    },
+    {
+      "id": "q_w12_odg3_u16_29",
+      "book_id": "gra3",
+      "unit_id": "gra3_16",
+      "is_midterm": true,
+      "is_week12": true,
+      "is_week13": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "part_title": "Part A: Write a sentence using Adjective + Preposition + because...",
+      "part_instructions": "Choose a preposition from the box to go with the given adjective, and write a sentence about something or someone you know. Your sentence must give a reason.",
+      "word_bank": "by   at   about   in   with   of   for",
+      "sentence_form": "<subject> + <verb \"to be\"> + <adjective + preposition> + <object> + because ...",
+      "tense_hint": "Check both the preposition (with/about/for/by/in/at/of) AND the verb inside your because-clause (never omit 'is/was')!",
+      "difficulty": "★★☆☆☆",
+      "difficulty_level": 2,
+      "triadGroup": {
+        "groupId": "ODG3_U16_T3",
+        "tier": "L1-3",
+        "role": "foundation"
+      },
+      "trapCodes": [
+        "ENG_PREP_COLLOCATION",
+        "ENG_VERB_OMISSION",
+        "ENG_CHINGLISH_LITERAL"
+      ],
+      "question": "Write a complete sentence using [excited] + the correct preposition from the box, and give a reason starting with \"because...\".",
+      "answer": "He is excited about the new movie because it is very funny.",
+      "options": [],
+      "self_check": [
+        "是否選擇正確介系詞 about 與 excited 搭配（excited about，絕不用 with 或 for）",
+        "主句主詞後是否寫出 be 動詞（如 He is / I am / He was）",
+        "because 後方原因子句是否包含完整「主詞＋動詞」（絕不可漏寫 is/was 而誤寫成 *because it funny）"
+      ],
+      "explanation": {
+        "point": "3C 公式造句實戰：be excited about + 受詞 + because + 主詞 + 動詞",
+        "examPurpose": "考核學生套用 W12 真卷五段式造句公式，精準搭配 excited about 並於 because 子句中完整補出 be 動詞的實戰書寫力。",
+        "correctReason": "形容對即將發生或喜歡的事物感到興奮，固定搭配 excited about；原因子句 because it is very funny 必須包含主詞 it 與動詞 is。",
+        "note": "英文的形容詞（funny / good / bad）不能直接當動詞用，前面一定要有 be 動詞（is / was）。",
+        "trap": "Rex W12 真卷常見扣分點：寫出 because it funny（漏掉 be 動詞 is），或將 excited about 誤寫為 excited with。",
+        "commonTraps": [
+          "because 子句漏動詞陷阱（ENG_VERB_OMISSION）：受中文「因為它很好笑」直譯影響，常漏掉 is 寫成 *because it funny。",
+          "介系詞搭配陷阱（ENG_PREP_COLLOCATION）：受 excited with 混淆，對某事件或電影感到興奮應固定使用 excited about。"
+        ],
+        "steps": [
+          "① 先套入前兩格：<He> + <is>（或過去式 was）",
+          "② 配對詞庫介系詞：[excited] 固定搭配 about ➔ excited about",
+          "③ 寫入受詞（the new movie）並接上完整原因子句：because it is very funny（檢查 it 後必有 is！）"
+        ],
+        "insight": "💡 寫完 because 馬上用筆圈出它的「主詞＋動詞」，再也不用怕寫出 *because it funny 被扣分！",
+        "visualBlock": {
+          "kind": "slot_box",
+          "title": "📦 形容詞＋介系詞＋because 完整五格句構槽",
+          "data": {
+            "slots": [
+              {
+                "role": "1. 主詞",
+                "text": "He",
+                "accent": "pri"
+              },
+              {
+                "role": "2. be 動詞",
+                "text": "is",
+                "accent": "ok"
+              },
+              {
+                "role": "3. 形容詞＋介系詞",
+                "text": "excited about",
+                "accent": "warn"
+              },
+              {
+                "role": "4. 受詞",
+                "text": "the new movie",
+                "accent": "pri"
+              },
+              {
+                "role": "5. 完整原因子句",
+                "text": "because it is very funny.",
+                "accent": "ok"
+              }
+            ]
+          },
+          "caption": "📊 第 2 格與第 5 格都要有動詞，句子才算完整滿分！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "thrilled about ... because ...",
+          "happy about ... because ..."
+        ],
+        "grammarCompare": "excited about 後接名詞（the movie）或動名詞（watching the movie）；注意 excited 修飾人，exciting 修飾事物。",
+        "examVariations": "考卷常考五格公式造句、錯題抓漏（補出 because 子句中的 be 動詞）及看圖寫句。"
+      }
+    },
+    {
+      "id": "q_w12_odg3_u16_30",
+      "book_id": "gra3",
+      "unit_id": "gra3_16",
+      "is_midterm": true,
+      "is_week12": true,
+      "is_week13": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "part_title": "Part A: Write a sentence using Adjective + Preposition + because...",
+      "part_instructions": "Choose a preposition from the box to go with the given adjective, and write a sentence about something or someone you know. Your sentence must give a reason.",
+      "word_bank": "by   at   about   in   with   of   for",
+      "sentence_form": "<subject> + <verb \"to be\"> + <adjective + preposition> + <object> + because ...",
+      "tense_hint": "Check both the preposition (with/about/for/by/in/at/of) AND the verb inside your because-clause (never omit 'is/was')!",
+      "difficulty": "★★★☆☆",
+      "difficulty_level": 5,
+      "triadGroup": {
+        "groupId": "ODG3_U16_T4",
+        "tier": "L4-6",
+        "role": "twist"
+      },
+      "trapCodes": [
+        "ENG_PREP_COLLOCATION",
+        "ENG_UNCOUNTABLE_SVA",
+        "ENG_VERB_OMISSION"
+      ],
+      "question": "Write a complete sentence using [disappointed] + the correct preposition from the box, and give a reason starting with \"because...\".",
+      "answer": "He is disappointed with his quiz because he got a bad score.",
+      "options": [],
+      "self_check": [
+        "是否使用 disappointed with（對測驗／物品失望）而非 *disappointed of",
+        "若寫到分數，是否正確寫成單數 a bad score / a low grade（不可寫 *a bad points）",
+        "because 子句是否具備完整「主詞＋動詞」（如 because he got ... 或 because it was ...）"
+      ],
+      "explanation": {
+        "point": "3C 公式造句實戰：be disappointed with + 事物 + because + 原因子句",
+        "examPurpose": "針對 W12 真卷最高頻失分點，訓練學生同時過關「disappointed 介系詞搭配」、「單複數名詞一致」與「because 子句動詞完整性」。",
+        "correctReason": "對測驗成績或具體成果感到失望應使用 disappointed with（對人的表現則用 in）；「一個低分」用單數名詞 a bad score，且 because 後方需有主詞 he 與動詞 got。",
+        "note": "若要表達對「人」失望（例如隊友或自己），也可寫 disappointed in。",
+        "trap": "W12 真卷一次踩三雷：*disappointed of、*a bad points、或 *because it too hard（漏動詞）。",
+        "commonTraps": [
+          "介系詞誤用陷阱（ENG_PREP_COLLOCATION）：受中文直譯影響常誤寫成 *disappointed of，正確必為 with（對物）或 in（對人）。",
+          "冠詞與單複數陷阱（ENG_UNCOUNTABLE_SVA）：不定冠詞 a 只能接單數名詞 a bad score，絕不可寫成 *a bad points。"
+        ],
+        "steps": [
+          "① 決定對象：對測驗失望用 disappointed with（對人失望用 disappointed in）",
+          "② 寫出主句：He is disappointed with his quiz",
+          "③ 補上原因子句並檢查單複數：because he got a bad score.（a + 單數 score！）"
+        ],
+        "insight": "💡 記住三道防線：disappointed WITH（不寫 of）➔ got a bad SCORE（不寫 a points）➔ because 主詞＋動詞！",
+        "visualBlock": {
+          "kind": "compare_table",
+          "title": "⚖️ disappointed 真卷三大地雷排除表",
+          "data": {
+            "headers": [
+              "常見失分錯寫 ❌",
+              "滿分正確寫法 ✅",
+              "避雷口訣"
+            ],
+            "rows": [
+              [
+                "disappointed of the quiz",
+                "disappointed with the quiz",
+                "對物失望用 with、對人失望用 in，禁寫 of"
+              ],
+              [
+                "got a bad points",
+                "got a bad score / bad grades",
+                "有冠詞 a 就用單數 score，不可接複數 points"
+              ],
+              [
+                "because the quiz hard",
+                "because the quiz was hard",
+                "because 子句形容詞前必補 be 動詞 was/is"
+              ]
+            ]
+          },
+          "caption": "📊 對照紅綠燈檢查一遍，就能避開整大題所有扣分地雷！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "unhappy with ... because ...",
+          "upset about ... because ..."
+        ],
+        "grammarCompare": "disappointed with + 事物／結果（the quiz / the cake）；disappointed in + 人（my brother / myself）；disappointed about + 事件消息。",
+        "examVariations": "常見於 W12/W13 真卷造句題、錯題訂正及單複數名詞辨析題。"
+      }
+    },
+    {
+      "id": "q_w12_odg3_u16_31",
+      "book_id": "gra3",
+      "unit_id": "gra3_16",
+      "is_midterm": true,
+      "is_week12": true,
+      "is_week13": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "part_title": "Part A: Write a sentence using Adjective + Preposition + because...",
+      "part_instructions": "Choose a preposition from the box to go with the given adjective, and write a sentence about something or someone you know. Your sentence must give a reason.",
+      "word_bank": "by   at   about   in   with   of   for",
+      "sentence_form": "<subject> + <verb \"to be\"> + <adjective + preposition> + <object> + because ...",
+      "tense_hint": "Check both the preposition (with/about/for/by/in/at/of) AND the verb inside your because-clause (never omit 'is/was')!",
+      "difficulty": "★★★☆☆",
+      "difficulty_level": 5,
+      "triadGroup": {
+        "groupId": "ODG3_U16_T3",
+        "tier": "L4-6",
+        "role": "twist"
+      },
+      "trapCodes": [
+        "ENG_PREP_COLLOCATION",
+        "ENG_POS_CONFUSION",
+        "ENG_VERB_OMISSION"
+      ],
+      "question": "Write a complete sentence using [confused] + the correct preposition from the box, and give a reason starting with \"because...\".",
+      "answer": "She is confused about the science homework because she didn't know how to solve it.",
+      "options": [],
+      "self_check": [
+        "是否使用 confused about（或 confused by），而非誤寫成 *confused with",
+        "若寫到 how，是否記得接上不定詞 to（know how to solve / understand），不可漏掉 to",
+        "because 子句是否包含完整主詞與動詞（且時態與主句情境合理一致）"
+      ],
+      "explanation": {
+        "point": "3C 公式造句實戰：be confused about/by + 受詞 + because + 原因子句",
+        "examPurpose": "考核學生區分 confused about/by（不誤用 with）以及在原因子句中正確使用疑問詞不定詞結構 how to + V 的精確寫作力。",
+        "correctReason": "對某件事感到困惑應搭配 confused about（或被某個難題搞糊塗用 confused by）；原因子句中「知道如何做」必為 know how to + 原形動詞。",
+        "note": "若要表達「把 A 和 B 搞混」，才會用 confuse A with B（動詞用法）；形容詞狀態 be confused 則配 about 或 by。",
+        "trap": "W12 真卷常見兩大錯誤：誤用 *confused with the quiz，以及漏掉 to 寫成 *didn't know how understand。",
+        "commonTraps": [
+          "介系詞誤用陷阱（ENG_PREP_COLLOCATION）：be confused 搭配 about 或 by，不可與 happy with 混淆而誤寫 *confused with。",
+          "不定詞漏 to 陷阱（ENG_POS_CONFUSION）：在「疑問詞 + 不定詞」結構中，不可寫成 *how understand，必須寫為 how to understand / how to solve。"
+        ],
+        "steps": [
+          "① 選定搭配：對作業或問題感到困惑 ➔ confused about（或被複雜規則搞糊塗 ➔ confused by）",
+          "② 檢查連接詞後句子：because + 主詞 she + 動詞 didn't know",
+          "③ 若接 how，必補上不定詞 to + 原形動詞：how to solve it"
+        ],
+        "insight": "💡 「be confused」配 about / by，絕不寫 with；寫「如何做」必寫 how TO + 原形動詞！",
+        "visualBlock": {
+          "kind": "compare_table",
+          "title": "⚖️ confused 雙誤區矯正對照表",
+          "data": {
+            "headers": [
+              "常見失分錯寫 ❌",
+              "正確寫法 ✅",
+              "核心規則"
+            ],
+            "rows": [
+              [
+                "confused with her quiz",
+                "confused about / by her quiz",
+                "形容詞 confused 固定搭配 about 或 by"
+              ],
+              [
+                "didn't know how understand",
+                "didn't know how to understand",
+                "疑問詞 how 後接動詞必須加 to + 原形動詞"
+              ]
+            ]
+          },
+          "caption": "📊 檢查介系詞 about/by 與 how to + V，一次修掉兩個失分點！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "puzzled by ... because ...",
+          "uncertain about ... because ..."
+        ],
+        "grammarCompare": "confused about（對某主題或題目不解）vs confused by（受到複雜指示或外觀相似事物影響而糊塗），兩者皆屬課本正解。",
+        "examVariations": "常考於介系詞選填、how to + V 不定詞結構改錯及閱讀測驗詞義辨析。"
+      }
+    },
+    {
+      "id": "q_w12_odg3_u16_32",
+      "book_id": "gra3",
+      "unit_id": "gra3_16",
+      "is_midterm": true,
+      "is_week12": true,
+      "is_week13": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "part_title": "Part A: Write a sentence using Adjective + Preposition + because...",
+      "part_instructions": "Choose a preposition from the box to go with the given adjective, and write a sentence about something or someone you know. Your sentence must give a reason.",
+      "word_bank": "by   at   about   in   with   of   for",
+      "sentence_form": "<subject> + <verb \"to be\"> + <adjective + preposition> + <object> + because ...",
+      "tense_hint": "Check both the preposition (with/about/for/by/in/at/of) AND the verb inside your because-clause (never omit 'is/was')!",
+      "difficulty": "★★★☆☆",
+      "difficulty_level": 4,
+      "triadGroup": {
+        "groupId": "ODG3_U16_T2",
+        "tier": "L4-6",
+        "role": "twist"
+      },
+      "trapCodes": [
+        "ENG_PREP_COLLOCATION",
+        "ENG_VERB_OMISSION",
+        "ENG_ARTICLE_ERROR"
+      ],
+      "question": "Write a complete sentence using [famous] + the correct preposition from the box, and give a reason starting with \"because...\".",
+      "answer": "Taiwan is famous for its night markets because the street food is delicious.",
+      "options": [],
+      "self_check": [
+        "是否使用 famous for（以...聞名），而非誤寫成 *famous about 或 *famous with",
+        "國名（如 Taiwan / Italy / Japan）前面是否維持零冠詞（不加 *the Taiwan）",
+        "because 後方原因子句是否包含完整「主詞＋動詞」（如 the street food is delicious）"
+      ],
+      "explanation": {
+        "point": "3C 公式造句實戰：be famous for + 特色名產 + because + 原因子句",
+        "examPurpose": "考核學生使用 famous for 表達國家或城市名聲特產，並結合跨單元「國名零冠詞」與「because 完整子句」的綜合造句力。",
+        "correctReason": "表達某地或某人「以某項特色／產品而聞名」固定搭配 famous for；主詞若為一般國名（Taiwan / Italy），前面不可加冠詞 the。",
+        "note": "注意不可寫成 *Italy is famous for it pizza（代名詞 it 誤用，所有格應為 its）。",
+        "trap": "中文直譯「關於...很有名」誤寫 famous about，或在國名前誤加 the（*the Italy），以及 because 子句漏寫 be 動詞。",
+        "commonTraps": [
+          "介系詞誤用陷阱（ENG_PREP_COLLOCATION）：「以某特產聞名」必為 famous for，絕不可受中文干擾寫成 *famous about。",
+          "國名冠詞陷阱（ENG_ARTICLE_ERROR）：單一國名如 Taiwan / Italy / Japan 前面不加 the（僅 United States / UK 等複數或縮寫國名例外）。"
+        ],
+        "steps": [
+          "① 選定主詞與 be 動詞：Taiwan + is（單數國家用 is）",
+          "② 配對專屬介系詞：[famous] 固定搭配 for ➔ famous for",
+          "③ 補上特色受詞與完整原因子句：its night markets because the street food is delicious."
+        ],
+        "insight": "💡 記住：國名不加 the、名產搭配 famous FOR、because 後面必有主詞＋動詞！",
+        "visualBlock": {
+          "kind": "slot_box",
+          "title": "📦 famous for 名產原因句構槽",
+          "data": {
+            "slots": [
+              {
+                "role": "1. 主詞（國名零冠詞）",
+                "text": "Taiwan",
+                "accent": "pri"
+              },
+              {
+                "role": "2. be 動詞",
+                "text": "is",
+                "accent": "ok"
+              },
+              {
+                "role": "3. 形容詞＋介系詞",
+                "text": "famous for",
+                "accent": "warn"
+              },
+              {
+                "role": "4. 特色受詞",
+                "text": "its night markets",
+                "accent": "pri"
+              },
+              {
+                "role": "5. 完整原因子句",
+                "text": "because the street food is delicious.",
+                "accent": "ok"
+              }
+            ]
+          },
+          "caption": "📊 第 1 格國名不加 the，第 5 格 street food 後必補 is！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "well-known for ... because ...",
+          "celebrated for ... because ..."
+        ],
+        "grammarCompare": "famous for＋特色事物（Taiwan is famous for bubble tea）；famous as＋身分角色（He is famous as an artist）。",
+        "examVariations": "常與 Write Right 傳記寫作跨單元連動：介紹歷史人物以哪項成就聞名（was famous for his paintings）。"
+      }
+    },
+    {
+      "id": "q_w12_odg3_u16_33",
+      "book_id": "gra3",
+      "unit_id": "gra3_16",
+      "is_midterm": true,
+      "is_week12": true,
+      "is_week13": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "part_title": "Part A: Write a sentence using Adjective + Preposition + because...",
+      "part_instructions": "Choose a preposition from the box to go with the given adjective, and write a sentence about something or someone you know. Your sentence must give a reason.",
+      "word_bank": "by   at   about   in   with   of   for",
+      "sentence_form": "<subject> + <verb \"to be\"> + <adjective + preposition> + <object> + because ...",
+      "tense_hint": "Check both the preposition (with/about/for/by/in/at/of) AND the verb inside your because-clause (never omit 'is/was')!",
+      "difficulty": "★★★☆☆",
+      "difficulty_level": 4,
+      "triadGroup": {
+        "groupId": "ODG3_U16_T1",
+        "tier": "L4-6",
+        "role": "twist"
+      },
+      "trapCodes": [
+        "ENG_PREP_COLLOCATION",
+        "ENG_POS_CONFUSION",
+        "ENG_VERB_OMISSION"
+      ],
+      "question": "Write a complete sentence using [interested] + the correct preposition from the box, and give a reason starting with \"because...\".",
+      "answer": "My sister is interested in cooking healthy meals because she loves fresh vegetables.",
+      "options": [],
+      "self_check": [
+        "是否使用 interested in（對...感興趣），而非誤寫成 *interested about 或 *interested at",
+        "若 in 後方接動作，動詞是否轉為動名詞 V-ing（如 in cooking / in reading）",
+        "because 後方原因子句是否包含完整「主詞＋動詞」（如 she loves ... 或 it is ...）"
+      ],
+      "explanation": {
+        "point": "3C 公式造句實戰：be interested in + 名詞/V-ing + because + 原因子句",
+        "examPurpose": "考核學生將基礎介系詞搭配 interested in 進階運用到完整長句寫作中，同時正確處理介系詞後接 V-ing 及原因子句動詞。",
+        "correctReason": "interested 固定搭配介系詞 in；介系詞 in 後若接動詞必須變為動名詞 V-ing（cooking）；because 後方需有完整主詞 she 與三單動詞 loves。",
+        "note": "若主詞是第三人稱單數（she / he / my sister），現在式一般動詞記得加 -s（loves / likes）。",
+        "trap": "將 interested in 誤寫成 *interested about，或漏掉動名詞 -ing（*interested in cook）及三單 -s（*she love）。",
+        "commonTraps": [
+          "介系詞誤用陷阱（ENG_PREP_COLLOCATION）：中文「對...有興趣」常誘使寫出 *interested about，正確固定搭配為 interested in。",
+          "介系詞後動詞型態陷阱（ENG_POS_CONFUSION）：in 為介系詞，後方若接動詞必須加 -ing（cooking），不可用原形或 to + V。"
+        ],
+        "steps": [
+          "① 搭配詞庫介系詞：[interested] 固定配 in ➔ is interested in",
+          "② 接名詞或動名詞：cooking healthy meals（介系詞後動詞加 -ing）",
+          "③ 補上完整原因子句：because she loves fresh vegetables.（檢查主詞＋動詞與三單 -s！）"
+        ],
+        "insight": "💡 「interested IN ＋ V-ing」一次記兩件事：介系詞用 in、後面動詞要加 -ing！",
+        "visualBlock": {
+          "kind": "prep_ladder",
+          "title": "🧭 常用形容詞介系詞搭配階梯總覽",
+          "data": {
+            "levels": [
+              {
+                "prep": "in",
+                "scope": "興趣投入（必接名詞或 V-ing）",
+                "examples": [
+                  "interested in cooking",
+                  "interested in science"
+                ],
+                "highlight": true
+              },
+              {
+                "prep": "at",
+                "scope": "能力擅長程度（必接名詞或 V-ing）",
+                "examples": [
+                  "good at baking",
+                  "bad at swimming"
+                ],
+                "highlight": false
+              },
+              {
+                "prep": "about",
+                "scope": "心理情緒起伏（興奮／擔憂／困惑）",
+                "examples": [
+                  "excited about",
+                  "worried about",
+                  "confused about"
+                ],
+                "highlight": false
+              },
+              {
+                "prep": "for",
+                "scope": "特色名產聞名",
+                "examples": [
+                  "famous for its pizza"
+                ],
+                "highlight": false
+              }
+            ]
+          },
+          "caption": "📊 四層階梯幫你秒區分 in / at / about / for！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "keen on ... because ...",
+          "curious about ... because ..."
+        ],
+        "grammarCompare": "interested（感到有興趣，修飾人）必須搭配 in；interesting（令人感興趣的，修飾事物）則不需要固定配 in。",
+        "examVariations": "常與 good at 並列出現在對比對話填空、造句與改錯題中。"
+      }
+    },
+    {
+      "id": "q_w12_odg3_u16_34",
+      "book_id": "gra3",
+      "unit_id": "gra3_16",
+      "is_midterm": true,
+      "is_week12": true,
+      "is_week13": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "part_title": "Part A: Write a sentence using Adjective + Preposition + because...",
+      "part_instructions": "Choose a preposition from the box to go with the given adjective, and write a sentence about something or someone you know. Your sentence must give a reason.",
+      "word_bank": "by   at   about   in   with   of   for",
+      "sentence_form": "<subject> + <verb \"to be\"> + <adjective + preposition> + <object> + because ...",
+      "tense_hint": "Check both the preposition (with/about/for/by/in/at/of) AND the verb inside your because-clause (never omit 'is/was')!",
+      "difficulty": "★★★★☆",
+      "difficulty_level": 6,
+      "triadGroup": {
+        "groupId": "ODG3_U16_T3",
+        "tier": "L4-6",
+        "role": "twist"
+      },
+      "trapCodes": [
+        "ENG_PREP_COLLOCATION",
+        "ENG_POS_CONFUSION",
+        "ENG_VERB_OMISSION"
+      ],
+      "question": "Write a complete sentence using [worried] + the correct preposition from the box, and give a reason starting with \"because...\".",
+      "answer": "Mom is worried about eating junk food because it is full of chemicals.",
+      "options": [],
+      "self_check": [
+        "是否使用 worried about（而非誤寫成 *worried with 或 *worried of）",
+        "若 about 後方接動作，動詞是否轉為動名詞 V-ing（如 about eating / about failing）",
+        "because 後方原因子句是否包含完整「主詞＋動詞」（如 it is full of chemicals，不可漏寫 is）"
+      ],
+      "explanation": {
+        "point": "3C 公式造句實戰：be worried about + V-ing/名詞 + because + 原因子句",
+        "examPurpose": "考核學生整合 worried about、介系詞接動名詞 eating 以及課文核心片語 full of 於一體的複合造句能力。",
+        "correctReason": "表達對某情況或潛在問題感到擔憂固定搭配 worried about；介系詞 about 後接動詞 eat 需改為 eating；原因子句 it is full of chemicals 具備完整主詞＋動詞與固定搭配 full of。",
+        "note": "注意 worried about 後面絕對不能接原形動詞（不可寫 *worried about eat）。",
+        "trap": "受 afraid of 影響誤寫 *worried of，或介系詞後忘記將動詞加 -ing，以及在 *because it full of chemicals 中漏掉 be 動詞 is。",
+        "commonTraps": [
+          "介系詞雙重混淆陷阱（ENG_PREP_COLLOCATION）：worried 搭配 about（不可用 of/with）；原因子句中 full 搭配 of（不可用 *full with）。",
+          "原因子句漏 be 動詞陷阱（ENG_VERB_OMISSION）：full 是形容詞，寫成 *because it full of chemicals 會缺動詞，必須補上 is。"
+        ],
+        "steps": [
+          "① 決定情緒搭配：[worried] 固定配 about ➔ is worried about",
+          "② 填入受詞或動名詞：eating junk food（about 後動詞必加 -ing）",
+          "③ 串接原因子句並檢查形容詞前補 be 動詞：because it is full of chemicals."
+        ],
+        "insight": "💡 這句一石三鳥：worried ABOUT ＋ eatING ＋ because it IS full OF！三個高頻考點全包了！",
+        "visualBlock": {
+          "kind": "slot_box",
+          "title": "📦 worried about ＋ full of 雙搭配五格句構槽",
+          "data": {
+            "slots": [
+              {
+                "role": "1. 主詞",
+                "text": "Mom",
+                "accent": "pri"
+              },
+              {
+                "role": "2. be 動詞",
+                "text": "is",
+                "accent": "ok"
+              },
+              {
+                "role": "3. 形容詞＋介系詞",
+                "text": "worried about",
+                "accent": "warn"
+              },
+              {
+                "role": "4. 動名詞受詞",
+                "text": "eating junk food",
+                "accent": "pri"
+              },
+              {
+                "role": "5. 完整原因子句",
+                "text": "because it is full of chemicals.",
+                "accent": "ok"
+              }
+            ]
+          },
+          "caption": "📊 第 4 格檢查 -ing，第 5 格檢查 is 與 full of！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "concerned about ... because ...",
+          "anxious about ... because ..."
+        ],
+        "grammarCompare": "worried about（心裡焦急擔憂）vs afraid of（害怕恐懼），介系詞完全不同；worried about 後接動名詞，afraid of 亦接動名詞。",
+        "examVariations": "常出現於食品安全閱讀寫作題、介系詞與動名詞雙空填充題及短文改錯題。"
+      }
+    },
+    {
+      "id": "q_w12_odg3_u16_35",
+      "book_id": "gra3",
+      "unit_id": "gra3_16",
+      "is_midterm": true,
+      "is_week12": true,
+      "is_week13": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "part_title": "Part A: Write a sentence using Adjective + Preposition + because...",
+      "part_instructions": "Choose a preposition from the box to go with the given adjective, and write a sentence about something or someone you know. Your sentence must give a reason.",
+      "word_bank": "by   at   about   in   with   of   for",
+      "sentence_form": "<subject> + <verb \"to be\"> + <adjective + preposition> + <object> + because ...",
+      "tense_hint": "Check both the preposition (with/about/for/by/in/at/of) AND the verb inside your because-clause (never omit 'is/was')!",
+      "difficulty": "★★★★★",
+      "difficulty_level": 8,
+      "triadGroup": {
+        "groupId": "ODG3_U16_T2",
+        "tier": "L7-10",
+        "role": "challenge"
+      },
+      "trapCodes": [
+        "ENG_PREP_COLLOCATION",
+        "ENG_TENSE_MISMATCH",
+        "ENG_THERE_BE_VS_HAVE"
+      ],
+      "question": "Write a complete sentence using [surprised] + the correct preposition from the box, and give a reason starting with \"because...\" (pay attention to past tense and \"there is/was\").",
+      "answer": "We were surprised by the food label because there was so much sugar in the juice.",
+      "options": [],
+      "self_check": [
+        "是否使用 surprised by（課本標準搭配），而非誤寫成 *surprised of",
+        "若使用過去式（were surprised），because 子句時態是否同步使用過去式（was / had / were）",
+        "若表達「某處有某物」，是否正確使用 there was / there is 而非誤用 *only have"
+      ],
+      "explanation": {
+        "point": "3C 公式造句高階實戰：were surprised by + 受詞 + because + there was + 不可數名詞",
+        "examPurpose": "結合 W12 多項高難度盲點：surprised by 搭配、前後句過去式時態一致，以及「存在句 there was + 不可數名詞 sugar」不誤用 have。",
+        "correctReason": "受事實震驚用 surprised by；主句為過去式 We were surprised，因此原因子句配合使用過去式 there was；sugar 為不可數名詞，存在句固定搭配單數 was。",
+        "note": "表達「飲料裡面有很多糖」不能寫 *because it have so much sugar 或 *because there have，必用 there was / there is。",
+        "trap": "一題四個連動陷阱：*surprised of、前後時態混用（were 配 is）、誤用 *there have、以及不可數名詞 sugar 誤配複數 were。",
+        "commonTraps": [
+          "存在句誤用 have 陷阱（ENG_THERE_BE_VS_HAVE）：中式英文常誤寫 *because it have / *there have，存在句必須使用 there was / there is。",
+          "時態與不可數主謂一致陷阱（ENG_TENSE_MISMATCH / ENG_UNCOUNTABLE_SVA）：past tense 搭不可數名詞 sugar 必須用單數 there was。"
+        ],
+        "steps": [
+          "① 設定過去事件主句：We were surprised by the food label（注意 surprised 搭 by，不用 of！）",
+          "② 檢查時態一致性：主句用了 were，原因子句也對齊過去式",
+          "③ 表達「果汁裡有大量糖」：用存在句 there was（不可數名詞 sugar 用單數 was，不用 have！）"
+        ],
+        "insight": "💡 高手造句三連擊：surprised BY ＋ 過去式一致 were/was ＋ 存在句 there WAS（不用 have）！",
+        "visualBlock": {
+          "kind": "timeline",
+          "title": "⏳ 過去反應與原因事實時態一致軸",
+          "data": {
+            "events": [
+              {
+                "time": "當時看到標籤 (Past)",
+                "label": "We were surprised by the food label",
+                "highlight": true
+              },
+              {
+                "time": "當時瓶中事實 (Past)",
+                "label": "because there was so much sugar in the juice",
+                "highlight": true
+              }
+            ],
+            "rule": "主句使用過去式 were 時，because 原因子句描述當時情境亦須同步維持過去式 was（不可混寫現在式或誤用 have）"
+          },
+          "caption": "📊 先對齊時間軸（過去式），再檢查不可數名詞 sugar 配單數 was！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "amazed by ... because ...",
+          "shocked by ... because ..."
+        ],
+        "grammarCompare": "surprised by＋名詞／子句（被某事驚訝）vs surprised to＋原形動詞（驚訝地發現／看到某事，如 surprised to see）。",
+        "examVariations": "屬於 L7-10 綜合素養寫作題型，常同時檢核介系詞、時態一致性與存在句 there be。"
+      }
+    },
+    {
+      "id": "q_w12_odg3_u16_36",
+      "book_id": "gra3",
+      "unit_id": "gra3_16",
+      "is_midterm": true,
+      "is_week12": true,
+      "is_week13": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "part_title": "Part A: Write a sentence using Adjective + Preposition + because...",
+      "part_instructions": "Choose a preposition from the box to go with the given adjective, and write a sentence about something or someone you know. Your sentence must give a reason.",
+      "word_bank": "by   at   about   in   with   of   for",
+      "sentence_form": "<subject> + <verb \"to be\"> + <adjective + preposition> + <object> + because ...",
+      "tense_hint": "Check both the preposition (with/about/for/by/in/at/of) AND the verb inside your because-clause (never omit 'is/was')!",
+      "difficulty": "★★★★★",
+      "difficulty_level": 8,
+      "triadGroup": {
+        "groupId": "ODG3_U16_T1",
+        "tier": "L7-10",
+        "role": "challenge"
+      },
+      "trapCodes": [
+        "ENG_PREP_COLLOCATION",
+        "ENG_POS_CONFUSION",
+        "ENG_TENSE_MISMATCH"
+      ],
+      "question": "Write a complete sentence using [good] + the correct preposition from the box, a gerund (V-ing) or noun, and a reason clause starting with \"because...\".",
+      "answer": "Lisa is not good at baking cakes because she mixed up the salt and sugar.",
+      "options": [],
+      "self_check": [
+        "是否使用 good at（擅長某項技能），而非受中文影響誤用 *good in",
+        "at 後方若接動詞（如 bake / cook / draw），是否轉為動名詞 V-ing（baking / cooking / drawing）",
+        "because 後方原因子句是否包含完整「主詞＋動詞」，且描述過去失誤時動詞是否轉為過去式（如 mixed / forgot）"
+      ],
+      "explanation": {
+        "point": "3C 公式造句高階實戰：be (not) good at + V-ing + because + 過去式原因子句",
+        "examPurpose": "考核學生區分 good at（能力）與 interested in（興趣）、介系詞後接去 e 加 ing 動名詞（baking），及跨時態原因敘述（現在能力＋過去事證）的高階寫作力。",
+        "correctReason": "表達擅長或不擅長某項技能固定搭配 good at；介系詞 at 後接動詞 bake 需去 e 加 -ing 變為 baking；原因子句說明過去發生的佐證事件，使用過去式動詞 mixed up。",
+        "note": "也可以描述人物品格：It is good of you to help me（評價人好用 good of）；但「擅長某技能」必用 good at！",
+        "trap": "中文「在烘培方面不好」常誘使寫成 *good in bake，既錯介系詞又漏動名詞 -ing；原因子句講過去事件卻忘改過去式（*she mix up）。",
+        "commonTraps": [
+          "能力介系詞與詞性雙錯（ENG_PREP_COLLOCATION / ENG_POS_CONFUSION）：不可寫 *good in bake，必須同時寫對介系詞 at 與動名詞 baking。",
+          "跨時態原因漏改過去式（ENG_TENSE_MISMATCH）：主句講現在能力（is not good at），但舉過去曾犯的錯當理由時，because 子句必須改用過去式（mixed / forgot）。"
+        ],
+        "steps": [
+          "① 確認語意是「擅長技能」➔ 選用 good at（非 good in）",
+          "② 把技能動詞 bake 去 e 加 -ing ➔ baking cakes",
+          "③ 寫入過去佐證原因：because she mixed up the salt and sugar.（檢查主詞＋過去式動詞！）"
+        ],
+        "insight": "💡 「現在能力（is good at ＋ V-ing）」＋「過去證據（because ＋ 過去式）」是最地道的高階考場寫法！",
+        "visualBlock": {
+          "kind": "compare_table",
+          "title": "⚖️ good at 造句常見連環錯 vs 高分寫法",
+          "data": {
+            "headers": [
+              "常見失分錯寫 ❌",
+              "高分正確寫法 ✅",
+              "失分原因診斷"
+            ],
+            "rows": [
+              [
+                "not good in bake cakes",
+                "not good at baking cakes",
+                "擅長用 at 不用 in；介系詞後動詞必用 V-ing"
+              ],
+              [
+                "because she forget the recipe",
+                "because she mixed up / forgot...",
+                "描述過去出錯事實，第三人稱或過去事件不可漏改動詞時態"
+              ]
+            ]
+          },
+          "caption": "📊 先檢視 at + V-ing，再核對 because 子句的動詞時態！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "skilled at ... because ...",
+          "terrible at ... because ..."
+        ],
+        "grammarCompare": "be good at（擅長某技藝）vs be good for（對健康有益，如 Milk is good for you）vs be good of sb（某人真好，如 good of you to help）。",
+        "examVariations": "大考極常將 good at（擅長）、good for（有益）與 good of（人品好）放在同一題組進行介系詞辨析。"
       }
     },
     {
@@ -46274,7 +47878,8 @@ const ENGLISH_DATA = {
       },
       "target_chi": "園丁；造園者",
       "target_pos": "名詞 (Noun)",
-      "masked_example": "Mrs. Washington saved an extra big slice of pie for a good little ________ she knows."
+      "masked_example": "Mrs. Washington saved an extra big slice of pie for a good little ________ she knows.",
+      "is_week13": false
     },
     {
       "id": "q_w12_od3_u16_02",
@@ -46329,7 +47934,8 @@ const ENGLISH_DATA = {
       },
       "target_chi": "地瓜；甘藷",
       "target_pos": "名詞 (Noun)",
-      "masked_example": "Mrs. Willie Mae Washington dug up orange ________ to bake a warm autumn pie."
+      "masked_example": "Mrs. Willie Mae Washington dug up orange ________ to bake a warm autumn pie.",
+      "is_week13": false
     },
     {
       "id": "q_w12_od3_u16_03",
@@ -46384,7 +47990,8 @@ const ENGLISH_DATA = {
       },
       "target_chi": "豆子；豆類",
       "target_pos": "名詞 (Noun)",
-      "masked_example": "Mr. Singh carried away a basket full of fresh ________ from the community garden."
+      "masked_example": "Mr. Singh carried away a basket full of fresh ________ from the community garden.",
+      "is_week13": false
     },
     {
       "id": "q_w12_od3_u16_04",
@@ -46439,7 +48046,8 @@ const ENGLISH_DATA = {
       },
       "target_chi": "藤蔓；攀爬植物",
       "target_pos": "名詞 (Noun)",
-      "masked_example": "Standing higher than all the plants and climbing ________ was a giant golden sunflower."
+      "masked_example": "Standing higher than all the plants and climbing ________ was a giant golden sunflower.",
+      "is_week13": false
     },
     {
       "id": "q_w12_od3_u16_05",
@@ -46494,7 +48102,8 @@ const ENGLISH_DATA = {
       },
       "target_chi": "花園；菜園",
       "target_pos": "名詞 (Noun)",
-      "masked_example": "Marisol planted her precious seed in the small community ________."
+      "masked_example": "Marisol planted her precious seed in the small community ________.",
+      "is_week13": false
     },
     {
       "id": "q_w12_od3_u16_06",
@@ -46549,7 +48158,8 @@ const ENGLISH_DATA = {
       },
       "target_chi": "薄霧；陰霾；光暈",
       "target_pos": "名詞 (Noun)",
-      "masked_example": "A golden ________ shone on the street as cheerful neighbors gathered together."
+      "masked_example": "A golden ________ shone on the street as cheerful neighbors gathered together.",
+      "is_week13": false
     },
     {
       "id": "q_w12_od3_u16_07",
@@ -46604,7 +48214,8 @@ const ENGLISH_DATA = {
       },
       "target_chi": "青少年 (13至19歲)",
       "target_pos": "名詞 (Noun)",
-      "masked_example": "A creative group of ________ wanted to paint a beautiful mural on the brick wall."
+      "masked_example": "A creative group of ________ wanted to paint a beautiful mural on the brick wall.",
+      "is_week13": false
     },
     {
       "id": "q_w12_od3_u16_08",
@@ -46659,7 +48270,8 @@ const ENGLISH_DATA = {
       },
       "target_chi": "社區；共同體",
       "target_pos": "名詞 (Noun)",
-      "masked_example": "The neighbors worked side by side to build a warm ________ where everyone helped."
+      "masked_example": "The neighbors worked side by side to build a warm ________ where everyone helped.",
+      "is_week13": false
     },
     {
       "id": "q_w12_od3_u16_09",
@@ -46714,7 +48326,8 @@ const ENGLISH_DATA = {
       },
       "target_chi": "人群；群眾",
       "target_pos": "名詞 (Noun)",
-      "masked_example": "A large ________ of smiling people filled the street like on a holiday."
+      "masked_example": "A large ________ of smiling people filled the street like on a holiday.",
+      "is_week13": false
     },
     {
       "id": "q_w12_od3_u16_10",
@@ -46769,7 +48382,8 @@ const ENGLISH_DATA = {
       },
       "target_chi": "超市手推車；購物車",
       "target_pos": "名詞 (Noun)",
-      "masked_example": "Mrs. Anderson pushed her metal ________ along the street."
+      "masked_example": "Mrs. Anderson pushed her metal ________ along the street.",
+      "is_week13": false
     },
     {
       "id": "q_w12_od3_u16_11",
@@ -46824,7 +48438,8 @@ const ENGLISH_DATA = {
       },
       "target_chi": "澆水 (動詞)；水 (名詞)",
       "target_pos": "動詞 (Verb) / 名詞",
-      "masked_example": "Every morning Marisol went to ________ her little green sprout."
+      "masked_example": "Every morning Marisol went to ________ her little green sprout.",
+      "is_week13": false
     },
     {
       "id": "q_w12_od3_u16_12",
@@ -46879,7 +48494,8 @@ const ENGLISH_DATA = {
       },
       "target_chi": "好奇的；渴望探究的",
       "target_pos": "形容詞 (Adjective)",
-      "masked_example": "Marisol was very ________ about what kind of plant would grow from the seed."
+      "masked_example": "Marisol was very ________ about what kind of plant would grow from the seed.",
+      "is_week13": false
     },
     {
       "id": "q_w12_od3_u16_13",
@@ -46935,7 +48551,8 @@ const ENGLISH_DATA = {
       "target_chi": "開花；綻放；盛放期",
       "target_pos": "動詞 (Verb) / 名詞",
       "masked_example": "Mrs. Washington said there is a time to ________ and a time to die.",
-      "masked_example_chi": "Washington 太太說萬物皆有盛開之時，也有衰亡之日。"
+      "masked_example_chi": "Washington 太太說萬物皆有盛開之時，也有衰亡之日。",
+      "is_week13": false
     },
     {
       "id": "q_w12_od3_u16_14",
@@ -46990,7 +48607,8 @@ const ENGLISH_DATA = {
       },
       "target_chi": "空的；空無一物的",
       "target_pos": "形容詞 (Adjective)",
-      "masked_example": "Marisol was too heartbroken to look at the ________ lot where her sunflower had stood."
+      "masked_example": "Marisol was too heartbroken to look at the ________ lot where her sunflower had stood.",
+      "is_week13": false
     },
     {
       "id": "q_w12_od3_u16_15",
@@ -47045,7 +48663,8 @@ const ENGLISH_DATA = {
       },
       "target_chi": "空置的；未被佔用的",
       "target_pos": "形容詞 (Adjective)",
-      "masked_example": "The city allowed neighbors to plant flowers in the ________ lot on the corner."
+      "masked_example": "The city allowed neighbors to plant flowers in the ________ lot on the corner.",
+      "is_week13": false
     },
     {
       "id": "q_w12_od3_u16_16",
@@ -47100,7 +48719,8 @@ const ENGLISH_DATA = {
       },
       "target_chi": "不怕的；無所畏懼的",
       "target_pos": "形容詞 (Adjective)",
-      "masked_example": "The brave little girl stood ________ when working hard in the soil."
+      "masked_example": "The brave little girl stood ________ when working hard in the soil.",
+      "is_week13": false
     },
     {
       "id": "q_w12_od3_u16_17",
@@ -47155,7 +48775,8 @@ const ENGLISH_DATA = {
       },
       "target_chi": "成熟的；長成的",
       "target_pos": "形容詞 (Adjective)",
-      "masked_example": "When the plant became ________, its yellow petals opened wide in the sun."
+      "masked_example": "When the plant became ________, its yellow petals opened wide in the sun.",
+      "is_week13": false
     },
     {
       "id": "q_w12_od3_u16_18",
@@ -47195,7 +48816,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "curious about (好奇某事物) 與 interested in (對某活動有濃厚興趣) 的介系詞差異。",
         "examVariations": "常見改寫題：She wants to know about X. -> She is curious about X."
-      }
+      },
+      "is_week13": false
     },
     {
       "id": "q_w12_od3_u16_19",
@@ -47235,7 +48857,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "full of (形容詞片語，接 of) vs filled with (過去分詞片語，接 with)。",
         "examVariations": "句子合併題：The basket had many beans. Mr. Singh was happy. -> Mr. Singh was proud of the basket full of beans."
-      }
+      },
+      "is_week13": false
     },
     {
       "id": "q_w12_od3_u16_20",
@@ -47275,7 +48898,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "good for (對健康有益) vs good at (擅長才藝) vs good of (評價某人為人良善)。",
         "examVariations": "三合一辨析題：Apples are good for you, she is good at sports, and it is good of you to help."
-      }
+      },
+      "is_week13": false
     },
     {
       "id": "q_w12_od3_u16_21",
@@ -47315,7 +48939,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "過去式描寫記敘文 (planted, watered) vs 現在式習慣描寫 (plants, waters)。",
         "examVariations": "情節問答題：Where did Marisol plant her seed? -> She planted it in a vacant lot in her neighborhood."
-      }
+      },
+      "is_week13": false
     },
     {
       "id": "q_w12_od3_u16_22",
@@ -47355,7 +48980,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "so (表結果因此) 與 because (表原因因為) 在複合句中的正確邏輯連結。",
         "examVariations": "主題探討題：What does the mural represent? -> It represents everlasting happiness and community unity."
-      }
+      },
+      "is_week13": false
     },
     {
       "id": "q_w12_od3_u16_23",
@@ -47393,7 +49019,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "curious about (好奇某事物) vs interested in (對某活動感興趣) 的介系詞差異。",
         "examVariations": "改寫題：She wants to know about the flower. = She is curious about the flower."
-      }
+      },
+      "is_week13": false
     },
     {
       "id": "q_w12_od3_u16_24",
@@ -47431,7 +49058,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "surprised at (對特定現象吃驚) vs surprised by (受到某人或某力量震撼)。",
         "examVariations": "對話填空：The teacher was surprised at all your mistakes."
-      }
+      },
+      "is_week13": false
     },
     {
       "id": "q_w12_od3_u16_25",
@@ -47469,7 +49097,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "happy with + 作品/成果 (滿意) vs happy about + 事件 (為某事開心)。",
         "examVariations": "反義對比：happy with (滿意) vs disappointed with (失望)。"
-      }
+      },
+      "is_week13": false
     },
     {
       "id": "q_w12_od3_u16_26",
@@ -47507,7 +49136,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "in the ground (在泥土內部，如地瓜胡蘿蔔) vs on trees (在樹上，如果實懸掛)。",
         "examVariations": "分類題：Which crop grows in the ground? (A) Sweet potatoes (B) Apples (C) Pumpkins."
-      }
+      },
+      "is_week13": false
     },
     {
       "id": "q_w12_od3_u16_27",
@@ -47545,7 +49175,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "grow on vines (長在藤蔓上) vs grow on trees (長在樹上) vs grow in pots (種在花盆裡)。",
         "examVariations": "寫作練習：Pumpkins and beans grow on vines in the community garden."
-      }
+      },
+      "is_week13": false
     },
     {
       "id": "q_w12_od3_u16_28",
@@ -47583,7 +49214,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "故事結構三部曲：Beginning (開端播種), Middle (向日葵盛放與枯萎), End (向日葵壁畫誕生)。",
         "examVariations": "情節判斷題：What was Marisol's plant at the beginning? (A single mystery seed)."
-      }
+      },
+      "is_week13": false
     },
     {
       "id": "q_w12_od3_u16_29",
@@ -47621,7 +49253,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "使役動詞用法：make + 受詞 + 原形動詞 (made people stop and smile)。",
         "examVariations": "明喻修辭：The flower was brighter than a yellow taxi (運用比喻描寫耀眼金黃)。"
-      }
+      },
+      "is_week13": false
     },
     {
       "id": "q_w12_od3_u16_30",
@@ -47659,7 +49292,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "There is a time to bloom and a time to die (平行句結構對比盛放與凋零)。",
         "examVariations": "角色安慰對話：Mrs. Rodriguez told her to save the seeds and plant again next spring."
-      }
+      },
+      "is_week13": false
     },
     {
       "id": "q_w12_od3_u16_31",
@@ -47697,7 +49331,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "vacant (強調未被租用、無建物) ⟷ empty (強調內部空無一物)。",
         "examVariations": "同義字代換：She walked to the vacant lot. = She walked to the empty lot."
-      }
+      },
+      "is_week13": false
     },
     {
       "id": "q_w12_od3_u16_32",
@@ -47735,7 +49370,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "過去完成式感應：What made Marisol laugh was what she saw (名詞子句當主詞)。",
         "examVariations": "主旨題：What kept happiness in the garden? -> The mural painted by caring teenagers."
-      }
+      },
+      "is_week13": false
     },
     {
       "id": "q_w12_rww6_u09_01",
@@ -47791,7 +49427,8 @@ const ENGLISH_DATA = {
       },
       "target_chi": "冷靜的；平靜的",
       "target_pos": "形容詞 (Adjective)",
-      "masked_example": "I don't know how you can be so ________, Nora, after so much time in space."
+      "masked_example": "I don't know how you can be so ________, Nora, after so much time in space.",
+      "is_week13": false
     },
     {
       "id": "q_w12_rww6_u09_02",
@@ -47847,7 +49484,8 @@ const ENGLISH_DATA = {
       },
       "target_chi": "有自信的；有信心的",
       "target_pos": "形容詞 (Adjective)",
-      "masked_example": "I remember Nora being quiet, but ________ when she was little."
+      "masked_example": "I remember Nora being quiet, but ________ when she was little.",
+      "is_week13": false
     },
     {
       "id": "q_w12_rww6_u09_03",
@@ -47903,7 +49541,8 @@ const ENGLISH_DATA = {
       },
       "target_chi": "友善的；親切的",
       "target_pos": "形容詞 (Adjective)",
-      "masked_example": "Rayyan, you were always so ________, I don't think you can be rude."
+      "masked_example": "Rayyan, you were always so ________, I don't think you can be rude.",
+      "is_week13": false
     },
     {
       "id": "q_w12_rww6_u09_04",
@@ -47959,7 +49598,8 @@ const ENGLISH_DATA = {
       },
       "target_chi": "大膽的；敢於冒險的",
       "target_pos": "形容詞 (Adjective)",
-      "masked_example": "Their ________ parents left Earth years before with a group of explorers to live on planet Regulus."
+      "masked_example": "Their ________ parents left Earth years before with a group of explorers to live on planet Regulus.",
+      "is_week13": false
     },
     {
       "id": "q_w12_rww6_u09_05",
@@ -48016,7 +49656,8 @@ const ENGLISH_DATA = {
       "target_chi": "緊張的；擔憂不安的",
       "target_pos": "形容詞 (Adjective)",
       "masked_example": "His twin sister, Nora, knew that Rayyan talked a lot when he was ________.",
-      "masked_example_chi": "他的雙胞胎妹妹諾拉心裡明白，拉揚感到緊張時就會說個不停。"
+      "masked_example_chi": "他的雙胞胎妹妹諾拉心裡明白，拉揚感到緊張時就會說個不停。",
+      "is_week13": false
     },
     {
       "id": "q_w12_rww6_u09_06",
@@ -48073,7 +49714,8 @@ const ENGLISH_DATA = {
       "target_chi": "粗魯的；無禮的",
       "target_pos": "形容詞 (Adjective)",
       "masked_example": "Sorry, I don't mean to be ________, but I don't remember you.",
-      "masked_example_chi": "抱歉，我不是故意沒禮貌，但我記不得妳了。"
+      "masked_example_chi": "抱歉，我不是故意沒禮貌，但我記不得妳了。",
+      "is_week13": false
     },
     {
       "id": "q_w12_rww6_u09_07",
@@ -48130,7 +49772,8 @@ const ENGLISH_DATA = {
       "target_chi": "害羞的；靦腆的",
       "target_pos": "形容詞 (Adjective)",
       "masked_example": "Yes, I'm Rayyan, and this is Nora. She's the ________ one.",
-      "masked_example_chi": "是的，我是拉揚，這是諾拉。她比較害羞。"
+      "masked_example_chi": "是的，我是拉揚，這是諾拉。她比較害羞。",
+      "is_week13": false
     },
     {
       "id": "q_w12_rww6_u09_08",
@@ -48186,7 +49829,8 @@ const ENGLISH_DATA = {
       },
       "target_chi": "體貼周到的；深思熟慮的",
       "target_pos": "形容詞 (Adjective)",
-      "masked_example": "Nora just smiled and looked ________ as she recognized cousin Irdina."
+      "masked_example": "Nora just smiled and looked ________ as she recognized cousin Irdina.",
+      "is_week13": false
     },
     {
       "id": "q_w12_rww6_u09_09",
@@ -48242,7 +49886,8 @@ const ENGLISH_DATA = {
       },
       "target_chi": "外向的；開朗好社交的",
       "target_pos": "形容詞 (Adjective)",
-      "masked_example": "If you're more ________, you probably like to play team sports like soccer or basketball."
+      "masked_example": "If you're more ________, you probably like to play team sports like soccer or basketball.",
+      "is_week13": false
     },
     {
       "id": "q_w12_rww6_u09_10",
@@ -48299,7 +49944,8 @@ const ENGLISH_DATA = {
       "target_chi": "更偏好；更喜歡",
       "target_pos": "動詞 (Verb)",
       "masked_example": "If you're quiet, you may ________ an individual sport, like tennis or golf.",
-      "masked_example_chi": "如果你比較安靜，你可能會偏好網球或高爾夫球等個人運動。"
+      "masked_example_chi": "如果你比較安靜，你可能會偏好網球或高爾夫球等個人運動。",
+      "is_week13": false
     },
     {
       "id": "q_w12_rww6_u09_11",
@@ -48356,7 +50002,8 @@ const ENGLISH_DATA = {
       "target_chi": "嚴肅的；認真的",
       "target_pos": "形容詞 (Adjective)",
       "masked_example": "Are you usually ________ or usually laughing? How would you describe yourself?",
-      "masked_example_chi": "你通常是神情嚴肅還是總是笑口常開？你會如何描述自己？"
+      "masked_example_chi": "你通常是神情嚴肅還是總是笑口常開？你會如何描述自己？",
+      "is_week13": false
     },
     {
       "id": "q_w12_rww6_u09_12",
@@ -48412,7 +50059,8 @@ const ENGLISH_DATA = {
       },
       "target_chi": "成年人；大人",
       "target_pos": "名詞 (Noun)",
-      "masked_example": "The ________ make sure they have crafts to do and games to play at the family reunion."
+      "masked_example": "The ________ make sure they have crafts to do and games to play at the family reunion.",
+      "is_week13": false
     },
     {
       "id": "q_w12_rww6_u09_13",
@@ -48468,7 +50116,8 @@ const ENGLISH_DATA = {
       },
       "target_chi": "個人的；單獨的",
       "target_pos": "形容詞 (Adjective)",
-      "masked_example": "Tennis and golf are examples of ________ sports that you can play on your own."
+      "masked_example": "Tennis and golf are examples of ________ sports that you can play on your own.",
+      "is_week13": false
     },
     {
       "id": "q_w12_rww6_u09_14",
@@ -48525,7 +50174,8 @@ const ENGLISH_DATA = {
       "target_chi": "不停歇地；不間斷的",
       "target_pos": "副詞 (Adverb) / 形容詞",
       "masked_example": "He talked almost ________ all morning to everyone on the shuttle.",
-      "masked_example_chi": "整個早晨他在太空梭上幾乎滔滔不絕地跟每個人說話。"
+      "masked_example_chi": "整個早晨他在太空梭上幾乎滔滔不絕地跟每個人說話。",
+      "is_week13": false
     },
     {
       "id": "q_w12_rww6_u09_15",
@@ -48566,7 +50216,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "nervous 是形容詞，放在連綴動詞 felt 後作主詞補語；副詞 nervously 則修飾動作動詞。",
         "examVariations": "原因分析題：Why did Rayyan talk nonstop? -> Because he was very nervous."
-      }
+      },
+      "is_week13": false
     },
     {
       "id": "q_w12_rww6_u09_16",
@@ -48607,7 +50258,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "I don't mean to be rude 是固定禮貌套語；若要修飾動作則用 speak rudely。",
         "examVariations": "同義句改寫：I don't want to seem impolite. -> I don't mean to be rude."
-      }
+      },
+      "is_week13": false
     },
     {
       "id": "q_w12_rww6_u09_17",
@@ -48648,7 +50300,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "remember sb. being + Adj. 表示「記得某人過去總是呈現某種性格狀態」。",
         "examVariations": "細節推論題：What did Irdina think of young Nora? -> She was quiet, but confident."
-      }
+      },
+      "is_week13": false
     },
     {
       "id": "q_w12_rww6_u09_18",
@@ -48689,7 +50342,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "prefer A to B 中介系詞用 to；like A better than B 中則使用比較連詞 than。",
         "examVariations": "句型轉換題：They like soccer better than tennis. -> They prefer soccer to tennis."
-      }
+      },
+      "is_week13": false
     },
     {
       "id": "q_w12_rww6_u09_19",
@@ -48730,7 +50384,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "prefer doing A to doing B；would rather do A than do B (rather than 後接原形動詞)。",
         "examVariations": "平行結構改錯題：She prefers swimming to run in the park. (run -> running)"
-      }
+      },
+      "is_week13": false
     },
     {
       "id": "q_w12_rww6_u09_20",
@@ -48771,7 +50426,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "It is polite to V (虛主詞客觀陳述) vs It is polite of you to V (強調某人此舉真有禮貌)。",
         "examVariations": "句子合併題：Do not speak loudly in the library. It is rude. -> It is rude to speak loudly in the library."
-      }
+      },
+      "is_week13": false
     },
     {
       "id": "q_w12_rww6_u09_21",
@@ -48812,7 +50468,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "talked nonstop (分詞/副詞修飾動詞) vs was nervous (be 動詞加形容詞表心理狀態)。",
         "examVariations": "簡答題：How do we know Rayyan was nervous? -> Because he talked nonstop all morning."
-      }
+      },
+      "is_week13": false
     },
     {
       "id": "q_w12_rww6_u09_22",
@@ -48853,7 +50510,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "look thoughtful (連綴動詞加形容詞) vs smile thoughtfully (一般動作動詞加副詞)。",
         "examVariations": "角色對比題：How was Nora different from Rayyan? -> Rayyan was nervous and talkative, while Nora was calm and confident."
-      }
+      },
+      "is_week13": false
     },
     {
       "id": "q_w12_rww6_u09_23",
@@ -48892,7 +50550,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "prefer A to B 介系詞用 to；like A better than B 則搭配比較連詞 than。",
         "examVariations": "介系詞選填：He prefers swimming _______ running. (正解：to)"
-      }
+      },
+      "is_week13": false
     },
     {
       "id": "q_w12_rww6_u09_24",
@@ -48931,7 +50590,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "mean to be rude (be 動詞後接形容詞) vs speak rudely (修飾動作動詞 speak 用副詞)。",
         "examVariations": "改錯題：I don't mean to be rudely to my classmates. (rudely -> rude)"
-      }
+      },
+      "is_week13": false
     },
     {
       "id": "q_w12_rww6_u09_25",
@@ -48970,7 +50630,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "He is friendly (他天生親切，恆常特質) vs He is being friendly (他此刻刻意表現親切)。",
         "examVariations": "語意辨析題：Why are you _______ so silly today? (正解：being)"
-      }
+      },
+      "is_week13": false
     },
     {
       "id": "q_w12_rww6_u09_26",
@@ -49009,7 +50670,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "It is rude to interrupt (虛主詞句型) = Interrupting people is rude (動名詞當主詞)。",
         "examVariations": "虛主詞轉換題：Interrupting the speaker is rude. -> It is rude _______ the speaker. (to interrupt)"
-      }
+      },
+      "is_week13": false
     },
     {
       "id": "q_w12_rww6_u09_27",
@@ -49048,7 +50710,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "此處 to 是介系詞，後接名詞或 V-ing；不同於不定詞 to + 原形動詞。",
         "examVariations": "平行結構改錯：He prefers playing tennis to watch television. (watch -> watching)"
-      }
+      },
+      "is_week13": false
     },
     {
       "id": "q_w12_rww6_u09_28",
@@ -49087,7 +50750,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "talked nonstop 是外在行為線索 (Actions)；felt nervous 是內心情感 (Feelings)。",
         "examVariations": "細節是非題：Did Rayyan talk a lot because he was bored? (No, because he was nervous.)"
-      }
+      },
+      "is_week13": false
     },
     {
       "id": "q_w12_rww6_u09_29",
@@ -49126,7 +50790,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "years before 用於過去完成背景敘述；planet Regulus 為同位語專有名詞。",
         "examVariations": "背景細節題：Where did the twins grow up? -> On the planet Regulus."
-      }
+      },
+      "is_week13": false
     },
     {
       "id": "q_w12_rww6_u09_30",
@@ -49165,7 +50830,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "quiet, but confident 中，對等連接詞 but 形成強烈的正面性格反襯。",
         "examVariations": "角色對比題：Who remembered cousin Irdina first? -> Nora did."
-      }
+      },
+      "is_week13": false
     },
     {
       "id": "q_w12_rww6_u09_31",
@@ -49204,7 +50870,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "say a lot about (充分說明) vs tell us little about (幾乎無法說明任何事)。",
         "examVariations": "主旨歸納題：What is the main idea of Personalities and Sports? (Sports show our personality.)"
-      }
+      },
+      "is_week13": false
     },
     {
       "id": "q_w12_rww6_u09_32",
@@ -49243,7 +50910,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "make sure + that 子句 (確保某事發生)；so that + 子句 (以便、好讓)。",
         "examVariations": "細節填空題：The adults plan activities so the kids don't get _______. (bored)"
-      }
+      },
+      "is_week13": false
     },
     {
       "id": "q_w12_space_ch06_01",
@@ -49298,7 +50966,8 @@ const ENGLISH_DATA = {
       },
       "target_chi": "運河；人工水道",
       "target_pos": "名詞 (Noun)",
-      "masked_example": "Early astronomers thought they saw lines on Mars and believed they were great ________ built by aliens."
+      "masked_example": "Early astronomers thought they saw lines on Mars and believed they were great ________ built by aliens.",
+      "is_week13": false
     },
     {
       "id": "q_w12_space_ch06_02",
@@ -49353,7 +51022,8 @@ const ENGLISH_DATA = {
       },
       "target_chi": "火星人；火星的",
       "target_pos": "名詞 (Noun) / 形容詞",
-      "masked_example": "People wrote stories and made exciting movies about aliens from Mars called ________ visiting Earth."
+      "masked_example": "People wrote stories and made exciting movies about aliens from Mars called ________ visiting Earth.",
+      "is_week13": false
     },
     {
       "id": "q_w12_space_ch06_03",
@@ -49408,7 +51078,8 @@ const ENGLISH_DATA = {
       },
       "target_chi": "細菌 (複數)",
       "target_pos": "名詞 (Noun, 複數)",
-      "masked_example": "________ are simple living things on Earth, and they can live even inside solid rocks."
+      "masked_example": "________ are simple living things on Earth, and they can live even inside solid rocks.",
+      "is_week13": false
     },
     {
       "id": "q_w12_space_ch06_04",
@@ -49463,7 +51134,8 @@ const ENGLISH_DATA = {
       },
       "target_chi": "地下的；在地底",
       "target_pos": "形容詞 (Adjective) / 副詞",
-      "masked_example": "Scientists think that there might be liquid water in the soil or even in ________ rivers on Mars."
+      "masked_example": "Scientists think that there might be liquid water in the soil or even in ________ rivers on Mars.",
+      "is_week13": false
     },
     {
       "id": "q_w12_space_ch06_05",
@@ -49518,7 +51190,8 @@ const ENGLISH_DATA = {
       },
       "target_chi": "液態的；液體",
       "target_pos": "形容詞 (Adjective) / 名詞",
-      "masked_example": "When scientists look for life on other planets, they always look for places that have ________ water."
+      "masked_example": "When scientists look for life on other planets, they always look for places that have ________ water.",
+      "is_week13": false
     },
     {
       "id": "q_w12_space_ch06_06",
@@ -49573,7 +51246,8 @@ const ENGLISH_DATA = {
       },
       "target_chi": "大氣層；大氣",
       "target_pos": "名詞 (Noun)",
-      "masked_example": "Saturn's largest moon, Titan, is the only moon in our solar system with a thick ________."
+      "masked_example": "Saturn's largest moon, Titan, is the only moon in our solar system with a thick ________.",
+      "is_week13": false
     },
     {
       "id": "q_w12_space_ch06_07",
@@ -49628,7 +51302,8 @@ const ENGLISH_DATA = {
       },
       "target_chi": "碳氫化合物 (複數)",
       "target_pos": "名詞 (Noun, 複數)",
-      "masked_example": "The rivers, lakes, and clouds on Saturn's moon Titan are made of chemicals called ________."
+      "masked_example": "The rivers, lakes, and clouds on Saturn's moon Titan are made of chemicals called ________.",
+      "is_week13": false
     },
     {
       "id": "q_w12_space_ch06_08",
@@ -49683,7 +51358,8 @@ const ENGLISH_DATA = {
       },
       "target_chi": "外星人；外來的",
       "target_pos": "名詞 (Noun) / 形容詞",
-      "masked_example": "In science fiction stories, ________ are intelligent living things visiting us from another world."
+      "masked_example": "In science fiction stories, ________ are intelligent living things visiting us from another world.",
+      "is_week13": false
     },
     {
       "id": "q_w12_space_ch06_09",
@@ -49738,7 +51414,8 @@ const ENGLISH_DATA = {
       },
       "target_chi": "幽浮；不明飛行物體 (單數縮寫)",
       "target_pos": "名詞 (Noun, 縮寫)",
-      "masked_example": "Sometimes people see unusual flying objects in the sky called ________, but they are usually weather balloons."
+      "masked_example": "Sometimes people see unusual flying objects in the sky called ________, but they are usually weather balloons.",
+      "is_week13": false
     },
     {
       "id": "q_w12_space_ch06_10",
@@ -49793,7 +51470,8 @@ const ENGLISH_DATA = {
       },
       "target_chi": "想像；設想",
       "target_pos": "動詞 (Verb)",
-      "masked_example": "Early astronomers could only ________ aliens building cities and canals across the red planet."
+      "masked_example": "Early astronomers could only ________ aliens building cities and canals across the red planet.",
+      "is_week13": false
     },
     {
       "id": "q_w12_space_ch06_11",
@@ -49848,7 +51526,8 @@ const ENGLISH_DATA = {
       },
       "target_chi": "天文學家",
       "target_pos": "名詞 (Noun)",
-      "masked_example": "An ________ uses powerful optical and space telescopes to observe distant stars and planets."
+      "masked_example": "An ________ uses powerful optical and space telescopes to observe distant stars and planets.",
+      "is_week13": false
     },
     {
       "id": "q_w12_space_ch06_12",
@@ -49903,7 +51582,8 @@ const ENGLISH_DATA = {
       },
       "target_chi": "宇宙；萬物天地",
       "target_pos": "名詞 (Noun)",
-      "masked_example": "Scientists believe there are billions of galaxies and millions of Earth-like planets in the ________."
+      "masked_example": "Scientists believe there are billions of galaxies and millions of Earth-like planets in the ________.",
+      "is_week13": false
     },
     {
       "id": "q_w12_space_ch06_13",
@@ -49958,7 +51638,8 @@ const ENGLISH_DATA = {
       },
       "target_chi": "星系；銀河系",
       "target_pos": "名詞 (Noun)",
-      "masked_example": "Our solar system is just a tiny part of a massive spiral system of stars called the Milky Way ________."
+      "masked_example": "Our solar system is just a tiny part of a massive spiral system of stars called the Milky Way ________.",
+      "is_week13": false
     },
     {
       "id": "q_w12_space_ch06_14",
@@ -50013,7 +51694,8 @@ const ENGLISH_DATA = {
       },
       "target_chi": "太空船；太空探測載具",
       "target_pos": "名詞 (Noun, 單複數同形)",
-      "masked_example": "Some people thought the glowing lights were alien ________, but they were actually high-altitude balloons."
+      "masked_example": "Some people thought the glowing lights were alien ________, but they were actually high-altitude balloons.",
+      "is_week13": false
     },
     {
       "id": "q_w12_space_ch06_15",
@@ -50044,7 +51726,36 @@ const ENGLISH_DATA = {
         "commonTraps": [
           "學生常只寫 Because living things need water，缺少主要子句而成為殘缺句 (sentence fragment)。",
           "部分學生遺漏 liquid 而只寫 water，但天體物理強調固態冰無法取代液態水的溶劑功能。"
-        ]
+        ],
+        "visualBlock": {
+          "kind": "slot_box",
+          "title": "📦 科普問答完整因果句構槽",
+          "data": {
+            "slots": [
+              {
+                "role": "主句主詞",
+                "text": "Liquid water",
+                "accent": "pri"
+              },
+              {
+                "role": "主句動詞+補語",
+                "text": "is essential",
+                "accent": "ok"
+              },
+              {
+                "role": "因果連接詞",
+                "text": "because",
+                "accent": "warn"
+              },
+              {
+                "role": "原因子句 (S+V)",
+                "text": "living things need it to survive.",
+                "accent": "pri"
+              }
+            ]
+          },
+          "caption": "📊 手寫問答不可只寫 Because... 半句，必須有完整主句＋原因子句！"
+        }
       },
       "extensionStudy": {
         "synonyms": [
@@ -50053,7 +51764,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "essential to/for + N；because 引導副詞子句修飾主要子句形容詞原因。",
         "examVariations": "問答題變形：What do astrobiologists search for first when exploring planets? -> Liquid water."
-      }
+      },
+      "is_week13": false
     },
     {
       "id": "q_w12_space_ch06_16",
@@ -50093,7 +51805,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "the area where + S + V (where 作關係副詞表地點，子句內部結構完整)。",
         "examVariations": "名詞解釋題：Explain why Earth is in the habitable zone while Venus and Mars are not."
-      }
+      },
+      "is_week13": false
     },
     {
       "id": "q_w12_space_ch06_17",
@@ -50124,7 +51837,27 @@ const ENGLISH_DATA = {
         "commonTraps": [
           "學生常在 that 子句中誤用現在式 has，忽略了題幹中 once (曾經) 要求使用過去式 had。",
           "介系詞搭配錯誤：受中文影響將表面介系詞 on its surface 誤寫成 in its surface。"
-        ]
+        ],
+        "visualBlock": {
+          "kind": "timeline",
+          "title": "⏳ 火星水分時態與狀態時間軸",
+          "data": {
+            "events": [
+              {
+                "time": "Once (遠古過去)",
+                "label": "Mars had liquid water / dried riverbeds formed",
+                "highlight": true
+              },
+              {
+                "time": "Today (現在)",
+                "label": "is very cold; surface water is frozen ice",
+                "highlight": false
+              }
+            ],
+            "rule": "看到時間訊號 once（曾經）描寫火星遠古狀態，動詞必須用過去式 had！"
+          },
+          "caption": "📊 用過去式描述火星遠古流水，用現在式描述今日冰封地表。"
+        }
       },
       "extensionStudy": {
         "synonyms": [
@@ -50133,7 +51866,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "show that + S + V (that 引導名詞子句陳述科學客觀事實或歷史推論)。",
         "examVariations": "閱讀理解改寫：What geological clues prove that Mars was once a wet planet?"
-      }
+      },
+      "is_week13": false
     },
     {
       "id": "q_w12_space_ch06_18",
@@ -50164,7 +51898,31 @@ const ENGLISH_DATA = {
         "commonTraps": [
           "很多學生誤將內部溫度寫成 colder，事實上內部因潮汐摩擦生熱而比極寒表面更 warmer。",
           "部分學生遺漏 under the ice，未能指出海洋是深藏於地表冰殼之下的地下大洋。"
-        ]
+        ],
+        "visualBlock": {
+          "kind": "compare_table",
+          "title": "⚖️ 木衛二 Europa 表層 vs 內部環境對照",
+          "data": {
+            "headers": [
+              "部位位置",
+              "溫度與型態",
+              "關鍵英文表達"
+            ],
+            "rows": [
+              [
+                "Surface (表面)",
+                "極度寒冷、覆蓋厚冰",
+                "covered in ice / very cold"
+              ],
+              [
+                "Inside (內部)",
+                "較為溫暖、可能有液態海洋",
+                "warmer inside / liquid oceans under the ice"
+              ]
+            ]
+          },
+          "caption": "📊 外冷內暖是木衛二冰下海洋可能孕育生命的核心證據！"
+        }
       },
       "extensionStudy": {
         "synonyms": [
@@ -50173,7 +51931,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "it is warmer inside (內部比較級形容詞作補語)；under the ice (介系詞片語作位置狀語)。",
         "examVariations": "是非推論題：True or False: Europa has liquid oceans on its outer surface. (False)"
-      }
+      },
+      "is_week13": false
     },
     {
       "id": "q_w12_space_ch06_19",
@@ -50213,7 +51972,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "by doing sth 表手段方法；in doing sth 表在...過程中；with + 工具名詞。",
         "examVariations": "寫作句型應用：How can robots assist scientists in extreme environments?"
-      }
+      },
+      "is_week13": false
     },
     {
       "id": "q_w12_space_ch06_20",
@@ -50253,7 +52013,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "It is + Adj + to V + because... 結合虛主詞與因果從屬子句，為學術寫作經典句型。",
         "examVariations": "閱讀問答題：Why do astronomers need space telescopes to detect Earth-like exoplanets?"
-      }
+      },
+      "is_week13": false
     },
     {
       "id": "q_w12_space_ch06_21",
@@ -50284,7 +52045,36 @@ const ENGLISH_DATA = {
         "commonTraps": [
           "學生改寫時常忘記刪除句首的 Perhaps，造成 Perhaps simple bacteria might exist 的語氣冗贅。",
           "部分學生受第三人稱單數或過去式干擾，在 might 後方誤寫成 might exists 或 might existed。"
-        ]
+        ],
+        "visualBlock": {
+          "kind": "slot_box",
+          "title": "📦 科學推測句型轉換槽 (Perhaps ➔ might)",
+          "data": {
+            "slots": [
+              {
+                "role": "主詞",
+                "text": "Simple bacteria",
+                "accent": "pri"
+              },
+              {
+                "role": "情態助動詞",
+                "text": "might",
+                "accent": "warn"
+              },
+              {
+                "role": "原形動詞",
+                "text": "exist",
+                "accent": "ok"
+              },
+              {
+                "role": "地點片語",
+                "text": "deep inside the frozen soil of Mars.",
+                "accent": "pri"
+              }
+            ]
+          },
+          "caption": "📊 使用 might 後須刪除 Perhaps，且後面動詞必用原形！"
+        }
       },
       "extensionStudy": {
         "synonyms": [
@@ -50293,7 +52083,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "Perhaps there is... (副詞推測) vs S + might/could + V (助動詞推論)。",
         "examVariations": "句型轉換題：Perhaps alien life exists on Europa. -> Alien life might exist on Europa."
-      }
+      },
+      "is_week13": false
     },
     {
       "id": "q_w12_space_ch06_22",
@@ -50324,7 +52115,31 @@ const ENGLISH_DATA = {
         "commonTraps": [
           "學生常把原句的否定詞 cannot 誤留下來寫成 too cold to cannot keep，造成語法嚴重矛盾。",
           "部分學生將不定詞 to 誤接動名詞 keeping，牢記 too... to... 後方必須接原形動詞。"
-        ]
+        ],
+        "visualBlock": {
+          "kind": "compare_table",
+          "title": "⚖️ too... to... 否定合併紅綠燈表",
+          "data": {
+            "headers": [
+              "常見錯寫 ❌",
+              "道地正確寫法 ✅",
+              "核心原因"
+            ],
+            "rows": [
+              [
+                "too cold to cannot keep",
+                "too cold to keep",
+                "too... to... 本身已含否定意涵，不可再留 cannot"
+              ],
+              [
+                "too cold to keeping",
+                "too cold to keep",
+                "不定詞符號 to 後方必接原形動詞"
+              ]
+            ]
+          },
+          "caption": "📊 合併後要把 cannot 刪掉，保留原形動詞 keep！"
+        }
       },
       "extensionStudy": {
         "synonyms": [
@@ -50333,7 +52148,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "too + Adj + to + V = so + Adj + that + cannot + V (兩大因果否定經典句型互換)。",
         "examVariations": "段考句型改寫：Venus is so hot that it cannot have liquid oceans. -> Venus is too hot to have liquid oceans."
-      }
+      },
+      "is_week13": false
     },
     {
       "id": "q_w12_space_ch06_23",
@@ -50362,6 +52178,35 @@ const ENGLISH_DATA = {
           "could being": "情態助動詞 could 後方必須嚴格接原形動詞 be，絕不能接現在分詞 being！",
           "could to be": "could 本身即為情態助動詞，後方直接接原形動詞，切勿多加不定詞符號 to！",
           "could been": "could been 缺少助動詞 have，在語法上完全不合規範，不能單獨作謂語！"
+        },
+        "visualBlock": {
+          "kind": "slot_box",
+          "title": "📦 存在推論句型槽 (there could be)",
+          "data": {
+            "slots": [
+              {
+                "role": "引導詞",
+                "text": "there",
+                "accent": "pri"
+              },
+              {
+                "role": "情態助動詞",
+                "text": "could",
+                "accent": "warn"
+              },
+              {
+                "role": "原形 be 動詞",
+                "text": "be",
+                "accent": "ok"
+              },
+              {
+                "role": "推論名詞",
+                "text": "oceans of liquid water",
+                "accent": "pri"
+              }
+            ]
+          },
+          "caption": "📊 there could + be（原形），絕不加 to 或 -ing！"
         }
       },
       "extensionStudy": {
@@ -50371,7 +52216,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "there is (客觀確定事實) vs there could/might be (基於數據的科學推測)。",
         "examVariations": "時態選擇題：Astronomers think that there (could be) life in subterranean oceans."
-      }
+      },
+      "is_week13": false
     },
     {
       "id": "q_w12_space_ch06_24",
@@ -50400,6 +52246,35 @@ const ENGLISH_DATA = {
           "maintaining": "too... to... 句型中的 to 為不定詞，後方必須接原形動詞，不能接動名詞 maintaining！",
           "maintained": "maintained 為過去式或過去分詞，不能置於 too cold 之後表達結果或目的！",
           "to maintained": "不定詞符號 to 後方必須搭配原形動詞 maintain，絕不可接過去式 maintained！"
+        },
+        "visualBlock": {
+          "kind": "slot_box",
+          "title": "📦 極端限制句型槽 (too + Adj + to + V)",
+          "data": {
+            "slots": [
+              {
+                "role": "程度副詞",
+                "text": "far too",
+                "accent": "warn"
+              },
+              {
+                "role": "形容詞",
+                "text": "cold",
+                "accent": "pri"
+              },
+              {
+                "role": "不定詞",
+                "text": "to maintain",
+                "accent": "ok"
+              },
+              {
+                "role": "受詞",
+                "text": "liquid water",
+                "accent": "pri"
+              }
+            ]
+          },
+          "caption": "📊 too + Adj + to + 原形動詞，表示「太...而無法...」。"
         }
       },
       "extensionStudy": {
@@ -50409,7 +52284,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "too cold to maintain = so cold that it cannot maintain (否定因果轉換)。",
         "examVariations": "非選擇改寫：The lake was too frozen to sail. = The lake was so frozen that boats could not sail."
-      }
+      },
+      "is_week13": false
     },
     {
       "id": "q_w12_space_ch06_25",
@@ -50447,7 +52323,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "so + Adj + that... 對比 such + a/an + Adj + N + that... 的名詞搭配差異。",
         "examVariations": "克漏字填空：The planet was (so) faint that ordinary equipment could not detect it."
-      }
+      },
+      "is_week13": false
     },
     {
       "id": "q_w12_space_ch06_26",
@@ -50485,7 +52362,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "be covered in ice (強調厚重包覆沉浸) vs be covered with dust (表面沾染)。",
         "examVariations": "介系詞克漏字：The northern polar cap of Mars is covered (in) frozen carbon dioxide."
-      }
+      },
+      "is_week13": false
     },
     {
       "id": "q_w12_space_ch06_27",
@@ -50514,6 +52392,30 @@ const ENGLISH_DATA = {
           "calling": "calling 是現在分詞表主動呼叫，化學物質是被人類稱為碳氫化合物，應使用被動分詞！",
           "were called": "were called 為完整謂語動詞，填入後會與前方的 are filled 造成雙動詞結構錯誤！",
           "to call": "to call 是不定詞表目的或未來，無法作為靜態名詞的同位分詞後置修飾語！"
+        },
+        "visualBlock": {
+          "kind": "compare_table",
+          "title": "⚖️ 關係子句簡化為過去分詞片語",
+          "data": {
+            "headers": [
+              "完整關係子句",
+              "簡化後分詞片語 ✅",
+              "語法重點"
+            ],
+            "rows": [
+              [
+                "liquids that are called hydrocarbons",
+                "liquids called hydrocarbons",
+                "主句已有動詞 are filled，修飾語須去 be 保留 V-ed"
+              ],
+              [
+                "aliens that were called Martians",
+                "aliens called Martians",
+                "表「被稱為...」，不可重複保留 were/are"
+              ]
+            ]
+          },
+          "caption": "📊 句中已有主要動詞 are filled，不可再選 were called！"
         }
       },
       "extensionStudy": {
@@ -50523,7 +52425,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "chemicals that are called hydrocarbons 簡化為 chemicals called hydrocarbons。",
         "examVariations": "句子改寫：Astronomers observed mysterious flying objects (called) UFOs in the sky."
-      }
+      },
+      "is_week13": false
     },
     {
       "id": "q_w12_space_ch06_28",
@@ -50561,7 +52464,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "with atmosphere 作介系詞片語修飾 moon，表「附帶有、具備某特徵」。",
         "examVariations": "閱讀是非題：Titan is unique because it is the only moon in the solar system with atmosphere. (True)"
-      }
+      },
+      "is_week13": false
     },
     {
       "id": "q_w12_space_ch06_29",
@@ -50599,7 +52503,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "needs + N1, N2, and N3 (名詞對稱並列結構，最後一項前加 and)。",
         "examVariations": "多選配合題：Which of the following is NOT an essential requirement for Earth life? -> Gold."
-      }
+      },
+      "is_week13": false
     },
     {
       "id": "q_w12_space_ch06_30",
@@ -50628,6 +52533,26 @@ const ENGLISH_DATA = {
           "Martian spacecraft sent radio signals with detailed maps to Earth": "火星上根本沒有火星人或外星飛船發射訊號，這純屬二十世紀初科幻小說的情節！",
           "Early cameras captured photographs of large alien cities on Mars": "早期望遠鏡口徑小且解析度低，完全不可能拍攝到任何所謂的火星外星城市！",
           "Astronauts landed on Mars and observed water flowing in canals": "人類宇航員至今尚未親自登陸火星，百年前更是完全缺乏載人航天火箭技術！"
+        },
+        "visualBlock": {
+          "kind": "timeline",
+          "title": "⏳ 火星人傳說百年認知演變時間軸",
+          "data": {
+            "events": [
+              {
+                "time": "100 Years Ago",
+                "label": "Telescopes were smaller; saw lines ➔ imagined canals & Martians",
+                "highlight": true
+              },
+              {
+                "time": "Today (Now)",
+                "label": "Robots explore Mars; we know there aren't any Martians",
+                "highlight": false
+              }
+            ],
+            "rule": "百年前受限望遠鏡與巴拿馬運河工程引發聯想；今日科學證實並無火星人。"
+          },
+          "caption": "📊 對比百年前過去式 (were / thought / imagined) 與今日現在式 (know / aren't)。"
         }
       },
       "extensionStudy": {
@@ -50637,7 +52562,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "imagine + O + V-ing：astronomers imagined aliens building canals。",
         "examVariations": "閱讀問答：What famous Earth canal inspired the idea of Martian waterways? -> The Panama Canal."
-      }
+      },
+      "is_week13": false
     },
     {
       "id": "q_w12_space_ch06_31",
@@ -50675,7 +52601,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "warmer inside 表示內部溫度比較級；under the ice 表示冰層下方的垂直空間關係。",
         "examVariations": "推理選擇題：What makes Europa attractive to astrobiologists? -> The presence of subsurface liquid water."
-      }
+      },
+      "is_week13": false
     },
     {
       "id": "q_w12_space_ch06_32",
@@ -50713,7 +52640,412 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "things like + N1 or N2 (介系詞 like 表舉例說明，後接名詞對稱)。",
         "examVariations": "閱讀是非題：Most reported UFOs are confirmed to be alien spacecraft. -> False (usually balloons or comets)."
-      }
+      },
+      "is_week13": false
+    },
+    {
+      "id": "q_w12_space_ch06_33",
+      "book_id": "rd6",
+      "unit_id": "rd6_6",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "difficulty": "★★★★☆",
+      "part_title": "Part III. W12 Open-Book Evidence Q&A & Pronoun Mastery (證據問答與代名詞實戰)",
+      "part_instructions": "請先閱讀題幹附帶之課文核心證據，以完整英文句子作答，並善用代名詞（they / them / it）取代重複名詞。",
+      "sentence_form": "They thought Martians lived there because telescopes were smaller, and they saw lines on Mars that looked like canals.",
+      "trapCodes": [
+        "ENG_TENSE_MISMATCH",
+        "ENG_ARTICLE_ERROR"
+      ],
+      "triadGroup": {
+        "groupId": "SPACE_CH06_OPEN_T1",
+        "tier": "L4-6",
+        "role": "twist"
+      },
+      "question": "[W12 Part B · Open-Book Evidence Q&A] Evidence Summary: \"A hundred years ago, telescopes were smaller, and it was difficult to see Mars clearly. Astronomers thought that they saw lines on the surface of Mars, and some people thought that they were canals, like the Panama Canal on Earth. Some astronomers imagined aliens building them and living in cities on Mars.\" — Answer in complete sentences: Why did astronomers 100 years ago think Martians lived on Mars? Use pronouns wherever you can.",
+      "options": [],
+      "answer": "They thought Martians lived there because telescopes were smaller and they thought the lines they saw on its surface were canals built by aliens.",
+      "self_check": [
+        "1. 開頭是否使用代名詞 They 指代 astronomers 100 years ago，並用 there / its 避免重複 Mars？",
+        "2. 過去時態是否全程一致（thought / lived / were / saw）？",
+        "3. Mars 與 Martians 前是否沒有誤加定冠詞 the？"
+      ],
+      "explanation": {
+        "point": "Open-Book 證據整合與代名詞替換：利用 they / them / there / its 避免重複名詞，並保持過去式時態一致。",
+        "examPurpose": "對標 Week 12 真卷 Part B：評量學生從課文提取雙重因果證據並靈活使用代名詞簡化句子的能力。",
+        "correctReason": "題問 100 years ago，整句須使用過去式（thought / lived / were / saw），並以 They 指代 astronomers、its/there 指代 Mars。",
+        "note": "Use pronouns wherever you can（盡可能使用代名詞指代前文名詞）。",
+        "trap": "切勿把 astronomers、Mars 在每一個子句都重抄一遍，也不可在 Mars 前加定冠詞寫成 on the Mars。",
+        "commonTraps": [
+          "忽略題目要求 Use pronouns wherever you can，反覆抄寫 astronomers 與 on Mars 導致扣分。",
+          "在行星名稱前誤加定冠詞 the（寫成 on the Mars），或在過去問句下誤用現在式 think。"
+        ],
+        "steps": [
+          "① 鎖定主詞與代名詞：astronomers ➔ They；on Mars ➔ there / on its surface",
+          "② 圈出時間訊號 100 years ago ➔ 確認所有動詞用過去式 (thought, lived, were, saw)",
+          "③ 整合雙證據：望遠鏡較小看不清 ＋ 把地表線條誤認為像巴拿馬運河的人工運河"
+        ],
+        "insight": "💡 代名詞替換公式：Astronomers ➔ They；lines ➔ them；Mars ➔ it / there！",
+        "visualBlock": {
+          "kind": "timeline",
+          "title": "⏳ 百年前火星運河推論時態與代名詞線",
+          "data": {
+            "events": [
+              {
+                "time": "100 Years Ago (Past)",
+                "label": "They (astronomers) thought they saw lines on its surface (Mars).",
+                "highlight": true
+              },
+              {
+                "time": "Today (Present)",
+                "label": "We know there aren't any Martians there.",
+                "highlight": false
+              }
+            ],
+            "rule": "問句為 did... think（100年前），回答主句與原因子句動詞必須維持過去式！"
+          },
+          "caption": "📊 先用代名詞指代已知主體，再檢查過去式動詞是否漏改。"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "early skywatchers believed",
+          "mistook surface lines for canals"
+        ],
+        "grammarCompare": "there（地方副詞，代替 on Mars）vs its surface（所有格，代替 Mars's surface）。",
+        "examVariations": "問答變體：Why was it difficult for astronomers 100 years ago to see Mars clearly?"
+      },
+      "is_week13": false
+    },
+    {
+      "id": "q_w12_space_ch06_34",
+      "book_id": "rd6",
+      "unit_id": "rd6_6",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "difficulty": "★★★★☆",
+      "part_title": "Part III. W12 Open-Book Evidence Q&A & Pronoun Mastery (證據問答與代名詞實戰)",
+      "part_instructions": "請結合課文證據與代名詞回答火星地表缺乏生命的原因，務必嚴格檢查不可數名詞主謂一致與 there be 句型。",
+      "sentence_form": "There isn't any life on its surface because it is very cold there, so all the water on it is frozen ice and there isn't any liquid water.",
+      "trapCodes": [
+        "ENG_UNCOUNTABLE_SVA",
+        "ENG_THERE_BE_VS_HAVE",
+        "ENG_ARTICLE_ERROR"
+      ],
+      "triadGroup": {
+        "groupId": "SPACE_CH06_OPEN_T1",
+        "tier": "L4-6",
+        "role": "twist"
+      },
+      "question": "[W12 Part B · Open-Book Evidence Q&A] Evidence Summary: \"Life on Earth needs liquid water, carbon, and gases like oxygen and nitrogen. It's very cold on Mars, so all the water on the surface is ice.\" — Answer in complete sentences: Why isn't there any life on the surface of Mars today? Use pronouns and explain clearly.",
+      "options": [],
+      "answer": "There isn't any life on its surface today because it is very cold there, so there isn't any liquid water—all of it is frozen ice.",
+      "self_check": [
+        "1. 不可數名詞 water / life 的存在句是否使用單數 isn't，而非 aren't？",
+        "2. 是否使用 there is/isn't 表達「存在沒有...」，而沒有中式誤寫成 There only have ice？",
+        "3. 是否用 its / there / it 等代名詞指代 Mars 與 water，並清楚說明「太冷導致只有冰、沒有液態水」？"
+      ],
+      "explanation": {
+        "point": "狙擊 W12 真卷三大失分陷阱：不可數名詞 water 主謂一致 (isn't)、there is vs have、專有名詞零冠詞 (Mars)。",
+        "examPurpose": "針對 Rex W12 Page 25 Part B 高頻失分點進行精準矯正，訓練科學因果推論與精確文法輸出。",
+        "correctReason": "water 與 life 皆為不可數名詞，存在句必用 there isn't；太冷使地表只有固態冰，缺乏生命必需的液態水。",
+        "note": "there isn't any water / there is only ice（不可數名詞配單數動詞）。",
+        "trap": "嚴防寫出 because there aren't any water、there only have ice 或 on the Mars。",
+        "commonTraps": [
+          "受 any 複數錯覺影響誤寫成 there aren't any water（water 不可數，必須用 isn't）。",
+          "中式直譯誤寫成 there only have ice（存在句只能用 there is，不可用 have）。",
+          "行星名 Mars 前誤加定冠詞寫成 on the Mars。"
+        ],
+        "steps": [
+          "① 檢查主句結構：不可只寫 Because...，須補齊 There isn't any life on its surface today because...",
+          "② 套用物理因果：it is very cold ➔ all the water is ice ➔ there isn't any liquid water",
+          "③ 掃描三大地雷：isn't any water（非 aren't）、there is only ice（非 have）、on Mars（非 the Mars）"
+        ],
+        "insight": "💡 看到 water / life / ice 永遠當單數（isn't / is）；「某地有」永遠用 there is，絕不用 have！",
+        "visualBlock": {
+          "kind": "compare_table",
+          "title": "⚖️ W12 真卷火星水份三大錯誤紅綠燈表",
+          "data": {
+            "headers": [
+              "常見錯寫 ❌",
+              "正確寫法 ✅",
+              "核心原因"
+            ],
+            "rows": [
+              [
+                "there aren't any water",
+                "there isn't any water",
+                "water 為不可數名詞，搭配單數 isn't"
+              ],
+              [
+                "there only have ice",
+                "there is only ice",
+                "存在句固定用 there is，不用 have"
+              ],
+              [
+                "on the Mars",
+                "on Mars / on its surface",
+                "行星專有名詞前不加定冠詞 the"
+              ]
+            ]
+          },
+          "caption": "📊 交卷前務必逐一核對這三條高頻扣分紅線！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "frozen solid",
+          "devoid of liquid surface water"
+        ],
+        "grammarCompare": "there isn't any water（沒有任何液態水）vs there aren't any Martians（複數可數用 aren't）。",
+        "examVariations": "改錯練習：Because there aren't any water on the Mars, it only have ice."
+      },
+      "is_week13": false
+    },
+    {
+      "id": "q_w12_space_ch06_35",
+      "book_id": "rd6",
+      "unit_id": "rd6_6",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "difficulty": "★★★★★",
+      "part_title": "Part III. W12 Open-Book Evidence Q&A & Pronoun Mastery (證據問答與代名詞實戰)",
+      "part_instructions": "請仔細閱讀括號提示與地下液態水證據，判斷正確立場並寫出完整理由（Explain your answer）。",
+      "sentence_form": "Yes, there could be life beneath its surface because scientists think there is liquid water in the soil or underground rivers, and bacteria can live inside rocks.",
+      "trapCodes": [
+        "ENG_THERE_BE_VS_HAVE",
+        "ENG_VERB_OMISSION"
+      ],
+      "triadGroup": {
+        "groupId": "SPACE_CH06_OPEN_T2",
+        "tier": "L7-10",
+        "role": "challenge"
+      },
+      "question": "[W12 Part B · Open-Book Evidence Q&A] Evidence Summary: \"It's very cold on Mars, so all the water on the surface is ice. However, many scientists think that there is liquid water in the soil or even in underground rivers. Bacteria can live in very hot and cold places, and even inside rocks.\" — Answer completely: Could there be any life on Mars (or beneath its surface)? Explain your answer.",
+      "options": [],
+      "answer": "Yes, there could be life on Mars beneath its surface because scientists think there is liquid water in the soil or underground rivers, and simple bacteria can live inside rocks.",
+      "self_check": [
+        "1. 是否沒有被「表面太冷」誤導而答 No，而是根據「地表下」線索正確回答 Yes, there could be...？",
+        "2. 是否有完整寫出 Explain your answer 的雙重依據（地下液態水＋細菌能在寒冷與岩石中生存）？",
+        "3. could 後方是否接原形動詞 be（there could be），且無遺漏主句動詞？"
+      ],
+      "explanation": {
+        "point": "狙擊 W12 Q3 誤答 No 盲點：題目問「火星或其地表下 (beneath its surface)」，課文明確指出地下土壤與暗河可能有液態水與細菌。",
+        "examPurpose": "測驗學生區分「地表 (surface)」與「地底 (beneath its surface / underground)」證據差異的高階閱讀推論與完整論證能力。",
+        "correctReason": "雖然表面全是冰，但題目特別包含 beneath its surface，而科學家推測土壤與地下河有液態水，因此答案應為肯定推論 Yes, there could be...。",
+        "note": "Yes, there could be... because...（表層無液態水 ≠ 地下無生命）。",
+        "trap": "切勿只看到前面表面結冰就反射寫 No，必須讀完 beneath its surface 與地下河流證據！",
+        "commonTraps": [
+          "未看清 (or beneath its surface) 條件而直接誤答 No，忽略火星地下暗河與土壤液態水證據。",
+          "只寫 Yes, there could be. 而完全漏掉 Explain your answer 所需的科學原因子句。"
+        ],
+        "steps": [
+          "① 精讀題目範圍：不只問表面，還問 beneath its surface（地表之下）",
+          "② 核對課文證據：soil / underground rivers 可能有液態水 ＋ bacteria 可活在寒冷環境與岩石內",
+          "③ 組織完整句：Yes, there could be life beneath its surface because..."
+        ],
+        "insight": "💡 題目出現 (or beneath its surface) 就是給你台階答 Yes！記得補上地下液態水與岩石細菌兩大理由。",
+        "visualBlock": {
+          "kind": "compare_table",
+          "title": "⚖️ 火星表層 vs 地底生命推論對照表",
+          "data": {
+            "headers": [
+              "觀察層面",
+              "環境與水分狀態",
+              "推論結論"
+            ],
+            "rows": [
+              [
+                "On the surface (地表)",
+                "極寒，所有水都是固態冰",
+                "地表目前無液態水支持生命"
+              ],
+              [
+                "Beneath its surface (地底)",
+                "土壤與地下河流可能有液態水",
+                "Yes! 可能有簡單細菌存活於岩石或土壤中"
+              ]
+            ]
+          },
+          "caption": "📊 先分清「地表」與「地底」，就不會被誤導寫錯 Yes/No！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "underneath the Martian crust",
+          "subsurface habitats"
+        ],
+        "grammarCompare": "beneath its surface（在地表之下，介系詞片語）= underground（地下的/在地底）。",
+        "examVariations": "推論對比題：Why might bacteria survive underground on Mars even though the surface is frozen?"
+      },
+      "is_week13": false
+    },
+    {
+      "id": "q_w12_space_ch06_36",
+      "book_id": "rd6",
+      "unit_id": "rd6_6",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "difficulty": "★★★★★",
+      "part_title": "Part III. W12 Open-Book Evidence Q&A & Pronoun Mastery (證據問答與代名詞實戰)",
+      "part_instructions": "請先直接回答科學家最可能優先發現的生命類型，並務必補上 Explain your answer 的生物特性依據。",
+      "sentence_form": "Scientists think we will discover simple bacteria first because they can live in extreme hot or cold places and even inside rocks.",
+      "trapCodes": [
+        "ENG_ARTICLE_ERROR",
+        "ENG_TENSE_MISMATCH"
+      ],
+      "triadGroup": {
+        "groupId": "SPACE_CH06_OPEN_T2",
+        "tier": "L7-10",
+        "role": "challenge"
+      },
+      "question": "[W12 Part B · Open-Book Evidence Q&A] Evidence Summary: \"Bacteria are simple living things on Earth, and they can live in very hot and cold places, and even inside rocks. Scientists are looking for bacteria on Mars and in other places in our solar system.\" — Answer completely: What type of alien life do scientists think we will discover first? Explain your answer.",
+      "options": [],
+      "answer": "Scientists think we will discover simple bacteria first because they are simple living things that can survive in very hot or cold places and even inside rocks.",
+      "self_check": [
+        "1. 複數泛指 bacteria 前是否沒有誤加定冠詞 the（不寫 the bacteria）？",
+        "2. 是否同時完成兩項任務：① 回答 simple bacteria；② 加上 because 說明其耐極端高低溫與岩石內生存能力？",
+        "3. 回指 bacteria 時是否使用複數代名詞 they 與複數動詞 are / can live？"
+      ],
+      "explanation": {
+        "point": "狙擊 W12 Q4 雙盲點：泛指名詞 bacteria 不加 the，且題末有 Explain your answer 必須寫出原因子句。",
+        "examPurpose": "檢驗學生面對兩段式問句（What... + Explain your answer）時，能否兼顧冠詞正確性與證據完整性。",
+        "correctReason": "泛指「細菌」一類生物時用複數 bacteria 即可，不加 the；原因則是細菌構造簡單且能耐極寒酷熱甚至活在岩石中。",
+        "note": "bacteria（泛指不加 the；複數代名詞用 they）。",
+        "trap": "切勿誤寫成 the bacteria，也千萬別寫完名詞就停筆而漏掉 Explain your answer！",
+        "commonTraps": [
+          "在泛指複數名詞 bacteria 前誤加定冠詞寫成 the bacteria。",
+          "只回答了前半題型 Scientists think we will discover bacteria first，完全漏寫後半 Explain your answer 的原因。"
+        ],
+        "steps": [
+          "① 拆解雙重指令：問題一 What type? ➔ (simple) bacteria；問題二 Explain your answer ➔ because...",
+          "② 檢查冠詞地雷：泛指生物群體不加 the（寫 bacteria，不寫 the bacteria）",
+          "③ 用代名詞連接理由：because they can live in very hot and cold places and even inside rocks"
+        ],
+        "insight": "💡 看到 Explain your answer 一定要圈起來！少寫 because... 直接少一半甚至全題分數。",
+        "visualBlock": {
+          "kind": "slot_box",
+          "title": "📦 兩段式問答＋Explain your answer 必勝結構槽",
+          "data": {
+            "slots": [
+              {
+                "role": "1. 直接回答 (What)",
+                "text": "Scientists think we will discover bacteria first",
+                "accent": "pri"
+              },
+              {
+                "role": "2. 冠詞紅線檢查",
+                "text": "bacteria (不加 the!)",
+                "accent": "warn"
+              },
+              {
+                "role": "3. 理由連接 (Explain)",
+                "text": "because they can live in extreme places and inside rocks.",
+                "accent": "ok"
+              }
+            ]
+          },
+          "caption": "📊 第 1 格回答 what，第 3 格完成 Explain your answer，一格都不能少！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "single-celled microbes",
+          "microscopic organisms"
+        ],
+        "grammarCompare": "find bacteria first（泛指細菌）vs the bacteria in the lab（特指實驗室裡的那些細菌）。",
+        "examVariations": "是非與改錯：Scientists expect to find intelligent human-like aliens before bacteria. (False)"
+      },
+      "is_week13": false
+    },
+    {
+      "id": "q_w12_space_ch06_37",
+      "book_id": "rd6",
+      "unit_id": "rd6_6",
+      "is_midterm": true,
+      "is_week12": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "difficulty": "★★★★★",
+      "part_title": "Part III. W12 Open-Book Evidence Q&A & Pronoun Mastery (證據問答與代名詞實戰)",
+      "part_instructions": "請運用代名詞 it 代替 Europa，完整回答「為何適合生命」與「可能住著什麼生物」兩個問題，並加以解釋。",
+      "sentence_form": "It is considered a possible home for life because it is warmer inside and may have oceans under the ice, and bacteria or other living things might live there.",
+      "trapCodes": [
+        "ENG_TENSE_MISMATCH",
+        "ENG_CHINGLISH_LITERAL",
+        "ENG_ARTICLE_ERROR"
+      ],
+      "triadGroup": {
+        "groupId": "SPACE_CH06_OPEN_T2",
+        "tier": "L7-10",
+        "role": "challenge"
+      },
+      "question": "[W12 Part B · Open-Book Evidence Q&A] Evidence Summary: \"Europa is one of Jupiter's moons and it's covered in ice. The surface is very cold, but scientists think it's warmer inside. Maybe there are oceans under the ice. Maybe there are bacteria or other living things in the oceans, too.\" — Answer completely: Why is Europa considered a possible home for alien life, and what might live there? Explain your answer.",
+      "options": [],
+      "answer": "It is considered a possible home for alien life because scientists think it is warmer inside and there may be oceans under its ice, so bacteria or other living things might live in them.",
+      "self_check": [
+        "1. 是否同時回答了兩個問題：① Why（內部較暖、冰下可能有海洋）；② What might live there（細菌或其他生物）？",
+        "2. 是否善用代名詞 it（指代 Europa）與 in them / there（指代冰下海洋）？",
+        "3. 情態助動詞 may / might 後方是否皆使用原形動詞（may be / might live）？"
+      ],
+      "explanation": {
+        "point": "複合雙問句整合：回答 Why（內部溫暖＋冰下海洋）與 What（細菌或其他生物），並用 it / them 精簡句構。",
+        "examPurpose": "壓軸整合木衛二歐羅巴科學證據與雙問句作答結構，杜絕「漏答第二個子問題」或「漏寫解釋」的考場失分。",
+        "correctReason": "木衛二外冷內暖，厚冰下方可能蘊含液態海洋，提供生命所需的液態水環境，故可能存在細菌或其他生物。",
+        "note": "warmer inside（內部較暖）+ oceans under the ice（冰下海洋）。",
+        "trap": "注意問句包含「and what might live there?」，學生常回答完原因就忘記寫「什麼生物可能住在那裡」。",
+        "commonTraps": [
+          "遺漏第二問「and what might live there?」，沒寫出 bacteria or other living things。",
+          "誤記木衛二內部溫度為 colder inside，或忘記使用 it / them 代替 Europa 與 oceans。"
+        ],
+        "steps": [
+          "① 圈出雙問號要素：① Why is it a possible home? ＋ ② What might live there?",
+          "② 填入科學依據：warmer inside ➔ liquid oceans under its ice（液態水＝生命關鍵）",
+          "③ 補上潛在生物與代名詞：bacteria or other living things might live in them (the oceans)"
+        ],
+        "insight": "💡 遇到 A and B 雙問句，寫完前段先回頭檢查問號前的第二個疑問詞 (what) 有沒有答到！",
+        "visualBlock": {
+          "kind": "slot_box",
+          "title": "📦 木衛二雙問句＋證據整合句構槽",
+          "data": {
+            "slots": [
+              {
+                "role": "主句 (代名詞 it)",
+                "text": "It is a possible home",
+                "accent": "pri"
+              },
+              {
+                "role": "Why (內部熱+冰下海)",
+                "text": "because it is warmer inside with oceans under its ice,",
+                "accent": "ok"
+              },
+              {
+                "role": "What (潛在生物)",
+                "text": "so bacteria or other living things might live in them.",
+                "accent": "warn"
+              }
+            ]
+          },
+          "caption": "📊 it 指代 Europa，them 指代 oceans，一次滿足代名詞＋雙問句要求！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "subsurface liquid ocean",
+          "potential extraterrestrial habitat"
+        ],
+        "grammarCompare": "might live in them（in them 指代前文的 oceans）= might live there（地方副詞）。",
+        "examVariations": "比較問答：Compare why Titan and Europa are both exciting targets in the search for life."
+      },
+      "is_week13": false
     },
     {
       "id": "q_w12_wr3_u06_01",
@@ -50769,7 +53101,8 @@ const ENGLISH_DATA = {
       "target_chi": "發明家",
       "target_pos": "名詞 (Noun)",
       "masked_example": "Thomas Edison was an ________ from the United States.",
-      "masked_example_chi": "湯瑪斯·愛迪生是一位來自美國的發明家。"
+      "masked_example_chi": "湯瑪斯·愛迪生是一位來自美國的發明家。",
+      "is_week13": true
     },
     {
       "id": "q_w12_wr3_u06_02",
@@ -50825,7 +53158,8 @@ const ENGLISH_DATA = {
       "target_chi": "作曲家",
       "target_pos": "名詞 (Noun)",
       "masked_example": "Wolfgang Amadeus Mozart was a ________ from Austria.",
-      "masked_example_chi": "沃夫岡·阿瑪迪斯·莫札特是一位來自奧地利的作曲家。"
+      "masked_example_chi": "沃夫岡·阿瑪迪斯·莫札特是一位來自奧地利的作曲家。",
+      "is_week13": true
     },
     {
       "id": "q_w12_wr3_u06_03",
@@ -50881,7 +53215,8 @@ const ENGLISH_DATA = {
       "target_chi": "科學家",
       "target_pos": "名詞 (Noun)",
       "masked_example": "Isaac Newton was a ________ from England.",
-      "masked_example_chi": "艾薩克·牛頓是一位來自英國的科學家。"
+      "masked_example_chi": "艾薩克·牛頓是一位來自英國的科學家。",
+      "is_week13": true
     },
     {
       "id": "q_w12_wr3_u06_04",
@@ -50937,7 +53272,8 @@ const ENGLISH_DATA = {
       "target_chi": "政治領袖",
       "target_pos": "名詞片語 (Noun Phrase)",
       "masked_example": "Mohandas Gandhi was a ________ from India.",
-      "masked_example_chi": "莫罕達斯·甘地是一位來自印度的政治領袖。"
+      "masked_example_chi": "莫罕達斯·甘地是一位來自印度的政治領袖。",
+      "is_week13": true
     },
     {
       "id": "q_w12_wr3_u06_05",
@@ -50993,7 +53329,8 @@ const ENGLISH_DATA = {
       "target_chi": "哲學家",
       "target_pos": "名詞 (Noun)",
       "masked_example": "A ________ is someone who teaches the meaning of life.",
-      "masked_example_chi": "哲學家是教導人們生命意義的人。"
+      "masked_example_chi": "哲學家是教導人們生命意義的人。",
+      "is_week13": true
     },
     {
       "id": "q_w12_wr3_u06_06",
@@ -51049,7 +53386,8 @@ const ENGLISH_DATA = {
       "target_chi": "欽佩；欣賞",
       "target_pos": "動詞 (Verb)",
       "masked_example": "The person I ________ the most is Thomas Edison.",
-      "masked_example_chi": "我最欽佩的人是湯瑪斯·愛迪生。"
+      "masked_example_chi": "我最欽佩的人是湯瑪斯·愛迪生。",
+      "is_week13": true
     },
     {
       "id": "q_w12_wr3_u06_07",
@@ -51105,7 +53443,8 @@ const ENGLISH_DATA = {
       "target_chi": "發現",
       "target_pos": "名詞 (Noun)",
       "masked_example": "Isaac Newton made many important scientific ________.",
-      "masked_example_chi": "艾薩克·牛頓做出了許多重要的科學發現。"
+      "masked_example_chi": "艾薩克·牛頓做出了許多重要的科學發現。",
+      "is_week13": true
     },
     {
       "id": "q_w12_wr3_u06_08",
@@ -51161,7 +53500,8 @@ const ENGLISH_DATA = {
       "target_chi": "音樂作品；創作",
       "target_pos": "名詞 (Noun)",
       "masked_example": "His most famous ________ is the Fifth Symphony.",
-      "masked_example_chi": "他最著名的音樂作品是《第五號交響曲》。"
+      "masked_example_chi": "他最著名的音樂作品是《第五號交響曲》。",
+      "is_week13": true
     },
     {
       "id": "q_w12_wr3_u06_09",
@@ -51217,7 +53557,8 @@ const ENGLISH_DATA = {
       "target_chi": "成就；功績",
       "target_pos": "名詞 (Noun)",
       "masked_example": "His most famous ________ is helping India become free.",
-      "masked_example_chi": "他最著名的功績是協助印度贏得自由與獨立。"
+      "masked_example_chi": "他最著名的功績是協助印度贏得自由與獨立。",
+      "is_week13": true
     },
     {
       "id": "q_w12_wr3_u06_10",
@@ -51273,7 +53614,8 @@ const ENGLISH_DATA = {
       "target_chi": "身體障礙；殘疾",
       "target_pos": "名詞 (Noun)",
       "masked_example": "Helen Keller overcame her ________ and inspired the world.",
-      "masked_example_chi": "海倫·凱勒克服了自身的身體障礙，並激勵了全世界。"
+      "masked_example_chi": "海倫·凱勒克服了自身的身體障礙，並激勵了全世界。",
+      "is_week13": true
     },
     {
       "id": "q_w12_wr3_u06_11",
@@ -51329,7 +53671,8 @@ const ENGLISH_DATA = {
       "target_chi": "地心引力；重力",
       "target_pos": "名詞 (Noun)",
       "masked_example": "Thanks to Newton, we understand ________ better.",
-      "masked_example_chi": "多虧了牛頓，我們才能更深入理解地心引力。"
+      "masked_example_chi": "多虧了牛頓，我們才能更深入理解地心引力。",
+      "is_week13": true
     },
     {
       "id": "q_w12_wr3_u06_12",
@@ -51385,7 +53728,8 @@ const ENGLISH_DATA = {
       "target_chi": "交響樂；交響曲",
       "target_pos": "名詞 (Noun)",
       "masked_example": "Beethoven composed the famous Fifth ________.",
-      "masked_example_chi": "貝多芬創作了著名的《第五號交響曲》。"
+      "masked_example_chi": "貝多芬創作了著名的《第五號交響曲》。",
+      "is_week13": true
     },
     {
       "id": "q_w12_wr3_u06_13",
@@ -51441,7 +53785,8 @@ const ENGLISH_DATA = {
       "target_chi": "放棄",
       "target_pos": "動詞片語 (Phrasal Verb)",
       "masked_example": "He became successful because he never ________ on his dreams.",
-      "masked_example_chi": "他之所以成功，是因為他從未放棄過自己的夢想。"
+      "masked_example_chi": "他之所以成功，是因為他從未放棄過自己的夢想。",
+      "is_week13": true
     },
     {
       "id": "q_w12_wr3_u06_14",
@@ -51497,7 +53842,8 @@ const ENGLISH_DATA = {
       "target_chi": "結果；因果影響",
       "target_pos": "名詞 (Noun)",
       "masked_example": "Transition words show ________ and connect ideas logically.",
-      "masked_example_chi": "因果轉折詞能展現因果影響並將不同觀點合乎邏輯地串聯起來。"
+      "masked_example_chi": "因果轉折詞能展現因果影響並將不同觀點合乎邏輯地串聯起來。",
+      "is_week13": true
     },
     {
       "id": "q_w12_wr3_u06_15",
@@ -51508,6 +53854,15 @@ const ENGLISH_DATA = {
       "type": "paper_rewrite",
       "category_tag": "rewrite",
       "difficulty": "★★★☆☆",
+      "trapCodes": [
+        "ENG_PREP_COLLOCATION",
+        "ENG_TENSE_MISMATCH"
+      ],
+      "triadGroup": {
+        "groupId": "WR3_U06_T1",
+        "tier": "L4-6",
+        "role": "twist"
+      },
       "part_title": "Part II. Guided Biography Writing (歷史偉人傳記引導寫作)",
       "part_instructions": "依據括號內的歷史資料提示，運用標準傳記句型寫出完整句子，精確搭配出生日期介系詞 on、年份介系詞 in 以及成長地點 grew up in。",
       "sentence_form": "Subject + was born on [Date], [Year], in [State], and grew up in [Place].",
@@ -51528,7 +53883,47 @@ const ENGLISH_DATA = {
         "commonTraps": [
           "時間介系詞混淆：看見有年份就直覺填 in，忽略了前面有具體日期 February 11 必須使用 on。",
           "時態不一致錯誤：將後半句的過去式 grew up 誤寫成現在式 grow up。"
-        ]
+        ],
+        "steps": [
+          "① 先寫出生動詞：歷史人物生平固定用過去式 was born",
+          "② 檢查時間介系詞：看到完整月日 February 11 就鎖定 on；州名 Ohio 前用 in",
+          "③ 檢查第二個動詞：成長地點 grew up in 必須同步使用過去式 grew"
+        ],
+        "insight": "💡 有「月＋日」用 on，只有「年份／月份／地點」用 in，特定歲數用 at！",
+        "visualBlock": {
+          "kind": "prep_ladder",
+          "title": "🧭 傳記生平時間與年齡介系詞階梯",
+          "data": {
+            "levels": [
+              {
+                "prep": "in",
+                "scope": "純年份 / 月份 / 城市國家（大範圍）",
+                "examples": [
+                  "was born in 1847",
+                  "grew up in Michigan"
+                ],
+                "highlight": false
+              },
+              {
+                "prep": "on",
+                "scope": "具體月日（含「日」的精確日期）",
+                "examples": [
+                  "was born on February 11, 1847"
+                ],
+                "highlight": true
+              },
+              {
+                "prep": "at",
+                "scope": "特定年齡節點",
+                "examples": [
+                  "at the age of five"
+                ],
+                "highlight": false
+              }
+            ]
+          },
+          "caption": "📊 寫出生日期先看有沒有「幾號」：有日期就用 on，只有年份一定用 in！"
+        }
       },
       "extensionStudy": {
         "synonyms": [
@@ -51537,7 +53932,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "was born on + 具體日期 (on July 4th) vs was born in + 純年份或純月份 (in 1847, in February)。",
         "examVariations": "仿寫練習：Isaac Newton was born on January 4, 1643, in Woolsthorpe, England."
-      }
+      },
+      "is_week13": true
     },
     {
       "id": "q_w12_wr3_u06_16",
@@ -51548,6 +53944,15 @@ const ENGLISH_DATA = {
       "type": "paper_rewrite",
       "category_tag": "rewrite",
       "difficulty": "★★★☆☆",
+      "trapCodes": [
+        "ENG_PREP_COLLOCATION",
+        "ENG_TENSE_MISMATCH"
+      ],
+      "triadGroup": {
+        "groupId": "WR3_U06_T1",
+        "tier": "L4-6",
+        "role": "twist"
+      },
       "part_title": "Part II. Guided Biography Writing (歷史偉人傳記引導寫作)",
       "part_instructions": "運用「be famous for + 動名詞/名詞」句型合併提示要點，敘述偉人以某項成就聞名於世，注意動詞時態與介系詞搭配。",
       "sentence_form": "Subject + was famous for + discovering / inventing + Noun.",
@@ -51568,7 +53973,47 @@ const ENGLISH_DATA = {
         "commonTraps": [
           "介系詞搭配錯誤：受中文直譯影響，誤將 famous for 寫成 famous about 或 famous with。",
           "動詞形式錯誤：忘記介系詞後方必須接動名詞，誤寫為 famous for discover。"
-        ]
+        ],
+        "steps": [
+          "① 決定時態：Newton 是已故科學家，be 動詞用過去式 was",
+          "② 鎖定搭配：因成就聞名固定用 famous for（不可寫 famous about）",
+          "③ 檢查介系詞後動詞：for 是介系詞，後方動作 discover 必須加 -ing 變 discovering"
+        ],
+        "insight": "💡 介系詞 for 後面不能直接放原形動詞，一定要變成動名詞 V-ing！",
+        "visualBlock": {
+          "kind": "slot_box",
+          "title": "📦 「以……成就聞名」句構積木槽",
+          "data": {
+            "slots": [
+              {
+                "role": "主詞",
+                "text": "Isaac Newton",
+                "accent": "pri"
+              },
+              {
+                "role": "過去式 be",
+                "text": "was",
+                "accent": "ok"
+              },
+              {
+                "role": "聞名片語",
+                "text": "famous for",
+                "accent": "warn"
+              },
+              {
+                "role": "動名詞 V-ing",
+                "text": "discovering",
+                "accent": "ok"
+              },
+              {
+                "role": "受詞",
+                "text": "the theory of gravity.",
+                "accent": "pri"
+              }
+            ]
+          },
+          "caption": "📊 第 3 格用 for、第 4 格立刻把 discover 加上 -ing！"
+        }
       },
       "extensionStudy": {
         "synonyms": [
@@ -51577,7 +54022,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "famous for + 成就/作品 (因...聞名) vs famous as + 身分職業 (以...身分聞名，如 famous as an inventor)。",
         "examVariations": "身分與成就對比：He was famous as a scientist, and was famous for discovering gravity."
-      }
+      },
+      "is_week13": true
     },
     {
       "id": "q_w12_wr3_u06_17",
@@ -51588,6 +54034,15 @@ const ENGLISH_DATA = {
       "type": "paper_rewrite",
       "category_tag": "rewrite",
       "difficulty": "★★★☆☆",
+      "trapCodes": [
+        "ENG_PREP_COLLOCATION",
+        "ENG_TENSE_MISMATCH"
+      ],
+      "triadGroup": {
+        "groupId": "WR3_U06_T1",
+        "tier": "L4-6",
+        "role": "twist"
+      },
       "part_title": "Part II. Guided Biography Writing (歷史偉人傳記引導寫作)",
       "part_instructions": "運用「was one of the + 最高級形容詞 + 複數名詞」句型，依據提示完整書寫莫札特的崇高音樂歷史地位，特別注意名詞複數形態。",
       "sentence_form": "Subject + was one of the greatest + [Plural Noun] + in history.",
@@ -51608,7 +54063,37 @@ const ENGLISH_DATA = {
         "commonTraps": [
           "名詞單複數錯誤：受中文「最偉大作曲家之一」影響，漏掉名詞複數 s 誤寫成 composer。",
           "定冠詞遺漏：在最高級前忘記加上定冠詞 the，誤寫為 one of greatest composers。"
-        ]
+        ],
+        "steps": [
+          "① 確認動詞：表達歷史身分評價用 was，切勿受「make 作品」干擾寫成 made",
+          "② 鎖定最高級框：one of the + greatest 必加定冠詞 the",
+          "③ 檢查名詞複數：既然是「其中之一」，後面群體名詞 composers 必須加 -s"
+        ],
+        "insight": "💡 「one of the + 最高級」後面名詞永遠要加複數 -s，而且前面動詞用 was 不用 made！",
+        "visualBlock": {
+          "kind": "compare_table",
+          "title": "⚖️ 偉人地位句「兩大真卷地雷」紅綠燈",
+          "data": {
+            "headers": [
+              "常見誤寫 ❌",
+              "正確寫法 ✅",
+              "核心原因"
+            ],
+            "rows": [
+              [
+                "He made one of the greatest artists.",
+                "He was one of the greatest artists.",
+                "評價人物身分要用 be 動詞 was，不是「製作」made"
+              ],
+              [
+                "was one of the greatest composer",
+                "was one of the greatest composers",
+                "one of the 最高級後方名詞一定要複數 (+s)"
+              ]
+            ]
+          },
+          "caption": "📊 Rex W12 真卷提醒：看到 one of the greatest 立刻檢查動詞 was 與名詞複數 -s！"
+        }
       },
       "extensionStudy": {
         "synonyms": [
@@ -51617,7 +54102,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "one of the + 複數名詞 (one of the greatest composers)；主詞若為 One of the composers，動詞則用單數 was。",
         "examVariations": "克漏字改錯：Thomas Edison was one of the greatest (inventor / inventors) in the world."
-      }
+      },
+      "is_week13": true
     },
     {
       "id": "q_w12_wr3_u06_18",
@@ -51628,6 +54114,15 @@ const ENGLISH_DATA = {
       "type": "paper_rewrite",
       "category_tag": "rewrite",
       "difficulty": "★★★★☆",
+      "trapCodes": [
+        "ENG_PREP_COLLOCATION",
+        "ENG_TENSE_MISMATCH"
+      ],
+      "triadGroup": {
+        "groupId": "WR3_U06_T1",
+        "tier": "L4-6",
+        "role": "twist"
+      },
       "part_title": "Part II. Guided Biography Writing (歷史偉人傳記引導寫作)",
       "part_instructions": "結合年齡介系詞片語「at the age of + 數字」與年份介系詞「in + 西元年」，以完整句子敘述莫札特在幼年時期完成第一首交響曲的早熟事蹟。",
       "sentence_form": "Subject + composed + his first symphony + at the age of [Number] + in [Year].",
@@ -51648,7 +54143,48 @@ const ENGLISH_DATA = {
         "commonTraps": [
           "年齡介系詞誤用：將固定片語 at the age of 誤寫為 on the age of 或 in the age of。",
           "時態未轉過去式：直接抄寫提示中的原形動詞 compose，忘記加上 -d 變成 composed。"
-        ]
+        ],
+        "steps": [
+          "① 過去式動詞：1764 年是過去時間，compose 改為 composed",
+          "② 年齡介系詞：固定片語 at the age of eight 用 at（不可用 on/in）",
+          "③ 年份介系詞：純西元年 1764 前用 in（不可用 on）"
+        ],
+        "insight": "💡 「在幾歲」用 at the age of、「純年份」用 in + 年份，過去事實動詞必轉過去式！",
+        "visualBlock": {
+          "kind": "prep_ladder",
+          "title": "🧭 年齡與年份介系詞階梯 (at vs in)",
+          "data": {
+            "levels": [
+              {
+                "prep": "at",
+                "scope": "特定年齡節點（在幾歲時）",
+                "examples": [
+                  "at the age of eight",
+                  "at age five"
+                ],
+                "highlight": true
+              },
+              {
+                "prep": "in",
+                "scope": "純西元年份 / 月份",
+                "examples": [
+                  "in 1764",
+                  "in 1756"
+                ],
+                "highlight": true
+              },
+              {
+                "prep": "on",
+                "scope": "具體日期（含月與日）",
+                "examples": [
+                  "on January 27, 1756"
+                ],
+                "highlight": false
+              }
+            ]
+          },
+          "caption": "📊 先年齡 (at)、再年份 (in)，介系詞絕對不打架！"
+        }
       },
       "extensionStudy": {
         "synonyms": [
@@ -51657,7 +54193,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "at the age of eight = when he was eight years old = at age eight。",
         "examVariations": "句型轉換：Mozart wrote his first symphony when he was only eight years old."
-      }
+      },
+      "is_week13": true
     },
     {
       "id": "q_w12_wr3_u06_19",
@@ -51668,6 +54205,15 @@ const ENGLISH_DATA = {
       "type": "paper_rewrite",
       "category_tag": "rewrite",
       "difficulty": "★★★★☆",
+      "trapCodes": [
+        "ENG_PREP_COLLOCATION",
+        "ENG_TENSE_MISMATCH"
+      ],
+      "triadGroup": {
+        "groupId": "WR3_U06_T4",
+        "tier": "L4-6",
+        "role": "twist"
+      },
       "part_title": "Part II. Guided Biography Writing (歷史偉人傳記引導寫作)",
       "part_instructions": "運用「Thanks to + 人物」句型引導因果影響，敘述蘇利文老師 (Anne Sullivan) 的悉心教導如何讓海倫·凱勒 (Helen Keller) 學會閱讀與書寫，注意逗號與動詞形式。",
       "sentence_form": "Thanks to [Person], Subject + learned + how to read and write.",
@@ -51688,7 +54234,37 @@ const ENGLISH_DATA = {
         "commonTraps": [
           "介系詞混淆：誤將歸功於某人的 Thanks to 寫成表示感謝某事的 Thanks for。",
           "動詞時態遺漏：主要子句忘記轉為過去式動詞 learned，誤寫成現在式 learn。"
-        ]
+        ],
+        "steps": [
+          "① 歸功開頭：表達「多虧了蘇利文老師」必須用 Thanks to Anne Sullivan,",
+          "② 加上逗號：介系詞片語置句首後須接逗號",
+          "③ 主要子句過去式：Helen Keller 在過去學會讀寫，動詞用 learned how to read and write"
+        ],
+        "insight": "💡 「多虧了某人」用 Thanks to + 人（不是 Thanks for）！",
+        "visualBlock": {
+          "kind": "compare_table",
+          "title": "⚖️ Thanks to vs Thanks for 紅綠燈對照表",
+          "data": {
+            "headers": [
+              "常見誤寫 ❌",
+              "正確寫法 ✅",
+              "語意與用法差異"
+            ],
+            "rows": [
+              [
+                "Thanks for Anne Sullivan, ...",
+                "Thanks to Anne Sullivan, ...",
+                "Thanks to = 多虧了（歸功因果）；Thanks for = 感謝某事/禮物"
+              ],
+              [
+                "Helen Keller learn how to read",
+                "Helen Keller learned how to read",
+                "過去歷史學習事件必須使用過去式 learned"
+              ]
+            ]
+          },
+          "caption": "📊 寫到「多虧了……」先確認後面是 to 不是 for！"
+        }
       },
       "extensionStudy": {
         "synonyms": [
@@ -51697,7 +54273,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "Thanks to 接名詞片語 (Thanks to Anne Sullivan)；Because 接完整主從子句 (Because Anne Sullivan taught her patiently)。",
         "examVariations": "課文原句比對：Thanks to Keller, disabled people have more hope."
-      }
+      },
+      "is_week13": true
     },
     {
       "id": "q_w12_wr3_u06_20",
@@ -51708,6 +54285,15 @@ const ENGLISH_DATA = {
       "type": "paper_rewrite",
       "category_tag": "rewrite",
       "difficulty": "★★★★☆",
+      "trapCodes": [
+        "ENG_TENSE_MISMATCH",
+        "ENG_POS_CONFUSION"
+      ],
+      "triadGroup": {
+        "groupId": "WR3_U06_T2",
+        "tier": "L4-6",
+        "role": "twist"
+      },
       "part_title": "Part II. Guided Biography Writing (歷史偉人傳記引導寫作)",
       "part_instructions": "將萊特兄弟 (The Wright brothers) 的偉大發明與現代影響合併為一句連貫的複合句，前半句使用 were famous for inventing，後半句使用 and thanks to them, people can travel by plane。",
       "sentence_form": "Subject + were famous for inventing + Noun, and thanks to them, people can + Verb.",
@@ -51728,7 +54314,33 @@ const ENGLISH_DATA = {
         "commonTraps": [
           "主動一致性錯誤：誤將雙人複數主詞 The Wright brothers 當作單數而搭配 was。",
           "介系詞後接原形：在 famous for 後方漏加 -ing 寫成 famous for invent。"
-        ]
+        ],
+        "steps": [
+          "① 複數主詞配複數 be 動詞：The Wright brothers 兩人用 were（非 was）",
+          "② 介系詞後接 V-ing：famous for 後面接 inventing",
+          "③ 時態時間軸切換：前半句過去成就用 were famous，後半句現代人類受惠用 people can travel"
+        ],
+        "insight": "💡 傳記常見「前半過去式 (were/invented) ➔ 後半現在影響 (can travel)」雙時態切換！",
+        "visualBlock": {
+          "kind": "timeline",
+          "title": "⏳ 傳記「過去成就 ➔ 至今影響」雙時態時間軸",
+          "data": {
+            "events": [
+              {
+                "time": "Past (歷史成就)",
+                "label": "The Wright brothers were famous for inventing...",
+                "highlight": true
+              },
+              {
+                "time": "Now (現代受惠)",
+                "label": "thanks to them, people can travel by plane",
+                "highlight": true
+              }
+            ],
+            "rule": "歷史人物生平／作為用過去式 (was/were/invented)；至今仍享受的影響用現在式 (can/is)"
+          },
+          "caption": "📊 先看時間軸：過去成就用 were，現代人搭飛機用 can travel！"
+        }
       },
       "extensionStudy": {
         "synonyms": [
@@ -51737,7 +54349,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "前半句描述過去歷史事實用過去式 were famous for；後半句描述今日現代世界事實用現在式 people can travel。",
         "examVariations": "發明家事蹟配對：Thanks to the Wright brothers, modern air travel is fast and convenient."
-      }
+      },
+      "is_week13": true
     },
     {
       "id": "q_w12_wr3_u06_21",
@@ -51748,6 +54361,15 @@ const ENGLISH_DATA = {
       "type": "paper_rewrite",
       "category_tag": "rewrite",
       "difficulty": "★★★☆☆",
+      "trapCodes": [
+        "ENG_VERB_OMISSION",
+        "ENG_TENSE_MISMATCH"
+      ],
+      "triadGroup": {
+        "groupId": "WR3_U06_T1",
+        "tier": "L4-6",
+        "role": "twist"
+      },
       "part_title": "Part II. Biography Error Correction & Proofreading (傳記改錯與潤飾)",
       "part_instructions": "找出下列歷史傳記句子中的文法錯誤，並將訂正後的完整句子正確寫出，特別注意出生被動語態 was born。",
       "sentence_form": "Subject + was born in [Year] in [Country].",
@@ -51768,7 +54390,37 @@ const ENGLISH_DATA = {
         "commonTraps": [
           "受母語負遷移影響：中文無被動標記，直覺認為 Edison born in 1847 是正確完整的句子。",
           "誤補現在式：將 be 動詞寫成現在式 is born，忽略生平年份 1847 為過去歷史事實。"
-        ]
+        ],
+        "steps": [
+          "① 抓出缺漏動詞：born 是過去分詞，不能單獨當動詞",
+          "② 依年份決定 be 動詞時態：1847 年是過去，補上單數過去式 was",
+          "③ 檢查國名：the United States 為聯合國名，保留定冠詞 the"
+        ],
+        "insight": "💡 英文沒有 \"He born in...\"！出生永遠是被動式 was/were born！",
+        "visualBlock": {
+          "kind": "compare_table",
+          "title": "⚖️ 出生句型「漏 be 動詞」與國名冠詞紅綠燈",
+          "data": {
+            "headers": [
+              "常見中式錯寫 ❌",
+              "正確寫法 ✅",
+              "核心規則"
+            ],
+            "rows": [
+              [
+                "Edison born in 1847",
+                "Edison was born in 1847",
+                "born 是過去分詞，必須搭配過去式 be 動詞 was"
+              ],
+              [
+                "from the Italy",
+                "from Italy / from the United States",
+                "單一國名不加 the；複數/聯合國名 (the US) 才加 the"
+              ]
+            ]
+          },
+          "caption": "📊 寫出生先檢查 was，寫國名先檢查要不要 the！"
+        }
       },
       "extensionStudy": {
         "synonyms": [
@@ -51777,7 +54429,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "bear (生小孩，現在式) - bore (過去式) - born (過去分詞，專用於出生 be born) - borne (負擔/承受之過去分詞)。",
         "examVariations": "選擇題題型：Thomas Edison _______ in Ohio in 1847. (A) born (B) was born (C) is born (D) has born (正解：B)"
-      }
+      },
+      "is_week13": true
     },
     {
       "id": "q_w12_wr3_u06_22",
@@ -51788,6 +54441,14 @@ const ENGLISH_DATA = {
       "type": "paper_rewrite",
       "category_tag": "rewrite",
       "difficulty": "★★★☆☆",
+      "trapCodes": [
+        "ENG_PREP_COLLOCATION"
+      ],
+      "triadGroup": {
+        "groupId": "WR3_U06_T1",
+        "tier": "L4-6",
+        "role": "twist"
+      },
       "part_title": "Part II. Biography Error Correction & Proofreading (傳記改錯與潤飾)",
       "part_instructions": "找出下列句子中時間介系詞的錯誤，並將訂正後的完整句子寫出，確保純西元年前使用正確的介系詞 in。",
       "sentence_form": "Subject + was born in [Year] and died in [Year].",
@@ -51808,7 +54469,47 @@ const ENGLISH_DATA = {
         "commonTraps": [
           "時間介系詞混淆：誤將修飾特定日期的 on 拿來修飾西元純年份。",
           "誤改地點介系詞：誤以為錯誤在於 in Austria 而將其改為 at Austria。"
-        ]
+        ],
+        "steps": [
+          "① 圈出時間名詞：1756 是純西元年份（沒有寫幾月幾號）",
+          "② 對照階梯選介系詞：純年份用 in（on 只用於含「幾號」的具體日期）",
+          "③ 檢查國名零冠詞：in Austria 正確，單一國名不加 the"
+        ],
+        "insight": "💡 純年份 1756 用 in，有「月＋日」才用 on；單一國名 Austria 不加 the！",
+        "visualBlock": {
+          "kind": "prep_ladder",
+          "title": "🧭 傳記年份 vs 日期介系詞階梯",
+          "data": {
+            "levels": [
+              {
+                "prep": "in",
+                "scope": "純西元年份 / 月份 / 國家",
+                "examples": [
+                  "was born in 1756",
+                  "in Austria"
+                ],
+                "highlight": true
+              },
+              {
+                "prep": "on",
+                "scope": "具體日期（含月與日）",
+                "examples": [
+                  "on January 27, 1756"
+                ],
+                "highlight": false
+              },
+              {
+                "prep": "at",
+                "scope": "特定歲數",
+                "examples": [
+                  "at the age of five"
+                ],
+                "highlight": false
+              }
+            ]
+          },
+          "caption": "📊 W13 改錯必考點：看到 was born on 1756/1847 立刻把 on 改成 in！"
+        }
       },
       "extensionStudy": {
         "synonyms": [
@@ -51817,7 +54518,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "in 1756 (年份) vs in January (月份) vs on January 27, 1756 (具體完整月日)。",
         "examVariations": "文法改錯：The great composer died on 1791 at age 35. (on -> in)"
-      }
+      },
+      "is_week13": true
     },
     {
       "id": "q_w12_wr3_u06_23",
@@ -51857,7 +54559,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "one of the greatest scientists (名詞用複數)；但若作為主詞：One of the greatest scientists was Newton (動詞用單數 was)。",
         "examVariations": "填空題：Helen Keller is one of the most famous (writer / writers) in the world. (正解：writers)"
-      }
+      },
+      "is_week13": true
     },
     {
       "id": "q_w12_wr3_u06_24",
@@ -51868,6 +54571,14 @@ const ENGLISH_DATA = {
       "type": "paper_rewrite",
       "category_tag": "rewrite",
       "difficulty": "★★★★☆",
+      "trapCodes": [
+        "ENG_TENSE_MISMATCH"
+      ],
+      "triadGroup": {
+        "groupId": "WR3_U06_T5",
+        "tier": "L4-6",
+        "role": "twist"
+      },
       "part_title": "Part II. Biography Error Correction & Proofreading (傳記改錯與潤飾)",
       "part_instructions": "找出傳記欽佩原因子句中的動詞時態錯誤，並將訂正後的完整句子正確寫出，描述歷史偉人生前事蹟必須嚴格使用過去式。",
       "sentence_form": "I admire [Person] most of all because he never gave up on his dreams.",
@@ -51888,7 +54599,33 @@ const ENGLISH_DATA = {
         "commonTraps": [
           "時態僵化對稱：誤以為前面 I admire 是現在式，後面就必須一致寫 give，忘記愛迪生奮鬥是過去的事實。",
           "介系詞遺漏：改動詞時不小心漏掉介系詞 on，誤寫成 gave up his dreams。"
-        ]
+        ],
+        "steps": [
+          "① 分開看兩個子句：前半句 I admire（我現在欽佩）用現在式",
+          "② 判斷時間軸：後半句他從不放棄夢想發生在生前（1847–1931），屬於過去歷史",
+          "③ 動詞切換過去式：give 改為不規則過去式 gave，保留片語 on his dreams"
+        ],
+        "insight": "💡 「我現在欽佩 (admire)」是因為「他過去做到 (gave up / studied / worked)」！",
+        "visualBlock": {
+          "kind": "timeline",
+          "title": "⏳ 欽佩原因雙時態時間軸 (admire vs gave up)",
+          "data": {
+            "events": [
+              {
+                "time": "Past (1847–1931 生前奮鬥)",
+                "label": "because he never gave up on his dreams",
+                "highlight": true
+              },
+              {
+                "time": "Now (現在寫作文評價)",
+                "label": "I admire Edison most of all",
+                "highlight": false
+              }
+            ],
+            "rule": "主句表達作者現在的欽佩 (admire)；because 子句敘述已故偉人生前行為，一律用過去式 (gave/made/was)"
+          },
+          "caption": "📊 寫傳記與改錯最易中招：never give up ➔ never gave up！"
+        }
       },
       "extensionStudy": {
         "synonyms": [
@@ -51897,7 +54634,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "I admire (我現在欽佩) + because he never gave up (他過去奮鬥從不放棄)。",
         "examVariations": "類似句型改錯：I admire Keller because she never complain about her disabilities. (complain -> complained)"
-      }
+      },
+      "is_week13": true
     },
     {
       "id": "q_w12_wr3_u06_25",
@@ -51908,6 +54646,14 @@ const ENGLISH_DATA = {
       "type": "choice",
       "category_tag": "grammar",
       "difficulty": "★★★☆☆",
+      "trapCodes": [
+        "ENG_PREP_COLLOCATION"
+      ],
+      "triadGroup": {
+        "groupId": "WR3_U06_T4",
+        "tier": "L4-6",
+        "role": "twist"
+      },
       "question": "Choose the correct preposition to complete the sentence: \"_______ Thomas Edison, people all over the world can light up their homes and see at night.\"",
       "options": [
         "Thanks to",
@@ -51926,6 +54672,46 @@ const ENGLISH_DATA = {
           "Thanks for": "Thanks for 用於為了某事或具體禮物向某人致謝（如 Thanks for your help），不能用於表達成就歸屬。",
           "Because to": "Because 後方接完整句子，或與 of 連用成 Because of，英語文法中不存在 Because to 結構。",
           "Owing for": "表示因為、歸因於的成語介系詞為 Owing to，英語中無 Owing for 之固定文法搭配。"
+        },
+        "steps": [
+          "① 看逗號後句意：全世界人都能在夜晚照明看見（正面受惠結果）",
+          "② 選歸功介系詞：表達「多虧了某人的發明／貢獻」必用 Thanks to + 人物",
+          "③ 排除干擾：Thanks for 用於當面道謝；Because to 與 Owing for 皆為錯誤搭配"
+        ],
+        "insight": "💡 「多虧了偉人，我們現在可以……」＝ Thanks to [Person], we can + 原形 V！",
+        "visualBlock": {
+          "kind": "slot_box",
+          "title": "📦 Thanks to 現代影響句構積木槽",
+          "data": {
+            "slots": [
+              {
+                "role": "歸功片語",
+                "text": "Thanks to",
+                "accent": "warn"
+              },
+              {
+                "role": "人物名詞",
+                "text": "Thomas Edison,",
+                "accent": "pri"
+              },
+              {
+                "role": "現代受惠主詞",
+                "text": "people",
+                "accent": "pri"
+              },
+              {
+                "role": "情態助動詞",
+                "text": "can",
+                "accent": "ok"
+              },
+              {
+                "role": "原形動詞",
+                "text": "light up & see at night.",
+                "accent": "ok"
+              }
+            ]
+          },
+          "caption": "📊 第 1 格用 Thanks to（切勿寫成 Thanks for），第 4 格用現在式 can！"
         }
       },
       "extensionStudy": {
@@ -51935,7 +54721,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "Thanks to + N (正面感激歸功) vs Because of + N (中性因果說明)。",
         "examVariations": "選詞填空：_______ Isaac Newton, we understand gravity better. (正解：Thanks to)"
-      }
+      },
+      "is_week13": true
     },
     {
       "id": "q_w12_wr3_u06_26",
@@ -51946,6 +54733,15 @@ const ENGLISH_DATA = {
       "type": "choice",
       "category_tag": "grammar",
       "difficulty": "★★★☆☆",
+      "trapCodes": [
+        "ENG_UNCOUNTABLE_SVA",
+        "ENG_TENSE_MISMATCH"
+      ],
+      "triadGroup": {
+        "groupId": "WR3_U06_T3",
+        "tier": "L4-6",
+        "role": "twist"
+      },
       "question": "Choose the correct verb form to complete the sentence: \"Thomas Edison invented many brilliant devices, but his most famous invention _______ the incandescent electric light bulb.\"",
       "options": [
         "is",
@@ -51964,6 +54760,41 @@ const ENGLISH_DATA = {
           "are": "主詞核心名詞是單數 invention，不可因前方有 most 或後方受詞而誤用複數 are。",
           "were": "代表作至今仍是其最著名的代表，且主詞為單數名詞，不可搭配複數過去式 were。",
           "be": "主要子句缺少限定動詞，不可在無助動詞的情況下直接使用動詞原形 be。"
+        },
+        "steps": [
+          "① 抓出主詞核心：his most famous invention（單數，無 s）",
+          "② 判斷時態：代表作至今在歷史上仍是最著名的，用現在式",
+          "③ 配對單數 be 動詞：單數現在式選擇 is（不可選 are / were）"
+        ],
+        "insight": "💡 His most famous + 單數名詞 (invention / painting / composition) + is + 代表作！",
+        "visualBlock": {
+          "kind": "slot_box",
+          "title": "📦 His most famous X is Y 單數代表作積木槽",
+          "data": {
+            "slots": [
+              {
+                "role": "所有格＋最高級",
+                "text": "His most famous",
+                "accent": "pri"
+              },
+              {
+                "role": "單數代表名詞",
+                "text": "invention / painting",
+                "accent": "warn"
+              },
+              {
+                "role": "單數現在式 be",
+                "text": "is",
+                "accent": "ok"
+              },
+              {
+                "role": "代表作名稱",
+                "text": "the light bulb / the Mona Lisa.",
+                "accent": "pri"
+              }
+            ]
+          },
+          "caption": "📊 第 2 格沒有 s，第 3 格就一定用 is（切勿誤填 are）！"
         }
       },
       "extensionStudy": {
@@ -51973,7 +54804,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "His most famous invention is... (單數) vs His most famous inventions are... (複數)。",
         "examVariations": "句型代換：His most famous composition _______ the Fifth Symphony. (正解：is)"
-      }
+      },
+      "is_week13": true
     },
     {
       "id": "q_w12_wr3_u06_27",
@@ -51984,6 +54816,14 @@ const ENGLISH_DATA = {
       "type": "choice",
       "category_tag": "grammar",
       "difficulty": "★★★★☆",
+      "trapCodes": [
+        "ENG_UNCOUNTABLE_SVA"
+      ],
+      "triadGroup": {
+        "groupId": "WR3_U06_T3",
+        "tier": "L4-6",
+        "role": "twist"
+      },
       "question": "Choose the grammatically correct noun form: \"With over one thousand patents, Thomas Edison was widely regarded as one of the greatest _______ in human history.\"",
       "options": [
         "inventors",
@@ -52002,6 +54842,46 @@ const ENGLISH_DATA = {
           "inventor": "在「one of the + 最高級」結構後必須使用複數名詞，不可使用單數名詞 inventor。",
           "inventing": "此處語境需要指稱人的複數名詞作為身分同位受詞，動名詞 inventing 不合文法。",
           "inventions": "inventions 意為「發明物」，而主詞 Thomas Edison 是人，不可說某人是發明物之一。"
+        },
+        "steps": [
+          "① 圈出關鍵句構：one of the greatest _______",
+          "② 確定詞性語意：主詞 Thomas Edison 是人，不能選物 (inventions) 或 V-ing",
+          "③ 套用複數規則：one of the + 最高級 後方必接複數名詞 inventors"
+        ],
+        "insight": "💡 「one of the + 最高級」＝ 眾多之中的一個，所以後面名詞一定要加 -s！",
+        "visualBlock": {
+          "kind": "slot_box",
+          "title": "📦 one of the greatest + 複數名詞 積木槽",
+          "data": {
+            "slots": [
+              {
+                "role": "主詞",
+                "text": "Thomas Edison",
+                "accent": "pri"
+              },
+              {
+                "role": "be 動詞（非 made!）",
+                "text": "was",
+                "accent": "ok"
+              },
+              {
+                "role": "最高級框",
+                "text": "one of the greatest",
+                "accent": "warn"
+              },
+              {
+                "role": "複數人物名詞",
+                "text": "inventors",
+                "accent": "ok"
+              },
+              {
+                "role": "範圍",
+                "text": "in human history.",
+                "accent": "pri"
+              }
+            ]
+          },
+          "caption": "📊 第 2 格用 was（不可寫 made），第 4 格名詞必加 s！"
         }
       },
       "extensionStudy": {
@@ -52011,7 +54891,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "one of the greatest inventors (複數名詞)；但若作主詞 One of the greatest inventors was Edison (單數動詞)。",
         "examVariations": "改錯題：Isaac Newton was one of the greatest scientist in history. (scientist -> scientists)"
-      }
+      },
+      "is_week13": true
     },
     {
       "id": "q_w12_wr3_u06_28",
@@ -52022,6 +54903,15 @@ const ENGLISH_DATA = {
       "type": "choice",
       "category_tag": "grammar",
       "difficulty": "★★★★☆",
+      "trapCodes": [
+        "ENG_POS_CONFUSION",
+        "ENG_CHINGLISH_LITERAL"
+      ],
+      "triadGroup": {
+        "groupId": "WR3_U06_T5",
+        "tier": "L4-6",
+        "role": "twist"
+      },
       "question": "Choose the correct consequence transition phrase to complete the biography conclusion: \"Edison was remarkably persistent, and he made our modern world brighter. _______, I believe Thomas Edison was a truly great person.\"",
       "options": [
         "For these reasons",
@@ -52040,6 +54930,41 @@ const ENGLISH_DATA = {
           "Although": "Although 為讓步轉折連接詞（雖然），後接從屬子句，不能作為結論段的因果副詞片語。",
           "Because of": "Because of 為介系詞片語，後方必須接名詞受詞，不能單獨置於句首後接完整獨立子句。",
           "Even though": "Even though 為從屬連接詞（即使），引導讓步子句，不能用於總結全文因果結論。"
+        },
+        "steps": [
+          "① 看位置與標點：空格後有逗號並接完整獨立句 I believe...",
+          "② 判別詞性：Although / Even though 不可單獨加逗號；Because of 後只能接名詞",
+          "③ 選因果結論片語：For these reasons（基於這些原因）引導傳記結論段"
+        ],
+        "insight": "💡 傳記結論段開頭固定用 For these reasons, / Therefore, ＋ I think [該篇主角] was a great person！",
+        "visualBlock": {
+          "kind": "slot_box",
+          "title": "📦 傳記結論段「因果收尾」積木槽",
+          "data": {
+            "slots": [
+              {
+                "role": "因果轉折詞",
+                "text": "For these reasons,",
+                "accent": "warn"
+              },
+              {
+                "role": "作者觀點",
+                "text": "I think / I believe",
+                "accent": "pri"
+              },
+              {
+                "role": "該篇主角全名",
+                "text": "Thomas Edison",
+                "accent": "ok"
+              },
+              {
+                "role": "過去式評價",
+                "text": "was a great person.",
+                "accent": "pri"
+              }
+            ]
+          },
+          "caption": "📊 第 1 格注意 reasons 複數；第 3 格務必核對是本篇主角（別背錯人名）！"
         }
       },
       "extensionStudy": {
@@ -52049,7 +54974,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "For these reasons (副詞性轉折片語，後接完整句子) vs Because of these reasons (介系詞片語)。",
         "examVariations": "寫作提示：Transition words like \"therefore\" and \"for these reasons\" show consequence."
-      }
+      },
+      "is_week13": true
     },
     {
       "id": "q_w12_wr3_u06_29",
@@ -52087,7 +55013,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "never gave up on (從不放棄，接受詞 dreams) vs failed many times (失敗多次，不及物動詞)。",
         "examVariations": "閱讀問答：Why does Ella admire Thomas Edison most of all?"
-      }
+      },
+      "is_week13": true
     },
     {
       "id": "q_w12_wr3_u06_30",
@@ -52125,7 +55052,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "the theory of gravity (名詞片語) vs understand gravity better (動詞修飾比較級副詞)。",
         "examVariations": "人物事蹟配對：Match Isaac Newton with \"discovered gravity and formulated laws of motion\"."
-      }
+      },
+      "is_week13": true
     },
     {
       "id": "q_w12_wr3_u06_31",
@@ -52163,7 +55091,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "overcame her disabilities (克服障礙，過去式) vs never complained about (從不抱怨)。",
         "examVariations": "閱讀問答：How did Helen Keller help people with disabilities around the world?"
-      }
+      },
+      "is_week13": true
     },
     {
       "id": "q_w12_wr3_u06_32",
@@ -52201,6 +55130,2931 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "Introduction (引出人物) -> Body (生平成就與欽佩原因) -> Conclusion (因果總結評價)。",
         "examVariations": "寫作步驟排序：Organize a biography: 1. Introduce admired person 2. Explain deeds 3. Conclude with reasons."
+      },
+      "is_week13": true
+    },
+    {
+      "id": "q_w13_wr3_u06_33",
+      "book_id": "wr3",
+      "unit_id": "wr3_6",
+      "is_midterm": true,
+      "is_week12": true,
+      "is_week13": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "difficulty": "★★★★☆",
+      "trapCodes": [
+        "ENG_TENSE_MISMATCH",
+        "ENG_ARTICLE_ERROR",
+        "ENG_CHINGLISH_LITERAL"
+      ],
+      "triadGroup": {
+        "groupId": "WR3_U06_T6",
+        "tier": "L4-6",
+        "role": "twist"
+      },
+      "part_title": "Part C. Outline to 3-Paragraph Biography Essay Writing (六欄提綱➔三段式傳記實戰)",
+      "part_instructions": "Use the 6-column Outline below to write a complete 3-paragraph biography essay (Introduction, Body, Conclusion). Think about your verb tenses (past tense for life events vs. present tense for lasting impact), and check zero-article country names (Italy, NOT the Italy) and consistent person names.",
+      "sentence_form": "Intro: The person I admire the most is [Name]. | Body: [Name] was [a/an + occupation] from [Country]. He was born in [Year] and died in [Year]. He [past actions]. His most famous [work] is [Work]. Thanks to [Name], [present impact]. However, I admire [Name] most of all because [past reason]. | Conclusion: For these reasons, I think [Name] was a great person.",
+      "question": "[3C Full-Story Outline Writing · No. 1: Leonardo da Vinci]\nRead the 6-column Outline and complete the 3-paragraph biography essay. Remember to think about your verb tenses and check zero-article country names.\n\n【6-Column Biography Outline】\n• Name: Leonardo da Vinci\n• Occupation: artist\n• Country: Italy\n• Born / Died: 1452 / 1519\n• Accomplishments & Impact: made many great drawings and paintings / most famous painting: the \"Mona Lisa\" / Thanks to da Vinci: we have beautiful works of art\n• Personality & Why Admire: smart and curious / curious about many things / never gave up on his ideas\n\n【Guided 3-Paragraph Draft】\nThe person I admire the most is ______________________.\n______________________ was ______________________ from ______________________. He was born in _______ and died in _______. He _______ many great drawings and paintings. His most famous painting _______ the \"Mona Lisa.\" _______ da Vinci, we have beautiful works of art. Da Vinci was smart and curious. He _______ one of the greatest _______ in history. However, I admire da Vinci most of all because he was curious about many things and never _______ up on his ideas.\nFor these reasons, I think ______________________ was a great person.",
+      "options": [],
+      "answer": "The person I admire the most is Leonardo da Vinci.\nLeonardo da Vinci was an artist from Italy. He was born in 1452 and died in 1519. He made many great drawings and paintings. His most famous painting is the \"Mona Lisa.\" Thanks to da Vinci, we have beautiful works of art. Da Vinci was smart and curious. He was one of the greatest artists in history. However, I admire da Vinci most of all because he was curious about many things and never gave up on his ideas.\nFor these reasons, I think Leonardo da Vinci was a great person.",
+      "self_check": [
+        "1. 國名與職業冠詞檢查：是否寫成 an artist from Italy（不可誤加定冠詞寫 from the Italy，且 artist 前用 an）？",
+        "2. 過去式與身分動詞檢查：是否寫成 He made many great drawings 與 He was one of the greatest artists（不可誤寫 He make 或 He made one of the greatest）？",
+        "3. 雙時態與人名一致性檢查：His most famous painting is... / Thanks to da Vinci, we have... 用現在式，且結尾主角寫 Leonardo da Vinci（不可誤背範文寫 Tomas / Thomas Edison）？"
+      ],
+      "explanation": {
+        "point": "六欄 Outline 轉三段式傳記寫作：精準切換歷史過去式與現存影響現在式，並嚴守國名零冠詞與人名一致。",
+        "examPurpose": "完整對標 3C 手寫作文真卷考法，訓練學生將六欄 Outline 資訊化為流暢三段傳記並避開四大高頻扣分雷區。",
+        "correctReason": "Introduction 點出主角 Leonardo da Vinci；Body 依序填入 an artist from Italy（零冠詞）、was born in 1452 and died in 1519、made（過去式）、His most famous painting is（單數現在式）、Thanks to da Vinci, we have（現在式影響）、was one of the greatest artists（身分用 was＋複數 artists）與 gave up（過去式）；Conclusion 重申 Leonardo da Vinci。",
+        "note": "Outline 寫作黃金檢核：國名 (Italy 不加 the)、動詞 (made/gave)、身分 (was one of...)、結論主角全名一致。",
+        "trap": "實戰最容易踩中四大真卷扣分點：(1) from the Italy 多加 the；(2) He make 漏改過去式 made；(3) He made one of the greatest artists 動詞錯用 made；(4) 結尾背模板錯寫 Tomas / Thomas Edison。",
+        "commonTraps": [
+          "冠詞與人名模板干擾：誤寫成 from the Italy，或在最後一句照抄愛迪生範文誤寫成 Tomas / Thomas Edison。",
+          "動詞時態與句型混用：把 He made many drawings 漏寫成現在式 make，或把 He was one of the greatest artists 誤寫成 He made one of..."
+        ],
+        "steps": [
+          "① 開頭與結尾鎖定同一主角：Leonardo da Vinci（禁止寫成 Tomas / Edison）",
+          "② 國名零冠詞檢查：Italy / England / Austria 前面都不加 the（只有 the United States 加 the）",
+          "③ 動詞過去式逐字過篩：was born / died / made / was one of / gave up 全部用過去式",
+          "④ 現存代表作與影響保持現在式：His most famous painting is / Thanks to da Vinci, we have"
+        ],
+        "insight": "💡 交卷前 30 秒四檢：國名不加 the、動作變 made/gave、地位用 was＋複數、結尾名字沒背錯！",
+        "visualBlock": {
+          "kind": "compare_table",
+          "title": "⚖️ 達文西 Outline 作文「真卷四大實戰雷區」對照表",
+          "data": {
+            "headers": [
+              "真卷常見扣分錯寫 ❌",
+              "正確寫法 ✅",
+              "扣分盲點"
+            ],
+            "rows": [
+              [
+                "an artist from the Italy",
+                "an artist from Italy",
+                "單一國名零冠詞，不可受 the United States 影響加 the"
+              ],
+              [
+                "He make many great drawings",
+                "He made many great drawings",
+                "已故偉人生平動作必須改過去式 made"
+              ],
+              [
+                "He made one of the greatest artists",
+                "He was one of the greatest artists",
+                "描述身分地位要用 be 動詞 was，不是 made"
+              ],
+              [
+                "I think Tomas was a great person.",
+                "I think Leonardo da Vinci was a great person.",
+                "結尾主角必須與本篇主角一致，切勿套錯模板"
+              ]
+            ]
+          },
+          "caption": "📊 這四行正是 W12 真卷最容易失分的 4 個地方，寫完達文西傳記必逐條勾檢！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "biographical outline",
+          "three-paragraph essay"
+        ],
+        "grammarCompare": "單一國名零冠詞 (from Italy / England / Austria) vs 聯合複數國名 (from the United States)。",
+        "examVariations": "換角仿寫：將 Outline 換成 Galileo Galilei from Italy，同樣檢查 from Italy 不加 the 與 made/was 過去式。"
+      }
+    },
+    {
+      "id": "q_w13_wr3_u06_34",
+      "book_id": "wr3",
+      "unit_id": "wr3_6",
+      "is_midterm": true,
+      "is_week12": true,
+      "is_week13": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "difficulty": "★★★★☆",
+      "trapCodes": [
+        "ENG_TENSE_MISMATCH",
+        "ENG_ARTICLE_ERROR",
+        "ENG_PREP_COLLOCATION"
+      ],
+      "triadGroup": {
+        "groupId": "WR3_U06_T6",
+        "tier": "L4-6",
+        "role": "twist"
+      },
+      "part_title": "Part C. Outline to 3-Paragraph Biography Essay Writing (六欄提綱➔三段式傳記實戰)",
+      "part_instructions": "Use the variant Outline below to write a complete 3-paragraph biography essay about Isaac Newton. Think about your verb tenses (was born / made / was not afraid vs. is / Thanks to..., we understand), and check zero-article country names (England) and plural nouns after \"one of the greatest\".",
+      "sentence_form": "Intro: The person I admire the most is [Name]. | Body: [Name] was a [occupation] from [Country]. He was born in [Year] and died in [Year]. He [made...]. His most famous [noun] is [Work]. Thanks to [Name], [present clause]. However, I admire [Name] most of all because [past clause]. | Conclusion: For these reasons, I think [Name] was a great person.",
+      "question": "[3C Full-Story Outline Writing · No. 2: Isaac Newton]\nUse the Outline below to write a complete 3-paragraph biography essay about Isaac Newton. Remember to think about your verb tenses and check country names and plural nouns.\n\n【Variant Biography Outline】\n• Name: Isaac Newton\n• Occupation: scientist\n• Country: England\n• Born: 1643 | Died: 1727\n• Accomplishments: made many scientific discoveries / most famous scientific theory: the theory of gravity\n• Impact (Thanks to): we understand gravity better\n• Character & Why Admire: brilliant and dedicated / was not afraid to be different\n\n【Guided 3-Paragraph Prompt】\nWrite Paragraph 1 (Introduction), Paragraph 2 (Body: life, scientific discoveries, theory of gravity, Thanks to impact, and why you admire him), and Paragraph 3 (Conclusion starting with \"For these reasons,\").",
+      "options": [],
+      "answer": "The person I admire the most is Isaac Newton.\nIsaac Newton was a scientist from England. He was born in 1643 and died in 1727. Newton made many scientific discoveries, and he was one of the greatest scientists in history. His most famous scientific theory is the theory of gravity. Thanks to Newton, we understand gravity better. Newton was brilliant and dedicated. However, I admire Newton most of all because he was not afraid to be different.\nFor these reasons, I think Isaac Newton was a great person.",
+      "self_check": [
+        "1. 國名與職業冠詞檢查：是否寫成 a scientist from England（England 前不可加 the）？",
+        "2. 雙時態時間軸檢查：was born in 1643 / died in 1727 / made many scientific discoveries / was not afraid 用過去式；His most famous scientific theory is / Thanks to Newton, we understand 用現在式？",
+        "3. 結構與主角名稱檢查：是否包含 Introduction / Body (含 However 轉折) / Conclusion (For these reasons, I think Isaac Newton was a great person.)？"
+      ],
+      "explanation": {
+        "point": "變式 Outline 三段式傳記寫作（牛頓篇）：掌握 make scientific discoveries 過去式、theory of gravity 與「過去事蹟 vs 至今影響」時間軸。",
+        "examPurpose": "評量學生在無逐字挖空提示的變式 Outline 條件下，獨立架構完整三段式人物傳記與切換時態的能力。",
+        "correctReason": "文章依序完成三段：開頭點出 Isaac Newton；主體寫出 a scientist from England（零冠詞）、was born in 1643 and died in 1727、made many scientific discoveries（過去式）、His most famous scientific theory is（單數現在式）、Thanks to Newton, we understand gravity better（現在式）及 However, I admire Newton most of all because he was not afraid to be different（過去式）；結論以 For these reasons 收尾。",
+        "note": "make scientific discoveries 的過去式為 made；England 前面不加 the；theory of gravity 後接單數 is。",
+        "trap": "容易受中文影響寫出 from the England、Newton make many discoveries，或將 Thanks to Newton 誤寫為 Thanks for Newton。",
+        "commonTraps": [
+          "動詞過去式漏改或介系詞錯配：把 made 寫回 make、把 was not afraid 寫成 is not afraid，或將 Thanks to 誤寫為 Thanks for。",
+          "國名冠詞與代表作單複數錯誤：誤寫 from the England 或 His most famous scientific theory are..."
+        ],
+        "steps": [
+          "① 第 1 段寫主題句：The person I admire the most is Isaac Newton.",
+          "② 第 2 段前半（過去生平）：was a scientist from England / was born in 1643 and died in 1727 / made many scientific discoveries",
+          "③ 第 2 段中後（代表作＋現代影響＋欽佩原因）：His most famous scientific theory is... / Thanks to Newton, we understand... / However, I admire Newton most of all because he was not afraid to be different.",
+          "④ 第 3 段結論：For these reasons, I think Isaac Newton was a great person."
+        ],
+        "insight": "💡 用時間軸切兩半：1643–1727 牛頓生前動作全用過去式；代表作與「我們今日理解重力」用現在式！",
+        "visualBlock": {
+          "kind": "timeline",
+          "title": "⏳ 牛頓傳記「過去生平 vs 今日影響」時態時間軸",
+          "data": {
+            "events": [
+              {
+                "time": "Past (1643–1727)",
+                "label": "was born / made discoveries / died / was not afraid",
+                "highlight": true
+              },
+              {
+                "time": "Now (至今價值)",
+                "label": "His most famous theory is... / Thanks to Newton, we understand...",
+                "highlight": true
+              }
+            ],
+            "rule": "生平年份、成就動作與欽佩原因子句用過去式；代表作定位與人類今日受益用現在式"
+          },
+          "caption": "📊 下筆前先畫時間線：1643–1727 發生過的事用過去式，現在還成立的影響用現在式！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "scientific breakthrough",
+          "universal gravitation"
+        ],
+        "grammarCompare": "made scientific discoveries (發現本已存在之自然律) vs invented new machines (發明創造新裝置)。",
+        "examVariations": "句型擴充：寫作時可額外加入 He was one of the greatest scientists in history. 強化主體段評價。"
+      }
+    },
+    {
+      "id": "q_w13_wr3_u06_35",
+      "book_id": "wr3",
+      "unit_id": "wr3_6",
+      "is_midterm": true,
+      "is_week12": true,
+      "is_week13": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "difficulty": "★★★★★",
+      "trapCodes": [
+        "ENG_TENSE_MISMATCH",
+        "ENG_ARTICLE_ERROR",
+        "ENG_UNCOUNTABLE_SVA",
+        "ENG_PREP_COLLOCATION"
+      ],
+      "triadGroup": {
+        "groupId": "WR3_U06_T6",
+        "tier": "L7-10",
+        "role": "challenge"
+      },
+      "part_title": "Part C. Outline to 3-Paragraph Biography Essay Writing (六欄提綱➔三段式傳記實戰)",
+      "part_instructions": "Use the variant Outline below to write a complete 3-paragraph biography essay about Wolfgang Amadeus Mozart. Think carefully about your verb tenses (composed / began / studied vs. is / can listen), zero-article country names (Austria), and age preposition (at the age of five).",
+      "sentence_form": "Intro: The person I admire the most is [Name]. | Body: [Name] was a [occupation] from [Country]. He was born in [Year] and died in [Year]. He [composed... / began... at the age of...]. His most famous [composition] is [Work]. Thanks to [Name], [present impact]. However, I admire [Name] most of all because [past reason]. | Conclusion: For these reasons, I think [Name] was a great person.",
+      "question": "[3C Full-Story Outline Writing · No. 3: Wolfgang Amadeus Mozart]\nUse the variant Outline below to write a complete 3-paragraph biography essay about Wolfgang Amadeus Mozart. Think about your verb tenses, zero-article country names, and exact prepositions.\n\n【Variant Biography Outline】\n• Name: Wolfgang Amadeus Mozart\n• Occupation: composer\n• Country: Austria\n• Born: 1756 | Died: 1791\n• Early Talent & Accomplishments: began composing music at the age of five / composed many symphonies and operas / one of the greatest composers\n• Most Famous Work & Impact: composition = the opera \"Don Giovanni\" / Thanks to Mozart: we can listen to great music\n• Character & Why Admire: brilliant and hardworking / studied music very hard\n\n【Task】\nWrite the full 3-paragraph biography essay independently, including all details from the Outline and a consequence transition word in the Conclusion.",
+      "options": [],
+      "answer": "The person I admire the most is Wolfgang Amadeus Mozart.\nWolfgang Amadeus Mozart was a composer from Austria. He was born in 1756 and died in 1791. He began composing music at the age of five, and he composed many symphonies and operas. He was one of the greatest composers in history. His most famous composition is the opera \"Don Giovanni.\" Thanks to Mozart, we can listen to great music. Mozart was brilliant and hardworking. However, I admire Mozart most of all because he studied music very hard.\nFor these reasons, I think Wolfgang Amadeus Mozart was a great person.",
+      "self_check": [
+        "1. 國名與介系詞檢查：是否寫成 from Austria（零冠詞）與 at the age of five（不可寫 on the age of five）？",
+        "2. 不規則與規則過去式檢查：began / composed / was one of the greatest composers / studied（去 y 加 ied）是否全部寫對？",
+        "3. 三段完整結構與結論主角檢查：是否包含 Introduction、Body（含代表作單數 is、Thanks to Mozart 與 However 轉折）與 Conclusion（For these reasons, I think Wolfgang Amadeus Mozart was a great person.）？"
+      ],
+      "explanation": {
+        "point": "高階整合 Outline 傳記寫作（莫札特篇）：融合年齡片語 at the age of、規則／不規則過去式 (began / composed / studied) 與複數地位句型。",
+        "examPurpose": "測驗學生獨立整合多欄變式提綱撰寫完整三段英文傳記、並同時控管時態、冠詞、介系詞與單複數的高階寫作能力。",
+        "correctReason": "文章結合六欄資訊與進階細節：from Austria 不加 the；began composing music at the age of five 精準使用 at 與過去式 began；one of the greatest composers 動詞用 was、名詞用複數 composers；His most famous composition is 保持單數 is；Thanks to Mozart, we can listen 用現在式；because he studied music very hard 轉為過去式 studied；結尾用 For these reasons 與完整主角名收尾。",
+        "note": "study 的過去式去 y 加 ied -> studied；begin 的過去式 -> began；Austria 前不加 the。",
+        "trap": "最容易在長文寫作中失誤：把 Austria 寫成 the Austria、把 at the age of 寫成 on the age of、把 studied 漏寫為 studyed 或 study，或將 Mozart 寫成 Beethoven。",
+        "commonTraps": [
+          "動詞變化與拼寫失誤：將不規則過去式 began 寫成 begin，或將 studied 誤拼為 studyed / study。",
+          "介系詞與國名冠詞誤植：將 at the age of five 誤寫為 on the age of five，或在 Austria 前誤加定冠詞 the。"
+        ],
+        "steps": [
+          "① 套入三段積木槽：Intro (1 句) ➔ Body (生平＋成就＋代表作＋影響＋However 欽佩原因) ➔ Conclusion (For these reasons)",
+          "② 檢查早熟細節：began composing music at the age of five（began 過去式＋at 年齡）",
+          "③ 檢查過去式拼寫：composed（加 d）、studied（去 y 加 ied）、was one of the greatest composers（加 s）",
+          "④ 全文最後掃描：from Austria（無 the）、Thanks to Mozart（用 to）、結論全名 Wolfgang Amadeus Mozart"
+        ],
+        "insight": "💡 把三段式傳記當成「5 個結構槽」，每寫完一格就檢查「過去式／零冠詞／單複數」！",
+        "visualBlock": {
+          "kind": "slot_box",
+          "title": "📦 三段式傳記完整寫作「五槽檢核框」",
+          "data": {
+            "slots": [
+              {
+                "role": "1. Intro 開頭",
+                "text": "The person I admire the most is [Name].",
+                "accent": "pri"
+              },
+              {
+                "role": "2. Body 生平",
+                "text": "was [a/an 職業] from [零冠詞國名] / was born in... and died in...",
+                "accent": "warn"
+              },
+              {
+                "role": "3. Body 成就",
+                "text": "composed/made... / was one of the greatest + 複數 / most famous X is Y",
+                "accent": "ok"
+              },
+              {
+                "role": "4. Body 影響與原因",
+                "text": "Thanks to [Name], we can... / However, I admire... because he studied...",
+                "accent": "ok"
+              },
+              {
+                "role": "5. Conclusion 收尾",
+                "text": "For these reasons, I think [本篇主角] was a great person.",
+                "accent": "pri"
+              }
+            ]
+          },
+          "caption": "📊 五個積木槽缺一不可，寫完依序核對每個槽內的紅色提醒點！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "prodigy",
+          "virtuoso composer"
+        ],
+        "grammarCompare": "study -> studied (子音 + y 去 y 加 ied) vs compose -> composed (字尾 e 直接加 d)。",
+        "examVariations": "轉折詞替換：結論句首的 For these reasons, 可換寫為 Therefore, 或 As a result,。"
+      }
+    },
+    {
+      "id": "q_w13_wr3_u06_36",
+      "book_id": "wr3",
+      "unit_id": "wr3_6",
+      "is_midterm": true,
+      "is_week12": true,
+      "is_week13": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "difficulty": "★★★★★",
+      "trapCodes": [
+        "ENG_TENSE_MISMATCH",
+        "ENG_ARTICLE_ERROR",
+        "ENG_PREP_COLLOCATION",
+        "ENG_UNCOUNTABLE_SVA"
+      ],
+      "triadGroup": {
+        "groupId": "WR3_U06_T7",
+        "tier": "L7-10",
+        "role": "challenge"
+      },
+      "part_title": "Part C (Predicted W13): Biography Proofreading — Correct the 12/14 Errors",
+      "part_instructions": "Correct the 14 errors in the text below. Rewrite the fully corrected 3-paragraph biography essay and list each of the 14 corrections clearly (Check verb tenses, zero-article country names, prepositions, singular/plural nouns, and consistent person names!).",
+      "sentence_form": "Proofreading Checklist: [1] SVA (is/are) | [2] a/an | [3] Country zero-article | [4] in+year | [5-6] Past verbs | [7] Singular work+is | [8] Thanks to | [9-10] was one of the greatest + plural | [11] curious about | [12] gave up | [13] these reasons | [14] Protagonist name",
+      "question": "[Predicted Week 13 · 14-Error Biography Proofreading #1: Leonardo da Vinci]\nThe biography below contains exactly 14 grammatical and writing errors (based on high-frequency midterm traps). Find all 14 errors and write out the fully corrected essay:\n\n\"The person I admire the most are Leonardo da Vinci.\nLeonardo da Vinci was a artist from the Italy. He was born on 1452 and die in 1519. He make many great drawings and paintings during his life. His most famous painting are the \"Mona Lisa.\" Thanks for da Vinci, we have beautiful works of art.\nDa Vinci was smart and curious. He made one of the greatest artist in history. However, I admire da Vinci most of all because he was curious with many things and never give up on his ideas.\nFor this reasons, I think Tomas was a great person.\"",
+      "options": [],
+      "answer": "【Corrected Biography Essay】\nThe person I admire the most is Leonardo da Vinci.\nLeonardo da Vinci was an artist from Italy. He was born in 1452 and died in 1519. He made many great drawings and paintings during his life. His most famous painting is the \"Mona Lisa.\" Thanks to da Vinci, we have beautiful works of art.\nDa Vinci was smart and curious. He was one of the greatest artists in history. However, I admire da Vinci most of all because he was curious about many things and never gave up on his ideas.\nFor these reasons, I think Leonardo da Vinci was a great person.\n\n【14 Corrections List】\n(1) are -> is (The person 為單數)\n(2) a -> an (artist 母音開頭)\n(3) the Italy -> Italy (單一國名零冠詞，刪去 the)\n(4) on 1452 -> in 1452 (純西元年份用 in)\n(5) die -> died (過去式)\n(6) make -> made (過去式)\n(7) are -> is (His most famous painting 為單數)\n(8) Thanks for -> Thanks to (歸功於某人用 Thanks to)\n(9) made -> was (He was one of... 表身分評價，非 made)\n(10) artist -> artists (one of the greatest + 複數名詞)\n(11) with -> about (be curious about 固定介系詞搭配)\n(12) give -> gave (過去式 gave up on)\n(13) this -> these (For these reasons)\n(14) Tomas -> Leonardo da Vinci (主角名稱前後一致，切勿誤寫愛迪生範文拼錯名)",
+      "self_check": [
+        "1. 是否找齊全部 14 處錯誤，沒有漏掉第 (3) 處 from the Italy（刪 the）、第 (9) 處 made -> was 與第 (14) 處 Tomas -> Leonardo da Vinci？",
+        "2. 是否修正所有過去式動詞（died, made, gave）與主詞動詞單複數一致（The person... is, painting is, greatest artists）？",
+        "3. 是否修正介系詞錯誤（in 1452, Thanks to, curious about）與不定冠詞／指示詞（an artist, these reasons）？"
+      ],
+      "explanation": {
+        "point": "Week 13 連考預判實戰（14 錯短文改錯）：全面掃描冠詞、國名零冠詞、過去式動詞、介系詞搭配、單複數一致性與人物一致性。",
+        "examPurpose": "承襲 3C 考卷「前週考作文 ➔ 次週考 12–14 錯同主題短文改錯」命題規律，將 Rex W12 真卷盲點與課本核心陷阱濃縮為 14 處密集校對實戰。",
+        "correctReason": "逐句精準排除 14 處錯誤：(1) The person... is；(2) an artist；(3) from Italy（刪 the）；(4) in 1452；(5) died；(6) made；(7) painting is；(8) Thanks to；(9) He was one of；(10) greatest artists；(11) curious about；(12) gave up；(13) For these reasons；(14) Leonardo da Vinci。",
+        "note": "短文改錯四輪掃描法：第 1 輪抓時態 (died/made/gave/was) ➔ 第 2 輪抓冠詞與國名 (an/Italy) ➔ 第 3 輪抓介系詞 (in/to/about) ➔ 第 4 輪抓單複數與人名 (is/artists/these/主角名)。",
+        "trap": "整篇長達 4 段、14 個錯誤，學生常只改出 9–10 個就停手，最容易漏抓「from the Italy」、「He made one of...」、「curious with」與結尾名字「Tomas」。",
+        "commonTraps": [
+          "只改明顯動詞而漏改隱藏陷阱：常看到 die/make/give 就改，卻放過「He made one of the greatest artist」中的兩個錯（made->was 與 artist->artists）。",
+          "忽略前後文一致性與固定片語：未發現結尾人名寫成 Tomas，或把 curious with 當成正確搭配而未改成 curious about。"
+        ],
+        "steps": [
+          "① 第 1 輪掃動詞時態與身分：die->died、make->made、He made->He was、give->gave",
+          "② 第 2 輪掃冠詞與單複數：person...is、a->an artist、the Italy->Italy、painting is、greatest artists、this->these reasons",
+          "③ 第 3 輪掃介系詞搭配：on 1452->in 1452、Thanks for->Thanks to、curious with->curious about",
+          "④ 第 4 輪掃主角一致性：結尾 Tomas ➔ 改回 Leonardo da Vinci，數滿 14 個才交卷！"
+        ],
+        "insight": "💡 14 錯改錯一定要「分輪掃描＋邊改邊編號」，數到 14 才算完，最防漏抓 made/was 與 the Italy！",
+        "visualBlock": {
+          "kind": "compare_table",
+          "title": "⚖️ W13 傳記 14 錯改錯「高頻隱形地雷」對照表",
+          "data": {
+            "headers": [
+              "原文隱藏錯點 ❌",
+              "正確訂正 ✅",
+              "所屬掃描類別"
+            ],
+            "rows": [
+              [
+                "from the Italy",
+                "from Italy (刪 the)",
+                "國名零冠詞 (ENG_ARTICLE_ERROR)"
+              ],
+              [
+                "He made one of the greatest artist",
+                "He was one of the greatest artists",
+                "身分動詞 was + 複數名詞"
+              ],
+              [
+                "curious with / Thanks for",
+                "curious about / Thanks to",
+                "固定介系詞搭配"
+              ],
+              [
+                "I think Tomas was...",
+                "I think Leonardo da Vinci was...",
+                "全篇主角名稱一致性"
+              ]
+            ]
+          },
+          "caption": "📊 先掃動詞、再掃冠詞單複數、再掃介系詞，最後核對人名，14 處一個都不漏！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "error-identification passage",
+          "comprehensive proofreading"
+        ],
+        "grammarCompare": "be curious about sth (對……感到好奇) vs complain about sth (抱怨某事)，兩者皆搭配介系詞 about。",
+        "examVariations": "出題預判：老師常把上週學生寫作卷最常錯的 12–14 個句子拼成一篇短文作為次週 Proofreading 考題。"
+      }
+    },
+    {
+      "id": "q_w13_wr3_u06_37",
+      "book_id": "wr3",
+      "unit_id": "wr3_6",
+      "is_midterm": true,
+      "is_week12": true,
+      "is_week13": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "difficulty": "★★★★★",
+      "trapCodes": [
+        "ENG_TENSE_MISMATCH",
+        "ENG_ARTICLE_ERROR",
+        "ENG_PREP_COLLOCATION",
+        "ENG_POS_CONFUSION",
+        "ENG_UNCOUNTABLE_SVA"
+      ],
+      "triadGroup": {
+        "groupId": "WR3_U06_T7",
+        "tier": "L7-10",
+        "role": "challenge"
+      },
+      "part_title": "Part C (Predicted W13): Biography Proofreading — Correct the 12/14 Errors",
+      "part_instructions": "Correct the 12 errors in the text below. Rewrite the fully corrected 3-paragraph biography essay and list each of the 12 corrections clearly (Pay special attention to \"the United States\", past tense verbs, modal + base verb, and singular/plural agreement!).",
+      "sentence_form": "Proofreading Checklist: [1] a/an | [2] the United States | [3] in+year | [4] Past verb | [5] Singular invention+is | [6] Thanks to | [7] can + V | [8-9] was one of the greatest + plural | [10-11] Past verbs | [12] these reasons",
+      "question": "[Predicted Week 13 · 12-Error Biography Proofreading #2: Thomas Edison]\nThe biography below contains exactly 12 grammatical errors modeled on Week 12 exam traps. Find all 12 errors and write out the fully corrected essay:\n\n\"The person I admire the most is Thomas Edison.\nThomas Edison was a inventor from United States. He was born on 1847 and died in 1931. Edison invent many useful things. His most famous invention are the light bulb. Thanks for Edison, we can seeing at night.\nEdison was smart and wise, and he made one of the greatest inventor in history. However, I admire Edison most of all because he never give up on his dreams. He fail many times before he invented the light bulb.\nFor these reason, I think Thomas Edison was a great person.\"",
+      "options": [],
+      "answer": "【Corrected Biography Essay】\nThe person I admire the most is Thomas Edison.\nThomas Edison was an inventor from the United States. He was born in 1847 and died in 1931. Edison invented many useful things. His most famous invention is the light bulb. Thanks to Edison, we can see at night.\nEdison was smart and wise, and he was one of the greatest inventors in history. However, I admire Edison most of all because he never gave up on his dreams. He failed many times before he invented the light bulb.\nFor these reasons, I think Thomas Edison was a great person.\n\n【12 Corrections List】\n(1) a -> an (inventor 母音開頭)\n(2) United States -> the United States (聯合國名須加定冠詞 the)\n(3) on 1847 -> in 1847 (純西元年份用 in)\n(4) invent -> invented (過去式)\n(5) are -> is (His most famous invention 為單數)\n(6) Thanks for -> Thanks to (歸功於某人用 Thanks to)\n(7) seeing -> see (情態助動詞 can 後接原形動詞)\n(8) made -> was (He was one of... 身分評價用 was，非 made)\n(9) inventor -> inventors (one of the greatest + 複數名詞)\n(10) give -> gave (過去式 gave up on)\n(11) fail -> failed (過去式)\n(12) reason -> reasons (For these reasons 複數)",
+      "self_check": [
+        "1. 國名定冠詞正反對照：是否將 United States 補回 the（the United States 必須有 the，和 Italy 不加 the 形成對比）？",
+        "2. 是否找齊全部 12 處錯誤，特別是容易被忽略的 (7) can seeing -> can see、(8) made -> was 與 (12) these reason -> reasons？",
+        "3. 是否完整修正所有過去式（invented, gave, failed）與主詞動詞單複數一致（invention is, greatest inventors）？"
+      ],
+      "explanation": {
+        "point": "Week 13 連考預判實戰（12 錯短文改錯）：對比 the United States 必加 the、情態助動詞 can＋原形 V 與傳記過去式動詞群。",
+        "examPurpose": "強化學生在 12 處錯誤密集的短文校對題中區分「單一國名無 the vs 聯合國名有 the」及助動詞後接原形動詞的精準度。",
+        "correctReason": "逐一訂正 12 處：(1) an inventor；(2) the United States；(3) in 1847；(4) invented；(5) invention is；(6) Thanks to；(7) can see；(8) was one of；(9) greatest inventors；(10) gave up；(11) failed；(12) these reasons。",
+        "note": "Italy / England / Austria / India 不加 the；但 the United States / the UK 必須加 the！can 後面接原形動詞 see。",
+        "trap": "學生剛背完「Italy 不加 the」，容易矯枉過正把 the United States 的 the 也誤刪，或忽略「He made one of the greatest inventor」同時錯了兩個地方。",
+        "commonTraps": [
+          "國名冠詞規則過度類推：記得 Italy 不加 the，卻忘記 United States 是聯合國名必須加上定冠詞 the。",
+          "同一句雙重錯誤只改一半：看到 one of the greatest inventor 只改出 inventors，卻沒發現前面的動詞 made 必須改成 was。"
+        ],
+        "steps": [
+          "① 過去生平動詞線：on 1847->in 1847、invent->invented、made->was、give->gave、fail->failed",
+          "② 至今影響現在式線：His most famous invention are->is、Thanks for->Thanks to、can seeing->can see",
+          "③ 冠詞與單複數檢查：a->an inventor、United States->the United States、greatest inventor->inventors、these reason->reasons"
+        ],
+        "insight": "💡 雙線並查＋國名口訣：「單一國家不加 the，聯合複數才加 the（the United States）」！",
+        "visualBlock": {
+          "kind": "timeline",
+          "title": "⏳ 愛迪生 12 錯改錯「過去生平線 vs 現在影響線」雙檢軸",
+          "data": {
+            "events": [
+              {
+                "time": "Past (1847–1931 生平線)",
+                "label": "was born in 1847 / invented / was one of / gave up / failed",
+                "highlight": true
+              },
+              {
+                "time": "Now (至今代表作與影響線)",
+                "label": "His most famous invention is... / Thanks to Edison, we can see",
+                "highlight": true
+              }
+            ],
+            "rule": "生平線抓出 invent/give/fail 漏改過去式與 made->was；現在影響線抓出 invention are->is、Thanks for->to 與 can seeing->see"
+          },
+          "caption": "📊 把 12 錯拆成「過去生平線」與「現在影響線」檢查，再補查 a/an 與 the United States，12 處全破！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "proofreading drill",
+          "error correction essay"
+        ],
+        "grammarCompare": "單一國名 (Italy, England, Austria, India) 零冠詞 vs 複數/聯合政體國名 (the United States, the Philippines) 必加 the。",
+        "examVariations": "考前口訣測驗：比較 \"an artist from Italy\" 與 \"an inventor from the United States\" 的兩處冠詞規則。"
+      }
+    },
+    {
+      "id": "q_w13_rww6_u06_01",
+      "book_id": "rw6",
+      "unit_id": "rw6_6",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": true,
+      "type": "passage_dictation",
+      "category_tag": "listening",
+      "difficulty": "★★☆☆☆",
+      "difficulty_level": 2,
+      "question": "🎧 段落逐句盲聽【第 1 段複習（共 6 句）】：本段從「陌生城市街角問路」切入，對比「森林戶外定向越野競賽」。請專心聆聽語調停頓，於紙上逐句默寫完整英文段落，並自行補上正確標點符號。",
+      "target_chi": "段落情境：陌生城市街角問路 ➔ 戶外森林競賽 ➔ 歡迎來到定向越野（共 6 句）",
+      "part_instructions": "⚠️ 標點防呆重點：(1) 開頭分詞片語後的逗號；(2) 路人指路對話的「雙引號」與右引號內的句點；(3) 結尾歡迎句的驚嘆號；(4) 嚴防 directiones 與 comepass 拼字陷阱！",
+      "options": [],
+      "dictation_sentences": [
+        {
+          "idx": 1,
+          "en": "Imagine you are in a new city.",
+          "zh_cue": "想像你正身處一座陌生的城市。",
+          "punct_focus": "句尾使用一般陳述句點 (.)"
+        },
+        {
+          "idx": 2,
+          "en": "Standing on a corner, you ask someone how to get to a store.",
+          "zh_cue": "站在街角時，你向路人詢問如何前往商店。",
+          "punct_focus": "開頭分詞片語 Standing on a corner 後面必須加逗號 (,)"
+        },
+        {
+          "idx": 3,
+          "en": "They tell you to \"go two blocks north, turn left, and you'll be across the street from the bookstore.\"",
+          "zh_cue": "他們告訴你：「向北走兩個街區、左轉，你就會來到書店的對街。」",
+          "punct_focus": "引述語使用雙引號 (\"...\")，縮寫 you'll 含撇號，句點放在右引號內 (bookstore.\")"
+        },
+        {
+          "idx": 4,
+          "en": "Now imagine you are in an outdoor race.",
+          "zh_cue": "現在想像你正在參加一場戶外競賽。",
+          "punct_focus": "過渡句，注意 an outdoor race 的冠詞 an"
+        },
+        {
+          "idx": 5,
+          "en": "Instead of directions, you have only a map and a compass, and instead of running down a marked road, you run around in the woods.",
+          "zh_cue": "沒有路線指引，你只有地圖和指南針；不是沿著標線道路跑，而是在樹林裡穿梭。",
+          "punct_focus": "兩組對等子句以逗號 (, and) 連接；注意 directions 與 compass 拼寫"
+        },
+        {
+          "idx": 6,
+          "en": "Welcome to orienteering!",
+          "zh_cue": "歡迎來到定向越野的世界！",
+          "punct_focus": "語氣上揚之感嘆號 (!)"
+        }
+      ],
+      "full_audio_text": "Imagine you are in a new city. Standing on a corner, you ask someone how to get to a store. They tell you to \"go two blocks north, turn left, and you'll be across the street from the bookstore.\" Now imagine you are in an outdoor race. Instead of directions, you have only a map and a compass, and instead of running down a marked road, you run around in the woods. Welcome to orienteering!",
+      "answer": "Imagine you are in a new city. Standing on a corner, you ask someone how to get to a store. They tell you to \"go two blocks north, turn left, and you'll be across the street from the bookstore.\" Now imagine you are in an outdoor race. Instead of directions, you have only a map and a compass, and instead of running down a marked road, you run around in the woods. Welcome to orienteering!",
+      "self_check": [
+        "第 2 句分詞片語後是否確實加上逗號，且第 3 句指路對話有無補上雙引號與 you'll 撇號？",
+        "第 5 句的 directions 與 compass 是否拼對（沒有誤寫成 directiones 或 comepass）？",
+        "第 6 句結尾是否聽出興奮語氣並正確寫出驚嘆號（!）？"
+      ],
+      "trapCodes": [
+        "ENG_PUNCT_DICTATION",
+        "ENG_SPELLING_PHONICS"
+      ],
+      "explanation": {
+        "point": "第 1 段盲聽核心：雙引號對話標點、分詞片語逗號與 Rex W5 兩大高頻拼字陷阱。",
+        "examPurpose": "重現岱崙 3C Week 5 滿分考題規格，訓練學生以整句記憶（Sentence-level retention）進行長段落聽寫與自然語調標點還原。",
+        "correctReason": "本段共 6 句，重點在於依據語調停頓區分 \"go two blocks... bookstore.\" 的引號範圍，並留意 Instead of 後方接複數名詞 directions 與動名詞 running。",
+        "note": "美式英文直接引述句的句點置於右引號裡面 (bookstore.\")。",
+        "trap": "Rex W5 真卷唯二微瑕疵：`directions` 誤多加 e 寫成 `directiones`，以及 `compass` 誤多加 e 寫成 `comepass`；此外許多同學容易漏掉對話雙引號或感嘆號。",
+        "commonTraps": [
+          "複數名詞誤插 e：聽到 directions 尾音容易誤拼成 directiones。",
+          "雙音節漏誤插 e：compass 易受發音干擾誤寫為 comepass；對比 you'll 容易漏掉撇號寫成 youll。"
+        ],
+        "steps": [
+          "① 先抓每句核心結構：Imagine... / Standing..., you ask... / They tell you to \"...\"",
+          "② 聽到語氣停頓與轉述口吻時，立即加上雙引號並把逗號、句點收在引號內",
+          "③ 檢查第 5 句兩大拼字地雷：directions（-tions）、compass（無 e）與 woods（複數）"
+        ],
+        "insight": "💡 聽寫不看字也能抓標點：開頭分詞片語停頓補逗號，轉述別人說話補雙引號，熱情歡迎補驚嘆號！",
+        "visualBlock": {
+          "kind": "compare_table",
+          "title": "⚖️ Week 5 真卷聽寫地雷急救紅綠燈",
+          "data": {
+            "headers": [
+              "常見錯寫 ❌",
+              "課本標準寫法 ✅",
+              "核心原因"
+            ],
+            "rows": [
+              [
+                "directiones",
+                "directions",
+                "-tion 複數直接加 -s，不加 e"
+              ],
+              [
+                "comepass",
+                "compass",
+                "com + pass 之間沒有靜音字母 e"
+              ],
+              [
+                "bookstore\".",
+                "bookstore.\"",
+                "美式英文句點收在右引號內側"
+              ]
+            ]
+          },
+          "caption": "📊 對照 Rex Week 5 Page 7 真卷，掃清最後 2 個拼字微瑕疵就能衝出 100% 滿分！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "navigate in the forest",
+          "outdoor navigation race"
+        ],
+        "grammarCompare": "Instead of + 名詞 (directions) 與 Instead of + 動名詞 (running) 在同一句中平行對稱出現。",
+        "examVariations": "3C Dictation 教師不唸任何標點符號，須靠停頓判斷逗號、雙引號與驚嘆號。"
+      }
+    },
+    {
+      "id": "q_w13_rww6_u06_02",
+      "book_id": "rw6",
+      "unit_id": "rw6_6",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": true,
+      "type": "passage_dictation",
+      "category_tag": "listening",
+      "difficulty": "★★★☆☆",
+      "difficulty_level": 4,
+      "question": "🎧 段落逐句盲聽【第 2 段複習（共 4 句）】：本段說明「檢查點（控制點）的名稱、特製旗幟標記與隱蔽位置」。請專心聆聽並於紙上寫出完整英文段落與正確標點。",
+      "target_chi": "段落情境：地圖指南針找控制點 ➔ 旗幟標記與圖表參照 ➔ 隱蔽於巨石前或大樹後（共 4 句）",
+      "part_instructions": "⚠️ 標點防呆重點：(1) 兩處「逗號＋關係代名詞」補充子句的逗號；(2) 圖表參照「括號」及大寫專有名詞（句點放在右括號外側）；(3) 複數名詞 compasses 拼寫！",
+      "options": [],
+      "dictation_sentences": [
+        {
+          "idx": 1,
+          "en": "In the sport of orienteering, racers use a map and compass to find stations, which are called controls.",
+          "zh_cue": "在定向越野這項運動中，選手使用地圖和指南針尋找稱為控制點的檢查站。",
+          "punct_focus": "介系詞片語開頭加逗號；stations 後加逗號引導非限定關係子句 , which..."
+        },
+        {
+          "idx": 2,
+          "en": "A special flag marks each control (see Figure 1).",
+          "zh_cue": "每個控制點都有一面特製的旗幟作為標記（見圖 1）。",
+          "punct_focus": "括號標註 (see Figure 1) 中 Figure 須大寫，句點置於右括號外"
+        },
+        {
+          "idx": 3,
+          "en": "Controls are placed so you can't see them easily from all directions.",
+          "zh_cue": "控制點的設置讓你無法輕易從四面八方一眼看見。",
+          "punct_focus": "注意被動語態 are placed 與縮寫 can't 的撇號"
+        },
+        {
+          "idx": 4,
+          "en": "They may be in front of a big rock or behind a tree, which means racers must use their maps and compasses to find controls.",
+          "zh_cue": "它們可能在大岩石前或樹後，這代表選手必須用他們的地圖與指南針來找控制點。",
+          "punct_focus": "逗號後接 which means（動詞必加 s），複數指南針拼為 compasses"
+        }
+      ],
+      "full_audio_text": "In the sport of orienteering, racers use a map and compass to find stations, which are called controls. A special flag marks each control (see Figure 1). Controls are placed so you can't see them easily from all directions. They may be in front of a big rock or behind a tree, which means racers must use their maps and compasses to find controls.",
+      "answer": "In the sport of orienteering, racers use a map and compass to find stations, which are called controls. A special flag marks each control (see Figure 1). Controls are placed so you can't see them easily from all directions. They may be in front of a big rock or behind a tree, which means racers must use their maps and compasses to find controls.",
+      "self_check": [
+        "第 1 句與第 4 句的非限定關係子句前，是否都確實補上了逗號（, which）？",
+        "第 2 句的圖表參照括號是否正確寫成 (see Figure 1).，且 Figure 首字母大寫、句點在括號外？",
+        "第 4 句的複數名詞 compasses 是否正確加上 -es，且 which means 的 s 沒有漏寫？"
+      ],
+      "trapCodes": [
+        "ENG_PUNCT_DICTATION",
+        "ENG_SPELLING_PHONICS"
+      ],
+      "explanation": {
+        "point": "第 2 段盲聽核心：非限定關係子句逗號 (, which)、括號圖表參照格式與複數 compasses。",
+        "examPurpose": "檢驗學生是否能聽音辨識括號語氣、非限定關係子句停頓逗號及規則複數拼寫。",
+        "correctReason": "第 1 句與第 4 句皆出現逗號引導的補充說明子句 (, which...)；第 2 句結尾的圖表提示須用小括號包住，且句點必須放在右括號之外。",
+        "note": "compass 以 s 結尾，變複數時須加 -es 成為 compasses。",
+        "trap": "常見失誤包括忘記把 Figure 首字母大寫、把句點錯放在括號裡面 (see Figure 1.)，或漏寫 which means 的單數動詞 -s。",
+        "commonTraps": [
+          "括號標點錯置：誤寫成 (see figure 1.)，正確應為首字大寫且句點在右括號外：(see Figure 1).",
+          "主謂與複數漏寫：which 指代前句整件事，動詞必寫 means（加 s）；their maps and compasses 兩者皆須為複數。"
+        ],
+        "steps": [
+          "① 聽到逗號停頓＋which，立刻檢查前一個名詞（stations）或前面整句的單複數",
+          "② 聽到補充參照圖表一，立即補上括號並將首字大寫，句點放括號外",
+          "③ 檢查第 4 句方位介系詞 in front of / behind 與複數 compasses"
+        ],
+        "insight": "💡 聽到「某名詞 + 逗號停頓 + which」，立刻反應是非限定補充子句，絕不寫成 that！",
+        "visualBlock": {
+          "kind": "slot_box",
+          "title": "📦 第 2 段非限定子句與括號標點結構槽",
+          "data": {
+            "slots": [
+              {
+                "role": "主要子句先行詞",
+                "text": "...find stations",
+                "accent": "pri"
+              },
+              {
+                "role": "非限定補充說明",
+                "text": ", which are called controls.",
+                "accent": "ok"
+              },
+              {
+                "role": "圖表參照括號",
+                "text": "(see Figure 1).",
+                "accent": "warn"
+              },
+              {
+                "role": "整句推論子句",
+                "text": ", which means racers must use...",
+                "accent": "ok"
+              }
+            ]
+          },
+          "caption": "📊 逗號後一律用 which，括號內的 Figure 首字大寫、句點放括號外側！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "checkpoints marked by flags",
+          "hidden stations"
+        ],
+        "grammarCompare": "stations, which are called controls (指複數 stations) vs. ..., which means (指代整件事情，動詞用單數 means)。",
+        "examVariations": "3C 聽寫常單獨抽考此段作為括號標點與關係子句盲聽評量。"
+      }
+    },
+    {
+      "id": "q_w13_rww6_u06_03",
+      "book_id": "rw6",
+      "unit_id": "rw6_6",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": true,
+      "type": "passage_dictation",
+      "category_tag": "listening",
+      "difficulty": "★★★★☆",
+      "difficulty_level": 6,
+      "question": "🎧 段落逐句盲聽【第 3 段 Week 13 重點強化（共 4 句）】：本段說明「在控制點打卡的卡片規則與定向越野真正獲勝條件」。請專心聆聽並默寫出完整英文段落。",
+      "target_chi": "段落情境：每站打卡標記 ➔ 卡片重要性與遺漏後果 ➔ 滿卡完賽才贏的勝負規則（共 4 句）",
+      "part_instructions": "⚠️ 標點與文法防呆：(1) 含另一組「括號」圖表參照（圖 2），句點在右括號外；(2) 注意條件句現在式 misses 與未來否定縮寫 won't；(3) 轉折連接詞 but 前面的逗號！",
+      "options": [],
+      "dictation_sentences": [
+        {
+          "idx": 1,
+          "en": "At each control, racers mark a card they carry with them (see Figure 2).",
+          "zh_cue": "在每一個控制點，選手會在隨身攜帶的卡片上做記號（見圖 2）。",
+          "punct_focus": "開頭介系詞片語後加逗號；結尾括號標註 (see Figure 2)."
+        },
+        {
+          "idx": 2,
+          "en": "The cards are very important because racers must find all the controls to win.",
+          "zh_cue": "這些卡片非常重要，因為選手必須找到所有的控制點才能獲勝。",
+          "punct_focus": "because 置於句中連接因果子句，前方不加逗號"
+        },
+        {
+          "idx": 3,
+          "en": "If someone misses a control, they won't have that mark on their card.",
+          "zh_cue": "如果有人漏掉一個控制點，他們的卡片上就不會有那個記號。",
+          "punct_focus": "If 條件子句後加逗號；someone 搭單數動詞 misses；否定縮寫 won't 需撇號"
+        },
+        {
+          "idx": 4,
+          "en": "They might cross the finish line first, but the next person to finish with a full card will win the race.",
+          "zh_cue": "他們也許會第一個衝過終點線，但下一位帶著完整打卡卡片完成比賽的人才會贏得比賽。",
+          "punct_focus": "對等連接詞 but 前方必須加上逗號 (, but)"
+        }
+      ],
+      "full_audio_text": "At each control, racers mark a card they carry with them (see Figure 2). The cards are very important because racers must find all the controls to win. If someone misses a control, they won't have that mark on their card. They might cross the finish line first, but the next person to finish with a full card will win the race.",
+      "answer": "At each control, racers mark a card they carry with them (see Figure 2). The cards are very important because racers must find all the controls to win. If someone misses a control, they won't have that mark on their card. They might cross the finish line first, but the next person to finish with a full card will win the race.",
+      "self_check": [
+        "第 1 句結尾括號是否寫對 (see Figure 2).（Figure 大寫且句點在右括號外）？",
+        "第 3 句 If someone 後的動詞是否拼寫成 misses（有 es），且 won't 撇號沒有漏寫？",
+        "第 4 句轉折詞 but 前方是否加上了逗號，且動詞 cross（非 across）與 finish line（非 finishline）是否拼對？"
+      ],
+      "trapCodes": [
+        "ENG_PUNCT_DICTATION",
+        "ENG_TENSE_MISMATCH",
+        "ENG_SPELLING_PHONICS"
+      ],
+      "explanation": {
+        "point": "第 3 段盲聽核心：Week 13 重點強化段落——圖表 2 括號、If 條件句與勝負轉折句。",
+        "examPurpose": "Week 5 已考過 p.40 前兩段，Week 13 期末考極高機率接續考 p.41 第 3~4 段的長篇盲聽與勝負規則判讀。",
+        "correctReason": "第 3 段整合了括號標註、because 因果句、If 現在式條件子句 (misses / won't) 以及關鍵轉折句 (, but ... with a full card will win)。",
+        "note": "someone 雖常在後方用複數代名詞 they 指稱（性別中立用法），但緊接在 someone 後方的動詞仍必須用第三人稱單數 misses。",
+        "trap": "同學聽第 3 句常誤以為 someone 後面接 miss，或把 cross the finish line 的動詞 cross 錯聽成介系詞 across。",
+        "commonTraps": [
+          "單複數陷阱：someone misses 必須加 es，後方卻接 they won't，聽寫時容易前後搞混。",
+          "詞性與連寫陷阱：finish line 必須分開寫成兩個字；cross the finish line 用動詞 cross 而非 across。"
+        ],
+        "steps": [
+          "① 第 1 句注意 carry with them 後的括號與圖號 2",
+          "② 第 3 句把握 If 條件子句逗號，檢查 misses 與 won't 拼寫",
+          "③ 第 4 句抓出對比結構：might cross ... first, but ... with a full card will win"
+        ],
+        "insight": "💡 這是本單元最常被拿來接續 Week 5 考卷出題的核心段落，務必練到一次聽完一字不漏！"
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "punch a control card",
+          "complete the entire checklist"
+        ],
+        "grammarCompare": "If someone misses a control (現在式條件) + they won't have... (未來必然結果)。",
+        "examVariations": "除聽寫外，第 4 句常改編為閱讀測驗勝負判斷選擇題或問答簡答題。"
+      }
+    },
+    {
+      "id": "q_w13_rww6_u06_04",
+      "book_id": "rw6",
+      "unit_id": "rw6_6",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": true,
+      "type": "passage_dictation",
+      "category_tag": "listening",
+      "difficulty": "★★★★★",
+      "difficulty_level": 8,
+      "question": "🎧 段落逐句盲聽【第 4 段 Week 13 重點強化（共 3 句）】：本段對比「城市賽跑終點」與「定向越野翻山越嶺後的終點線導航」。請專心聆聽語調，寫出完整英文段落與正確標點。",
+      "target_chi": "段落情境：城市路跑穿街 ➔ 沿河奔跑、翻越岩石、上下山丘 ➔ 仍須用指南針找終點線（共 3 句）",
+      "part_instructions": "⚠️ 標點與介系詞防呆：(1) 三個地形片語之間的並列逗號；(2) 最後一句開頭接續詞與時間副詞片語的雙重逗號隔離；(3) 結尾驚嘆號；(4) 區分動詞 cross 與介系詞 along！",
+      "options": [],
+      "dictation_sentences": [
+        {
+          "idx": 1,
+          "en": "In a race in a city, you might only need to cross the street to get to the finish line.",
+          "zh_cue": "在城市裡的比賽中，你可能只需要穿越馬路就能到達終點線。",
+          "punct_focus": "開頭雙介系詞片語後加逗號；need to 後接原形動詞 cross（非 across）"
+        },
+        {
+          "idx": 2,
+          "en": "In orienteering, you will likely run along a river, climb over rocks, and go up and down hills.",
+          "zh_cue": "在定向越野中，你很可能會沿著河流奔跑、翻越岩石，並在山丘間上下穿梭。",
+          "punct_focus": "三項並列動作間須加序列逗號 (river, climb over rocks, and go...)"
+        },
+        {
+          "idx": 3,
+          "en": "And, after all that, you still have to use your compass to find the finish line!",
+          "zh_cue": "而且，在歷經這一切之後，你仍然必須使用指南針來找到終點線！",
+          "punct_focus": "插入語片語前後雙逗號 (And, after all that, )，句尾使用感嘆號 (!)"
+        }
+      ],
+      "full_audio_text": "In a race in a city, you might only need to cross the street to get to the finish line. In orienteering, you will likely run along a river, climb over rocks, and go up and down hills. And, after all that, you still have to use your compass to find the finish line!",
+      "answer": "In a race in a city, you might only need to cross the street to get to the finish line. In orienteering, you will likely run along a river, climb over rocks, and go up and down hills. And, after all that, you still have to use your compass to find the finish line!",
+      "self_check": [
+        "第 1 句是否正確寫出 need to cross the street（無誤寫成 across）？",
+        "第 2 句的三個地形片語（along / over / up and down）拼寫及兩個分隔逗號是否完整？",
+        "第 3 句是否還原了 And, after all that, 的前後逗號與句尾的驚嘆號（!）？"
+      ],
+      "trapCodes": [
+        "ENG_PUNCT_DICTATION",
+        "ENG_POS_CONFUSION",
+        "ENG_SPELLING_PHONICS"
+      ],
+      "explanation": {
+        "point": "第 4 段盲聽核心：並列地形動詞片語逗號、插入語雙逗號 (And, after all that,) 與句尾驚嘆號。",
+        "examPurpose": "測驗學生在長句聽力記憶中精準捕捉並列介系詞片語、插敘語氣逗號與語氣強調標點的高階實力。",
+        "correctReason": "第 2 句包含三個動態空間介系詞片語，需用逗號分隔；第 3 句開頭的 And 後緊接插入語 after all that，須於前後加上逗號並以驚嘆號作結。",
+        "note": "climb 中的 b 不發音；along（沿著）不可誤寫為 alone（孤單的）。",
+        "trap": "極高頻雙重扣分：(1) 漏掉 `And,` 後面的逗號；(2) 把第 2 句的 `climb` 漏寫靜音字母 `b` 或把 `along` 拼成 `alone`。",
+        "commonTraps": [
+          "標點遺漏：第 3 句連詞 And 後緊接插入片語 after all that，學生極易忘記補上兩個逗號。",
+          "拼寫混淆：climb 漏寫靜音 b 寫成 clim，或 along 誤寫為 alone。"
+        ],
+        "steps": [
+          "① 聽到 In a race in a city 停頓補逗號，確認動詞用 cross",
+          "② 聽到三個動作依序補上序列逗號：along a river, climb over rocks, and go up and down hills",
+          "③ 最後一句注意強調停頓 And, after all that, 以及驚嘆號收尾"
+        ],
+        "insight": "💡 遇到句首接續詞＋插入語停頓（And, after all that,），前後各補一個逗號像括號一樣把它夾起來！"
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "navigate rugged terrain",
+          "natural obstacles"
+        ],
+        "grammarCompare": "need to cross (動詞) vs. likely run along / climb over / go up and down (三個平行原形動詞片語共用 will)。",
+        "examVariations": "此段常與第 3 段合併進行整頁總複習盲聽，並衍生空間介系詞填空題。"
+      }
+    },
+    {
+      "id": "q_w13_rww6_u06_05",
+      "book_id": "rw6",
+      "unit_id": "rw6_6",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": true,
+      "type": "passage_dictation",
+      "category_tag": "listening",
+      "difficulty": "★★★★★",
+      "difficulty_level": 9,
+      "question": "🔥 段落逐句盲聽【Week 13 跨段終極衝刺（第 3～4 段完整 7 句連寫）】：比照岱崙 3C 真卷雙段連續聽寫模式，挑戰將下半頁共 7 句規則與地形段落一氣呵成默寫完成！",
+      "target_chi": "段落情境：控制點卡片規則（第 3 段 4 句）＋ 戶外地形挑戰與終點定位（第 4 段 3 句），共 7 句連續實戰",
+      "part_instructions": "⚠️ 3C 滿分級綜合檢核：(1) 注意分段換行（第 4 句結束後換新段）；(2) 圖表 2 括號與句點位置；(3) 逗號：開頭片語、If 條件句、but 轉折、並列序列與雙逗號插入語；(4) 感嘆號收尾！",
+      "options": [],
+      "dictation_sentences": [
+        {
+          "idx": 1,
+          "en": "At each control, racers mark a card they carry with them (see Figure 2).",
+          "zh_cue": "在每一個控制點，選手會在隨身攜帶的卡片上做記號（見圖 2）。",
+          "punct_focus": "開頭介系詞片語逗號；括號標註 Figure 大寫與外置句點"
+        },
+        {
+          "idx": 2,
+          "en": "The cards are very important because racers must find all the controls to win.",
+          "zh_cue": "這些卡片非常重要，因為選手必須找齊所有控制點才能獲勝。",
+          "punct_focus": "因果子句連續書寫"
+        },
+        {
+          "idx": 3,
+          "en": "If someone misses a control, they won't have that mark on their card.",
+          "zh_cue": "如果有人漏掉一個控制點，卡片上就不會有那個記號。",
+          "punct_focus": "If 條件子句逗號、misses 單數動詞與 won't 撇號"
+        },
+        {
+          "idx": 4,
+          "en": "They might cross the finish line first, but the next person to finish with a full card will win the race.",
+          "zh_cue": "他們也許會第一個衝過終點線，但下一位帶著完整打卡卡片完成比賽的人才會贏得比賽。",
+          "punct_focus": "but 前加逗號；此句為第 3 段結尾，下一句須換新段落"
+        },
+        {
+          "idx": 5,
+          "en": "In a race in a city, you might only need to cross the street to get to the finish line.",
+          "zh_cue": "在城市裡的比賽中，你可能只需要穿越馬路就能到達終點線。",
+          "punct_focus": "新段落開頭縮排或換行；need to cross 接原形動詞"
+        },
+        {
+          "idx": 6,
+          "en": "In orienteering, you will likely run along a river, climb over rocks, and go up and down hills.",
+          "zh_cue": "在定向越野中，你很可能會沿著河流奔跑、翻越岩石，並在山丘間上下穿梭。",
+          "punct_focus": "三個空間片語之序列逗號"
+        },
+        {
+          "idx": 7,
+          "en": "And, after all that, you still have to use your compass to find the finish line!",
+          "zh_cue": "而且，在歷經這一切之後，你仍然必須使用指南針來找到終點線！",
+          "punct_focus": "And, after all that, 雙逗號與句尾感嘆號 (!)"
+        }
+      ],
+      "full_audio_text": "At each control, racers mark a card they carry with them (see Figure 2). The cards are very important because racers must find all the controls to win. If someone misses a control, they won't have that mark on their card. They might cross the finish line first, but the next person to finish with a full card will win the race. In a race in a city, you might only need to cross the street to get to the finish line. In orienteering, you will likely run along a river, climb over rocks, and go up and down hills. And, after all that, you still have to use your compass to find the finish line!",
+      "answer": "At each control, racers mark a card they carry with them (see Figure 2). The cards are very important because racers must find all the controls to win. If someone misses a control, they won't have that mark on their card. They might cross the finish line first, but the next person to finish with a full card will win the race.\n\nIn a race in a city, you might only need to cross the street to get to the finish line. In orienteering, you will likely run along a river, climb over rocks, and go up and down hills. And, after all that, you still have to use your compass to find the finish line!",
+      "self_check": [
+        "是否在第 4 句（will win the race.）之後明確換段書寫第 5 句？",
+        "7 個句子中的所有逗號（開頭片語、If 子句、but 前、三項序列與雙逗號插入語）是否無一遺漏？",
+        "高頻拼寫字 compass, misses, won't, cross, along, climb 及括號 (see Figure 2). 是否完全精準？"
+      ],
+      "trapCodes": [
+        "ENG_PUNCT_DICTATION",
+        "ENG_SPELLING_PHONICS",
+        "ENG_TENSE_MISMATCH"
+      ],
+      "explanation": {
+        "point": "Week 13 終極跨段盲聽：完整涵蓋第 3～4 段共 7 句高密度標點與規則論述。",
+        "examPurpose": "完全模擬 3C 考券雙段落（Two-Paragraph Dictation）實戰壓力，鍛鍊學生長跨度記憶、段落切分意識與標點零失誤能力。",
+        "correctReason": "此 7 句完整涵蓋了本課核心規則（全卡滿格獲勝）與地形導航（沿河、攀岩、山丘），寫對所有標點即代表本課聽寫已達考場滿分水準。",
+        "note": "第 4 句與第 5 句之間由「打卡規則」切換為「城市 vs 戶外對比」，必須分段換行。",
+        "trap": "連續長聽寫最容易在後半段因手速追趕而漏掉標點（尤其是第 6 句序列逗號與第 7 句感嘆號），建議聽完一句完整記住語意再下筆。",
+        "commonTraps": [
+          "雙段連寫忘記換段，將第 5 句直接接在第 4 句後面未做段落區隔。",
+          "後半段注意力下滑，導致第 7 句漏寫 compass 或把結尾感嘆號寫成普通句點。"
+        ],
+        "steps": [
+          "① 前 4 句鎖定「控制卡與獲勝條件」主軸，完成後空一行換段",
+          "② 後 3 句鎖定「城市街跑 vs 野外三大地形與指南針終點」，補齊並列逗號",
+          "③ 完筆後從頭默念檢查：括號、撇號、雙逗號、感嘆號四大標點是否全部就位"
+        ],
+        "insight": "💡 掌握前兩段（Week 5）＋後兩段（Week 13），整篇 The World of Orienteering 就達到 100% 銅牆鐵壁！",
+        "visualBlock": {
+          "kind": "timeline",
+          "title": "⏳ 定向越野 7 句聽寫脈絡流程軸",
+          "data": {
+            "events": [
+              {
+                "time": "第 3 段 (S1-S2)",
+                "label": "Mark Card (see Figure 2) → All Controls",
+                "highlight": true
+              },
+              {
+                "time": "第 3 段 (S3-S4)",
+                "label": "If misses → won't have | Full Card Wins!",
+                "highlight": true
+              },
+              {
+                "time": "第 4 段 (S5-S6)",
+                "label": "City: cross street vs. Run along / Climb over / Hills",
+                "highlight": false
+              },
+              {
+                "time": "第 4 段 (S7)",
+                "label": "And, after all that, use compass to finish line!",
+                "highlight": true
+              }
+            ],
+            "rule": "先記意義脈絡（卡片規則 ➔ 換段 ➔ 地形與終點），聽寫就不會寫到後面忘記前面！"
+          },
+          "caption": "📊 用故事邏輯分段記憶，7 句長聽寫也能一次穩穩拿下 25/25 滿分！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "two-paragraph dictation",
+          "sentence-level auditory retention"
+        ],
+        "grammarCompare": "前段以條件與轉折邏輯為主 (because / If / but)；後段以對比空間介系詞片語為主 (along / over / up and down)。",
+        "examVariations": "比照 Week 5 Page 7 考券，老師常挑選連續兩段全文進行 25 分高比重聽寫測驗。"
+      }
+    },
+    {
+      "id": "q_w13_rww6_u06_06",
+      "book_id": "rw6",
+      "unit_id": "rw6_6",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★☆☆☆☆",
+      "difficulty_level": 1,
+      "question": "🎧 聽力拼字測驗：請仔細聆聽發音與例句，拼寫出表示「指南針；指北針」的英文名詞單字（提示：注意 m 與 p 之間沒有靜音字母 e）。",
+      "target_chi": "指南針；指北針",
+      "target_pos": "名詞 (Noun)",
+      "masked_example": "Instead of directions, you have only a map and a ________.",
+      "masked_example_chi": "你仍然必須使用指南針來找到終點線！",
+      "options": [],
+      "answer": "compass",
+      "vocab_card": {
+        "word": "compass",
+        "ipa": "/ˈkʌmpəs/",
+        "phonetic": "/ˈkʌmpəs/",
+        "syllables": "com·pass",
+        "pos": "名詞 (Noun)",
+        "chi": "指南針；指北針；圓規",
+        "meaning": "利用磁針指向地球南北極以辨別東、西、南、北方位的導航儀器",
+        "breakdown": "com-(一起) + pass(步伐、圓周跨度) -> 量測方位圓周的工具",
+        "trick": "諧音「看北司」-> 迷路時看它就能找出北方！字中只有 com + pass，絕不加 e！",
+        "scene": "站在沒有路標的森林深處，手上的磁針穩穩指向北方，指引前進路線。",
+        "collocation": "a map and a compass (地圖與指南針), magnetic compass (磁力指南針), use a compass (使用指南針)",
+        "img": "🧭",
+        "context_eng": "Instead of directions, you have only a map and a compass.",
+        "example": "You still have to use your compass to find the finish line!",
+        "context_chi": "你仍然必須使用指南針來找到終點線！",
+        "chant": "North, south, east, and west; my little compass knows the best!",
+        "compare": "compass (指示方向的指南針；單數) vs. compasses (複數形須加 -es)",
+        "note": "Rex 考券高頻抓錯字：切勿在 m 與 p 之間多加字母 e 寫成 comepass！複數因為以 s 結尾，需加 -es 變 compasses。"
+      },
+      "self_check": [
+        "是否牢記 com + pass 結構，確認 m 與 p 中間沒有多寫字母 e？",
+        "字尾是否正確寫出雙寫 ss（不可漏寫成 compas）？",
+        "知道複數形式需要加 -es 拼成 compasses 嗎？"
+      ],
+      "trapCodes": [
+        "ENG_SPELLING_PHONICS"
+      ],
+      "explanation": {
+        "point": "核心單字 compass（指南針）拼寫：com + pass，無靜音字母 e。",
+        "examPurpose": "針對 Rex 在 Week 5 考券曾發生的微瑕疵進行精準除錯，確保單字拼寫零失誤。",
+        "correctReason": "本字由字首 com- 加上 pass 組合而成，共 7 個字母 c-o-m-p-a-s-s，中間不含字母 e。",
+        "note": "複數形式為 compasses；例句中搭配不定冠詞 a 故使用單數。",
+        "trap": "極易誤插靜音 e 寫成 comepass，或受發音影響把字首 o 誤寫成 u (cumpass)。",
+        "commonTraps": [
+          "在 m 與 p 之間多加字母 e，誤拼為 comepass（Week 5 真卷曾出現過）。",
+          "受母音 /ʌ/ 發音干擾，將第一個母音 o 誤寫成 u（cumpass），或漏寫字尾雙寫 s。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "magnetic needle",
+          "navigation tool"
+        ],
+        "grammarCompare": "單數 a compass；複數 their maps and compasses（以 s 結尾加 -es）。",
+        "examVariations": "聽寫測驗、圖片配對題及手寫短文改錯高頻必考字。"
+      }
+    },
+    {
+      "id": "q_w13_rww6_u06_07",
+      "book_id": "rw6",
+      "unit_id": "rw6_6",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★☆☆☆☆",
+      "difficulty_level": 1,
+      "question": "🎧 聽力拼字測驗：請仔細聆聽發音與例句，拼寫出表示「方向；路線指引（單數原形）」的英文名詞（提示：注意 -tion 字尾，若變複數直接加 -s 不可加 e）。",
+      "target_chi": "方向；路線指引（單數原形）",
+      "target_pos": "名詞 (Noun)",
+      "masked_example": "Instead of ________, you have only a map and a compass.",
+      "masked_example_chi": "控制點的設置讓你無法輕易從四面八方一眼看見。",
+      "options": [],
+      "answer": "direction",
+      "vocab_card": {
+        "word": "direction",
+        "ipa": "/dəˈrekʃn/",
+        "phonetic": "/dəˈrekʃn/",
+        "syllables": "di·rec·tion",
+        "pos": "名詞 (Noun)",
+        "chi": "方向；路線指引（常用複數）",
+        "meaning": "朝向某目標移動的方位，或告訴別人怎麼走的路線說明",
+        "breakdown": "di-(分開/引導) + rect-(直的、引導) + -ion(名詞字尾) -> 引導你走直路的方位說明",
+        "trick": "拆記 direct(直接指引) + ion(名詞) -> 告訴你怎麼走的「方向指引」，複數直接加 -s！",
+        "scene": "在陌生城市問路時，路人伸手指引你往北走兩個街區再左轉的指示。",
+        "collocation": "ask for directions (問路), follow directions (依照指示), from all directions (從四面八方)",
+        "img": "🪧",
+        "context_eng": "Instead of directions, you have only a map and a compass.",
+        "example": "Controls are placed so you can't see them easily from all directions.",
+        "context_chi": "控制點的設置讓你無法輕易從四面八方一眼看見。",
+        "chant": "Left or right, north or south; follow directions from someone's mouth!",
+        "compare": "direction (單數：某一個方向) vs. directions (複數：指路說明、操作指示)",
+        "note": "Rex 考券高頻抓錯字：字尾是 -tion，複數直接加 -s 變成 directions，絕不可多加 e 寫成 directiones！"
+      },
+      "self_check": [
+        "字尾是否正確寫成 -tion（而非 -sion 或 -shion）？",
+        "第一音節是否拼成 di-（而非 de-）？",
+        "記得變複數時是直接加 -s（directions），絕不加 e 嗎？"
+      ],
+      "trapCodes": [
+        "ENG_SPELLING_PHONICS"
+      ],
+      "explanation": {
+        "point": "核心名詞 direction（方向；指引）之音節拼寫與複數規則。",
+        "examPurpose": "消除 Rex 在 Week 5 考券將複數誤寫為 directiones 的拼寫盲點，同時掌握單複數語意差異。",
+        "correctReason": "由動詞 direct 加上名詞字尾 -ion 構成 direction，例句中搭配 first 故用單數原形。",
+        "note": "表示「問路指引」或「四面八方」時常以複數 directions 出現。",
+        "trap": "複數極易誤插 e 拼成 directiones；單字本身也常將字尾 -tion 誤拼為 -sion。",
+        "commonTraps": [
+          "Week 5 真卷實戰失誤：複數直接加 -s 即可，卻誤多加了字母 e 寫成 directiones。",
+          "將第一音節 di- 受發音影響誤寫為 de- (derection)，或字尾誤寫為 -sion。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "guidance",
+          "route instruction"
+        ],
+        "grammarCompare": "in the direction of (朝著…方向，單數) vs. ask for directions (詢問怎麼走，複數)。",
+        "examVariations": "句子改錯題與聽寫題必考此字的複數變化形式。"
+      }
+    },
+    {
+      "id": "q_w13_rww6_u06_08",
+      "book_id": "rw6",
+      "unit_id": "rw6_6",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★★★☆☆",
+      "difficulty_level": 4,
+      "question": "🎧 聽力拼字測驗：請仔細聆聽發音與例句，拼寫出本課核心運動名稱「定向越野」（提示：字首是 orient，中間包含雙寫 ee）。",
+      "target_chi": "定向越野運動",
+      "target_pos": "名詞 (Noun)",
+      "masked_example": "Instead of running down a marked road, you run around in the woods. Welcome to ________!",
+      "masked_example_chi": "在定向越野這項運動中，選手必須找到所有控制點才能獲勝。",
+      "options": [],
+      "answer": "orienteering",
+      "vocab_card": {
+        "word": "orienteering",
+        "ipa": "/ˌɔːriənˈtɪərɪŋ/",
+        "phonetic": "/ˌɔːriənˈtɪrɪŋ/",
+        "syllables": "o·ri·en·teer·ing",
+        "pos": "名詞 (Noun)",
+        "chi": "定向越野運動",
+        "meaning": "在森林或野外使用地圖與指南針尋找各檢查點並計時的戶外導航競賽",
+        "breakdown": "orient(東方、定位方向) + -eer(從事…者) + -ing(運動名稱字尾) -> 尋找方向的戶外競技",
+        "trick": "拆記 orient(定方向) + eering(雙 ee 像兩隻眼睛盯著地圖) -> 邊看地圖邊跑的「定向越野」！",
+        "scene": "選手手持指北針與地形圖，在樹林、溪畔與岩石間高速奔跑尋找紅白旗幟。",
+        "collocation": "the sport of orienteering (定向越野運動), orienteering race (定向越野賽), orienteering map (定向地圖)",
+        "img": "🏃",
+        "context_eng": "Instead of running down a marked road, you run around in the woods. Welcome to orienteering!",
+        "example": "In the sport of orienteering, racers must find all the controls to win.",
+        "context_chi": "在定向越野這項運動中，選手必須找到所有控制點才能獲勝。",
+        "chant": "Map in hand, compass bright; orienteering feels just right!",
+        "compare": "orienteering (須自行導航打卡的野外賽) vs. marathon (沿固定標線道路奔跑的馬拉松)",
+        "note": "注意中間是雙寫 ee (-teer-)，切勿漏寫一個 e 變成 orientering；運動名稱本身為不可數名詞，搭配單數動詞。"
+      },
+      "self_check": [
+        "是否拆分成五個音節檢查：o-ri-en-teer-ing？",
+        "中間的 -teer- 是否有正確拼出雙寫字母 ee？",
+        "開頭與中間母音 i-e 順序是否正確（or-i-en-teer-ing）？"
+      ],
+      "trapCodes": [
+        "ENG_SPELLING_PHONICS"
+      ],
+      "explanation": {
+        "point": "單元標題字 orienteering 拆解記憶：orient + eer + ing。",
+        "examPurpose": "測驗學生對 12 個字母長單字的音節拆解與雙母音組合精確拼寫能力。",
+        "correctReason": "先拼出核心字根 orient（定方位），再加上代表「人/職業」的雙 e 字尾 -eer 與運動名稱字尾 -ing。",
+        "note": "作為一項運動總稱，orienteering 搭配單數動詞（Orienteering is exciting.）。",
+        "trap": "長字極易漏掉其中一個 e 拼成 orientering，或漏掉開頭後的 i 寫成 orenteering。",
+        "commonTraps": [
+          "雙母音 ee 漏寫成單 e，誤拼為 orientering。",
+          "字根 orient 中的 i 與 e 字母順序寫反或漏寫，誤拼為 orenteering。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "cross-country navigation",
+          "map-and-compass sport"
+        ],
+        "grammarCompare": "orienteering 作主詞視為單數運動名稱，後方接單數動詞 is / makes / requires。",
+        "examVariations": "任何本課段落聽寫必出現至少 2 次的核心高頻長單字。"
+      }
+    },
+    {
+      "id": "q_w13_rww6_u06_09",
+      "book_id": "rw6",
+      "unit_id": "rw6_6",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★☆☆☆☆",
+      "difficulty_level": 2,
+      "question": "🎧 聽力拼字測驗：請仔細聆聽發音與例句，拼寫出表示「控制點（檢查站）」的單數英文名詞。",
+      "target_chi": "控制點（檢查站）",
+      "target_pos": "名詞 (Noun) / 動詞 (Verb)",
+      "masked_example": "In the sport of orienteering, racers use a map and compass to find stations, which are called ________.",
+      "masked_example_chi": "在每一個控制點，選手都會在隨身攜帶的卡片上做記號。",
+      "options": [],
+      "answer": "control",
+      "vocab_card": {
+        "word": "control",
+        "ipa": "/kənˈtrəʊl/",
+        "phonetic": "/kənˈtroʊl/",
+        "syllables": "con·trol",
+        "pos": "名詞 (Noun) / 動詞 (Verb)",
+        "chi": "控制點（定向運動檢查站）；控制",
+        "meaning": "定向越野賽道上掛有紅白旗幟與打孔器的檢查站（名詞）；掌管支配（動詞）",
+        "breakdown": "contra-(對照) + roll(名冊捲軸) -> 原指核對名冊的檢查站",
+        "trick": "拆記 con(一起) + trol(檢查捲軸) -> 每個檢查站「控制」你的路線有沒有作弊漏跑！",
+        "scene": "大樹背後掛著一面亮眼的紅白三角旗，旁邊附有可以幫卡片壓印記號的打卡器。",
+        "collocation": "control flag (控制點旗幟), control card (控制卡), miss a control (漏掉一個檢查點)",
+        "img": "🚩",
+        "context_eng": "In the sport of orienteering, racers use a map and compass to find stations, which are called controls.",
+        "example": "At each control, racers mark a card they carry with them.",
+        "context_chi": "在每一個控制點，選手都會在隨身攜帶的卡片上做記號。",
+        "chant": "Find the flag, punch the card; every control makes you work hard!",
+        "compare": "station (一般車站或站點) vs. control (定向越野專用的檢查打卡點)",
+        "note": "本課中作「檢查站」時為可數名詞（controls）；若作動詞表示「控制」，過去式與現在分詞需雙寫 l (controlled / controlling)。"
+      },
+      "self_check": [
+        "字尾是單寫一個 l（con-trol），沒有誤寫成雙寫 ll 嗎？",
+        "第一音節是否拼寫為 con-（而非 cun-）？",
+        "能區分名詞單數 each control 與複數 all the controls 的用法嗎？"
+      ],
+      "trapCodes": [
+        "ENG_SPELLING_PHONICS"
+      ],
+      "explanation": {
+        "point": "核心名詞 control 拼寫：con + trol，字尾只有一個 l。",
+        "examPurpose": "考核學生區分原形名詞 control 與動詞過去式 controlled 雙寫差異的拼寫精準度。",
+        "correctReason": "each 後方必須接單數可數名詞 control，原形字尾只有一個字母 l。",
+        "note": "只有動詞加 -ed / -ing 時才要雙寫 l（controlled / controlling），原形名詞不雙寫。",
+        "trap": "常受過去式 controlled 雙寫 l 的視覺印象影響，誤將名詞原形拼成 controll。",
+        "commonTraps": [
+          "字尾誤雙寫字母 l，拼成錯誤的 controll。",
+          "字尾長母音 /oʊ/ 誤加上不發音的 e 拼成 controle。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "station",
+          "checkpoint"
+        ],
+        "grammarCompare": "each control (單數) vs. all the controls (複數)；miss a control (漏掉一個檢查點)。",
+        "examVariations": "克漏字常搭配 Figure 1 (control flag) 與 Figure 2 (control card) 複合出題。"
+      }
+    },
+    {
+      "id": "q_w13_rww6_u06_10",
+      "book_id": "rw6",
+      "unit_id": "rw6_6",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★☆☆☆☆",
+      "difficulty_level": 2,
+      "question": "🎧 聽力拼字測驗：請仔細聆聽發音與例句，拼寫出表示「街角；轉角處」的英文名詞（提示：指兩條道路交會之處）。",
+      "target_chi": "街角；轉角處",
+      "target_pos": "名詞 (Noun)",
+      "masked_example": "Standing on a ________, you ask someone how to get to a store.",
+      "masked_example_chi": "從鞦韆區的北邊角落出發，然後往東走 50 步。",
+      "options": [],
+      "answer": "corner",
+      "vocab_card": {
+        "word": "corner",
+        "ipa": "/ˈkɔːnə(r)/",
+        "phonetic": "/ˈkɔːrnər/",
+        "syllables": "cor·ner",
+        "pos": "名詞 (Noun)",
+        "chi": "街角；轉角處；角落",
+        "meaning": "兩條街道交會處，或房間兩面牆壁相交的夾角",
+        "breakdown": "源自拉丁語 cornu (動物的角、尖角) -> 兩條線交會形成尖角的地方",
+        "trick": "諧音「扣呢」-> 兩條馬路「扣」在一起的尖角處，就是街角 (corner)！",
+        "scene": "站在十字路口的轉角人行道上，一邊看著街牌一邊向路人打聽書店位置。",
+        "collocation": "on a corner (在街角), around the corner (就在轉角處/即將來臨), north corner (北邊角落)",
+        "img": "🏙️",
+        "context_eng": "Standing on a corner, you ask someone how to get to a store.",
+        "example": "Start at the north corner of the swings and walk east for 50 steps.",
+        "context_chi": "從鞦韆區的北邊角落出發，然後往東走 50 步。",
+        "chant": "Turn the corner, look around; soon the bookstore will be found!",
+        "compare": "on the corner (在戶外街道轉角) vs. in the corner (在室內房間角落)",
+        "note": "課文與練習題高頻定義：a place where two roads meet（兩條道路交會之處）。注意戶外街角常用介系詞 on 或 at。"
+      },
+      "self_check": [
+        "字母順序是否為 c-o-r-n-e-r（含兩個 r）？",
+        "是否清楚區分街角名詞（-er 結尾）與皇冠（crown）之差異？",
+        "知道戶外街角搭配介系詞 on / at，室內角落常用 in 嗎？"
+      ],
+      "trapCodes": [
+        "ENG_SPELLING_PHONICS"
+      ],
+      "explanation": {
+        "point": "核心名詞 corner（街角）拼寫與 Context Clues 定義。",
+        "examPurpose": "測驗學生精確拼寫 corner，並連結課本定義「a place where two roads meet」。",
+        "correctReason": "cor + ner 構成 corner，兩音節中的字母 r 都不可漏寫，句中站在街道轉角搭配介系詞 on。",
+        "note": "字尾為 -er 而非 -or（切勿誤寫為 cornor）。",
+        "trap": "受到字尾弱音影響，容易把 -er 誤寫為 -or（cornor），或漏掉第一個 r 寫成 coner。",
+        "commonTraps": [
+          "漏掉第一音節的 r，誤拼成 coner（音近「甜筒 cone」）。",
+          "字尾誤寫成 -or（cornor）或 -ar（cornar）。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "street intersection",
+          "bend"
+        ],
+        "grammarCompare": "standing on a corner（戶外街角）vs. sitting in the corner of the room（室內房間角落）。",
+        "examVariations": "Context Clues 單選題常考 corner = a place where two roads meet。"
+      }
+    },
+    {
+      "id": "q_w13_rww6_u06_11",
+      "book_id": "rw6",
+      "unit_id": "rw6_6",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★★☆☆☆",
+      "difficulty_level": 2,
+      "question": "🎧 聽力拼字測驗：請仔細聆聽發音與例句，拼寫出表示「樹林」的複數英文名詞（提示：注意此字表示樹林時恆用複數形）。",
+      "target_chi": "樹林",
+      "target_pos": "名詞 (Noun，恆用複數)",
+      "masked_example": "Instead of running down a marked road, you run around in the ________.",
+      "masked_example_chi": "控制點旗幟經常隱藏在樹林裡的大樹後方。",
+      "options": [],
+      "answer": "woods",
+      "vocab_card": {
+        "word": "woods",
+        "ipa": "/wʊdz/",
+        "phonetic": "/wʊdz/",
+        "syllables": "woods",
+        "pos": "名詞 (Noun，恆用複數)",
+        "chi": "樹林；森林",
+        "meaning": "長滿許多樹木、面積通常比大片原始森林 (forest) 稍小的林地",
+        "breakdown": "wood(木材、樹木) + -s(集合複數) -> 許多樹木聚集在一起的樹林",
+        "trick": "一根木頭叫 wood（不可數：木材），一大堆樹湊成複數 woods 就變成「樹林」！",
+        "scene": "陽光透過高大的樹冠灑落林間小徑，定向越野選手在樹幹之間快速奔跑。",
+        "collocation": "in the woods (在樹林裡), out of the woods (脫離險境), walk through the woods (穿過樹林)",
+        "img": "🌲",
+        "context_eng": "Instead of running down a marked road, you run around in the woods.",
+        "example": "Control flags are often hidden behind big trees in the woods.",
+        "context_chi": "控制點旗幟經常隱藏在樹林裡的大樹後方。",
+        "chant": "Out of the city, into the woods; nature and running feel so good!",
+        "compare": "wood (不可數：木頭材料) vs. woods (恆複數：樹林) vs. forest (面積廣大的大森林)",
+        "note": "表示「樹林」時通常用複數 woods 並搭配定冠詞 in the woods；不可用來指「木頭桌椅的材料」。"
+      },
+      "self_check": [
+        "是否有記得在字尾加上複數 -s，拼寫為 woods？",
+        "能分清楚 wood（木材）與 woods（樹林）的單複數語意差異嗎？",
+        "搭配定冠詞 the 使用（in the woods）是否正確？"
+      ],
+      "trapCodes": [
+        "ENG_UNCOUNTABLE_SVA",
+        "ENG_SPELLING_PHONICS"
+      ],
+      "explanation": {
+        "point": "名詞單複數語意切換：wood（木頭材料）vs. woods（樹林）。",
+        "examPurpose": "測驗學生掌握「樹林」在英語中恆為複數形式 woods 的特殊名詞用法。",
+        "correctReason": "在樹林裡跑動固定寫為 in the woods，結尾必須加上 -s 表示許多樹木聚集的林地。",
+        "note": "若未加 s 寫成 wood，意思會變成「木頭這種建築材料」。",
+        "trap": "聽寫時常漏聽尾音 /z/ 而寫成單數 wood，導致語意變成「在木頭裡面」。",
+        "commonTraps": [
+          "漏寫複數結尾 s，寫成 in the wood（變成「在木材裡」）。",
+          "把長母音雙 oo 誤寫為單 o 或 u（wods / wuds）。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "forest",
+          "timberland"
+        ],
+        "grammarCompare": "The desk is made of wood (不可數材料) vs. Racers run in the woods (複數指樹林)。",
+        "examVariations": "克漏字常與 forest 作同義替換，或考單複數名詞辨析。"
+      }
+    },
+    {
+      "id": "q_w13_rww6_u06_12",
+      "book_id": "rw6",
+      "unit_id": "rw6_6",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★★☆☆☆",
+      "difficulty_level": 3,
+      "question": "🎧 聽力拼字測驗：請仔細聆聽發音與例句，拼寫出表示「視覺圖表；視覺的」之核心單數名詞（提示：圖片、圖表、地圖皆屬於這類輔助資料）。",
+      "target_chi": "視覺圖表；視覺的",
+      "target_pos": "名詞 (Noun) / 形容詞 (Adjective)",
+      "masked_example": "Pictures, diagrams, and maps are ________. ________ provide information that is not in a text.",
+      "masked_example_chi": "閱讀時，觀察視覺圖表能幫助你更深入了解文章中的概念。",
+      "options": [],
+      "answer": "visual",
+      "vocab_card": {
+        "word": "visual",
+        "ipa": "/ˈvɪʒuəl/",
+        "phonetic": "/ˈvɪʒuəl/",
+        "syllables": "vis·u·al",
+        "pos": "名詞 (Noun) / 形容詞 (Adjective)",
+        "chi": "視覺圖表（圖片、圖示、地圖）；視覺的",
+        "meaning": "用來輔助文字說明的圖像資料（如照片、圖表、地圖、示意圖）",
+        "breakdown": "vis-(看見，同 vision) + -ual(與…相關的) -> 用眼睛觀看理解的圖像資料",
+        "trick": "vis 就是「視力、看 (vision)」，在課文中 visuals 就是「讓你用眼睛看懂更多細節的圖表」！",
+        "scene": "課文只寫每個控制點有旗幟與卡片，看 Figure 1 和 Figure 2 才知道旗子是紅白色且卡片有 18 格！",
+        "collocation": "use visuals (運用圖像), visual details (視覺細節), visual information (圖像資訊)",
+        "img": "🖼️",
+        "context_eng": "Pictures, diagrams, and maps are visuals. Visuals provide information that is not in a text.",
+        "example": "While you read, look at visuals to understand more about the ideas in a text.",
+        "context_chi": "閱讀時，觀察視覺圖表能幫助你更深入了解文章中的概念。",
+        "chant": "Pictures, diagrams, maps so clear; visuals tell us what's not written here!",
+        "compare": "visual (統稱各類視覺圖像) vs. text (純文字內容)；兩者是互補而非單純重複！",
+        "note": "本課 READING GOAL 核心考點：Visuals provide information that is NOT in a text（提供文章未寫出的補充資訊）。"
+      },
+      "self_check": [
+        "字母組合是否正確拼為 v-i-s-u-a-l（不可漏掉 u）？",
+        "字尾是否拼寫為 -al（而非 -el 或 -le）？",
+        "是否牢記本課核心策略：圖像會提供「文章中沒有寫到」的補充細節？"
+      ],
+      "trapCodes": [
+        "ENG_SPELLING_PHONICS"
+      ],
+      "explanation": {
+        "point": "閱讀策略核心字 visual（視覺圖表）之音節結構 vis-u-al。",
+        "examPurpose": "測驗學生正確拼寫本單元 Reading Goal 關鍵字 visual 的能力。",
+        "correctReason": "例句前面有不定冠詞 a，故應填單數名詞 visual，注意中間包含字母組合 -su-。",
+        "note": "名詞複數時加 -s 成為 visuals（Pictures, diagrams, and maps are visuals.）。",
+        "trap": "因發音 /ˈvɪʒuəl/ 類似中文「微酒」，極易漏掉字母 u 寫成 visal，或將字尾寫成 visuel / visule。",
+        "commonTraps": [
+          "中間字母 s 發出 /ʒ/ 音，容易誤寫為 vishual 或 visjal。",
+          "漏掉字母 u 誤拼成 visal，或字尾 -al 誤寫成 -el。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "illustration",
+          "diagram"
+        ],
+        "grammarCompare": "a visual (可數名詞：一張視覺圖表) vs. visual details (形容詞：視覺的細節)。",
+        "examVariations": "Get Ready 必考是非題與閱讀理解策略題主關鍵字。"
+      }
+    },
+    {
+      "id": "q_w13_rww6_u06_13",
+      "book_id": "rw6",
+      "unit_id": "rw6_6",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★★☆☆☆",
+      "difficulty_level": 3,
+      "question": "🎧 聽力拼字測驗：請仔細聆聽發音與例句，拼寫出表示「終點線」的雙字英文名詞片語（提示：共兩個字，中間須留空格）。",
+      "target_chi": "終點線",
+      "target_pos": "名詞片語 (Noun Phrase)",
+      "masked_example": "They might cross the ________ first, but the next person to finish with a full card will win the race.",
+      "masked_example_chi": "而且，在歷經這一切之後，你仍然必須使用指南針來找到終點線！",
+      "options": [],
+      "answer": "finish line",
+      "vocab_card": {
+        "word": "finish line",
+        "ipa": "/ˈfɪnɪʃ laɪn/",
+        "phonetic": "/ˈfɪnɪʃ laɪn/",
+        "syllables": "fin·ish line",
+        "pos": "名詞片語 (Noun Phrase)",
+        "chi": "終點線",
+        "meaning": "賽跑或各項競賽結束時選手必須跨越的終點標線",
+        "breakdown": "finish(完成、結束) + line(線條) -> 標誌比賽結束的那一條線",
+        "trick": "finish(完成) + line(線) -> 只要越過這條線，比賽就「完成」了！",
+        "scene": "衝出樹林看見遠處拉起的終點布條，手中卻還得先確認卡片 18 格是否全部打滿。",
+        "collocation": "cross the finish line (衝過終點線), reach the finish line (抵達終點線), starting line (起跑線)",
+        "img": "🏁",
+        "context_eng": "They might cross the finish line first, but the next person to finish with a full card will win the race.",
+        "example": "And, after all that, you still have to use your compass to find the finish line!",
+        "context_chi": "而且，在歷經這一切之後，你仍然必須使用指南針來找到終點線！",
+        "chant": "Check your card, run with pride; cross the finish line in stride!",
+        "compare": "starting line (起跑線) vs. finish line (終點線)；cross the finish line 動詞 cross 前不加介系詞。",
+        "note": "分開寫為兩個字 finish line；注意動詞是 cross (越過)，不可寫成 across the finish line 當動詞。"
+      },
+      "self_check": [
+        "兩個字 finish 與 line 中間是否有正確留出空格（非連寫成 finishline）？",
+        "finish 是否拼對為 f-i-n-i-s-h（沒有誤加 ed 寫成 finished line）？",
+        "line 結尾的靜音 e 是否沒有漏寫？"
+      ],
+      "trapCodes": [
+        "ENG_SPELLING_PHONICS"
+      ],
+      "explanation": {
+        "point": "複合名詞片語 finish line（終點線）：分開兩字、使用原形 finish。",
+        "examPurpose": "檢驗學生拼寫雙字賽道名詞 finish line 時是否誤合寫或誤加過去式字尾 -ed。",
+        "correctReason": "比賽「終點線」固定寫成 finish line，由名詞/動名詞作定語的 finish 加上 line 組成，中間有空格。",
+        "note": "前面常搭配動詞 cross（衝過）或 find（找到）。",
+        "trap": "常受動詞過去式影響誤拼為 finished line，或忘記空格寫成 finishline。",
+        "commonTraps": [
+          "誤將 finish 加上過去式字尾 -ed 拼成 finished line。",
+          "將兩個獨立單字錯誤連寫成一個字 finishline。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "goal line",
+          "end of the race"
+        ],
+        "grammarCompare": "cross the finish line (動詞 cross) vs. finish the race (動詞 finish)。",
+        "examVariations": "第 3 與第 4 段雙段共現高頻詞，亦是勝負陷阱題核心關鍵字。"
+      }
+    },
+    {
+      "id": "q_w13_rww6_u06_14",
+      "book_id": "rw6",
+      "unit_id": "rw6_6",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★★★☆☆",
+      "difficulty_level": 4,
+      "question": "🎧 聽力拼字測驗：請仔細聆聽發音與例句，拼寫出表示「在街對面；在對街」的三字英文介系詞片語（提示：先寫「橫越過」介系詞，再寫街道）。",
+      "target_chi": "在街對面；在對街",
+      "target_pos": "介系詞片語 (Prepositional Phrase)",
+      "masked_example": "They tell you to \"go two blocks north, turn left, and you'll be ________ from the bookstore.\"",
+      "masked_example_chi": "巴亞尼住在公園的對街。",
+      "options": [],
+      "answer": "across the street",
+      "vocab_card": {
+        "word": "across the street",
+        "ipa": "/əˈkrɒs ðə striːt/",
+        "phonetic": "/əˈkrɔːs ðə striːt/",
+        "syllables": "a·cross the street",
+        "pos": "介系詞片語 (Prepositional Phrase)",
+        "chi": "在街對面；穿越馬路到對街",
+        "meaning": "位於街道的另一側（常接 from 表示「在某地標的對街」）",
+        "breakdown": "across(從這一邊橫越到那一邊，介系詞) + the street(街道)",
+        "trick": "a + cross = 「跨在對面」！across 是介系詞，前面一定要有 be 動詞或動作動詞（如 walk across）！",
+        "scene": "向北走兩個街區並左轉後，一抬頭就看見書店正好位在馬路的對面。",
+        "collocation": "across the street from (在…的對街), live across the street (住在對街), run across the street (跑過馬路)",
+        "img": "🏬",
+        "context_eng": "They tell you to \"go two blocks north, turn left, and you'll be across the street from the bookstore.\"",
+        "example": "Bayani lives across the street from the park.",
+        "context_chi": "巴亞尼住在公園的對街。",
+        "chant": "Across the street, on the other side; walk with care and look both sides!",
+        "compare": "across (介系詞：在對面/橫越，不能單獨當動詞) vs. cross (動詞：穿越，如 cross the street)",
+        "note": "超級考點：you'll be across the street (be + 介系詞 across) vs. you need to cross the street (不定詞 to + 動詞 cross)！"
+      },
+      "self_check": [
+        "be 動詞 you'll be 後方是否寫出介系詞 across（而非動詞 cross）？",
+        "across 是否正確拼為單寫 c、雙寫 ss（a-c-r-o-s-s）？",
+        "後面是否有接定冠詞 the 與名詞 street（無誤寫成 street 的其他拼法）？"
+      ],
+      "trapCodes": [
+        "ENG_POS_CONFUSION",
+        "ENG_SPELLING_PHONICS"
+      ],
+      "explanation": {
+        "point": "位置介系詞片語 across the street（在對街）拼寫與詞性區辨。",
+        "examPurpose": "測驗學生於 be 動詞後方選用介系詞 across 而非動詞 cross，並正確拼寫雙寫 s 與雙寫 e。",
+        "correctReason": "you'll be 後方需接介系詞片語表示位置狀態，故用 across the street（from... 表示在某物對面）。",
+        "note": "across 只有 1 個 c 與 2 個 s；street 包含雙寫 ee。",
+        "trap": "最常見失誤為漏掉開頭的 a 寫成 cross the street（缺少介系詞性），或把 across 錯拼為 accross。",
+        "commonTraps": [
+          "詞性混淆：在 you'll be 後面誤填入動詞 cross（缺少開頭字母 a）。",
+          "拼寫誤雙寫 c，錯拼為 accross the street。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "on the opposite side of the road",
+          "facing the bookstore"
+        ],
+        "grammarCompare": "be across the street from (靜態在對面) vs. cross the street (動作過馬路)。",
+        "examVariations": "Get Ready 與 Context Clues 常考此片語與 on the other side 同義配對。"
+      }
+    },
+    {
+      "id": "q_w13_rww6_u06_15",
+      "book_id": "rw6",
+      "unit_id": "rw6_6",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★★★☆☆",
+      "difficulty_level": 4,
+      "question": "🎧 聽力拼字測驗：請仔細聆聽發音與例句，拼寫出表示「在…前方（外部前面）」的三字英文複合介系詞（提示：與 behind 相對）。",
+      "target_chi": "在…前方（外部前面）",
+      "target_pos": "複合介系詞 (Prepositional Phrase)",
+      "masked_example": "They may be ________ a big rock or behind a tree.",
+      "masked_example_chi": "控制點旗幟就放置在一塊大岩石的正前方。",
+      "options": [],
+      "answer": "in front of",
+      "vocab_card": {
+        "word": "in front of",
+        "ipa": "/ɪn frʌnt əv/",
+        "phonetic": "/ɪn frʌnt əv/",
+        "syllables": "in front of",
+        "pos": "複合介系詞 (Prepositional Phrase)",
+        "chi": "在…的前方（外部前面）",
+        "meaning": "位置處於某個物體或建築物外側的正前方",
+        "breakdown": "in(在) + front(前面) + of(…的) -> 在某物的正面外部",
+        "trick": "front 就是「前門、正面」，加上 in...of 就構成「在…的正前方」，反義詞就是 behind！",
+        "scene": "控制旗幟就立在一塊巨大岩石的正面前方，從岩石背後走過來的人完全看不到它。",
+        "collocation": "in front of a big rock (在大岩石前方), stand in front of (站在…前面), right in front of (就在…正前方)",
+        "img": "🪨",
+        "context_eng": "They may be in front of a big rock or behind a tree.",
+        "example": "The control flag is placed right in front of a big rock.",
+        "context_chi": "控制點旗幟就放置在一塊大岩石的正前方。",
+        "chant": "In front of the rock, behind the tree; look carefully so you can see!",
+        "compare": "in front of (在某物體外部的前面) vs. in the front of (在某空間內部的前排，如教室前排)",
+        "note": "本課重點搭配：in front of a big rock (外部前面，不加 the) 與反義詞 behind a tree 成組記憶。"
+      },
+      "self_check": [
+        "是否寫出完整的三個字 in front of（沒有漏掉最後的 of）？",
+        "front 中間母音是否正確拼寫為 o（f-r-o-n-t，不是 frunt）？",
+        "外部前方是否沒有誤加定冠詞 the（沒有寫成 in the front of a big rock）？"
+      ],
+      "trapCodes": [
+        "ENG_ARTICLE_ERROR",
+        "ENG_SPELLING_PHONICS"
+      ],
+      "explanation": {
+        "point": "外部方位介系詞 in front of（在…前面）之正確拼寫與冠詞規範。",
+        "examPurpose": "考核學生能否正確拼寫 front 且不漏寫介系詞 of，並區分外部前面不加 the 的規則。",
+        "correctReason": "旗幟放在岩石外部正面，使用三字介系詞片語 in front of，注意 front 以 o 拼寫而非 u。",
+        "note": "in front of（外部前）與 behind（外部後）互為反義詞。",
+        "trap": "聽寫常漏掉連音輕讀的 of，或受發音影響把 front 拼成 frunt。",
+        "commonTraps": [
+          "受弱讀音影響漏掉介系詞 of，只寫成 in front a big rock。",
+          "將字母 o 誤拼為 u（frunt），或誤加冠詞寫成 in the front of（指物體內部前排）。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "ahead of",
+          "facing"
+        ],
+        "grammarCompare": "in front of the rock (岩石外部前方) vs. in the front of the car (汽車內部前座)。",
+        "examVariations": "空間位置配對題與短文聽寫必考三字片語。"
+      }
+    },
+    {
+      "id": "q_w13_rww6_u06_16",
+      "book_id": "rw6",
+      "unit_id": "rw6_6",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★★★☆☆",
+      "difficulty_level": 4,
+      "question": "🎧 聽力拼字測驗：請仔細聆聽發音與例句，拼寫出表示「沿著一條河流」的三字英文空間片語（提示：第一個字意為「沿著」，結尾是 g）。",
+      "target_chi": "沿著一條河流",
+      "target_pos": "介系詞片語 (Prepositional Phrase)",
+      "masked_example": "In orienteering, you will likely run ________, climb over rocks, and go up and down hills.",
+      "masked_example_chi": "參賽者在進入森林之前必須先沿著一條河流奔跑。",
+      "options": [],
+      "answer": "along a river",
+      "vocab_card": {
+        "word": "along a river",
+        "ipa": "/əˈlɒŋ ə ˈrɪvə(r)/",
+        "phonetic": "/əˈlɔːŋ ə ˈrɪvər/",
+        "syllables": "a·long a ri·ver",
+        "pos": "介系詞片語 (Prepositional Phrase)",
+        "chi": "沿著一條河流",
+        "meaning": "順著河流或道路的長條邊緣線平行前進",
+        "breakdown": "a-(在…狀態) + long(長的) -> 順著一條長長的線條邊緣移動",
+        "trick": "a + long(長長的) -> 順著「長長的」河岸或馬路一直跑，就是「沿著 (along)」！",
+        "scene": "定向越野選手順著清澈溪流的岸邊小徑加速奔跑，不偏離水岸線。",
+        "collocation": "run along a river (沿著河流奔跑), walk along the beach (沿著海灘散步), trees along the road (路旁的樹木)",
+        "img": "🏞️",
+        "context_eng": "In orienteering, you will likely run along a river, climb over rocks, and go up and down hills.",
+        "example": "The runners had to run along a river before reaching the forest.",
+        "context_chi": "參賽者在進入森林之前必須先沿著一條河流奔跑。",
+        "chant": "Run along the river, splash and dash; keep your map dry from every splash!",
+        "compare": "along (順著邊緣平行移動) vs. across (從一邊橫渡到對岸)",
+        "note": "注意不可與 alone (單獨的) 混淆！along 結尾是 -g，表示「沿著」。"
+      },
+      "self_check": [
+        "第一個字是否拼寫為 along（有結尾 g，非 alone）？",
+        "中間是否有保留不定冠詞 a（along a river）？",
+        "river 是否拼對為 r-i-v-e-r（單寫 v，不是 rivver）？"
+      ],
+      "trapCodes": [
+        "ENG_SPELLING_PHONICS",
+        "ENG_ARTICLE_ERROR"
+      ],
+      "explanation": {
+        "point": "線性地形移動片語 along a river（沿著河流）與形近字區分。",
+        "examPurpose": "檢驗學生區分介系詞 along（沿著）與副詞 alone（單獨），並保留正確不定冠詞 a。",
+        "correctReason": "表示沿著一條水岸線奔跑時，使用介系詞 along 接不定冠詞 a 與可數名詞 river。",
+        "note": "課本原句三連發：run along a river, climb over rocks, go up and down hills。",
+        "trap": "常因聲音相近把 along 誤寫為 alone，或受發音弱讀影響漏掉中間的冠詞 a。",
+        "commonTraps": [
+          "形近字混淆：誤把 along 寫成 alone（單獨）。",
+          "漏掉可數名詞前的冠詞 a，寫成錯誤的 along river。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "beside a stream",
+          "following the riverbank"
+        ],
+        "grammarCompare": "run along a river (順河岸跑) vs. swim across a river (橫渡河流)。",
+        "examVariations": "地形介系詞四選一與第 4 段聽寫高頻必考片語。"
+      }
+    },
+    {
+      "id": "q_w13_rww6_u06_17",
+      "book_id": "rw6",
+      "unit_id": "rw6_6",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★★★★★",
+      "difficulty_level": 5,
+      "question": "🎧 聽力拼字測驗：請仔細聆聽發音與例句，拼寫出表示「爬過岩石」的三字英文動詞片語（提示：動詞包含一個不發音字母 b，岩石為複數）。",
+      "target_chi": "爬過岩石",
+      "target_pos": "動詞片語 (Verb Phrase)",
+      "masked_example": "In orienteering, you will likely run along a river, ________, and go up and down hills.",
+      "masked_example_chi": "你必須小心地爬過岩石，才不會扭傷腳踝。",
+      "options": [],
+      "answer": "climb over rocks",
+      "vocab_card": {
+        "word": "climb over rocks",
+        "ipa": "/klaɪm ˈəʊvə(r) rɒks/",
+        "phonetic": "/klaɪm ˈoʊvər rɑːks/",
+        "syllables": "climb o·ver rocks",
+        "pos": "動詞片語 (Verb Phrase)",
+        "chi": "爬過岩石；翻越石塊",
+        "meaning": "手腳並用向上攀爬並從障礙物頂端跨越到另一側",
+        "breakdown": "climb(攀爬，b 不發音) + over(從上方越過) + rocks(岩石)",
+        "trick": "climb 字尾的 b 躲在後面不發音！over 像一道彩虹弧線，表示從石頭「上方翻越過去」！",
+        "scene": "野外路徑被幾塊巨石擋住去路，選手踩穩腳步翻越岩石繼續前進。",
+        "collocation": "climb over rocks (翻越岩石), climb over a fence (翻過圍籬), climb up a mountain (爬上高山)",
+        "img": "🧗",
+        "context_eng": "In orienteering, you will likely run along a river, climb over rocks, and go up and down hills.",
+        "example": "You have to climb over rocks carefully so you don't hurt your ankle.",
+        "context_chi": "你必須小心地爬過岩石，才不會扭傷腳踝。",
+        "chant": "Climb over rocks, step by step; steady and strong, full of pep!",
+        "compare": "climb over (從障礙物上方翻越) vs. go through (從隧道或樹叢內部穿過)",
+        "note": "climb 中的字母 b 為靜音字母，發音為 /klaɪm/；rocks 此處指複數石塊。"
+      },
+      "self_check": [
+        "climb 字尾的靜音字母 b（c-l-i-m-b）是否有寫出來？",
+        "翻越介系詞是否使用 over（而非 on 或 up）？",
+        "岩石 rocks 是否使用複數形且拼對 ck（非 roks）？"
+      ],
+      "trapCodes": [
+        "ENG_SPELLING_PHONICS",
+        "ENG_PREP_COLLOCATION"
+      ],
+      "explanation": {
+        "point": "地形動詞片語 climb over rocks：靜音字母 b、翻越介系詞 over 與複數 rocks。",
+        "examPurpose": "綜合考核靜音字母拼寫、空間翻越介系詞 over 的精準選用與複數名詞意識。",
+        "correctReason": "表示從障礙物上方翻越過去使用 climb over，climb 結尾必有靜音 b，多塊岩石用複數 rocks。",
+        "note": "三個並列原形動詞片語皆緊跟在 you will likely 後方。",
+        "trap": "學生聽寫時極易漏掉 climb 的靜音 b（寫成 clim），或漏掉 rocks 的複數 -s。",
+        "commonTraps": [
+          "靜音字母遺漏：只依讀音拼寫成 clim over rocks，漏掉字尾 b。",
+          "介系詞誤選成 climb on 或 climb up，無法表達「從上方翻過去」的跨越動作。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "scramble over boulders",
+          "scale across stones"
+        ],
+        "grammarCompare": "climb over (越過障礙到達另一側) vs. climb up (向上攀登至高處)。",
+        "examVariations": "第 4 段段落聽寫與地形片語配對常考項目。"
+      }
+    },
+    {
+      "id": "q_w13_rww6_u06_18",
+      "book_id": "rw6",
+      "unit_id": "rw6_6",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": true,
+      "type": "choice",
+      "category_tag": "reading",
+      "difficulty": "★★☆☆☆",
+      "difficulty_level": 2,
+      "triadGroup": {
+        "groupId": "RWW6_U06_T1",
+        "tier": "L1-3",
+        "role": "foundation"
+      },
+      "question": "In the sport of orienteering, what MUST a racer have in order to win the race?",
+      "options": [
+        "A special flag taken from each tree in the woods",
+        "A full control card with marks from all the controls",
+        "The newest kind of map without using a compass",
+        "Permission to run only along marked city streets"
+      ],
+      "answer": "A full control card with marks from all the controls",
+      "trapCodes": [
+        "ENG_CHINGLISH_LITERAL"
+      ],
+      "explanation": {
+        "point": "定向越野核心勝負規則：必須攜帶打滿所有控制點記號的完整控制卡才能獲勝。",
+        "examPurpose": "評量學生是否精確讀懂課文第 3 段關於控制卡與勝負必要條件的事實細節。",
+        "correctReason": "課文明確指出 racers must find all the controls to win，最後一句更強調 the next person to finish with a full card will win the race。",
+        "note": "選手在控制點是「在卡片上打卡作記號」，並非拔走旗幟！",
+        "trap": "容易受常識誤導以為只要把旗子拔回來或只拿地圖不拿指南針就能過關。",
+        "distractorAnalysis": {
+          "A special flag taken from each tree in the woods": "選手抵達控制點後是用卡片打卡做記號，絕對不能把控制旗幟拔走。",
+          "The newest kind of map without using a compass": "課文強調地圖與指南針必須同時搭配使用，連找終點線也需要指南針。",
+          "Permission to run only along marked city streets": "定向越野是在戶外樹林、河畔與山丘進行，而非沿著城市標線街道跑。"
+        },
+        "steps": [
+          "① 鎖定問題關鍵詞 win the race",
+          "② 回憶課文規則：at each control, mark a card；miss a control → 不算贏",
+          "③ 確認唯一正確條件：with a full card（集滿所有控制點標記）"
+        ],
+        "insight": "💡 記住這句黃金定律：No full card, no win!（沒有滿格控制卡就沒有勝利！）"
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "a completely marked control card",
+          "all checkpoints punched"
+        ],
+        "grammarCompare": "in order to + V 與 to + V 皆表達「為了…」的目的。",
+        "examVariations": "課本是非題常改寫成 You must finish first to win an orienteering event. (False!)"
+      }
+    },
+    {
+      "id": "q_w13_rww6_u06_19",
+      "book_id": "rw6",
+      "unit_id": "rw6_6",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": true,
+      "type": "choice",
+      "category_tag": "reading",
+      "difficulty": "★★★★☆",
+      "difficulty_level": 6,
+      "triadGroup": {
+        "groupId": "RWW6_U06_T1",
+        "tier": "L4-6",
+        "role": "twist"
+      },
+      "question": "During an orienteering race with 18 controls, Leo runs the fastest and crosses the finish line first, but he missed Control #7. Two minutes later, Maya crosses the finish line with all 18 controls marked on her card. According to the rules, what happens?",
+      "options": [
+        "Leo wins because he crossed the finish line two minutes before Maya.",
+        "Both Leo and Maya win because Leo was faster and Maya was accurate.",
+        "Maya wins the race because she finished with a full control card.",
+        "No one wins unless Leo goes back to find Control #7 within two minutes."
+      ],
+      "answer": "Maya wins the race because she finished with a full control card.",
+      "trapCodes": [
+        "ENG_CHINGLISH_LITERAL"
+      ],
+      "explanation": {
+        "point": "情境推論應用：先衝線但漏打卡（Leo）vs. 稍慢但全卡打滿（Maya）之勝負判定。",
+        "examPurpose": "測驗學生能否將課文抽象規則套用至具體比賽情境，排除「純速度至上」的日常直覺誤區。",
+        "correctReason": "依據課文規則，Leo 漏掉第 7 號控制點，卡片上缺了那個記號，因此儘管他先衝終點線，下一位集滿 18 格完整卡片完賽的 Maya 才是真正的冠軍。",
+        "note": "課文原句驗證：They might cross the finish line first, but the next person to finish with a full card will win the race.",
+        "trap": "直覺誤以為「速度最快、第一個通過終點」一定拿第一名，或以為兩人並列冠軍。",
+        "distractorAnalysis": {
+          "Leo wins because he crossed the finish line two minutes before Maya.": "這是本單元最大陷阱！定向越野不是純田徑賽跑，漏掉任何一個控制點就喪失獲勝資格。",
+          "Both Leo and Maya win because Leo was faster and Maya was accurate.": "規則沒有雙冠軍制度；未集滿所有控制點的選手不具備完賽勝出資格。",
+          "No one wins unless Leo goes back to find Control #7 within two minutes.": "規則明確指出下一位帶著完整卡片完賽的人就會直接勝出，比賽不會等漏點者回去補打。"
+        },
+        "steps": [
+          "① 檢查 Leo 狀態：Crossed first (✓) ＋ Full card (✗ 漏第 7 站) ➔ 淘汰",
+          "② 檢查 Maya 狀態：Finished next (✓) ＋ Full card (✓ 打滿 18 格) ➔ 獲勝",
+          "③ 選出符合規則的正確推論：Maya wins!"
+        ],
+        "insight": "💡 定向越野的勝負排序：第一條件是「全卡打滿 18 格」，第二條件才是「誰最快」！",
+        "visualBlock": {
+          "kind": "compare_table",
+          "title": "⚖️ 勝負判定對照表：Leo vs. Maya",
+          "data": {
+            "headers": [
+              "選手",
+              "衝過終點線順序",
+              "18 格控制卡狀態",
+              "比賽判定結果"
+            ],
+            "rows": [
+              [
+                "Leo",
+                "第 1 名衝線 ⏱️",
+                "漏掉 #7（缺 1 格 ❌）",
+                "失去獲勝資格 ❌"
+              ],
+              [
+                "Maya",
+                "第 2 名衝線（+2 分鐘）",
+                "18 格全滿（Full Card ✅）",
+                "正式贏得比賽 🏆"
+              ]
+            ]
+          },
+          "caption": "📊 先檢核「全卡是否打滿」，再看「完賽時間」，這才是定向越野的鐵則！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "disqualified due to a missing punch",
+          "valid full scorecard"
+        ],
+        "grammarCompare": "might cross ... first（讓步事實）+ , but ... will win（真正結果）。",
+        "examVariations": "段考素養情境題常加入具體站號（如 missed Control #7）考勝負判斷。"
+      }
+    },
+    {
+      "id": "q_w13_rww6_u06_20",
+      "book_id": "rw6",
+      "unit_id": "rw6_6",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "difficulty": "★★★★★",
+      "difficulty_level": 8,
+      "triadGroup": {
+        "groupId": "RWW6_U06_T1",
+        "tier": "L7-10",
+        "role": "challenge"
+      },
+      "part_title": "Part III: Reading Comprehension & Rule Explanation",
+      "part_instructions": "請運用課文因果與條件句型，用完整英文句子說明為何在定向越野中「第一個衝過終點線並不一定會獲勝」。",
+      "sentence_form": "If a racer misses a control, they + won't + have a full card, so + the next person with a full card + will win.",
+      "word_bank": [
+        "misses a control",
+        "full card",
+        "finish line",
+        "win the race"
+      ],
+      "question": "Explain the orienteering winning rule in one complete sentence using an 'If' conditional clause: Why doesn't the fastest person who crosses the finish line first always win?",
+      "options": [],
+      "answer": "If someone misses a control, they won't have a full card, so the next person to finish with a full card will win the race.",
+      "self_check": [
+        "1. If 子句是否正確使用現在簡單式 misses（非 will miss）？",
+        "2. 結果子句是否正確使用 won't have a full card 與 will win the race？",
+        "3. 是否清楚交代「漏打控制點 ➔ 卡片未滿 ➔ 下一位滿卡者勝」的完整因果？"
+      ],
+      "trapCodes": [
+        "ENG_TENSE_MISMATCH",
+        "ENG_VERB_OMISSION"
+      ],
+      "explanation": {
+        "point": "開放式規則解釋寫作：結合 If 條件句與結果對比闡明定向越野勝負本質。",
+        "examPurpose": "訓練學生在素養簡答題（Explain your answer）中，用精準英文文法完整陳述閱讀理解規則。",
+        "correctReason": "以 If someone misses a control 點出前提，接著用 they won't have a full card 說明卡片缺格，最後以 so 引導真正勝出條件。",
+        "note": "亦可寫為：Because racers must find all the controls to win, if someone misses a control, the next person to finish with a full card will win.",
+        "trap": "手寫時最常在 If 子句誤寫未來式 will miss，或在 because/so 同句連用（中文習慣「因為…所以…」在英文不可同時寫）。",
+        "commonTraps": [
+          "中式英文「因為…所以…」陷阱：同一句裡同時寫出 Because ... so ...，英文只能留一個連接詞。",
+          "If 條件子句時態錯誤：誤寫成 If someone will miss a control，條件子句必用現在式 misses。"
+        ],
+        "steps": [
+          "① 設定條件：If someone misses a control,",
+          "② 說明卡片後果：they won't have a full card,",
+          "③ 結論收尾：so the next person to finish with a full card will win the race."
+        ],
+        "insight": "💡 英文裡「因為 (because)」跟「所以 (so)」就像兩位司機，同一台車只能坐一位，千萬別同時出現！",
+        "visualBlock": {
+          "kind": "slot_box",
+          "title": "📦 勝負規則手寫句子積木槽",
+          "data": {
+            "slots": [
+              {
+                "role": "條件子句 (現在式)",
+                "text": "If someone misses a control,",
+                "accent": "warn"
+              },
+              {
+                "role": "卡片狀態 (未來否定)",
+                "text": "they won't have a full card,",
+                "accent": "bad"
+              },
+              {
+                "role": "結果連詞",
+                "text": "so",
+                "accent": "pri"
+              },
+              {
+                "role": "真冠軍條件",
+                "text": "the next person to finish with a full card",
+                "accent": "ok"
+              },
+              {
+                "role": "勝利結論",
+                "text": "will win the race.",
+                "accent": "ok"
+              }
+            ]
+          },
+          "caption": "📊 五格積木組裝完成，就是一道 100% 拿滿分的手寫說明句！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "must punch every checkpoint",
+          "disqualified for skipping a station"
+        ],
+        "grammarCompare": "If + S + V(s/es), S + won't + V（條件結果）vs. Because ..., S + V（不可與 so 並用）。",
+        "examVariations": "3C Reading Comprehension 常出 2~3 分簡答題：Explain why the first runner didn't win."
+      }
+    },
+    {
+      "id": "q_w13_rww6_u06_21",
+      "book_id": "rw6",
+      "unit_id": "rw6_6",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": true,
+      "type": "choice",
+      "category_tag": "reading",
+      "difficulty": "★☆☆☆☆",
+      "difficulty_level": 2,
+      "triadGroup": {
+        "groupId": "RWW6_U06_T2",
+        "tier": "L1-3",
+        "role": "foundation"
+      },
+      "question": "According to the reading strategy \"Use Visuals,\" why should readers look at pictures, diagrams, and maps while reading?",
+      "options": [
+        "Because visuals always repeat the exact same words from the article",
+        "Because visuals provide information that is not stated in the text",
+        "Because readers do not need to read the paragraphs if there are maps",
+        "Because visuals only decorate the page without adding any facts"
+      ],
+      "answer": "Because visuals provide information that is not stated in the text",
+      "trapCodes": [
+        "ENG_CHINGLISH_LITERAL"
+      ],
+      "explanation": {
+        "point": "閱讀策略定義：視覺圖表（Visuals）提供文章文字未寫出的重要補充資訊。",
+        "examPurpose": "考核學生是否掌握本單元核心 Reading Goal「Use Visuals」的準確定義。",
+        "correctReason": "課本定義明確寫道：Visuals provide information that is not in a text. 讀圖可以了解文章未詳述的具體細節。",
+        "note": "Pictures, diagrams, and maps 都屬於 visuals。",
+        "trap": "Get Ready 經典誘答選項就是「visuals give the same information that is in a text」（錯誤！視覺圖表不是單純重複文字）。",
+        "distractorAnalysis": {
+          "Because visuals always repeat the exact same words from the article": "正好相反！視覺圖表的價值在於提供文字沒有寫出來的額外細節，而不是重複文字。",
+          "Because readers do not need to read the paragraphs if there are maps": "文字與圖像必須相輔相成，不能因為有地圖就完全不讀文章內容。",
+          "Because visuals only decorate the page without adding any facts": "說明文中的圖表絕非單純裝飾，而是包含顏色、數量、構造等關鍵事實資訊。"
+        },
+        "steps": [
+          "① 回顧單元目標：READING GOAL: Use Visuals",
+          "② 抓住關鍵動詞片語：provide information NOT in a text",
+          "③ 排除「重複文字」與「純裝飾」兩大錯誤選項"
+        ],
+        "insight": "💡 記住公式：Text（文字骨幹）＋ Visuals（圖片細節）＝ 100% 完整理解！"
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "supplement the written text",
+          "offer extra visual details"
+        ],
+        "grammarCompare": "provide information that is not in a text（關係代名詞 that 引導形容詞子句修飾 information）。",
+        "examVariations": "Get Ready 是非題原題：A visual gives the same information that is in a text. (False)"
+      }
+    },
+    {
+      "id": "q_w13_rww6_u06_22",
+      "book_id": "rw6",
+      "unit_id": "rw6_6",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": true,
+      "type": "choice",
+      "category_tag": "reading",
+      "difficulty": "★★★☆☆",
+      "difficulty_level": 5,
+      "triadGroup": {
+        "groupId": "RWW6_U06_T2",
+        "tier": "L4-6",
+        "role": "twist"
+      },
+      "question": "In the article, the author writes about special control flags and control cards, referring readers to Figure 1 (showing a bright red-and-white triangular flag on a tree) and Figure 2 (showing a numbered grid from 1 to 18). Which detail can ONLY be learned from the visuals rather than the written text?",
+      "options": [
+        "Racers must find all controls to win the orienteering race.",
+        "There are 18 numbered control boxes on the card and the flag is red and white.",
+        "Control flags are sometimes placed in front of a big rock or behind a tree.",
+        "Racers use both a map and a compass to locate stations in the woods."
+      ],
+      "answer": "There are 18 numbered control boxes on the card and the flag is red and white.",
+      "trapCodes": [
+        "ENG_CHINGLISH_LITERAL"
+      ],
+      "explanation": {
+        "point": "圖像補充資訊辨識：區分「純文字已說明」與「唯有看 Figure 1 / Figure 2 才知道」的細節。",
+        "examPurpose": "檢驗學生實際運用 Use Visuals 策略，辨別數字 18 格與紅白旗幟外觀為純圖像專屬資訊。",
+        "correctReason": "全文沒有任何一句話提到卡片上有「18 個格子」或旗幟是「紅白相間三角形」，這兩項關鍵事實必須觀察 Figure 1 與 Figure 2 才能得知。",
+        "note": "Understand Part A 明確考查：How many controls are there? -> There are 18 controls.",
+        "trap": "另外三個選項雖然都是正確的事實，但它們全都直接寫在課文文字裡，並不是「只能從圖像得知」的資訊！",
+        "distractorAnalysis": {
+          "Racers must find all controls to win the orienteering race.": "這句規則直接寫在課文第 3 段文字中，不看圖片也知道。",
+          "Control flags are sometimes placed in front of a big rock or behind a tree.": "控制點擺放的位置直接寫在課文第 2 段文字中，屬於純文字已述資訊。",
+          "Racers use both a map and a compass to locate stations in the woods.": "使用地圖與指南針直接寫在課文第 1 與第 2 段文字中，非圖表獨有資訊。"
+        },
+        "steps": [
+          "① 審題關鍵：ONLY be learned from the visuals（只能從圖片學到）",
+          "② 掃描選項 A/C/D：全部都在文章句子裡寫過了 ➔ 排除",
+          "③ 確認選項 B：18 boxes（Figure 2）＋ red and white flag（Figure 1）➔ 正解！"
+        ],
+        "insight": "💡 選閱讀題時要看清楚題目問的是「文章說了什麼」還是「圖片額外告訴我們什麼」，別被正確但寫在文字裡的選項騙了！",
+        "visualBlock": {
+          "kind": "compare_table",
+          "title": "⚖️ Use Visuals 資訊來源分流表",
+          "data": {
+            "headers": [
+              "資訊內容",
+              "來源處",
+              "是否為圖像專屬補充？"
+            ],
+            "rows": [
+              [
+                "選手必須找齊所有控制點才能贏",
+                "第 3 段純文字",
+                "❌ 文字已寫"
+              ],
+              [
+                "旗幟藏在大石前或樹後",
+                "第 2 段純文字",
+                "❌ 文字已寫"
+              ],
+              [
+                "旗幟為亮眼的紅白相間三角形",
+                "Figure 1 圖示",
+                "✅ 圖像專屬細節"
+              ],
+              [
+                "控制卡共有編號 1～18 的打卡格",
+                "Figure 2 圖表",
+                "✅ 圖像專屬細節"
+              ]
+            ]
+          },
+          "caption": "📊 把文字資訊和圖片資訊分開打勾，Use Visuals 題型一秒破解！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "visual-only evidence",
+          "diagram details"
+        ],
+        "grammarCompare": "rather than（而不是）連接兩個對比片語：from the visuals rather than the written text。",
+        "examVariations": "亦常結合 Treasure Hunt 短文插圖（盒子寫 COOKIES）考「如何知道寶藏是餅乾」。"
+      }
+    },
+    {
+      "id": "q_w13_rww6_u06_23",
+      "book_id": "rw6",
+      "unit_id": "rw6_6",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": true,
+      "type": "choice",
+      "category_tag": "reading",
+      "difficulty": "★★★★★",
+      "difficulty_level": 8,
+      "triadGroup": {
+        "groupId": "RWW6_U06_T2",
+        "tier": "L7-10",
+        "role": "challenge"
+      },
+      "question": "In the \"Treasure Hunt\" story, the writer says: \"We were the first group to find a treasure! We ate them before we got back to Bayani's house.\" Meanwhile, the illustration beside the story shows kids opening a box labeled \"COOKIES.\" How do the text and the visual work together here?",
+      "options": [
+        "The text gives the pronoun \"them\" and mentions eating, while the visual reveals the treasure was cookies.",
+        "The visual proves that Bayani's family hid the treasure inside the house instead of the park.",
+        "The text says the treasure was maps and compasses, while the visual contradicts the story.",
+        "The visual repeats the exact starting direction \"walk east for 50 steps\" word for word."
+      ],
+      "answer": "The text gives the pronoun \"them\" and mentions eating, while the visual reveals the treasure was cookies.",
+      "trapCodes": [
+        "ENG_CHINGLISH_LITERAL"
+      ],
+      "explanation": {
+        "point": "跨文本圖像整合推論：透過文字線索 (ate them) 與插圖標籤 (COOKIES) 互相印證寶藏內容。",
+        "examPurpose": "對標課本 Understand Part E 素養題，測驗學生理解「文字線索＋圖像線索」如何拼湊出完整答案。",
+        "correctReason": "文章只寫找到 treasure 並吃掉「them」（複數），並沒有點名食物名稱；唯有搭配旁邊盒子寫著 COOKIES 的插圖，才能確定寶藏就是餅乾。",
+        "note": "複數代名詞 them 正好呼應複數可數名詞 cookies。",
+        "trap": "若沒看插圖直接讀文章，會誤以為寶藏是金幣或地圖，或看不懂 them 指的是什麼。",
+        "distractorAnalysis": {
+          "The visual proves that Bayani's family hid the treasure inside the house instead of the park.": "文章清楚寫道尋寶地點是在公園（to do there，指代 the park），並非在屋內。",
+          "The text says the treasure was maps and compasses, while the visual contradicts the story.": "地圖和指南針是出發前發給選手的「工具」，不是被藏起來吃掉的「寶藏」。",
+          "The visual repeats the exact starting direction \"walk east for 50 steps\" word for word.": "插圖展示的是打開餅乾盒的畫面，並沒有逐字重複 50 步的路線指令。"
+        },
+        "steps": [
+          "① 抓文字線索：ate them（複數可食用的東西）",
+          "② 抓圖像線索：盒子標籤寫著 COOKIES（餅乾）",
+          "③ 雙線合一：文字給動作與代名詞，圖片揭曉具體物品！"
+        ],
+        "insight": "💡 當文章出現神秘代名詞（例如 ate them），立刻把眼睛移到旁邊的插圖，答案往往就寫在圖裡的標籤上！"
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "cross-reference text and illustration",
+          "visual clue"
+        ],
+        "grammarCompare": "while 在此當對比連接詞（然而；與此同時），比較 text 與 visual 各自貢獻的資訊。",
+        "examVariations": "KET / Flyers 閱讀理解極愛在圖文配對題中將關鍵答案放在插圖招牌或盒子標籤上。"
+      }
+    },
+    {
+      "id": "q_w13_rww6_u06_24",
+      "book_id": "rw6",
+      "unit_id": "rw6_6",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": true,
+      "type": "choice",
+      "category_tag": "grammar",
+      "difficulty": "★★☆☆☆",
+      "difficulty_level": 2,
+      "triadGroup": {
+        "groupId": "RWW6_U06_T3",
+        "tier": "L1-3",
+        "role": "foundation"
+      },
+      "question": "If you go two blocks north and turn left, the library will be right _____ the street from the coffee shop.",
+      "options": [
+        "across",
+        "cross",
+        "along",
+        "behind"
+      ],
+      "answer": "across",
+      "trapCodes": [
+        "ENG_POS_CONFUSION",
+        "ENG_PREP_COLLOCATION"
+      ],
+      "explanation": {
+        "point": "靜態位置固定片語：be across the street from ...（在…的對街）。",
+        "examPurpose": "考核學生在 be 動詞後方選用介系詞 across 而非動詞 cross 的基本詞性辨識能力。",
+        "correctReason": "空格前有 be 動詞 will be，後方接 the street from，需要介系詞 across 構成「在…對街」的空間狀態。",
+        "note": "固定結構：be + across the street from + 地點。",
+        "trap": "受動詞片語 cross the street 干擾，常在 will be 後方誤選動詞原形 cross。",
+        "distractorAnalysis": {
+          "cross": "cross 是動詞或名詞，絕不能放在 be 動詞後方接 the street 表示位置。",
+          "along": "along 後面不會搭配 from（沒有 along the street from 的用法），且語意為「沿著」而非「在對街」。",
+          "behind": "behind 後方直接接受詞（behind the street 不合邏輯），不會接 the street from。"
+        },
+        "steps": [
+          "① 檢查空格前：will be（已有主要動詞 be）➔ 不可再放原形動詞 cross",
+          "② 檢查空格後：the street from + 地點 ➔ 固定配對 across",
+          "③ 確認語意：在咖啡廳的對街 ➔ across ✅"
+        ],
+        "insight": "💡 口訣記一輩子：前面有 be 選 across，前面有 to 選 cross！"
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "opposite",
+          "on the other side of the street from"
+        ],
+        "grammarCompare": "will be across the street from (介系詞狀態) vs. need to cross the street (動詞動作)。",
+        "examVariations": "Context Clues 亦常考 across the street from = on the other side。"
+      }
+    },
+    {
+      "id": "q_w13_rww6_u06_25",
+      "book_id": "rw6",
+      "unit_id": "rw6_6",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": true,
+      "type": "choice",
+      "category_tag": "grammar",
+      "difficulty": "★★★☆☆",
+      "difficulty_level": 5,
+      "triadGroup": {
+        "groupId": "RWW6_U06_T3",
+        "tier": "L4-6",
+        "role": "twist"
+      },
+      "question": "In a city race, you might only need to _____ the street, whereas in orienteering you run _____ a river and climb _____ big rocks.",
+      "options": [
+        "across / alone / up",
+        "cross / along / over",
+        "across / along / behind",
+        "cross / across / down"
+      ],
+      "answer": "cross / along / over",
+      "trapCodes": [
+        "ENG_POS_CONFUSION",
+        "ENG_PREP_COLLOCATION"
+      ],
+      "explanation": {
+        "point": "綜合空間詞性與介系詞辨析：need to cross (動詞) / run along (沿著) / climb over (翻越)。",
+        "examPurpose": "在同一語境中連續考驗動詞 vs 介系詞切換、形近字 along vs alone 及翻越介系詞 over。",
+        "correctReason": "第 1 格在 need to 後須填原形動詞 cross；第 2 格沿著河岸奔跑用 along；第 3 格從岩石上方翻越過去用 over。",
+        "note": "課文第 4 段完整覆蓋：cross the street / run along a river / climb over rocks。",
+        "trap": "最容易在第 1 格錯選 across，或在第 2 格誤選長相極像的 alone。",
+        "distractorAnalysis": {
+          "across / alone / up": "across 不是動詞不可接在 need to 後；alone 是「單獨」不可接 a river。",
+          "across / along / behind": "need to 後不可用介系詞 across；climb behind rocks 不符合翻越岩石的語意。",
+          "cross / across / down": "run across a river 變成「橫渡踩過河流」，不符合課文沿河岸線奔跑 (run along a river) 的情境。"
+        },
+        "steps": [
+          "① 第 1 格 need to + V ➔ 選動詞 cross（淘汰 A、C）",
+          "② 第 2 格沿著河岸跑 ➔ 選 along（淘汰 D 的 across）",
+          "③ 第 3 格爬過岩石上方 ➔ 選 climb over rocks ✅"
+        ],
+        "insight": "💡 空間介系詞用畫面想：along 是平行線、across 是十字交叉線、over 是彩虹弧線！",
+        "visualBlock": {
+          "kind": "prep_ladder",
+          "title": "🧭 空間動作與介系詞幾何階梯",
+          "data": {
+            "levels": [
+              {
+                "prep": "cross (V.) vs. across (Prep.)",
+                "scope": "十字橫越馬路 / 在馬路對面",
+                "examples": [
+                  "need to cross the street",
+                  "be across the street from"
+                ],
+                "highlight": true
+              },
+              {
+                "prep": "along",
+                "scope": "沿著長條邊緣平行前進",
+                "examples": [
+                  "run along a river",
+                  "walk along the road"
+                ],
+                "highlight": true
+              },
+              {
+                "prep": "over",
+                "scope": "從障礙物上方畫弧線翻越",
+                "examples": [
+                  "climb over rocks",
+                  "jump over the fence"
+                ],
+                "highlight": false
+              },
+              {
+                "prep": "up and down",
+                "scope": "上下坡連綿起伏移動",
+                "examples": [
+                  "go up and down hills"
+                ],
+                "highlight": false
+              }
+            ]
+          },
+          "caption": "📊 把每個介系詞想成一種移動幾何軌跡，填充題一輩子不再選錯！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "traverse",
+          "follow the riverbank",
+          "scale over"
+        ],
+        "grammarCompare": "climb over (從上方翻越) vs. go up and down (在高低地形間上下穿梭)。",
+        "examVariations": "三格連動填空題是私立中學入學考與 3C 段考最愛出的綜合文法題型。"
+      }
+    },
+    {
+      "id": "q_w13_rww6_u06_26",
+      "book_id": "rw6",
+      "unit_id": "rw6_6",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "difficulty": "★★★★★",
+      "difficulty_level": 8,
+      "triadGroup": {
+        "groupId": "RWW6_U06_T3",
+        "tier": "L7-10",
+        "role": "challenge"
+      },
+      "part_title": "Part IV: Outdoor Navigation Sentence Writing",
+      "part_instructions": "請根據提示關鍵字與句型公式，寫出一句完整描述「定向越野戶外路徑挑戰」的英文句子（注意並列動作逗號與介系詞正確性）。",
+      "sentence_form": "In orienteering, racers have to + V1 + along a river + , + V2 + over rocks + , and + V3 + up and down hills.",
+      "word_bank": [
+        "run along a river",
+        "climb over rocks",
+        "go up and down hills"
+      ],
+      "question": "Write one complete sentence describing what racers have to do in outdoor orienteering terrain by combining all three phrases: 'run along a river', 'climb over rocks', and 'go up and down hills'.",
+      "options": [],
+      "answer": "In orienteering, racers have to run along a river, climb over rocks, and go up and down hills.",
+      "self_check": [
+        "1. 介系詞片語 In orienteering 後方是否加上逗號？",
+        "2. 三個動作片語（run along a river / climb over rocks / go up and down hills）之間是否都有逗號與對等連詞 and？",
+        "3. 是否確認沒有拼錯 along（非 alone）與 climb（含靜音 b）？"
+      ],
+      "trapCodes": [
+        "ENG_PREP_COLLOCATION",
+        "ENG_SPELLING_PHONICS",
+        "ENG_PUNCT_DICTATION"
+      ],
+      "explanation": {
+        "point": "三大地形移動片語並列表達與序列逗號（Serial Comma）規範。",
+        "examPurpose": "考核學生在手寫造句中同時保持三個動詞片語原形平行對稱及正確運用系列逗號的能力。",
+        "correctReason": "三個原形動詞片語共同受制於 have to，形成 V1, V2, and V3 的平行結構，句首地點片語後也需加上逗號。",
+        "note": "亦可寫為：In orienteering, you will likely run along a river, climb over rocks, and go up and down hills.",
+        "trap": "手寫時常忘記讓第三個動詞維持原形 go，或在 climb 後漏掉介系詞 over。",
+        "commonTraps": [
+          "平行結構破功：最後一項漏掉動詞 go，誤寫成 and up and down hills（缺少動作動詞）。",
+          "漏掉序列逗號或將 climb 漏寫靜音字母 b。"
+        ],
+        "steps": [
+          "① 開頭設定場景：In orienteering, racers have to",
+          "② 依序接入三片語：run along a river, climb over rocks, and go up and down hills.",
+          "③ 檢查三個動作是否皆為原形動詞（run / climb / go）"
+        ],
+        "insight": "💡 並列三個動作時（A, B, and C），每個動作都要確保「動詞＋介系詞」各自完整，不能偷懶省掉最後一個動詞 go！",
+        "visualBlock": {
+          "kind": "slot_box",
+          "title": "📦 平行空間動詞片語積木槽",
+          "data": {
+            "slots": [
+              {
+                "role": "場景＋主詞助動詞",
+                "text": "In orienteering, racers have to",
+                "accent": "pri"
+              },
+              {
+                "role": "動作 1 (線性)",
+                "text": "run along a river,",
+                "accent": "ok"
+              },
+              {
+                "role": "動作 2 (跨越)",
+                "text": "climb over rocks,",
+                "accent": "ok"
+              },
+              {
+                "role": "連接詞＋動作 3 (起伏)",
+                "text": "and go up and down hills.",
+                "accent": "warn"
+              }
+            ]
+          },
+          "caption": "📊 三組「原形動詞＋介系詞」平行排隊，結構整齊又不會漏字！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "navigate natural obstacles",
+          "cross varied terrain"
+        ],
+        "grammarCompare": "have to + 原形 V1, 原形 V2, and 原形 V3（三個動作共享同一個情態助動詞結構）。",
+        "examVariations": "Topic 3 Check & Write 寫作實戰（步驟說明文或尋寶指南）常須運用此類並列動作句。"
+      }
+    },
+    {
+      "id": "q_w13_rww6_u06_27",
+      "book_id": "rw6",
+      "unit_id": "rw6_6",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": true,
+      "type": "choice",
+      "category_tag": "grammar",
+      "difficulty": "★★☆☆☆",
+      "difficulty_level": 2,
+      "triadGroup": {
+        "groupId": "RWW6_U06_T4",
+        "tier": "L1-3",
+        "role": "foundation"
+      },
+      "question": "In the sport of orienteering, racers use a map and compass to find stations, _____ are called controls.",
+      "options": [
+        "that",
+        "which",
+        "who",
+        "where"
+      ],
+      "answer": "which",
+      "trapCodes": [
+        "ENG_POS_CONFUSION",
+        "ENG_PUNCT_DICTATION"
+      ],
+      "explanation": {
+        "point": "非限定關係子句：逗號後方介紹事物名稱必用 which（嚴禁使用 that）。",
+        "examPurpose": "測驗學生是否掌握「逗號後不接 that」且指物須用 which 的關係代名詞核心鐵律。",
+        "correctReason": "空格前有逗號（非限定用法）且先行詞是事物 stations，逗號後方在英語文法中規定只能選用關係代名詞 which。",
+        "note": "which 在此子句中擔任主詞，故後方接複數被動動詞 are called。",
+        "trap": "若沒注意逗號的存在，許多學生會直覺選同樣可指物的 that。",
+        "distractorAnalysis": {
+          "that": "重大文法禁忌：非限定關係子句在「逗號（,）」後方絕對不能使用 that！",
+          "who": "who 僅用於先行詞為「人」的情況，stations（檢查站）是事物不可用 who。",
+          "where": "where 是關係副詞（表地點狀語），但空格後方直接缺主詞（___ are called controls），必須使用關係代名詞 which 當主詞。"
+        },
+        "steps": [
+          "① 看見空格前的「逗號 ,」➔ 直接畫掉選項 that！",
+          "② 確認先行詞 stations 為「事物」➔ 畫掉指人的 who",
+          "③ 檢查子句缺主詞（___ are called）➔ 必須選關係代名詞 which ✅"
+        ],
+        "insight": "💡 一秒秒殺口訣：逗號後面有東西，that 絕對要出局！指物缺主詞就選 which！",
+        "visualBlock": {
+          "kind": "compare_table",
+          "title": "⚖️ 關係代名詞限定 vs. 非限定紅綠燈",
+          "data": {
+            "headers": [
+              "結構類型",
+              "逗號位置",
+              "指物可用關係代名詞"
+            ],
+            "rows": [
+              [
+                "限定用法（無逗號）",
+                "無逗號",
+                "which / that 皆可 ✅"
+              ],
+              [
+                "非限定用法（有逗號）",
+                "有逗號 (,)",
+                "僅限 which ✅（禁寫 that ❌）"
+              ]
+            ]
+          },
+          "caption": "📊 只要看到名詞後面有逗號，that 立刻淘汰！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "stations that are known as controls (無逗號限定用法)",
+          "checkpoints, which are called controls"
+        ],
+        "grammarCompare": "stations, which are called controls (補充說明名詞定義) vs. stations that are near the river (限定篩選)。",
+        "examVariations": "國一銜接必考「, which vs. , that」辨析單選題與改錯題。"
+      }
+    },
+    {
+      "id": "q_w13_rww6_u06_28",
+      "book_id": "rw6",
+      "unit_id": "rw6_6",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": true,
+      "type": "choice",
+      "category_tag": "grammar",
+      "difficulty": "★★★★☆",
+      "difficulty_level": 6,
+      "triadGroup": {
+        "groupId": "RWW6_U06_T4",
+        "tier": "L4-6",
+        "role": "twist"
+      },
+      "question": "Which of the following sentences uses a non-defining relative clause with CORRECT grammar and punctuation?",
+      "options": [
+        "Controls are placed behind trees, that means racers need to use compasses.",
+        "Controls are placed behind trees, which mean racers need to use compasses.",
+        "Controls are placed behind trees, which means racers must use their compasses.",
+        "Controls are placed behind trees, what means racers must use their compasses."
+      ],
+      "answer": "Controls are placed behind trees, which means racers must use their compasses.",
+      "trapCodes": [
+        "ENG_UNCOUNTABLE_SVA",
+        "ENG_PUNCT_DICTATION"
+      ],
+      "explanation": {
+        "point": "進階非限定關係子句：, which 指代前面整個句子時視為單數，動詞必加 -s (means)。",
+        "examPurpose": "綜合考核逗號後禁寫 that、禁寫 what，以及 , which 指代整句事件時的主詞動詞單數一致性。",
+        "correctReason": "本句中 , which 指代「控制點被放在樹後這整件事」，視同單數概念，因此動詞必須加上 -s 寫成 means，且逗號後正確使用 which。",
+        "note": "課文第 2 段原句模型：They may be in front of a big rock or behind a tree, which means racers must use their maps and compasses...",
+        "trap": "因為前句主詞 Controls 與受詞 trees 都是複數，學生極易受干擾而選成沒有加 s 的 mean！",
+        "distractorAnalysis": {
+          "Controls are placed behind trees, that means racers need to use compasses.": "逗號後方不可使用關係代名詞 that。",
+          "Controls are placed behind trees, which mean racers need to use compasses.": "這裏的 which 不是指 trees，而是指「控制點藏在樹後這件事」，必須視作單數，動詞不可寫原形 mean，應為 means。",
+          "Controls are placed behind trees, what means racers must use their compasses.": "what 是複合關係代名詞（= the thing that），不能用來引導逗號後的非限定子句。"
+        },
+        "steps": [
+          "① 刪去逗號後誤用 that（選項 A）與 what（選項 D）",
+          "② 判斷 which 指代對象：是「這整件事」，不是「樹」➔ 視為單數",
+          "③ 確認單數動詞：means（有加 s）➔ 鎖定選項 C ✅"
+        ],
+        "insight": "💡 遇到 `..., which mean / means`，先問自己「什麼意思？」是「這件事」代表的意思，一件事就是單數，一定要寫 means！"
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "and this means that",
+          "which indicates that"
+        ],
+        "grammarCompare": "trees, which grow tall (which 指複數 trees ➔ 複數動詞 grow) vs. hidden behind trees, which means... (which 指整句事 ➔ 單數動詞 means)。",
+        "examVariations": "升私中與國一先修高頻魔王選擇題（4 句找正確句）。"
+      }
+    },
+    {
+      "id": "q_w13_rww6_u06_29",
+      "book_id": "rw6",
+      "unit_id": "rw6_6",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "difficulty": "★★★★★",
+      "difficulty_level": 8,
+      "triadGroup": {
+        "groupId": "RWW6_U06_T4",
+        "tier": "L7-10",
+        "role": "challenge"
+      },
+      "part_title": "Part V: Sentence Combining (, which...)",
+      "part_instructions": "請運用非限定關係子句（, which means...）將下列兩個獨立句子合併為一句通順的英文長句。",
+      "sentence_form": "Main Clause + , + which means + (that) + Result Clause.",
+      "word_bank": [
+        ", which means"
+      ],
+      "question": "Combine the two sentences into one using ', which means': \"Controls are hidden behind trees or rocks. This means racers must use a map and compass.\"",
+      "options": [],
+      "answer": "Controls are hidden behind trees or rocks, which means racers must use a map and compass.",
+      "self_check": [
+        "1. 是否確實將第二句開頭的「. This」刪除，改為「, which」？",
+        "2. 逗號後方是否寫的是 which（而非 that），且 means 是否有保留 -s？",
+        "3. 前後兩個子句內容是否抄寫完整無漏字？"
+      ],
+      "trapCodes": [
+        "ENG_PUNCT_DICTATION",
+        "ENG_UNCOUNTABLE_SVA"
+      ],
+      "explanation": {
+        "point": "句子合併技巧：用「, which」取代「. This」將兩句整合為具因果推論的非限定關係子句。",
+        "examPurpose": "訓練學生在寫作與句型轉換題中，實際操練 , which means 的標點銜接與合併規則。",
+        "correctReason": "將第一句結尾句點改為逗號，並把第二句指示代名詞 This 替換為關係代名詞 which，即可完美銜接兩句推論關係。",
+        "note": "合併後整句只需要一個句點置於最尾端。",
+        "trap": "合併時容易忘記刪掉原本的 This 而寫成 `, which this means`，或忘記把句點改成逗號。",
+        "commonTraps": [
+          "重覆代名詞錯誤：寫成 , which this means（which 已經取代了 This，絕不可保留 this）。",
+          "標點遺漏：忘記在 which 前面加上逗號，或誤將 which 改成 that。"
+        ],
+        "steps": [
+          "① 保留第一句主幹，把句點 (.) 改成逗號 (,)",
+          "② 刪除第二句的指示代名詞 This，換成關係代名詞 which",
+          "③ 確認單數動詞 means 加上後方結果子句，完成合併！"
+        ],
+        "insight": "💡 記住這個超好用寫作轉換公式：`. This means...` ➔ `, which means...`！",
+        "visualBlock": {
+          "kind": "slot_box",
+          "title": "📦 句子合併手術台：. This ➔ , which",
+          "data": {
+            "slots": [
+              {
+                "role": "第一句主幹",
+                "text": "Controls are hidden behind trees or rocks",
+                "accent": "pri"
+              },
+              {
+                "role": "手術替換點",
+                "text": ", which",
+                "accent": "warn"
+              },
+              {
+                "role": "單數動詞",
+                "text": "means",
+                "accent": "ok"
+              },
+              {
+                "role": "推論結果子句",
+                "text": "racers must use a map and compass.",
+                "accent": "pri"
+              }
+            ]
+          },
+          "caption": "📊 把「句點＋This」動個小手術換成「逗號＋which」，句子馬上升級為高階英文句型！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "and therefore",
+          "which indicates that"
+        ],
+        "grammarCompare": "獨立兩句 (. This means) vs. 複合長句 (, which means)。",
+        "examVariations": "3C 考券 Sentence Combining 大題常考兩句合併為關係子句。"
+      }
+    },
+    {
+      "id": "q_w13_rww6_u06_30",
+      "book_id": "rw6",
+      "unit_id": "rw6_6",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": true,
+      "type": "choice",
+      "category_tag": "reading",
+      "difficulty": "★★☆☆☆",
+      "difficulty_level": 2,
+      "triadGroup": {
+        "groupId": "RWW6_U06_T5",
+        "tier": "L1-3",
+        "role": "foundation"
+      },
+      "question": "Read the sentence: \"Standing on a corner, you ask someone how to get to a store.\" Based on the context, what does the word \"corner\" mean here?",
+      "options": [
+        "A special flag hung on a tree",
+        "A place where two roads meet",
+        "A spot hidden behind a big rock",
+        "An outdoor race held in a city"
+      ],
+      "answer": "A place where two roads meet",
+      "trapCodes": [
+        "ENG_CHINGLISH_LITERAL"
+      ],
+      "explanation": {
+        "point": "語境猜詞義 (Context Clues)：由問路與城市街道情境推論 corner 指兩路交會的街角。",
+        "examPurpose": "對應課本 Context Clues 練習，訓練學生不查字典從句子語境精確選出英英釋義。",
+        "correctReason": "在陌生城市問路時人通常站在街道交會的轉角處，因此 corner 在此定義為 a place where two roads meet。",
+        "note": "其他選項分別為 control flag（旗幟）、control location（藏點）與 orienteering（運動）的干擾定義。",
+        "trap": "若未結合「城市問路」上下文，容易與森林中藏旗幟的角落混淆。",
+        "distractorAnalysis": {
+          "A special flag hung on a tree": "這是控制點標記旗幟（control flag）的定義，不是街角。",
+          "A spot hidden behind a big rock": "這是森林裡隱蔽控制點的擺放位置，與城市問路的 corner 無關。",
+          "An outdoor race held in a city": "這是競賽活動（event/race）的定義，並非地點 corner。"
+        },
+        "steps": [
+          "① 抓取情境詞：in a new city / ask someone how to get to a store",
+          "② 想像畫面：城市裡哪裡可以問路看方向？兩條馬路交會處！",
+          "③ 對應英英釋義：a place where two roads meet ✅"
+        ],
+        "insight": "💡 英英釋義題不要死背翻譯，先想像「站在城市裡問路」的畫面就能直接選出答案！"
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "street intersection",
+          "road junction"
+        ],
+        "grammarCompare": "where two roads meet（關係副詞 where 引導形容詞子句修飾 a place）。",
+        "examVariations": "課本 Understand Part D Context Clues 第 1 題自足式改編題。"
+      }
+    },
+    {
+      "id": "q_w13_rww6_u06_31",
+      "book_id": "rw6",
+      "unit_id": "rw6_6",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": true,
+      "type": "choice",
+      "category_tag": "reading",
+      "difficulty": "★★★☆☆",
+      "difficulty_level": 4,
+      "triadGroup": {
+        "groupId": "RWW6_U06_T5",
+        "tier": "L4-6",
+        "role": "twist"
+      },
+      "question": "Read the directions: \"They tell you to 'go two blocks north, turn left, and you'll be across the street from the bookstore.'\" Based on the context, what does \"go two blocks\" mean?",
+      "options": [
+        "Move this far along the streets",
+        "Hide behind a tall building",
+        "Turn around right here",
+        "Run as quickly as possible"
+      ],
+      "answer": "Move this far along the streets",
+      "trapCodes": [
+        "ENG_CHINGLISH_LITERAL"
+      ],
+      "explanation": {
+        "point": "語境猜詞義：go two blocks 指在城市路網中「向前移動這麼遠的距離」。",
+        "examPurpose": "測驗學生理解英文「街區 (blocks)」在指路語境中代表距離單位而非方塊積木。",
+        "correctReason": "路人指路先給移動距離（go two blocks north），再給轉彎動作（turn left），因此 go two blocks 意指移動這麼遠一段距離（move this far）。",
+        "note": "block 在日常有「積木、方塊」之意，但在街道指路中專指「街區」。",
+        "trap": "若只從字面想像 block 是障礙物，可能會誤以為是躲起來或停下轉身。",
+        "distractorAnalysis": {
+          "Hide behind a tall building": "與指路前往書店的動作毫無關聯，這是森林控制點隱藏的干擾項。",
+          "Turn around right here": "後方已經另有 turn left 表示轉向，go two blocks 表達的是前進距離而非原地轉身。",
+          "Run as quickly as possible": "問路指路並未要求跑多快，go two blocks 只限定前進兩個街區的距離。"
+        },
+        "steps": [
+          "① 觀察指令順序：go two blocks north ➔ turn left ➔ arrive",
+          "② 既然 turn left 是「轉向」，前面的 go two blocks 就是「走多遠」",
+          "③ 選出對應距離概念：Move this far ✅"
+        ],
+        "insight": "💡 指路指令公式總是「先走多遠（distance）➔ 再轉彎（turn）➔ 到達位置（location）」！"
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "walk for two street sections",
+          "travel that distance"
+        ],
+        "grammarCompare": "go + 距離片語 (two blocks) + 方位副詞 (north) 中間不加介系詞。",
+        "examVariations": "課本 Understand Part D Context Clues 第 2 題自足式改編題。"
+      }
+    },
+    {
+      "id": "q_w13_rww6_u06_32",
+      "book_id": "rw6",
+      "unit_id": "rw6_6",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": true,
+      "type": "choice",
+      "category_tag": "grammar",
+      "difficulty": "★★★★☆",
+      "difficulty_level": 6,
+      "triadGroup": {
+        "groupId": "RWW6_U06_T5",
+        "tier": "L7-10",
+        "role": "challenge"
+      },
+      "question": "Which sentence uses punctuation (quotation marks, commas, and parentheses) 100% CORRECTLY for an informational report?",
+      "options": [
+        "They tell you to \"go two blocks north, turn left\", and a flag marks each control (see figure 1.)",
+        "They tell you to \"go two blocks north, turn left,\" and a special flag marks each control (see Figure 1).",
+        "Standing on a corner you ask someone how to get to a store (see Figure 1).",
+        "A special flag marks each control. (see Figure 1) Welcome to orienteering."
+      ],
+      "answer": "They tell you to \"go two blocks north, turn left,\" and a special flag marks each control (see Figure 1).",
+      "trapCodes": [
+        "ENG_PUNCT_DICTATION"
+      ],
+      "explanation": {
+        "point": "聽寫實戰標點終極檢核：美式雙引號內收逗號＋括號專有名詞大寫與外置句點。",
+        "examPurpose": "綜合評量學生在 3C 長篇聽寫中最易扣分的四項標點規則：雙引號、分詞逗號、括號大小寫及句點位置。",
+        "correctReason": "選項 B 完全符合美式英文與課本標準：(1) 引號內逗號收於右引號前 (left,\")；(2) Figure 首字母大寫；(3) 整句句點置於右括號外側 (see Figure 1).。",
+        "note": "對照課本原文與 Rex Week 5 滿分聽寫標準，標點位置完全一致。",
+        "trap": "許多學生會把引號逗號放在外面 (left\",)，或把句點錯放進括號裡面 (see figure 1.)。",
+        "distractorAnalysis": {
+          "They tell you to \"go two blocks north, turn left\", and a flag marks each control (see figure 1.)": "有三處標點錯誤：逗號寫在右引號外、figure 未大寫、句點寫在括號裡面。",
+          "Standing on a corner you ask someone how to get to a store (see Figure 1).": "開頭現在分詞片語 Standing on a corner 後面漏掉了必須的逗號。",
+          "A special flag marks each control. (see Figure 1) Welcome to orienteering.": "括號前不應先放句點把 (see Figure 1) 切斷成無句點的殘缺括號句。"
+        },
+        "steps": [
+          "① 查雙引號：逗號、句點收在右引號內 (left,\") ➔ 排除 A",
+          "② 查分詞逗號：Standing on a corner, 後必有逗號 ➔ 排除 C",
+          "③ 查括號圖號：句點放右括號外＋Figure 大寫 ➔ 排除 D，確認 B ✅"
+        ],
+        "insight": "💡 標點符號黃金三位置：引號內收點號 (,\")、分詞後補逗號、括號外放句點 (see Figure 1).",
+        "visualBlock": {
+          "kind": "compare_table",
+          "title": "⚖️ 聽寫標點三大魔鬼細節對照",
+          "data": {
+            "headers": [
+              "標點規則",
+              "錯誤寫法 ❌",
+              "標準滿分寫法 ✅"
+            ],
+            "rows": [
+              [
+                "美式引號內逗號/句點",
+                "\"turn left\", / \"bookstore\".",
+                "\"turn left,\" / \"bookstore.\""
+              ],
+              [
+                "開頭分詞片語",
+                "Standing on a corner you...",
+                "Standing on a corner, you..."
+              ],
+              [
+                "圖表參照括號",
+                "...control. (see figure 1)",
+                "...control (see Figure 1)."
+              ]
+            ]
+          },
+          "caption": "📊 這三格全部記熟，3C 段落聽寫的標點分數 100% 穩拿不掉分！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "American punctuation convention",
+          "parenthetical citation"
+        ],
+        "grammarCompare": "(see Figure 1). 為句尾附註括號，屬於前句一部分；若獨立成句括號才將句點置內。",
+        "examVariations": "亦可用於檢查 \"Treasure Hunt\" 引述語句點：\"...walk east for 50 steps.\""
+      }
+    },
+    {
+      "id": "q_w13_rww6_u06_33",
+      "book_id": "rw6",
+      "unit_id": "rw6_6",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "difficulty": "★★★★☆",
+      "difficulty_level": 7,
+      "triadGroup": {
+        "groupId": "RWW6_U06_T5",
+        "tier": "L7-10",
+        "role": "challenge"
+      },
+      "part_title": "Part VI: Treasure Hunt Direction Writing & Quotation Punctuation",
+      "part_instructions": "請結合本單元方位片語（across the street from / corner / walk east for 50 steps）與直接引述對話標點（\"...\"），改寫成一句完整通順的尋寶路線指引。",
+      "sentence_form": "The first direction said, \"Start at the + [corner] + , and walk + [direction/steps] + to find the treasure + [across the street from / in front of] + ...\"",
+      "word_bank": [
+        "north corner",
+        "walk east for 50 steps",
+        "across the street from"
+      ],
+      "question": "Rewrite the raw notes into one complete sentence with proper quotation punctuation: (The first direction said / start at the north corner of the park / walk east for 50 steps / stop across the street from the bookstore)",
+      "options": [],
+      "answer": "The first direction said, \"Start at the north corner of the park, walk east for 50 steps, and stop across the street from the bookstore.\"",
+      "self_check": [
+        "1. said 後方是否加上逗號並以雙引號包住整段指令（\"Start ... bookstore.\"）？",
+        "2. 引述句開頭 Start 是否大寫，且句末句點是否收在右引號之內？",
+        "3. 三個方位片語（north corner / walk east for 50 steps / across the street from）是否拼寫正確？"
+      ],
+      "trapCodes": [
+        "ENG_PUNCT_DICTATION",
+        "ENG_PREP_COLLOCATION"
+      ],
+      "explanation": {
+        "point": "尋寶路線寫作實戰：結合城市街角方位詞與直接引述雙引號標點。",
+        "examPurpose": "對標 Topic 3 寫作實戰與 Treasure Hunt 延伸應用，綜合測驗空間方位詞串聯與對話雙引號標準格式。",
+        "correctReason": "引述指示動詞 said 後須先加逗號再開啟雙引號，引號內三個並列祈使動詞（Start..., walk..., and stop...）使用原形並以序列逗號連接，最後將句點置於右引號內側。",
+        "note": "祈使句指令一律使用原形動詞（Start / walk / stop）。",
+        "trap": "學生書寫時常忘記 said 後方的逗號、忘記引號內第一個字 Start 要大寫，或誤將 stop across 寫成 stop cross。",
+        "commonTraps": [
+          "引述標點漏失：忘記在 said 後加逗號，或將句末句點錯寫在右引號外側。",
+          "詞性誤用：將靜態位置介系詞 across the street from 誤寫成 cross the street from。"
+        ],
+        "steps": [
+          "① 引導句開頭：The first direction said, \"",
+          "② 三段祈使方位指令：Start at the north corner of the park, walk east for 50 steps, and stop across the street from the bookstore.",
+          "③ 確認右引號包住句點（bookstore.\"）"
+        ],
+        "insight": "💡 寫尋寶步驟作文時，用「祈使句原形動詞＋方位片語＋雙引號」就能又精準又拿高分！",
+        "visualBlock": {
+          "kind": "prep_ladder",
+          "title": "🧭 尋寶路線寫作三階方位指令梯",
+          "data": {
+            "levels": [
+              {
+                "prep": "Step 1 起點 (corner)",
+                "scope": "Start at the north corner of the park,",
+                "examples": [
+                  "on a corner",
+                  "at the north corner"
+                ],
+                "highlight": true
+              },
+              {
+                "prep": "Step 2 移動距離與方位",
+                "scope": "walk east for 50 steps,",
+                "examples": [
+                  "go two blocks north",
+                  "walk east for 50 steps"
+                ],
+                "highlight": true
+              },
+              {
+                "prep": "Step 3 終點位置 (across)",
+                "scope": "and stop across the street from the bookstore.\"",
+                "examples": [
+                  "across the street from",
+                  "in front of a big rock"
+                ],
+                "highlight": false
+              }
+            ]
+          },
+          "caption": "📊 起點 ➔ 方向步數 ➔ 對街終點，三步驟打造無懈可擊的英文路線指引！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "treasure map instructions",
+          "step-by-step route"
+        ],
+        "grammarCompare": "said, \"Start...\"（直接引述，句首大寫加雙引號）vs. told us to \"go...\"（融入不定詞片語時首字母小寫）。",
+        "examVariations": "Write Right / RWW6 Topic 3 寫作實戰必考「設計三步尋寶指示」。"
       }
     }
   ]
