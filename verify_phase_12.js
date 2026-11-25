@@ -375,7 +375,7 @@ function runMainVerification(dataOnly = false) {
   // 5. Frontend, CSS & index.html Checks (including inherited P8/P10/P11 invariants)
   const indexHtml = fs.readFileSync(path.join(ROOT, 'index.html'), 'utf8');
   for (const assetName of ['style.css', 'english_data.js', 'midterm_data.js', 'app.js']) {
-    check(indexHtml.includes(`${assetName}?v=20261122_p12`), `index.html ${assetName} 版號已更新至 ?v=20261122_p12`);
+    check(indexHtml.includes(`${assetName}?v=20261122_p13`), `index.html ${assetName} 版號已更新至 ?v=20261122_p13`);
   }
   check(indexHtml.includes('id="nav-font"') && indexHtml.includes('id="fontControlPopover"'), 'index.html 保留字體控制器 UI');
 
@@ -520,6 +520,51 @@ function runMainVerification(dataOnly = false) {
     check(renderErrs === 0, `全庫 ${allTargets.length} 題幹渲染 0 例外與 0 標籤外露 (錯誤 ${renderErrs})`);
     check(pdLeakErrs === 0, `段落盲聽渲染後 DOM 零洩漏 (洩漏 ${pdLeakErrs})`);
     check(vbTested >= 36, `renderVisualBlockHtml 實際渲染測試 >= 36 題 (實測 ${vbTested})`);
+  }
+
+  // 6. ErrorBook normalization & dynamic A4 print checks
+  check(!appJs.includes('If I <u>have</u> 3000 dollars'), 'renderA4PaperContent 已移除寫死的 W2~W7 假考卷 HTML');
+  check(appJs.includes('normalizeErrorBookList') && appJs.includes('buildAllQuizzesMap'), 'app.js 包含錯題本正規化與跨庫查詢函式');
+  const errFns = [
+    'function getErrorId(',
+    'function normalizeErrorBookList(',
+    'function buildAllQuizzesMap(',
+    'function shuffleArrayCopy(',
+    'function getTrapHintText(',
+    'function renderDynamicExamSections(',
+    'function renderA4PaperContent('
+  ].map(p => extractFn(appJs, p)).filter(Boolean);
+  check(errFns.length === 7, `成功提取 7 個錯題本與 A4 出卷函式 (實得 ${errFns.length})`);
+  if (errFns.length === 7 && helpers.length === 12) {
+    const sampleQ = md.flatMap(u => u.quizzes || []).find(q => q && q.id && q.question) || (ed.quizzes || [])[0];
+    const printCtx = {
+      window: { ENGLISH_DATA: ed, MIDTERM_DATABASE: md, location: { href: 'http://localhost/' } },
+      state: {
+        errorBook: ['q_dup_1', { id: 'q_dup_1', question: 'x' }, { id: sampleQ.id, question: sampleQ.question }],
+        printConfig: { printType: 'errorbook', bookId: 'tea_midterm', unitId: 'week13_all', count: 20, answerMode: 'student' },
+        sprintWeek: 'w13'
+      },
+      SPRINT_WEEKS: [{ id: 'w13', title: 'W13', mockUnitId: 'week13_all', units: [] }],
+      BOOK_META: { tea_midterm: { id: 'tea_midterm', shortName: '岱崙' } },
+      getCurrentUserObj: () => ({ id: 'rex', name: 'Rex' }),
+      getActiveSprintWeek: () => ({ id: 'w13', title: 'W13', mockUnitId: 'week13_all', units: [] }),
+      getQuizzesForUnit: () => [],
+      getVocabsForUnit: () => [],
+      getUnitsForBook: () => []
+    };
+    vm.createContext(printCtx);
+    vm.runInContext(
+      helpers.join('\n') + '\n' + errFns.join('\n') +
+      '\nthis.normalizeErrorBookList = normalizeErrorBookList;\nthis.getErrorId = getErrorId;\nthis.renderA4PaperContent = renderA4PaperContent;',
+      printCtx
+    );
+    const norm = printCtx.normalizeErrorBookList(['a1', { id: 'a1' }, { id: 'b2' }, null, '']);
+    check(Array.isArray(norm) && norm.length === 2 && norm[0] === 'a1' && norm[1] === 'b2', 'normalizeErrorBookList 可去重並將物件轉純字串 ID');
+    const afterRemove = norm.filter(x => printCtx.getErrorId(x) !== 'b2');
+    check(afterRemove.length === 1 && afterRemove[0] === 'a1', '錯題移除比對 getErrorId 可正確移除目標 ID');
+    const mockSheet = { innerHTML: '' };
+    printCtx.renderA4PaperContent(mockSheet);
+    check(mockSheet.innerHTML.includes(sampleQ.answer || '') || mockSheet.innerHTML.includes('Part '), 'A4 errorbook 卷型渲染真實 state.errorBook 題目');
   }
 
   console.log(`=== [Phase 12 驗收結果] PASS: ${passes} | FAIL: ${failures} ===`);

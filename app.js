@@ -119,6 +119,45 @@
     return String(s || '').replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
   }
 
+  function getErrorId(e) {
+    if (typeof e === 'string') return e.trim();
+    if (e && typeof e === 'object' && e.id) return String(e.id).trim();
+    return '';
+  }
+
+  function normalizeErrorBookList(arr) {
+    if (!Array.isArray(arr)) return [];
+    const seen = new Set();
+    const out = [];
+    arr.forEach(item => {
+      const id = getErrorId(item);
+      if (id && !seen.has(id)) {
+        seen.add(id);
+        out.push(id);
+      }
+    });
+    return out;
+  }
+
+  function buildAllQuizzesMap() {
+    const qMap = new Map();
+    if (window.ENGLISH_DATA && Array.isArray(window.ENGLISH_DATA.quizzes)) {
+      window.ENGLISH_DATA.quizzes.forEach(q => {
+        if (q && q.id && !qMap.has(q.id)) qMap.set(q.id, q);
+      });
+    }
+    if (Array.isArray(window.MIDTERM_DATABASE)) {
+      window.MIDTERM_DATABASE.forEach(u => {
+        if (u && Array.isArray(u.quizzes)) {
+          u.quizzes.forEach(q => {
+            if (q && q.id && !qMap.has(q.id)) qMap.set(q.id, q);
+          });
+        }
+      });
+    }
+    return qMap;
+  }
+
   // Extract pure correct English text from bilingual or error-vs-correct examples
   function extractCleanEnglishForSpeech(rawEx) {
     if (!rawEx) return '';
@@ -991,7 +1030,7 @@
 
       const uid = state.currentUser;
       const eb = localStorage.getItem(getUserKey(STORAGE_KEYS.errorBook, uid));
-      state.errorBook = eb ? JSON.parse(eb) : [];
+      state.errorBook = eb ? normalizeErrorBookList(JSON.parse(eb)) : [];
       const ec = localStorage.getItem(getUserKey(STORAGE_KEYS.errorCounts, uid));
       state.errorCounts = ec ? JSON.parse(ec) : {};
       const sc = localStorage.getItem(getUserKey(STORAGE_KEYS.successCounts, uid));
@@ -1091,7 +1130,7 @@
         const lUp = parseInt(localStorage.getItem(getUserKey(STORAGE_KEYS.updatedAt, u.id)) || '0', 10) || 0;
         const cUp = cData.updatedAt || 0;
         if (cUp > lUp) {
-          localStorage.setItem(getUserKey(STORAGE_KEYS.errorBook, u.id), JSON.stringify(cData.errorBook || []));
+          localStorage.setItem(getUserKey(STORAGE_KEYS.errorBook, u.id), JSON.stringify(normalizeErrorBookList(cData.errorBook)));
           localStorage.setItem(getUserKey(STORAGE_KEYS.errorCounts, u.id), JSON.stringify(cData.errorCounts || {}));
           localStorage.setItem(getUserKey(STORAGE_KEYS.successCounts, u.id), JSON.stringify(cData.successCounts || {}));
           localStorage.setItem(getUserKey(STORAGE_KEYS.slowCounts, u.id), JSON.stringify(cData.slowCounts || {}));
@@ -1111,7 +1150,7 @@
 
         // 雲端較新，或本地無紀錄但雲端有紀錄時
         if (cloudUpdated > localUpdated || (localUpdated === 0 && cloudActivityCount > 0)) {
-          state.errorBook = Array.isArray(cloudData.errorBook) ? cloudData.errorBook : [];
+          state.errorBook = normalizeErrorBookList(cloudData.errorBook);
           state.errorCounts = cloudData.errorCounts || {};
           state.successCounts = cloudData.successCounts || {};
           state.slowCounts = cloudData.slowCounts || {};
@@ -3014,7 +3053,7 @@
     state.drawerOpen = false;
     state.currentQuizFilter = filterType;
 
-    const isErr = (qid) => state.errorBook.some(e => (typeof e === 'string' ? e : e.id) === qid);
+    const isErr = (qid) => state.errorBook.some(e => getErrorId(e) === qid);
 
     if (mode === 'braingym') {
       state.quizQuestions = getBrainGymQuestions(tier);
@@ -3022,8 +3061,10 @@
       const qList = getQuizzesForUnit(bookId, unitId);
       state.quizQuestions = qList.filter(q => isErr(q.id));
     } else if (mode === 'error_book') {
-      const allQ = (window.ENGLISH_DATA && window.ENGLISH_DATA.quizzes) ? window.ENGLISH_DATA.quizzes : [];
-      state.quizQuestions = allQ.filter(q => isErr(q.id));
+      const qMap = buildAllQuizzesMap();
+      state.quizQuestions = normalizeErrorBookList(state.errorBook)
+        .map(id => qMap.get(id))
+        .filter(Boolean);
     } else {
       let qList = getQuizzesForUnit(bookId, unitId);
       if (filterType && filterType !== 'all') {
@@ -3610,7 +3651,7 @@
   function recordAnswerResult(question, rate, userPick = null) {
     const qId = question.id;
     const isOk = rate === 'ok';
-    const isErrObj = (e) => (typeof e === 'string' ? e === qId : e.id === qId);
+    const isErrObj = (e) => getErrorId(e) === qId;
 
     if (rate === 'ok') {
       state.successCounts[qId] = (state.successCounts[qId] || 0) + 1;
@@ -3618,14 +3659,15 @@
     } else if (rate === 'slow') {
       state.slowCounts[qId] = (state.slowCounts[qId] || 0) + 1;
       if (!state.errorBook.some(isErrObj)) {
-        state.errorBook.push({ id: qId, question: question.question, rate, timestamp: Date.now() });
+        state.errorBook.push(qId);
       }
     } else {
       state.errorCounts[qId] = (state.errorCounts[qId] || 0) + 1;
       if (!state.errorBook.some(isErrObj)) {
-        state.errorBook.push({ id: qId, question: question.question, rate, timestamp: Date.now() });
+        state.errorBook.push(qId);
       }
     }
+    state.errorBook = normalizeErrorBookList(state.errorBook);
     saveState(true);
 
     // 非同步記錄詳細作答日誌 Log 至雲端
@@ -3667,11 +3709,9 @@
   // 11. 錯題本視圖 (Error Book View)
   // ==========================================================================
   function renderErrorBookView(container) {
-    const allQ = (window.ENGLISH_DATA && window.ENGLISH_DATA.quizzes) ? window.ENGLISH_DATA.quizzes : [];
-    const qMap = new Map();
-    allQ.forEach(q => qMap.set(q.id, q));
-
-    const errList = state.errorBook.map(id => qMap.get(id) || { id, question: `錯題代碼：${id}`, answer: '請參考詳解' });
+    const qMap = buildAllQuizzesMap();
+    const errIds = normalizeErrorBookList(state.errorBook);
+    const errList = errIds.map(id => qMap.get(id) || { id, question: `錯題代碼：${id}`, answer: '請參考詳解' });
 
     container.innerHTML = `
       <div class="view error-book-view">
@@ -3687,9 +3727,9 @@
               <h2>📕 終身錯題本 (共 ${errList.length} 題弱點待消滅)</h2>
               <p>自動歸檔練習時標註 ❌ 答錯 與 ⏳ 想很久的題目，答對即可徹底消滅！</p>
             </div>
-            <div style="display:flex; gap:8px;">
+            <div style="display:flex; gap:8px; flex-wrap:wrap;">
               <button class="btn btn-primary" id="btn-kill-all-errors" ${errList.length === 0 ? 'disabled' : ''}>⚡ 啟動錯題消滅戰</button>
-              <button class="btn btn-ghost" id="btn-preload-tea-errors">🔥 匯入岱崙 W2~W7 真實錯題</button>
+              <button class="btn btn-ghost" id="btn-preload-tea-errors">🔥 匯入岱崙真卷實戰錯題</button>
               <button class="btn btn-ghost" id="btn-print-error-book">🖨️ 印出專屬 A4 錯題卷</button>
             </div>
           </div>
@@ -3704,14 +3744,14 @@
           ` : errList.map((q, idx) => `
             <div class="err-item">
               <div>
-                <div class="q-mini">${idx + 1}. ${q.question || ''}</div>
+                <div class="q-mini">${idx + 1}. ${escapeHtml(q.question || q.target_chi || '')}</div>
                 <div class="meta">
-                  <span class="tag bad">正解：${q.answer || ''}</span>
+                  <span class="tag bad">正解：${escapeHtml(q.answer || '')}</span>
                   <span class="tag pri">錯次：${state.errorCounts[q.id] || 1} 次</span>
                 </div>
               </div>
               <div>
-                <button class="btn-remove-err" data-del-err="${q.id}">✅ 克服</button>
+                <button class="btn-remove-err" data-del-err="${escapeHtml(q.id)}">✅ 克服</button>
               </div>
             </div>
           `).join('')}
@@ -3727,8 +3767,8 @@
     container.querySelectorAll('[data-del-err]').forEach(btn => {
       btn.onclick = () => {
         const id = btn.getAttribute('data-del-err');
-        state.errorBook = state.errorBook.filter(x => x !== id);
-        saveState();
+        state.errorBook = state.errorBook.filter(x => getErrorId(x) !== id);
+        saveState(true);
         renderErrorBookView(container);
       };
     });
@@ -3739,17 +3779,21 @@
 
     document.getElementById('btn-preload-tea-errors').onclick = () => {
       let added = 0;
-      if (window.ENGLISH_DATA) {
-        const teaQ = window.ENGLISH_DATA.quizzes.filter(q => q.book_id === 'tea_midterm');
-        teaQ.forEach(q => {
-          if (!state.errorBook.includes(q.id)) {
-            state.errorBook.push(q.id);
-            state.errorCounts[q.id] = 1;
-            added++;
-          }
-        });
-      }
-      saveState();
+      const teaUnit = getMidtermDataUnit('TEA_QUIZ_REVIEW');
+      const teaQ = (teaUnit && Array.isArray(teaUnit.quizzes) && teaUnit.quizzes.length > 0)
+        ? teaUnit.quizzes
+        : ((window.ENGLISH_DATA && Array.isArray(window.ENGLISH_DATA.quizzes))
+            ? window.ENGLISH_DATA.quizzes.filter(q => q.book_id === 'tea_midterm')
+            : []);
+      teaQ.forEach(q => {
+        if (q && q.id && !state.errorBook.some(x => getErrorId(x) === q.id)) {
+          state.errorBook.push(q.id);
+          if (!state.errorCounts[q.id]) state.errorCounts[q.id] = 1;
+          added++;
+        }
+      });
+      state.errorBook = normalizeErrorBookList(state.errorBook);
+      saveState(true);
       showToast(`已成功匯入 ${added} 道岱崙小考真實失分題！`);
       renderErrorBookView(container);
     };
@@ -3783,9 +3827,9 @@
               <label>考卷類型：</label>
               <select id="select-print-type" class="custom-select" style="width:100%; padding:9px; border-radius:10px; border:1.5px solid var(--line); font-weight:700;">
                 <option value="unit_custom" ${state.printConfig.printType === 'unit_custom' ? 'selected' : ''}>📑 本單元專屬考卷 (聽寫 + 手寫實戰 + 選擇)</option>
-                <option value="quiz_original" ${state.printConfig.printType === 'quiz_original' ? 'selected' : ''}>📄 岱崙美語歷史考券 1:1 復原重測卷 (Week 2~7)</option>
-                <option value="contrast" ${state.printConfig.printType === 'contrast' ? 'selected' : ''}>📝 考券紅黑批改對照卷 (學生原答 + 老師批改)</option>
-                <option value="quiz_variant" ${state.printConfig.printType === 'quiz_variant' ? 'selected' : ''}>🎲 AI 變式狙擊模擬卷 (相同考點動態抽換)</option>
+                <option value="quiz_original" ${state.printConfig.printType === 'quiz_original' ? 'selected' : ''}>📄 岱崙美語歷史考券實戰抽題卷</option>
+                <option value="contrast" ${state.printConfig.printType === 'contrast' ? 'selected' : ''}>📝 考券批改與錯因對照卷 (附失分陷阱解析)</option>
+                <option value="quiz_variant" ${state.printConfig.printType === 'quiz_variant' ? 'selected' : ''}>🎲 本週衝刺 4D 變式模擬卷 (動態抽換)</option>
                 <option value="spelling" ${state.printConfig.printType === 'spelling' ? 'selected' : ''}>🔤 Spelling Bee 單字聽寫專用卷</option>
                 <option value="errorbook" ${state.printConfig.printType === 'errorbook' ? 'selected' : ''}>📕 個人專屬弱點錯題消滅卷</option>
               </select>
@@ -3794,17 +3838,17 @@
             <div class="field">
               <label>出卷題數：</label>
               <select id="select-print-count" class="custom-select" style="width:100%; padding:9px; border-radius:10px; border:1.5px solid var(--line); font-weight:700;">
-                <option value="15">15 題 (精簡卷)</option>
-                <option value="20" selected>20 題 (標準段考卷)</option>
-                <option value="30">30 題 (全真總模考)</option>
+                <option value="15" ${Number(state.printConfig.count) === 15 ? 'selected' : ''}>15 題 (精簡卷)</option>
+                <option value="20" ${Number(state.printConfig.count || 20) === 20 ? 'selected' : ''}>20 題 (標準段考卷)</option>
+                <option value="30" ${Number(state.printConfig.count) === 30 ? 'selected' : ''}>30 題 (全真總模考)</option>
               </select>
             </div>
 
             <div class="field">
               <label>解答標記：</label>
               <select id="select-print-mode" class="custom-select" style="width:100%; padding:9px; border-radius:10px; border:1.5px solid var(--line); font-weight:700;">
-                <option value="student" selected>學生作答卷 (留白寫答案)</option>
-                <option value="teacher">教師/家長解答卷 (標註紅字正解)</option>
+                <option value="student" ${state.printConfig.answerMode !== 'teacher' ? 'selected' : ''}>學生作答卷 (留白寫答案)</option>
+                <option value="teacher" ${state.printConfig.answerMode === 'teacher' ? 'selected' : ''}>教師/家長解答卷 (標註紅字正解)</option>
               </select>
             </div>
 
@@ -3830,18 +3874,172 @@
     };
 
     const paperEl = document.getElementById('print-sheet-paper');
-    renderA4PaperContent(paperEl);
-
-    document.getElementById('btn-re-render-preview').onclick = () => {
+    const syncAndRenderPaper = () => {
       state.printConfig.printType = document.getElementById('select-print-type').value;
-      state.printConfig.count = parseInt(document.getElementById('select-print-count').value, 10);
+      state.printConfig.count = parseInt(document.getElementById('select-print-count').value, 10) || 20;
       state.printConfig.answerMode = document.getElementById('select-print-mode').value;
       renderA4PaperContent(paperEl);
     };
+    renderA4PaperContent(paperEl);
+
+    ['select-print-type', 'select-print-count', 'select-print-mode'].forEach(selId => {
+      const selEl = document.getElementById(selId);
+      if (selEl) selEl.onchange = syncAndRenderPaper;
+    });
+    document.getElementById('btn-re-render-preview').onclick = syncAndRenderPaper;
 
     document.getElementById('btn-trigger-print').onclick = () => {
       window.print();
     };
+  }
+
+  function shuffleArrayCopy(arr) {
+    const copy = Array.isArray(arr) ? arr.slice() : [];
+    for (let i = copy.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [copy[i], copy[j]] = [copy[j], copy[i]];
+    }
+    return copy;
+  }
+
+  function getTrapHintText(q) {
+    if (!q) return '';
+    const exp = q.explanation;
+    if (exp && typeof exp === 'object') {
+      if (Array.isArray(exp.commonTraps) && exp.commonTraps.length > 0) return String(exp.commonTraps[0]);
+      if (exp.insight) return String(exp.insight);
+      if (exp.distractorAnalysis && typeof exp.distractorAnalysis === 'object') {
+        const firstReason = Object.values(exp.distractorAnalysis)[0];
+        if (firstReason) return String(firstReason);
+      }
+    }
+    return q.trap ? String(q.trap) : '';
+  }
+
+  function renderDynamicExamSections(quizzes, opts) {
+    opts = opts || {};
+    const isTeacher = !!opts.isTeacher;
+    const isContrast = !!opts.isContrast;
+    const showAns = isTeacher || isContrast;
+    const showTraps = !!opts.showTraps;
+    const maxDict = opts.maxDict ?? 20;
+    const maxPass = opts.maxPass ?? 3;
+    const maxHand = opts.maxHand ?? 12;
+    const maxChoice = opts.maxChoice ?? 12;
+    const extraVocabs = Array.isArray(opts.extraVocabs) ? opts.extraVocabs : [];
+
+    const pListen = quizzes.filter(q => matchQuizType(q, 'vocab'));
+    const pPassageDict = quizzes.filter(q => q.type === 'passage_dictation');
+    const pHand = quizzes.filter(q => matchQuizType(q, 'handwrite') && q.type !== 'passage_dictation');
+    const pChoice = quizzes.filter(q => !matchQuizType(q, 'vocab') && !matchQuizType(q, 'handwrite'));
+
+    const dictItems = [];
+    const seenDict = new Set();
+    pListen.forEach(q => {
+      const ans = String(q.answer || '').trim();
+      const key = ans.toLowerCase();
+      if (!ans || seenDict.has(key)) return;
+      seenDict.add(key);
+      dictItems.push({
+        zh: maskAnswerFallback(q.target_chi || (q.vocab_card && q.vocab_card.chi) || q.question, ans),
+        ans,
+        trap: getTrapHintText(q)
+      });
+    });
+    if (dictItems.length === 0 || opts.fillWithExtraVocabs) {
+      extraVocabs.forEach(v => {
+        const ans = String(v.word || '').trim();
+        const key = ans.toLowerCase();
+        if (!ans || seenDict.has(key)) return;
+        seenDict.add(key);
+        dictItems.push({ zh: v.chi || v.meaning || '', ans, trap: v.trick || '' });
+      });
+    }
+
+    const shownDict = dictItems.slice(0, maxDict);
+    const shownPass = pPassageDict.slice(0, maxPass);
+    const shownHand = pHand.slice(0, maxHand);
+    const shownChoice = pChoice.slice(0, maxChoice);
+
+    return `
+      ${shownDict.length > 0 ? `
+        <div style="font-weight:900; margin:6mm 0 3mm; border-bottom:1.5px solid #000; padding-bottom:1mm;">
+          Part I. Listen and Write 單字聽寫 (${shownDict.length} 題)
+        </div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:3mm 10mm;">
+          ${shownDict.map((item, i) => `
+            <div style="font-size:11.5pt; padding:2mm 0; border-bottom:1px dotted #ccc;">
+              ${i + 1}. ${escapeHtml(item.zh)}：${showAns ? `<strong style="color:#dc2626;">${escapeHtml(item.ans)}</strong>` : '__________________'}
+              ${showTraps && item.trap ? `<div style="font-size:9pt; color:#475569; margin-top:1mm;">💡 ${escapeHtml(item.trap)}</div>` : ''}
+            </div>
+          `).join('')}
+        </div>
+      ` : ''}
+
+      ${shownPass.length > 0 ? `
+        <div style="font-weight:900; margin:7mm 0 3mm; border-bottom:1.5px solid #000; padding-bottom:1mm;">
+          Part I-B. Passage Dictation 長篇課文段落聽寫（含自然標點）(${shownPass.length} 題)
+        </div>
+        <div>
+          ${shownPass.map((q, i) => {
+            const sCnt = Array.isArray(q.dictation_sentences) ? q.dictation_sentences.length : 4;
+            const lineCnt = Math.min(12, Math.max(6, sCnt * 2));
+            return `
+              <div class="pq" style="margin-bottom:5mm;">
+                <div><strong>${i + 1}.</strong> ${escapeHtml(q.target_chi || q.question || '請聽音寫出完整英文段落（含標點）')}</div>
+                ${showAns
+                  ? `<div style="color:#dc2626; font-weight:bold; margin-top:2mm; line-height:1.6;">${escapeHtml(q.answer)}</div>`
+                  : Array.from({ length: lineCnt }, () => '<div style="height:22px; border-bottom:1px solid #333; margin-top:2mm;"></div>').join('')}
+              </div>
+            `;
+          }).join('')}
+        </div>
+      ` : ''}
+
+      ${shownHand.length > 0 ? `
+        <div style="font-weight:900; margin:7mm 0 3mm; border-bottom:1.5px solid #000; padding-bottom:1mm;">
+          Part II. Grammar & Writing 手寫造句與改寫實戰 (${shownHand.length} 題)
+        </div>
+        <div>
+          ${shownHand.map((q, i) => {
+            const trap = showTraps ? getTrapHintText(q) : '';
+            return `
+              <div class="pq" style="margin-bottom:4mm;">
+                ${q.sentence_form ? `<div style="font-size:10pt; color:#475569; margin-bottom:1mm;">Formula: <code>${escapeHtml(q.sentence_form)}</code></div>` : ''}
+                <div><strong>${i + 1}.</strong> ${escapeHtml(q.question)}</div>
+                ${showAns
+                  ? `<div style="color:#dc2626; font-weight:bold; margin-top:1.5mm;">正解：${escapeHtml(q.answer)}</div>`
+                  : `<div style="height:22px; border-bottom:1px solid #333; margin-top:3mm;"></div>`}
+                ${trap ? `<div style="font-size:9.5pt; color:#475569; margin-top:1mm;">⚠️ ${escapeHtml(trap)}</div>` : ''}
+              </div>
+            `;
+          }).join('')}
+        </div>
+      ` : ''}
+
+      ${shownChoice.length > 0 ? `
+        <div style="font-weight:900; margin:7mm 0 3mm; border-bottom:1.5px solid #000; padding-bottom:1mm;">
+          Part III. Reading & Grammar Usage 觀念選擇 (${shownChoice.length} 題)
+        </div>
+        <div>
+          ${shownChoice.map((q, i) => {
+            const trap = showTraps ? getTrapHintText(q) : '';
+            return `
+              <div class="pq" style="margin-bottom:3mm;">
+                <div>( &nbsp;&nbsp; ) <strong>${i + 1}.</strong> ${escapeHtml(q.question)}</div>
+                ${Array.isArray(q.options) && q.options.length > 0 ? `
+                  <div style="display:grid; grid-template-columns:1fr 1fr; gap:1mm 6mm; margin-top:1mm; font-size:10.5pt;">
+                    ${q.options.map((o, oi) => `<span>(${String.fromCharCode(65 + oi)}) ${escapeHtml(o)}</span>`).join('')}
+                  </div>
+                ` : ''}
+                ${showAns ? `<div style="color:#dc2626; font-weight:bold; font-size:10.5pt;">正解：${escapeHtml(q.answer)}</div>` : ''}
+                ${trap ? `<div style="font-size:9.5pt; color:#475569; margin-top:1mm;">⚠️ ${escapeHtml(trap)}</div>` : ''}
+              </div>
+            `;
+          }).join('')}
+        </div>
+      ` : ''}
+    `;
   }
 
   function renderA4PaperContent(sheetEl) {
@@ -3849,6 +4047,7 @@
     const type = state.printConfig.printType;
     const isTeacher = (state.printConfig.answerMode === 'teacher');
     const isContrast = (type === 'contrast');
+    const maxCount = Math.max(1, parseInt(state.printConfig.count, 10) || 20);
     const curUser = getCurrentUserObj();
     const today = new Date().toLocaleDateString('zh-TW');
 
@@ -3868,13 +4067,6 @@
       const uMeta = uList.find(u => u.id === state.printConfig.unitId) || uList[0];
       const uQuizzes = uMeta ? getQuizzesForUnit(bMeta.id, uMeta.id) : [];
       const uVocabs = uMeta ? getVocabsForUnit(bMeta.id, uMeta.id) : [];
-      const pListen = uQuizzes.filter(q => matchQuizType(q, 'vocab'));
-      const pPassageDict = uQuizzes.filter(q => q.type === 'passage_dictation');
-      const pHand = uQuizzes.filter(q => matchQuizType(q, 'handwrite') && q.type !== 'passage_dictation');
-      const pChoice = uQuizzes.filter(q => !matchQuizType(q, 'vocab') && !matchQuizType(q, 'handwrite'));
-      const dictItems = pListen.length > 0
-        ? pListen.map(q => ({ zh: q.target_chi || (q.vocab_card && q.vocab_card.chi) || q.question, ans: q.answer }))
-        : uVocabs.map(v => ({ zh: v.chi || v.meaning || '', ans: v.word }));
 
       sheetEl.innerHTML = `
         <div class="paper-head">
@@ -3892,93 +4084,74 @@
             <div>掃碼對答案</div>
           </div>
         </div>
-
-        ${dictItems.length > 0 ? `
-          <div style="font-weight:900; margin:6mm 0 3mm; border-bottom:1.5px solid #000; padding-bottom:1mm;">
-            Part I. Listen and Write 單字聽寫 (${dictItems.length} 題)
-          </div>
-          <div style="display:grid; grid-template-columns:1fr 1fr; gap:3mm 10mm;">
-            ${dictItems.slice(0, 20).map((item, i) => `
-              <div style="font-size:11.5pt; padding:2mm 0; border-bottom:1px dotted #ccc;">
-                ${i + 1}. ${escapeHtml(item.zh)}：${isTeacher ? `<strong style="color:#dc2626;">${escapeHtml(item.ans)}</strong>` : '__________________'}
-              </div>
-            `).join('')}
-          </div>
-        ` : ''}
-
-        ${pPassageDict.length > 0 ? `
-          <div style="font-weight:900; margin:7mm 0 3mm; border-bottom:1.5px solid #000; padding-bottom:1mm;">
-            Part I-B. Passage Dictation 長篇課文段落聽寫（含自然標點）(${pPassageDict.length} 題)
-          </div>
-          <div>
-            ${pPassageDict.slice(0, 3).map((q, i) => {
-              const sCnt = Array.isArray(q.dictation_sentences) ? q.dictation_sentences.length : 4;
-              const lineCnt = Math.min(12, Math.max(6, sCnt * 2));
-              return `
-                <div class="pq" style="margin-bottom:5mm;">
-                  <div><strong>${i + 1}.</strong> ${escapeHtml(q.target_chi || q.question)}</div>
-                  ${isTeacher
-                    ? `<div style="color:#dc2626; font-weight:bold; margin-top:2mm; line-height:1.6;">${escapeHtml(q.answer)}</div>`
-                    : Array.from({ length: lineCnt }, () => '<div style="height:22px; border-bottom:1px solid #333; margin-top:2mm;"></div>').join('')}
-                </div>
-              `;
-            }).join('')}
-          </div>
-        ` : ''}
-
-        ${pHand.length > 0 ? `
-          <div style="font-weight:900; margin:7mm 0 3mm; border-bottom:1.5px solid #000; padding-bottom:1mm;">
-            Part II. Grammar & Writing 手寫造句與改寫實戰 (${pHand.length} 題)
-          </div>
-          <div>
-            ${pHand.slice(0, 12).map((q, i) => `
-              <div class="pq" style="margin-bottom:4mm;">
-                ${q.sentence_form ? `<div style="font-size:10pt; color:#475569; margin-bottom:1mm;">Formula: <code>${escapeHtml(q.sentence_form)}</code></div>` : ''}
-                <div><strong>${i + 1}.</strong> ${escapeHtml(q.question)}</div>
-                ${isTeacher
-                  ? `<div style="color:#dc2626; font-weight:bold; margin-top:1.5mm;">正解：${escapeHtml(q.answer)}</div>`
-                  : `<div style="height:22px; border-bottom:1px solid #333; margin-top:3mm;"></div>`}
-              </div>
-            `).join('')}
-          </div>
-        ` : ''}
-
-        ${pChoice.length > 0 ? `
-          <div style="font-weight:900; margin:7mm 0 3mm; border-bottom:1.5px solid #000; padding-bottom:1mm;">
-            Part III. Reading & Grammar Usage 觀念選擇 (${pChoice.length} 題)
-          </div>
-          <div>
-            ${pChoice.slice(0, 12).map((q, i) => `
-              <div class="pq" style="margin-bottom:3mm;">
-                <div>( &nbsp;&nbsp; ) <strong>${i + 1}.</strong> ${escapeHtml(q.question)}</div>
-                ${Array.isArray(q.options) && q.options.length > 0 ? `
-                  <div style="display:grid; grid-template-columns:1fr 1fr; gap:1mm 6mm; margin-top:1mm; font-size:10.5pt;">
-                    ${q.options.map((o, oi) => `<span>(${String.fromCharCode(65 + oi)}) ${escapeHtml(o)}</span>`).join('')}
-                  </div>
-                ` : ''}
-                ${isTeacher ? `<div style="color:#dc2626; font-weight:bold; font-size:10.5pt;">正解：${escapeHtml(q.answer)}</div>` : ''}
-              </div>
-            `).join('')}
-          </div>
-        ` : ''}
+        ${renderDynamicExamSections(uQuizzes, {
+          isTeacher,
+          isContrast: false,
+          maxDict: 20,
+          maxPass: 3,
+          maxHand: 12,
+          maxChoice: 12,
+          extraVocabs: uVocabs
+        })}
       `;
       return;
     }
 
-    // A4 考券標頭
-    let title = '國小六年級 岱崙美語 3C Quiz 歷史真題 1:1 復原評量卷 (Week 2~7)';
-    if (type === 'quiz_variant') title = '國小六年級英語 ｜ AI 變式狙擊模擬卷 (相同文法全新情境)';
-    else if (type === 'spelling') title = '國小六年級英語 ｜ Spelling Bee 單字聽寫專用試卷';
-    else if (type === 'errorbook') title = `國小六年級英語 ｜ 【${curUser.name}】個人專屬弱點錯題消滅卷`;
+    const activeWeek = getActiveSprintWeek();
+    const qMap = buildAllQuizzesMap();
+    let title = '國小六年級 岱崙美語 3C 歷史真題實戰卷';
+    let subtitle = `命題範圍：岱崙 3C 真題庫 ｜ 命題日期：${today} ${isTeacher ? '【教師解答版】' : '【學生紙筆作答版】'}`;
+    let selectedQuizzes = [];
+    let extraVocabs = [];
+    let fillWithExtraVocabs = false;
+    let emptyNotice = '';
+
+    if (type === 'errorbook') {
+      const errIds = normalizeErrorBookList(state.errorBook);
+      selectedQuizzes = errIds.map(id => qMap.get(id)).filter(Boolean).slice(0, maxCount);
+      title = `國小六年級英語 ｜ 【${curUser.name}】個人專屬弱點錯題消滅卷`;
+      subtitle = `從終身錯題本抽取 ${selectedQuizzes.length} 題（上限 ${maxCount} 題） ｜ 命題日期：${today} ${isTeacher ? '【教師解答版】' : '【學生紙筆作答版】'}`;
+      if (selectedQuizzes.length === 0) {
+        emptyNotice = '目前【終身錯題本】沒有待消滅題目，請先於單元練習標記 ❌ / ⏳ 或在錯題本頁點擊「匯入岱崙真卷實戰錯題」。';
+      }
+    } else if (type === 'spelling') {
+      const sprintQuizzes = getQuizzesForUnit('tea_midterm', activeWeek.mockUnitId);
+      const sprintSpell = sprintQuizzes.filter(q => matchQuizType(q, 'vocab'));
+      const allSpell = [...qMap.values()].filter(q => matchQuizType(q, 'vocab'));
+      const pool = sprintSpell.length >= maxCount ? sprintSpell : [...sprintSpell, ...allSpell.filter(q => !sprintSpell.some(s => s.id === q.id))];
+      selectedQuizzes = shuffleArrayCopy(pool).slice(0, maxCount);
+      extraVocabs = shuffleArrayCopy(getVocabsForUnit('tea_midterm', activeWeek.mockUnitId));
+      fillWithExtraVocabs = true;
+      title = `國小六年級英語 ｜ Spelling Bee 單字聽寫專用卷 (${activeWeek.id.toUpperCase()})`;
+      subtitle = `命題範圍：${activeWeek.title} 核心單字庫（${maxCount} 題） ｜ 命題日期：${today} ${isTeacher ? '【教師解答版】' : '【學生紙筆作答版】'}`;
+    } else if (type === 'quiz_variant') {
+      const sprintQuizzes = getQuizzesForUnit('tea_midterm', activeWeek.mockUnitId);
+      const pool4D = [...qMap.values()].filter(q => q.explanation && typeof q.explanation === 'object' && (q.explanation.visualBlock || q.explanation.examPurpose));
+      const basePool = sprintQuizzes.length > 0 ? sprintQuizzes : pool4D;
+      const merged = [...basePool, ...pool4D.filter(q => !basePool.some(b => b.id === q.id))];
+      selectedQuizzes = shuffleArrayCopy(merged).slice(0, maxCount);
+      title = `國小六年級英語 ｜ ${activeWeek.id.toUpperCase()} 4D 變式狙擊模擬卷`;
+      subtitle = `命題範圍：${activeWeek.title} 動態抽換（${selectedQuizzes.length} 題） ｜ 命題日期：${today} ${isTeacher ? '【教師解答版】' : '【學生紙筆作答版】'}`;
+    } else {
+      const teaReview = getQuizzesForUnit('tea_midterm', 'tea_all');
+      const w12 = getQuizzesForUnit('tea_midterm', 'week12_all');
+      const w13 = getQuizzesForUnit('tea_midterm', 'week13_all');
+      const pool = [...teaReview, ...w12, ...w13];
+      selectedQuizzes = shuffleArrayCopy(pool).slice(0, maxCount);
+      title = isContrast
+        ? '國小六年級英語 ｜ 岱崙 3C 考券批改與錯因對照卷'
+        : '國小六年級 岱崙美語 3C 歷史真題實戰抽題卷';
+      subtitle = `動態抽選 ${selectedQuizzes.length} 題（設定 ${maxCount} 題） ｜ 命題日期：${today} ${(isTeacher || isContrast) ? '【解答與錯因對照版】' : '【學生紙筆作答版】'}`;
+    }
 
     sheetEl.innerHTML = `
       <div class="paper-head">
         <div>
-          <h2>${title}</h2>
-          <div class="sub">命題範圍：六上期中考全真題庫 ｜ 命題日期：${today} ${isTeacher ? '【教師解答版】' : ''}</div>
+          <h2>${escapeHtml(title)}</h2>
+          <div class="sub">${escapeHtml(subtitle)}</div>
           <div class="paper-fields">
             <span>學校/班級：____________</span>
-            <span>學員姓名：<b>${curUser.name}</b></span>
+            <span>學員姓名：<b>${escapeHtml(curUser.name)}</b></span>
             <span>座號：______</span>
             <span>得分：______ / 100</span>
           </div>
@@ -3988,86 +4161,19 @@
           <div>掃碼對答案</div>
         </div>
       </div>
-
-      <!-- Part I: 單字聽寫 -->
-      <div style="font-weight:900; margin:8mm 0 3mm; border-bottom:1.5px solid #000; padding-bottom:1mm;">
-        Part I. Spelling 核心單字聽寫 (共 20 分)
-      </div>
-      <div style="display:grid; grid-template-columns:1fr 1fr; gap:3mm 10mm;">
-        ${[
-          { zh: '楔子 (三角木) [W2]', ans: 'wedge' },
-          { zh: '小刀 [W2]', ans: 'knife' },
-          { zh: '山脈 [W2]', ans: 'mountain' },
-          { zh: '輪椅 [W2]', ans: 'wheelchair' },
-          { zh: '熔爐 [W4]', ans: 'furnace' },
-          { zh: '眼鏡鏡框 [W4]', ans: 'frames' },
-          { zh: '花蜜 [W6]', ans: 'nectar' },
-          { zh: '花瓣 [W6]', ans: 'petals' },
-          { zh: '官方的 [W6]', ans: 'official' },
-          { zh: '政府 [W6]', ans: 'government' }
-        ].map((item, i) => `
-          <div style="font-size:12pt; padding:2mm 0; border-bottom:1px dotted #ccc;">
-            ${i + 1}. ${item.zh}：${isTeacher || isContrast ? `<strong style="color:#dc2626;">${item.ans}</strong>` : '____________________'}
-          </div>
-        `).join('')}
-      </div>
-
-      <!-- Part II: 倒裝附和句 -->
-      <div style="font-weight:900; margin:8mm 0 3mm; border-bottom:1.5px solid #000; padding-bottom:1mm;">
-        Part II. Grammar 3 (U13) 倒裝附和句長句改寫 (共 24 分)
-      </div>
-      <div>
-        ${[
-          { q: '[W2] Ryan, Michael - 95% on quiz / too', a: 'Ryan got 95% on his quiz, and Michael did, too.' },
-          { q: '[W2] Olivia, Penny - 100% on quiz / so', a: 'Olivia got 100% on her quiz, and so did Penny.' },
-          { q: '[W7] Roger, Sean – see new Iron Man movie tomorrow / so', a: 'Roger will see the new Iron Man movie tomorrow, and so will Sean.' },
-          { q: '[W7] penguins, ostriches – can\'t fly / neither', a: 'Penguins can\'t fly, and neither can ostriches.' }
-        ].map((item, i) => `
-          <div class="pq">
-            <div><strong>${i + 1}.</strong> Prompt: <strong>[${item.q}]</strong></div>
-            ${isTeacher || isContrast ? `
-              <div style="color:#dc2626; font-weight:bold; margin-top:2mm;">正解：${item.a}</div>
-            ` : `
-              <div style="height:24px; border-bottom:1px solid #333; margin-top:4mm;"></div>
-            `}
-          </div>
-        `).join('')}
-      </div>
-
-      <!-- Part III: 三級副詞長句合成 -->
-      <div style="font-weight:900; margin:8mm 0 3mm; border-bottom:1.5px solid #000; padding-bottom:1mm;">
-        Part III. Grammar 3 (U14) 副詞三級比較長句合成 (共 36 分)
-      </div>
-      <div>
-        ${[
-          { q: '[W4] How fast do they run? (person, dog & lion)', a: 'A person runs fast, a dog runs faster than a person, but a lion runs the fastest.' },
-          { q: '[W5] How far can they jump? (frog, rabbit & kangaroo)', a: 'A frog can jump far, a rabbit can jump farther than a frog, but a kangaroo can jump the farthest.' },
-          { q: '[W7] How well did they do their homework? (Hana, Ingrid & Jeremy)', a: 'Hana did her homework well, Ingrid did her homework better than Hana, but Jeremy did his homework the best.' },
-          { q: '[W7] How beautifully do they sing? (Beth, Vicky & Anne)', a: 'Beth sings beautifully, Vicky sings more beautifully than Beth, but Anne sings the most beautifully.' }
-        ].map((item, i) => `
-          <div class="pq">
-            <div><strong>${i + 1}.</strong> Prompt: <strong>[${item.q}]</strong></div>
-            ${isTeacher || isContrast ? `
-              <div style="color:#dc2626; font-weight:bold; margin-top:2mm;">正解：${item.a}</div>
-            ` : `
-              <div style="height:24px; border-bottom:1px solid #333; margin-top:4mm;"></div>
-            `}
-          </div>
-        `).join('')}
-      </div>
-
-      <!-- Part IV: 14處抓錯題 -->
-      <div style="font-weight:900; margin:8mm 0 3mm; border-bottom:1.5px solid #000; padding-bottom:1mm;">
-        Part IV. Week 6《If I Had 3000 Dollars》挑錯與改寫 (共 20 分)
-      </div>
-      <div style="font-size:12pt; line-height:1.75; padding:3mm 0;">
-        ${isTeacher || isContrast ? `
-          If I <strong style="color:#dc2626;">had</strong> 3000 dollars, I would do three things. First, I love sports, so I would go <strong style="color:#dc2626;">to</strong> a baseball game <strong style="color:#dc2626;">with</strong> my sister. Next, I would <strong style="color:#dc2626;">buy</strong> a new bike <strong style="color:#dc2626;">for</strong> my brother. His bike is very old, and he <strong style="color:#dc2626;">needs</strong> a new <strong style="color:#dc2626;">one</strong>. Finally, I would spend some money <strong style="color:#dc2626;">on</strong> myself. I would buy a new computer, a watch, and some video games. Those things would <strong style="color:#dc2626;">cost</strong> me about 1500 dollars. With <strong style="color:#dc2626;">the</strong> rest of the money, I would put it in the bank. Wouldn't it <strong style="color:#dc2626;">be</strong> great to have 3000 dollars?
-        ` : `
-          請在下列短文中圈出 14 個錯誤並於上方訂正：<br>
-          If I <u>have</u> 3000 dollars, I would do three things. First, I love sports, so I would <u>go a baseball game</u> <u>to</u> my sister. Next, I would <u>bought</u> a new bike <u>to</u> my brother. His bike is very old, and he <u>need</u> a new <u>it</u>. Finally, I would spend some money <u>in</u> myself. I would <u>by</u> a new computer, a watch, and some video <u>game</u>. Those things would <u>spend</u> me about 1500 dollars. <u>With rest</u> of the money, I would put you in the bank. Wouldn't <u>it great</u> to have 3000 dollars?
-        `}
-      </div>
+      ${emptyNotice
+        ? `<div style="margin:12mm 0; padding:8mm; border:1.5px dashed #94a3b8; border-radius:8px; text-align:center; color:#475569; font-weight:700;">${escapeHtml(emptyNotice)}</div>`
+        : renderDynamicExamSections(selectedQuizzes, {
+            isTeacher,
+            isContrast,
+            showTraps: isContrast,
+            maxDict: maxCount,
+            maxPass: Math.min(4, maxCount),
+            maxHand: maxCount,
+            maxChoice: maxCount,
+            extraVocabs,
+            fillWithExtraVocabs
+          })}
     `;
   }
 
@@ -4274,18 +4380,52 @@
     if (openBtn) {
       openBtn.onclick = () => {
         const curUser = getCurrentUserObj();
-        const errCount = state.errorBook.length;
-        const promptText = `你是一位頂尖的國小英語教研出題專家。
-以下是國小六年級學生【${curUser.name}】在準備六上英語期中考時的弱點診斷：
-- 當前待消滅錯題數：${errCount} 題
-- 考核核心教材：Oxford Discover Grammar 3 (U13~15)、Write Right 3 (U4~5)、Reading with Writing 6 (U5~8)、Read and Discover 6 Space (Ch4~5) 與岱崙美語 3C Quiz 歷史真卷 (Week 2~7)。
-- 重大失分語法考點：
-  1. Grammar 3 U13 倒裝附和句 (so did / neither did / tomorrow 漏 will / doesn't 混用 do)
-  2. Grammar 3 U14 副詞三級比較長句合成 (well->better->best / badly->worse->worst / easily->more easily / 最高級子句嚴禁將一般動詞換成 is)
-  3. Write Right 3 U5 假設語氣與 14 處抓錯題 (If I had... I would... / cost vs spend)
-  4. Grammar 3 U15 容器量詞 (seven slices of bread 嚴禁加 breads)
-
-請根據上述學生實戰弱點，量身生成 4 題「100% 相同考核語法內核、全新日常生活情境」的深度變式題（包含 2 題長句改寫題與 2 題點詞抓錯題），並附上標準答案與三色避坑教研詳解。請用繁體中文輸出。`;
+        const activeWeek = getActiveSprintWeek();
+        const qMap = buildAllQuizzesMap();
+        const errIds = normalizeErrorBookList(state.errorBook);
+        const errItems = errIds.slice(0, 15).map(id => qMap.get(id)).filter(Boolean);
+        const trapSet = new Set();
+        const errLines = errItems.map((q, idx) => {
+          const codes = [];
+          if (q.trapCode) codes.push(q.trapCode);
+          const exp = q.explanation;
+          if (exp && typeof exp === 'object') {
+            if (exp.trapCode) codes.push(exp.trapCode);
+            if (Array.isArray(exp.commonTraps)) {
+              exp.commonTraps.forEach(t => {
+                const m = String(t).match(/\bENG_[A-Z0-9_]+\b/);
+                if (m) codes.push(m[0]);
+              });
+            }
+            if (exp.distractorAnalysis && typeof exp.distractorAnalysis === 'object') {
+              Object.values(exp.distractorAnalysis).forEach(v => {
+                const m = String(v).match(/\bENG_[A-Z0-9_]+\b/);
+                if (m) codes.push(m[0]);
+              });
+            }
+          }
+          codes.forEach(c => trapSet.add(c));
+          const stem = String(q.target_chi || q.question || '').replace(/\s+/g, ' ').slice(0, 120);
+          const codeNote = codes.length > 0 ? ` [${[...new Set(codes)].join(', ')}]` : '';
+          return `  ${idx + 1}. (${q.id})${codeNote} 題意：${stem}｜正解：${q.answer || ''}`;
+        });
+        const unitSummary = activeWeek.units.map(u => `- ${u.bookName} ${u.title}`).join('\n');
+        const trapSummary = trapSet.size > 0 ? [...trapSet].join(', ') : '尚無錯題 trapCode，請依下方本週考點設計誘答';
+        const promptText = `你是一位頂尖的國小英語教研出題專家（熟悉 4D+3E 出題規範）。
+以下是國小六年級學生【${curUser.name}】的最新弱點與衝刺診斷：
+- 當前衝刺週次：${activeWeek.badgeLabel} — ${activeWeek.title}
+- 待消滅錯題總數：${errIds.length} 題（以下列出前 ${errItems.length} 題真實紀錄）
+- 命中錯誤代碼 (trapCodes)：${trapSummary}
+- 當前衝刺單元：
+${unitSummary}
+${errLines.length > 0 ? `\n- 真實錯題明細：\n${errLines.join('\n')}\n` : '\n- 目前錯題本已清空，請針對上方衝刺單元高頻易錯點命題。\n'}
+請根據上述真實弱點與考點，量身生成 4 題「100% 相同語法內核、全新日常生活情境」的 4D 變式題（含手寫改寫/填空與選擇題），每題必須附上：
+- D1 examPurpose（命題核心）
+- D2 steps[]（破題步驟）與 insight（秒殺口訣）
+- D3 distractorAnalysis / commonTraps[]（含 ENG_* trapCode）
+- D4 visualBlock（timeline / slot_box / prep_ladder / compare_table）
+- 3E extensionStudy（coreRules / grammarCompare / examVariations）
+請用繁體中文輸出。`;
 
         if (textarea) textarea.value = promptText;
         if (modal) modal.style.display = 'flex';

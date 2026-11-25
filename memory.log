@@ -2,9 +2,9 @@
 
 ⚡ 0. 當下狀態快照 (TL;DR Current Snapshot)
 - **最後更新**：2026-11-22
-- **最新里程碑**：**Phase 12 已完成並通過全套驗收 (`verify_phase_1/2/3/12.js` 全數 0 Failures，PASS 191/191 + `1080×680` 真實 Chromium 視窗驗收 Console 0 Error)**；完成 Week 12 實體真卷 Page 25–26 四層數位化 (`38/46`)、依真卷全面校正 `ODG3_U16`/`WR3_U06`/`SPACE_CH06` 模擬考、新建 `RWW6_U06` 段落逐句盲聽、建立 `4D_英文科_出題與詳解規範.md` 與前端 D4 視覺圖解渲染器，並將首頁衝刺專區升級為可切換週次膠囊 (`SPRINT_WEEKS`：預設 W13，可切換 W12 + 真卷抓錯與 A4 出卷)。
-- **最近一次上線**：GitHub `https://github.com/ddd8836203/tiger_english_6_v2`（目前本地變更位於分支 `feat/w13-4d-sprint`，還原基準 Tag `pre-w13-4d-sprint`，待使用者確認後推送）。
-- **Next Actions**：向使用者輸出 Phase 12 結案報告與待確認之 commit / push 指示。
+- **最新里程碑**：**Phase 12 已完成並通過全套驗收 + 路線 A 排雷修補完成**：解除 `.git/config` 內嵌 OAuth Token、修復錯題本字串/物件型別錯配與跨庫查題 (`normalizeErrorBookList` / `buildAllQuizzesMap`)、A4 出卷 6 卷型全數改為真實動態題庫 (`renderDynamicExamSections`)、AI Prompt 匯出改讀真實錯題與 `trapCodes`，防快取版號推進至 `?v=20261122_p13`。
+- **最近一次上線**：GitHub `https://github.com/ddd8836203/tiger_english_6_v2`（`main` 與 `origin/main` 同步，本次本機排雷待使用者確認後再推送）。
+- **Next Actions**：向使用者回報排雷驗收結果，並由使用者於 GitHub 撤銷舊 OAuth Token。
 
 ---
 
