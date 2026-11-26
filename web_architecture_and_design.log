@@ -1,9 +1,9 @@
 # 六年級英語特訓網頁 — 詳細設計架構、目標與設計原因 (web_architecture_and_design.log)
 
 ⚡ 0. 當下狀態快照 (TL;DR Current Snapshot)
-- **最後更新**：2026-11-22
-- **架構版本**：Zero-Build Vanilla SPA (`v2.5.0-week13-4d-sprint` — **Phase 12 `SPRINT_WEEKS` 週次切換膠囊、4D 視覺圖解渲染器、`passage_dictation` 段落逐句盲聽與 Week 12 真卷閉環已完成並通過驗收**)
-- **前端核心檔案**：`index.html` (`?v=20261122_p12`), `style.css`, `app.js`, `english_data.js`, `midterm_data.js`, `build_exam_bank.js`, `data/units/*.js`, `data/exams/tea_w12.js`
+- **最後更新**：2026-11-26
+- **架構版本**：Zero-Build Vanilla SPA (`v2.5.0-week13-4d-sprint` — **Phase 12 `SPRINT_WEEKS`、4D 視覺圖解、`passage_dictation` 段落盲聽 ＋ 統一 AI 匯出核心 `ai_export_core.js` 與 `g6_english_logs` v2 補齊**)
+- **前端核心檔案**：`index.html` (`?v=20261126_2`), `style.css`, `app.js`, `ai_export_core.js`, `english_data.js`, `midterm_data.js`, `build_exam_bank.js`, `data/units/*.js`, `data/exams/tea_w12.js`
 - **設計鐵律提醒**：保留雙速 TTS 防抖 cancel、顯式三態自評計分（翻牌與選選項皆不自動計分，僅點擊 `[data-rate]` 寫入）、零鍵盤打字 Mistake Buster、純淨英文例句 TTS 清洗 (`extractCleanEnglishForSpeech`)、聽寫與 `passage_dictation` 翻牌前雙層零洩漏防護、Topbar 與 `@media print` 嚴格鎖定 `--text-scale: 1`、Firebase + LocalStorage 雙向同步。
 
 ---
@@ -19,6 +19,7 @@
 - [#SPEC-4] Phase 9~10 題庫零洩漏富化、三層呼吸感題幹卡片與課本全名統一架構：資料層與 UI 層雙重遮罩聽寫答案（含 `target_pos`/`masked_example_chi`）、Strip 內部 `[Tiger 3C ...]` 標籤、三層積木卡排版與五書全名零縮寫。
 - [#SPEC-5] Phase 11 10.2" iPad 橫向響應式排版、雙層字體縮放與 A/B 可切換課文架構：以 `--text-scale`/`--ui-scale` 驅動全內容縮放並隔離 Topbar 與 A4 列印；實作 A 雙欄逐句聯動／B 單欄逐句條列切換、專注閱讀、護眼暖紙底、1150px 文法單欄、2×2 選項與抓錯 CSS 補完。
 - [#SPEC-6] Phase 12 `SPRINT_WEEKS` 週次切換膠囊、D4 英文科視覺圖解 (`visualBlock`) 與 `passage_dictation` 段落逐句盲聽架構：將衝刺橫幅改為資料驅動切換並持久化於 `eng_sprint_week_v1`，實作 4 種視覺圖解渲染器與零洩漏段落盲聽／A4 多行橫線列印。
+- [#SPEC-AI-EXPORT] 統一「匯出給 AI（Gemini Canvas 4D 互動網頁）」與做法 B+ `*_logs` 時間紀錄規格：透過共用核心 `ai_export_core.js` 支援時間區間篩選、逐題勾選、自動分卷/整份切換與雲端 `$key` 按需拉取。
 
 ---
 
@@ -411,3 +412,15 @@
 - 新增題型 `passage_dictation`（`dictation_sentences[]` + `full_audio_text`），提供 `.dictation-passage-player`（1.0x / 0.8x 整段連播＋逐句點播按鈕）。
 - 翻牌前只渲染中文情境與純中文標點提示，`dictation_sentences[].punct_focus` 與英文原句嚴格隔離於翻牌抽屜 `#quiz-answer-drawer` 內，並由 `build_exam_bank.js` 與 `verify_phase_12.js` 進行英文 trigram 零洩漏靜態掃描。
 - A4 出卷 (`unit_custom`) 自動將 `passage_dictation` 排版為 `Part I-B` 並依句數輸出 6~12 行手寫橫線。
+
+---
+
+================================================================================
+### [#SPEC-AI-EXPORT] 十四、統一「匯出給 AI（Gemini Canvas 4D 互動網頁）」與做法 B+ `*_logs` 時間紀錄規格 (2026-11-26 新增)
+================================================================================
+- **共用核心與版號**：`index.html` 引入 `ai_export_core.js`，並將核心資源（`style.css`、`english_data.js`、`midterm_data.js`、`ai_export_core.js`、`app.js`）防快取版號統一更新至 `?v=20261126_2`。
+- **專案配置**：
+  - `subjectKey`: `'g6_english'`
+  - `logsNode`: `'g6_english_logs'`
+  - 入口函式：`app.js` 綁定 `#nav-export`，呼叫 `window.AIExportCore.openExportModal(...)` 彈窗模式，匯入 `allQuestionsMap`、`errorBook`、`errorCounts`、`slowCounts`、`slowIds`、本機 `recent_answer_logs` 與舊版 `fullHistory`。
+- **`g6_english_logs` v2 補齊與做法 B+ 能力**：`recordQuestionAttempt` 除保留原有追蹤欄位外，同步補齊做法 B+ `v: 2` 標準欄位（`ts`, `t`, `subj: 'g6_english'`, `id`, `unit`, `cat`, `q`, `opts`, `correct`, `ans`, `res`, `trap`, `concept`），經 `AIExportCore.saveLocalAnswerLog(..., 300)` 與 `pushAnswerLog` 寫入 `/g6_english_logs/{uid}`，供 `openExportModal` 支援時間區間篩選、逐題勾選、自動分卷/整份切換與雲端 `$key` 按需拉取。

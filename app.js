@@ -1185,7 +1185,10 @@
     const base = normalizeCloudUrl(state.cloudDbUrl);
     if (!base) return;
     try {
-      const logKey = `${Date.now()}_${Math.random().toString(36).substr(2, 6)}`;
+      const ts = (logData && (Number(logData.ts) || Number(logData.timestamp))) || Date.now();
+      const rawId = (logData && (logData.id || logData.qid)) || Math.random().toString(36).substr(2, 6);
+      const safeId = String(rawId).replace(/[^a-zA-Z0-9_-]/g, '_');
+      const logKey = `${ts}_${safeId}`;
       await fetch(`${base}/g6_english_logs/${state.currentUser}/${logKey}.json`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
@@ -1217,6 +1220,7 @@
     Object.values(STORAGE_KEYS).forEach(k => {
       localStorage.removeItem(getUserKey(k, userId));
     });
+    localStorage.removeItem(getUserKey('recent_answer_logs', userId));
     if (state.currentUser === userId) {
       state.errorBook = [];
       state.errorCounts = {};
@@ -3611,12 +3615,14 @@
     });
 
     // 互動點選選項
+    let lastSelectedOpt = null;
     container.querySelectorAll('[data-opt-idx]').forEach(btn => {
       btn.onclick = () => {
         if (ansDrawer) ansDrawer.style.display = 'block';
         if (revealBtn) revealBtn.style.display = 'none';
         const oi = parseInt(btn.getAttribute('data-opt-idx'), 10);
         const optText = options[oi];
+        lastSelectedOpt = optText;
         const isRight = (optText === q.answer || optText.startsWith(q.answer));
         if (isRight) {
           btn.classList.add('correct');
@@ -3630,7 +3636,7 @@
     container.querySelectorAll('[data-rate]').forEach(btn => {
       btn.onclick = () => {
         const rate = btn.getAttribute('data-rate');
-        recordAnswerResult(q, rate);
+        recordAnswerResult(q, rate, lastSelectedOpt);
         state.quizIndex++;
         renderActiveQuizView(container);
         scrollPageToTop();
@@ -3670,8 +3676,31 @@
     state.errorBook = normalizeErrorBookList(state.errorBook);
     saveState(true);
 
-    // 非同步記錄詳細作答日誌 Log 至雲端
-    pushAnswerLog({
+    const nowTs = Date.now();
+    const nowStr = (window.AIExportCore && typeof window.AIExportCore.formatTaipeiTime === 'function')
+      ? window.AIExportCore.formatTaipeiTime(nowTs)
+      : new Date(nowTs).toLocaleString('zh-TW', { timeZone: 'Asia/Taipei', hour12: false });
+    const exp = question.explanation;
+    const optsList = Array.isArray(question.options) ? question.options : [];
+    const optsStr = optsList.length > 0
+      ? optsList.map(o => {
+          const txt = (o && typeof o === 'object') ? (o.text || o.label || '') : String(o || '');
+          const isAns = txt && String(question.answer || '') && (txt === question.answer || txt.startsWith(question.answer));
+          return txt + (isAns ? '*' : '');
+        }).join(' | ')
+      : (question.answer ? `手寫正解: ${question.answer}` : '');
+    let trapStr = question.trapCode || '';
+    let conceptStr = '';
+    if (exp && typeof exp === 'object') {
+      if (!trapStr) {
+        trapStr = exp.trapCode || exp.trap || (Array.isArray(exp.commonTraps) ? exp.commonTraps.join('；') : '');
+      }
+      conceptStr = exp.examPurpose || exp.point || exp.note || '';
+    } else if (typeof exp === 'string' && !trapStr) {
+      trapStr = exp.slice(0, 180);
+    }
+    const unitLabel = question.unit_id || state.currentUnitId || question.book_id || '';
+    const logPayload = {
       qid: qId,
       bookId: state.currentBookId,
       unitId: state.currentUnitId,
@@ -3679,8 +3708,40 @@
       rate,
       isCorrect: isOk,
       userPick,
-      timestamp: Date.now()
-    }).catch(() => {});
+      timestamp: nowTs,
+      v: 2,
+      ts: nowTs,
+      t: nowStr,
+      subj: 'g6_english',
+      id: qId,
+      unit: unitLabel,
+      cat: question.type || 'unknown',
+      q: String(question.question || question.target_chi || '').trim(),
+      opts: optsStr,
+      correct: String(question.answer || ''),
+      ans: userPick != null
+        ? String(userPick)
+        : (rate === 'ok' ? '紙筆自評：答對' : (rate === 'slow' ? '紙筆自評：想很久' : '紙筆自評：答錯')),
+      res: rate,
+      trap: String(trapStr || ''),
+      concept: String(conceptStr || '')
+    };
+
+    if (window.AIExportCore && typeof window.AIExportCore.saveLocalAnswerLog === 'function') {
+      window.AIExportCore.saveLocalAnswerLog(getUserKey('recent_answer_logs'), logPayload, 300);
+    } else {
+      try {
+        const raw = localStorage.getItem(getUserKey('recent_answer_logs')) || '[]';
+        const arr = JSON.parse(raw);
+        const list = Array.isArray(arr) ? arr : [];
+        list.unshift(logPayload);
+        if (list.length > 300) list.length = 300;
+        localStorage.setItem(getUserKey('recent_answer_logs'), JSON.stringify(list));
+      } catch (e) {}
+    }
+
+    // 非同步記錄詳細作答日誌 Log 至雲端
+    pushAnswerLog(logPayload).catch(() => {});
   }
 
   function renderQuizSummaryView(container) {
@@ -4371,79 +4432,97 @@
   }
 
   function initAiPromptModal() {
-    const modal = document.getElementById('aiPromptModal');
     const openBtn = document.getElementById('nav-export');
-    const closeBtn = document.getElementById('closeModalBtn');
-    const copyBtn = document.getElementById('copyPromptBtn');
-    const textarea = document.getElementById('aiPromptTextarea');
+    if (!openBtn) return;
 
-    if (openBtn) {
-      openBtn.onclick = () => {
-        const curUser = getCurrentUserObj();
-        const activeWeek = getActiveSprintWeek();
-        const qMap = buildAllQuizzesMap();
-        const errIds = normalizeErrorBookList(state.errorBook);
-        const errItems = errIds.slice(0, 15).map(id => qMap.get(id)).filter(Boolean);
-        const trapSet = new Set();
-        const errLines = errItems.map((q, idx) => {
-          const codes = [];
-          if (q.trapCode) codes.push(q.trapCode);
-          const exp = q.explanation;
-          if (exp && typeof exp === 'object') {
-            if (exp.trapCode) codes.push(exp.trapCode);
-            if (Array.isArray(exp.commonTraps)) {
-              exp.commonTraps.forEach(t => {
-                const m = String(t).match(/\bENG_[A-Z0-9_]+\b/);
-                if (m) codes.push(m[0]);
-              });
-            }
-            if (exp.distractorAnalysis && typeof exp.distractorAnalysis === 'object') {
-              Object.values(exp.distractorAnalysis).forEach(v => {
-                const m = String(v).match(/\bENG_[A-Z0-9_]+\b/);
-                if (m) codes.push(m[0]);
-              });
-            }
+    openBtn.onclick = () => {
+      if (!window.AIExportCore || typeof window.AIExportCore.openExportModal !== 'function') {
+        showToast('⚠️ AI 匯出核心尚未載入，請重新整理頁面');
+        return;
+      }
+
+      const unitTitleMap = {};
+      if (window.ENGLISH_DATA && Array.isArray(window.ENGLISH_DATA.units)) {
+        window.ENGLISH_DATA.units.forEach(u => {
+          if (u && u.unit_id) unitTitleMap[u.unit_id] = u.unit_title || u.unit_id;
+        });
+      }
+
+      const allQuestionsMap = {};
+      const addQuestionMeta = (q, fallbackUnit) => {
+        if (!q || !q.id || allQuestionsMap[q.id]) return;
+        const exp = q.explanation;
+        const optsList = Array.isArray(q.options) ? q.options : [];
+        const optsStr = optsList.length > 0
+          ? optsList.map(o => {
+              const txt = (o && typeof o === 'object') ? (o.text || o.label || '') : String(o || '');
+              const isAns = txt && String(q.answer || '') && (txt === q.answer || txt.startsWith(q.answer));
+              return txt + (isAns ? '*' : '');
+            }).join(' | ')
+          : (q.answer ? `手寫正解: ${q.answer}` : '');
+        let trapStr = q.trapCode || '';
+        let conceptStr = '';
+        if (exp && typeof exp === 'object') {
+          if (!trapStr) {
+            trapStr = exp.trapCode || exp.trap || (Array.isArray(exp.commonTraps) ? exp.commonTraps.join('；') : '');
           }
-          codes.forEach(c => trapSet.add(c));
-          const stem = String(q.target_chi || q.question || '').replace(/\s+/g, ' ').slice(0, 120);
-          const codeNote = codes.length > 0 ? ` [${[...new Set(codes)].join(', ')}]` : '';
-          return `  ${idx + 1}. (${q.id})${codeNote} 題意：${stem}｜正解：${q.answer || ''}`;
-        });
-        const unitSummary = activeWeek.units.map(u => `- ${u.bookName} ${u.title}`).join('\n');
-        const trapSummary = trapSet.size > 0 ? [...trapSet].join(', ') : '尚無錯題 trapCode，請依下方本週考點設計誘答';
-        const promptText = `你是一位頂尖的國小英語教研出題專家（熟悉 4D+3E 出題規範）。
-以下是國小六年級學生【${curUser.name}】的最新弱點與衝刺診斷：
-- 當前衝刺週次：${activeWeek.badgeLabel} — ${activeWeek.title}
-- 待消滅錯題總數：${errIds.length} 題（以下列出前 ${errItems.length} 題真實紀錄）
-- 命中錯誤代碼 (trapCodes)：${trapSummary}
-- 當前衝刺單元：
-${unitSummary}
-${errLines.length > 0 ? `\n- 真實錯題明細：\n${errLines.join('\n')}\n` : '\n- 目前錯題本已清空，請針對上方衝刺單元高頻易錯點命題。\n'}
-請根據上述真實弱點與考點，量身生成 4 題「100% 相同語法內核、全新日常生活情境」的 4D 變式題（含手寫改寫/填空與選擇題），每題必須附上：
-- D1 examPurpose（命題核心）
-- D2 steps[]（破題步驟）與 insight（秒殺口訣）
-- D3 distractorAnalysis / commonTraps[]（含 ENG_* trapCode）
-- D4 visualBlock（timeline / slot_box / prep_ladder / compare_table）
-- 3E extensionStudy（coreRules / grammarCompare / examVariations）
-請用繁體中文輸出。`;
-
-        if (textarea) textarea.value = promptText;
-        if (modal) modal.style.display = 'flex';
+          conceptStr = exp.examPurpose || exp.point || exp.note || '';
+        } else if (typeof exp === 'string' && !trapStr) {
+          trapStr = exp.slice(0, 200);
+        }
+        const uId = q.unit_id || fallbackUnit || q.book_id || '';
+        allQuestionsMap[q.id] = {
+          id: q.id,
+          unit: unitTitleMap[uId] || fallbackUnit || uId || '綜合單元',
+          cat: q.type || '',
+          q: String(q.question || q.target_chi || '').trim(),
+          opts: optsStr,
+          correct: String(q.answer || ''),
+          trap: String(trapStr || ''),
+          concept: String(conceptStr || '')
+        };
       };
-    }
 
-    if (closeBtn) {
-      closeBtn.onclick = () => { modal.style.display = 'none'; };
-    }
-    if (copyBtn && textarea) {
-      copyBtn.onclick = () => {
-        textarea.select();
-        navigator.clipboard.writeText(textarea.value).then(() => {
-          showToast('✅ 已複製 AI 出題 Prompt！');
-          modal.style.display = 'none';
-        });
-      };
-    }
+      if (window.ENGLISH_DATA && Array.isArray(window.ENGLISH_DATA.quizzes)) {
+        window.ENGLISH_DATA.quizzes.forEach(q => addQuestionMeta(q, q && q.unit_id));
+      }
+      const midtermList = Array.isArray(window.MIDTERM_DATABASE)
+        ? window.MIDTERM_DATABASE
+        : (Array.isArray(window.MIDTERM_DATA) ? window.MIDTERM_DATA : []);
+      midtermList.forEach(u => {
+        if (u && Array.isArray(u.quizzes)) {
+          u.quizzes.forEach(q => addQuestionMeta(q, u.display_title || u.id));
+        }
+      });
+
+      let localLogs = [];
+      try {
+        const raw = localStorage.getItem(getUserKey('recent_answer_logs')) || '[]';
+        const parsed = JSON.parse(raw);
+        if (Array.isArray(parsed)) localLogs = parsed;
+      } catch (e) {}
+
+      const slowCounts = state.slowCounts || {};
+      const slowIds = Object.keys(slowCounts).filter(id => (Number(slowCounts[id]) || 0) > 0);
+
+      window.AIExportCore.openExportModal({
+        subjectKey: 'g6_english',
+        dbUrl: normalizeCloudUrl(state.cloudDbUrl),
+        logsNode: 'g6_english_logs',
+        uid: state.currentUser,
+        user: getCurrentUserObj(),
+        supportsSlow: true,
+        allQuestionsMap,
+        errorBookIds: normalizeErrorBookList(state.errorBook),
+        errorCounts: state.errorCounts || {},
+        slowCounts,
+        slowIds,
+        localLogs,
+        legacyHistory: state.fullHistory || [],
+        onToast: showToast,
+        downloadFilenamePrefix: '六上英語AI練習'
+      });
+    };
   }
 
   // ==========================================================================

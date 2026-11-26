@@ -1,10 +1,10 @@
 # 專案執行對話與歷程完整記憶檔 (memory.log)
 
 ⚡ 0. 當下狀態快照 (TL;DR Current Snapshot)
-- **最後更新**：2026-11-22
-- **最新里程碑**：**Phase 12 已完成並通過全套驗收 + 路線 A 排雷修補完成**：解除 `.git/config` 內嵌 OAuth Token、修復錯題本字串/物件型別錯配與跨庫查題 (`normalizeErrorBookList` / `buildAllQuizzesMap`)、A4 出卷 6 卷型全數改為真實動態題庫 (`renderDynamicExamSections`)、AI Prompt 匯出改讀真實錯題與 `trapCodes`，防快取版號推進至 `?v=20261122_p13`。
-- **最近一次上線**：GitHub `https://github.com/ddd8836203/tiger_english_6_v2`（`main` 與 `origin/main` 同步，本次本機排雷待使用者確認後再推送）。
-- **Next Actions**：向使用者回報排雷驗收結果，並由使用者於 GitHub 撤銷舊 OAuth Token。
+- **最後更新**：2026-11-26
+- **最新里程碑**：**統一 AI 匯出升級 (`ai_export_core.js` ＋ `openExportModal` ＋ `g6_english_logs` v2 補齊) 與資源防快取推進至 `?v=20261126_2`**；保留既有 `/g6_english_users` 與正式帳號零異動。
+- **最近一次上線**：GitHub `https://github.com/ddd8836203/tiger_english_6_v2`（`main` 與 `origin/main` 同步，本機新增統一 AI 匯出升級待確認後推送）。
+- **Next Actions**：待使用者確認更新後再行推送 `?v=20261126_2`。
 
 ---
 
@@ -35,6 +35,7 @@
 - [#MEM-24] 階段二十四 (2026-11-14)：執行 Phase 9~10 — 掃除 368 題聽寫資料與 UI 雙層洩漏、補齊 `RWW6_U06/U08` 行號引用原文、統一五書完整英文名稱、重構三層呼吸感題幹卡片與 `Part` 去重，全套 `verify_phase_1..10.js` 全過。
 - [#MEM-25] 階段二十五 (2026-11-18)：執行 Phase 11 — 依 10.2 吋 iPad 橫向回饋先建置 A/B 互動原型確認方向，隨即落地 4 段雙層字體控制器、A 雙欄／B 單欄可切換課文、專注閱讀、護眼暖紙底、1080px 文法單欄、2×2 測驗網格與抓錯 CSS 修復，通過 `verify_phase_1..11.js` 與 1080×680 實機瀏覽器測試。
 - [#MEM-26] 階段二十六 (2026-11-22)：執行 Phase 12 (`PLAN_W13_4D_Sprint` P0~P7) — 數位化 W12 真卷 Page 25–26 (`38/46`)、建立 `4D_英文科_出題與詳解規範.md`、升級前端 `SPRINT_WEEKS` 週次切換膠囊與 D4 視覺圖解渲染器、新建 `RWW6_U06` 段落逐句盲聽 (`passage_dictation`) 並依真卷盲點校正 W12/W13 模擬考與 Mistake Buster，全數通過 `verify_phase_1/2/3/12.js` 與 `1080×680` 實機瀏覽器驗收。
+- [#MEM-27] 階段二十七 (2026-11-26)：統一 AI 匯出升級與 `?v=20261126_2` — 接入共用核心 `ai_export_core.js` 彈窗模式 (`openExportModal`)、補齊 `g6_english_logs` v2 欄位並保留既有 `/g6_english_users` 與正式帳號零異動。
 
 ---
 
@@ -596,3 +597,9 @@
 - **雙軌驗收結果（P6）**：
   - 自動化腳本：`verify_phase_1.js`, `verify_phase_2.js`, `verify_phase_3.js`, `verify_phase_12.js` (`PASS: 191 | FAIL: 0`) 全數 0 Failures。
   - 實機 Chromium (`1080×680` iPad 橫向)：Console `0` Error；W13/W12 膠囊切換、W12 真卷 18 關抓錯、`RWW6_U06` 段落盲聽翻牌前零英文洩漏、1.30x 大字體下 `.vb-card` 寬 `589.23px <= 714.13px` 無水平溢位、以及 Week 13 A4 出卷預覽皆通過驗證。
+
+---
+
+### [#MEM-27] 27. 階段二十七 (2026-11-26)：統一 AI 匯出升級與 `?v=20261126_2`
+- **統一匯出核心升級**：引入共用核心 `ai_export_core.js`（`subjectKey: 'g6_english'`、`logsNode: 'g6_english_logs'`），透過 `#nav-export` 呼叫 `window.AIExportCore.openExportModal()` 彈窗（結合 `allQuestionsMap`、`errorBook`、`errorCounts`、`slowCounts`、`slowIds`、`recent_answer_logs` 與 `fullHistory`），支援時間區間篩選、逐題勾選、自動分卷/整份切換與雲端 `$key` 按需拉取。
+- **`g6_english_logs` v2 補齊與資料保全**：`recordQuestionAttempt` 補齊做法 B+ `v: 2` 欄位寫入本機 `recent_answer_logs`（上限 300 筆）與雲端 `/g6_english_logs/{uid}`；`index.html` 靜態資源推進至 `?v=20261126_2`，保留既有 `/g6_english_users` 與正式帳號零異動。
