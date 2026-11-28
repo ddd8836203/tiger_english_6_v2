@@ -1,10 +1,10 @@
 # 專案執行對話與歷程完整記憶檔 (memory.log)
 
 ⚡ 0. 當下狀態快照 (TL;DR Current Snapshot)
-- **最後更新**：2026-11-26
-- **最新里程碑**：**統一 AI 匯出升級 (`ai_export_core.js` ＋ `openExportModal` ＋ `g6_english_logs` v2 補齊) 與資源防快取推進至 `?v=20261126_2`**；保留既有 `/g6_english_users` 與正式帳號零異動。
-- **最近一次上線**：GitHub `https://github.com/ddd8836203/tiger_english_6_v2`（`main` 與 `origin/main` 同步，本機新增統一 AI 匯出升級待確認後推送）。
-- **Next Actions**：待使用者確認更新後再行推送 `?v=20261126_2`。
+- **最後更新**：2026-11-28
+- **最新里程碑**：**Phase 13 (`PLAN_W14_4D_Sprint` P0~P6) 全自動完工 — 新增 Week 14 (`12/02`) 四科全真衝刺 (`OD3_U17` 20 字對齊 Spelling Bee + `ODG3_U17` + `ODG3_U16` 跨單元 + `WR3_U07` = 145 題)、W14/W13/W12 三週膠囊切換 (`?v=20261128_p13`)，全數通過 `verify_phase_1/2/3/13.js` 與 `1080×680` 實機瀏覽器驗收**。
+- **最近一次上線**：GitHub `https://github.com/ddd8836203/tiger_english_6_v2`（當前位於本機 `feat/w14-4d-sprint`，基準 Tag `pre-w14-4d-sprint`，待使用者確認後合併 `main` 並推送）。
+- **Next Actions**：待使用者確認後執行合併與 `git push`。
 
 ---
 
@@ -36,6 +36,7 @@
 - [#MEM-25] 階段二十五 (2026-11-18)：執行 Phase 11 — 依 10.2 吋 iPad 橫向回饋先建置 A/B 互動原型確認方向，隨即落地 4 段雙層字體控制器、A 雙欄／B 單欄可切換課文、專注閱讀、護眼暖紙底、1080px 文法單欄、2×2 測驗網格與抓錯 CSS 修復，通過 `verify_phase_1..11.js` 與 1080×680 實機瀏覽器測試。
 - [#MEM-26] 階段二十六 (2026-11-22)：執行 Phase 12 (`PLAN_W13_4D_Sprint` P0~P7) — 數位化 W12 真卷 Page 25–26 (`38/46`)、建立 `4D_英文科_出題與詳解規範.md`、升級前端 `SPRINT_WEEKS` 週次切換膠囊與 D4 視覺圖解渲染器、新建 `RWW6_U06` 段落逐句盲聽 (`passage_dictation`) 並依真卷盲點校正 W12/W13 模擬考與 Mistake Buster，全數通過 `verify_phase_1/2/3/12.js` 與 `1080×680` 實機瀏覽器驗收。
 - [#MEM-27] 階段二十七 (2026-11-26)：統一 AI 匯出升級與 `?v=20261126_2` — 接入共用核心 `ai_export_core.js` 彈窗模式 (`openExportModal`)、補齊 `g6_english_logs` v2 欄位並保留既有 `/g6_english_users` 與正式帳號零異動。
+- [#MEM-28] 階段二十八 (2026-11-28)：執行 Phase 13 (`PLAN_W14_4D_Sprint` P0~P6) — 補抽 WR3 U7 p.60–61、平行建置 `OD3_U17`（20 字 100% 唯讀對齊 Spelling Bee 且 6 個 `look` 片語零洩漏）、`ODG3_U17`、`WR3_U07` 與升級 `ODG3_U16` (39 題)，上線 W14/W13/W12 三週膠囊 (`WEEK14_ALL=145`, `?v=20261128_p13`) 並通過 `verify_phase_1/2/3/13.js` 與 `1080×680` 實機瀏覽器驗收。
 
 ---
 
@@ -603,3 +604,21 @@
 ### [#MEM-27] 27. 階段二十七 (2026-11-26)：統一 AI 匯出升級與 `?v=20261126_2`
 - **統一匯出核心升級**：引入共用核心 `ai_export_core.js`（`subjectKey: 'g6_english'`、`logsNode: 'g6_english_logs'`），透過 `#nav-export` 呼叫 `window.AIExportCore.openExportModal()` 彈窗（結合 `allQuestionsMap`、`errorBook`、`errorCounts`、`slowCounts`、`slowIds`、`recent_answer_logs` 與 `fullHistory`），支援時間區間篩選、逐題勾選、自動分卷/整份切換與雲端 `$key` 按需拉取。
 - **`g6_english_logs` v2 補齊與資料保全**：`recordQuestionAttempt` 補齊做法 B+ `v: 2` 欄位寫入本機 `recent_answer_logs`（上限 300 筆）與雲端 `/g6_english_logs/{uid}`；`index.html` 靜態資源推進至 `?v=20261126_2`，保留既有 `/g6_english_users` 與正式帳號零異動。
+
+---
+
+### [#MEM-28] 28. 階段二十八 (2026-11-28)：Phase 13 Week 14 四科衝刺、Spelling Bee 20 字對齊與三週切換閉環 (✅ 全數通過 `verify_phase_1/2/3/13.js` + `1080×680` 實機瀏覽器驗收)
+- **先計畫後施工與安全網 (`AGENTS.md` §1/§5)**：
+  - 建立 `./plans/PLAN_W14_4D_Sprint.md`，建立還原 Tag `pre-w14-4d-sprint` 並切換分支 `feat/w14-4d-sprint`。
+  - 補抽 `Write right 3_05_08.pdf` 第 23–24 頁（`wr3_u5_pdf_p23.png`, `p24.png`，Unit 7 p.60–61）並建置 Test-First 總閘門 `verify_phase_13.js`（支援 `--data-only` 與完整渲染驗證）。
+- **四路平行模組化與跨專案唯讀對齊（P1~P2）**：
+  - **P1-A (`OD3_U17`, `od3_17`, `od3`)**：建立雙層 MD 與 `data/units/od3_u17.js`（20 字彙 100% 唯讀對齊 `Tiger_spelling Bee_6 年級` `d3_u17`、4 文法卡、3 段落、8 抓錯、36 題含 20 題零洩漏聽寫與 14 `visualBlock`；6 個 `look` 片語動詞全數 `________` 完整遮罩）。
+  - **P1-B (`ODG3_U17`, `gra3_17`, `gra3`)**：建立雙層 MD 與 `data/units/odg3_u17.js`（12 字彙含 10 動態介系詞、3 文法卡、3 段落、8 抓錯、34 題含 17 `visualBlock`）。
+  - **P1-C (`WR3_U07`, `wr3_7`, `wr3`)**：建立雙層 MD 與 `data/units/wr3_u07.js`（14 字彙含 8 大傷病過去式、4 文法卡、3 段落、10 抓錯、36 題含 3 大綱慰問卡寫作與 2 篇短文改錯及 15 `visualBlock`）。
+  - **P2 (`ODG3_U16`, `gra3_16`, `gra3`)**：保留既有 12 字彙、36 題與 `is_week12/is_week13: true`，新增 `is_week14: true` 與 3 題 U16×U17 跨單元介系詞＆祈使句辨析（總計 39 題 / 20 `visualBlock`）。
+- **編譯管線與前端三週切換（P3~P4）**：
+  - 升級 `build_exam_bank.js` 冪等編譯 `midterm_data.js`（23 單元：`WEEK12_ALL=177`, `WEEK13_ALL=109`, `WEEK14_ALL=145`, `TEA_QUIZ_REVIEW=174/76`）與 `english_data.js`（46 單元 / 745 單字 / 107 文法 / 179 段落 / 1,899 題庫，`v2.6.0-week14-4d`）。
+  - 更新 `app.js`：`SPRINT_WEEKS` 首位預設 `'w14'`（`12/02`，支援 W14/W13/W12 三週切換，`GLOBAL_KEYS.sprintWeek: 'eng_sprint_week_v2'`）、`week14_all` 路由、`WEEK14_UNIT_IDS` 徽章與 `BOOK_META` 全稱更新；`index.html` 五項核心靜態資源更新至 `?v=20261128_p13`。
+- **雙軌驗收結果（P5~P6）**：
+  - 自動化腳本：`verify_phase_1.js`, `verify_phase_2.js`, `verify_phase_3.js`, `verify_phase_13.js` 全數 `0 Failures`（`1,899` 題渲染 0 例外、`0` 孤立題型、20 字聽寫零洩漏）。
+  - 實機 Chromium (`1080×680`)：Console `0` Error；預設顯示 W14 四科 (`145` 題)、W13/W12 三週切換流暢、`OD3_U17` 20 題聽寫無洩漏、`ODG3_U17` `visualBlock` 於 `1.30x` 無水平溢位、W14 A4 出卷預覽正常。清理 `./temp/` 暫存並驗證跨專案 `Tiger_spelling Bee_6 年級` 零改動。

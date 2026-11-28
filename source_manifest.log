@@ -1,15 +1,15 @@
 # 教材與題庫資產清冊 (source_manifest.log)
 
 ⚡ 0. 當下狀態快照 (TL;DR Current Snapshot)
-- **最後更新**：2026-11-22
-- **總資產狀態**：**Phase 12 已完成並通過 `verify_phase_1/2/3/12.js` 驗收（`MIDTERM_DATABASE` 19 單元、`ENGLISH_DATA` 44 單元 / 719 單字 / 98 文法 / 174 段落 / 1,850 題庫，全庫聽寫與 `passage_dictation` 0 洩漏）**。
-- **本周必考清單 (Week 13 Quiz, 11/25 三, \*EL-3C)**：
-  1. `RWW6_U06`: Reading with Writing 6 U6 *The World of Orienteering* — `[✅ Phase 12 模組化]` (14 字彙 / 3 視覺文法卡 / 5 段落 / 8 抓錯 / **33 題**：5 段落盲聽 + 12 單字聽寫 + 4 手寫 + 12 選擇 / 12 `visualBlock`)
-  2. `ODG3_U16`: Oxford Discover Grammar 3 U16 *Food Facts* — `[✅ W12+W13 雙週強化]` (12 字彙 / 4 視覺文法卡 / 3 段落 / 13 抓錯 / **36 題**：6 聽寫 + 18 手寫含 8 題 `because` 造句 + 12 選擇 / 17 `visualBlock`)
-  3. `WR3_U06`: Write Right 3 U6 *A Great Person in History* — `[✅ W12+W13 雙週強化]` (14 字彙 / 4 視覺文法卡 / 4 段落 / 12 抓錯 / **37 題**：14 聽寫 + 15 手寫含 3 Outline 寫作 & 2 篇 W13 短文改錯預測 + 8 選擇 / 18 `visualBlock`)
-- **第 12 週實考真卷歸檔 & 模擬考升級**：
-  - `TEA_W12`（Page 25–26，Rex `38/46` = 82%）：10 題原卷重測 + 18 道紅筆抓錯已入庫 `TEA_QUIZ_REVIEW`（總計 174 題 / 76 抓錯）；`SPACE_CH06` 同步升級至 **37 題**（+5 Open-book `Explain` / 代名詞題、+5 Rex 真錯抓錯、14 `visualBlock`）。
-- **Next Actions**：待使用者確認後可推至 GitHub，或排程補完 `OD3 U13~U15` 與期中舊書 4D 升級。
+- **最後更新**：2026-11-28
+- **總資產狀態**：**Phase 13 已完成並通過 `verify_phase_1/2/3/13.js` 驗收（`MIDTERM_DATABASE` 23 單元、`ENGLISH_DATA` 46 單元 / 745 單字 / 107 文法 / 179 段落 / 1,899 題庫，`WEEK12_ALL=177`、`WEEK13_ALL=109`、`WEEK14_ALL=145`，全庫 1,899 題渲染 0 錯誤與聽寫零洩漏）**。
+- **本周必考清單 (Week 14 Quiz, 12/02 三, \*EL-3C)**：
+  1. `OD3_U17`: Oxford Discover 3 U17 *My Journey with Captain Magellan* — `[✅ Phase 13 模組化]` (`od3_17`, 20 字彙 **100% 唯讀對齊 Spelling Bee `d3_u17`** / 4 文法卡 / 3 段落 / 8 抓錯 / **36 題**：20 零洩漏聽寫 + 9 選擇 + 7 手寫 / 14 `visualBlock`)
+  2. `ODG3_U17`: Oxford Discover Grammar 3 U17 *Staying Safe* — `[✅ Phase 13 模組化]` (`gra3_17`, 12 字彙含 10 動態介系詞 / 3 文法卡 / 3 段落 / 8 抓錯 / **34 題**：6 聽寫 + 18 選擇 + 10 手寫 / 17 `visualBlock`)
+  3. `ODG3_U16`: Oxford Discover Grammar 3 U16 *Food Facts* — `[✅ W12+W13+W14 三週共用]` (`gra3_16`, 12 字彙保留不變 / 4 文法卡 / 3 段落 / 13 抓錯 / **39 題**：新增 3 題 U16×U17 跨單元介系詞＆祈使句辨析 / 20 `visualBlock`)
+  4. `WR3_U07`: Write Right 3 U7 *Hope You Feel Better* — `[✅ Phase 13 模組化]` (`wr3_7`, 14 字彙含 8 傷病過去式 / 4 文法卡 / 3 段落 / 10 抓錯 / **36 題**：10 聽寫 + 14 選擇 + 12 手寫含 3 大綱慰問卡＆2 短文改錯 / 15 `visualBlock`)
+- **補抽圖檔與參考對齊**：從 `Write right 3_05_08.pdf` 補抽 `wr3_u5_pdf_p23.png` (p.60) & `wr3_u5_pdf_p24.png` (p.61)；跨專案 `C:\@植善課業\AI\Tiger_spelling Bee_6 年級` 全程唯讀未改動。
+- **Next Actions**：待使用者確認後合併 `feat/w14-4d-sprint` 並推至 GitHub，或排程補完 `OD3 U13~U15` 與期中舊書 4D 升級。
 
 ---
 
@@ -20,6 +20,7 @@
 - [#MAN-4] 歷史考卷 (`W2~W7`) 與 Phase 5~8 待升級 4D 清冊：現有 W2~W7 10 頁考卷四層分離 MD 已上線，舊版 4 套書與 OD3 U13~15 排定 Phase 5~8 進行 4D 升級與 20 題精煉。
 - [#MAN-5] Phase 9~10 全庫 368 道聽寫零洩漏檢核與跨題富化資產清冊：完成 `odg3_u16`/`od3_u16`/`rww6_u09`/`space_ch06`/`wr3_u06` 遮罩、`TEA_QUIZ_REVIEW` 中文例句與三態標籤淨化及 `RWW6_U06/U08` 行號引用原文補齊。
 - [#MAN-6] Phase 12 (2026-11-22) Week 12 真卷數位化、`RWW6_U06` 段落盲聽與 W12/W13 模擬考全面校正清冊：產出 `IMG_4385/4386.jpg`、四層 MD、`tea_w12.js`、`rww6_u06.js` 與升級版 `odg3_u16`/`wr3_u06`/`space_ch06`（`WEEK12_ALL=174`, `WEEK13_ALL=106`）。
+- [#MAN-7] Phase 13 (2026-11-28) Week 14 四單元資產、WR3 p.60–61 補抽圖與 `OD3_U17` 20 字唯讀對齊清冊：補抽 `wr3_u5_pdf_p23~24.png`，新建 `od3_u17.js` / `odg3_u17.js` / `wr3_u07.js` 與雙層 MD，升級 `odg3_u16.js` 至 39 題（`WEEK14_ALL=145`）。
 
 ---
 
@@ -98,3 +99,16 @@
   - `wr3_u06.js` (`WR3_U06`, `is_week12: true, is_week13: true`)：12 抓錯 (+4)、37 題 (+3 題 Outline 三段傳記寫作 + 2 篇預判 W13 之 12–14 錯短文改錯，18 `visualBlock`)。
   - `space_ch06.js` (`SPACE_CH06`, `is_week12: true`)：13 抓錯 (+5)、37 題 (+5 題 Open-book `Explain your answer` & pronouns 思辨題，14 `visualBlock`)。
 - **規範文件**：新增 `4D_英文科_出題與詳解規範.md`，並修正 `4D_跨學科通用_深度出題與詳解總綱.md` 第 43 行錯字與非選擇題對接。
+
+---
+
+### [#MAN-7] 七、Phase 13 (2026-11-28) Week 14 四單元資產、WR3 p.60–61 補抽圖與 `OD3_U17` 20 字唯讀對齊清冊
+- **補抽原圖與素材確認**：
+  - `04_Write_Right_3/images/wr3_u5_pdf_p23.png` (p.60 Organizing / More Expressions) & `wr3_u5_pdf_p24.png` (p.61 Drafting / Writing Tip)，以 PyMuPDF `Matrix(2.2, 2.2)` 補抽完成。
+  - `01_Oxford_Discover_3/images/od3_p168~175.jpg` (8 頁) & `02_Oxford_Discover_Grammar_3/images/odg3_pdf_p075~078.png` (4 頁) 全數逐頁驗收。
+- **Week 14 單元模組清冊 (`data/units/` 與雙層 `.md`)**：
+  - `od3_u17.js` (`OD3_U17`, `od3_17`, `book_id: 'od3'`, `is_week14: true`)：20 字彙（精準對齊 `Tiger_spelling Bee_6 年級` `d3_u17` 唯讀清單）、3 段落、4 文法卡、8 抓錯、**36 題**（20 零洩漏 `spelling_listen` 含 6 個 `look` 片語動詞完整遮罩 + 9 選擇 + 7 手寫 / 14 `visualBlock`）。
+  - `odg3_u17.js` (`ODG3_U17`, `gra3_17`, `book_id: 'gra3'`, `is_week14: true`)：12 字彙（含 10 個動態介系詞）、3 段落、3 文法卡、8 抓錯、**34 題**（6 聽寫 + 18 選擇 + 10 手寫 / 17 `visualBlock`）。
+  - `odg3_u16.js` (`ODG3_U16`, `gra3_16`, `book_id: 'gra3'`, `is_week12: true, is_week13: true, is_week14: true`)：保留既有 12 字彙與 36 題，增補 3 題 U16 情緒介系詞 × U17 動態介系詞/祈使句辨析（總計 **39 題** / 20 `visualBlock`）。
+  - `wr3_u07.js` (`WR3_U07`, `wr3_7`, `book_id: 'wr3'`, `is_week14: true`)：14 字彙（8 大傷病不規則/規則過去式＋賀卡高頻詞）、3 段落、4 文法卡、10 抓錯、**36 題**（10 聽寫 + 14 選擇 + 12 手寫含 3 大綱慰問卡＆2 短文改錯 / 15 `visualBlock`）。
+- **編譯總量 (`v2.6.0-week14-4d`)**：`MIDTERM_DATABASE` 23 單元（`WEEK12_ALL=177`, `WEEK13_ALL=109`, `WEEK14_ALL=145`, `TEA_QUIZ_REVIEW=174/76`）；`ENGLISH_DATA` 46 單元 / 745 單字 / 107 文法 / 179 段落 / **1,899** 題庫。

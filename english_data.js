@@ -1,29 +1,36 @@
 /**
- * 六年級英語特訓系統 — 全域資料層 (v2.5.0 Week 13 KET-4D 整合版)
+ * 六年級英語特訓系統 — 全域資料層 (v2.6.0 Week 14 KET-4D 整合版)
  * 包含：7大記憶錨點單字卡、100% 課本完整原文、KET-4D 四維詳解、D4 視覺圖解與段落盲聽
  */
 const ENGLISH_DATA = {
   "metadata": {
-    "version": "2.5.0-week13-4d",
-    "generated_at": "2026-11-22",
+    "version": "2.6.0-week14-4d",
+    "generated_at": "2026-11-28",
     "total_books": 7,
-    "total_units": 44,
-    "total_vocab": 719,
-    "total_grammar": 98,
-    "total_reading": 174,
-    "total_quizzes": 1850,
-    "week12_quizzes": 174,
-    "week13_quizzes": 106
+    "total_units": 46,
+    "total_vocab": 745,
+    "total_grammar": 107,
+    "total_reading": 179,
+    "total_quizzes": 1899,
+    "week12_quizzes": 177,
+    "week13_quizzes": 109,
+    "week14_modules": [
+      "od3_17",
+      "gra3_17",
+      "gra3_16",
+      "wr3_7"
+    ],
+    "week14_quizzes": 145
   },
   "books": [
     {
       "book_id": "gra3",
-      "book_name": "📘 Oxford Discover Grammar 3 (含 Week 12–13 U16 & U13~U15)",
+      "book_name": "📘 Oxford Discover Grammar 3 (含 Week 14 U17 · Week 12–14 U16 & U13~U15)",
       "is_midterm": true
     },
     {
       "book_id": "wr3",
-      "book_name": "📝 Write Right Level 3 (含 Week 12–13 U6 & U4~U5)",
+      "book_name": "📝 Write Right Level 3 (含 Week 14 U7 · Week 12–13 U6 & U4~U5)",
       "is_midterm": true
     },
     {
@@ -43,7 +50,7 @@ const ENGLISH_DATA = {
     },
     {
       "book_id": "od3",
-      "book_name": "📚 Oxford Discover 3 (含 Week 12 U16 & 延伸 U7~U8)",
+      "book_name": "📚 Oxford Discover 3 (含 Week 14 U17 · Week 12 U16 & 延伸 U7~U8)",
       "is_midterm": true
     },
     {
@@ -262,13 +269,6 @@ const ENGLISH_DATA = {
     },
     {
       "book_id": "gra3",
-      "unit_id": "gra3_17",
-      "unit_title": "Unit 17 \"Staying Safe\"（祈使句 Imperatives &amp; 動態介系詞 Prepositions of Movement）",
-      "big_question": "",
-      "is_midterm": false
-    },
-    {
-      "book_id": "gra3",
       "unit_id": "gra3_18",
       "unit_title": "Unit 18 \"Exciting Expeditions\"（時態複習與助動詞 Want To / Need To / Have To）",
       "big_question": "",
@@ -338,6 +338,7 @@ const ENGLISH_DATA = {
       "is_midterm": true,
       "is_week12": true,
       "is_week13": true,
+      "is_week14": true,
       "midterm_unit_id": "ODG3_U16",
       "page_images": [
         "六年級上/課本/02_Oxford_Discover_Grammar_3/images/odg3_pdf_p070.png",
@@ -354,6 +355,7 @@ const ENGLISH_DATA = {
       "is_midterm": true,
       "is_week12": true,
       "is_week13": false,
+      "is_week14": false,
       "midterm_unit_id": "OD3_U16",
       "page_images": [
         "六年級上/課本/01_Oxford_Discover_3/images/od3_p156.jpg",
@@ -374,6 +376,7 @@ const ENGLISH_DATA = {
       "is_midterm": true,
       "is_week12": true,
       "is_week13": false,
+      "is_week14": false,
       "midterm_unit_id": "RWW6_U09",
       "page_images": [
         "六年級上/課本/03_Reading_with_Writing_6/images/rww6_u710_pdf_p15.png",
@@ -392,6 +395,7 @@ const ENGLISH_DATA = {
       "is_midterm": true,
       "is_week12": true,
       "is_week13": false,
+      "is_week14": false,
       "midterm_unit_id": "SPACE_CH06",
       "page_images": [
         "六年級上/課本/05_Read_and_Discover_6_Space/images/space_pdf_p24.png",
@@ -410,6 +414,7 @@ const ENGLISH_DATA = {
       "is_midterm": true,
       "is_week12": true,
       "is_week13": true,
+      "is_week14": false,
       "midterm_unit_id": "WR3_U06",
       "page_images": [
         "六年級上/課本/04_Write_Right_3/images/wr3_u5_pdf_p09.png",
@@ -430,12 +435,72 @@ const ENGLISH_DATA = {
       "is_midterm": true,
       "is_week12": false,
       "is_week13": true,
+      "is_week14": false,
       "midterm_unit_id": "RWW6_U06",
       "page_images": [
         "六年級上/課本/03_Reading_with_Writing_6/images/rww6_u36_pdf_p21.png",
         "六年級上/課本/03_Reading_with_Writing_6/images/rww6_u36_pdf_p22.png",
         "六年級上/課本/03_Reading_with_Writing_6/images/rww6_u36_pdf_p23.png",
         "六年級上/課本/03_Reading_with_Writing_6/images/rww6_u36_pdf_p24.png"
+      ]
+    },
+    {
+      "book_id": "od3",
+      "unit_id": "od3_17",
+      "unit_title": "⛵ Week 14 · Unit 17: My Journey with Captain Magellan",
+      "big_question": "Why do we explore? — Weather & Landforms, Prepositions of Movement, Phrasal Verbs with Look & Before/After",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "midterm_unit_id": "OD3_U17",
+      "page_images": [
+        "六年級上/課本/01_Oxford_Discover_3/images/od3_p168.jpg",
+        "六年級上/課本/01_Oxford_Discover_3/images/od3_p169.jpg",
+        "六年級上/課本/01_Oxford_Discover_3/images/od3_p170.jpg",
+        "六年級上/課本/01_Oxford_Discover_3/images/od3_p171.jpg",
+        "六年級上/課本/01_Oxford_Discover_3/images/od3_p172.jpg",
+        "六年級上/課本/01_Oxford_Discover_3/images/od3_p173.jpg",
+        "六年級上/課本/01_Oxford_Discover_3/images/od3_p174.jpg",
+        "六年級上/課本/01_Oxford_Discover_3/images/od3_p175.jpg"
+      ]
+    },
+    {
+      "book_id": "gra3",
+      "unit_id": "gra3_17",
+      "unit_title": "🌪️ Week 14 · Unit 17: Staying Safe (Imperatives & Prepositions of Movement)",
+      "big_question": "How can we give clear safety instructions and directions using Imperatives and Prepositions of Movement?",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "midterm_unit_id": "ODG3_U17",
+      "page_images": [
+        "六年級上/課本/02_Oxford_Discover_Grammar_3/images/odg3_pdf_p075.png",
+        "六年級上/課本/02_Oxford_Discover_Grammar_3/images/odg3_pdf_p076.png",
+        "六年級上/課本/02_Oxford_Discover_Grammar_3/images/odg3_pdf_p077.png",
+        "六年級上/課本/02_Oxford_Discover_Grammar_3/images/odg3_pdf_p078.png"
+      ]
+    },
+    {
+      "book_id": "wr3",
+      "unit_id": "wr3_7",
+      "unit_title": "💌 Week 14 · Unit 07: Hope You Feel Better",
+      "big_question": "How do we write a warm, well-structured get-well card using accurate past-tense expressions?",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "midterm_unit_id": "WR3_U07",
+      "page_images": [
+        "六年級上/課本/04_Write_Right_3/images/wr3_u5_pdf_p17.png",
+        "六年級上/課本/04_Write_Right_3/images/wr3_u5_pdf_p18.png",
+        "六年級上/課本/04_Write_Right_3/images/wr3_u5_pdf_p19.png",
+        "六年級上/課本/04_Write_Right_3/images/wr3_u5_pdf_p20.png",
+        "六年級上/課本/04_Write_Right_3/images/wr3_u5_pdf_p21.png",
+        "六年級上/課本/04_Write_Right_3/images/wr3_u5_pdf_p22.png",
+        "六年級上/課本/04_Write_Right_3/images/wr3_u5_pdf_p23.png",
+        "六年級上/課本/04_Write_Right_3/images/wr3_u5_pdf_p24.png"
       ]
     }
   ],
@@ -1346,42 +1411,6 @@ const ENGLISH_DATA = {
       "sequence": 111,
       "eng": "Modern instruments aren't as easy to play as the earliest instruments, but they make great sounds! Modern music is as interesting as traditional or classical music, because it is part of our amazing musical history.",
       "chi": "現代樂器不像最早的樂器那麼容易演奏，但它們能發出很棒的聲音！現代音樂和傳統音樂或古典音樂一樣有趣，因為它是我們驚人音樂歷史的一部分。",
-      "exp_eng": "",
-      "exp_chi": ""
-    },
-    {
-      "book_id": "gra3",
-      "unit_id": "gra3_17",
-      "sequence": 154,
-      "eng": "What Do You Do in a Hurricane? Before a Hurricane: Bring garden furniture into the house. Put boards over your windows. Get some money from the bank. Get a first-aid kit, some cans of food, and some bottles of water from the supermarket.",
-      "chi": "颱風來時你該怎麼做？颱風來臨前：將花園家具搬進屋裡。在窗戶上釘上木板。去銀行領一些錢。從超市購買急救箱、一些罐頭食品和幾瓶水。",
-      "exp_eng": "",
-      "exp_chi": ""
-    },
-    {
-      "book_id": "gra3",
-      "unit_id": "gra3_17",
-      "sequence": 155,
-      "eng": "During a Hurricane: Go into a building and stay there. If your home is in a low area, go up to a higher place or go to a hurricane shelter. Listen to the radio. If it's time to get out of the area, follow instructions and leave.",
-      "chi": "颱風期間：進入建築物並留在那裡。如果你的家在低窪地區，請前往較高的地方或去防颱避難所。收聽收音機。如果是時候離開該地區，請遵循指示離開。",
-      "exp_eng": "",
-      "exp_chi": ""
-    },
-    {
-      "book_id": "gra3",
-      "unit_id": "gra3_17",
-      "sequence": 156,
-      "eng": "After a Hurricane: Don't drive through flooding water. Don't walk under damaged trees, buildings, or bridges.",
-      "chi": "颱風過後：不要開車駛過積水淹水區。不要走在受損的樹木、建築物或橋樑下方。",
-      "exp_eng": "",
-      "exp_chi": ""
-    },
-    {
-      "book_id": "gra3",
-      "unit_id": "gra3_17",
-      "sequence": 157,
-      "eng": "Emergency Directions: Excuse me. How do you get from the police station to the school? Go up the steps. Walk through the park. Go along the road. Go over the bridge.",
-      "chi": "緊急路線指引：打擾一下。請問要怎麼從警察局走到學校？走上台階。穿過公園。沿著馬路走。過橋。",
       "exp_eng": "",
       "exp_chi": ""
     },
@@ -2327,7 +2356,8 @@ const ENGLISH_DATA = {
       "exp_eng": "",
       "exp_chi": "",
       "is_week12": true,
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": true
     },
     {
       "book_id": "gra3",
@@ -2397,7 +2427,8 @@ const ENGLISH_DATA = {
       "exp_eng": "",
       "exp_chi": "",
       "is_week12": true,
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": true
     },
     {
       "book_id": "gra3",
@@ -2493,7 +2524,8 @@ const ENGLISH_DATA = {
       "exp_eng": "",
       "exp_chi": "",
       "is_week12": true,
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": true
     },
     {
       "book_id": "od3",
@@ -2599,7 +2631,8 @@ const ENGLISH_DATA = {
       "exp_eng": "",
       "exp_chi": "",
       "is_week12": true,
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "book_id": "od3",
@@ -2713,7 +2746,8 @@ const ENGLISH_DATA = {
       "exp_eng": "",
       "exp_chi": "",
       "is_week12": true,
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "book_id": "od3",
@@ -2781,7 +2815,8 @@ const ENGLISH_DATA = {
       "exp_eng": "",
       "exp_chi": "",
       "is_week12": true,
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "book_id": "rw6",
@@ -2829,7 +2864,8 @@ const ENGLISH_DATA = {
       "exp_eng": "",
       "exp_chi": "",
       "is_week12": true,
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "book_id": "rw6",
@@ -2927,7 +2963,8 @@ const ENGLISH_DATA = {
       "exp_eng": "",
       "exp_chi": "",
       "is_week12": true,
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "book_id": "rw6",
@@ -2991,7 +3028,8 @@ const ENGLISH_DATA = {
       "exp_eng": "",
       "exp_chi": "",
       "is_week12": true,
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "book_id": "rd6",
@@ -3061,7 +3099,8 @@ const ENGLISH_DATA = {
       "exp_eng": "",
       "exp_chi": "",
       "is_week12": true,
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "book_id": "rd6",
@@ -3127,7 +3166,8 @@ const ENGLISH_DATA = {
       "exp_eng": "",
       "exp_chi": "",
       "is_week12": true,
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "book_id": "rd6",
@@ -3201,7 +3241,8 @@ const ENGLISH_DATA = {
       "exp_eng": "",
       "exp_chi": "",
       "is_week12": true,
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "book_id": "rd6",
@@ -3263,7 +3304,8 @@ const ENGLISH_DATA = {
       "exp_eng": "",
       "exp_chi": "",
       "is_week12": true,
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "book_id": "wr3",
@@ -3337,7 +3379,8 @@ const ENGLISH_DATA = {
       "exp_eng": "",
       "exp_chi": "",
       "is_week12": true,
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": false
     },
     {
       "book_id": "wr3",
@@ -3401,7 +3444,8 @@ const ENGLISH_DATA = {
       "exp_eng": "",
       "exp_chi": "",
       "is_week12": true,
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": false
     },
     {
       "book_id": "wr3",
@@ -3465,7 +3509,8 @@ const ENGLISH_DATA = {
       "exp_eng": "",
       "exp_chi": "",
       "is_week12": true,
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": false
     },
     {
       "book_id": "wr3",
@@ -3529,7 +3574,8 @@ const ENGLISH_DATA = {
       "exp_eng": "",
       "exp_chi": "",
       "is_week12": true,
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": false
     },
     {
       "book_id": "rw6",
@@ -3581,7 +3627,8 @@ const ENGLISH_DATA = {
       "exp_eng": "",
       "exp_chi": "",
       "is_week12": false,
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": false
     },
     {
       "book_id": "rw6",
@@ -3625,7 +3672,8 @@ const ENGLISH_DATA = {
       "exp_eng": "",
       "exp_chi": "",
       "is_week12": false,
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": false
     },
     {
       "book_id": "rw6",
@@ -3669,7 +3717,8 @@ const ENGLISH_DATA = {
       "exp_eng": "",
       "exp_chi": "",
       "is_week12": false,
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": false
     },
     {
       "book_id": "rw6",
@@ -3709,7 +3758,8 @@ const ENGLISH_DATA = {
       "exp_eng": "",
       "exp_chi": "",
       "is_week12": false,
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": false
     },
     {
       "book_id": "rw6",
@@ -3757,7 +3807,559 @@ const ENGLISH_DATA = {
       "exp_eng": "",
       "exp_chi": "",
       "is_week12": false,
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": false
+    },
+    {
+      "book_id": "od3",
+      "unit_id": "od3_17",
+      "sequence": 1,
+      "section_title": "My Journey with Captain Magellan: Part 1 — Departure & The Strait (啟航大西洋與穿越麥哲倫海峽)",
+      "eng": "Juan is a ten-year-old boy traveling on Ferdinand Magellan's ship, the Trinidad. Magellan is an explorer from Portugal who wants to sail west to find a new route to Indonesia. Europeans go to Indonesia to trade for spices. Juan writes about his trip in his journal. September 20, 1519: We sail from Spain today, with 250 men and five ships! The sky is blue, and the clouds are white. I am not afraid. Captain Magellan is a brave man. I brought him his dinner of salted beef and beans. He gave me a coin. The five ships sail toward South America. The journey is long. There are many storms with thunder and lightning. In November, the ships can't move because there is no wind to fill the sails. November 10, 1519: The ocean is different today. It looks like glass. Every day, Captain Magellan says, \"Juan, go up to the deck and check the sails.\" I always go up and look around and bring back the same news. There is no wind. The ships reach the coast of South America in December 1519. They stay there for one year. Then they sail through a narrow area of water called a strait and reach the Pacific Ocean. They lose one ship in a storm. Another ship sails back to Spain. November 27, 1520: We are in a new ocean! Captain Magellan calls it the Pacific Ocean. I am sad to leave this land. Winter was cold and windy, with fog and hail, but I saw many rivers and beautiful waterfalls. Now it is spring. It is time to sail west again.",
+      "chi": "Juan 是一位十歲的小男孩，搭乘著費迪南德·麥哲倫的船艦「千里達號」出航。麥哲倫是一位來自葡萄牙的探險家，想向西航行尋找前往印尼的新航線。歐洲人前往印尼進行香料貿易。Juan 把這趟旅程記錄在他的日記裡。1519 年 9 月 20 日：今天我們帶著 250 名船員與五艘船從西班牙啟航！天空湛藍，白雲朵朵。我並不害怕。麥哲倫船長是個勇敢的人。我端了鹹牛肉和豆子給他當晚餐，他給了我一枚硬幣。五艘船駛向南美洲。這趟旅程十分漫長。海上經常出現伴隨雷鳴與閃電的暴風雨。到了十一月，船隻因為沒有風可以吹鼓船帆而動彈不得。1519 年 11 月 10 日：今天的海面很不一樣，平靜得像玻璃一樣。每天麥哲倫船長都說：「Juan，上甲板去檢查船帆。」我總是走上去環顧四周，卻帶回同樣的消息：依然沒有風。船隊於 1519 年 12 月抵達南美洲海岸，並在那裡停留了一年。接著他們穿過一片名為海峽的狹窄水域，抵達了太平洋。他們在暴風雨中損失了一艘船，另一艘船則返航回到西班牙。1520 年 11 月 27 日：我們進入了一片新的大洋！麥哲倫船長稱它為太平洋。要離開這片陸地讓我有點難過。冬天寒冷又多風，伴隨著濃霧與冰雹，但我看見了許多河流與美麗的瀑布。現在春天來了，又是再次向西航行的時刻了。",
+      "sentences": [
+        {
+          "en": "Juan is a ten-year-old boy traveling on Ferdinand Magellan's ship, the Trinidad.",
+          "zh": "Juan 是一位十歲的小男孩，正搭乘費迪南德·麥哲倫的船艦「千里達號」航行。"
+        },
+        {
+          "en": "Magellan is an explorer from Portugal who wants to sail west to find a new route to Indonesia.",
+          "zh": "麥哲倫是一位來自葡萄牙的探險家，想向西航行以尋找通往印尼的新航線。"
+        },
+        {
+          "en": "We sail from Spain today, with 250 men and five ships! The sky is blue, and the clouds are white.",
+          "zh": "今天我們帶著 250 名船員和五艘船從西班牙啟航！天空湛藍，白雲朵朵。"
+        },
+        {
+          "en": "There are many storms with thunder and lightning. In November, the ships can't move because there is no wind to fill the sails.",
+          "zh": "海上有很多伴隨雷聲與閃電的暴風雨。到了十一月，因為沒有風吹動船帆，船隻無法前進。"
+        },
+        {
+          "en": "Every day, Captain Magellan says, \"Juan, go up to the deck and check the sails.\" I always go up and look around and bring back the same news.",
+          "zh": "每天麥哲倫船長都會說：「Juan，走上甲板檢查船帆。」我總是上去環顧四周，帶回同樣的消息。"
+        },
+        {
+          "en": "Then they sail through a narrow area of water called a strait and reach the Pacific Ocean.",
+          "zh": "接著他們航行穿過一片稱為海峽的狹窄水域，抵達了太平洋。"
+        },
+        {
+          "en": "Winter was cold and windy, with fog and hail, but I saw many rivers and beautiful waterfalls.",
+          "zh": "冬天寒冷又刮著大風，伴有濃霧與冰雹，但我見到了許多河流與美麗的瀑布。"
+        }
+      ],
+      "key_sentences": [
+        {
+          "sentence": "Juan, go up to the deck and check the sails. I always go up and look around.",
+          "tag": "⭐ Week 14 核心考點",
+          "note": "移動介系詞 go up to（向上走到某處）與片語動詞 look around（環顧四周，朝各方向看）。",
+          "point": "移動介系詞 go up to（向上走到某處）與片語動詞 look around（環顧四周，朝各方向看）。"
+        },
+        {
+          "sentence": "Then they sail through a narrow area of water called a strait and reach the Pacific Ocean.",
+          "tag": "⭐ Week 14 核心考點",
+          "note": "空間介系詞 through 表示「從狹窄水域的一端穿過到另一端」；strait 定義為連接兩片海域的狹窄水道。",
+          "point": "空間介系詞 through 表示「從狹窄水域的一端穿過到另一端」；strait 定義為連接兩片海域的狹窄水道。"
+        }
+      ],
+      "exp_eng": "",
+      "exp_chi": "",
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true
+    },
+    {
+      "book_id": "od3",
+      "unit_id": "od3_17",
+      "sequence": 2,
+      "section_title": "My Journey with Captain Magellan: Part 2 — Across the Pacific & Return Home (橫渡太平洋與勝利歸航)",
+      "eng": "The trip is long. There is very little food and water. The men are not healthy, and some men die. The three ships reach the island of Guam on March 6, 1521. Then they sail west to other islands. April 27, 1521: Captain Magellan died today in a battle on the island of Mactan. We have lost a great man, but I must be strong. We must get back to Spain. Two ships remain. The men get to Indonesia on November 6, 1521. They fill the ships with spices. The Trinidad is damaged and can't sail. Only one ship sails back to Spain. Over 250 men started the journey, but only 18 men come home. September 6, 1522: We are home today, after three long years. I am now 13 years old. I will never forget Captain Magellan. I really looked up to him. I have sailed around the world. I have seen many new places and learned so much. I'm excited to tell everyone about my travels.",
+      "chi": "這趟航程非常漫長。食物和飲水所剩無幾。船員們都不太健康，有些人不幸過世了。剩下的三艘船於 1521 年 3 月 6 日抵達關島，隨後繼續向西航行前往其他島嶼。1521 年 4 月 27 日：麥哲倫船長今天在馬克坦島的一場戰役中陣亡了。我們失去了一位偉大的人，但我必須堅強起來。我們一定要回到西班牙。船隊只剩下兩艘船。船員們在 1521 年 11 月 6 日抵達印尼，並將船隻裝滿香料。千里達號受損嚴重無法航行，最後只有一艘船啟程返回西班牙。當初超過 250 人展開旅程，但只有 18 個人回到家鄉。1522 年 9 月 6 日：歷經漫長的三年後，我們今天終於回家了。我現在 13 歲了。我永遠不會忘記麥哲倫船長，我真的非常敬仰他。我已經航行繞了世界一圈。我見過許多新地方並學到了很多東西。我很興奮能把我的旅行故事告訴大家。",
+      "sentences": [
+        {
+          "en": "There is very little food and water. The men are not healthy, and some men die.",
+          "zh": "食物和水非常匱乏。船員們不再健康，有些人因此喪生。"
+        },
+        {
+          "en": "The three ships reach the island of Guam on March 6, 1521.",
+          "zh": "三艘船在 1521 年 3 月 6 日抵達了關島。"
+        },
+        {
+          "en": "Captain Magellan died today in a battle on the island of Mactan.",
+          "zh": "麥哲倫船長今天在馬克坦島的一場戰役中過世了。"
+        },
+        {
+          "en": "The Trinidad is damaged and can't sail. Only one ship sails back to Spain.",
+          "zh": "千里達號受損無法航行，最後只有一艘船航行返回西班牙。"
+        },
+        {
+          "en": "Over 250 men started the journey, but only 18 men come home.",
+          "zh": "超過 250 名男子展開這趟旅程，但最終只有 18 人平安回家。"
+        },
+        {
+          "en": "I will never forget Captain Magellan. I really looked up to him. I have sailed around the world.",
+          "zh": "我永遠不會忘記麥哲倫船長，我真的很敬重他。我已經航行環繞世界一圈了。"
+        }
+      ],
+      "key_sentences": [
+        {
+          "sentence": "Over 250 men started the journey, but only 18 men come home.",
+          "tag": "⭐ Week 14 核心考點",
+          "note": "轉折連接詞 but 對比出發與歸來的懸殊人數，凸顯大航海時代環球航行的艱險代價。",
+          "point": "轉折連接詞 but 對比出發與歸來的懸殊人數，凸顯大航海時代環球航行的艱險代價。"
+        },
+        {
+          "sentence": "I really looked up to him. I have sailed around the world.",
+          "tag": "⭐ Week 14 核心考點",
+          "note": "片語動詞 look up to 表示「敬仰、崇拜」；現在完成式 have sailed 強調直到此刻已完成環球壯舉的經歷。",
+          "point": "片語動詞 look up to 表示「敬仰、崇拜」；現在完成式 have sailed 強調直到此刻已完成環球壯舉的經歷。"
+        }
+      ],
+      "exp_eng": "",
+      "exp_chi": "",
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true
+    },
+    {
+      "book_id": "od3",
+      "unit_id": "od3_17",
+      "sequence": 3,
+      "section_title": "Grammar Comic, Map Skills & Before/After Study (問路漫畫、讀圖技巧與時間先後句型)",
+      "eng": "A map is a flat drawing of an area. Maps can help us to see the shape of landforms and understand where something is. Meanwhile, in the park, a hungry yellow bird asks, \"How do I get to the Pizza Palace? I'm hungry.\" His friend Harry replies, \"That's easy. Walk down this street, through the park, and around the pond.\" The yellow bird smiles and says, \"That isn't easy, Harry. This is easy!\" Then he calls on the phone: \"Hello, Pizza Palace? Can you deliver a cheese pizza to my school?\" On the ship, Juan also moves carefully to reach the deck: first, he gets out of bed, walks into the kitchen, goes down the stairs, crawls through the box, climbs up the ladder, and walks around the pole. In daily life, we also use before and after to show order: I studied hard before I took the test, and I took the test after I studied hard.",
+      "chi": "地圖是某個區域的平面繪圖，能幫助我們看清地形輪廓並理解事物所在的位置。同一時間在公園裡，飢腸轆轆的黃色小鳥問道：「我要怎麼去披薩皇宮？我好餓喔。」朋友 Harry 回答：「很簡單啊。沿著這條街往下走、穿過公園，再繞過池塘。」黃鳥笑著說：「那才不簡單呢，Harry。這樣才簡單！」接著他直接拿起電話撥打：「喂，請問是披薩皇宮嗎？可以幫我外送一份起司披薩到我們學校嗎？」在船上，Juan 要走上甲板也得依序經過各處：他先下床、走進廚房、走下樓梯、穿過木箱、爬上梯子，再繞過船柱。在日常生活中，我們也用 before 和 after 來表達事件先後：我在考試前努力讀書，也就是我在努力讀書之後去考試。",
+      "sentences": [
+        {
+          "en": "A map is a flat drawing of an area that helps us understand landforms and locations.",
+          "zh": "地圖是區域的平面繪圖，能幫助我們理解地形與位置。"
+        },
+        {
+          "en": "Walk down this street, through the park, and around the pond.",
+          "zh": "沿著這條街往下走、穿過公園，再繞過池塘。"
+        },
+        {
+          "en": "First, Juan gets out of bed, walks into the kitchen, and goes down the stairs.",
+          "zh": "首先，Juan 下床、走進廚房，然後走下樓梯。"
+        },
+        {
+          "en": "Then he crawls through the box, climbs up the ladder, and walks around the pole.",
+          "zh": "接著他鑽過木箱、爬上梯子，然後繞過柱子。"
+        },
+        {
+          "en": "I studied hard before I took the test, and I took the test after I studied hard.",
+          "zh": "我在考試前努力用功，也就是我在努力用功之後參加考試。"
+        }
+      ],
+      "key_sentences": [
+        {
+          "sentence": "Walk down this street, through the park, and around the pond.",
+          "tag": "⭐ Week 14 核心考點",
+          "note": "三個移動介系詞 down（沿著向下）、through（穿過內部空間）、around（繞過外圍）構成完整路線指引。",
+          "point": "三個移動介系詞 down（沿著向下）、through（穿過內部空間）、around（繞過外圍）構成完整路線指引。"
+        },
+        {
+          "sentence": "I studied hard before I took the test, and I took the test after I studied hard.",
+          "tag": "⭐ Week 14 核心考點",
+          "note": "before 連接後發生的事件，after 連接先發生的事件；互換連接詞時前後子句必須跟著對調。",
+          "point": "before 連接後發生的事件，after 連接先發生的事件；互換連接詞時前後子句必須跟著對調。"
+        }
+      ],
+      "exp_eng": "",
+      "exp_chi": "",
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true
+    },
+    {
+      "book_id": "gra3",
+      "unit_id": "gra3_17",
+      "sequence": 1,
+      "section_title": "颶風防災三階段指南 (What Do You Do in a Hurricane?)",
+      "eng": "Before a hurricane, bring garden furniture into the house and put boards over your windows. Get some money from the bank. Get a first-aid kit, some cans of food, and some bottles of water from the supermarket. During a hurricane, go into a building and stay there. If your home is in a low area, go up to a higher place or go to a hurricane shelter. Listen to the radio. If it is time to get out of the area, follow instructions and leave. After a hurricane, don't drive through flooding water. Don't walk under damaged trees, buildings, or bridges.",
+      "chi": "颶風來襲前，把花園家具搬進屋內，並在窗戶上釘好防護木板。從銀行領取一些現金。從超市購買急救箱、幾罐罐頭食物和幾瓶飲用水。颶風侵襲期間，進入建築物內並待在裡面。如果你的家位於低窪地區，請往高處移動或前往颶風避難所。收聽廣播電台；如果到了該撤離該區域的時候，請遵照指示並離開。颶風過後，切勿開車穿越積水路段，也不要走在受損的樹木、建築物或橋樑下方。",
+      "sentences": [
+        {
+          "en": "Before a hurricane, bring garden furniture into the house and put boards over your windows.",
+          "zh": "颶風來襲前，把花園家具搬進屋內，並在窗戶上釘好防護木板。"
+        },
+        {
+          "en": "Get some money from the bank.",
+          "zh": "從銀行領取一些現金。"
+        },
+        {
+          "en": "Get a first-aid kit, some cans of food, and some bottles of water from the supermarket.",
+          "zh": "從超市購買急救箱、幾罐罐頭食物和幾瓶飲用水。"
+        },
+        {
+          "en": "During a hurricane, go into a building and stay there.",
+          "zh": "颶風侵襲期間，進入建築物內並待在裡面。"
+        },
+        {
+          "en": "If your home is in a low area, go up to a higher place or go to a hurricane shelter.",
+          "zh": "如果你的家位於低窪地區，請往高處移動或前往颶風避難所。"
+        },
+        {
+          "en": "Listen to the radio.",
+          "zh": "收聽廣播電台。"
+        },
+        {
+          "en": "If it is time to get out of the area, follow instructions and leave.",
+          "zh": "如果到了該撤離該區域的時候，請遵照指示並離開。"
+        },
+        {
+          "en": "After a hurricane, don't drive through flooding water.",
+          "zh": "颶風過後，切勿開車穿越積水路段。"
+        },
+        {
+          "en": "Don't walk under damaged trees, buildings, or bridges.",
+          "zh": "不要走在受損的樹木、建築物或橋樑下方。"
+        }
+      ],
+      "key_sentences": [
+        {
+          "sentence": "Before a hurricane, bring garden furniture into the house and put boards over your windows.",
+          "tag": "⭐ Week 14 核心考點",
+          "note": "肯定祈使句以原形動詞 Bring / Put 開頭；into 表示搬入屋內，over 表示覆蓋於窗戶表面。",
+          "point": "肯定祈使句以原形動詞 Bring / Put 開頭；into 表示搬入屋內，over 表示覆蓋於窗戶表面。"
+        },
+        {
+          "sentence": "If your home is in a low area, go up to a higher place or go to a hurricane shelter.",
+          "tag": "⭐ Week 14 核心考點",
+          "note": "結合條件句與祈使句，up 與 to 標示往上前往安全避難處的方向。",
+          "point": "結合條件句與祈使句，up 與 to 標示往上前往安全避難處的方向。"
+        },
+        {
+          "sentence": "After a hurricane, don't drive through flooding water.",
+          "tag": "⭐ Week 14 核心考點",
+          "note": "否定祈使句使用 Don't + 原形動詞，through 表示從積水內部穿行通過。",
+          "point": "否定祈使句使用 Don't + 原形動詞，through 表示從積水內部穿行通過。"
+        },
+        {
+          "sentence": "Don't walk under damaged trees, buildings, or bridges.",
+          "tag": "⭐ Week 14 核心考點",
+          "note": "under 標示位於高處危險物正下方的空間位置，提醒災後避險。",
+          "point": "under 標示位於高處危險物正下方的空間位置，提醒災後避險。"
+        }
+      ],
+      "exp_eng": "",
+      "exp_chi": "",
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true
+    },
+    {
+      "book_id": "gra3",
+      "unit_id": "gra3_17",
+      "sequence": 2,
+      "section_title": "緊急避難地圖指路對話 (Emergency Map Directions)",
+      "eng": "A: Excuse me. How do you get from the police station to the school? B: Go up the steps. Walk through the park. Go along the road. Go over the bridge. A: Thanks! And how do you get from the drugstore to the police station? B: Go along the road, walk through the park, and go down the steps. Please stay safe in an emergency!",
+      "chi": "A：不好意思，請問從警察局要怎麼走到學校？B：走上階梯，穿過公園，沿著馬路直行，然後走過那座橋就到了。A：謝謝你！那從藥局要怎麼走到警察局呢？B：沿著馬路走，穿過公園，再走下階梯即可。在緊急情況下請務必注意安全！",
+      "sentences": [
+        {
+          "en": "A: Excuse me. How do you get from the police station to the school?",
+          "zh": "A：不好意思，請問從警察局要怎麼走到學校？"
+        },
+        {
+          "en": "B: Go up the steps.",
+          "zh": "B：走上階梯。"
+        },
+        {
+          "en": "Walk through the park.",
+          "zh": "穿過公園。"
+        },
+        {
+          "en": "Go along the road.",
+          "zh": "沿著馬路直行。"
+        },
+        {
+          "en": "Go over the bridge.",
+          "zh": "走過那座橋。"
+        },
+        {
+          "en": "A: Thanks! And how do you get from the drugstore to the police station?",
+          "zh": "A：謝謝你！那從藥局要怎麼走到警察局呢？"
+        },
+        {
+          "en": "B: Go along the road, walk through the park, and go down the steps.",
+          "zh": "B：沿著馬路走，穿過公園，再走下階梯。"
+        },
+        {
+          "en": "Please stay safe in an emergency!",
+          "zh": "在緊急情況下請務必注意安全！"
+        }
+      ],
+      "key_sentences": [
+        {
+          "sentence": "How do you get from the police station to the school?",
+          "tag": "⭐ Week 14 核心考點",
+          "note": "問路核心句型：from + 起點 + to + 終點。",
+          "point": "問路核心句型：from + 起點 + to + 終點。"
+        },
+        {
+          "sentence": "Go up the steps. Walk through the park. Go over the bridge.",
+          "tag": "⭐ Week 14 核心考點",
+          "note": "連續使用原形動詞祈使句指引路徑，搭配 up（往上）、through（穿過區域）、over（跨過橋面）。",
+          "point": "連續使用原形動詞祈使句指引路徑，搭配 up（往上）、through（穿過區域）、over（跨過橋面）。"
+        },
+        {
+          "sentence": "Please stay safe in an emergency!",
+          "tag": "⭐ Week 14 核心考點",
+          "note": "Please 置於句首直接接原形動詞 stay，展現禮貌且堅定的安全提醒。",
+          "point": "Please 置於句首直接接原形動詞 stay，展現禮貌且堅定的安全提醒。"
+        }
+      ],
+      "exp_eng": "",
+      "exp_chi": "",
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true
+    },
+    {
+      "book_id": "gra3",
+      "unit_id": "gra3_17",
+      "sequence": 3,
+      "section_title": "日常生活與戶外安全守則 (Everyday & Outdoor Safety Rules)",
+      "eng": "Please follow safety rules at home and outdoors. Don't jump on the bed, please. Take off your muddy boots before you come into the house. In the school hallway, please don't run. When you see a deep puddle after a storm, walk around the water instead of walking through it. Always look carefully when you walk over or under a stone bridge.",
+      "chi": "無論在家裡或戶外，請遵守安全守則。請不要在床上跳躍。進屋之前請先把沾滿泥巴的靴子脫掉。在學校走廊裡，請不要奔跑。當你在暴風雨後看見深水窪時，請繞著水窪外圍走，而不要直接踩進水裡穿過去。走過石橋上方或下方通道時，也請隨時留意周遭安全。",
+      "sentences": [
+        {
+          "en": "Please follow safety rules at home and outdoors.",
+          "zh": "無論在家裡或戶外，請遵守安全守則。"
+        },
+        {
+          "en": "Don't jump on the bed, please.",
+          "zh": "請不要在床上跳躍。"
+        },
+        {
+          "en": "Take off your muddy boots before you come into the house.",
+          "zh": "進屋之前請先把沾滿泥巴的靴子脫掉。"
+        },
+        {
+          "en": "In the school hallway, please don't run.",
+          "zh": "在學校走廊裡，請不要奔跑。"
+        },
+        {
+          "en": "When you see a deep puddle after a storm, walk around the water instead of walking through it.",
+          "zh": "當你在暴風雨後看見深水窪時，請繞著水窪外圍走，而不要直接踩進水裡穿過去。"
+        },
+        {
+          "en": "Always look carefully when you walk over or under a stone bridge.",
+          "zh": "走過石橋上方或下方通道時，也請隨時留意周遭安全。"
+        }
+      ],
+      "key_sentences": [
+        {
+          "sentence": "Don't jump on the bed, please.",
+          "tag": "⭐ Week 14 核心考點",
+          "note": "please 置於祈使句句尾時，前方必須加上逗號。",
+          "point": "please 置於祈使句句尾時，前方必須加上逗號。"
+        },
+        {
+          "sentence": "When you see a deep puddle after a storm, walk around the water instead of walking through it.",
+          "tag": "⭐ Week 14 核心考點",
+          "note": "對比 around（繞開外圍）與 through（穿越內部）兩種完全相反的移動路徑。",
+          "point": "對比 around（繞開外圍）與 through（穿越內部）兩種完全相反的移動路徑。"
+        }
+      ],
+      "exp_eng": "",
+      "exp_chi": "",
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true
+    },
+    {
+      "book_id": "wr3",
+      "unit_id": "wr3_7",
+      "sequence": 1,
+      "section_title": "Danny's Card (Model Text: Get-Well Card to Penny)",
+      "eng": "Hi Penny! How are you feeling? I was wondering why you missed school this past week. Then I heard from Jean that you fell down the stairs and broke your leg. I also heard that you were hospitalized for a few days. How awful! I hope your leg doesn't hurt too much. You must be bored staying at home all day. Do you need anything? If you want, I can bring you some comic books. Everyone in our class misses you. We all want you to come back. Get well soon! Danny",
+      "chi": "嗨，佩妮！你現在感覺怎麼樣？我一直在想你過去這一週為什麼沒來上學。後來我從珍那裡聽說你從樓梯摔下來而且摔斷了腿。我也聽說你住院住了幾天。真糟糕！我希望你的腿不會太痛。你整天待在家一定很無聊。你需要什麼嗎？如果你想要的話，我可以帶一些漫畫書給你。我們班上每個人都很想你。我們都希望你趕快回來。祝你早日康復！丹尼 敬上",
+      "sentences": [
+        {
+          "en": "Hi Penny! How are you feeling?",
+          "zh": "嗨，佩妮！你現在感覺怎麼樣？"
+        },
+        {
+          "en": "I was wondering why you missed school this past week.",
+          "zh": "我一直在想你過去這一週為什麼沒來上學。"
+        },
+        {
+          "en": "Then I heard from Jean that you fell down the stairs and broke your leg.",
+          "zh": "後來我從珍那裡聽說你從樓梯摔下來而且摔斷了腿。"
+        },
+        {
+          "en": "I also heard that you were hospitalized for a few days.",
+          "zh": "我也聽說你住院住了幾天。"
+        },
+        {
+          "en": "How awful! I hope your leg doesn't hurt too much.",
+          "zh": "真糟糕！我希望你的腿不會太痛。"
+        },
+        {
+          "en": "You must be bored staying at home all day.",
+          "zh": "你整天待在家一定很無聊。"
+        },
+        {
+          "en": "Do you need anything? If you want, I can bring you some comic books.",
+          "zh": "你需要什麼嗎？如果你想要的話，我可以帶一些漫畫書給你。"
+        },
+        {
+          "en": "Everyone in our class misses you.",
+          "zh": "我們班上每個人都很想你。"
+        },
+        {
+          "en": "We all want you to come back.",
+          "zh": "我們都希望你趕快回來。"
+        },
+        {
+          "en": "Get well soon! Danny",
+          "zh": "祝你早日康復！丹尼"
+        }
+      ],
+      "key_sentences": [
+        {
+          "sentence": "I was wondering why you missed school this past week.",
+          "tag": "⭐ Week 14 核心考點",
+          "note": "關懷詢問起手式：I was wondering why you + 過去式動詞...（表達先前一直在好奇原因）。",
+          "point": "關懷詢問起手式：I was wondering why you + 過去式動詞...（表達先前一直在好奇原因）。"
+        },
+        {
+          "sentence": "You must be bored staying at home all day.",
+          "tag": "⭐ Week 14 核心考點",
+          "note": "推測對方處境句型：You must be + 情緒形容詞 (bored) + V-ing...（人感到無聊用 bored）。",
+          "point": "推測對方處境句型：You must be + 情緒形容詞 (bored) + V-ing...（人感到無聊用 bored）。"
+        },
+        {
+          "sentence": "If you want, I can bring you some comic books.",
+          "tag": "⭐ Week 14 核心考點",
+          "note": "主動提供協助句型：If you want, I can + 原形動詞...。",
+          "point": "主動提供協助句型：If you want, I can + 原形動詞...。"
+        },
+        {
+          "sentence": "We all want you to come back.",
+          "tag": "⭐ Week 14 核心考點",
+          "note": "班級期盼句型：We all want + 人 + to + 原形動詞（不可漏掉不定詞 to）。",
+          "point": "班級期盼句型：We all want + 人 + to + 原形動詞（不可漏掉不定詞 to）。"
+        }
+      ],
+      "exp_eng": "",
+      "exp_chi": "",
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true
+    },
+    {
+      "book_id": "wr3",
+      "unit_id": "wr3_7",
+      "sequence": 2,
+      "section_title": "Cindy's Card (Model Practice: Get-Well Card to Chris)",
+      "eng": "Hi Chris! How are you feeling? I was wondering why you went to the nurse's office and left school early yesterday. Then I heard from our teacher that you had an allergic reaction after lunch. I also heard that you had a rash on your arms. How awful! I hope you feel better soon. You must be uncomfortable resting at home. Do you need anything? If you want, I can bring you your homework after school. Everyone in our class misses you. We all want you to get well soon. Take care! Cindy",
+      "chi": "嗨，克里斯！你現在感覺怎麼樣？我一直在想你昨天為什麼去保健室而且提早離開學校。後來我從老師那裡聽說你午餐後產生了過敏反應。我也聽說你手臂上起了紅疹。真糟糕！我希望你很快感覺好一點。你待在家裡休息一定很不舒服。你需要什麼嗎？如果你想要的話，我可以放學後把你的作業帶給你。我們班上每個人都很想你。我們都希望你早日康復。保重！辛蒂 敬上",
+      "sentences": [
+        {
+          "en": "Hi Chris! How are you feeling?",
+          "zh": "嗨，克里斯！你現在感覺怎麼樣？"
+        },
+        {
+          "en": "I was wondering why you went to the nurse's office and left school early yesterday.",
+          "zh": "我一直在想你昨天為什麼去保健室而且提早離開學校。"
+        },
+        {
+          "en": "Then I heard from our teacher that you had an allergic reaction after lunch.",
+          "zh": "後來我從老師那裡聽說你午餐後產生了過敏反應。"
+        },
+        {
+          "en": "I also heard that you had a rash on your arms.",
+          "zh": "我也聽說你手臂上起了紅疹。"
+        },
+        {
+          "en": "You must be uncomfortable resting at home.",
+          "zh": "你待在家裡休息一定很不舒服。"
+        },
+        {
+          "en": "If you want, I can bring you your homework after school.",
+          "zh": "如果你想要的話，我可以放學後把你的作業帶給你。"
+        },
+        {
+          "en": "Everyone in our class misses you. We all want you to get well soon.",
+          "zh": "我們班上每個人都很想你。我們都希望你早日康復。"
+        },
+        {
+          "en": "Take care! Cindy",
+          "zh": "保重！辛蒂"
+        }
+      ],
+      "key_sentences": [
+        {
+          "sentence": "I was wondering why you went to the nurse's office and left school early yesterday.",
+          "tag": "⭐ Week 14 核心考點",
+          "note": "不規則過去式連用：go -> went，leave -> left。",
+          "point": "不規則過去式連用：go -> went，leave -> left。"
+        },
+        {
+          "sentence": "Then I heard from our teacher that you had an allergic reaction after lunch.",
+          "tag": "⭐ Week 14 核心考點",
+          "note": "補充醫療表現與不定冠詞：had an allergic reaction（母音開頭用 an）與 had a rash。",
+          "point": "補充醫療表現與不定冠詞：had an allergic reaction（母音開頭用 an）與 had a rash。"
+        }
+      ],
+      "exp_eng": "",
+      "exp_chi": "",
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true
+    },
+    {
+      "book_id": "wr3",
+      "unit_id": "wr3_7",
+      "sequence": 3,
+      "section_title": "Leo's Card (Model Practice: Sports Accident & Eye Patch)",
+      "eng": "Hi Sam! How are you feeling? I was wondering why you missed basketball practice this week. Then I heard from Mike that you were hit by a ball and got a black eye. I also heard that you had an x-ray taken and had to wear an eye patch. How awful! I hope your face doesn't hurt too much. You must be hurting after hitting your head. Do you need anything? If you want, I can chat online with you tonight. Everyone on the team misses you. We all want you to return to school. Get well soon! Leo",
+      "chi": "嗨，山姆！你現在感覺怎麼樣？我一直在想你這週為什麼沒來籃球練習。後來我從麥克那裡聽說你被球打到而且得了黑輪眼。我也聽說你去照了 X 光還必須戴眼罩。真糟糕！我希望你的臉不會太痛。你撞到頭之後一定很痛。你需要什麼嗎？如果你想要的話，我今晚可以跟你線上聊天。球隊裡每個人都很想你。我們都希望你回到學校。祝你早日康復！里歐 敬上",
+      "sentences": [
+        {
+          "en": "Hi Sam! How are you feeling?",
+          "zh": "嗨，山姆！你現在感覺怎麼樣？"
+        },
+        {
+          "en": "Then I heard from Mike that you were hit by a ball and got a black eye.",
+          "zh": "後來我從麥克那裡聽說你被球打到而且得了黑輪眼。"
+        },
+        {
+          "en": "I also heard that you had an x-ray taken and had to wear an eye patch.",
+          "zh": "我也聽說你去照了 X 光而且必須戴上眼罩。"
+        },
+        {
+          "en": "You must be hurting after hitting your head.",
+          "zh": "你撞到頭之後一定很痛。"
+        },
+        {
+          "en": "If you want, I can chat online with you tonight.",
+          "zh": "如果你想要的話，我今晚可以跟你線上聊天。"
+        },
+        {
+          "en": "We all want you to return to school.",
+          "zh": "我們都希望你回到學校。"
+        }
+      ],
+      "key_sentences": [
+        {
+          "sentence": "Then I heard from Mike that you were hit by a ball and got a black eye.",
+          "tag": "⭐ Week 14 核心考點",
+          "note": "被動過去式與片語：were hit by a ball（被球擊中，hit 三態同形）；got a black eye（眼睛瘀青）。",
+          "point": "被動過去式與片語：were hit by a ball（被球擊中，hit 三態同形）；got a black eye（眼睛瘀青）。"
+        },
+        {
+          "sentence": "I also heard that you had an x-ray taken and had to wear an eye patch.",
+          "tag": "⭐ Week 14 核心考點",
+          "note": "x-ray 發音 /ˈɛksreɪ/ 為母音音素開頭，冠詞用 an；have to 過去式為 had to。",
+          "point": "x-ray 發音 /ˈɛksreɪ/ 為母音音素開頭，冠詞用 an；have to 過去式為 had to。"
+        }
+      ],
+      "exp_eng": "",
+      "exp_chi": "",
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true
     }
   ],
   "vocabulary": [
@@ -12602,346 +13204,6 @@ const ENGLISH_DATA = {
       "compare": "Piece (片/塊) vs. Peace (和平)。發音完全一樣（同音異義詞）。口訣：Give me a piece of cake in peace. (在和平中給我一塊蛋糕)。"
     },
     {
-      "id": "voc_541",
-      "book_id": "gra3",
-      "unit_id": "gra3_17",
-      "word": "Hurricane",
-      "pos": "名詞 (Noun)",
-      "chi": "颶風 / 強烈颱風",
-      "breakdown": "來自台雅語 (Taíno) juracán (風暴之神)。傳入西班牙語成為 huracán ，指伴隨強風大雨的旋風暴。",
-      "trick": "諧音「哈里肯」。聯想：哈利波特騎著掃帚「哈里」路過，「肯」定遇到了強烈的「颶風」！",
-      "scene": "天空烏雲密閉，狂風呼嘯，大樹被吹得狂搖，大雨像瀑布一樣傾盆而下。",
-      "collocation": "hurricane shelter (防颱避難所), hurricane warning (颶風警報), hurricane season (颶風季)",
-      "img": "🌀",
-      "context_eng": "A hurricane brings strong winds and heavy rain.",
-      "context_chi": "颶風會帶來強風和大雨。",
-      "chant": "狂風大雨哈里肯，颶風 (Hurricane) 來臨要留心！",
-      "compare": "Hurricane (颶風 - 發生在大西洋/東太平洋) vs. Typhoon (颱風 - 發生在西太平洋)。兩者 nominated 都是強烈熱帶氣旋！"
-    },
-    {
-      "id": "voc_542",
-      "book_id": "gra3",
-      "unit_id": "gra3_17",
-      "word": "Furniture",
-      "pos": "名詞 (Noun, 不可數名詞)",
-      "chi": "家具",
-      "breakdown": "字根 furn- (to provide/equip 提供/裝備) + -iture (名詞字尾)。源自法文 fournir，指房屋內裝備的器具。",
-      "trick": "諧音「富妮車」。聯想：「富」貴的「妮」妮用大「車」搬運豪華的「家具」。",
-      "scene": "搬家公司的卡車上，裝滿了木製的沙發、桌子、椅子和床架。",
-      "collocation": "garden furniture (花園家具), wooden furniture (木製家具), piece of furniture (一件家具)",
-      "img": "🛋️",
-      "context_eng": "Bring garden furniture into the house before the hurricane.",
-      "context_chi": "颱風來臨前，把花園家具搬進屋裡。",
-      "chant": "富妮車上載桌椅，搬運 家具 (Furniture) 莫著急！",
-      "compare": "Furniture (家具 - 不可數名詞，不能加 s) vs. Feature (特色)。注意 Furniture 不能寫成 furnitures！"
-    },
-    {
-      "id": "voc_543",
-      "book_id": "gra3",
-      "unit_id": "gra3_17",
-      "word": "Board",
-      "pos": "名詞 (Noun) / 動詞 (Verb: board, boarded, boarded)",
-      "chi": "木板 / 用木板封住 / 上車(船)",
-      "breakdown": "源自古英文 bord (木板/邊緣)。古代船隻由木板組成，故衍生出上船/上車的意思。",
-      "trick": "諧音「波德」。聯想：波德先生拿著厚厚的「木板」釘在窗戶上防風。",
-      "scene": "木匠拿著長方形的褐色木板和鐵釘，敲敲打打地固定在玻璃窗外。",
-      "collocation": "wooden board (木板), put boards over windows (用木板封住窗戶), board a plane (登機)",
-      "img": "🪵",
-      "context_eng": "Put boards over your windows to protect them from the storm.",
-      "context_chi": "在窗戶上釘上木板以保護它們不受風暴破壞。",
-      "chant": "波德拿木板，釘緊 木板 (Board) 防風浪！",
-      "compare": "Board (木板/登機) vs. Broad (寬廣的)。注意 r 的位置：Board 的 r 在 o 後面；Broad 的 r 在 b 後面！"
-    },
-    {
-      "id": "voc_544",
-      "book_id": "gra3",
-      "unit_id": "gra3_17",
-      "word": "First-aid kit",
-      "pos": "名詞 (Noun)",
-      "chi": "急救箱 / 急救包",
-      "breakdown": "first (第一時間) + aid (援助) + kit (工具包)。在受傷第一時間提供救助的工具包。",
-      "trick": "直譯聯想：First (第一時間) + aid (援助) + kit (工具箱)，合起來就是第一時間救命的急救箱！",
-      "scene": "一個印有白色紅十字的紅色小箱子，打開裡面有繃帶、消毒水、 OK 繃和剪刀。",
-      "collocation": "get a first-aid kit (準備急救箱), use a first-aid kit (使用急救箱)",
-      "img": "🩹",
-      "context_eng": "Get a first-aid kit from the supermarket before the storm.",
-      "context_chi": "風暴來臨前，從超市準備一個急救箱。",
-      "chant": "紅十字印在箱子上，急救箱 (First-aid kit) 護健康！",
-      "compare": "First-aid kit (急救箱) vs. Tool kit (工具箱 - 用於修理機械)。"
-    },
-    {
-      "id": "voc_545",
-      "book_id": "gra3",
-      "unit_id": "gra3_17",
-      "word": "Shelter",
-      "pos": "名詞 (Noun) / 動詞 (Verb: shelter, sheltered, sheltered)",
-      "chi": "避難所 / 遮蔽處 / 躲避",
-      "breakdown": "來自古英文 scild (盾牌)。像盾牌一樣保護人們不受風雨或危險侵襲的地方。",
-      "trick": "諧音「雪特」。聯想：「雪」下得「特」別大，大家快跑進「避難所」躲避！",
-      "scene": "風雨交加的夜裡，大家聚在堅固的體育館避難所裡，蓋著毛毯喝著熱湯。",
-      "collocation": "hurricane shelter (防颱避難所), animal shelter (動物收容所), shelter from the rain (躲雨)",
-      "img": "⛺",
-      "context_eng": "Go to a hurricane shelter if your home is in a low area.",
-      "context_chi": "如果你的家在低窪地區，請前往防颱避難所。",
-      "chant": "雪特大風雪，快進 避難所 (Shelter) 躲風雪！",
-      "compare": "Shelter (避難所/收容所) vs. Shield (盾牌)。兩者同字源，Shelter 是場所，Shield 是防具。"
-    },
-    {
-      "id": "voc_546",
-      "book_id": "gra3",
-      "unit_id": "gra3_17",
-      "word": "Instruction",
-      "pos": "名詞 (Noun)。由動詞 instruct 衍生。",
-      "chi": "指示 / 說明 / 指導",
-      "breakdown": "字首 in- (into 進入) + 字根 struct (build 建造/裝備) + 名詞字尾 -ion -> 建造進入腦中的指引規則。",
-      "trick": "諧音「硬斯特拉克閃」。聯想：長官發出「硬」性的「斯特拉克(Strick)」指令，「閃」開！大家聽從「指示」行動！",
-      "scene": "防災手冊上印著一列列清晰的條列式說明，告訴大家緊急時刻該怎麼做。",
-      "collocation": "follow instructions (遵循指示), safety instructions (安全說明), read the instructions (閱讀說明)",
-      "img": "📋",
-      "context_eng": "Follow safety instructions and leave the area if necessary.",
-      "context_chi": "遵守安全指示，必要時撤離該地區。",
-      "chant": "條列清楚真明瞭，遵守 指示 (Instruction) 不亂跑！",
-      "compare": "Instruction (指示/說明) vs. Instrument (樂器/儀器)。注意中間 struct 與 strum 的區別！"
-    },
-    {
-      "id": "voc_547",
-      "book_id": "gra3",
-      "unit_id": "gra3_17",
-      "word": "Flooding",
-      "pos": "形容詞 / 名詞 (Adj/Noun)",
-      "chi": "淹水的 / 淹水 / 洪水",
-      "breakdown": "動詞 flood (淹沒，源自古英文 flōd 滾滾流動的水) + -ing (形容詞/名詞字尾)。",
-      "trick": "諧音「伏路叮」。聯想：大水「伏」在馬「路」上，叮嚀大家「淹水的」道路不可開車通行！",
-      "scene": "大雨過後，馬路上積滿了混濁的黃水，淹過了車輪，木板漂浮在水面上。",
-      "collocation": "flooding water (積水/淹水區), flooding roads (淹水的道路), cause flooding (造成淹水)",
-      "img": "🌊",
-      "context_eng": "Don't drive through flooding water after a hurricane.",
-      "context_chi": "颱風過後，不要開車駛過淹水區。",
-      "chant": "黃水伏路淹過膝，淹水的 (Flooding) 道路莫行駛！",
-      "compare": "Flooding (淹水的/洪水名詞) vs. Flowing (流動的)。Flooding 指水量過大成災。"
-    },
-    {
-      "id": "voc_548",
-      "book_id": "gra3",
-      "unit_id": "gra3_17",
-      "word": "Damaged",
-      "pos": "形容詞 (Adj)。動詞為 damage。",
-      "chi": "受損的 / 損壞的",
-      "breakdown": "名詞/動詞 damage (損害，源自拉丁文 damnum 損失) + -ed (被...的) -> 受到破壞損失的。",
-      "trick": "諧音「大麥雞」。聯想：那隻「大麥」田里的「雞」被打雷嚇到，摔壞了「受損的」翅膀！",
-      "scene": "颱風過後，路邊的樹木斷成了兩截，建築物的玻璃窗碎了一地，橋樑出現了裂痕。",
-      "collocation": "damaged tree (受損的樹木), damaged building (受損的建築), damaged bridge (受損的橋樑)",
-      "img": "🏚️",
-      "context_eng": "Don't walk under damaged trees or buildings.",
-      "context_chi": "不要走在受損的樹木或建築物下方。",
-      "chant": "大麥雞翅受了傷，受損的 (Damaged) 房屋莫靠近！",
-      "compare": "Damaged (受損的/可修復的) vs. Destroyed (完全被摧毀的/無法修復的)。"
-    },
-    {
-      "id": "voc_549",
-      "book_id": "gra3",
-      "unit_id": "gra3_17",
-      "word": "Bridge",
-      "pos": "名詞 (Noun)",
-      "chi": "橋樑",
-      "breakdown": "源自古英文 brycg (木橋/橋樑)。連接兩岸以便通行的建築物。",
-      "trick": "諧音「不理局」。聯想：兩岸的人吵架「不理局」面，只好蓋一座「橋」來溝通！",
-      "scene": "高高的紅色鐵橋橫跨在寬廣的河流上方，車子在橋面上來來往往。",
-      "collocation": "go over the bridge (過橋), damaged bridge (受損的橋樑), build a bridge (建造橋樑)",
-      "img": "🌉",
-      "context_eng": "Don't walk under damaged bridges after the storm.",
-      "context_chi": "風暴過後，不要走在受損的橋樑下方。",
-      "chant": "橫跨大河不理局，跨越 橋樑 (Bridge) 去對岸！",
-      "compare": "Bridge (橋樑) vs. Fridge (冰箱)。首字母不同，但結尾發音相同的押韻字！"
-    },
-    {
-      "id": "voc_550",
-      "book_id": "gra3",
-      "unit_id": "gra3_17",
-      "word": "Imperative",
-      "pos": "名詞 / 形容詞 (Noun/Adj)",
-      "chi": "祈使句 / 命令的 / 緊急的",
-      "breakdown": "來自拉丁文 imperare (指揮/命令) -> imperativus (具有命令權威的)。文法中指給予指令的句型。",
-      "trick": "諧音「硬派瑞特」。聯想：教官用「硬派」的「瑞特」風格，發出「祈使句」命令！",
-      "scene": "英文課本上記錄著動詞原形開頭的句子，如 'Go!' 或 'Don't run!'，專門用來給指示。",
-      "collocation": "imperative sentence (祈使句), imperative mood (祈使語氣), urgent imperative (緊急指令)",
-      "img": "📢",
-      "context_eng": "Use imperatives like 'Go' or 'Stay' to give safety rules.",
-      "context_chi": "使用像 'Go' 或 'Stay' 這樣的祈使句來給予安全規則。",
-      "chant": "動詞原形大聲喊，祈使句 (Imperative) 下指令！",
-      "compare": "Imperative (祈使句/命令) vs. Important (重要的)。字首同為 imp-。"
-    },
-    {
-      "id": "voc_551",
-      "book_id": "gra3",
-      "unit_id": "gra3_17",
-      "word": "Movement",
-      "pos": "名詞 (Noun)。由動詞 move 衍生。",
-      "chi": "移動 / 運動 / 軌跡",
-      "breakdown": "動詞 move (移動，源自拉丁文 movere) + 名詞字尾 -ment -> 移動的狀態或過程。",
-      "trick": "諧音「木夫門特」。聯想：「木」頭人「夫」人在「門」口「特」地做了一個「移動」的動作！",
-      "scene": "地圖上的箭頭沿著馬路穿過公園，畫出一條條表示移動方向的軌跡。",
-      "collocation": "prepositions of movement (動態介系詞), body movement (肢體動作), slow movement (緩慢移動)",
-      "img": "🏃",
-      "context_eng": "Prepositions of movement show which direction you go.",
-      "context_chi": "動態介系詞顯示你移動的方向。",
-      "chant": "木夫門口做動作，方向 移動 (Movement) 看清楚！",
-      "compare": "Movement (移動/名詞) vs. Move (移動/動詞) vs. Movie (電影)。"
-    },
-    {
-      "id": "voc_552",
-      "book_id": "gra3",
-      "unit_id": "gra3_17",
-      "word": "Direction",
-      "pos": "名詞 (Noun)。由動詞 direct 衍生。",
-      "chi": "方向 / 指引 / 指導",
-      "breakdown": "字首 di- (apart/away) + 字根 rect (straight 直/引導) + -ion -> 指引出一條直線方向。",
-      "trick": "諧音「地瑞克閃」。聯想：「地」圖上的「瑞克」指示方向，叫大家快「閃」開危險！",
-      "scene": "指南針的針尖指向北方，路標上的箭頭清楚地標示著往東或往西的方向。",
-      "collocation": "give directions (給予指引), follow directions (遵循方向), in the right direction (朝正確的方向)",
-      "img": "🧭",
-      "context_eng": "Prepositions show the direction of your movement.",
-      "context_chi": "介系詞顯示你移動的方向。",
-      "chant": "指南針尖指北方，清楚 方向 (Direction) 莫迷路！",
-      "compare": "Direction (方向/指引) vs. Direct (直接的/指導動詞)。"
-    },
-    {
-      "id": "voc_553",
-      "book_id": "gra3",
-      "unit_id": "gra3_17",
-      "word": "Step",
-      "pos": "名詞 (Noun) / 動詞 (Verb: step, stepped, stepped)",
-      "chi": "台階 / 步驟 / 腳步",
-      "breakdown": "源自古英文 steppan (踏步)。腳踏一次的距離或梯子的一階。",
-      "trick": "諧音「死特」。聯想：這座陡峭的「台階」，需要「死特(特別)」小心踩踏！",
-      "scene": "警察局門口有石造的高高台階，你抬起腳一步一步踩著台階走上去。",
-      "collocation": "go up the steps (走上台階), step by step (一步一步), take a step (跨出一步)",
-      "img": "🪜",
-      "context_eng": "Go up the steps when you enter the police station.",
-      "context_chi": "走上台階進入警察局。",
-      "chant": "台階高高死特小心，一步步 腳步 (Step) 穩穩踩！",
-      "compare": "Step (台階/步驟) vs. Stop (停止)。只差一個母音字母！"
-    },
-    {
-      "id": "voc_554",
-      "book_id": "gra3",
-      "unit_id": "gra3_17",
-      "word": "Emergency",
-      "pos": "名詞 (Noun)",
-      "chi": "緊急狀況 / 突發事件",
-      "breakdown": "字首 e- (out 出) + merg (dip/plunge 沉入) + -ency -> 突然從水下浮現出的緊急事態。源自拉丁文 emergere.",
-      "trick": "諧音「阿摩金西」。聯想：「阿摩」發現情況「金(真)西(吸)」引人注意，是個「緊急狀況」！",
-      "scene": "救護車與消防車呼嘯而過，救護人員迅速推著擔架處理突發事件。",
-      "collocation": "in an emergency (在緊急狀況下), emergency number (緊急求救電話), emergency kit (緊急救難包)",
-      "img": "🚨",
-      "context_eng": "Call 911 in a real emergency.",
-      "context_chi": "在緊急狀況下請撥打 911。",
-      "chant": "警報響起真緊迫，緊急狀況 (Emergency) 冷靜處理！",
-      "compare": "Emergency (緊急狀況名詞) vs. Emergent (緊急的形容詞)。"
-    },
-    {
-      "id": "voc_555",
-      "book_id": "gra3",
-      "unit_id": "gra3_17",
-      "word": "Danger",
-      "pos": "名詞 (Noun)",
-      "chi": "危險",
-      "breakdown": "源自古法文 dangier (領主的權力 -> 受制於人而處於危險中)。",
-      "trick": "諧音「電折」。聯想：高壓「電」線桿「折」斷了，非常「危險」！",
-      "scene": "施工現場立著黃黑相間的警告標誌，上面畫著骷髏頭並寫著大大的「危險」。",
-      "collocation": "in danger (處於危險中), out of danger (脫離危險), danger zone (危險區域)",
-      "img": "⚠️",
-      "context_eng": "Stay inside to protect yourself from danger.",
-      "context_chi": "留在室內以保護自己免受危險。",
-      "chant": "電線折斷要閃開，危險 (Danger) 區域莫靠近！",
-      "compare": "Danger (危險名詞) vs. Dangerous (危險的形容詞)。"
-    },
-    {
-      "id": "voc_556",
-      "book_id": "gra3",
-      "unit_id": "gra3_17",
-      "word": "Protect",
-      "pos": "動詞 (Verb)。三態: protect, protected, protected",
-      "chi": "保護 / 防護",
-      "breakdown": "字首 pro- (forward 前面) + 字根 tect (cover 覆蓋) -> 在前面蓋住以防受傷。",
-      "trick": "諧音「破鐵殼」。聯想：用一個「破鐵殼」把小雞「保護」起來，不被老鷹抓走！",
-      "scene": "下大雨時，你撐開一把大雨傘，保護自己和書包不被雨水淋濕。",
-      "collocation": "protect someone from danger (保護某人免受危險), protection (名詞: 保護)",
-      "img": "🛡️",
-      "context_eng": "Boards protect your windows from strong wind.",
-      "context_chi": "木板能保護你的窗戶不受強風破壞。",
-      "chant": "破鐵殼 擋風雨，保護 (Protect) 家園最安全！",
-      "compare": "Protect (保護動詞) vs. Protection (保護名詞) vs. Prevent (預防)。"
-    },
-    {
-      "id": "voc_557",
-      "book_id": "gra3",
-      "unit_id": "gra3_17",
-      "word": "Safe",
-      "pos": "形容詞 (Adj)。名詞為 safety。",
-      "chi": "安全的 / 安然無恙的",
-      "breakdown": "源自拉丁文 salvus (完好無損的/健康的)。未受到傷害的狀態。",
-      "trick": "諧音「死飛」。聯想：飛行員開飛機「死飛」也要安全降落，確保大家「安全的」！",
-      "scene": "暴風雨過後，全家人圍坐在溫暖的客廳裡，安然無恙，鬆了一口氣。",
-      "collocation": "stay safe (保持安全), safe place (安全的地方), safety (名詞: 安全)",
-      "img": "✅",
-      "context_eng": "Go to a safe place during a hurricane.",
-      "context_chi": "颱風期間請前往安全的地方。",
-      "chant": "死飛降落好平穩，留在室內最 安全 (Safe)！",
-      "compare": "Safe (安全的形容詞) vs. Safety (安全名詞) vs. Save (救/儲存動詞)。"
-    },
-    {
-      "id": "voc_558",
-      "book_id": "gra3",
-      "unit_id": "gra3_17",
-      "word": "Follow",
-      "pos": "動詞 (Verb)。三態: follow, followed, followed",
-      "chi": "遵守 / 跟隨 / 追隨",
-      "breakdown": "源自古英文 folgian (跟隨/陪伴)。走在某人後面或按照規則行事。",
-      "trick": "諧音「發羅」。聯想：跟著「發」光的光「羅」(指南針)，「遵守」並「跟隨」指示走！",
-      "scene": "排隊時，大家一個跟著一個，遵守領隊老師的指引往前走。",
-      "collocation": "follow instructions (遵守指示), follow rules (遵守規則), follow me (跟我來)",
-      "img": "👣",
-      "context_eng": "Follow safety rules during an emergency.",
-      "context_chi": "緊急狀況時請遵守安全規則。",
-      "chant": "發光指南針帶路，遵守 (Follow) 指示莫慌張！",
-      "compare": "Follow (遵守/跟隨) vs. Fellow (夥伴/同伴)。"
-    },
-    {
-      "id": "voc_559",
-      "book_id": "gra3",
-      "unit_id": "gra3_17",
-      "word": "Leave",
-      "pos": "動詞 (Verb)。三態: leave, left, left",
-      "chi": "離開 / 留下",
-      "breakdown": "源自古英文 læfan (留下/離開)。從一個地方走開。",
-      "trick": "諧音「麗夫」。聯想：「麗」麗的「夫」人收拾好行李，準備「離開」飯店。",
-      "scene": "廣播發出疏散通知後，人們有序地背起背包，走門口離開危險區域。",
-      "collocation": "leave the area (離開該地區), leave home (離開家), leave message (留言)",
-      "img": "🚪",
-      "context_eng": "Leave the area if the officials tell you to go.",
-      "context_chi": "如果官員要求你離開，請撤離該地區。",
-      "chant": "麗夫人 收行李，迅速 離開 (Leave) 危險區！",
-      "compare": "Leave (離開/離去) vs. Live (居住) vs. Leaf (樹葉)。"
-    },
-    {
-      "id": "voc_560",
-      "book_id": "gra3",
-      "unit_id": "gra3_17",
-      "word": "Prepare",
-      "pos": "動詞 (Verb)。三態: prepare, prepared, prepared",
-      "chi": "準備 / 預備",
-      "breakdown": "字首 pre- (before 事先) + 字根 pare (make ready 整理) -> 事先整理準備好。",
-      "trick": "諧音「普利配爾」。聯想：「普利」司通輪胎「配」好了「爾(耳)」環，都「準備」好要出門了！",
-      "scene": "颱風來臨前，爸爸整理水箱、檢查手電筒電池，做好萬全的防災準備。",
-      "collocation": "prepare for a storm (為風暴做準備), preparation (名詞: 準備)",
-      "img": "🎒",
-      "context_eng": "Prepare a first-aid kit before the hurricane arrives.",
-      "context_chi": "颱風來臨前準備好急救箱。",
-      "chant": "普利輪胎配好配件，事先 準備 (Prepare) 萬全！",
-      "compare": "Prepare (準備動詞) vs. Preparation (準備名詞)。"
-    },
-    {
       "id": "voc_561",
       "book_id": "gra3",
       "unit_id": "gra3_18",
@@ -14558,7 +14820,8 @@ const ENGLISH_DATA = {
       "compare": "interested (人感到有興趣的，固定搭配 in) vs interesting (事物令人感興趣的)",
       "is_midterm": true,
       "is_week12": true,
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": true
     },
     {
       "id": "voc_w12_gra3_16_2",
@@ -14579,7 +14842,8 @@ const ENGLISH_DATA = {
       "compare": "worried about (對某事憂慮) vs afraid of (對某物感到害怕恐懼)",
       "is_midterm": true,
       "is_week12": true,
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": true
     },
     {
       "id": "voc_w12_gra3_16_3",
@@ -14600,7 +14864,8 @@ const ENGLISH_DATA = {
       "compare": "disappointed with (對物品/結果感到失望) vs disappointed in (對某人的表現失望)",
       "is_midterm": true,
       "is_week12": true,
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": true
     },
     {
       "id": "voc_w12_gra3_16_4",
@@ -14621,7 +14886,8 @@ const ENGLISH_DATA = {
       "compare": "surprised by (對外在事實感到驚訝) vs amazed by (對神奇卓越的事物驚嘆佩服)",
       "is_midterm": true,
       "is_week12": true,
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": true
     },
     {
       "id": "voc_w12_gra3_16_5",
@@ -14642,7 +14908,8 @@ const ENGLISH_DATA = {
       "compare": "amazed by (讚嘆佩服，程度高於 surprised) vs confused by (困惑不解)",
       "is_midterm": true,
       "is_week12": true,
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": true
     },
     {
       "id": "voc_w12_gra3_16_6",
@@ -14663,7 +14930,8 @@ const ENGLISH_DATA = {
       "compare": "confused about (對某件事困惑) vs confused by (被某個外在事物搞糊塗)",
       "is_midterm": true,
       "is_week12": true,
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": true
     },
     {
       "id": "voc_w12_gra3_16_7",
@@ -14684,7 +14952,8 @@ const ENGLISH_DATA = {
       "compare": "sensible (明智理性的) vs sensitive (敏感的/易受刺激的)",
       "is_midterm": true,
       "is_week12": true,
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": true
     },
     {
       "id": "voc_w12_gra3_16_8",
@@ -14705,7 +14974,8 @@ const ENGLISH_DATA = {
       "compare": "curious about (對某事好奇) vs interested in (對某事感興趣並願深入投入)",
       "is_midterm": true,
       "is_week12": true,
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": true
     },
     {
       "id": "voc_w12_gra3_16_9",
@@ -14726,7 +14996,8 @@ const ENGLISH_DATA = {
       "compare": "concerned about (關切擔憂某事) vs worried about (更偏向焦慮害怕不安)",
       "is_midterm": true,
       "is_week12": true,
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": true
     },
     {
       "id": "voc_w12_gra3_16_10",
@@ -14747,7 +15018,8 @@ const ENGLISH_DATA = {
       "compare": "chemicals (化學物質) vs natural ingredients (天然食材成分)",
       "is_midterm": true,
       "is_week12": true,
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": true
     },
     {
       "id": "voc_w12_gra3_16_11",
@@ -14768,7 +15040,8 @@ const ENGLISH_DATA = {
       "compare": "ingredients (食材成分) vs recipe (包含製作步驟與份量的完整食譜)",
       "is_midterm": true,
       "is_week12": true,
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": true
     },
     {
       "id": "voc_w12_gra3_16_12",
@@ -14789,7 +15062,8 @@ const ENGLISH_DATA = {
       "compare": "label (貼在包裝上的資訊標籤) vs sticker (一般的貼紙/玩具貼)",
       "is_midterm": true,
       "is_week12": true,
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": true
     },
     {
       "id": "voc_w12_od3_16_1",
@@ -14810,7 +15084,8 @@ const ENGLISH_DATA = {
       "compare": "gardener (園丁) vs farmer (農夫，多指耕種大片農田作物的人)",
       "is_midterm": true,
       "is_week12": true,
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "voc_w12_od3_16_2",
@@ -14831,7 +15106,8 @@ const ENGLISH_DATA = {
       "compare": "sweet potato (地瓜/甘藷) vs potato (馬鈴薯/洋芋)",
       "is_midterm": true,
       "is_week12": true,
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "voc_w12_od3_16_3",
@@ -14852,7 +15128,8 @@ const ENGLISH_DATA = {
       "compare": "beans (豆類) vs peas (豌豆，多指小圓形綠色豌豆)",
       "is_midterm": true,
       "is_week12": true,
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "voc_w12_od3_16_4",
@@ -14873,7 +15150,8 @@ const ENGLISH_DATA = {
       "compare": "vines (藤蔓) vs branches (硬質樹枝)",
       "is_midterm": true,
       "is_week12": true,
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "voc_w12_od3_16_5",
@@ -14894,7 +15172,8 @@ const ENGLISH_DATA = {
       "compare": "garden (花園/菜圃) vs park (公園，多指供公眾休憩運動的大型綠地)",
       "is_midterm": true,
       "is_week12": true,
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "voc_w12_od3_16_6",
@@ -14915,7 +15194,8 @@ const ENGLISH_DATA = {
       "compare": "haze (薄霧/光暈，多指大氣朦朧或金光) vs fog (濃霧，能見度極低)",
       "is_midterm": true,
       "is_week12": true,
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "voc_w12_od3_16_7",
@@ -14936,7 +15216,8 @@ const ENGLISH_DATA = {
       "compare": "teenagers (13-19歲青少年) vs children (兒童) vs adults (成年人)",
       "is_midterm": true,
       "is_week12": true,
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "voc_w12_od3_16_8",
@@ -14957,7 +15238,8 @@ const ENGLISH_DATA = {
       "compare": "community (社區，強調人際互助) vs society (整個社會，範圍更廣)",
       "is_midterm": true,
       "is_week12": true,
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "voc_w12_od3_16_9",
@@ -14978,7 +15260,8 @@ const ENGLISH_DATA = {
       "compare": "crowd (人群，強調聚集的一大群人) vs audience (觀眾/聽眾，強調特定表演席)",
       "is_midterm": true,
       "is_week12": true,
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "voc_w12_od3_16_10",
@@ -14999,7 +15282,8 @@ const ENGLISH_DATA = {
       "compare": "shopping cart (手推車) vs basket (手提籃子)",
       "is_midterm": true,
       "is_week12": true,
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "voc_w12_od3_16_11",
@@ -15020,7 +15304,8 @@ const ENGLISH_DATA = {
       "compare": "water (動詞澆水，例：She waters the flower) vs water (名詞飲用水，例：a glass of water)",
       "is_midterm": true,
       "is_week12": true,
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "voc_w12_od3_16_12",
@@ -15041,7 +15326,8 @@ const ENGLISH_DATA = {
       "compare": "curious (好奇的) vs interested (感興趣的，搭配 in)",
       "is_midterm": true,
       "is_week12": true,
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "voc_w12_od3_16_13",
@@ -15062,7 +15348,8 @@ const ENGLISH_DATA = {
       "compare": "bloom (指整株或多數花朵盛開綻放) vs blossom (特指果樹開花，如 cherry blossom)",
       "is_midterm": true,
       "is_week12": true,
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "voc_w12_od3_16_14",
@@ -15083,7 +15370,8 @@ const ENGLISH_DATA = {
       "compare": "empty (空的，通用日常詞) = vacant (空置無人的，多指房地產或職缺同義詞)",
       "is_midterm": true,
       "is_week12": true,
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "voc_w12_od3_16_15",
@@ -15104,7 +15392,8 @@ const ENGLISH_DATA = {
       "compare": "vacant (強調未被租用、未被佔用) = empty (強調空間內無物)",
       "is_midterm": true,
       "is_week12": true,
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "voc_w12_od3_16_16",
@@ -15125,7 +15414,8 @@ const ENGLISH_DATA = {
       "compare": "unafraid (不害怕的) = brave (勇敢的)；反義詞為 afraid / fearful",
       "is_midterm": true,
       "is_week12": true,
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "voc_w12_od3_16_17",
@@ -15146,7 +15436,8 @@ const ENGLISH_DATA = {
       "compare": "mature (成熟的，可形容動植物與人) = ripe (熟透的，專門形容水果蔬菜熟了)",
       "is_midterm": true,
       "is_week12": true,
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "voc_w12_rw6_9_1",
@@ -15167,7 +15458,8 @@ const ENGLISH_DATA = {
       "compare": "calm (內心鎮定冷靜) vs. quiet (環境或人安靜不說話) vs. silent (完全無聲寂靜)",
       "is_midterm": true,
       "is_week12": true,
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "voc_w12_rw6_9_2",
@@ -15188,7 +15480,8 @@ const ENGLISH_DATA = {
       "compare": "confident (充滿自信的，褒義) vs. arrogant (傲慢自大的，貶義)",
       "is_midterm": true,
       "is_week12": true,
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "voc_w12_rw6_9_3",
@@ -15209,7 +15502,8 @@ const ENGLISH_DATA = {
       "compare": "friendly (形容詞：友善的) vs. kindly (副詞/形容詞：慈祥地)；注意 friendly 是形容詞非副詞！",
       "is_midterm": true,
       "is_week12": true,
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "voc_w12_rw6_9_4",
@@ -15230,7 +15524,8 @@ const ENGLISH_DATA = {
       "compare": "daring (大膽且富開創冒險精神) vs. brave (面對危險不退縮) vs. reckless (魯莽不顧後果)",
       "is_midterm": true,
       "is_week12": true,
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "voc_w12_rw6_9_5",
@@ -15251,7 +15546,8 @@ const ENGLISH_DATA = {
       "compare": "nervous (當下的緊張不安) vs. anxious (長期的焦慮擔憂) vs. scared (感到害怕恐懼)",
       "is_midterm": true,
       "is_week12": true,
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "voc_w12_rw6_9_6",
@@ -15272,7 +15568,8 @@ const ENGLISH_DATA = {
       "compare": "rude (粗魯無禮的) vs. polite (有禮貌的，反義詞) vs. impolite (不禮貌的)",
       "is_midterm": true,
       "is_week12": true,
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "voc_w12_rw6_9_7",
@@ -15293,7 +15590,8 @@ const ENGLISH_DATA = {
       "compare": "shy (害羞怕生的，常伴隨不自在) vs. quiet (安靜不多話，但不一定害怕人)",
       "is_midterm": true,
       "is_week12": true,
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "voc_w12_rw6_9_8",
@@ -15314,7 +15612,8 @@ const ENGLISH_DATA = {
       "compare": "thoughtful (體貼周到的；若有所思的) vs. considerate (設想周到的) vs. thoughtless (粗心不顧人的，反義詞)",
       "is_midterm": true,
       "is_week12": true,
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "voc_w12_rw6_9_9",
@@ -15335,7 +15634,8 @@ const ENGLISH_DATA = {
       "compare": "outgoing (外向熱絡好社交) vs. introverted (內向內省的) vs. shy (害羞怕生的)",
       "is_midterm": true,
       "is_week12": true,
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "voc_w12_rw6_9_10",
@@ -15356,7 +15656,8 @@ const ENGLISH_DATA = {
       "compare": "prefer A to B (比起 B 更喜歡 A，介系詞用 to！) vs. like A better than B (比較級搭配 than)",
       "is_midterm": true,
       "is_week12": true,
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "voc_w12_rw6_9_11",
@@ -15377,7 +15678,8 @@ const ENGLISH_DATA = {
       "compare": "serious (嚴肅認真的) vs. humorous (幽默風趣的，反義詞) vs. playful (愛開玩笑的)",
       "is_midterm": true,
       "is_week12": true,
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "voc_w12_rw6_9_12",
@@ -15398,7 +15700,8 @@ const ENGLISH_DATA = {
       "compare": "adult (正式名詞：成年人) vs. grown-up (日常口語名詞：大人) vs. child (兒童)",
       "is_midterm": true,
       "is_week12": true,
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "voc_w12_rw6_9_13",
@@ -15419,7 +15722,8 @@ const ENGLISH_DATA = {
       "compare": "individual sport (個人運動) vs. team sport (團隊運動)；individual 也可作名詞表示「個人、個體」。",
       "is_midterm": true,
       "is_week12": true,
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "voc_w12_rw6_9_14",
@@ -15440,7 +15744,8 @@ const ENGLISH_DATA = {
       "compare": "nonstop (副詞/形容詞：不間斷地) vs. continuously (副詞：持續不斷地)",
       "is_midterm": true,
       "is_week12": true,
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "voc_w12_rd6_6_1",
@@ -15461,7 +15766,8 @@ const ENGLISH_DATA = {
       "compare": "canal (人工開鑿運河) vs river (天然形成的河流)",
       "is_midterm": true,
       "is_week12": true,
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "voc_w12_rd6_6_2",
@@ -15482,7 +15788,8 @@ const ENGLISH_DATA = {
       "compare": "Martian (特指火星人) vs alien (泛指一切地外外星人)",
       "is_midterm": true,
       "is_week12": true,
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "voc_w12_rd6_6_3",
@@ -15503,7 +15810,8 @@ const ENGLISH_DATA = {
       "compare": "bacteria (複數動詞用 are) vs bacterium (單數動詞用 is)",
       "is_midterm": true,
       "is_week12": true,
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "voc_w12_rd6_6_4",
@@ -15524,7 +15832,8 @@ const ENGLISH_DATA = {
       "compare": "underground (地下的) vs underwater (水下的) vs surface (地表的)",
       "is_midterm": true,
       "is_week12": true,
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "voc_w12_rd6_6_5",
@@ -15545,7 +15854,8 @@ const ENGLISH_DATA = {
       "compare": "liquid (液態的) vs solid (固態的，如 ice) vs gas (氣態的，如 vapor)",
       "is_midterm": true,
       "is_week12": true,
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "voc_w12_rd6_6_6",
@@ -15566,7 +15876,8 @@ const ENGLISH_DATA = {
       "compare": "atmosphere (包裹行星的大氣層) vs space (完全真空的外部宇宙空間)",
       "is_midterm": true,
       "is_week12": true,
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "voc_w12_rd6_6_7",
@@ -15587,7 +15898,8 @@ const ENGLISH_DATA = {
       "compare": "hydrocarbons (有機碳氫化合物) vs pure water (無機水分子 H2O)",
       "is_midterm": true,
       "is_week12": true,
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "voc_w12_rd6_6_8",
@@ -15608,7 +15920,8 @@ const ENGLISH_DATA = {
       "compare": "alien (泛指一切地外生命或外星人) vs human (人類)",
       "is_midterm": true,
       "is_week12": true,
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "voc_w12_rd6_6_9",
@@ -15629,7 +15942,8 @@ const ENGLISH_DATA = {
       "compare": "UFO (未確認飛行物，通常為氣球/彗星) vs airplane (普通民航客機)",
       "is_midterm": true,
       "is_week12": true,
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "voc_w12_rd6_6_10",
@@ -15650,7 +15964,8 @@ const ENGLISH_DATA = {
       "compare": "imagine (想像未見之事) vs discover (發現客觀已存在之物)",
       "is_midterm": true,
       "is_week12": true,
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "voc_w12_rd6_6_11",
@@ -15671,7 +15986,8 @@ const ENGLISH_DATA = {
       "compare": "astronomer (天文學家) vs astronaut (太空人) vs astrologer (占星術士)",
       "is_midterm": true,
       "is_week12": true,
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "voc_w12_rd6_6_12",
@@ -15692,7 +16008,8 @@ const ENGLISH_DATA = {
       "compare": "universe (整個宇宙，包容所有星系) vs galaxy (單個星系，如銀河系)",
       "is_midterm": true,
       "is_week12": true,
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "voc_w12_rd6_6_13",
@@ -15713,7 +16030,8 @@ const ENGLISH_DATA = {
       "compare": "galaxy (星系，如 Milky Way) vs solar system (太陽系，僅單一恆星系統)",
       "is_midterm": true,
       "is_week12": true,
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "voc_w12_rd6_6_14",
@@ -15734,7 +16052,8 @@ const ENGLISH_DATA = {
       "compare": "spacecraft (單複數同形：one spacecraft, two spacecraft) vs airplane (普通大氣內飛機)",
       "is_midterm": true,
       "is_week12": true,
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "voc_w12_wr3_6_1",
@@ -15755,7 +16074,8 @@ const ENGLISH_DATA = {
       "compare": "inventor (發明家 - 創造新事物) vs discoverer (發現者 - 找出本已存在的事物)",
       "is_midterm": true,
       "is_week12": true,
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": false
     },
     {
       "id": "voc_w12_wr3_6_2",
@@ -15776,7 +16096,8 @@ const ENGLISH_DATA = {
       "compare": "composer (作曲家 - 創作音符) vs conductor (指揮家 - 指揮樂團演出)",
       "is_midterm": true,
       "is_week12": true,
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": false
     },
     {
       "id": "voc_w12_wr3_6_3",
@@ -15797,7 +16118,8 @@ const ENGLISH_DATA = {
       "compare": "scientist (科學家 - 研究理論規律) vs engineer (工程師 - 應用技術建造)",
       "is_midterm": true,
       "is_week12": true,
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": false
     },
     {
       "id": "voc_w12_wr3_6_4",
@@ -15818,7 +16140,8 @@ const ENGLISH_DATA = {
       "compare": "political leader (政治領袖 - 治國領導) vs president (總統 - 國家元首具體職稱)",
       "is_midterm": true,
       "is_week12": true,
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": false
     },
     {
       "id": "voc_w12_wr3_6_5",
@@ -15839,7 +16162,8 @@ const ENGLISH_DATA = {
       "compare": "philosopher (哲學家 - 思索本質與智慧) vs psychologist (心理學家 - 研究行為與心智)",
       "is_midterm": true,
       "is_week12": true,
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": false
     },
     {
       "id": "voc_w12_wr3_6_6",
@@ -15860,7 +16184,8 @@ const ENGLISH_DATA = {
       "compare": "admire (欽佩 - 帶著敬意與肯定) vs respect (尊敬 - 禮貌與遵循規矩)",
       "is_midterm": true,
       "is_week12": true,
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": false
     },
     {
       "id": "voc_w12_wr3_6_7",
@@ -15881,7 +16206,8 @@ const ENGLISH_DATA = {
       "compare": "discovery (發現 - 本來存在被找到) vs invention (發明 - 本來不存在被創造)",
       "is_midterm": true,
       "is_week12": true,
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": false
     },
     {
       "id": "voc_w12_wr3_6_8",
@@ -15902,7 +16228,8 @@ const ENGLISH_DATA = {
       "compare": "composition (樂曲/作文 - 完整作品) vs song (歌曲 - 通常含人聲歌唱)",
       "is_midterm": true,
       "is_week12": true,
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": false
     },
     {
       "id": "voc_w12_wr3_6_9",
@@ -15923,7 +16250,8 @@ const ENGLISH_DATA = {
       "compare": "accomplishment (成就 - 歷經艱辛達成的壯舉) vs success (成功 - 廣泛的順利成果)",
       "is_midterm": true,
       "is_week12": true,
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": false
     },
     {
       "id": "voc_w12_wr3_6_10",
@@ -15944,7 +16272,8 @@ const ENGLISH_DATA = {
       "compare": "disability (身體機能障礙) vs illness (短期生病、疾病)",
       "is_midterm": true,
       "is_week12": true,
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": false
     },
     {
       "id": "voc_w12_wr3_6_11",
@@ -15965,7 +16294,8 @@ const ENGLISH_DATA = {
       "compare": "gravity (重力/引力) vs weight (重量 - 受引力作用測量出的質量重量)",
       "is_midterm": true,
       "is_week12": true,
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": false
     },
     {
       "id": "voc_w12_wr3_6_12",
@@ -15986,7 +16316,8 @@ const ENGLISH_DATA = {
       "compare": "symphony (交響曲 - 大型管弦多樂章) vs concerto (協奏曲 - 獨奏樂器與樂團對應)",
       "is_midterm": true,
       "is_week12": true,
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": false
     },
     {
       "id": "voc_w12_wr3_6_13",
@@ -16007,7 +16338,8 @@ const ENGLISH_DATA = {
       "compare": "give up on (放棄某人或夢想希望) vs give in (向強權或壓力屈服)",
       "is_midterm": true,
       "is_week12": true,
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": false
     },
     {
       "id": "voc_w12_wr3_6_14",
@@ -16028,7 +16360,8 @@ const ENGLISH_DATA = {
       "compare": "consequence (因果結果/影響) vs cause (起因/理由)",
       "is_midterm": true,
       "is_week12": true,
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": false
     },
     {
       "id": "voc_w13_rw6_6_1",
@@ -16049,7 +16382,8 @@ const ENGLISH_DATA = {
       "compare": "orienteering (須自行導航打卡的野外賽) vs. marathon (沿固定標線道路奔跑的馬拉松)",
       "is_midterm": true,
       "is_week12": false,
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": false
     },
     {
       "id": "voc_w13_rw6_6_2",
@@ -16070,7 +16404,8 @@ const ENGLISH_DATA = {
       "compare": "compass (指示方向的指南針；單數) vs. compasses (複數形須加 -es)",
       "is_midterm": true,
       "is_week12": false,
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": false
     },
     {
       "id": "voc_w13_rw6_6_3",
@@ -16091,7 +16426,8 @@ const ENGLISH_DATA = {
       "compare": "station (一般車站或站點) vs. control (定向越野專用的檢查打卡點)",
       "is_midterm": true,
       "is_week12": false,
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": false
     },
     {
       "id": "voc_w13_rw6_6_4",
@@ -16112,7 +16448,8 @@ const ENGLISH_DATA = {
       "compare": "direction (單數：某一個方向) vs. directions (複數：指路說明、操作指示)",
       "is_midterm": true,
       "is_week12": false,
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": false
     },
     {
       "id": "voc_w13_rw6_6_5",
@@ -16133,7 +16470,8 @@ const ENGLISH_DATA = {
       "compare": "on the corner (在戶外街道轉角) vs. in the corner (在室內房間角落)",
       "is_midterm": true,
       "is_week12": false,
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": false
     },
     {
       "id": "voc_w13_rw6_6_6",
@@ -16154,7 +16492,8 @@ const ENGLISH_DATA = {
       "compare": "wood (不可數：木頭材料) vs. woods (恆複數：樹林) vs. forest (面積廣大的大森林)",
       "is_midterm": true,
       "is_week12": false,
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": false
     },
     {
       "id": "voc_w13_rw6_6_7",
@@ -16175,7 +16514,8 @@ const ENGLISH_DATA = {
       "compare": "starting line (起跑線) vs. finish line (終點線)；cross the finish line 動詞 cross 前不加介系詞。",
       "is_midterm": true,
       "is_week12": false,
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": false
     },
     {
       "id": "voc_w13_rw6_6_8",
@@ -16196,7 +16536,8 @@ const ENGLISH_DATA = {
       "compare": "across (介系詞：在對面/橫越，不能單獨當動詞) vs. cross (動詞：穿越，如 cross the street)",
       "is_midterm": true,
       "is_week12": false,
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": false
     },
     {
       "id": "voc_w13_rw6_6_9",
@@ -16217,7 +16558,8 @@ const ENGLISH_DATA = {
       "compare": "in front of (在某物體外部的前面) vs. in the front of (在某空間內部的前排，如教室前排)",
       "is_midterm": true,
       "is_week12": false,
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": false
     },
     {
       "id": "voc_w13_rw6_6_10",
@@ -16238,7 +16580,8 @@ const ENGLISH_DATA = {
       "compare": "go two blocks (移動距離) vs. turn left (改變方向)；課本 Context Clues 定義為 move this far。",
       "is_midterm": true,
       "is_week12": false,
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": false
     },
     {
       "id": "voc_w13_rw6_6_11",
@@ -16259,7 +16602,8 @@ const ENGLISH_DATA = {
       "compare": "along (順著邊緣平行移動) vs. across (從一邊橫渡到對岸)",
       "is_midterm": true,
       "is_week12": false,
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": false
     },
     {
       "id": "voc_w13_rw6_6_12",
@@ -16280,7 +16624,8 @@ const ENGLISH_DATA = {
       "compare": "climb over (從障礙物上方翻越) vs. go through (從隧道或樹叢內部穿過)",
       "is_midterm": true,
       "is_week12": false,
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": false
     },
     {
       "id": "voc_w13_rw6_6_13",
@@ -16301,7 +16646,8 @@ const ENGLISH_DATA = {
       "compare": "hill (海拔較低、坡度較緩的小山丘) vs. mountain (高大陡峭的高山)",
       "is_midterm": true,
       "is_week12": false,
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": false
     },
     {
       "id": "voc_w13_rw6_6_14",
@@ -16322,7 +16668,1020 @@ const ENGLISH_DATA = {
       "compare": "visual (統稱各類視覺圖像) vs. text (純文字內容)；兩者是互補而非單純重複！",
       "is_midterm": true,
       "is_week12": false,
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": false
+    },
+    {
+      "id": "voc_w14_od3_17_1",
+      "book_id": "od3",
+      "unit_id": "od3_17",
+      "word": "clouds",
+      "ipa": "/klaʊdz/",
+      "pos": "名詞 (Noun，複數)",
+      "chi": "雲朵（cloud 的複數）",
+      "breakdown": "cloud(雲) + -s(複數字尾) -> 許多朵雲",
+      "trick": "諧音「靠得住」：天上軟綿綿又厚實的白雲看起來超「靠得住 (clouds)」，且 c 罩住 loud 變雲朵！",
+      "scene": "晴朗藍天上飄浮著像棉花糖般的潔白雲朵，或暴風雨來臨前聚集的烏雲。",
+      "collocation": "white clouds (白雲), dark clouds (烏雲), floating clouds (浮雲)",
+      "img": "☁️",
+      "context_eng": "The sky is blue, and the clouds are white on the day the ships sail from Spain.",
+      "context_chi": "船隊從西班牙啟航那天，天空湛藍，白雲朵朵飄浮在天際。",
+      "chant": "c 罩住 loud 變雲朵，靠得住的 clouds 飄天空！",
+      "compare": "clouds (cl- 雲朵) vs. crowds (cr- 人群，擠在一起會哭 cr-) vs. loud (少了 c 變大聲)",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true
+    },
+    {
+      "id": "voc_w14_od3_17_2",
+      "book_id": "od3",
+      "unit_id": "od3_17",
+      "word": "fog",
+      "ipa": "/fɑːɡ/",
+      "pos": "名詞 (Noun，不可數)",
+      "chi": "濃霧",
+      "breakdown": "f + og (標準短母音 CVC 單字結構)",
+      "trick": "諧音「發哥」：清晨山區與海面起了超大濃霧，連「發哥 (fog)」走近兩公尺都看不清他的臉！",
+      "scene": "冬天清晨海面與操場白茫茫一片，船隻與遠山全都躲進濃霧裡不見蹤影。",
+      "collocation": "heavy fog (濃霧), thick fog (濃霧), in a fog (霧煞煞、頭腦糊塗)",
+      "img": "🌫️",
+      "context_eng": "Winter was cold and windy, with fog and hail along the southern coast.",
+      "context_chi": "南美洲冬季寒冷多風，海面上常籠罩著濃霧與冰雹。",
+      "chant": "f-o-g 短音霧茫茫，青蛙多 r 變 frog，濃霧裡找發哥！",
+      "compare": "fog (濃霧，能見度極低) vs. frog (青蛙，多了樹枝 r) vs. mist (薄霧) vs. haze (薄霾光暈)",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true
+    },
+    {
+      "id": "voc_w14_od3_17_3",
+      "book_id": "od3",
+      "unit_id": "od3_17",
+      "word": "healthy",
+      "ipa": "/ˈhelθi/",
+      "pos": "形容詞 (Adj.)",
+      "chi": "健康的；有益健康的",
+      "breakdown": "heal(治癒) + -th(抽象名詞字尾) + -y(充滿…的) -> 充滿健康狀態的",
+      "trick": "諧音「黑歐西」：「黑歐西 (healthy)」每天吃蔬菜、喝黑豆漿又運動，身體超級健康！",
+      "scene": "遠洋航行缺糧缺水時船員變得虛弱不健康，對比每天均衡飲食保持健康的學生。",
+      "collocation": "stay healthy (保持健康), healthy food (健康食物), healthy habits (健康習慣)",
+      "img": "🥗",
+      "context_eng": "There is very little food and water, so the men are not healthy.",
+      "context_chi": "船上食物與飲水極度匱乏，因此船員們都變得不健康。",
+      "chant": "health 加 y 變健康，ea 唸短音 /ɛ/ 別拉長！",
+      "compare": "healthy (adj. 健康的) vs. health (n. 健康) vs. wealthy (adj. 富有的，開頭換 w) vs. sick (反義詞：生病的)",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true
+    },
+    {
+      "id": "voc_w14_od3_17_4",
+      "book_id": "od3",
+      "unit_id": "od3_17",
+      "word": "journey",
+      "ipa": "/ˈdʒɜːrni/",
+      "pos": "名詞 (Noun) / 動詞 (Verb)",
+      "chi": "旅程；長途旅行",
+      "breakdown": "jour(拉丁字根：一天、白晝) + -ney(名詞字尾) -> 古時候一天所走的遠行路程",
+      "trick": "諧音「遮泥」：展開長途大冒險的旅程走過泥巴路，大家趕快拿雨衣「遮泥 (journey)」！",
+      "scene": "麥哲倫船隊歷時三年橫跨大西洋、太平洋與印度洋的史詩級環球航行旅程。",
+      "collocation": "a long journey (漫長旅程), go on a journey (踏上旅程), safe journey (一路順風)",
+      "img": "🧭",
+      "context_eng": "Over 250 men started the journey, but only 18 men come home.",
+      "context_chi": "當初超過 250 人展開這趟漫長旅程，最後卻只有 18 個人回到家鄉。",
+      "chant": "jour 是一天 ney 來湊，遮泥踏上長旅程 journey！",
+      "compare": "journey (長途旅程) vs. journal (n. 日記/日誌，同字根 jour) vs. trip (短途旅行)",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true
+    },
+    {
+      "id": "voc_w14_od3_17_5",
+      "book_id": "od3",
+      "unit_id": "od3_17",
+      "word": "look after",
+      "ipa": "/lʊk ˈæftər/",
+      "pos": "動詞片語 (Phrasal Verb)",
+      "chi": "照顧；照料",
+      "breakdown": "look(看) + after(在…之後) -> 跟在後面一直看著照顧",
+      "trick": "諧音「路可 愛扶他」：看到小妹妹走路不穩，「路可 (look) 愛扶他 (after)」跟在後面細心照顧！",
+      "scene": "爸媽出門採買時，在家幫忙照料年幼的弟妹或餵養家裡的小狗。",
+      "collocation": "look after a pet (照顧寵物), look after yourself (照顧好自己), look after the garden (照料花園)",
+      "img": "🫂",
+      "context_eng": "On the long voyage, the older sailors helped look after the younger boys on the ship.",
+      "context_chi": "在漫長的航程中，年長的水手們幫忙照顧船上較年幼的男孩。",
+      "chant": "跟在後面一直看，look after 就是用心照顧！",
+      "compare": "look after (= take care of 照顧) vs. look for (尋找) vs. look at (看著某物)",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true
+    },
+    {
+      "id": "voc_w14_od3_17_6",
+      "book_id": "od3",
+      "unit_id": "od3_17",
+      "word": "look for",
+      "ipa": "/lʊk fɔːr/",
+      "pos": "動詞片語 (Phrasal Verb)",
+      "chi": "尋找",
+      "breakdown": "look(看) + for(為了某個目標) -> 為了目標而看即尋找",
+      "trick": "諧音「路可 佛」：小狗走失了，大家在「路可 (look)」邊急著祈禱「佛 (for)」祖保佑快點找到牠！",
+      "scene": "出發去探險前發現鑰匙或地圖不見了，拿著手電筒在房間和院子到處翻找。",
+      "collocation": "look for clues (尋找線索), look for a lost key (尋找遺失的鑰匙), look for a new route (尋找新航線)",
+      "img": "🔍",
+      "context_eng": "Captain Magellan sailed west to look for a new route to the spice islands of Indonesia.",
+      "context_chi": "麥哲倫船長向西航行，為的是尋找通往印尼香料群島的新航線。",
+      "chant": "為了目標一直看，look for 就是在尋找！",
+      "compare": "look for (強調「尋找」的動作過程) vs. find (強調「找到」的結果) vs. look up (查閱字典/資料)",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true
+    },
+    {
+      "id": "voc_w14_od3_17_7",
+      "book_id": "od3",
+      "unit_id": "od3_17",
+      "word": "look through",
+      "ipa": "/lʊk θruː/",
+      "pos": "動詞片語 (Phrasal Verb)",
+      "chi": "瀏覽；翻閱；仔細查看",
+      "breakdown": "look(看) + through(貫穿、從頭到尾穿過) -> 從第一頁一路看到最後一頁",
+      "trick": "諧音「路可 撕路」：翻閱舊相簿或書頁時要溫柔，別把書頁「撕路 (through)」破掉喔！",
+      "scene": "考前十分鐘快速從頭到尾翻看筆記本重點，或雨天翻閱家裡的舊相簿。",
+      "collocation": "look through old photos (瀏覽舊照片), look through notes (翻閱筆記), look through the list (查看清單)",
+      "img": "📖",
+      "context_eng": "Before sailing, Captain Magellan liked to look through his old maps and sea journals.",
+      "context_chi": "出航前，麥哲倫船長喜歡從頭到尾翻閱他的舊地圖與航海日誌。",
+      "chant": "從頭穿過看到尾，look through 翻閱瀏覽最到位！",
+      "compare": "look through (從頭到尾翻看多份資料) vs. look for (鎖定某個不見的東西去尋找) vs. though (少 r 表雖然)",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true
+    },
+    {
+      "id": "voc_w14_od3_17_8",
+      "book_id": "od3",
+      "unit_id": "od3_17",
+      "word": "river",
+      "ipa": "/ˈrɪvər/",
+      "pos": "名詞 (Noun)",
+      "chi": "河流；江河",
+      "breakdown": "riv(拉丁字根：水流、河岸) + -er(名詞字尾) -> 奔流的水道",
+      "trick": "諧音「哩佛」：站在橋上看著長長的河水，「哩佛 (river)」啊，這條河到底流向哪裡的大海呢？",
+      "scene": "穿梭在青翠森林之間的藍色長河，上頭有木橋橫跨兩岸。",
+      "collocation": "cross the river (渡河), along the river (沿著河流), riverbank (河岸)",
+      "img": "🏞️",
+      "context_eng": "Juan saw many rivers and beautiful waterfalls along the South American land.",
+      "context_chi": "Juan 在南美洲陸地上看見了許多河流與美麗的瀑布。",
+      "chant": "短音 i 接單寫 v，沿著河岸 flows the river！",
+      "compare": "stream (小溪) < river (河流) < lake (靜止湖泊) vs. driver (司機，i 發長音 /aɪ/)",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true
+    },
+    {
+      "id": "voc_w14_od3_17_9",
+      "book_id": "od3",
+      "unit_id": "od3_17",
+      "word": "storm",
+      "ipa": "/stɔːrm/",
+      "pos": "名詞 (Noun)",
+      "chi": "暴風雨；風暴",
+      "breakdown": "st(輔音叢) + orm(韻基：劇烈攪動)",
+      "trick": "諧音「死都悶」：外面下著大暴風雨不能出門騎車，整天關在家裡真是「死都悶 (storm)」啊！",
+      "scene": "大西洋海面上烏雲密布、狂風巨浪拍打船身，海面出現可怕的暴風雨。",
+      "collocation": "a heavy storm (大風暴), thunderstorm (雷雨), weather the storm (渡過難關)",
+      "img": "⛈️",
+      "context_eng": "There are many storms with thunder and lightning, and they lose one ship in a storm.",
+      "context_chi": "海上常有伴隨雷電的暴風雨，船隊還在風暴中失去了一艘船。",
+      "chant": "暴風雨來死都悶，st 加上 orm 就是 storm！",
+      "compare": "storm (暴風雨，結尾 -m) vs. store (商店，結尾 -e：暴風雨來了躲進商店) vs. stone (石頭)",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true
+    },
+    {
+      "id": "voc_w14_od3_17_10",
+      "book_id": "od3",
+      "unit_id": "od3_17",
+      "word": "waterfall",
+      "ipa": "/ˈwɔːtərfɔːl/",
+      "pos": "名詞 (Noun，複合名詞)",
+      "chi": "瀑布",
+      "breakdown": "water(水) + fall(落下) -> 大量的水從高處落下來",
+      "trick": "諧音「窩特佛」：站在壯觀瀑布前聽轟隆水聲，驚呼「窩特佛 (waterfall)！水像佛光般從天衝下來！」",
+      "scene": "山谷健行時轉個彎看見銀白色水柱從峭壁傾瀉入潭，水氣清涼撲面。",
+      "collocation": "a tall waterfall (高聳的瀑布), under the waterfall (瀑布下方), hike to a waterfall (健行看瀑布)",
+      "img": "💧",
+      "context_eng": "Winter was cold and windy, but Juan saw many rivers and beautiful waterfalls.",
+      "context_chi": "雖然冬天寒冷多風，但 Juan 看見了許多河流與美麗的瀑布。",
+      "chant": "水 water 往下掉 fall，連在一起變成瀑布 waterfall！",
+      "compare": "waterfall (天然由上往下流的瀑布) vs. fountain (人工由下往上噴的噴泉) vs. rainfall (降雨)",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true
+    },
+    {
+      "id": "voc_w14_od3_17_11",
+      "book_id": "od3",
+      "unit_id": "od3_17",
+      "word": "coast",
+      "ipa": "/koʊst/",
+      "pos": "名詞 (Noun)",
+      "chi": "海岸；海濱",
+      "breakdown": "c + oast (源自拉丁語 costa 側邊，指陸地靠海的側邊)",
+      "trick": "諧音「烤斯特」：夏天在海岸曬日光浴，太陽毒辣到快把人「烤斯特 (coast)」成香脆吐司 (toast)！",
+      "scene": "船隊沿著南美洲東岸綿長海岸線向南航行，右側是陸地左側是大西洋。",
+      "collocation": "along the coast (沿著海岸), east/west coast (東/西岸), off the coast (在近海處)",
+      "img": "🏖️",
+      "context_eng": "The ships reach the coast of South America in December and sail down the coast.",
+      "context_chi": "船隊在十二月抵達南美洲海岸，並沿著海岸線向南航行。",
+      "chant": "coast 有 a 又有 s（沙灘），海岸海邊不跟 cost 搞錯！",
+      "compare": "coast (海岸，有 a 有 s) vs. cost (花費，沒 a) vs. beach (可玩沙的沙灘) vs. shore (水陸交界岸邊)",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true
+    },
+    {
+      "id": "voc_w14_od3_17_12",
+      "book_id": "od3",
+      "unit_id": "od3_17",
+      "word": "hail",
+      "ipa": "/heɪl/",
+      "pos": "名詞 (Noun) / 動詞 (Verb)",
+      "chi": "冰雹；下冰雹",
+      "breakdown": "h + ail (日耳曼古語意為從天而降的小冰粒)",
+      "trick": "諧音「黑喔」：中午天空突然變得「黑喔 (hail) 黑喔」，下一秒天空就砸下白色硬冰雹！",
+      "scene": "南美洲寒冷冬季的暴風雨中，白色硬冰粒劈哩啪啦打在船隻甲板與屋頂上。",
+      "collocation": "cold hail (冰冷的冰雹), hailstone (雹粒), hailstorm (冰雹暴)",
+      "img": "🧊",
+      "context_eng": "Winter was cold and windy, with fog and hail hitting the wooden deck.",
+      "context_chi": "冬天又冷又多風，濃霧與冰雹不斷敲打著木頭甲板。",
+      "chant": "天空黑喔下冰雹 hail，同族 rain、tail 都是 -ail！",
+      "compare": "hail (冰雹，中間有 ai 發 /eɪ/) vs. hall (大廳，雙寫 l 發 /ɔː/) vs. hair (頭髮) vs. snow (雪)",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true
+    },
+    {
+      "id": "voc_w14_od3_17_13",
+      "book_id": "od3",
+      "unit_id": "od3_17",
+      "word": "island",
+      "ipa": "/ˈaɪlənd/",
+      "pos": "名詞 (Noun)",
+      "chi": "島嶼",
+      "breakdown": "is(s 不發音：水邊之地) + land(陸地) -> 被水包圍的陸地",
+      "trick": "諧音「愛倫的」：這座風景如畫的秘密島嶼是「愛倫的 (island)」，裡面的 s 害羞躲起來睡覺不發音！",
+      "scene": "太平洋上被湛藍海水環繞的關島與馬克坦島，船員靠岸尋找淡水與食物。",
+      "collocation": "the island of Guam (關島), tropical island (熱帶島嶼), desert island (荒島)",
+      "img": "🏝️",
+      "context_eng": "The three ships reach the island of Guam on March 6, and later visit the island of Mactan.",
+      "context_chi": "三艘船於三月六日抵達關島，後來又來到馬克坦島。",
+      "chant": "is 加 land 是島嶼，拉丁害的 s 不發音！",
+      "compare": "island (島嶼，s 不發音 /ˈaɪlənd/) vs. Iceland (冰島，c 發 /s/ 音) vs. inland (內陸)",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true
+    },
+    {
+      "id": "voc_w14_od3_17_14",
+      "book_id": "od3",
+      "unit_id": "od3_17",
+      "word": "lightning",
+      "ipa": "/ˈlaɪtnɪŋ/",
+      "pos": "名詞 (Noun，不可數)",
+      "chi": "閃電",
+      "breakdown": "light(光) + -en(動詞字尾去 e) + -ing -> 照亮黑夜的閃電",
+      "trick": "諧音「萊特寧」：閃電速度快到「萊特寧 (lightning)」超人都拍不到，沒 e 只有雙 n！",
+      "scene": "大西洋夜空烏雲翻滾，一道樹枝狀金色閃電劃破黑暗海面，兩秒後傳來雷聲。",
+      "collocation": "thunder and lightning (雷電交加), a flash of lightning (一道閃電), lightning fast (閃電般快速)",
+      "img": "⚡",
+      "context_eng": "The journey is long, and there are many storms with thunder and lightning.",
+      "context_chi": "這趟旅程相當漫長，海上有許多伴隨雷聲與閃電的暴風雨。",
+      "chant": "閃電 lightning 沒 e 有雙 n，先見閃電才聞雷聲！",
+      "compare": "lightning (天空閃電，有雙 n 無 e) vs. lighting (照明燈光，少中間 n) vs. lightening (變亮，多了 e)",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true
+    },
+    {
+      "id": "voc_w14_od3_17_15",
+      "book_id": "od3",
+      "unit_id": "od3_17",
+      "word": "look around",
+      "ipa": "/lʊk əˈraʊnd/",
+      "pos": "動詞片語 (Phrasal Verb)",
+      "chi": "環顧四周；四處張望",
+      "breakdown": "look(看) + around(繞一圈、在周圍) -> 頭轉一圈看周圍",
+      "trick": "諧音「路可 額朗德」：「路可 (look)」轉學到新教室，好奇地頭轉「額朗德 (around)」一圈環顧四周！",
+      "scene": "Juan 走上高高的船隻甲板，朝東西南北四面八方張望海面上是否有風吹來。",
+      "collocation": "look around the deck (環顧甲板四周), stop and look around (停下看看四周), look around the museum (逛博物館)",
+      "img": "👀",
+      "context_eng": "I always go up to the deck and look around, and bring back the same news.",
+      "context_chi": "我總是走上甲板環顧四周，卻每次都帶回同樣的消息。",
+      "chant": "around 繞一圈，look around 轉頭環顧四周真新鮮！",
+      "compare": "look around (隨意四處看看，無特定遺失物) vs. look for (鎖定特定失物去尋找) vs. turn around (轉身)",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true
+    },
+    {
+      "id": "voc_w14_od3_17_16",
+      "book_id": "od3",
+      "unit_id": "od3_17",
+      "word": "look out",
+      "ipa": "/lʊk aʊt/",
+      "pos": "動詞片語 (Phrasal Verb)",
+      "chi": "小心！注意！／向外看",
+      "breakdown": "look(看) + out(往外面) -> 快往外看有沒有危險逼近",
+      "trick": "諧音「路可 凹特」：同學差點撞到電線桿，旁邊的人大喊「路可 凹特 (Look out!) 小心啊！」",
+      "scene": "暴風雨中船員大喊「小心大浪！」，或騎腳踏車轉出巷口時有人大叫提醒來車。",
+      "collocation": "Look out! (小心！), look out for cars (小心來車), look out of the window (往窗外看)",
+      "img": "⚠️",
+      "context_eng": "During the violent storm, the captain shouted, \"Look out! Huge waves are hitting the ship!\"",
+      "context_chi": "在猛烈的暴風雨中，船長大喊：「小心！巨浪正打向船身！」",
+      "chant": "快往外看有沒有危險，Look out 就是大喊小心！",
+      "compare": "Look out! (= Watch out! = Be careful! 小心危險) vs. look up (抬頭看/查資料) vs. find out (查明真相)",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true
+    },
+    {
+      "id": "voc_w14_od3_17_17",
+      "book_id": "od3",
+      "unit_id": "od3_17",
+      "word": "look up",
+      "ipa": "/lʊk ʌp/",
+      "pos": "動詞片語 (Phrasal Verb)",
+      "chi": "抬頭看；查閱（單字／資料）",
+      "breakdown": "look(看) + up(向上) -> 視線往上移動看，或向上翻找字典索引",
+      "trick": "諧音「路可 阿普」：遇到看不懂的單字，「路可 阿普 (look up)」把字典或平板往上拿就能立刻查到！",
+      "scene": "在文章裡看見不認識的生字 strait，先抬頭想一想再打開線上字典查閱字義。",
+      "collocation": "look up a word (查單字), look up at the stars (抬頭看星星), look up information (查詢資料)",
+      "img": "📚",
+      "context_eng": "When you read Juan's journal, you can look up unfamiliar geography words in a dictionary.",
+      "context_chi": "閱讀 Juan 的航海日記時，你可以在字典裡查閱不熟悉的地理單字。",
+      "chant": "往上抬頭看星空，滑開字典查單字都叫 look up！",
+      "compare": "look up (抬頭看/查資料) vs. look down (往下看) vs. look up to (敬仰崇拜，課文 I really looked up to him.)",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true
+    },
+    {
+      "id": "voc_w14_od3_17_18",
+      "book_id": "od3",
+      "unit_id": "od3_17",
+      "word": "sail",
+      "ipa": "/seɪl/",
+      "pos": "動詞 (Verb) / 名詞 (Noun)",
+      "chi": "航行；駕駛帆船／船帆",
+      "breakdown": "s + ail (古英語 segel 大塊帆布 -> 藉帆航行)",
+      "trick": "諧音「誰喔」：海風把船帆吹得鼓鼓的，岸邊小朋友問「是誰喔 (sail) 開著帆船在海上航行？」",
+      "scene": "五艘西班牙帆船張開白色巨帆，藉著大西洋的海風一路向西航行。",
+      "collocation": "sail across the ocean (橫渡大洋), sail around the world (環遊世界), set sail (啟航), check the sails (檢查船帆)",
+      "img": "⛵",
+      "context_eng": "Magellan wants to sail west to Indonesia, and Juan climbs up to check the sails.",
+      "context_chi": "麥哲倫想向西航行前往印尼，而 Juan 每天上去檢查船帆。",
+      "chant": "大風吹帆航行去，s-a-i-l 唸「誰喔」sail！",
+      "compare": "sail (ai 像海浪：航行/船帆) vs. sale (同音異義：拍賣/特價) vs. sailor (水手，字尾是 -or！)",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true
+    },
+    {
+      "id": "voc_w14_od3_17_19",
+      "book_id": "od3",
+      "unit_id": "od3_17",
+      "word": "strait",
+      "ipa": "/streɪt/",
+      "pos": "名詞 (Noun)",
+      "chi": "海峽",
+      "breakdown": "str(三輔音叢首音) + ait(與 strict 緊窄同源) -> 又緊又窄的水道",
+      "trick": "諧音「死追特」：海峽水道又瘦又窄，船隻只好「死追特 (strait)」筆直穿過去；少 gh 比較瘦的就是海峽！",
+      "scene": "麥哲倫船隊沿著南美洲南端穿梭在兩側高地夾擊的麥哲倫海峽，進入太平洋。",
+      "collocation": "Strait of Magellan (麥哲倫海峽), Taiwan Strait (台灣海峽), narrow strait (狹窄海峽)",
+      "img": "🌊",
+      "context_eng": "Then they sail through a narrow area of water called a strait and reach the Pacific Ocean.",
+      "context_chi": "接著他們航行穿過一片稱為海峽的狹窄水域，抵達了太平洋。",
+      "chant": "海峽好窄字好瘦，拿掉 gh 的 strait 就是海峽！",
+      "compare": "strait (名詞：狹窄海峽，6 字母) vs. straight (同音：筆直的，8 字母有 gh) vs. street (街道)",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true
+    },
+    {
+      "id": "voc_w14_od3_17_20",
+      "book_id": "od3",
+      "unit_id": "od3_17",
+      "word": "windy",
+      "ipa": "/ˈwɪndi/",
+      "pos": "形容詞 (Adj.)",
+      "chi": "多風的；刮風的",
+      "breakdown": "wind(名詞：風) + -y(形容詞字尾：充滿…的) -> 充滿風的",
+      "trick": "諧音「問弟」：外面風大到帽子差點吹飛，哥哥趕快「問弟 (windy)」：今天風這麼大還要去放風箏嗎？",
+      "scene": "冬天南美洲海岸寒風呼嘯吹拂，或是秋天河濱公園風大到適合放風箏的日子。",
+      "collocation": "a windy day (刮風的日子), cold and windy (寒冷多風), get windy (起風了)",
+      "img": "🌬️",
+      "context_eng": "Winter was cold and windy, with fog and hail, before spring arrived.",
+      "context_chi": "在春天到來之前，當地的冬天既寒冷又多風，還常起霧下冰雹。",
+      "chant": "風 wind 加 y 變多風，短音 /ɪ/ 的 windy 放風箏！",
+      "compare": "windy (adj. 多風的) vs. wind (n. 風，i 發短音 /ɪ/) vs. cloudy / rainy / foggy (天氣名詞+y)",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true
+    },
+    {
+      "id": "voc_w14_gra3_17_1",
+      "book_id": "gra3",
+      "unit_id": "gra3_17",
+      "word": "into",
+      "ipa": "/ˈɪntuː/",
+      "pos": "介系詞 (Preposition)",
+      "chi": "進入⋯⋯裡面",
+      "breakdown": "in(在裡面) + to(朝向) -> 朝裡面走進去",
+      "trick": "拆字：in（裡面）+ to（走向）-> 走向裡面就是「進入」！",
+      "scene": "颶風來臨前把戶外花園的椅子搬進客廳，或大雨時走進堅固的建築物",
+      "collocation": "go into a building, bring ... into the house, come into the room",
+      "img": "📥",
+      "context_eng": "Bring garden furniture into the house before the hurricane arrives.",
+      "context_chi": "在颶風來臨前，把花園家具搬進屋子裡。",
+      "chant": "Into, into, step inside! Into the building where it is dry!",
+      "compare": "into (動態由外向內進入) vs in (靜態待在裡面) vs out of (動態由內向外離開)",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true
+    },
+    {
+      "id": "voc_w14_gra3_17_2",
+      "book_id": "gra3",
+      "unit_id": "gra3_17",
+      "word": "out of",
+      "ipa": "/ˈaʊt əv/",
+      "pos": "介系詞片語 (Preposition)",
+      "chi": "從⋯⋯出來；離開⋯⋯之外",
+      "breakdown": "out(向外) + of(屬於某空間) -> 從該空間內部離開出來",
+      "trick": "記憶：棒球出局叫 OUT，離開裡面出來就是 out of！",
+      "scene": "女孩推開大門走出教學大樓，或居民依廣播指示撤離危險低窪區域",
+      "collocation": "come out of the building, get out of the area, jump out of the box",
+      "img": "📤",
+      "context_eng": "She is coming out of the building after the safety drill.",
+      "context_chi": "她在安全演習結束後正走出建築物。",
+      "chant": "Out of, out of, open the door! Step out of the room and onto the floor!",
+      "compare": "out of (從立體空間裡面走出來) vs into (從外面走進去)",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true
+    },
+    {
+      "id": "voc_w14_gra3_17_3",
+      "book_id": "gra3",
+      "unit_id": "gra3_17",
+      "word": "up",
+      "ipa": "/ʌp/",
+      "pos": "介系詞 / 副詞 (Preposition / Adverb)",
+      "chi": "向上；沿著⋯⋯往上",
+      "breakdown": "單音節核心空間介系詞，表示往高處上升",
+      "trick": "聯想：比讚大拇指朝上就是 thumbs UP，往高處走就是 up！",
+      "scene": "警察局後方通往公園的白色階梯向上延伸，或低窪住戶往山坡高處避難",
+      "collocation": "go up the steps, walk up the hill, go up to a higher place",
+      "img": "⬆️",
+      "context_eng": "Go up the steps behind the police station to reach the park.",
+      "context_chi": "走上警察局後方的階梯就可以抵達公園。",
+      "chant": "Up the stairs, up the hill! Climb up high and stay safe still!",
+      "compare": "up (往高處上升) vs down (往低處下降)",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true
+    },
+    {
+      "id": "voc_w14_gra3_17_4",
+      "book_id": "gra3",
+      "unit_id": "gra3_17",
+      "word": "down",
+      "ipa": "/daʊn/",
+      "pos": "介系詞 / 副詞 (Preposition / Adverb)",
+      "chi": "向下；沿著⋯⋯往下",
+      "breakdown": "單音節核心空間介系詞，表示由高往低下降",
+      "trick": "聯想：電腦當機叫 DOWN 掉，心情低落或下樓梯就是 down！",
+      "scene": "拿著登山杖的女孩沿著山坡小徑往下走，或穿過公園後走下階梯到達警察局",
+      "collocation": "go down the hill, walk down the steps, climb down the ladder",
+      "img": "⬇️",
+      "context_eng": "Walk through the park and go down the steps to the police station.",
+      "context_chi": "穿過公園並走下階梯就能到達警察局。",
+      "chant": "Down the hill, down the stair! Watch your steps and take good care!",
+      "compare": "down (由高往低移動) vs up (由低往高移動)",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true
+    },
+    {
+      "id": "voc_w14_gra3_17_5",
+      "book_id": "gra3",
+      "unit_id": "gra3_17",
+      "word": "over",
+      "ipa": "/ˈoʊvər/",
+      "pos": "介系詞 (Preposition)",
+      "chi": "越過；在⋯⋯上方；覆蓋在⋯⋯上",
+      "breakdown": "o-(上方弧線) + ver -> 畫出一道拋物線從上方越過或覆蓋",
+      "trick": "諧音「歐佛」-> 飛越歐佛高牆，或把木板蓋在窗戶上方！",
+      "scene": "男孩在石拱橋上方步行跨越小河，或颱風前將厚木板釘在玻璃窗戶上方",
+      "collocation": "go over the bridge, put boards over your windows, jump over the fence",
+      "img": "🌉",
+      "context_eng": "Go over the bridge and you will see the school on your right.",
+      "context_chi": "走過那座橋，你就會在右手邊看到學校。",
+      "chant": "Over the bridge, over the wall! Put boards over windows before storms fall!",
+      "compare": "over (從正上方跨過或覆蓋表面) vs under (從正下方穿過)",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true
+    },
+    {
+      "id": "voc_w14_gra3_17_6",
+      "book_id": "gra3",
+      "unit_id": "gra3_17",
+      "word": "under",
+      "ipa": "/ˈʌndər/",
+      "pos": "介系詞 (Preposition)",
+      "chi": "在⋯⋯下方（穿過或停留）",
+      "breakdown": "un-(下方) + der -> 位於或穿過低處下方",
+      "trick": "拆字：un(下) + der -> 地下鐵叫 underground，走在橋下就是 under！",
+      "scene": "女孩從拱橋底下通道步行經過，或災後警告不可走在搖搖欲墜的斷樹下方",
+      "collocation": "walk under the bridge, don't walk under damaged trees, crawl under the table",
+      "img": "🕳️",
+      "context_eng": "Never walk under damaged trees or bridges after a hurricane.",
+      "context_chi": "颶風過後絕對不要走在受損的樹木或橋樑下方。",
+      "chant": "Under the bridge, under the tree! Stay away from danger so you are safe and free!",
+      "compare": "under (從橋下或物體下方穿過) vs over (從橋面或物體上方跨越)",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true
+    },
+    {
+      "id": "voc_w14_gra3_17_7",
+      "book_id": "gra3",
+      "unit_id": "gra3_17",
+      "word": "from",
+      "ipa": "/frʌm/",
+      "pos": "介系詞 (Preposition)",
+      "chi": "從⋯⋯（出發地／來源）",
+      "breakdown": "表示離開某個出發點或來源",
+      "trick": "聯想：I am FROM Taiwan「我來自台灣」，指路也是從起點 FROM 出發！",
+      "scene": "從警察局出發前往學校，或颶風前從銀行提領現金、從超市購買罐頭與急救箱",
+      "collocation": "from the police station to the school, get money from the bank",
+      "img": "📍",
+      "context_eng": "How do you get from the police station to the school?",
+      "context_chi": "請問從警察局要怎麼前往學校？",
+      "chant": "From the bank and from the store! Get from A to B and explore!",
+      "compare": "from (標示起點或來源) vs to (標示終點或目的地)",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true
+    },
+    {
+      "id": "voc_w14_gra3_17_8",
+      "book_id": "gra3",
+      "unit_id": "gra3_17",
+      "word": "to",
+      "ipa": "/tuː/",
+      "pos": "介系詞 (Preposition)",
+      "chi": "朝向⋯⋯；到達（目的地）",
+      "breakdown": "單音節核心方向介系詞，箭頭指向終點",
+      "trick": "聯想：箭頭指向「兔」子洞口 ➔ go TO，往目的地前進！",
+      "scene": "低窪居民往高處或颶風避難所移動，或沿著避難地圖路線走到醫院",
+      "collocation": "go to a hurricane shelter, get from A to B, listen to the radio",
+      "img": "🎯",
+      "context_eng": "Go to a hurricane shelter if your home is in a low area.",
+      "context_chi": "如果你的住家位於低窪地區，請前往颶風避難所。",
+      "chant": "From the start to the end! To the shelter with your friend!",
+      "compare": "to (朝向目的地接近，含方向終點) vs into (跨進建築物內部)",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true
+    },
+    {
+      "id": "voc_w14_gra3_17_9",
+      "book_id": "gra3",
+      "unit_id": "gra3_17",
+      "word": "around",
+      "ipa": "/əˈraʊnd/",
+      "pos": "介系詞 (Preposition)",
+      "chi": "繞過；沿著⋯⋯周圍",
+      "breakdown": "a-(在) + round(圓形/圈) -> 沿著圓圈外圍繞行",
+      "trick": "拆字：a + round（圓圈）-> 畫一個圓圈繞過去就是 around！",
+      "scene": "女孩為了不弄濕鞋子，沿著路邊的大水窪外圍繞過去",
+      "collocation": "walk around the water, run around the park, drive around the fallen tree",
+      "img": "🔄",
+      "context_eng": "She is walking around the puddle so her shoes stay dry.",
+      "context_chi": "她正繞著水窪外圍走，好讓鞋子保持乾燥。",
+      "chant": "Around the water, around the tree! Keep your boots as dry as can be!",
+      "compare": "around (繞過外圍不沾濕) vs through (直接穿過內部通道)",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true
+    },
+    {
+      "id": "voc_w14_gra3_17_10",
+      "book_id": "gra3",
+      "unit_id": "gra3_17",
+      "word": "through",
+      "ipa": "/θruː/",
+      "pos": "介系詞 (Preposition)",
+      "chi": "穿過；貫穿（內部空間）",
+      "breakdown": "th-(貫穿氣流音) + rough -> 筆直穿過整段空間到另一端",
+      "trick": "諧音「死路」反義 -> 沒走進死路，而是筆直「穿過」公園大路！",
+      "scene": "踩著大水窪直接走過去、穿過公園小徑前往馬路，或警告災後不可開車穿越淹水路段",
+      "collocation": "walk through the park, drive through flooding water, walk through the tunnel",
+      "img": "🚇",
+      "context_eng": "Don't drive through flooding water after a hurricane.",
+      "context_chi": "颶風過後切勿開車穿越淹水路段。",
+      "chant": "Through the park, through the door! Never drive through floodwater!",
+      "compare": "through (從立體空間或公園內部穿過) vs over (從表面上方跨過) vs around (繞過外圍)",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true
+    },
+    {
+      "id": "voc_w14_gra3_17_11",
+      "book_id": "gra3",
+      "unit_id": "gra3_17",
+      "word": "hurricane",
+      "ipa": "/ˈhɜːrɪkeɪn/",
+      "pos": "名詞 (Noun)",
+      "chi": "颶風；強烈熱帶氣旋",
+      "breakdown": "hurr-(疾風呼嘯) + i + cane -> 威力強大的旋轉風暴",
+      "trick": "諧音「哈雷肯」-> 強風呼嘯像「哈雷」重機衝過來，連鐵皮都「肯」吹飛！",
+      "scene": "氣象新聞發布警報，居民在窗戶釘上木板並準備罐頭與急救箱",
+      "collocation": "before a hurricane, during a hurricane, hurricane shelter",
+      "img": "🌀",
+      "context_eng": "Stay inside a strong building during a dangerous hurricane.",
+      "context_chi": "在危險的颶風期間，請待在堅固的建築物室內。",
+      "chant": "Hurricane, hurricane, wind and rain! Stay inside and safe from pain!",
+      "compare": "hurricane (大西洋與東北太平洋的強烈氣旋/颶風) vs typhoon (西北太平洋的颱風)",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true
+    },
+    {
+      "id": "voc_w14_gra3_17_12",
+      "book_id": "gra3",
+      "unit_id": "gra3_17",
+      "word": "emergency",
+      "ipa": "/ɪˈmɜːrdʒənsi/",
+      "pos": "名詞 (Noun)",
+      "chi": "緊急情況；突發危急事件",
+      "breakdown": "e-(出) + merg(湧現) + -ency(狀態名詞) -> 突然湧現的危急狀況",
+      "trick": "諧音「一沒整死」-> 遇上突發「緊急情況」要冷靜，才能保護自己沒事！",
+      "scene": "在城鎮緊急避難地圖上尋找警察局、消防局、藥局與醫院的位置",
+      "collocation": "in an emergency, emergency kit, emergency shelter",
+      "img": "🚨",
+      "context_eng": "Where can you go in an emergency? Find the hospital and police station on the map.",
+      "context_chi": "緊急狀況發生時你可以去哪裡？在地圖上找出醫院和警察局。",
+      "chant": "Emergency, emergency, know the way! Follow the map and stay safe today!",
+      "compare": "in an emergency (在緊急情況下，用介系詞 in + 母音開頭用 an)",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true
+    },
+    {
+      "id": "voc_w14_wr3_7_1",
+      "book_id": "wr3",
+      "unit_id": "wr3_7",
+      "word": "break",
+      "ipa": "/breɪk/",
+      "pos": "動詞 (Verb)",
+      "chi": "摔斷；折斷（過去式 broke）",
+      "breakdown": "不規則動詞：break（原形）- broke（過去式）- broken（過去分詞）",
+      "trick": "諧音「不瑞克」-> 騎車不煞車 (brake) 就會摔斷 (break) 腿！",
+      "scene": "打著石膏、拄著枴杖坐在沙發上休養腿部骨折的男孩。",
+      "collocation": "break your leg, broke your leg, break an arm",
+      "img": "🦴",
+      "context_eng": "Then I heard from Jean that you fell down the stairs and broke your leg.",
+      "context_chi": "後來我從珍那裡聽說你從樓梯摔下來而且摔斷了腿。",
+      "chant": "Break, broke, broken bone, resting quietly at home alone!",
+      "compare": "break (摔斷骨頭 - 過去式 broke) vs sprain (扭傷韌帶 - 過去式 sprained)",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true
+    },
+    {
+      "id": "voc_w14_wr3_7_2",
+      "book_id": "wr3",
+      "unit_id": "wr3_7",
+      "word": "sprain",
+      "ipa": "/spreɪn/",
+      "pos": "動詞 (Verb)",
+      "chi": "扭傷（過去式 sprained）",
+      "breakdown": "spr- + ain (與 pain 押韻，聯想關節一扭就 pain 痛！)",
+      "trick": "諧音「是痛 (pain)」-> 穿高跟鞋踩空一扭，腳踝就 sprain！",
+      "scene": "脫下紅色鞋子坐在地板上抱著發紅發痛腳踝的女孩。",
+      "collocation": "sprain your ankle, sprained your ankle, sprain your wrist",
+      "img": "🦶",
+      "context_eng": "I heard that you sprained your ankle during PE class yesterday.",
+      "context_chi": "我聽說你昨天在體育課時扭傷了腳踝。",
+      "chant": "Twist and turn, ouch, what a pain! Watch your step so you don't sprain!",
+      "compare": "sprain (扭傷關節) vs break (折斷骨頭)",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true
+    },
+    {
+      "id": "voc_w14_wr3_7_3",
+      "book_id": "wr3",
+      "unit_id": "wr3_7",
+      "word": "burn",
+      "ipa": "/bɜːrn/",
+      "pos": "動詞 (Verb)",
+      "chi": "燙傷；燒傷（過去式 burned）",
+      "breakdown": "單音節核心動詞，規則過去式加 -ed（亦可見 burnt）",
+      "trick": "聯想熱水壺「噴」出滾水，手臂就被 burn 燙傷！",
+      "scene": "打翻冒著熱氣的熱水壺，滾水潑到手臂紅腫的男孩。",
+      "collocation": "burn your arm, burned your arm, burn your hand",
+      "img": "🔥",
+      "context_eng": "Be careful with hot water so you don't burn your arm.",
+      "context_chi": "拿熱水時要小心，才不會燙傷你的手臂。",
+      "chant": "Hot water spills, turn away quick! Don't burn your arm or get sick!",
+      "compare": "burn (高溫燙傷／燒傷) vs spill (打翻液體，如 spill hot water)",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true
+    },
+    {
+      "id": "voc_w14_wr3_7_4",
+      "book_id": "wr3",
+      "unit_id": "wr3_7",
+      "word": "catch the flu",
+      "ipa": "/kætʃ ðə fluː/",
+      "pos": "動詞片語 (Verb Phrase)",
+      "chi": "得流感（過去式 caught）",
+      "breakdown": "catch (感染/染上，過去式 caught) + the flu (流感，influenza 縮寫)",
+      "trick": "病菌飛過來被你「抓到 (catch)」就是得流感；過去式 caught 有 augh！",
+      "scene": "頭上敷著冰袋、床頭放滿衛生紙盒的發燒女孩。",
+      "collocation": "catch the flu, caught the flu, catch a cold",
+      "img": "🤒",
+      "context_eng": "You caught the flu and had to stay in bed for three days.",
+      "context_chi": "你得了流感，不得不臥床休息三天。",
+      "chant": "Achoo, achoo, stay warm and rest! When you catch the flu, sleep is best!",
+      "compare": "catch the flu (得流感，固定加 the) vs catch a cold (得一般感冒，加 a)",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true
+    },
+    {
+      "id": "voc_w14_wr3_7_5",
+      "book_id": "wr3",
+      "unit_id": "wr3_7",
+      "word": "cut",
+      "ipa": "/kʌt/",
+      "pos": "動詞 (Verb)",
+      "chi": "割傷；切傷（過去式同形 cut）",
+      "breakdown": "短母音 CVC 三態同形動詞：cut - cut - cut",
+      "trick": "刀子「卡」一聲劃下去，三態永遠長一樣：cut, cut, cut！",
+      "scene": "在砧板旁切菜時不小心切到手指而流血的女孩。",
+      "collocation": "cut your finger, cut myself",
+      "img": "🩹",
+      "context_eng": "I heard that you cut your finger while helping in the kitchen.",
+      "context_chi": "我聽說你在廚房幫忙時割傷了手指。",
+      "chant": "Cut, cut, yesterday and today! Put a bandage right away!",
+      "compare": "cut (割傷，過去式仍為 cut) vs hurt (弄傷／疼痛，過去式仍為 hurt)",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true
+    },
+    {
+      "id": "voc_w14_wr3_7_6",
+      "book_id": "wr3",
+      "unit_id": "wr3_7",
+      "word": "bruise",
+      "ipa": "/bruːz/",
+      "pos": "動詞／名詞 (Verb / Noun)",
+      "chi": "撞傷瘀青（過去式 bruised）",
+      "breakdown": "字中有 u-i 組合發 /uː/ 音，字尾有不發音 e，過去式加 -d",
+      "trick": "諧音「不入紫」-> 撞到臉變成青紫一塊就是 bruise！",
+      "scene": "臉頰出現一大塊紫紅色瘀青並貼著OK繃的男孩。",
+      "collocation": "bruise your face, bruised your face, get a bruise",
+      "img": "🤕",
+      "context_eng": "You fell off your bike and bruised your face badly.",
+      "context_chi": "你從腳踏車摔下來，把臉撞得嚴重瘀青。",
+      "chant": "Bump and bruise, purple and blue, put some ice to soothe it too!",
+      "compare": "bruise your face (臉部瘀青) vs get a black eye (眼眶被打成黑青)",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true
+    },
+    {
+      "id": "voc_w14_wr3_7_7",
+      "book_id": "wr3",
+      "unit_id": "wr3_7",
+      "word": "hurt",
+      "ipa": "/hɜːrt/",
+      "pos": "動詞 (Verb)",
+      "chi": "弄傷；感到疼痛（過去式同形 hurt）",
+      "breakdown": "ur 發 /ɜːr/ 音；三態同形：hurt - hurt - hurt",
+      "trick": "聯想「喝特」痛 -> 膝蓋撞到好痛 hurt，現在過去都寫 hurt！",
+      "scene": "坐在椅子上抱著受傷膝蓋、眉頭深鎖的小女孩。",
+      "collocation": "hurt your knee, doesn't hurt too much, get hurt",
+      "img": "🦵",
+      "context_eng": "I hope your leg doesn't hurt too much.",
+      "context_chi": "我希望你的腿不會太痛。",
+      "chant": "Hurt, hurt, never add -ed! Care for your knee carefully!",
+      "compare": "hurt (及物：弄傷某部位；不及物：感到痛) vs hurting (形容詞：正在疼痛的，You must be hurting)",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true
+    },
+    {
+      "id": "voc_w14_wr3_7_8",
+      "book_id": "wr3",
+      "unit_id": "wr3_7",
+      "word": "infection",
+      "ipa": "/ɪnˈfekʃən/",
+      "pos": "名詞 (Noun)",
+      "chi": "感染；發炎",
+      "breakdown": "in-(進入) + fect-(做/影響) + -ion(名詞) -> 病菌跑進身體引發發炎",
+      "trick": "拆解 in (進入) + fect + tion -> 髒東西跑進眼睛就變成 eye infection！",
+      "scene": "照著鏡子發現自己雙眼紅腫發炎、準備戴上眼罩的男孩。",
+      "collocation": "have an eye infection, ear infection, prevent infection",
+      "img": "👁️",
+      "context_eng": "You had an eye infection and had to wear an eye patch.",
+      "context_chi": "你眼睛發炎感染，不得不戴上眼罩。",
+      "chant": "Wash your hands, keep germs away! No infection ruins your day!",
+      "compare": "an eye infection (眼部發炎感染，搭配 an) vs an allergic reaction (過敏反應，搭配 an)",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true
+    },
+    {
+      "id": "voc_w14_wr3_7_9",
+      "book_id": "wr3",
+      "unit_id": "wr3_7",
+      "word": "hospitalized",
+      "ipa": "/ˈhɑːspɪtəlaɪzd/",
+      "pos": "形容詞／過去分詞 (Adjective)",
+      "chi": "住院治療的",
+      "breakdown": "hospital (醫院) + -ize (動詞化：送進醫院) + -d (被動形容詞)",
+      "trick": "核心字根就是 hospital (醫院)，加上 -ized 就是「被送進醫院治療」!",
+      "scene": "佩妮躺在醫院病床上休養幾天，朋友寫卡片表達關心。",
+      "collocation": "be hospitalized, were hospitalized for a few days",
+      "img": "🏥",
+      "context_eng": "I also heard that you were hospitalized for a few days.",
+      "context_chi": "我也聽說你住院住了幾天。",
+      "chant": "Hospital, hospitalized, doctors help you heal inside!",
+      "compare": "be hospitalized (住院治療) vs visit you at the hospital (去醫院探望你)",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true
+    },
+    {
+      "id": "voc_w14_wr3_7_10",
+      "book_id": "wr3",
+      "unit_id": "wr3_7",
+      "word": "allergic reaction",
+      "ipa": "/əˈlɜːrdʒɪk riˈækʃən/",
+      "pos": "名詞片語 (Noun Phrase)",
+      "chi": "過敏反應",
+      "breakdown": "allergic (過敏的，allergy 變化) + reaction (反應，re-回 + act 動作)",
+      "trick": "吃了海鮮或花生產生紅疹反應 (reaction)，前面母音開頭要用 an！",
+      "scene": "誤食過敏食材後手臂起疹子並趕緊前往保健室的學生。",
+      "collocation": "have an allergic reaction, had an allergic reaction, allergic to",
+      "img": "🤧",
+      "context_eng": "I heard that you had an allergic reaction and got a rash.",
+      "context_chi": "我聽說你產生了過敏反應而且起了紅疹。",
+      "chant": "Check the food before you eat! No allergic reaction, feel so sweet!",
+      "compare": "have an allergic reaction (產生過敏反應) vs have a rash (身上起紅疹)",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true
+    },
+    {
+      "id": "voc_w14_wr3_7_11",
+      "book_id": "wr3",
+      "unit_id": "wr3_7",
+      "word": "signature",
+      "ipa": "/ˈsɪɡnətʃər/",
+      "pos": "名詞 (Noun)",
+      "chi": "署名；簽名",
+      "breakdown": "sign (簽名/記號) + -ature (名詞後綴)",
+      "trick": "前半部就是 sign (簽名)，注意裡面有不發音的 g (sig-na-ture)！",
+      "scene": "寫完卡片最後一行祝福語 Get well soon! 後在右下角簽下名字 Danny。",
+      "collocation": "Greeting, Body, Closing, Signature",
+      "img": "✍️",
+      "context_eng": "Don't forget to write your signature at the bottom of the card.",
+      "context_chi": "別忘了在卡片最下方寫上你的署名。",
+      "chant": "Greeting at the top, Closing near the end, Signature shows the name of your friend!",
+      "compare": "Closing (結尾祝福語如 Get well soon!) vs Signature (寄卡人署名如 Danny)",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true
+    },
+    {
+      "id": "voc_w14_wr3_7_12",
+      "book_id": "wr3",
+      "unit_id": "wr3_7",
+      "word": "anniversary",
+      "ipa": "/ˌænɪˈvɜːrsəri/",
+      "pos": "名詞 (Noun)",
+      "chi": "週年紀念日",
+      "breakdown": "ann-(年，annual) + vers-(轉動) + -ary(名詞) -> 地球轉回一年的紀念日",
+      "trick": "字首 anni- 聯想 annual (每年的)，注意有雙寫 nn！",
+      "scene": "寫卡片祝賀父母結婚十週年紀念日的溫馨家庭畫面。",
+      "collocation": "wedding anniversary, congratulate someone's anniversary",
+      "img": "💐",
+      "context_eng": "With a nice card, you can congratulate someone's birthday or anniversary.",
+      "context_chi": "透過一張漂亮的卡片，你可以祝賀某人的生日或週年紀念日。",
+      "chant": "Anniversary comes once a year, send a warm card full of cheer!",
+      "compare": "anniversary (週年紀念日) vs wedding (結婚典禮當日)",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true
+    },
+    {
+      "id": "voc_w14_wr3_7_13",
+      "book_id": "wr3",
+      "unit_id": "wr3_7",
+      "word": "graduation",
+      "ipa": "/ˌɡrædʒuˈeɪʃən/",
+      "pos": "名詞 (Noun)",
+      "chi": "畢業；畢業典禮",
+      "breakdown": "gradu-(步/階級，grade) + -ation(名詞後綴) -> 踏出校門邁向下一階段",
+      "trick": "前面是 grad-（聯想 grade 年級），讀完所有年級就是 graduation！",
+      "scene": "穿著畢業禮服、戴學士帽收到親友祝賀畢業卡片的學生。",
+      "collocation": "congratulate someone's graduation, graduation card",
+      "img": "🎓",
+      "context_eng": "My friends gave me a wonderful card for my graduation.",
+      "context_chi": "我的朋友們在我的畢業典禮時送了我一張很棒的卡片。",
+      "chant": "Graduation day is finally here! Send your wishes loud and clear!",
+      "compare": "graduation (畢業，名詞) vs graduate (畢業，動詞／畢業生)",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true
+    },
+    {
+      "id": "voc_w14_wr3_7_14",
+      "book_id": "wr3",
+      "unit_id": "wr3_7",
+      "word": "black out",
+      "ipa": "/blæk aʊt/",
+      "pos": "動詞片語 (Phrasal Verb)",
+      "chi": "昏倒；短暫失去意識（過去式 blacked out）",
+      "breakdown": "black (漆黑) + out (完全失去) -> 眼前一片漆黑昏過去",
+      "trick": "眼前「全黑 (black) 斷電 (out)」就是昏倒失去意識！",
+      "scene": "在炎熱朝會上站立過久突然頭暈昏倒被送去保健室的同學。",
+      "collocation": "blacked out, faint suddenly",
+      "img": "😵",
+      "context_eng": "I heard that you blacked out during morning assembly.",
+      "context_chi": "我聽說你在朝會時昏倒了。",
+      "chant": "Drink enough water and rest in the shade, never black out or feel afraid!",
+      "compare": "black out (昏倒、眼前發黑) vs faint (暈厥，兩者同義，過去式 fainted / blacked out)",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true
     }
   ],
   "grammar": [
@@ -17251,36 +18610,6 @@ const ENGLISH_DATA = {
       ]
     },
     {
-      "id": "gra_67",
-      "book_id": "gra3",
-      "unit_id": "gra3_17",
-      "rule_title": "Imperatives (祈使句與安全指令) 📢",
-      "eng_exp": "To form imperatives, use the base form of a verb. Use imperatives to give instructions, warnings, orders, or advice. To make a negative imperative, put 'Don't' before the base verb. You can add 'please' at the beginning or end of an imperative to make it polite.",
-      "chi_exp": "老師傳授「指令大聲說」密技！1. 肯定祈使句：直接用「動詞原形」開頭！不需要寫主詞（You 省略了），用來叫別人做某事。（例如：Go into a building. 進入建築物。）2. 否定祈使句：在動詞原形前面加上 Don't！用來禁止或警告別人不要做某事。（例如：Don't drive through flooding water. 不要開車行經積水區。）3. 禮貌小包包：加上 please 會讓語氣更禮貌喔！可以放在句首（Please stay there.）或句尾（Stay there, please. - 句尾要加逗號）。",
-      "examples": [
-        "Go into a building and stay there. (進入建築物並留在那裡。)",
-        "Don't drive through flooding water. (不要開車駛過積水區。)",
-        "Put boards over your windows, please. (請在窗戶上釘上木板。)",
-        "Please don't walk under damaged trees. (請不要走在受損的樹木下方。)",
-        "Listen to the radio for hurricane safety instructions. (收聽收音機以獲取颱風安全指示。)"
-      ]
-    },
-    {
-      "id": "gra_68",
-      "book_id": "gra3",
-      "unit_id": "gra3_17",
-      "rule_title": "Prepositions of Movement (動態介系詞) 🏃‍♂️",
-      "eng_exp": "Use prepositions of movement to show the direction in which a person or object is moving. Common prepositions of movement include: into (into a container/building), out of (leaving an enclosed space), up (moving to a higher level), down (moving to a lower level), over (crossing above something), under (moving below something), through (moving inside a 3D space like a park or tunnel), along (following a line like a road), and around (moving in a circle).",
-      "chi_exp": "老師的「方向動感地圖」！動態介系詞用來指引「動作移動的方向」：1. into / out of：進去內部（into the house） / 從內部出來（out of the building）。2. up / down：向上攀爬（up the hill） / 向下滑動（down the stairs）。3. over / under：越過上方（over the bridge） / 從底下穿過（under the tree）。4. through：穿過立體內部空間（through the park / through the tunnel）。5. along / around：沿著直線走（along the road） / 繞著轉圈（around the fountain）。",
-      "examples": [
-        "He is walking into the building. (他正走進建築物裡。)",
-        "She is coming out of the library. (她正從圖書館走出來。)",
-        "The cat ran up the tree and then ran down the hill. (貓咪跑上樹，然後又跑下山丘。)",
-        "Walk through the park and go over the bridge. (穿過公園並跨過那座橋。)",
-        "Go along the road and walk around the fountain. (沿著馬路走，並繞著噴水池轉一圈。)"
-      ]
-    },
-    {
       "id": "gra_69",
       "book_id": "gra3",
       "unit_id": "gra3_18",
@@ -17537,7 +18866,8 @@ const ENGLISH_DATA = {
       ],
       "trap": "受中文直譯「關於...感到驚訝」影響，常誤寫成 surprised about 或 surprised of。課本標準用法必為 surprised by / at！",
       "is_week12": true,
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": true
     },
     {
       "id": "odg3_u16_g02",
@@ -17622,7 +18952,8 @@ const ENGLISH_DATA = {
       ],
       "trap": "最致命的大考陷阱！學生常看見 It is easy for me，就誤以為所有 It is adj 都要接 for。記住：形容事物性質難易用 for；評價人的性格智慧用 of！",
       "is_week12": true,
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": true
     },
     {
       "id": "odg3_u16_g03",
@@ -17726,7 +19057,8 @@ const ENGLISH_DATA = {
       ],
       "trap": "中文「在...方面很棒」常誤寫成 good in；「關於...很有名」常誤寫成 famous about。切記：能力用 at，名氣用 for，充滿用 of！",
       "is_week12": true,
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": true
     },
     {
       "id": "odg3_u16_g04",
@@ -17801,7 +19133,8 @@ const ENGLISH_DATA = {
       ],
       "trap": "兩大段考扣分黑洞：(1) 介系詞後忘記動詞加 -ing；(2) 看到動名詞後面接複數著名詞（如 food labels / chemicals），就誤用複數動詞 are，記住主詞是動名詞本身，動詞必用單數！",
       "is_week12": true,
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": true
     },
     {
       "id": "OD3_U16_G1",
@@ -17882,7 +19215,8 @@ const ENGLISH_DATA = {
       ],
       "trap": "受中文直譯「對...感到好奇/滿意」影響，學生最常把所有介系詞通通誤寫為 to 或 at。務必牢記：curious about, surprised at/by, happy with, proud of, full of！",
       "is_week12": true,
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "OD3_U16_G2",
@@ -17959,7 +19293,8 @@ const ENGLISH_DATA = {
       ],
       "trap": "段考同義字大題最容易誤選反義字（Antonyms，如把 empty 選成 crowded，或把 unafraid 選成 fearful）。作答時務必看清題目是要求「同義字 (Synonym)」還是「反義字 (Antonym)」！",
       "is_week12": true,
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "OD3_U16_G3",
@@ -18031,7 +19366,8 @@ const ENGLISH_DATA = {
       ],
       "trap": "中文常說「長在地上」，學生常不假思索寫 on the ground。地瓜與胡蘿蔔是地下根，在土壤「內部」，英文絕對必須使用 in the ground！",
       "is_week12": true,
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "RWW6_U09_G1",
@@ -18113,7 +19449,8 @@ const ENGLISH_DATA = {
       ],
       "trap": "切勿只看單一表面舉止就武斷下結論。例如 Rayyan 說 Nora 是「害羞的 (shy)」，但堂姊 Irdina 卻指出她是「安靜但有自信 (quiet, but confident)」；讀者必須綜合全篇線索進行交叉比對。",
       "is_week12": true,
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "RWW6_U09_G2",
@@ -18186,7 +19523,8 @@ const ENGLISH_DATA = {
       ],
       "trap": "三大高頻盲點：1. prefer 誤接 than（受中文「比起…」干擾）；2. mean to be 後面誤接副詞 rudely（be 動詞後應接形容詞 rude）；3. prefer 在第三人稱單數時忘記加 s（He prefers...）。",
       "is_week12": true,
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "RWW6_U09_G3",
@@ -18264,7 +19602,8 @@ const ENGLISH_DATA = {
       ],
       "trap": "be being + Adj. 只能用於人類「可以自主意志控制的言行」（如 friendly, rude, polite, silly），絕不能用於無法控制的客觀狀態（如不可說 He is being tall 或 She is being young）。虛主詞 It is rude/polite 後方必須接 to + 原形動詞。",
       "is_week12": true,
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "space_ch06_g01",
@@ -18333,7 +19672,8 @@ const ENGLISH_DATA = {
       ],
       "trap": "台灣學生最容易在 could / might 後方誤加 to（如 could to have）或誤用動名詞 being；此外常混淆副詞 Maybe 與動詞片語 may be。",
       "is_week12": true,
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "space_ch06_g02",
@@ -18403,7 +19743,8 @@ const ENGLISH_DATA = {
       ],
       "trap": "學生常在 too... to... 句型中誤加 not 形成雙重否定語病（如 too cold not to have），或在 to 後方誤填動名詞；需牢記 too... to... 本身即代表否定意涵。",
       "is_week12": true,
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "space_ch06_g03",
@@ -18473,7 +19814,8 @@ const ENGLISH_DATA = {
       ],
       "trap": "分詞修飾時最忌諱加上 be 動詞變成雙動詞（chemicals are called hydrocarbons）；此外受中文直譯影響，常將 be covered in 誤寫成 covered at 或 covered by。",
       "is_week12": true,
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "WR3_U06_G01",
@@ -18553,7 +19895,8 @@ const ENGLISH_DATA = {
       ],
       "trap": "中文常說「他 1847 年出生」，學生容易把 born 誤當成動詞而寫出 \"He born in 1847\"；或將年份介系詞誤寫為 on (was born on 1847)。務必牢記 was born in + 年份！",
       "is_week12": true,
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": false
     },
     {
       "id": "WR3_U06_G02",
@@ -18634,7 +19977,8 @@ const ENGLISH_DATA = {
       ],
       "trap": "學生極常受日常口語「Thank you for your help」影響而誤寫出 \"Thanks for Edison\"；或在 Because 子句後重複寫出 so。記住：歸功於某人必用 Thanks to + 名詞！",
       "is_week12": true,
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": false
     },
     {
       "id": "WR3_U06_G03",
@@ -18714,7 +20058,8 @@ const ENGLISH_DATA = {
       ],
       "trap": "大考最常見致命陷阱：在 \"one of the greatest...\" 後面漏寫名詞複數 s (誤寫 one of the greatest inventor)；以及在 His most famous invention 後方誤填 are！",
       "is_week12": true,
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": false
     },
     {
       "id": "WR3_U06_G04",
@@ -18797,7 +20142,8 @@ const ENGLISH_DATA = {
       ],
       "trap": "學生最常在 because 子句中忘記轉過去式動詞 (寫成 never give up 或 never complain)；以及將 For these reasons 的 reasons 漏寫複數 s！",
       "is_week12": true,
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": false
     },
     {
       "id": "RWW6_U06_G1",
@@ -18874,7 +20220,8 @@ const ENGLISH_DATA = {
       ],
       "trap": "考試必考詞性陷阱：`need to cross the street`（to 後接動詞 cross）vs. `be across the street`（be 後接介系詞 across）。另外注意 `along`（沿著）勿誤拼為 `alone`（獨自）。",
       "is_week12": false,
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": false
     },
     {
       "id": "RWW6_U06_G2",
@@ -18946,7 +20293,8 @@ const ENGLISH_DATA = {
       ],
       "trap": "兩大高頻文法盲點：(1) 逗號後面誤填 `that`（規定必填 `which`）；(2) 只看到 `might cross the finish line first` 就誤以為跑最快就贏，忽略了條件句與 `with a full card` 的必要贏球條件。",
       "is_week12": false,
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": false
     },
     {
       "id": "RWW6_U06_G3",
@@ -19019,7 +20367,809 @@ const ENGLISH_DATA = {
       ],
       "trap": "段落聽寫最常扣分處：(1) 聽到 `see Figure 1` 卻漏掉左右括號，或將 `Figure` 小寫；(2) `directions` 誤加 `e` 拼成 `directiones`，`compass` 誤加 `e` 拼成 `comepass`；(3) 忘記為轉述路人的話加上雙引號。",
       "is_week12": false,
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": false
+    },
+    {
+      "id": "OD3_U17_G1",
+      "book_id": "od3",
+      "unit_id": "od3_17",
+      "rule_title": "Prepositions of Movement (移動與方向介系詞：up, down, into, out of, to, around, through)",
+      "eng_exp": "Use prepositions of movement (up, down, into, out of, to, around, through) after action verbs to give clear directions and describe how someone or something moves through space.",
+      "chi_exp": "移動介系詞接在動作動詞（go, walk, sail, climb）後方，用來精確指示移動軌跡：(1) up（向上方高處）與 down（向下方或沿路線前進）；(2) into（進入封閉或室內空間）與 out of（從內部空間出來）；(3) to（朝向終點目標）；(4) around（繞著外圍畫圈）；(5) through（從一側貫穿內部空間到另一側，如公園、箱子、海峽）。",
+      "formula": "動作動詞 (go / walk / sail / climb) + [ up / down / into / out of / to / around / through ] + 地點名詞",
+      "intro": "",
+      "categories": [
+        {
+          "label": "垂直高低與方向 (up / down / to)",
+          "items": [
+            "go up to the deck",
+            "climb up the ladder",
+            "go down the stairs",
+            "sail down the coast"
+          ],
+          "note": "up 往上爬升；down 往下或在地圖上向南沿線移動；to 指向目的地"
+        },
+        {
+          "label": "內外進出空間 (into / out of)",
+          "items": [
+            "get out of bed",
+            "walk into the kitchen"
+          ],
+          "note": "out of 表示從裡面離開；into 表示由外進入內部"
+        },
+        {
+          "label": "環繞與貫穿路徑 (around / through)",
+          "items": [
+            "walk around the pond",
+            "sail around the world",
+            "walk through the park",
+            "sail through a strait"
+          ],
+          "note": "around 沿著外緣繞圈；through 從立體空間中間穿過去"
+        }
+      ],
+      "pitfalls": [
+        {
+          "wrong": "The ships sailed around the narrow strait to reach the Pacific Ocean.",
+          "right": "The ships sailed through the narrow strait to reach the Pacific Ocean.",
+          "tip": "海峽兩側是陸地，船隻是從中間水道「貫穿過去」，必須使用 through，不能用繞圈的 around！"
+        },
+        {
+          "wrong": "First, Juan gets out the bed and walks in the kitchen.",
+          "right": "First, Juan gets out of bed and walks into the kitchen.",
+          "tip": "表示「下床離開被窩」必須寫完整兩個字 out of（不可省略 of）；強調從外面走進廚房的動態移動用 into。"
+        }
+      ],
+      "examples": [
+        {
+          "en": "Go up to the deck and check the sails.",
+          "zh": "走上甲板去檢查船帆。",
+          "highlight": "up to"
+        },
+        {
+          "en": "We sailed down the coast of South America.",
+          "zh": "我們沿著南美洲海岸線向南航行。",
+          "highlight": "down"
+        },
+        {
+          "en": "Walk down this street, through the park, and around the pond.",
+          "zh": "沿著這條街往下走、穿過公園，再繞過池塘。",
+          "highlight": "down / through / around"
+        },
+        {
+          "en": "First, Juan gets out of bed, walks into the kitchen, and climbs up the ladder.",
+          "zh": "首先，Juan 下床、走進廚房，再爬上梯子。",
+          "highlight": "out of / into / up"
+        }
+      ],
+      "trap": "段考最愛把「穿過森林/公園/海峽 (through)」與「繞過池塘/柱子/世界 (around)」混在一起考；只要空間兩側有包夾物且從中間通過，一律選 through！",
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true
+    },
+    {
+      "id": "OD3_U17_G2",
+      "book_id": "od3",
+      "unit_id": "od3_17",
+      "rule_title": "Writing Study: Complex Sentences Using Before and After (時間連接詞複合句與先後順序)",
+      "eng_exp": "Before and after are time conjunctions used to join two events in a complex sentence. Remember: the clause with 'before' introduces the second event, while the clause with 'after' introduces the first event.",
+      "chi_exp": "時間連接詞 before 與 after 用來把兩件有先後順序的事件合併成複合句。記憶核心法則：「before 後面接『較晚發生（2nd）』的事，after 後面接『較早發生（1st）』的事」。改寫互換連接詞時，兩個子句的位置必須跟著對調，才能保持原本的時間順序不變！",
+      "formula": "[1st 先發生] + before + [2nd 後發生].  ⟷  [2nd 後發生] + after + [1st 先發生].",
+      "intro": "",
+      "categories": [
+        {
+          "label": "before 型（重點鎖定：before 子句＝第 2 步）",
+          "items": [
+            "I studied hard before I took the test.",
+            "Before I went to bed, I brushed my teeth."
+          ],
+          "note": "「在考試之前我努力讀書」= 先讀書 (1st)，後考試 (2nd)"
+        },
+        {
+          "label": "after 型（重點鎖定：after 子句＝第 1 步）",
+          "items": [
+            "I took the test after I studied hard.",
+            "After I got home, I ate an apple."
+          ],
+          "note": "「在我努力讀書之後去考試」= 先讀書 (1st)，後考試 (2nd)"
+        }
+      ],
+      "pitfalls": [
+        {
+          "wrong": "I ate an apple in our kitchen before I got home.",
+          "right": "I ate an apple in our kitchen after I got home.",
+          "tip": "人必須「先回到家 (1st)」才能在自家廚房「吃蘋果 (2nd)」，got home 是先發生的動作，所以前面要用 after！"
+        },
+        {
+          "wrong": "After it rains, please come inside right now. It's dark and cloudy!",
+          "right": "Please come inside before it rains. It's dark and cloudy!",
+          "tip": "天色陰暗烏雲密布還沒下雨，為了不淋濕必須「趁還沒下雨前 (before)」進屋內！"
+        }
+      ],
+      "examples": [
+        {
+          "en": "I studied hard before I took the test.",
+          "zh": "我在參加考試之前很努力地讀書。",
+          "highlight": "before"
+        },
+        {
+          "en": "I took the test after I studied hard.",
+          "zh": "我在努力讀書之後參加了考試。",
+          "highlight": "after"
+        },
+        {
+          "en": "The plant grew faster after I gave it water every day.",
+          "zh": "在我每天給它澆水之後，植物長得更快了。",
+          "highlight": "after"
+        },
+        {
+          "en": "Before they reached the Pacific Ocean, they sailed through a narrow strait.",
+          "zh": "在抵達太平洋之前，他們航行穿過了一條狹窄的海峽。",
+          "highlight": "Before"
+        }
+      ],
+      "trap": "當 Before 或 After 擺在「句首」時（例如 Before I went to bed, I brushed my teeth.），兩個子句中間務必加上逗號；放在句中時則不需逗號！",
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true
+    },
+    {
+      "id": "OD3_U17_G3",
+      "book_id": "od3",
+      "unit_id": "od3_17",
+      "rule_title": "Word Study: Phrasal Verbs with Look (`look` 動詞片語家族辨析)",
+      "eng_exp": "Combining the verb 'look' with different prepositions or adverbs creates phrasal verbs with distinct meanings: look around, look through, look for, look up, look after, and look out.",
+      "chi_exp": "基礎動詞 look 搭配不同介系詞會產生完全不同的動作語意：(1) look around（環顧四周）；(2) look through（從頭到尾翻閱瀏覽）；(3) look for（尋找不見的東西或目標）；(4) look up（抬頭看；在字典或網站查資料）；(5) look after（照顧人、寵物或植物）；(6) look out（小心危險！／向外看）。另有課文延伸片語 look up to（敬仰崇拜）。",
+      "formula": "look + [ around / through / for / up / after / out ]（時態變化只改前面的 look → looked / looking）",
+      "intro": "",
+      "categories": [
+        {
+          "label": "搜尋與檢視類 (for / through / up)",
+          "items": [
+            "look for the key",
+            "look through old photos",
+            "look up a word"
+          ],
+          "note": "找失物用 for；快速翻閱用 through；查字典或抬頭用 up"
+        },
+        {
+          "label": "觀察與警戒照料類 (around / out / after)",
+          "items": [
+            "look around the deck",
+            "Look out for cars!",
+            "look after the puppy"
+          ],
+          "note": "四處張望用 around；小心危險用 out；照顧他人用 after"
+        }
+      ],
+      "pitfalls": [
+        {
+          "wrong": "Please look after my missing pencil; I cannot find it anywhere.",
+          "right": "Please help me look for my missing pencil; I cannot find it anywhere.",
+          "tip": "找不見的鉛筆是「尋找 (look for)」，look after 是「照顧」寶寶、寵物或病人。"
+        },
+        {
+          "wrong": "I don't know this word, so I will look up it in my dictionary.",
+          "right": "I don't know this word, so I will look it up in my dictionary.",
+          "tip": "look up 是可分片語，遇到代名詞 it / them 時必須夾在中間（look it up）；而 look after / look for 不可分（look after it）。"
+        }
+      ],
+      "examples": [
+        {
+          "en": "I always go up to the deck and look around.",
+          "zh": "我總是走上甲板環顧四周。",
+          "highlight": "look around"
+        },
+        {
+          "en": "You can look up any new word in an online dictionary.",
+          "zh": "你可以在線上字典裡查閱任何新單字。",
+          "highlight": "look up"
+        },
+        {
+          "en": "My sister helps look after our puppy while I am at school.",
+          "zh": "我去上學時，妹妹會幫忙照顧我們的小狗。",
+          "highlight": "look after"
+        },
+        {
+          "en": "Look out! A bicycle is coming fast behind you.",
+          "zh": "小心！有一輛腳踏車正從你後面快速騎過來。",
+          "highlight": "Look out"
+        }
+      ],
+      "trap": "單字聽寫與填空考題中，受詞常決定答案：看到字典／生字選 look up，看到遺失物品選 look for，看到年幼弟妹寵物選 look after，看到筆記相簿選 look through！",
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true
+    },
+    {
+      "id": "OD3_U17_G4",
+      "book_id": "od3",
+      "unit_id": "od3_17",
+      "rule_title": "Speaking: Giving Congratulations and Compliments (祝賀與讚美用語)",
+      "eng_exp": "When we congratulate or compliment someone on an achievement, we use polite expressions such as 'Congratulations on + noun / V-ing', 'You did a great job!', 'Great job on...', and 'We're very proud of you.'",
+      "chi_exp": "向他人表達祝賀與肯定讚美時，必須掌握三大課本核心句型：(1) Congratulations on + 名詞 / V-ing（恭喜你達成某件事，注意介系詞用 on 且動詞加 -ing）；(2) You did a great job! / Great job on + 名詞!（你做得太棒了！）；(3) We're very proud of you.（我們以你為榮，搭配介系詞 of）。回應時應禮貌說 Thank you!",
+      "formula": "Congratulations on + [ N / V-ing ]!  /  Great job on + [ N ]!  /  We're very proud of + [ 人 ].",
+      "intro": "",
+      "categories": [
+        {
+          "label": "祝賀比賽或獲獎",
+          "items": [
+            "Congratulations on winning the race.",
+            "Congratulations on winning the contest."
+          ],
+          "note": "Congratulations 結尾必須有 s，後方介系詞固定用 on + V-ing"
+        },
+        {
+          "label": "讚美努力成果",
+          "items": [
+            "You did a great job!",
+            "Great job on your math test!",
+            "We're very proud of you."
+          ],
+          "note": "proud 固定搭配介系詞 of（以…為傲）"
+        }
+      ],
+      "pitfalls": [
+        {
+          "wrong": "Congratulation for win the race! We are very proud for you.",
+          "right": "Congratulations on winning the race! We are very proud of you.",
+          "tip": "犯了三處錯誤：Congratulations 要加 s、介系詞用 on 且接動名詞 winning、proud 搭配 of 而非 for！"
+        }
+      ],
+      "examples": [
+        {
+          "en": "Congratulations on winning the race!",
+          "zh": "恭喜你贏得這場比賽！",
+          "highlight": "Congratulations on winning"
+        },
+        {
+          "en": "Great job on your math test! We're very proud of you.",
+          "zh": "你的數學測驗考得太棒了！我們很以你為榮。",
+          "highlight": "Great job on / proud of"
+        }
+      ],
+      "trap": "手寫造句最常漏掉 Congratulations 字尾的 s，以及忘記把介系詞 on 後方的動詞 win 改寫為動名詞 winning！",
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true
+    },
+    {
+      "id": "odg3_u17_g01",
+      "book_id": "gra3",
+      "unit_id": "gra3_17",
+      "rule_title": "祈使句核心結構：肯定、Don't 否定與 Please 禮貌位置",
+      "eng_exp": "Use the base form of a verb to give affirmative instructions (Go into a building). Use 'Don't + base verb' for negative instructions (Don't drive through flooding water). Add 'please' at the beginning (no comma) or at the end (with a comma) to sound polite.",
+      "chi_exp": "祈使句用來發出指示、避難建議或禁止命令，主詞預設為說話對象 (you) 並省略。肯定句直接以「原形動詞」開頭；否定句必須以「Don't + 原形動詞」開頭。若要加上禮貌語氣 please，放句首時直接接指令不加逗號，放句尾時前面必須加上逗號！",
+      "formula": "肯定：Base Verb + ... | 否定：Don't + Base Verb + ... | 禮貌：Please (don't) + V... / (Don't) V..., please.",
+      "intro": "",
+      "categories": [
+        {
+          "label": "肯定祈使句 (原形動詞開頭)",
+          "items": [
+            "Go into a building.",
+            "Stay there!",
+            "Put boards over your windows.",
+            "Listen to the radio."
+          ],
+          "note": "絕不可加上主詞或將動詞改為 V-ing / V-s / to + V。"
+        },
+        {
+          "label": "否定祈使句 (Don't + 原形動詞)",
+          "items": [
+            "Don't leave your home.",
+            "Don't drive through flooding water.",
+            "Don't walk under damaged trees.",
+            "Don't jump!"
+          ],
+          "note": "固定使用 Don't + 原形動詞；不可使用 *Not run 或 *Doesn't move。"
+        },
+        {
+          "label": "禮貌修飾詞 please 的兩大位置",
+          "items": [
+            "Please stay there.",
+            "Please don't move.",
+            "Stay there, please.",
+            "Don't move, please."
+          ],
+          "note": "句首 Please 無逗號；句尾 ..., please 前方必加逗號！"
+        }
+      ],
+      "pitfalls": [
+        {
+          "wrong": "Please doesn't drive through flooding water.",
+          "right": "Please don't drive through flooding water.",
+          "tip": "祈使句對象永遠是第二人稱 you，否定助動詞一律用 don't，不可用 doesn't！"
+        },
+        {
+          "wrong": "Don't running in the school hallway!",
+          "right": "Don't run in the school hallway!",
+          "tip": "Don't 後方動詞必須維持原形 run，不可加上 -ing 或 to！"
+        },
+        {
+          "wrong": "Stay there please.",
+          "right": "Stay there, please.",
+          "tip": "please 放在祈使句句尾時，前面必須加上逗號分隔！"
+        }
+      ],
+      "examples": [
+        {
+          "en": "Go into a building and stay there during a hurricane.",
+          "zh": "颶風期間請進入建築物並待在裡面。",
+          "highlight": "Go ... and stay"
+        },
+        {
+          "en": "Don't walk under damaged trees, buildings, or bridges.",
+          "zh": "切勿走在受損的樹木、建築物或橋樑下方。",
+          "highlight": "Don't walk"
+        },
+        {
+          "en": "Please don't move until the storm passes.",
+          "zh": "在暴風雨過去之前，請不要移動。",
+          "highlight": "Please don't move"
+        },
+        {
+          "en": "Take off your muddy boots, please.",
+          "zh": "請把你沾滿泥巴的靴子脫掉。",
+          "highlight": "Take off ..., please."
+        }
+      ],
+      "trap": "考試最愛將 Not + V、Don't + V-ing、Doesn't + V 與漏逗號的句尾 please 混在選項裡誘答。記住：祈使句永遠是「原形動詞」配「don't」！",
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true
+    },
+    {
+      "id": "odg3_u17_g02",
+      "book_id": "gra3",
+      "unit_id": "gra3_17",
+      "rule_title": "10 大動態方向介系詞空間軌跡對比 (Prepositions of Movement)",
+      "eng_exp": "Use prepositions of movement (into, out of, up, down, over, under, from, to, around, through) to show which direction a person or thing is moving in. Distinguish surface/above (over) from below (under), outer bypass (around) from interior passage (through), and entry (into) from exit (out of).",
+      "chi_exp": "動態介系詞用來精準描繪人或物體在空間中的「移動軌跡與方向」，必須成對比記憶空間邏輯：(1) 進出邊界 `into`（入內）vs `out of`（出外）；(2) 垂直升降 `up`（往上）vs `down`（往下）；(3) 上下立體 `over`（上方跨過/覆蓋）vs `under`（下方穿過）；(4) 障礙物路徑 `around`（繞過外圍）vs `through`（穿過內部）。",
+      "formula": "Motion Verb (go / walk / come / drive / bring / put) + Preposition of Movement + Place / Object",
+      "intro": "",
+      "categories": [
+        {
+          "label": "邊界進出對比 (into vs out of)",
+          "items": [
+            "go into the building (進入建築物)",
+            "come out of the building (走出建築物)",
+            "get out of the area (撤離該區域)"
+          ],
+          "note": "into 強調由外入內；out of 強調由內向外。"
+        },
+        {
+          "label": "垂直升降對比 (up vs down)",
+          "items": [
+            "go up the hill (上山)",
+            "go down the hill (下山)",
+            "go up to a higher place (往高處去)"
+          ],
+          "note": "沿階梯或斜坡往高處用 up，往低處用 down。"
+        },
+        {
+          "label": "上下立體對比 (over vs under)",
+          "items": [
+            "walk over the bridge (走過橋面)",
+            "walk under the bridge (從橋下走過)",
+            "put boards over your windows (將木板蓋在窗戶上)"
+          ],
+          "note": "橋上走與窗戶表面覆蓋用 over；橋下穿行與樹下避險用 under。"
+        },
+        {
+          "label": "障礙路徑對比 (around vs through)",
+          "items": [
+            "walk around the water (繞過水窪)",
+            "walk through the water (踩進水窪穿過)",
+            "walk through the park (穿過公園)"
+          ],
+          "note": "繞開邊緣保持乾燥用 around；貫穿公園或淹水內部用 through。"
+        }
+      ],
+      "pitfalls": [
+        {
+          "wrong": "She is walking through the water puddle to keep her shoes dry.",
+          "right": "She is walking around the water puddle to keep her shoes dry.",
+          "tip": "想保持鞋子乾燥必須「繞過」水窪外圍 (around)，walk through 會直接踩進水裡！"
+        },
+        {
+          "wrong": "Put wooden boards under your windows before a hurricane.",
+          "right": "Put wooden boards over your windows before a hurricane.",
+          "tip": "防颱木板是「覆蓋在窗戶表面上」阻擋強風，必須使用 over！"
+        },
+        {
+          "wrong": "She is coming out the building right now.",
+          "right": "She is coming out of the building right now.",
+          "tip": "表達從建築物內部走出，固定片語是 out of，不可漏掉 of！"
+        }
+      ],
+      "examples": [
+        {
+          "en": "He is going into the building while she is coming out of the building.",
+          "zh": "他正走進建築物裡，而她正走出建築物。",
+          "highlight": "into ... out of"
+        },
+        {
+          "en": "Mia is walking around the puddle, but Sam is walking through the water.",
+          "zh": "米亞正繞著水窪外圍走，但山姆正直接涉水穿過。",
+          "highlight": "around ... through"
+        },
+        {
+          "en": "He is walking over the stone bridge, and she is walking under it.",
+          "zh": "他正從石橋上方走過，而她正從橋下走過。",
+          "highlight": "over ... under"
+        }
+      ],
+      "trap": "考試最愛將 around（繞行）vs through（貫穿）、over（上方）vs under（下方）放在同一個雙人對比題裡考查空間邏輯。",
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true
+    },
+    {
+      "id": "odg3_u17_g03",
+      "book_id": "gra3",
+      "unit_id": "gra3_17",
+      "rule_title": "起點與終點搭配及緊急地圖指路句型 (from ... to ... & Directions)",
+      "eng_exp": "Use 'from [starting place] to [destination]' when asking for or describing routes. Combine imperatives with movement prepositions (Go up the steps, Walk through the park, Go over the bridge) to give step-by-step directions in an emergency.",
+      "chi_exp": "在地圖問路與緊急避難指引中，必須使用 `from A to B` 表達「從起點 A 到終點 B」，接著依地形順序串聯「原形動詞祈使句＋動態介系詞」，例如：上階梯 (`go up the steps`)、穿過公園 (`walk through the park`)、沿著路走 (`go along the road`)、過橋 (`go over the bridge`)。",
+      "formula": "How do you get from [起點] to [終點]? ➔ Go up/down ... + Walk through/around ... + Go over ...",
+      "intro": "",
+      "categories": [
+        {
+          "label": "起點與終點固定配對 (from ... to ...)",
+          "items": [
+            "from the police station to the school",
+            "from the hospital to the drugstore",
+            "get some money from the bank"
+          ],
+          "note": "起點來源永遠用 from，目的地終點永遠用 to。"
+        },
+        {
+          "label": "避難地圖核心路徑動作組塊",
+          "items": [
+            "Go up the steps. / Go down the steps.",
+            "Walk through the park.",
+            "Go along the road.",
+            "Go over the bridge."
+          ],
+          "note": "看地圖方向時務必確認起點與終點的上下位置，決定用 up 或 down。"
+        }
+      ],
+      "pitfalls": [
+        {
+          "wrong": "How do you get to the police station to the school?",
+          "right": "How do you get from the police station to the school?",
+          "tip": "從起點出發必須用 from，不可重複使用兩個 to！"
+        },
+        {
+          "wrong": "From the drugstore to the police station, go up the steps into the park.",
+          "right": "From the drugstore to the police station, walk through the park and go down the steps.",
+          "tip": "反向回警察局時是由公園高處往下走回地面道路，階梯方向必須改為 go down the steps！"
+        }
+      ],
+      "examples": [
+        {
+          "en": "How do you get from the police station to the school?",
+          "zh": "請問從警察局要怎麼走到學校？",
+          "highlight": "from ... to"
+        },
+        {
+          "en": "Go up the steps, walk through the park, go along the road, and go over the bridge.",
+          "zh": "走上階梯，穿過公園，沿著馬路走，再走過那座橋。",
+          "highlight": "Go up ... through ... over"
+        },
+        {
+          "en": "Walk down the road past the school to get from the firehouse to the hospital.",
+          "zh": "沿著馬路往下經過學校，即可從消防局到達醫院。",
+          "highlight": "down the road ... to the hospital"
+        }
+      ],
+      "trap": "地圖反走題是高頻陷阱！從警察局去公園是 go up the steps，但從藥局穿過公園回警察局時方向顛倒，一定要改成 go down the steps！",
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true
+    },
+    {
+      "id": "WR3_U07_G01",
+      "book_id": "wr3",
+      "unit_id": "wr3_7",
+      "rule_title": "慰問卡四大寫作結構 (Get-Well Card Structure: Greeting, Body, Closing, Signature)",
+      "eng_exp": "A standard get-well card follows four parts: (1) Greeting (Hi [Name]! How are you feeling?), (2) Body Paragraph 1 (wondering why absent + heard what happened + hope for recovery) and Paragraph 2 (empathy for condition + offer to help + classmates' wishes), (3) Closing (Get well soon! / Take care!), and (4) Signature.",
+      "chi_exp": "撰寫英文慰問卡有嚴謹的四段式書寫格式：(1) Greeting（問候稱謂）：以 `Hi [名字]! How are you feeling?` 開頭；(2) Body（內文兩段）：第 1 段依序寫「好奇為何缺席 + 聽聞傷病與住院經過 + 遺憾與祈願不痛」；第 2 段寫「推測對方在家心情 + 主動詢問並提出幫忙 + 全班很想你並期盼歸隊」；(3) Closing（祝福收尾語）：`Get well soon!`；(4) Signature（署名）：寫上寄卡人自己的名字。",
+      "formula": "Greeting (Hi Name!) -> Body P1 (wondering + heard that + hope) -> Body P2 (must be + If you want + want you to) -> Closing -> Signature",
+      "intro": "",
+      "categories": [
+        {
+          "label": "1. Greeting（問候稱謂）",
+          "items": [
+            "Hi Penny! How are you feeling?",
+            "Hi Chris! How are you feeling?"
+          ],
+          "note": "問候語後加上關心對方身體感受的問句。"
+        },
+        {
+          "label": "2. Body（內文雙段落重點）",
+          "items": [
+            "P1: What happened + My hopes (doesn't hurt too much)",
+            "P2: Condition (must be bored) + My offer (If you want, I can...) + Classmates (want you to...)"
+          ],
+          "note": "兩段分別負責「事實關切」與「實際協助＋情感支持」。"
+        },
+        {
+          "label": "3-4. Closing & Signature（祝福與署名）",
+          "items": [
+            "Get well soon! / Take care!",
+            "Danny / Cindy"
+          ],
+          "note": "Closing 祝福語獨立一行，Signature 置於右下方或末行署名。"
+        }
+      ],
+      "pitfalls": [
+        {
+          "wrong": "Hi Penny! I broke my leg and I am hospitalized.",
+          "right": "Hi Penny! How are you feeling? I heard that you broke your leg.",
+          "tip": "寫慰問卡給受傷的朋友時，主角是收卡人 (you)，切勿把主詞寫成 I 或把課文名字 Penny/Danny 誤抄進別人的題目！"
+        },
+        {
+          "wrong": "Get well soon! (漏掉署名 Signature)",
+          "right": "Get well soon!\nDanny",
+          "tip": "完整卡片必須同時包含 Closing (Get well soon!) 與 Signature (寄卡人姓名)。"
+        }
+      ],
+      "examples": [
+        {
+          "en": "Hi Penny! How are you feeling?",
+          "zh": "嗨，佩妮！你現在感覺怎麼樣？（Greeting 問候）",
+          "highlight": "How are you feeling?"
+        },
+        {
+          "en": "I hope your leg doesn't hurt too much.",
+          "zh": "我希望你的腿不會太痛。（Body 第 1 段關懷希望）",
+          "highlight": "doesn't hurt too much"
+        },
+        {
+          "en": "If you want, I can bring you some comic books.",
+          "zh": "如果你想要的話，我可以帶一些漫畫書給你。（Body 第 2 段主動幫忙）",
+          "highlight": "If you want, I can"
+        },
+        {
+          "en": "Get well soon! / Danny",
+          "zh": "祝你早日康復！／丹尼（Closing 與 Signature）",
+          "highlight": "Get well soon!"
+        }
+      ],
+      "trap": "實戰寫作常忘記寫問候句 `How are you feeling?`，或直接把範文的 Penny 與 Danny 照抄進新題目裡，導致收寄件人名字張冠李戴！",
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true
+    },
+    {
+      "id": "WR3_U07_G02",
+      "book_id": "wr3",
+      "unit_id": "wr3_7",
+      "rule_title": "傷病與就醫動詞「過去式變化」與不定冠詞 a / an",
+      "eng_exp": "When reporting past injuries or medical treatments in a get-well card, convert all base verbs from prompts into the simple past tense. Pay special attention to irregular verbs (broke, caught, cut, hurt, fell, ate, had, got, went, left, were), doubled consonants (slipped), and indefinite articles before vowel sounds (an eye infection, an x-ray, an allergic reaction).",
+      "chi_exp": "Outline 提綱給的傷病片語皆為「原形動詞」，寫入慰問卡描述已經發生的事情時必須全數轉成過去式：(1) 不規則變化：break→broke、catch→caught、fall→fell、eat→ate、have→had、get→got、go→went、leave→left、be→were；(2) 三態同形：cut→cut、hurt→hurt、hit→hit（絕不加 -ed）；(3) 短母音雙寫：slip→slipped；(4) 不定冠詞：母音音素開頭用 an（an eye infection / an x-ray / an allergic reaction），其餘單數可數名詞用 a（a cast / a rash / a black eye / a car accident）。",
+      "formula": "I heard that you + [Past Tense Verb / were + V-pp] + (a / an + Singular Noun)",
+      "intro": "",
+      "categories": [
+        {
+          "label": "不規則與三態同形過去式",
+          "items": [
+            "break -> broke / catch -> caught",
+            "fall -> fell / eat -> ate / get -> got",
+            "cut -> cut / hurt -> hurt / hit -> hit"
+          ],
+          "note": "cut 與 hurt 過去式完全不變，切忌畫蛇添足寫成 cutted 或 hurted。"
+        },
+        {
+          "label": "規則加 -ed / 雙寫子音過去式",
+          "items": [
+            "sprain -> sprained / burn -> burned",
+            "bruise -> bruised / bump -> bumped",
+            "slip -> slipped / spill -> spilled"
+          ],
+          "note": "slip 為短母音單子音結尾，須雙寫 p 再加 -ed 成為 slipped。"
+        },
+        {
+          "label": "不定冠詞 a vs an 精準搭配",
+          "items": [
+            "an eye infection / an x-ray / an allergic reaction",
+            "a cast / a rash / a black eye / a car accident"
+          ],
+          "note": "x-ray 雖以 x 開頭，但讀音為 /ˈɛksreɪ/（母音 /ɛ/ 起首），必須搭配 an。"
+        }
+      ],
+      "pitfalls": [
+        {
+          "wrong": "I heard that you breaked your leg and cutted your finger.",
+          "right": "I heard that you broke your leg and cut your finger.",
+          "tip": "break 過去式是不規則的 broke，cut 三態同形仍寫 cut，兩者皆不可加 -ed。"
+        },
+        {
+          "wrong": "I heard that you had a x-ray taken and a allergic reaction.",
+          "right": "I heard that you had an x-ray taken and an allergic reaction.",
+          "tip": "x-ray 與 allergic 都是母音音素開頭，前方必須用 an，不可用 a。"
+        },
+        {
+          "wrong": "I heard that you sliped on the ice yesterday.",
+          "right": "I heard that you slipped on the ice yesterday.",
+          "tip": "slip 過去式必須雙寫字尾子音 p：slipped。"
+        }
+      ],
+      "examples": [
+        {
+          "en": "I heard that you fell down the stairs and broke your leg.",
+          "zh": "我聽說你從樓梯摔下來而且摔斷了腿。",
+          "highlight": "fell down the stairs and broke"
+        },
+        {
+          "en": "You caught the flu and had an eye infection last week.",
+          "zh": "你上週得了流感而且眼睛發炎感染。",
+          "highlight": "caught the flu and had an eye infection"
+        },
+        {
+          "en": "I also heard that you had an x-ray taken and got a cast on your leg.",
+          "zh": "我也聽說你照了 X 光並在腿上打了石膏。",
+          "highlight": "had an x-ray taken and got a cast"
+        },
+        {
+          "en": "I heard that you slipped on the ice and hurt your knee.",
+          "zh": "我聽說你在冰上滑倒而且弄傷了膝蓋。",
+          "highlight": "slipped on the ice and hurt"
+        }
+      ],
+      "trap": "考卷常將規則與不規則混出：學生背熟 `sprained / burned` 後容易順手寫成 `breaked / catched / cutted / hurted`，或在 `an x-ray` 與 `an allergic reaction` 漏寫 `n`！",
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true
+    },
+    {
+      "id": "WR3_U07_G03",
+      "book_id": "wr3",
+      "unit_id": "wr3_7",
+      "rule_title": "慰問五大核心句型 (Wondering, Must Be, If You Want, Want You To & Everyone)",
+      "eng_exp": "Master the five core patterns in get-well cards: (1) I was wondering why you + [past verb], (2) You must be + [adjective] + (to V / V-ing / after V-ing), (3) If you want, I can + [base verb], (4) We all want you to + [base verb], and (5) Everyone in our class + [singular verb -s].",
+      "chi_exp": "本課五大必考句型公式：(1) `I was wondering why you + 過去式`：表達先前好奇對方為何缺席或去保健室；(2) `You must be + 形容詞`：推測對方當下感受（`bored staying`, `sleepy after staying up`, `excited to travel`, `hurting after hitting`）；(3) `If you want, I can + 原形動詞`：主動提出幫忙（`bring you`, `play games with`, `chat online with`, `visit`, `come by`）；(4) `We all want you to + 原形動詞`：注意 `want + 人 + to V` 不可漏 `to`；(5) `Everyone` 視為第三人稱單數主詞，現在式動詞必須加 `-s`（`Everyone misses you.`）。",
+      "formula": "I was wondering why you + V-ed | You must be + adj | If you want, I can + V | We all want you to + V | Everyone + V-s",
+      "intro": "",
+      "categories": [
+        {
+          "label": "好奇詢問＋推測感受",
+          "items": [
+            "I was wondering why you went to the nurse's office.",
+            "You must be bored staying at home all day.",
+            "You must be sleepy after staying up all night."
+          ],
+          "note": "人感到無聊/尷尬/興奮用 -ed 形容詞 (bored/embarrassed/excited)，不用 -ing。"
+        },
+        {
+          "label": "主動幫忙條件句",
+          "items": [
+            "If you want, I can bring you your homework.",
+            "If you want, I can visit you at the hospital.",
+            "If you want, I can come by your house."
+          ],
+          "note": "情態助動詞 can 後面一律接原形動詞。"
+        },
+        {
+          "label": "期盼不定詞與單數主詞",
+          "items": [
+            "Everyone in our class misses you.",
+            "We all want you to come back / feel better / get well soon."
+          ],
+          "note": "Everyone 永遠搭配單數動詞 misses；want you 後必接 to + 原形 V。"
+        }
+      ],
+      "pitfalls": [
+        {
+          "wrong": "You must be boring staying at home all day.",
+          "right": "You must be bored staying at home all day.",
+          "tip": "形容人的感受用 bored（感到無聊），boring 指事物無趣。"
+        },
+        {
+          "wrong": "Everyone in our class miss you. We all want you come back.",
+          "right": "Everyone in our class misses you. We all want you to come back.",
+          "tip": "Everyone 為單數主詞，動詞用 misses；want you 後不可漏掉 to。"
+        }
+      ],
+      "examples": [
+        {
+          "en": "I was wondering why you left school early yesterday.",
+          "zh": "我一直在想你昨天為什麼提早離開學校。",
+          "highlight": "wondering why you left"
+        },
+        {
+          "en": "You must be embarrassed to have a stain on your shirt.",
+          "zh": "衣服上有污漬你一定覺得很尷尬。",
+          "highlight": "must be embarrassed to"
+        },
+        {
+          "en": "If you want, I can chat online with you this weekend.",
+          "zh": "如果你想要的話，我這週末可以跟你線上聊天。",
+          "highlight": "If you want, I can chat"
+        },
+        {
+          "en": "Everyone in our class misses you, and we all want you to get over your cold.",
+          "zh": "班上每個人都很想你，我們都希望你早日從感冒中康復。",
+          "highlight": "misses you ... want you to get over"
+        }
+      ],
+      "trap": "四大經典失分點：(1) `want you come back` 漏寫 `to`；(2) `Everyone miss` 漏寫 `-es`；(3) `must be boring / exciting` 誤用 `-ing`；(4) `I can brought` 助動詞後誤用過去式！",
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true
+    },
+    {
+      "id": "WR3_U07_G04",
+      "book_id": "wr3",
+      "unit_id": "wr3_7",
+      "rule_title": "賀卡場合與節日時間介系詞 (at Christmas vs. on + 節日 Day)",
+      "eng_exp": "Use \"at\" for holiday seasons without the word \"Day\" (at Christmas), and use \"on\" for specific named holidays that include \"Day\" (on Valentine's Day, on Mother's Day, on New Year's Day). Also use \"congratulate someone's + occasion\" for celebrations like birthday, anniversary, graduation, wedding, or new job.",
+      "chi_exp": "撰寫各種賀卡時必須精確區分節日介系詞與場合詞彙：(1) **不含 `Day` 的節慶期間用 `at`**：`at Christmas`（在聖誕節期間）；(2) **含有 `Day` 的特定節日名稱一律用 `on`**：`on Valentine's Day`、`on Mother's Day`、`on New Year's Day`（以及 `on Christmas Day`）；(3) **祝賀場合名詞**：`birthday`（生日）、`anniversary`（週年紀念）、`graduation`（畢業）、`wedding`（婚禮）、`new job`（新工作）；(4) **關懷與送別**：`sick`（生病）、`going away`（遠行／搬遷）。",
+      "formula": "send a card at Christmas | send a card on [Valentine's / Mother's / New Year's] Day | congratulate someone's [occasion]",
+      "intro": "",
+      "categories": [
+        {
+          "label": "at + 無 Day 節慶期間",
+          "items": [
+            "at Christmas",
+            "at Easter"
+          ],
+          "note": "指整個節慶假期時段，固定搭配介系詞 at。"
+        },
+        {
+          "label": "on + 含 Day 特定節日",
+          "items": [
+            "on Valentine's Day",
+            "on Mother's Day",
+            "on New Year's Day"
+          ],
+          "note": "只要節日名稱帶有 Day（指明確的某一天），一律用 on。"
+        },
+        {
+          "label": "賀卡與慰問卡五大場合",
+          "items": [
+            "birthday / anniversary / graduation",
+            "wedding / new job",
+            "sick / going away"
+          ],
+          "note": "生病與遠行場合送出 best wishes；喜慶場合使用 congratulate。"
+        }
+      ],
+      "pitfalls": [
+        {
+          "wrong": "People often send nice greeting cards on Christmas.",
+          "right": "People often send nice greeting cards at Christmas.",
+          "tip": "單寫 Christmas（後面沒有 Day）時，介系詞固定用 at。"
+        },
+        {
+          "wrong": "I gave my mom a flower card at Mother's Day.",
+          "right": "I gave my mom a flower card on Mother's Day.",
+          "tip": "Mother's Day、Valentine's Day、New Year's Day 都含有 Day（指特定一天），介系詞必用 on！"
+        }
+      ],
+      "examples": [
+        {
+          "en": "You can send a warm greeting card to your friends at Christmas.",
+          "zh": "你可以在聖誕節時寄一張溫暖的賀卡給朋友。",
+          "highlight": "at Christmas"
+        },
+        {
+          "en": "Many people send cards on Valentine's Day, on Mother's Day, or on New Year's Day.",
+          "zh": "許多人會在情人節、母親節或元旦寄送卡片。",
+          "highlight": "on Valentine's Day, on Mother's Day, or on New Year's Day"
+        },
+        {
+          "en": "With a nice card, you can congratulate someone's graduation or wedding.",
+          "zh": "透過一張漂亮的卡片，你可以祝賀某人畢業或結婚。",
+          "highlight": "congratulate someone's graduation or wedding"
+        }
+      ],
+      "trap": "考試極愛把 `at Christmas` 和 `on Mother's Day / on New Year's Day` 放在同一句做對比考題！口訣：沒 Day 用 at，有 Day 用 on！",
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true
     }
   ],
   "quizzes": [
@@ -26380,326 +28530,6 @@ const ENGLISH_DATA = {
       "answer": "Dough, olive oil, flour, honey",
       "difficulty": "★★★★☆",
       "explanation": "正確答案：Dough, olive oil, flour, honey。原因：這四個詞皆為不可數名詞，只有單數形且無法直接用數字計算。錯誤選項原因：其他選項中包含複數可數名詞 (tomatoes, apples, bottles, jars等)。"
-    },
-    {
-      "id": "q_0481",
-      "book_id": "gra3",
-      "unit_id": "gra3_17",
-      "type": "reading",
-      "question": "What should you bring into the house before a hurricane?",
-      "options": [
-        "Garden furniture",
-        "Bicycles",
-        "Cars",
-        "Trees"
-      ],
-      "answer": "Garden furniture",
-      "difficulty": "★☆☆☆☆",
-      "explanation": "正確答案：Garden furniture。原因：課文第一段明確指出「Bring garden furniture into the house.」。錯誤選項原因：文中並未提及腳踏車、汽車或樹木。"
-    },
-    {
-      "id": "q_0482",
-      "book_id": "gra3",
-      "unit_id": "gra3_17",
-      "type": "reading",
-      "question": "Where should you put boards before a hurricane?",
-      "options": [
-        "Under your bed",
-        "Over your windows",
-        "Inside your car",
-        "On the roof"
-      ],
-      "answer": "Over your windows",
-      "difficulty": "★☆☆☆☆",
-      "explanation": "正確答案：Over your windows。原因：課文提及「Put boards over your windows.」以防強風吹破玻璃。錯誤選項原因：木板應釘在窗戶上，非床下、車內或屋頂。"
-    },
-    {
-      "id": "q_0483",
-      "book_id": "gra3",
-      "unit_id": "gra3_17",
-      "type": "reading",
-      "question": "Where should you get money from before a hurricane?",
-      "options": [
-        "The bank",
-        "The park",
-        "The school",
-        "The library"
-      ],
-      "answer": "The bank",
-      "difficulty": "★☆☆☆☆",
-      "explanation": "正確答案：The bank。原因：文中提到「Get some money from the bank.」。錯誤選項原因：公園、學校和圖書館無法領取現金。"
-    },
-    {
-      "id": "q_0484",
-      "book_id": "gra3",
-      "unit_id": "gra3_17",
-      "type": "reading",
-      "question": "What supplies should you get from the supermarket before a hurricane?",
-      "options": [
-        "Toys and books",
-        "A first-aid kit, cans of food, and bottles of water",
-        "Clothes and shoes",
-        "Computers and TVs"
-      ],
-      "answer": "A first-aid kit, cans of food, and bottles of water",
-      "difficulty": "★☆☆☆☆",
-      "explanation": "正確答案：A first-aid kit, cans of food, and bottles of water。原因：文中指出要備妥急救箱、罐頭食品與瓶裝水。錯誤選項原因：玩具、衣服、電腦皆非緊急防災物資。"
-    },
-    {
-      "id": "q_0485",
-      "book_id": "gra3",
-      "unit_id": "gra3_17",
-      "type": "reading",
-      "question": "What should you do during a hurricane if you are outside?",
-      "options": [
-        "Go into a building and stay there",
-        "Run around in the park",
-        "Climb a tall tree",
-        "Drive a car fast"
-      ],
-      "answer": "Go into a building and stay there",
-      "difficulty": "★☆☆☆☆",
-      "explanation": "正確答案：Go into a building and stay there。原因：課文指示「Go into a building and stay there.」。錯誤選項原因：颱風期間在公園奔跑、爬樹或開快車非常危險。"
-    },
-    {
-      "id": "q_0486",
-      "book_id": "gra3",
-      "unit_id": "gra3_17",
-      "type": "reading",
-      "question": "If your home is in a low area, where should you go during a hurricane?",
-      "options": [
-        "To a lower basement",
-        "Up to a higher place or a hurricane shelter",
-        "To the beach",
-        "To the garden"
-      ],
-      "answer": "Up to a higher place or a hurricane shelter",
-      "difficulty": "★★☆☆☆",
-      "explanation": "正確答案：Up to a higher place or a hurricane shelter。原因：文中說明低窪地區住戶應往高處或避難所移動以防淹水。錯誤選項原因：地下室、海灘與花園容易受水災威脅。"
-    },
-    {
-      "id": "q_0487",
-      "book_id": "gra3",
-      "unit_id": "gra3_17",
-      "type": "reading",
-      "question": "What should you listen to for instructions during a hurricane?",
-      "options": [
-        "The radio",
-        "Music CDs",
-        "A podcast",
-        "The birds"
-      ],
-      "answer": "The radio",
-      "difficulty": "★☆☆☆☆",
-      "explanation": "正確答案：The radio。原因：課文提到「Listen to the radio. Follow instructions and leave.」。錯誤選項原因：收聽音樂CD、Podcast或鳥鳴無法獲取最新防災指示。"
-    },
-    {
-      "id": "q_0488",
-      "book_id": "gra3",
-      "unit_id": "gra3_17",
-      "type": "reading",
-      "question": "What should you do if it's time to get out of the area during a hurricane?",
-      "options": [
-        "Stay and play video games",
-        "Follow instructions and leave",
-        "Sleep in your bed",
-        "Open all windows"
-      ],
-      "answer": "Follow instructions and leave",
-      "difficulty": "★★☆☆☆",
-      "explanation": "正確答案：Follow instructions and leave。原因：文中指出應遵守官方指示迅速撤離。錯誤選項原因：留下來玩遊戲、睡覺或開窗皆不符合撤離規定。"
-    },
-    {
-      "id": "q_0489",
-      "book_id": "gra3",
-      "unit_id": "gra3_17",
-      "type": "reading",
-      "question": "What should you NOT do after a hurricane?",
-      "options": [
-        "Don't drive through flooding water",
-        "Listen to your parents",
-        "Clean your room",
-        "Stay safe"
-      ],
-      "answer": "Don't drive through flooding water",
-      "difficulty": "★★☆☆☆",
-      "explanation": "正確答案：Don't drive through flooding water。原因：課文警告「Don't drive through flooding water.」以免車輛受困或被沖走。錯誤選項原因：聽父母的話、清理房間與保持安全皆是正確行為。"
-    },
-    {
-      "id": "q_0490",
-      "book_id": "gra3",
-      "unit_id": "gra3_17",
-      "type": "reading",
-      "question": "Where should you NOT walk after a hurricane?",
-      "options": [
-        "Under damaged trees, buildings, or bridges",
-        "On a safe sidewalk",
-        "Inside your house",
-        "In the school hallway"
-      ],
-      "answer": "Under damaged trees, buildings, or bridges",
-      "difficulty": "★★☆☆☆",
-      "explanation": "正確答案：Under damaged trees, buildings, or bridges。原因：文中警示「Don't walk under damaged trees, buildings, or bridges.」預防倒塌危險。錯誤選項原因：安全人行道、家中與走廊皆非危險受損區域。"
-    },
-    {
-      "id": "q_0491",
-      "book_id": "gra3",
-      "unit_id": "gra3_17",
-      "type": "reading",
-      "question": "In the directions, how do you get from the police station to the school?",
-      "options": [
-        "Go up the steps, walk through the park, along the road, over the bridge",
-        "Fly in a helicopter",
-        "Swim across the river",
-        "Take a train"
-      ],
-      "answer": "Go up the steps, walk through the park, along the road, over the bridge",
-      "difficulty": "★★☆☆☆",
-      "explanation": "正確答案：Go up the steps, walk through the park, along the road, over the bridge。原因：課文中問路指引明確包含這幾項移動動作。錯誤選項原因：搭直升機、游泳或搭火車皆不符合課文路線。"
-    },
-    {
-      "id": "q_0492",
-      "book_id": "gra3",
-      "unit_id": "gra3_17",
-      "type": "reading",
-      "question": "Which preposition shows movement from a lower level to a higher level?",
-      "options": [
-        "Up",
-        "Down",
-        "Under",
-        "Out of"
-      ],
-      "answer": "Up",
-      "difficulty": "★☆☆☆☆",
-      "explanation": "正確答案：Up。原因：Up 表示「向上」移動。錯誤選項原因：Down 表示向下；Under 表示在...下方；Out of 表示向外。"
-    },
-    {
-      "id": "q_0493",
-      "book_id": "gra3",
-      "unit_id": "gra3_17",
-      "type": "reading",
-      "question": "Which preposition shows movement from inside to outside of a place?",
-      "options": [
-        "Into",
-        "Out of",
-        "Through",
-        "Over"
-      ],
-      "answer": "Out of",
-      "difficulty": "★★☆☆☆",
-      "explanation": "正確答案：Out of。原因：Out of 表示「從...裡面出來/向外」。錯誤選項原因：Into 表示進入；Through 表示穿過；Over 表示越過。"
-    },
-    {
-      "id": "q_0494",
-      "book_id": "gra3",
-      "unit_id": "gra3_17",
-      "type": "reading",
-      "question": "Which preposition shows movement from one side of a 3D space/area to the other?",
-      "options": [
-        "Through",
-        "Under",
-        "Up",
-        "From"
-      ],
-      "answer": "Through",
-      "difficulty": "★★☆☆☆",
-      "explanation": "正確答案：Through。原因：Through 表示「穿過/通過」（如穿過公園、隧道）。錯誤選項原因：Under 是在...下方；Up 是向上；From 是來自。"
-    },
-    {
-      "id": "q_0495",
-      "book_id": "gra3",
-      "unit_id": "gra3_17",
-      "type": "reading",
-      "question": "Why are boards put over windows before a hurricane?",
-      "options": [
-        "To protect the windows from strong winds and flying objects",
-        "To make the room dark for sleeping",
-        "To paint them with colors",
-        "To hide from neighbors"
-      ],
-      "answer": "To protect the windows from strong winds and flying objects",
-      "difficulty": "★★★☆☆",
-      "explanation": "正確答案：To protect the windows from strong winds and flying objects。原因：在窗戶釘木板是為了防風與擋飛石。錯誤選項原因：非為了睡覺遮光、畫畫或藏匿。"
-    },
-    {
-      "id": "q_0496",
-      "book_id": "gra3",
-      "unit_id": "gra3_17",
-      "type": "reading",
-      "question": "Why is it dangerous to drive through flooding water?",
-      "options": [
-        "Cars might get stuck or swept away by strong currents",
-        "Cars will fly in the air",
-        "Water makes cars go too fast",
-        "Flooding water is clean"
-      ],
-      "answer": "Cars might get stuck or swept away by strong currents",
-      "difficulty": "★★★☆☆",
-      "explanation": "正確答案：Cars might get stuck or swept away by strong currents。原因：積水深度不明且水流具沖刷力，車輛易熄火受困或被沖走。錯誤選項原因：車子不會飛、積水不會讓車過快且積水並不乾淨。"
-    },
-    {
-      "id": "q_0497",
-      "book_id": "gra3",
-      "unit_id": "gra3_17",
-      "type": "reading",
-      "question": "What type of sentences are used to give safety instructions like 'Bring furniture into the house'?",
-      "options": [
-        "Imperatives",
-        "Questions",
-        "Past Continuous",
-        "Future Tense"
-      ],
-      "answer": "Imperatives",
-      "difficulty": "★★★☆☆",
-      "explanation": "正確答案：Imperatives。原因：祈使句（Imperatives）以動詞原形開頭，用於下達指令、建議或警告。錯誤選項原因：非問句、過去進行式或未來式。"
-    },
-    {
-      "id": "q_0498",
-      "book_id": "gra3",
-      "unit_id": "gra3_17",
-      "type": "reading",
-      "question": "What is a 'hurricane shelter'?",
-      "options": [
-        "A safe building where people go to stay protected during a storm",
-        "A place to buy food",
-        "A park with flowers",
-        "A swimming pool"
-      ],
-      "answer": "A safe building where people go to stay protected during a storm",
-      "difficulty": "★★★☆☆",
-      "explanation": "正確答案：A safe building where people go to stay protected during a storm。原因：防颱避難所是提供民眾安全的避難場所。錯誤選項原因：非商店、公園或游泳池。"
-    },
-    {
-      "id": "q_0499",
-      "book_id": "gra3",
-      "unit_id": "gra3_17",
-      "type": "reading",
-      "question": "How should negative safety instructions be formed in imperatives?",
-      "options": [
-        "By adding 'Don't' before the base verb",
-        "By adding 'No' after the verb",
-        "By adding '-ing' to the verb",
-        "By using 'Will not'"
-      ],
-      "answer": "By adding 'Don't' before the base verb",
-      "difficulty": "★★★★☆",
-      "explanation": "正確答案：By adding 'Don't' before the base verb。原因：否定祈使句結構為 Don't + 原形動詞（如 Don't drive...）。錯誤選項原因：非動詞後加 No、非加 -ing，亦非使用 Will not。"
-    },
-    {
-      "id": "q_0500",
-      "book_id": "gra3",
-      "unit_id": "gra3_17",
-      "type": "reading",
-      "question": "What is the main topic of Unit 17's reading passage?",
-      "options": [
-        "Safety instructions before, during, and after a hurricane",
-        "How to play soccer in the rain",
-        "How to build a wooden table",
-        "The history of police stations"
-      ],
-      "answer": "Safety instructions before, during, and after a hurricane",
-      "difficulty": "★★★★☆",
-      "explanation": "正確答案：Safety instructions before, during, and after a hurricane。原因：全文圍繞防颱準備、風災期間與災後的安全防護指引。錯誤選項原因：非雨中踢球、做木桌或警察局歷史。"
     },
     {
       "id": "q_0501",
@@ -34378,326 +36208,6 @@ const ENGLISH_DATA = {
       "answer": "packet",
       "difficulty": "★★★☆☆",
       "explanation": "正確答案：packet。原因：咖啡糖通常是一小紙袋包裝，即 a packet of sugar。錯誤選項原因：sugar (糖) 在此不用 bottle (瓶)、bar (條) 或 slice (薄片) 形容。"
-    },
-    {
-      "id": "q_1001",
-      "book_id": "gra3",
-      "unit_id": "gra3_17",
-      "type": "grammar",
-      "question": "___ garden furniture into the house before the storm.",
-      "options": [
-        "Bring",
-        "Brings",
-        "Bringing",
-        "Brought"
-      ],
-      "answer": "Bring",
-      "difficulty": "★☆☆☆☆",
-      "explanation": "正確答案：Bring。原因：肯定祈使句直接使用動詞原形開頭。錯誤選項原因：Brings (加s)、Bringing (加ing)、Brought (過去式) 皆不可用於祈使句開頭。"
-    },
-    {
-      "id": "q_1002",
-      "book_id": "gra3",
-      "unit_id": "gra3_17",
-      "type": "grammar",
-      "question": "___ walk under damaged trees during a hurricane!",
-      "options": [
-        "Don't",
-        "Not",
-        "No",
-        "Doesn't"
-      ],
-      "answer": "Don't",
-      "difficulty": "★☆☆☆☆",
-      "explanation": "正確答案：Don't。原因：否定祈使句固定使用 Don't + 動詞原形。錯誤選項原因：Not、No、Doesn't 皆非否定祈使句的標準開頭。"
-    },
-    {
-      "id": "q_1003",
-      "book_id": "gra3",
-      "unit_id": "gra3_17",
-      "type": "grammar",
-      "question": "___ into a building and stay safe.",
-      "options": [
-        "Go",
-        "Going",
-        "Went",
-        "Goes"
-      ],
-      "answer": "Go",
-      "difficulty": "★☆☆☆☆",
-      "explanation": "正確答案：Go。原因：祈使句給予指令，使用動詞原形 Go 開頭。錯誤選項原因：Going (V-ing)、Went (過去式)、Goes (三單) 不符合祈使句規則。"
-    },
-    {
-      "id": "q_1004",
-      "book_id": "gra3",
-      "unit_id": "gra3_17",
-      "type": "grammar",
-      "question": "Don't ___ through flooding water!",
-      "options": [
-        "drive",
-        "drives",
-        "driving",
-        "drove"
-      ],
-      "answer": "drive",
-      "difficulty": "★☆☆☆☆",
-      "explanation": "正確答案：drive。原因：Don't 後面接動詞原形 drive。錯誤選項原因：drives (加s)、driving (V-ing)、drove (過去式) 皆非原形動詞。"
-    },
-    {
-      "id": "q_1005",
-      "book_id": "gra3",
-      "unit_id": "gra3_17",
-      "type": "grammar",
-      "question": "Please ___ to the radio for emergency news.",
-      "options": [
-        "listen",
-        "listens",
-        "listening",
-        "listened"
-      ],
-      "answer": "listen",
-      "difficulty": "★☆☆☆☆",
-      "explanation": "正確答案：listen。原因：Please 後面同樣接動詞原形 listen。錯誤選項原因：listens、listening、listened 不符合原形動詞要求。"
-    },
-    {
-      "id": "q_1006",
-      "book_id": "gra3",
-      "unit_id": "gra3_17",
-      "type": "grammar",
-      "question": "She is walking ___ the building to get away from the rain.",
-      "options": [
-        "into",
-        "under",
-        "down",
-        "from"
-      ],
-      "answer": "into",
-      "difficulty": "★★☆☆☆",
-      "explanation": "正確答案：into。原因：Walking into the building 表示「走進建築物裡面」避雨。錯誤選項原因：under (在...下方)、down (向下)、from (來自) 語意不符。"
-    },
-    {
-      "id": "q_1007",
-      "book_id": "gra3",
-      "unit_id": "gra3_17",
-      "type": "grammar",
-      "question": "The children ran ___ of the school when the bell rang.",
-      "options": [
-        "out",
-        "into",
-        "up",
-        "over"
-      ],
-      "answer": "out",
-      "difficulty": "★★☆☆☆",
-      "explanation": "正確答案：out。原因：out of 表示「從...內部出來」。錯誤選項原因：into 是進去；up 是向上；over 是越過。"
-    },
-    {
-      "id": "q_1008",
-      "book_id": "gra3",
-      "unit_id": "gra3_17",
-      "type": "grammar",
-      "question": "The car drove ___ the bridge to cross the river.",
-      "options": [
-        "over",
-        "under",
-        "into",
-        "down"
-      ],
-      "answer": "over",
-      "difficulty": "★★☆☆☆",
-      "explanation": "正確答案：over。原因：Drove over the bridge 表示「駛過/跨過橋樑」。錯誤選項原因：under 是在橋下穿過；into 是進去；down 是向下。"
-    },
-    {
-      "id": "q_1009",
-      "book_id": "gra3",
-      "unit_id": "gra3_17",
-      "type": "grammar",
-      "question": "We walked ___ the park to reach the police station.",
-      "options": [
-        "through",
-        "under",
-        "down",
-        "out"
-      ],
-      "answer": "through",
-      "difficulty": "★★☆☆☆",
-      "explanation": "正確答案：through。原因：Walked through the park 表示「穿過公園內部」。錯誤選項原因：under 是在底下；down 是向下；out 需接 of。"
-    },
-    {
-      "id": "q_1010",
-      "book_id": "gra3",
-      "unit_id": "gra3_17",
-      "type": "grammar",
-      "question": "The boy climbed ___ the tree to rescue the kitten.",
-      "options": [
-        "up",
-        "out of",
-        "under",
-        "through"
-      ],
-      "answer": "up",
-      "difficulty": "★★☆☆☆",
-      "explanation": "正確答案：up。原因：Climbed up the tree 表示「爬上樹（往高處移動）」。錯誤選項原因：out of 是出來；under 是在底下；through 是穿過。"
-    },
-    {
-      "id": "q_1011",
-      "book_id": "gra3",
-      "unit_id": "gra3_17",
-      "type": "grammar",
-      "question": "Don't run ___ the stairs! You might fall.",
-      "options": [
-        "down",
-        "into",
-        "over",
-        "out of"
-      ],
-      "answer": "down",
-      "difficulty": "★★☆☆☆",
-      "explanation": "正確答案：down。原因：Run down the stairs 表示「跑下樓梯」。錯誤選項原因：into (進入)、over (越過)、out of (出來) 不適合修飾跑樓梯摔倒的情境。"
-    },
-    {
-      "id": "q_1012",
-      "book_id": "gra3",
-      "unit_id": "gra3_17",
-      "type": "grammar",
-      "question": "Walk ___ the road until you see the supermarket.",
-      "options": [
-        "along",
-        "into",
-        "under",
-        "over"
-      ],
-      "answer": "along",
-      "difficulty": "★★☆☆☆",
-      "explanation": "正確答案：along。原因：Walk along the road 表示「沿著馬路走」。錯誤選項原因：into (進去)、under (底下)、over (越過) 不符沿路直行的語意。"
-    },
-    {
-      "id": "q_1013",
-      "book_id": "gra3",
-      "unit_id": "gra3_17",
-      "type": "grammar",
-      "question": "The dog ran ___ the tree three times.",
-      "options": [
-        "around",
-        "into",
-        "under",
-        "out of"
-      ],
-      "answer": "around",
-      "difficulty": "★★☆☆☆",
-      "explanation": "正確答案：around。原因：Ran around the tree 表示「繞著樹轉圈」。錯誤選項原因：into (撞進去)、under (在底下)、out of (出來) 不符合繞圈語意。"
-    },
-    {
-      "id": "q_1014",
-      "book_id": "gra3",
-      "unit_id": "gra3_17",
-      "type": "grammar",
-      "question": "Put boards over your windows, ___.",
-      "options": [
-        "please",
-        "don't",
-        "not",
-        "no"
-      ],
-      "answer": "please",
-      "difficulty": "★★☆☆☆",
-      "explanation": "正確答案：please。原因：祈使句句尾加上 please，前面加逗號，表示禮貌。錯誤選項原因：don't、not、no 不能直接放在肯定祈使句句尾。"
-    },
-    {
-      "id": "q_1015",
-      "book_id": "gra3",
-      "unit_id": "gra3_17",
-      "type": "grammar",
-      "question": "___ stay there until the storm passes.",
-      "options": [
-        "Please",
-        "Don't",
-        "Not",
-        "No"
-      ],
-      "answer": "Please",
-      "difficulty": "★★☆☆☆",
-      "explanation": "正確答案：Please。原因：句首大寫的 Please 帶領肯定祈使句，增加禮貌語氣。錯誤選項原因：Don't 變成否定（不要留在那裡，語意錯）；Not/No 無法單獨作句首祈使。"
-    },
-    {
-      "id": "q_1016",
-      "book_id": "gra3",
-      "unit_id": "gra3_17",
-      "type": "grammar",
-      "question": "Which sentence is a grammatically CORRECT negative imperative?",
-      "options": [
-        "Don't walk under damaged bridges.",
-        "No walk under damaged bridges.",
-        "Not walk under damaged bridges.",
-        "Doesn't walk under damaged bridges."
-      ],
-      "answer": "Don't walk under damaged bridges.",
-      "difficulty": "★★★☆☆",
-      "explanation": "正確答案：Don't walk under damaged bridges.。原因：否定祈使句公式為 Don't + 原形動詞。錯誤選項原因：No、Not、Doesn't 皆無法形成正確的否定祈使句。"
-    },
-    {
-      "id": "q_1017",
-      "book_id": "gra3",
-      "unit_id": "gra3_17",
-      "type": "grammar",
-      "question": "Which sentence contains a CORRECT preposition of movement?",
-      "options": [
-        "The boat sailed under the bridge.",
-        "The boat sailed up the bridge.",
-        "The boat sailed into the bridge.",
-        "The boat sailed out of the bridge."
-      ],
-      "answer": "The boat sailed under the bridge.",
-      "difficulty": "★★★☆☆",
-      "explanation": "正確答案：The boat sailed under the bridge.。原因：船隻從橋下穿過，使用 under the bridge。錯誤選項原因：船隻無法爬上橋 (up)、駛進橋裡面 (into) 或從橋裡面出來 (out of)。"
-    },
-    {
-      "id": "q_1018",
-      "book_id": "gra3",
-      "unit_id": "gra3_17",
-      "type": "grammar",
-      "question": "Choose the INCORRECT imperative sentence:",
-      "options": [
-        "Don't driving through flooding water.",
-        "Bring garden furniture inside.",
-        "Listen to the safety instructions.",
-        "Please stay inside the building."
-      ],
-      "answer": "Don't driving through flooding water.",
-      "difficulty": "★★★☆☆",
-      "explanation": "正確答案：Don't driving through flooding water.。原因：這是錯誤的句子！Don't 後面必須接原形動詞 drive，不能加 -ing 寫成 driving。錯誤選項原因：其他三個選項的祈使句動詞形態完全正確。"
-    },
-    {
-      "id": "q_1019",
-      "book_id": "gra3",
-      "unit_id": "gra3_17",
-      "type": "grammar",
-      "question": "Get some money ___ the bank before the hurricane starts.",
-      "options": [
-        "from",
-        "into",
-        "over",
-        "through"
-      ],
-      "answer": "from",
-      "difficulty": "★★☆☆☆",
-      "explanation": "正確答案：from。原因：Get money from the bank 表示「從銀行領取現金」。錯誤選項原因：into (進去)、over (越過)、through (穿過) 都不合語意。"
-    },
-    {
-      "id": "q_1020",
-      "book_id": "gra3",
-      "unit_id": "gra3_17",
-      "type": "grammar",
-      "question": "Which preposition completes both sentences? 'Go ___ the steps.' / 'Climb ___ the mountain.'",
-      "options": [
-        "up",
-        "under",
-        "into",
-        "out of"
-      ],
-      "answer": "up",
-      "difficulty": "★★★☆☆",
-      "explanation": "正確答案：up。原因：Go up the steps (走上台階) 與 Climb up the mountain (爬上山) 皆使用表示向上的 up。錯誤選項原因：under、into、out of 無法同時完美套入這兩個向上移動的語境。"
     },
     {
       "id": "q_1021",
@@ -42892,326 +44402,6 @@ const ENGLISH_DATA = {
       "explanation": "正確答案：Piece。原因：從大物體(如蛋糕或紙)上切下、分出的一個部分是 piece (塊/張/片)。錯誤選項原因：Bar 是條，Can 是罐頭，Bottle 是瓶子，均不能用來指代切下來的蛋糕。"
     },
     {
-      "id": "q_1553",
-      "book_id": "gra3",
-      "unit_id": "gra3_17",
-      "type": "vocab",
-      "question": "A violent tropical storm with extremely strong winds and heavy rain is a:",
-      "options": [
-        "Hurricane",
-        "Sunbeam",
-        "Rainbow",
-        "Breeze"
-      ],
-      "answer": "Hurricane",
-      "difficulty": "★☆☆☆☆",
-      "explanation": "正確答案：Hurricane。原因：Hurricane (颶風/強烈颱風) 是帶有強風豪雨的熱帶氣旋。錯誤選項原因：Sunbeam 是陽光；Rainbow 是彩虹；Breeze 是微風。"
-    },
-    {
-      "id": "q_1554",
-      "book_id": "gra3",
-      "unit_id": "gra3_17",
-      "type": "vocab",
-      "question": "Chairs, tables, beds, and desks used in a house are called:",
-      "options": [
-        "Furniture",
-        "Electronics",
-        "Vegetables",
-        "Vehicles"
-      ],
-      "answer": "Furniture",
-      "difficulty": "★☆☆☆☆",
-      "explanation": "正確答案：Furniture。原因：椅子、桌子、床統稱為家具 (furniture)。錯誤選項原因：Electronics 是電子產品；Vegetables 是蔬菜；Vehicles 是車輛。"
-    },
-    {
-      "id": "q_1555",
-      "book_id": "gra3",
-      "unit_id": "gra3_17",
-      "type": "vocab",
-      "question": "A long, flat piece of wood used for building or covering windows is a:",
-      "options": [
-        "Board",
-        "Paper",
-        "String",
-        "Leaf"
-      ],
-      "answer": "Board",
-      "difficulty": "★☆☆☆☆",
-      "explanation": "正確答案：Board。原因：木板 (board) 用於建築或防風封窗。錯誤選項原因：Paper 是紙；String 是繩子；Leaf 是樹葉。"
-    },
-    {
-      "id": "q_1556",
-      "book_id": "gra3",
-      "unit_id": "gra3_17",
-      "type": "vocab",
-      "question": "A box containing medical supplies like bandages and medicine for emergencies is a:",
-      "options": [
-        "First-aid kit",
-        "Tool box",
-        "Pencil case",
-        "Lunch box"
-      ],
-      "answer": "First-aid kit",
-      "difficulty": "★☆☆☆☆",
-      "explanation": "正確答案：First-aid kit。原因：急救箱 (First-aid kit) 裝有紗布藥品供急救使用。錯誤選項原因：Tool box 是工具箱；Pencil case 是鉛筆盒；Lunch box 是便當盒。"
-    },
-    {
-      "id": "q_1557",
-      "book_id": "gra3",
-      "unit_id": "gra3_17",
-      "type": "vocab",
-      "question": "A safe place that protects people from danger or bad weather is a:",
-      "options": [
-        "Shelter",
-        "Park",
-        "Supermarket",
-        "Bridge"
-      ],
-      "answer": "Shelter",
-      "difficulty": "★☆☆☆☆",
-      "explanation": "正確答案：Shelter。原因：避難所 (shelter) 是提供人們掩蔽風雨或危險的場所。錯誤選項原因：Park、Supermarket、Bridge 皆非專門避難設施。"
-    },
-    {
-      "id": "q_1558",
-      "book_id": "gra3",
-      "unit_id": "gra3_17",
-      "type": "vocab",
-      "question": "A detailed statement or rule that tells you what or how to do something is an:",
-      "options": [
-        "Instruction",
-        "Invention",
-        "Instrument",
-        "Illustration"
-      ],
-      "answer": "Instruction",
-      "difficulty": "★★☆☆☆",
-      "explanation": "正確答案：Instruction。原因：Instruction 意為指示或說明。錯誤選項原因：Invention 是發明；Instrument 是樂器/工具；Illustration 是插圖。"
-    },
-    {
-      "id": "q_1559",
-      "book_id": "gra3",
-      "unit_id": "gra3_17",
-      "type": "vocab",
-      "question": "Water covering an area that is usually dry after heavy rain is called:",
-      "options": [
-        "Flooding",
-        "Drought",
-        "Snowing",
-        "Wind"
-      ],
-      "answer": "Flooding",
-      "difficulty": "★★☆☆☆",
-      "explanation": "正確答案：Flooding。原因：暴雨後積水淹沒陸地稱為淹水/洪水 (flooding)。錯誤選項原因：Drought 是乾旱；Snowing 是下雪；Wind 是風。"
-    },
-    {
-      "id": "q_1560",
-      "book_id": "gra3",
-      "unit_id": "gra3_17",
-      "type": "vocab",
-      "question": "Something that has been harmed, broken, or spoiled is:",
-      "options": [
-        "Damaged",
-        "New",
-        "Clean",
-        "Perfect"
-      ],
-      "answer": "Damaged",
-      "difficulty": "★☆☆☆☆",
-      "explanation": "正確答案：Damaged。原因：受損的、破損的狀態用 damaged 形容。錯誤選項原因：New (新的)、Clean (乾淨的)、Perfect (完美的) 均非受損。"
-    },
-    {
-      "id": "q_1561",
-      "book_id": "gra3",
-      "unit_id": "gra3_17",
-      "type": "vocab",
-      "question": "A structure built over a river or road so cars and people can cross is a:",
-      "options": [
-        "Bridge",
-        "Tunnel",
-        "Building",
-        "Fence"
-      ],
-      "answer": "Bridge",
-      "difficulty": "★☆☆☆☆",
-      "explanation": "正確答案：Bridge。原因：跨越河流道路供通行的建築物是橋樑 (bridge)。錯誤選項原因：Tunnel 是隧道；Building 是建築物；Fence 是圍欄。"
-    },
-    {
-      "id": "q_1562",
-      "book_id": "gra3",
-      "unit_id": "gra3_17",
-      "type": "vocab",
-      "question": "A grammatical form used to give orders, warnings, or instructions is an:",
-      "options": [
-        "Imperative",
-        "Question",
-        "Adverb",
-        "Noun"
-      ],
-      "answer": "Imperative",
-      "difficulty": "★★☆☆☆",
-      "explanation": "正確答案：Imperative。原因：祈使句 (imperative) 用於下達命令、叮嚀或安全規則。錯誤選項原因：Question 是問句；Adverb 是副詞；Noun 是名詞。"
-    },
-    {
-      "id": "q_1563",
-      "book_id": "gra3",
-      "unit_id": "gra3_17",
-      "type": "vocab",
-      "question": "The act or process of changing position or place is called:",
-      "options": [
-        "Movement",
-        "Measurement",
-        "Improvement",
-        "Agreement"
-      ],
-      "answer": "Movement",
-      "difficulty": "★★☆☆☆",
-      "explanation": "正確答案：Movement。原因：移動、位置改變的過程稱為 movement。錯誤選項原因：Measurement 是測量；Improvement 是改善；Agreement 是協議。"
-    },
-    {
-      "id": "q_1564",
-      "book_id": "gra3",
-      "unit_id": "gra3_17",
-      "type": "vocab",
-      "question": "The course or path along which someone or something moves (like North or South) is a:",
-      "options": [
-        "Direction",
-        "Destination",
-        "Distance",
-        "Decoration"
-      ],
-      "answer": "Direction",
-      "difficulty": "★★☆☆☆",
-      "explanation": "正確答案：Direction。原因：移動的方位指引稱為 direction。錯誤選項原因：Destination 是目的地；Distance 是距離；Decoration 是裝飾。"
-    },
-    {
-      "id": "q_1565",
-      "book_id": "gra3",
-      "unit_id": "gra3_17",
-      "type": "vocab",
-      "question": "One of the flat surfaces that you walk on when going up or down stairs is a:",
-      "options": [
-        "Step",
-        "Slope",
-        "Roof",
-        "Wall"
-      ],
-      "answer": "Step",
-      "difficulty": "★☆☆☆☆",
-      "explanation": "正確答案：Step。原因：上下樓梯踩踏的台階稱為 step。錯誤選項原因：Slope 是斜坡；Roof 是屋頂；Wall 是牆壁。"
-    },
-    {
-      "id": "q_1566",
-      "book_id": "gra3",
-      "unit_id": "gra3_17",
-      "type": "vocab",
-      "question": "A serious, unexpected, and dangerous situation that requires immediate action is an:",
-      "options": [
-        "Emergency",
-        "Experiment",
-        "Entertainment",
-        "Equipment"
-      ],
-      "answer": "Emergency",
-      "difficulty": "★★☆☆☆",
-      "explanation": "正確答案：Emergency。原因：突發且需立即處理的危險狀況稱為緊急狀況 (emergency)。錯誤選項原因：Experiment 是實驗；Entertainment 是娛樂；Equipment 是設備。"
-    },
-    {
-      "id": "q_1567",
-      "book_id": "gra3",
-      "unit_id": "gra3_17",
-      "type": "vocab",
-      "question": "The possibility of something bad or harmful happening is:",
-      "options": [
-        "Danger",
-        "Safety",
-        "Comfort",
-        "Delight"
-      ],
-      "answer": "Danger",
-      "difficulty": "★☆☆☆☆",
-      "explanation": "正確答案：Danger。原因：危險 (danger) 代表危害發生的可能性。錯誤選項原因：Safety (安全)、Comfort (舒適)、Delight (喜悅) 均相反。"
-    },
-    {
-      "id": "q_1568",
-      "book_id": "gra3",
-      "unit_id": "gra3_17",
-      "type": "vocab",
-      "question": "To keep someone or something safe from harm or injury is to:",
-      "options": [
-        "Protect",
-        "Destroy",
-        "Damage",
-        "Hurt"
-      ],
-      "answer": "Protect",
-      "difficulty": "★☆☆☆☆",
-      "explanation": "正確答案：Protect。原因：保護 (protect) 意指防止受到傷害破壞。錯誤選項原因：Destroy (摧毀)、Damage (損壞)、Hurt (傷害) 意思相反。"
-    },
-    {
-      "id": "q_1569",
-      "book_id": "gra3",
-      "unit_id": "gra3_17",
-      "type": "vocab",
-      "question": "Protected from danger, harm, or risk means being:",
-      "options": [
-        "Safe",
-        "Scared",
-        "Dangerous",
-        "Silly"
-      ],
-      "answer": "Safe",
-      "difficulty": "★☆☆☆☆",
-      "explanation": "正確答案：Safe。原因：處於受保護、無危險的狀態即為安全的 (safe)。錯誤選項原因：Scared 是害怕的；Dangerous 是危險的；Silly 是糊塗的。"
-    },
-    {
-      "id": "q_1570",
-      "book_id": "gra3",
-      "unit_id": "gra3_17",
-      "type": "vocab",
-      "question": "To do what an instruction, rule, or person tells you to do is to:",
-      "options": [
-        "Follow",
-        "Break",
-        "Forget",
-        "Ignore"
-      ],
-      "answer": "Follow",
-      "difficulty": "★★☆☆☆",
-      "explanation": "正確答案：Follow。原因：遵循、遵守 (follow) 指按指示行事。錯誤選項原因：Break (打破)、Forget (忘記)、Ignore (忽視) 均為相反動作。"
-    },
-    {
-      "id": "q_1571",
-      "book_id": "gra3",
-      "unit_id": "gra3_17",
-      "type": "vocab",
-      "question": "To go away from a place or person is to:",
-      "options": [
-        "Leave",
-        "Arrive",
-        "Enter",
-        "Stay"
-      ],
-      "answer": "Leave",
-      "difficulty": "★☆☆☆☆",
-      "explanation": "正確答案：Leave。原因：動詞 leave 代表離開。錯誤選項原因：Arrive (抵達)、Enter (進入)、Stay (留下來) 意思不同。"
-    },
-    {
-      "id": "q_1572",
-      "book_id": "gra3",
-      "unit_id": "gra3_17",
-      "type": "vocab",
-      "question": "To make something ready for use or for an event in the future is to:",
-      "options": [
-        "Prepare",
-        "Prevent",
-        "Perform",
-        "Prefer"
-      ],
-      "answer": "Prepare",
-      "difficulty": "★★☆☆☆",
-      "explanation": "正確答案：Prepare。原因：動詞 prepare 意為預先準備。錯誤選項原因：Prevent 是預防；Perform 是表演；Prefer 是偏好。"
-    },
-    {
       "id": "q_1573",
       "book_id": "gra3",
       "unit_id": "gra3_18",
@@ -45476,7 +46666,8 @@ const ENGLISH_DATA = {
       "target_pos": "形容詞 (Adjective)",
       "masked_example": "My sister is very ________ in cooking international food.",
       "masked_example_chi": "我姊姊對烹飪國際各國美食非常感興趣。",
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": true
     },
     {
       "id": "q_w12_odg3_u16_02",
@@ -45535,7 +46726,8 @@ const ENGLISH_DATA = {
       "target_pos": "形容詞 (Adjective)",
       "masked_example": "Mom is ________ about eating too many chemicals in snacks.",
       "masked_example_chi": "媽媽很擔心零食裡面吃進太多化學添加物。",
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": true
     },
     {
       "id": "q_w12_odg3_u16_03",
@@ -45594,7 +46786,8 @@ const ENGLISH_DATA = {
       "target_pos": "形容詞 (Adjective)",
       "masked_example": "I am ________ with these dry cookies because they have no flavor.",
       "masked_example_chi": "我對這些乾巴巴的餅乾感到很失望，因為它們毫無風味。",
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": true
     },
     {
       "id": "q_w12_odg3_u16_04",
@@ -45653,7 +46846,8 @@ const ENGLISH_DATA = {
       "target_pos": "形容詞 (Adjective)",
       "masked_example": "We were ________ by how much sugar there was in the fruit juice.",
       "masked_example_chi": "我們對果汁裡面竟然含有那麼多糖分感到非常驚訝。",
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": true
     },
     {
       "id": "q_w12_odg3_u16_05",
@@ -45712,7 +46906,8 @@ const ENGLISH_DATA = {
       "target_pos": "名詞 (Noun, 複數)",
       "masked_example": "You can check the list of ________ before buying cereal.",
       "masked_example_chi": "在購買麥片之前，你可以先檢查成分清單。",
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": true
     },
     {
       "id": "q_w12_odg3_u16_06",
@@ -45771,7 +46966,8 @@ const ENGLISH_DATA = {
       "target_pos": "名詞 (Noun, 複數)",
       "masked_example": "Many parents try to avoid buying foods that contain harmful ________.",
       "masked_example_chi": "許多父母盡量避免購買含有有害化學物質的食品。",
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": true
     },
     {
       "id": "q_w12_odg3_u16_07",
@@ -45824,7 +47020,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "good at 表示後天習得的擅長技能；interested in 表示內心對該領域抱持的主觀愛好，兩者句型均接動名詞。",
         "examVariations": "題型常見於紙筆造句填空、連貫句子改寫以及克漏字介系詞選填。"
       },
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": true
     },
     {
       "id": "q_w12_odg3_u16_08",
@@ -45878,7 +47075,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "surprised by 後方可接名詞或疑問詞引導的名詞子句 (how many chemicals...)，表示受到該事實衝擊。",
         "examVariations": "常見題型包含紙筆填空、改錯題 (糾正 surprised of) 及食品標籤閱讀問答。"
       },
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": true
     },
     {
       "id": "q_w12_odg3_u16_09",
@@ -45932,7 +47130,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "happy with 接事物表示「對其感到滿意」；happy about 則表達「因某件好消息或事情而感到欣喜」。",
         "examVariations": "常考於食品標籤購買建議對話、克漏字測驗及手寫整句翻譯。"
       },
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": true
     },
     {
       "id": "q_w12_odg3_u16_10",
@@ -45986,7 +47185,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "full of (形容詞片語) 與 filled with (被動分詞片語) 意思皆為充滿，但介系詞搭配嚴格不同，不可混用。",
         "examVariations": "題型常見於烘焙篇章閱讀、克漏字選填、抓錯題及紙筆造句題。"
       },
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": true
     },
     {
       "id": "q_w12_odg3_u16_11",
@@ -46062,7 +47262,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "It is nice of sb to do sth 評價人的性格舉止；It is easy for sb to do sth 則描述事情本身的客觀難易度。",
         "examVariations": "題型常見於段考句型轉換、手寫重組題及錯題訂正改寫。"
       },
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": true
     },
     {
       "id": "q_w12_odg3_u16_12",
@@ -46104,7 +47305,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "silly of me 強調自身行為的糊塗粗心；若用 careless of me 則強調粗心大意未注意細節。",
         "examVariations": "常見題型包括紙筆句子改寫、代名詞格位填空題及連貫故事寫作翻譯。"
       },
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": true
     },
     {
       "id": "q_w12_odg3_u16_13",
@@ -46146,7 +47348,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "I think it is silly of people to... 屬於個人主觀價值評價；It is unhealthy for people to eat... 則是事物對健康的客觀影響。",
         "examVariations": "題型常見於口語意見表達、對話題改寫、論說文開頭句型手寫運用。"
       },
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": true
     },
     {
       "id": "q_w12_odg3_u16_14",
@@ -46222,7 +47425,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "動名詞主詞 (Reading labels) 與不定詞主詞 (To read labels) 皆視為單數，但日常英語與標題中以動名詞最為自然普遍。",
         "examVariations": "題型常見於主謂一致填空題、提示字造句題、克漏字動詞型態選填題。"
       },
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": true
     },
     {
       "id": "q_w12_odg3_u16_15",
@@ -46264,7 +47468,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "所有介系詞 (about, at, in, by, of, for, with, without) 後方動詞均需加 -ing，無一例外。",
         "examVariations": "題型常見於課文克漏字填空、括號動詞正確形式填空、烘焙情境句子重寫。"
       },
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": true
     },
     {
       "id": "q_w12_odg3_u16_16",
@@ -46306,7 +47511,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "Eating chemicals is dangerous (動名詞做主詞用 is) vs Chemicals are dangerous (名詞複數做主詞用 are)。",
         "examVariations": "題型常見於段考進階除錯題、主謂一致造句題以及會考克漏字文法陷阱題。"
       },
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": true
     },
     {
       "id": "q_w12_odg3_u16_17",
@@ -46399,7 +47605,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "be interested in 後接動名詞 (eating)；若是 interesting 則是形容事物本身有趣 (The food label is interesting)。",
         "examVariations": "題型常考介系詞四選一選擇題、動名詞型態選填題以及對話情境填空。"
       },
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": true
     },
     {
       "id": "q_w12_odg3_u16_18",
@@ -46478,7 +47685,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "It is kind of you to help me (讚賞你的善良，用 of) vs It is important for you to study (強調讀書的重要性，用 for)。",
         "examVariations": "題型常見於 of vs for 辨析選擇題、段考錯題改錯題以及虛主詞重組題。"
       },
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": true
     },
     {
       "id": "q_w12_odg3_u16_19",
@@ -46572,7 +47780,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "surprised by 後方常接疑問詞引導的名詞子句 (how many/how much)，表達受到該事實的震驚。",
         "examVariations": "題型常見於食品科普閱讀克漏字、介系詞選擇題與抓錯訂正題。"
       },
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": true
     },
     {
       "id": "q_w12_odg3_u16_20",
@@ -46657,7 +47866,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "famous for 表示「以某特色聞名」(famous for its pizza)；famous as 表示「以某身分聞名」(famous as a chef)。",
         "examVariations": "題型常考地理特產配對、形容詞介系詞選擇題及名詞短語填空。"
       },
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": true
     },
     {
       "id": "q_w12_odg3_u16_21",
@@ -46736,7 +47946,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "full of 是形容詞搭配 of；filled with 則是動詞 fill 的被動分詞搭配 with，兩者意思相同但介系詞不同。",
         "examVariations": "題型常見於故事閱讀理解、介系詞四選一選擇題及段考克漏字填空。"
       },
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": true
     },
     {
       "id": "q_w12_odg3_u16_22",
@@ -46816,7 +48027,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "Reading labels helps us (動名詞主詞) vs If you read labels, you will know (條件子句動詞)。",
         "examVariations": "題型常見於會考第一大題文法選擇、非謂語動詞形式判斷題及段考長句結構分析。"
       },
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": true
     },
     {
       "id": "q_w12_odg3_u16_23",
@@ -46856,7 +48068,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "afraid of eating something that you are allergic to 包含介系詞接動名詞 (afraid of eating) 及關係子句 (that you are allergic to)。",
         "examVariations": "題型常見於素養閱讀理解、細節事實定位題及生活健康常識英文推論題。"
       },
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": true
     },
     {
       "id": "q_w12_odg3_u16_24",
@@ -46896,7 +48109,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "curious about how to cook 包含形容詞搭配介系詞 about 及「疑問詞 + to + 原形動詞」的名詞片語結構。",
         "examVariations": "題型常見於說明文閱讀測驗、標籤圖文資訊對照題及條件句細節匹配題。"
       },
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": true
     },
     {
       "id": "q_w12_odg3_u16_25",
@@ -46936,7 +48150,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "angry about the number of chemicals 中的 that 引導關係代名詞子句修飾先行詞 chemicals。",
         "examVariations": "題型常見於角色情感動機推論題、對話細節檢索題及因果關係配對題。"
       },
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": true
     },
     {
       "id": "q_w12_odg3_u16_26",
@@ -46976,7 +48191,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "excited about the food for our party 展示了形容詞搭配介系詞 about 接名詞片語的標準日常用法。",
         "examVariations": "題型常見於對話主旨推論、末句情感轉折題及篇章跨段落細節辨析。"
       },
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": true
     },
     {
       "id": "q_w12_odg3_u16_27",
@@ -47051,7 +48267,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "had given 是過去完成式，表示「在姊姊嚐蛋糕之前」就已經發生的動作，搭配 instead of (代替)。",
         "examVariations": "題型常考故事原因分析、順序排列題及篇章代名詞指涉題。"
       },
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": true
     },
     {
       "id": "q_w12_odg3_u16_28",
@@ -47099,7 +48316,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "sorry about making that mistake (為犯錯抱歉) 與 thought it was funny (覺得很有趣) 形成生動的情感對比。",
         "examVariations": "題型常見於角色態度推論題、故事主旨總結題及課後閱讀素養評量。"
       },
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": true
     },
     {
       "id": "q_w12_odg3_u16_29",
@@ -47193,7 +48411,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "excited about 後接名詞（the movie）或動名詞（watching the movie）；注意 excited 修飾人，exciting 修飾事物。",
         "examVariations": "考卷常考五格公式造句、錯題抓漏（補出 because 子句中的 be 動詞）及看圖寫句。"
-      }
+      },
+      "is_week14": true
     },
     {
       "id": "q_w12_odg3_u16_30",
@@ -47282,7 +48501,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "disappointed with + 事物／結果（the quiz / the cake）；disappointed in + 人（my brother / myself）；disappointed about + 事件消息。",
         "examVariations": "常見於 W12/W13 真卷造句題、錯題訂正及單複數名詞辨析題。"
-      }
+      },
+      "is_week14": true
     },
     {
       "id": "q_w12_odg3_u16_31",
@@ -47366,7 +48586,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "confused about（對某主題或題目不解）vs confused by（受到複雜指示或外觀相似事物影響而糊塗），兩者皆屬課本正解。",
         "examVariations": "常考於介系詞選填、how to + V 不定詞結構改錯及閱讀測驗詞義辨析。"
-      }
+      },
+      "is_week14": true
     },
     {
       "id": "q_w12_odg3_u16_32",
@@ -47460,7 +48681,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "famous for＋特色事物（Taiwan is famous for bubble tea）；famous as＋身分角色（He is famous as an artist）。",
         "examVariations": "常與 Write Right 傳記寫作跨單元連動：介紹歷史人物以哪項成就聞名（was famous for his paintings）。"
-      }
+      },
+      "is_week14": true
     },
     {
       "id": "q_w12_odg3_u16_33",
@@ -47565,7 +48787,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "interested（感到有興趣，修飾人）必須搭配 in；interesting（令人感興趣的，修飾事物）則不需要固定配 in。",
         "examVariations": "常與 good at 並列出現在對比對話填空、造句與改錯題中。"
-      }
+      },
+      "is_week14": true
     },
     {
       "id": "q_w12_odg3_u16_34",
@@ -47659,7 +48882,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "worried about（心裡焦急擔憂）vs afraid of（害怕恐懼），介系詞完全不同；worried about 後接動名詞，afraid of 亦接動名詞。",
         "examVariations": "常出現於食品安全閱讀寫作題、介系詞與動名詞雙空填充題及短文改錯題。"
-      }
+      },
+      "is_week14": true
     },
     {
       "id": "q_w12_odg3_u16_35",
@@ -47739,7 +48963,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "surprised by＋名詞／子句（被某事驚訝）vs surprised to＋原形動詞（驚訝地發現／看到某事，如 surprised to see）。",
         "examVariations": "屬於 L7-10 綜合素養寫作題型，常同時檢核介系詞、時態一致性與存在句 there be。"
-      }
+      },
+      "is_week14": true
     },
     {
       "id": "q_w12_odg3_u16_36",
@@ -47823,6 +49048,289 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "be good at（擅長某技藝）vs be good for（對健康有益，如 Milk is good for you）vs be good of sb（某人真好，如 good of you to help）。",
         "examVariations": "大考極常將 good at（擅長）、good for（有益）與 good of（人品好）放在同一題組進行介系詞辨析。"
+      },
+      "is_week14": true
+    },
+    {
+      "id": "q_w14_odg3_u16_37",
+      "book_id": "gra3",
+      "unit_id": "gra3_16",
+      "is_midterm": true,
+      "is_week12": true,
+      "is_week13": true,
+      "is_week14": true,
+      "type": "choice",
+      "category_tag": "grammar",
+      "question_tag": "跨單元辨析：U16 情緒介系詞 × U17 移動介系詞",
+      "difficulty": "★★★★★",
+      "difficulty_level": 8,
+      "triadGroup": {
+        "groupId": "ODG3_U16_W14_X1",
+        "tier": "L7-10",
+        "role": "challenge"
+      },
+      "trapCode": "ENG_PREP_COLLOCATION",
+      "trapCodes": [
+        "ENG_PREP_COLLOCATION",
+        "ENG_CHINGLISH_LITERAL"
+      ],
+      "question": "During a hurricane, people who are afraid _____ lightning should bring garden furniture _____ the house, because stormy weather is very different from calm days.",
+      "options": [
+        "of / into",
+        "from / through",
+        "about / over",
+        "of / through"
+      ],
+      "answer": "of / into",
+      "explanation": {
+        "point": "跨單元介系詞辨析：U16 靜態恐懼搭配 afraid of × U17 動態方向進入室內 bring ... into",
+        "examPurpose": "測驗學生區分 U16 靜態心理感受介系詞（afraid of / different from）與 U17 動態空間移動介系詞（into / through / over / around）的精準判斷力。",
+        "correctReason": "第一空「害怕閃電」屬於 U16 固定搭配 be afraid of；第二空「把庭院家具搬進屋內」是由戶外進入封閉空間的移動方向，必用 U17 動態介系詞 into。",
+        "note": "句尾 different from（與...不同）也是 U16 常考固定搭配，不要跟 afraid of 搞混。",
+        "trap": "易把 afraid of 誤與 different from 混為 *afraid from，或把「搬進屋內 (into)」誤選成「穿過 (through)」或「覆蓋上方 (over)」。",
+        "distractorAnalysis": {
+          "from / through": "afraid 不能搭配 from（different 才配 from）；且搬家具進屋內是進入室內空間 (into)，不是穿過屋子 (through)。",
+          "about / over": "害怕某物應為 afraid of（worried 才配 about）；over 表示在正上方或覆蓋表面（如 put boards over windows），不符搬進屋內語意。",
+          "of / through": "第一空 afraid of 正確，但第二空 through 指從一端穿越到另一端（如 drive through water），搬入室內空間必用 into。"
+        },
+        "steps": [
+          "① 先判第一空（靜態心理形容詞）：afraid 固定搭配 of（對比：different 搭配 from）",
+          "② 再判第二空（動態移動方向）：把家具從室外移動到屋內「裡面」➔ 選 into",
+          "③ 驗證全句語意：afraid of lightning + bring ... into the house ➔ 正解 of / into"
+        ],
+        "insight": "💡 靜態情緒「害怕」看形容詞配對（afraid OF）；動態「從外到內」看空間路線（bring ... INTO）！",
+        "visualBlock": {
+          "kind": "prep_ladder",
+          "title": "🧭 U16 靜態形容詞介系詞 × U17 動態移動介系詞階梯",
+          "data": {
+            "levels": [
+              {
+                "prep": "afraid of / different from",
+                "scope": "U16 靜態狀態與差異（固定搭配，不表空間移動）",
+                "examples": [
+                  "afraid of lightning",
+                  "different from calm days"
+                ],
+                "highlight": true
+              },
+              {
+                "prep": "into",
+                "scope": "U17 動態移動：由外向內進入封閉空間",
+                "examples": [
+                  "bring furniture into the house",
+                  "go into a building"
+                ],
+                "highlight": true
+              },
+              {
+                "prep": "through",
+                "scope": "U17 動態移動：從一側穿過內部到達另一側",
+                "examples": [
+                  "don't drive through flooding water"
+                ],
+                "highlight": false
+              },
+              {
+                "prep": "over / around",
+                "scope": "U17 動態移動：覆蓋跨過上方 / 繞行周圍",
+                "examples": [
+                  "put boards over windows",
+                  "walk around trees"
+                ],
+                "highlight": false
+              }
+            ]
+          },
+          "caption": "📊 先分清「心理/特質搭配」還是「身體/物體移動路線」，就不會選錯介系詞！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "scared of ... / carry ... inside",
+          "frightened of ... / move ... into"
+        ],
+        "grammarCompare": "afraid of（害怕某事）與 worried about（擔憂某事）介系詞不同；U17 的 into（進入裡面）與 out of（走出外面）則構成空間反義組。",
+        "examVariations": "Week 14 期末衝刺高頻將 U16 固定介系詞與 U17 方向介系詞合併出在單題雙空克漏字中。"
+      }
+    },
+    {
+      "id": "q_w14_odg3_u16_38",
+      "book_id": "gra3",
+      "unit_id": "gra3_16",
+      "is_midterm": true,
+      "is_week12": true,
+      "is_week13": true,
+      "is_week14": true,
+      "type": "choice",
+      "category_tag": "grammar",
+      "question_tag": "跨單元辨析：U16 famous for / good at × U17 否定祈使句",
+      "difficulty": "★★★★★",
+      "difficulty_level": 8,
+      "triadGroup": {
+        "groupId": "ODG3_U16_W14_X2",
+        "tier": "L7-10",
+        "role": "challenge"
+      },
+      "trapCode": "ENG_VERB_OMISSION",
+      "trapCodes": [
+        "ENG_PREP_COLLOCATION",
+        "ENG_POS_CONFUSION",
+        "ENG_VERB_OMISSION"
+      ],
+      "question": "Even in a coastal town famous _____ strong bridges, _____ walk through flooding water—stay inside even if you are good at swimming!",
+      "options": [
+        "for / don't",
+        "about / not",
+        "for / doesn't",
+        "of / don't"
+      ],
+      "answer": "for / don't",
+      "explanation": {
+        "point": "跨單元辨析：U16 名聲搭配 famous for / good at × U17 否定祈使句 Don't + 原形動詞 + through",
+        "examPurpose": "綜合檢核 U16 形容詞介系詞搭配（famous for / good at）與 U17 否定祈使句結構（Don't + 原形動詞，不可用 Not 或 Doesn't）。",
+        "correctReason": "第一空「以堅固橋樑聞名」必用 U16 固定搭配 famous for；第二空為對民眾發出的 U17 安全警告「不要涉水穿過洪水」，否定祈使句一律以 Don't + 原形動詞（walk）開頭。",
+        "note": "句尾 good at swimming 同步複習 U16「擅長某技能用 at，且介系詞後動詞加 -ing」。",
+        "trap": "中文「關於...很有名」常誤選 famous about；中文「不要走」常直譯成 *not walk 或誤套第三人稱單數 *doesn't walk。",
+        "distractorAnalysis": {
+          "about / not": "famous 固定搭配 for，不可受中文干擾寫成 famous about；否定祈使句不可只放 not，必須使用助動詞 don't。",
+          "for / doesn't": "第一空 famous for 正確，但祈使句省略的主詞固定為第二人稱 you，否定形式永遠是 don't，絕不能用 doesn't。",
+          "of / don't": "第二空否定祈使句 don't 正確，但表達「以某特色聞名」必用 famous for，不可誤用 of（full 才配 of）。"
+        },
+        "steps": [
+          "① 看第一空前形容詞 famous：以某事物聞名 ➔ 固定配 for（famous for）",
+          "② 看第二空後方原形動詞 walk through flooding water：這是安全警告祈使句",
+          "③ 否定祈使句唯一寫法 ➔ don't + 原形動詞（絕不寫 not 或 doesn't）"
+        ],
+        "insight": "💡 「以特色聞名」用 famous FOR；「發出禁止指令」一律用 Don't ＋ 原形動詞（沒有 Doesn't 祈使句）！",
+        "visualBlock": {
+          "kind": "compare_table",
+          "title": "⚖️ U16 形容詞搭配 × U17 否定祈使句 易錯對照表",
+          "data": {
+            "headers": [
+              "考點項目",
+              "常見失分錯寫 ❌",
+              "滿分正確寫法 ✅"
+            ],
+            "rows": [
+              [
+                "U16 名聲特色",
+                "famous about / of bridges",
+                "famous for strong bridges"
+              ],
+              [
+                "U16 擅長技能",
+                "good in swim",
+                "good at swimming"
+              ],
+              [
+                "U17 否定祈使句",
+                "Not walk / Doesn't walk through",
+                "Don't walk through flooding water"
+              ]
+            ]
+          },
+          "caption": "📊 先鎖定 famous FOR 與 good AT，再確認否定祈使句永遠用 Don't！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "well-known for / never walk through",
+          "famous for / do not walk through"
+        ],
+        "grammarCompare": "否定祈使句 Don't walk through...（直接命令禁止）vs 動名詞主詞 Walking through flooding water is dangerous（陳述事實，動詞用單數 is）。",
+        "examVariations": "常考於颱風防災海報填空、Don't 與 Doesn't 祈使句辨析及 U16 介系詞綜合選填。"
+      }
+    },
+    {
+      "id": "q_w14_odg3_u16_39",
+      "book_id": "gra3",
+      "unit_id": "gra3_16",
+      "is_midterm": true,
+      "is_week12": true,
+      "is_week13": true,
+      "is_week14": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "question_tag": "跨單元綜合造句：U16 interested in + V-ing × U17 祈使句與 over / around",
+      "part_title": "Part D: Cross-Unit Writing (U16 Adj + Prep + V-ing × U17 Imperatives & Movement Prepositions)",
+      "part_instructions": "Combine the prompts into one complete safety instruction sentence using U16 [interested + prep + V-ing] and U17 imperatives with [over] and [around].",
+      "word_bank": "interested in   famous for   afraid of   different from   |   into   over   around   through",
+      "sentence_form": "If you are <interested + prep + V-ing> ..., <Imperative V> ... <over> ... and <Imperative V> ... <around> ...",
+      "tense_hint": "Check U16 preposition + gerund (in + V-ing) AND U17 imperative base verbs (no subject 'you' or '-s' before Put/Walk)!",
+      "difficulty": "★★★★★",
+      "difficulty_level": 9,
+      "triadGroup": {
+        "groupId": "ODG3_U16_W14_X3",
+        "tier": "L7-10",
+        "role": "challenge"
+      },
+      "trapCode": "ENG_POS_CONFUSION",
+      "trapCodes": [
+        "ENG_PREP_COLLOCATION",
+        "ENG_POS_CONFUSION",
+        "ENG_CHINGLISH_LITERAL"
+      ],
+      "question": "Combine the prompts into one complete sentence using [interested] + the correct preposition + V-ing, and two U17 imperatives with [over] and [around]: (1) You / interested / stay safe in a hurricane. (2) Put boards / your windows and walk / damaged trees.",
+      "answer": "If you are interested in staying safe in a hurricane, put boards over your windows and walk around damaged trees.",
+      "options": [],
+      "self_check": [
+        "U16 條件子句是否寫成 interested in staying（不可寫成 *interested about stay）",
+        "U17 主要子句是否直接以原形動詞祈使句 put 與 walk 開頭（不可多寫 *you put 或 *puts）",
+        "移動/位置介系詞是否正確使用 over（覆蓋窗戶）與 around（繞過倒塌樹木），且逗號與句號標點完整"
+      ],
+      "explanation": {
+        "point": "跨單元綜合手寫：If you are interested in + V-ing + U17 祈使句（put ... over ... and walk around ...）",
+        "examPurpose": "整合測驗學生在一句中同時掌握 U16「形容詞＋介系詞＋動名詞（interested in staying）」與 U17「祈使句原形動詞＋空間動態介系詞（put ... over / walk around）」的實戰書寫能力。",
+        "correctReason": "條件子句表達興趣必用 interested in，且介系詞 in 後接動詞 stay 須改為動名詞 staying；主要子句為安全指示，使用原形動詞祈使句 put（把木板蓋在窗戶上方用 over）與 walk（繞過受損樹木周圍用 around）。",
+        "note": "若將祈使句改寫為否定警告，亦可延伸為 Don't walk under damaged trees 或 Don't drive through flooding water。",
+        "trap": "高頻雙重扣分：把 interested in stay 寫成原形或誤用 about；在 If 子句後方寫出 *you put 或誤把 around（繞過）寫成 through（穿過危險樹木）。",
+        "commonTraps": [
+          "U16 介系詞與動名詞雙雷（ENG_PREP_COLLOCATION / ENG_POS_CONFUSION）：interested 必配 in（不用 about），且 in 後方動詞 stay 必須加 -ing 變成 staying。",
+          "U17 祈使句與空間方向誤用（ENG_CHINGLISH_LITERAL）：祈使句不可加主詞 you 或三單 -s；覆蓋窗戶用 over，繞開倒樹用 around（不可用 through）。"
+        ],
+        "steps": [
+          "① 寫條件子句：If you are interested in staying safe in a hurricane,（檢查 in + V-ing）",
+          "② 接第一組 U17 祈使句：put boards over your windows（原形動詞 put ＋ 覆蓋上方 over）",
+          "③ 用 and 接第二組 U17 祈使句：and walk around damaged trees.（原形動詞 walk ＋ 繞過周圍 around）"
+        ],
+        "insight": "💡 一句串聯兩個單元：前半段靠「interested IN ＋ stayING」，後半段靠「原形祈使句 put OVER / walk AROUND」！",
+        "visualBlock": {
+          "kind": "compare_table",
+          "title": "⚖️ U16 情緒介系詞＋V-ing × U17 祈使句＋動態介系詞 雙關檢核表",
+          "data": {
+            "headers": [
+              "寫作關卡",
+              "常見扣分錯寫 ❌",
+              "滿分標準寫法 ✅"
+            ],
+            "rows": [
+              [
+                "關卡 1：U16 興趣＋動名詞",
+                "interested about stay safe",
+                "interested in staying safe"
+              ],
+              [
+                "關卡 2：U17 覆蓋防護祈使句",
+                "you putting boards under windows",
+                "put boards over your windows"
+              ],
+              [
+                "關卡 3：U17 避開障礙動態介系詞",
+                "walk through damaged trees",
+                "walk around damaged trees"
+              ]
+            ]
+          },
+          "caption": "📊 寫完對照三道關卡：in + V-ing、原形祈使句、over/around 方向一次拿滿分！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "keen on staying safe ... / cover your windows with boards",
+          "curious about staying safe ... / go around fallen trees"
+        ],
+        "grammarCompare": "U16 的介系詞（interested in / afraid of / good at / famous for / different from）緊接在形容詞後並要求名詞或 V-ing；U17 的動態介系詞（into / through / over / around）緊接在動作動詞後表示移動路線。",
+        "examVariations": "常見於 Week 14 期末綜合造句、安全指示海報改寫及看圖合併句子題。"
       }
     },
     {
@@ -47879,7 +49387,8 @@ const ENGLISH_DATA = {
       "target_chi": "園丁；造園者",
       "target_pos": "名詞 (Noun)",
       "masked_example": "Mrs. Washington saved an extra big slice of pie for a good little ________ she knows.",
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_od3_u16_02",
@@ -47935,7 +49444,8 @@ const ENGLISH_DATA = {
       "target_chi": "地瓜；甘藷",
       "target_pos": "名詞 (Noun)",
       "masked_example": "Mrs. Willie Mae Washington dug up orange ________ to bake a warm autumn pie.",
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_od3_u16_03",
@@ -47991,7 +49501,8 @@ const ENGLISH_DATA = {
       "target_chi": "豆子；豆類",
       "target_pos": "名詞 (Noun)",
       "masked_example": "Mr. Singh carried away a basket full of fresh ________ from the community garden.",
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_od3_u16_04",
@@ -48047,7 +49558,8 @@ const ENGLISH_DATA = {
       "target_chi": "藤蔓；攀爬植物",
       "target_pos": "名詞 (Noun)",
       "masked_example": "Standing higher than all the plants and climbing ________ was a giant golden sunflower.",
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_od3_u16_05",
@@ -48103,7 +49615,8 @@ const ENGLISH_DATA = {
       "target_chi": "花園；菜園",
       "target_pos": "名詞 (Noun)",
       "masked_example": "Marisol planted her precious seed in the small community ________.",
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_od3_u16_06",
@@ -48159,7 +49672,8 @@ const ENGLISH_DATA = {
       "target_chi": "薄霧；陰霾；光暈",
       "target_pos": "名詞 (Noun)",
       "masked_example": "A golden ________ shone on the street as cheerful neighbors gathered together.",
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_od3_u16_07",
@@ -48215,7 +49729,8 @@ const ENGLISH_DATA = {
       "target_chi": "青少年 (13至19歲)",
       "target_pos": "名詞 (Noun)",
       "masked_example": "A creative group of ________ wanted to paint a beautiful mural on the brick wall.",
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_od3_u16_08",
@@ -48271,7 +49786,8 @@ const ENGLISH_DATA = {
       "target_chi": "社區；共同體",
       "target_pos": "名詞 (Noun)",
       "masked_example": "The neighbors worked side by side to build a warm ________ where everyone helped.",
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_od3_u16_09",
@@ -48327,7 +49843,8 @@ const ENGLISH_DATA = {
       "target_chi": "人群；群眾",
       "target_pos": "名詞 (Noun)",
       "masked_example": "A large ________ of smiling people filled the street like on a holiday.",
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_od3_u16_10",
@@ -48383,7 +49900,8 @@ const ENGLISH_DATA = {
       "target_chi": "超市手推車；購物車",
       "target_pos": "名詞 (Noun)",
       "masked_example": "Mrs. Anderson pushed her metal ________ along the street.",
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_od3_u16_11",
@@ -48439,7 +49957,8 @@ const ENGLISH_DATA = {
       "target_chi": "澆水 (動詞)；水 (名詞)",
       "target_pos": "動詞 (Verb) / 名詞",
       "masked_example": "Every morning Marisol went to ________ her little green sprout.",
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_od3_u16_12",
@@ -48495,7 +50014,8 @@ const ENGLISH_DATA = {
       "target_chi": "好奇的；渴望探究的",
       "target_pos": "形容詞 (Adjective)",
       "masked_example": "Marisol was very ________ about what kind of plant would grow from the seed.",
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_od3_u16_13",
@@ -48552,7 +50072,8 @@ const ENGLISH_DATA = {
       "target_pos": "動詞 (Verb) / 名詞",
       "masked_example": "Mrs. Washington said there is a time to ________ and a time to die.",
       "masked_example_chi": "Washington 太太說萬物皆有盛開之時，也有衰亡之日。",
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_od3_u16_14",
@@ -48608,7 +50129,8 @@ const ENGLISH_DATA = {
       "target_chi": "空的；空無一物的",
       "target_pos": "形容詞 (Adjective)",
       "masked_example": "Marisol was too heartbroken to look at the ________ lot where her sunflower had stood.",
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_od3_u16_15",
@@ -48664,7 +50186,8 @@ const ENGLISH_DATA = {
       "target_chi": "空置的；未被佔用的",
       "target_pos": "形容詞 (Adjective)",
       "masked_example": "The city allowed neighbors to plant flowers in the ________ lot on the corner.",
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_od3_u16_16",
@@ -48720,7 +50243,8 @@ const ENGLISH_DATA = {
       "target_chi": "不怕的；無所畏懼的",
       "target_pos": "形容詞 (Adjective)",
       "masked_example": "The brave little girl stood ________ when working hard in the soil.",
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_od3_u16_17",
@@ -48776,7 +50300,8 @@ const ENGLISH_DATA = {
       "target_chi": "成熟的；長成的",
       "target_pos": "形容詞 (Adjective)",
       "masked_example": "When the plant became ________, its yellow petals opened wide in the sun.",
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_od3_u16_18",
@@ -48817,7 +50342,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "curious about (好奇某事物) 與 interested in (對某活動有濃厚興趣) 的介系詞差異。",
         "examVariations": "常見改寫題：She wants to know about X. -> She is curious about X."
       },
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_od3_u16_19",
@@ -48858,7 +50384,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "full of (形容詞片語，接 of) vs filled with (過去分詞片語，接 with)。",
         "examVariations": "句子合併題：The basket had many beans. Mr. Singh was happy. -> Mr. Singh was proud of the basket full of beans."
       },
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_od3_u16_20",
@@ -48899,7 +50426,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "good for (對健康有益) vs good at (擅長才藝) vs good of (評價某人為人良善)。",
         "examVariations": "三合一辨析題：Apples are good for you, she is good at sports, and it is good of you to help."
       },
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_od3_u16_21",
@@ -48940,7 +50468,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "過去式描寫記敘文 (planted, watered) vs 現在式習慣描寫 (plants, waters)。",
         "examVariations": "情節問答題：Where did Marisol plant her seed? -> She planted it in a vacant lot in her neighborhood."
       },
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_od3_u16_22",
@@ -48981,7 +50510,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "so (表結果因此) 與 because (表原因因為) 在複合句中的正確邏輯連結。",
         "examVariations": "主題探討題：What does the mural represent? -> It represents everlasting happiness and community unity."
       },
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_od3_u16_23",
@@ -49020,7 +50550,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "curious about (好奇某事物) vs interested in (對某活動感興趣) 的介系詞差異。",
         "examVariations": "改寫題：She wants to know about the flower. = She is curious about the flower."
       },
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_od3_u16_24",
@@ -49059,7 +50590,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "surprised at (對特定現象吃驚) vs surprised by (受到某人或某力量震撼)。",
         "examVariations": "對話填空：The teacher was surprised at all your mistakes."
       },
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_od3_u16_25",
@@ -49098,7 +50630,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "happy with + 作品/成果 (滿意) vs happy about + 事件 (為某事開心)。",
         "examVariations": "反義對比：happy with (滿意) vs disappointed with (失望)。"
       },
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_od3_u16_26",
@@ -49137,7 +50670,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "in the ground (在泥土內部，如地瓜胡蘿蔔) vs on trees (在樹上，如果實懸掛)。",
         "examVariations": "分類題：Which crop grows in the ground? (A) Sweet potatoes (B) Apples (C) Pumpkins."
       },
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_od3_u16_27",
@@ -49176,7 +50710,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "grow on vines (長在藤蔓上) vs grow on trees (長在樹上) vs grow in pots (種在花盆裡)。",
         "examVariations": "寫作練習：Pumpkins and beans grow on vines in the community garden."
       },
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_od3_u16_28",
@@ -49215,7 +50750,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "故事結構三部曲：Beginning (開端播種), Middle (向日葵盛放與枯萎), End (向日葵壁畫誕生)。",
         "examVariations": "情節判斷題：What was Marisol's plant at the beginning? (A single mystery seed)."
       },
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_od3_u16_29",
@@ -49254,7 +50790,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "使役動詞用法：make + 受詞 + 原形動詞 (made people stop and smile)。",
         "examVariations": "明喻修辭：The flower was brighter than a yellow taxi (運用比喻描寫耀眼金黃)。"
       },
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_od3_u16_30",
@@ -49293,7 +50830,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "There is a time to bloom and a time to die (平行句結構對比盛放與凋零)。",
         "examVariations": "角色安慰對話：Mrs. Rodriguez told her to save the seeds and plant again next spring."
       },
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_od3_u16_31",
@@ -49332,7 +50870,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "vacant (強調未被租用、無建物) ⟷ empty (強調內部空無一物)。",
         "examVariations": "同義字代換：She walked to the vacant lot. = She walked to the empty lot."
       },
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_od3_u16_32",
@@ -49371,7 +50910,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "過去完成式感應：What made Marisol laugh was what she saw (名詞子句當主詞)。",
         "examVariations": "主旨題：What kept happiness in the garden? -> The mural painted by caring teenagers."
       },
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_rww6_u09_01",
@@ -49428,7 +50968,8 @@ const ENGLISH_DATA = {
       "target_chi": "冷靜的；平靜的",
       "target_pos": "形容詞 (Adjective)",
       "masked_example": "I don't know how you can be so ________, Nora, after so much time in space.",
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_rww6_u09_02",
@@ -49485,7 +51026,8 @@ const ENGLISH_DATA = {
       "target_chi": "有自信的；有信心的",
       "target_pos": "形容詞 (Adjective)",
       "masked_example": "I remember Nora being quiet, but ________ when she was little.",
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_rww6_u09_03",
@@ -49542,7 +51084,8 @@ const ENGLISH_DATA = {
       "target_chi": "友善的；親切的",
       "target_pos": "形容詞 (Adjective)",
       "masked_example": "Rayyan, you were always so ________, I don't think you can be rude.",
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_rww6_u09_04",
@@ -49599,7 +51142,8 @@ const ENGLISH_DATA = {
       "target_chi": "大膽的；敢於冒險的",
       "target_pos": "形容詞 (Adjective)",
       "masked_example": "Their ________ parents left Earth years before with a group of explorers to live on planet Regulus.",
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_rww6_u09_05",
@@ -49657,7 +51201,8 @@ const ENGLISH_DATA = {
       "target_pos": "形容詞 (Adjective)",
       "masked_example": "His twin sister, Nora, knew that Rayyan talked a lot when he was ________.",
       "masked_example_chi": "他的雙胞胎妹妹諾拉心裡明白，拉揚感到緊張時就會說個不停。",
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_rww6_u09_06",
@@ -49715,7 +51260,8 @@ const ENGLISH_DATA = {
       "target_pos": "形容詞 (Adjective)",
       "masked_example": "Sorry, I don't mean to be ________, but I don't remember you.",
       "masked_example_chi": "抱歉，我不是故意沒禮貌，但我記不得妳了。",
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_rww6_u09_07",
@@ -49773,7 +51319,8 @@ const ENGLISH_DATA = {
       "target_pos": "形容詞 (Adjective)",
       "masked_example": "Yes, I'm Rayyan, and this is Nora. She's the ________ one.",
       "masked_example_chi": "是的，我是拉揚，這是諾拉。她比較害羞。",
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_rww6_u09_08",
@@ -49830,7 +51377,8 @@ const ENGLISH_DATA = {
       "target_chi": "體貼周到的；深思熟慮的",
       "target_pos": "形容詞 (Adjective)",
       "masked_example": "Nora just smiled and looked ________ as she recognized cousin Irdina.",
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_rww6_u09_09",
@@ -49887,7 +51435,8 @@ const ENGLISH_DATA = {
       "target_chi": "外向的；開朗好社交的",
       "target_pos": "形容詞 (Adjective)",
       "masked_example": "If you're more ________, you probably like to play team sports like soccer or basketball.",
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_rww6_u09_10",
@@ -49945,7 +51494,8 @@ const ENGLISH_DATA = {
       "target_pos": "動詞 (Verb)",
       "masked_example": "If you're quiet, you may ________ an individual sport, like tennis or golf.",
       "masked_example_chi": "如果你比較安靜，你可能會偏好網球或高爾夫球等個人運動。",
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_rww6_u09_11",
@@ -50003,7 +51553,8 @@ const ENGLISH_DATA = {
       "target_pos": "形容詞 (Adjective)",
       "masked_example": "Are you usually ________ or usually laughing? How would you describe yourself?",
       "masked_example_chi": "你通常是神情嚴肅還是總是笑口常開？你會如何描述自己？",
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_rww6_u09_12",
@@ -50060,7 +51611,8 @@ const ENGLISH_DATA = {
       "target_chi": "成年人；大人",
       "target_pos": "名詞 (Noun)",
       "masked_example": "The ________ make sure they have crafts to do and games to play at the family reunion.",
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_rww6_u09_13",
@@ -50117,7 +51669,8 @@ const ENGLISH_DATA = {
       "target_chi": "個人的；單獨的",
       "target_pos": "形容詞 (Adjective)",
       "masked_example": "Tennis and golf are examples of ________ sports that you can play on your own.",
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_rww6_u09_14",
@@ -50175,7 +51728,8 @@ const ENGLISH_DATA = {
       "target_pos": "副詞 (Adverb) / 形容詞",
       "masked_example": "He talked almost ________ all morning to everyone on the shuttle.",
       "masked_example_chi": "整個早晨他在太空梭上幾乎滔滔不絕地跟每個人說話。",
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_rww6_u09_15",
@@ -50217,7 +51771,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "nervous 是形容詞，放在連綴動詞 felt 後作主詞補語；副詞 nervously 則修飾動作動詞。",
         "examVariations": "原因分析題：Why did Rayyan talk nonstop? -> Because he was very nervous."
       },
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_rww6_u09_16",
@@ -50259,7 +51814,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "I don't mean to be rude 是固定禮貌套語；若要修飾動作則用 speak rudely。",
         "examVariations": "同義句改寫：I don't want to seem impolite. -> I don't mean to be rude."
       },
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_rww6_u09_17",
@@ -50301,7 +51857,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "remember sb. being + Adj. 表示「記得某人過去總是呈現某種性格狀態」。",
         "examVariations": "細節推論題：What did Irdina think of young Nora? -> She was quiet, but confident."
       },
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_rww6_u09_18",
@@ -50343,7 +51900,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "prefer A to B 中介系詞用 to；like A better than B 中則使用比較連詞 than。",
         "examVariations": "句型轉換題：They like soccer better than tennis. -> They prefer soccer to tennis."
       },
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_rww6_u09_19",
@@ -50385,7 +51943,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "prefer doing A to doing B；would rather do A than do B (rather than 後接原形動詞)。",
         "examVariations": "平行結構改錯題：She prefers swimming to run in the park. (run -> running)"
       },
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_rww6_u09_20",
@@ -50427,7 +51986,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "It is polite to V (虛主詞客觀陳述) vs It is polite of you to V (強調某人此舉真有禮貌)。",
         "examVariations": "句子合併題：Do not speak loudly in the library. It is rude. -> It is rude to speak loudly in the library."
       },
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_rww6_u09_21",
@@ -50469,7 +52029,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "talked nonstop (分詞/副詞修飾動詞) vs was nervous (be 動詞加形容詞表心理狀態)。",
         "examVariations": "簡答題：How do we know Rayyan was nervous? -> Because he talked nonstop all morning."
       },
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_rww6_u09_22",
@@ -50511,7 +52072,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "look thoughtful (連綴動詞加形容詞) vs smile thoughtfully (一般動作動詞加副詞)。",
         "examVariations": "角色對比題：How was Nora different from Rayyan? -> Rayyan was nervous and talkative, while Nora was calm and confident."
       },
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_rww6_u09_23",
@@ -50551,7 +52113,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "prefer A to B 介系詞用 to；like A better than B 則搭配比較連詞 than。",
         "examVariations": "介系詞選填：He prefers swimming _______ running. (正解：to)"
       },
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_rww6_u09_24",
@@ -50591,7 +52154,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "mean to be rude (be 動詞後接形容詞) vs speak rudely (修飾動作動詞 speak 用副詞)。",
         "examVariations": "改錯題：I don't mean to be rudely to my classmates. (rudely -> rude)"
       },
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_rww6_u09_25",
@@ -50631,7 +52195,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "He is friendly (他天生親切，恆常特質) vs He is being friendly (他此刻刻意表現親切)。",
         "examVariations": "語意辨析題：Why are you _______ so silly today? (正解：being)"
       },
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_rww6_u09_26",
@@ -50671,7 +52236,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "It is rude to interrupt (虛主詞句型) = Interrupting people is rude (動名詞當主詞)。",
         "examVariations": "虛主詞轉換題：Interrupting the speaker is rude. -> It is rude _______ the speaker. (to interrupt)"
       },
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_rww6_u09_27",
@@ -50711,7 +52277,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "此處 to 是介系詞，後接名詞或 V-ing；不同於不定詞 to + 原形動詞。",
         "examVariations": "平行結構改錯：He prefers playing tennis to watch television. (watch -> watching)"
       },
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_rww6_u09_28",
@@ -50751,7 +52318,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "talked nonstop 是外在行為線索 (Actions)；felt nervous 是內心情感 (Feelings)。",
         "examVariations": "細節是非題：Did Rayyan talk a lot because he was bored? (No, because he was nervous.)"
       },
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_rww6_u09_29",
@@ -50791,7 +52359,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "years before 用於過去完成背景敘述；planet Regulus 為同位語專有名詞。",
         "examVariations": "背景細節題：Where did the twins grow up? -> On the planet Regulus."
       },
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_rww6_u09_30",
@@ -50831,7 +52400,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "quiet, but confident 中，對等連接詞 but 形成強烈的正面性格反襯。",
         "examVariations": "角色對比題：Who remembered cousin Irdina first? -> Nora did."
       },
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_rww6_u09_31",
@@ -50871,7 +52441,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "say a lot about (充分說明) vs tell us little about (幾乎無法說明任何事)。",
         "examVariations": "主旨歸納題：What is the main idea of Personalities and Sports? (Sports show our personality.)"
       },
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_rww6_u09_32",
@@ -50911,7 +52482,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "make sure + that 子句 (確保某事發生)；so that + 子句 (以便、好讓)。",
         "examVariations": "細節填空題：The adults plan activities so the kids don't get _______. (bored)"
       },
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_space_ch06_01",
@@ -50967,7 +52539,8 @@ const ENGLISH_DATA = {
       "target_chi": "運河；人工水道",
       "target_pos": "名詞 (Noun)",
       "masked_example": "Early astronomers thought they saw lines on Mars and believed they were great ________ built by aliens.",
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_space_ch06_02",
@@ -51023,7 +52596,8 @@ const ENGLISH_DATA = {
       "target_chi": "火星人；火星的",
       "target_pos": "名詞 (Noun) / 形容詞",
       "masked_example": "People wrote stories and made exciting movies about aliens from Mars called ________ visiting Earth.",
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_space_ch06_03",
@@ -51079,7 +52653,8 @@ const ENGLISH_DATA = {
       "target_chi": "細菌 (複數)",
       "target_pos": "名詞 (Noun, 複數)",
       "masked_example": "________ are simple living things on Earth, and they can live even inside solid rocks.",
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_space_ch06_04",
@@ -51135,7 +52710,8 @@ const ENGLISH_DATA = {
       "target_chi": "地下的；在地底",
       "target_pos": "形容詞 (Adjective) / 副詞",
       "masked_example": "Scientists think that there might be liquid water in the soil or even in ________ rivers on Mars.",
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_space_ch06_05",
@@ -51191,7 +52767,8 @@ const ENGLISH_DATA = {
       "target_chi": "液態的；液體",
       "target_pos": "形容詞 (Adjective) / 名詞",
       "masked_example": "When scientists look for life on other planets, they always look for places that have ________ water.",
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_space_ch06_06",
@@ -51247,7 +52824,8 @@ const ENGLISH_DATA = {
       "target_chi": "大氣層；大氣",
       "target_pos": "名詞 (Noun)",
       "masked_example": "Saturn's largest moon, Titan, is the only moon in our solar system with a thick ________.",
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_space_ch06_07",
@@ -51303,7 +52881,8 @@ const ENGLISH_DATA = {
       "target_chi": "碳氫化合物 (複數)",
       "target_pos": "名詞 (Noun, 複數)",
       "masked_example": "The rivers, lakes, and clouds on Saturn's moon Titan are made of chemicals called ________.",
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_space_ch06_08",
@@ -51359,7 +52938,8 @@ const ENGLISH_DATA = {
       "target_chi": "外星人；外來的",
       "target_pos": "名詞 (Noun) / 形容詞",
       "masked_example": "In science fiction stories, ________ are intelligent living things visiting us from another world.",
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_space_ch06_09",
@@ -51415,7 +52995,8 @@ const ENGLISH_DATA = {
       "target_chi": "幽浮；不明飛行物體 (單數縮寫)",
       "target_pos": "名詞 (Noun, 縮寫)",
       "masked_example": "Sometimes people see unusual flying objects in the sky called ________, but they are usually weather balloons.",
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_space_ch06_10",
@@ -51471,7 +53052,8 @@ const ENGLISH_DATA = {
       "target_chi": "想像；設想",
       "target_pos": "動詞 (Verb)",
       "masked_example": "Early astronomers could only ________ aliens building cities and canals across the red planet.",
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_space_ch06_11",
@@ -51527,7 +53109,8 @@ const ENGLISH_DATA = {
       "target_chi": "天文學家",
       "target_pos": "名詞 (Noun)",
       "masked_example": "An ________ uses powerful optical and space telescopes to observe distant stars and planets.",
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_space_ch06_12",
@@ -51583,7 +53166,8 @@ const ENGLISH_DATA = {
       "target_chi": "宇宙；萬物天地",
       "target_pos": "名詞 (Noun)",
       "masked_example": "Scientists believe there are billions of galaxies and millions of Earth-like planets in the ________.",
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_space_ch06_13",
@@ -51639,7 +53223,8 @@ const ENGLISH_DATA = {
       "target_chi": "星系；銀河系",
       "target_pos": "名詞 (Noun)",
       "masked_example": "Our solar system is just a tiny part of a massive spiral system of stars called the Milky Way ________.",
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_space_ch06_14",
@@ -51695,7 +53280,8 @@ const ENGLISH_DATA = {
       "target_chi": "太空船；太空探測載具",
       "target_pos": "名詞 (Noun, 單複數同形)",
       "masked_example": "Some people thought the glowing lights were alien ________, but they were actually high-altitude balloons.",
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_space_ch06_15",
@@ -51765,7 +53351,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "essential to/for + N；because 引導副詞子句修飾主要子句形容詞原因。",
         "examVariations": "問答題變形：What do astrobiologists search for first when exploring planets? -> Liquid water."
       },
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_space_ch06_16",
@@ -51806,7 +53393,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "the area where + S + V (where 作關係副詞表地點，子句內部結構完整)。",
         "examVariations": "名詞解釋題：Explain why Earth is in the habitable zone while Venus and Mars are not."
       },
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_space_ch06_17",
@@ -51867,7 +53455,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "show that + S + V (that 引導名詞子句陳述科學客觀事實或歷史推論)。",
         "examVariations": "閱讀理解改寫：What geological clues prove that Mars was once a wet planet?"
       },
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_space_ch06_18",
@@ -51932,7 +53521,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "it is warmer inside (內部比較級形容詞作補語)；under the ice (介系詞片語作位置狀語)。",
         "examVariations": "是非推論題：True or False: Europa has liquid oceans on its outer surface. (False)"
       },
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_space_ch06_19",
@@ -51973,7 +53563,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "by doing sth 表手段方法；in doing sth 表在...過程中；with + 工具名詞。",
         "examVariations": "寫作句型應用：How can robots assist scientists in extreme environments?"
       },
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_space_ch06_20",
@@ -52014,7 +53605,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "It is + Adj + to V + because... 結合虛主詞與因果從屬子句，為學術寫作經典句型。",
         "examVariations": "閱讀問答題：Why do astronomers need space telescopes to detect Earth-like exoplanets?"
       },
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_space_ch06_21",
@@ -52084,7 +53676,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "Perhaps there is... (副詞推測) vs S + might/could + V (助動詞推論)。",
         "examVariations": "句型轉換題：Perhaps alien life exists on Europa. -> Alien life might exist on Europa."
       },
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_space_ch06_22",
@@ -52149,7 +53742,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "too + Adj + to + V = so + Adj + that + cannot + V (兩大因果否定經典句型互換)。",
         "examVariations": "段考句型改寫：Venus is so hot that it cannot have liquid oceans. -> Venus is too hot to have liquid oceans."
       },
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_space_ch06_23",
@@ -52217,7 +53811,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "there is (客觀確定事實) vs there could/might be (基於數據的科學推測)。",
         "examVariations": "時態選擇題：Astronomers think that there (could be) life in subterranean oceans."
       },
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_space_ch06_24",
@@ -52285,7 +53880,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "too cold to maintain = so cold that it cannot maintain (否定因果轉換)。",
         "examVariations": "非選擇改寫：The lake was too frozen to sail. = The lake was so frozen that boats could not sail."
       },
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_space_ch06_25",
@@ -52324,7 +53920,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "so + Adj + that... 對比 such + a/an + Adj + N + that... 的名詞搭配差異。",
         "examVariations": "克漏字填空：The planet was (so) faint that ordinary equipment could not detect it."
       },
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_space_ch06_26",
@@ -52363,7 +53960,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "be covered in ice (強調厚重包覆沉浸) vs be covered with dust (表面沾染)。",
         "examVariations": "介系詞克漏字：The northern polar cap of Mars is covered (in) frozen carbon dioxide."
       },
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_space_ch06_27",
@@ -52426,7 +54024,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "chemicals that are called hydrocarbons 簡化為 chemicals called hydrocarbons。",
         "examVariations": "句子改寫：Astronomers observed mysterious flying objects (called) UFOs in the sky."
       },
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_space_ch06_28",
@@ -52465,7 +54064,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "with atmosphere 作介系詞片語修飾 moon，表「附帶有、具備某特徵」。",
         "examVariations": "閱讀是非題：Titan is unique because it is the only moon in the solar system with atmosphere. (True)"
       },
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_space_ch06_29",
@@ -52504,7 +54104,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "needs + N1, N2, and N3 (名詞對稱並列結構，最後一項前加 and)。",
         "examVariations": "多選配合題：Which of the following is NOT an essential requirement for Earth life? -> Gold."
       },
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_space_ch06_30",
@@ -52563,7 +54164,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "imagine + O + V-ing：astronomers imagined aliens building canals。",
         "examVariations": "閱讀問答：What famous Earth canal inspired the idea of Martian waterways? -> The Panama Canal."
       },
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_space_ch06_31",
@@ -52602,7 +54204,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "warmer inside 表示內部溫度比較級；under the ice 表示冰層下方的垂直空間關係。",
         "examVariations": "推理選擇題：What makes Europa attractive to astrobiologists? -> The presence of subsurface liquid water."
       },
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_space_ch06_32",
@@ -52641,7 +54244,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "things like + N1 or N2 (介系詞 like 表舉例說明，後接名詞對稱)。",
         "examVariations": "閱讀是非題：Most reported UFOs are confirmed to be alien spacecraft. -> False (usually balloons or comets)."
       },
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_space_ch06_33",
@@ -52717,7 +54321,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "there（地方副詞，代替 on Mars）vs its surface（所有格，代替 Mars's surface）。",
         "examVariations": "問答變體：Why was it difficult for astronomers 100 years ago to see Mars clearly?"
       },
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_space_ch06_34",
@@ -52804,7 +54409,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "there isn't any water（沒有任何液態水）vs there aren't any Martians（複數可數用 aren't）。",
         "examVariations": "改錯練習：Because there aren't any water on the Mars, it only have ice."
       },
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_space_ch06_35",
@@ -52884,7 +54490,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "beneath its surface（在地表之下，介系詞片語）= underground（地下的/在地底）。",
         "examVariations": "推論對比題：Why might bacteria survive underground on Mars even though the surface is frozen?"
       },
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_space_ch06_36",
@@ -52964,7 +54571,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "find bacteria first（泛指細菌）vs the bacteria in the lab（特指實驗室裡的那些細菌）。",
         "examVariations": "是非與改錯：Scientists expect to find intelligent human-like aliens before bacteria. (False)"
       },
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_space_ch06_37",
@@ -53045,7 +54653,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "might live in them（in them 指代前文的 oceans）= might live there（地方副詞）。",
         "examVariations": "比較問答：Compare why Titan and Europa are both exciting targets in the search for life."
       },
-      "is_week13": false
+      "is_week13": false,
+      "is_week14": false
     },
     {
       "id": "q_w12_wr3_u06_01",
@@ -53102,7 +54711,8 @@ const ENGLISH_DATA = {
       "target_pos": "名詞 (Noun)",
       "masked_example": "Thomas Edison was an ________ from the United States.",
       "masked_example_chi": "湯瑪斯·愛迪生是一位來自美國的發明家。",
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": false
     },
     {
       "id": "q_w12_wr3_u06_02",
@@ -53159,7 +54769,8 @@ const ENGLISH_DATA = {
       "target_pos": "名詞 (Noun)",
       "masked_example": "Wolfgang Amadeus Mozart was a ________ from Austria.",
       "masked_example_chi": "沃夫岡·阿瑪迪斯·莫札特是一位來自奧地利的作曲家。",
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": false
     },
     {
       "id": "q_w12_wr3_u06_03",
@@ -53216,7 +54827,8 @@ const ENGLISH_DATA = {
       "target_pos": "名詞 (Noun)",
       "masked_example": "Isaac Newton was a ________ from England.",
       "masked_example_chi": "艾薩克·牛頓是一位來自英國的科學家。",
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": false
     },
     {
       "id": "q_w12_wr3_u06_04",
@@ -53273,7 +54885,8 @@ const ENGLISH_DATA = {
       "target_pos": "名詞片語 (Noun Phrase)",
       "masked_example": "Mohandas Gandhi was a ________ from India.",
       "masked_example_chi": "莫罕達斯·甘地是一位來自印度的政治領袖。",
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": false
     },
     {
       "id": "q_w12_wr3_u06_05",
@@ -53330,7 +54943,8 @@ const ENGLISH_DATA = {
       "target_pos": "名詞 (Noun)",
       "masked_example": "A ________ is someone who teaches the meaning of life.",
       "masked_example_chi": "哲學家是教導人們生命意義的人。",
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": false
     },
     {
       "id": "q_w12_wr3_u06_06",
@@ -53387,7 +55001,8 @@ const ENGLISH_DATA = {
       "target_pos": "動詞 (Verb)",
       "masked_example": "The person I ________ the most is Thomas Edison.",
       "masked_example_chi": "我最欽佩的人是湯瑪斯·愛迪生。",
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": false
     },
     {
       "id": "q_w12_wr3_u06_07",
@@ -53444,7 +55059,8 @@ const ENGLISH_DATA = {
       "target_pos": "名詞 (Noun)",
       "masked_example": "Isaac Newton made many important scientific ________.",
       "masked_example_chi": "艾薩克·牛頓做出了許多重要的科學發現。",
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": false
     },
     {
       "id": "q_w12_wr3_u06_08",
@@ -53501,7 +55117,8 @@ const ENGLISH_DATA = {
       "target_pos": "名詞 (Noun)",
       "masked_example": "His most famous ________ is the Fifth Symphony.",
       "masked_example_chi": "他最著名的音樂作品是《第五號交響曲》。",
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": false
     },
     {
       "id": "q_w12_wr3_u06_09",
@@ -53558,7 +55175,8 @@ const ENGLISH_DATA = {
       "target_pos": "名詞 (Noun)",
       "masked_example": "His most famous ________ is helping India become free.",
       "masked_example_chi": "他最著名的功績是協助印度贏得自由與獨立。",
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": false
     },
     {
       "id": "q_w12_wr3_u06_10",
@@ -53615,7 +55233,8 @@ const ENGLISH_DATA = {
       "target_pos": "名詞 (Noun)",
       "masked_example": "Helen Keller overcame her ________ and inspired the world.",
       "masked_example_chi": "海倫·凱勒克服了自身的身體障礙，並激勵了全世界。",
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": false
     },
     {
       "id": "q_w12_wr3_u06_11",
@@ -53672,7 +55291,8 @@ const ENGLISH_DATA = {
       "target_pos": "名詞 (Noun)",
       "masked_example": "Thanks to Newton, we understand ________ better.",
       "masked_example_chi": "多虧了牛頓，我們才能更深入理解地心引力。",
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": false
     },
     {
       "id": "q_w12_wr3_u06_12",
@@ -53729,7 +55349,8 @@ const ENGLISH_DATA = {
       "target_pos": "名詞 (Noun)",
       "masked_example": "Beethoven composed the famous Fifth ________.",
       "masked_example_chi": "貝多芬創作了著名的《第五號交響曲》。",
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": false
     },
     {
       "id": "q_w12_wr3_u06_13",
@@ -53786,7 +55407,8 @@ const ENGLISH_DATA = {
       "target_pos": "動詞片語 (Phrasal Verb)",
       "masked_example": "He became successful because he never ________ on his dreams.",
       "masked_example_chi": "他之所以成功，是因為他從未放棄過自己的夢想。",
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": false
     },
     {
       "id": "q_w12_wr3_u06_14",
@@ -53843,7 +55465,8 @@ const ENGLISH_DATA = {
       "target_pos": "名詞 (Noun)",
       "masked_example": "Transition words show ________ and connect ideas logically.",
       "masked_example_chi": "因果轉折詞能展現因果影響並將不同觀點合乎邏輯地串聯起來。",
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": false
     },
     {
       "id": "q_w12_wr3_u06_15",
@@ -53933,7 +55556,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "was born on + 具體日期 (on July 4th) vs was born in + 純年份或純月份 (in 1847, in February)。",
         "examVariations": "仿寫練習：Isaac Newton was born on January 4, 1643, in Woolsthorpe, England."
       },
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": false
     },
     {
       "id": "q_w12_wr3_u06_16",
@@ -54023,7 +55647,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "famous for + 成就/作品 (因...聞名) vs famous as + 身分職業 (以...身分聞名，如 famous as an inventor)。",
         "examVariations": "身分與成就對比：He was famous as a scientist, and was famous for discovering gravity."
       },
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": false
     },
     {
       "id": "q_w12_wr3_u06_17",
@@ -54103,7 +55728,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "one of the + 複數名詞 (one of the greatest composers)；主詞若為 One of the composers，動詞則用單數 was。",
         "examVariations": "克漏字改錯：Thomas Edison was one of the greatest (inventor / inventors) in the world."
       },
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": false
     },
     {
       "id": "q_w12_wr3_u06_18",
@@ -54194,7 +55820,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "at the age of eight = when he was eight years old = at age eight。",
         "examVariations": "句型轉換：Mozart wrote his first symphony when he was only eight years old."
       },
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": false
     },
     {
       "id": "q_w12_wr3_u06_19",
@@ -54274,7 +55901,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "Thanks to 接名詞片語 (Thanks to Anne Sullivan)；Because 接完整主從子句 (Because Anne Sullivan taught her patiently)。",
         "examVariations": "課文原句比對：Thanks to Keller, disabled people have more hope."
       },
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": false
     },
     {
       "id": "q_w12_wr3_u06_20",
@@ -54350,7 +55978,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "前半句描述過去歷史事實用過去式 were famous for；後半句描述今日現代世界事實用現在式 people can travel。",
         "examVariations": "發明家事蹟配對：Thanks to the Wright brothers, modern air travel is fast and convenient."
       },
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": false
     },
     {
       "id": "q_w12_wr3_u06_21",
@@ -54430,7 +56059,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "bear (生小孩，現在式) - bore (過去式) - born (過去分詞，專用於出生 be born) - borne (負擔/承受之過去分詞)。",
         "examVariations": "選擇題題型：Thomas Edison _______ in Ohio in 1847. (A) born (B) was born (C) is born (D) has born (正解：B)"
       },
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": false
     },
     {
       "id": "q_w12_wr3_u06_22",
@@ -54519,7 +56149,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "in 1756 (年份) vs in January (月份) vs on January 27, 1756 (具體完整月日)。",
         "examVariations": "文法改錯：The great composer died on 1791 at age 35. (on -> in)"
       },
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": false
     },
     {
       "id": "q_w12_wr3_u06_23",
@@ -54560,7 +56191,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "one of the greatest scientists (名詞用複數)；但若作為主詞：One of the greatest scientists was Newton (動詞用單數 was)。",
         "examVariations": "填空題：Helen Keller is one of the most famous (writer / writers) in the world. (正解：writers)"
       },
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": false
     },
     {
       "id": "q_w12_wr3_u06_24",
@@ -54635,7 +56267,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "I admire (我現在欽佩) + because he never gave up (他過去奮鬥從不放棄)。",
         "examVariations": "類似句型改錯：I admire Keller because she never complain about her disabilities. (complain -> complained)"
       },
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": false
     },
     {
       "id": "q_w12_wr3_u06_25",
@@ -54722,7 +56355,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "Thanks to + N (正面感激歸功) vs Because of + N (中性因果說明)。",
         "examVariations": "選詞填空：_______ Isaac Newton, we understand gravity better. (正解：Thanks to)"
       },
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": false
     },
     {
       "id": "q_w12_wr3_u06_26",
@@ -54805,7 +56439,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "His most famous invention is... (單數) vs His most famous inventions are... (複數)。",
         "examVariations": "句型代換：His most famous composition _______ the Fifth Symphony. (正解：is)"
       },
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": false
     },
     {
       "id": "q_w12_wr3_u06_27",
@@ -54892,7 +56527,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "one of the greatest inventors (複數名詞)；但若作主詞 One of the greatest inventors was Edison (單數動詞)。",
         "examVariations": "改錯題：Isaac Newton was one of the greatest scientist in history. (scientist -> scientists)"
       },
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": false
     },
     {
       "id": "q_w12_wr3_u06_28",
@@ -54975,7 +56611,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "For these reasons (副詞性轉折片語，後接完整句子) vs Because of these reasons (介系詞片語)。",
         "examVariations": "寫作提示：Transition words like \"therefore\" and \"for these reasons\" show consequence."
       },
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": false
     },
     {
       "id": "q_w12_wr3_u06_29",
@@ -55014,7 +56651,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "never gave up on (從不放棄，接受詞 dreams) vs failed many times (失敗多次，不及物動詞)。",
         "examVariations": "閱讀問答：Why does Ella admire Thomas Edison most of all?"
       },
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": false
     },
     {
       "id": "q_w12_wr3_u06_30",
@@ -55053,7 +56691,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "the theory of gravity (名詞片語) vs understand gravity better (動詞修飾比較級副詞)。",
         "examVariations": "人物事蹟配對：Match Isaac Newton with \"discovered gravity and formulated laws of motion\"."
       },
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": false
     },
     {
       "id": "q_w12_wr3_u06_31",
@@ -55092,7 +56731,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "overcame her disabilities (克服障礙，過去式) vs never complained about (從不抱怨)。",
         "examVariations": "閱讀問答：How did Helen Keller help people with disabilities around the world?"
       },
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": false
     },
     {
       "id": "q_w12_wr3_u06_32",
@@ -55131,7 +56771,8 @@ const ENGLISH_DATA = {
         "grammarCompare": "Introduction (引出人物) -> Body (生平成就與欽佩原因) -> Conclusion (因果總結評價)。",
         "examVariations": "寫作步驟排序：Organize a biography: 1. Introduce admired person 2. Explain deeds 3. Conclude with reasons."
       },
-      "is_week13": true
+      "is_week13": true,
+      "is_week14": false
     },
     {
       "id": "q_w13_wr3_u06_33",
@@ -55223,7 +56864,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "單一國名零冠詞 (from Italy / England / Austria) vs 聯合複數國名 (from the United States)。",
         "examVariations": "換角仿寫：將 Outline 換成 Galileo Galilei from Italy，同樣檢查 from Italy 不加 the 與 made/was 過去式。"
-      }
+      },
+      "is_week14": false
     },
     {
       "id": "q_w13_wr3_u06_34",
@@ -55301,7 +56943,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "made scientific discoveries (發現本已存在之自然律) vs invented new machines (發明創造新裝置)。",
         "examVariations": "句型擴充：寫作時可額外加入 He was one of the greatest scientists in history. 強化主體段評價。"
-      }
+      },
+      "is_week14": false
     },
     {
       "id": "q_w13_wr3_u06_35",
@@ -55394,7 +57037,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "study -> studied (子音 + y 去 y 加 ied) vs compose -> composed (字尾 e 直接加 d)。",
         "examVariations": "轉折詞替換：結論句首的 For these reasons, 可換寫為 Therefore, 或 As a result,。"
-      }
+      },
+      "is_week14": false
     },
     {
       "id": "q_w13_wr3_u06_36",
@@ -55487,7 +57131,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "be curious about sth (對……感到好奇) vs complain about sth (抱怨某事)，兩者皆搭配介系詞 about。",
         "examVariations": "出題預判：老師常把上週學生寫作卷最常錯的 12–14 個句子拼成一篇短文作為次週 Proofreading 考題。"
-      }
+      },
+      "is_week14": false
     },
     {
       "id": "q_w13_wr3_u06_37",
@@ -55566,7 +57211,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "單一國名 (Italy, England, Austria, India) 零冠詞 vs 複數/聯合政體國名 (the United States, the Philippines) 必加 the。",
         "examVariations": "考前口訣測驗：比較 \"an artist from Italy\" 與 \"an inventor from the United States\" 的兩處冠詞規則。"
-      }
+      },
+      "is_week14": false
     },
     {
       "id": "q_w13_rww6_u06_01",
@@ -55685,7 +57331,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "Instead of + 名詞 (directions) 與 Instead of + 動名詞 (running) 在同一句中平行對稱出現。",
         "examVariations": "3C Dictation 教師不唸任何標點符號，須靠停頓判斷逗號、雙引號與驚嘆號。"
-      }
+      },
+      "is_week14": false
     },
     {
       "id": "q_w13_rww6_u06_02",
@@ -55792,7 +57439,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "stations, which are called controls (指複數 stations) vs. ..., which means (指代整件事情，動詞用單數 means)。",
         "examVariations": "3C 聽寫常單獨抽考此段作為括號標點與關係子句盲聽評量。"
-      }
+      },
+      "is_week14": false
     },
     {
       "id": "q_w13_rww6_u06_03",
@@ -55871,7 +57519,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "If someone misses a control (現在式條件) + they won't have... (未來必然結果)。",
         "examVariations": "除聽寫外，第 4 句常改編為閱讀測驗勝負判斷選擇題或問答簡答題。"
-      }
+      },
+      "is_week14": false
     },
     {
       "id": "q_w13_rww6_u06_04",
@@ -55944,7 +57593,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "need to cross (動詞) vs. likely run along / climb over / go up and down (三個平行原形動詞片語共用 will)。",
         "examVariations": "此段常與第 3 段合併進行整頁總複習盲聽，並衍生空間介系詞填空題。"
-      }
+      },
+      "is_week14": false
     },
     {
       "id": "q_w13_rww6_u06_05",
@@ -56071,7 +57721,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "前段以條件與轉折邏輯為主 (because / If / but)；後段以對比空間介系詞片語為主 (along / over / up and down)。",
         "examVariations": "比照 Week 5 Page 7 考券，老師常挑選連續兩段全文進行 25 分高比重聽寫測驗。"
-      }
+      },
+      "is_week14": false
     },
     {
       "id": "q_w13_rww6_u06_06",
@@ -56137,7 +57788,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "單數 a compass；複數 their maps and compasses（以 s 結尾加 -es）。",
         "examVariations": "聽寫測驗、圖片配對題及手寫短文改錯高頻必考字。"
-      }
+      },
+      "is_week14": false
     },
     {
       "id": "q_w13_rww6_u06_07",
@@ -56203,7 +57855,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "in the direction of (朝著…方向，單數) vs. ask for directions (詢問怎麼走，複數)。",
         "examVariations": "句子改錯題與聽寫題必考此字的複數變化形式。"
-      }
+      },
+      "is_week14": false
     },
     {
       "id": "q_w13_rww6_u06_08",
@@ -56269,7 +57922,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "orienteering 作主詞視為單數運動名稱，後方接單數動詞 is / makes / requires。",
         "examVariations": "任何本課段落聽寫必出現至少 2 次的核心高頻長單字。"
-      }
+      },
+      "is_week14": false
     },
     {
       "id": "q_w13_rww6_u06_09",
@@ -56335,7 +57989,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "each control (單數) vs. all the controls (複數)；miss a control (漏掉一個檢查點)。",
         "examVariations": "克漏字常搭配 Figure 1 (control flag) 與 Figure 2 (control card) 複合出題。"
-      }
+      },
+      "is_week14": false
     },
     {
       "id": "q_w13_rww6_u06_10",
@@ -56401,7 +58056,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "standing on a corner（戶外街角）vs. sitting in the corner of the room（室內房間角落）。",
         "examVariations": "Context Clues 單選題常考 corner = a place where two roads meet。"
-      }
+      },
+      "is_week14": false
     },
     {
       "id": "q_w13_rww6_u06_11",
@@ -56468,7 +58124,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "The desk is made of wood (不可數材料) vs. Racers run in the woods (複數指樹林)。",
         "examVariations": "克漏字常與 forest 作同義替換，或考單複數名詞辨析。"
-      }
+      },
+      "is_week14": false
     },
     {
       "id": "q_w13_rww6_u06_12",
@@ -56534,7 +58191,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "a visual (可數名詞：一張視覺圖表) vs. visual details (形容詞：視覺的細節)。",
         "examVariations": "Get Ready 必考是非題與閱讀理解策略題主關鍵字。"
-      }
+      },
+      "is_week14": false
     },
     {
       "id": "q_w13_rww6_u06_13",
@@ -56600,7 +58258,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "cross the finish line (動詞 cross) vs. finish the race (動詞 finish)。",
         "examVariations": "第 3 與第 4 段雙段共現高頻詞，亦是勝負陷阱題核心關鍵字。"
-      }
+      },
+      "is_week14": false
     },
     {
       "id": "q_w13_rww6_u06_14",
@@ -56667,7 +58326,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "be across the street from (靜態在對面) vs. cross the street (動作過馬路)。",
         "examVariations": "Get Ready 與 Context Clues 常考此片語與 on the other side 同義配對。"
-      }
+      },
+      "is_week14": false
     },
     {
       "id": "q_w13_rww6_u06_15",
@@ -56734,7 +58394,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "in front of the rock (岩石外部前方) vs. in the front of the car (汽車內部前座)。",
         "examVariations": "空間位置配對題與短文聽寫必考三字片語。"
-      }
+      },
+      "is_week14": false
     },
     {
       "id": "q_w13_rww6_u06_16",
@@ -56801,7 +58462,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "run along a river (順河岸跑) vs. swim across a river (橫渡河流)。",
         "examVariations": "地形介系詞四選一與第 4 段聽寫高頻必考片語。"
-      }
+      },
+      "is_week14": false
     },
     {
       "id": "q_w13_rww6_u06_17",
@@ -56868,7 +58530,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "climb over (越過障礙到達另一側) vs. climb up (向上攀登至高處)。",
         "examVariations": "第 4 段段落聽寫與地形片語配對常考項目。"
-      }
+      },
+      "is_week14": false
     },
     {
       "id": "q_w13_rww6_u06_18",
@@ -56922,7 +58585,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "in order to + V 與 to + V 皆表達「為了…」的目的。",
         "examVariations": "課本是非題常改寫成 You must finish first to win an orienteering event. (False!)"
-      }
+      },
+      "is_week14": false
     },
     {
       "id": "q_w13_rww6_u06_19",
@@ -57003,7 +58667,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "might cross ... first（讓步事實）+ , but ... will win（真正結果）。",
         "examVariations": "段考素養情境題常加入具體站號（如 missed Control #7）考勝負判斷。"
-      }
+      },
+      "is_week14": false
     },
     {
       "id": "q_w13_rww6_u06_20",
@@ -57100,7 +58765,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "If + S + V(s/es), S + won't + V（條件結果）vs. Because ..., S + V（不可與 so 並用）。",
         "examVariations": "3C Reading Comprehension 常出 2~3 分簡答題：Explain why the first runner didn't win."
-      }
+      },
+      "is_week14": false
     },
     {
       "id": "q_w13_rww6_u06_21",
@@ -57154,7 +58820,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "provide information that is not in a text（關係代名詞 that 引導形容詞子句修飾 information）。",
         "examVariations": "Get Ready 是非題原題：A visual gives the same information that is in a text. (False)"
-      }
+      },
+      "is_week14": false
     },
     {
       "id": "q_w13_rww6_u06_22",
@@ -57242,7 +58909,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "rather than（而不是）連接兩個對比片語：from the visuals rather than the written text。",
         "examVariations": "亦常結合 Treasure Hunt 短文插圖（盒子寫 COOKIES）考「如何知道寶藏是餅乾」。"
-      }
+      },
+      "is_week14": false
     },
     {
       "id": "q_w13_rww6_u06_23",
@@ -57296,7 +58964,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "while 在此當對比連接詞（然而；與此同時），比較 text 與 visual 各自貢獻的資訊。",
         "examVariations": "KET / Flyers 閱讀理解極愛在圖文配對題中將關鍵答案放在插圖招牌或盒子標籤上。"
-      }
+      },
+      "is_week14": false
     },
     {
       "id": "q_w13_rww6_u06_24",
@@ -57351,7 +59020,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "will be across the street from (介系詞狀態) vs. need to cross the street (動詞動作)。",
         "examVariations": "Context Clues 亦常考 across the street from = on the other side。"
-      }
+      },
+      "is_week14": false
     },
     {
       "id": "q_w13_rww6_u06_25",
@@ -57451,7 +59121,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "climb over (從上方翻越) vs. go up and down (在高低地形間上下穿梭)。",
         "examVariations": "三格連動填空題是私立中學入學考與 3C 段考最愛出的綜合文法題型。"
-      }
+      },
+      "is_week14": false
     },
     {
       "id": "q_w13_rww6_u06_26",
@@ -57543,7 +59214,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "have to + 原形 V1, 原形 V2, and 原形 V3（三個動作共享同一個情態助動詞結構）。",
         "examVariations": "Topic 3 Check & Write 寫作實戰（步驟說明文或尋寶指南）常須運用此類並列動作句。"
-      }
+      },
+      "is_week14": false
     },
     {
       "id": "q_w13_rww6_u06_27",
@@ -57622,7 +59294,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "stations, which are called controls (補充說明名詞定義) vs. stations that are near the river (限定篩選)。",
         "examVariations": "國一銜接必考「, which vs. , that」辨析單選題與改錯題。"
-      }
+      },
+      "is_week14": false
     },
     {
       "id": "q_w13_rww6_u06_28",
@@ -57677,7 +59350,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "trees, which grow tall (which 指複數 trees ➔ 複數動詞 grow) vs. hidden behind trees, which means... (which 指整句事 ➔ 單數動詞 means)。",
         "examVariations": "升私中與國一先修高頻魔王選擇題（4 句找正確句）。"
-      }
+      },
+      "is_week14": false
     },
     {
       "id": "q_w13_rww6_u06_29",
@@ -57766,7 +59440,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "獨立兩句 (. This means) vs. 複合長句 (, which means)。",
         "examVariations": "3C 考券 Sentence Combining 大題常考兩句合併為關係子句。"
-      }
+      },
+      "is_week14": false
     },
     {
       "id": "q_w13_rww6_u06_30",
@@ -57820,7 +59495,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "where two roads meet（關係副詞 where 引導形容詞子句修飾 a place）。",
         "examVariations": "課本 Understand Part D Context Clues 第 1 題自足式改編題。"
-      }
+      },
+      "is_week14": false
     },
     {
       "id": "q_w13_rww6_u06_31",
@@ -57874,7 +59550,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "go + 距離片語 (two blocks) + 方位副詞 (north) 中間不加介系詞。",
         "examVariations": "課本 Understand Part D Context Clues 第 2 題自足式改編題。"
-      }
+      },
+      "is_week14": false
     },
     {
       "id": "q_w13_rww6_u06_32",
@@ -57957,7 +59634,8 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "(see Figure 1). 為句尾附註括號，屬於前句一部分；若獨立成句括號才將句點置內。",
         "examVariations": "亦可用於檢查 \"Treasure Hunt\" 引述語句點：\"...walk east for 50 steps.\""
-      }
+      },
+      "is_week14": false
     },
     {
       "id": "q_w13_rww6_u06_33",
@@ -58055,6 +59733,7824 @@ const ENGLISH_DATA = {
         ],
         "grammarCompare": "said, \"Start...\"（直接引述，句首大寫加雙引號）vs. told us to \"go...\"（融入不定詞片語時首字母小寫）。",
         "examVariations": "Write Right / RWW6 Topic 3 寫作實戰必考「設計三步尋寶指示」。"
+      },
+      "is_week14": false
+    },
+    {
+      "id": "q_w14_od3_u17_01",
+      "book_id": "od3",
+      "unit_id": "od3_17",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★☆☆☆☆",
+      "question": "Listen to the pronunciation and sentence: \"The sky is blue, and the white ________ are floating gently above the ships.\" Spell the target word for \"雲朵（複數）\".",
+      "target_chi": "雲朵（複數）",
+      "target_pos": "名詞 (Noun，複數)",
+      "masked_example": "The sky is blue, and the white ________ are floating gently above the ships.",
+      "masked_example_chi": "天空湛藍，白色的________正輕輕飄浮在船隻上方。",
+      "options": [],
+      "answer": "clouds",
+      "self_check": [
+        "1. 開頭輔音叢是否拼成 cl-（而非 crowds 的 cr-）？",
+        "2. 雙母音 /aʊ/ 是否拼成 ou（而非 ow）？",
+        "3. 題幹提示為複數（are floating），字尾是否加上了 -s？"
+      ],
+      "trapCodes": [
+        "ENG_SPELLING_PHONICS"
+      ],
+      "triadGroup": {
+        "groupId": "OD3_U17_V1",
+        "tier": "L1-3",
+        "role": "foundation"
+      },
+      "vocab_card": {
+        "word": "clouds",
+        "ipa": "/klaʊdz/",
+        "phonetic": "/klaʊdz/",
+        "syllables": "clouds",
+        "pos": "名詞 (Noun，複數)",
+        "chi": "雲朵（cloud 的複數）",
+        "meaning": "飄浮在天空中由水氣凝結而成的白色或灰色雲團",
+        "breakdown": "cloud(雲) + -s(複數字尾) -> 許多朵雲",
+        "trick": "諧音「靠得住」：天上軟綿綿又厚實的白雲看起來超「靠得住 (clouds)」，且 c 罩住 loud 變雲朵！",
+        "scene": "晴朗藍天上飄浮著像棉花糖般的潔白雲朵，或暴風雨來臨前聚集的烏雲。",
+        "collocation": "white clouds (白雲), dark clouds (烏雲), floating clouds (浮雲)",
+        "img": "☁️",
+        "context_eng": "The sky is blue, and the clouds are white on the day the ships sail from Spain.",
+        "example": "Look at those white clouds floating above the mountains.",
+        "context_chi": "船隊從西班牙啟航那天，天空湛藍，白雲朵朵飄浮在天際。",
+        "chant": "c 罩住 loud 變雲朵，靠得住的 clouds 飄天空！",
+        "compare": "clouds (cl- 雲朵) vs. crowds (cr- 人群，擠在一起會哭 cr-) vs. loud (少了 c 變大聲)",
+        "note": "ou 發雙母音 /aʊ/，字尾 d 接複數 -s 必須唸成濁音 /z/；形容詞為 cloudy（多雲的）。"
+      },
+      "explanation": {
+        "point": "clouds 為名詞「雲朵（複數）」，字根 cloud 加 -s 構成，雙母音 /aʊ/ 拼寫為 ou。",
+        "examPurpose": "測驗學生區分天氣名詞 clouds (cl-) 與 crowds (cr-) 並正確加上複數 -s 的拼寫能力。",
+        "correctReason": "題幹主詞後方搭配複數動詞 are floating，須填入複數名詞 clouds，拼法為 c-l-o-u-d-s。",
+        "note": "clouds [n.] 雲朵（cloud 的複數）。",
+        "trap": "最常與 crowds（人群）混淆 l 與 r，或將雙母音 ou 誤寫成 ow (clowds)。",
+        "commonTraps": [
+          "字母 l 與 r 聽音混淆，將 clouds 誤寫成 crowds（人群）。",
+          "漏掉複數字尾 -s，或將 ou 誤寫成 ow。"
+        ],
+        "steps": [
+          "① 聽開頭音 /kl/：確定是 cl-（c 罩住 loud）",
+          "② 拼出 /aʊd/：o-u-d",
+          "③ 依題幹複數線索 are 加上 -s ➔ clouds ✅"
+        ],
+        "insight": "💡 c 罩住 loud 就是白雲（cloud）；加上 -s 唸濁音 /klaʊdz/！"
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "cumulus clouds",
+          "storm clouds"
+        ],
+        "grammarCompare": "cloud (單數可數名詞) ➔ clouds (複數) ➔ cloudy (形容詞：多雲的)。",
+        "examVariations": "天氣分類題：clouds 屬於 Weather 類別，不屬於 Landforms。"
+      }
+    },
+    {
+      "id": "q_w14_od3_u17_02",
+      "book_id": "od3",
+      "unit_id": "od3_17",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★☆☆☆☆",
+      "question": "Listen to the pronunciation and sentence: \"The thick ________ made it hard for the sailors to see the rocky coast ahead.\" Spell the target word for \"濃霧\".",
+      "target_chi": "濃霧",
+      "target_pos": "名詞 (Noun，不可數)",
+      "masked_example": "The thick ________ made it hard for the sailors to see the rocky coast ahead.",
+      "masked_example_chi": "厚重的________讓水手們很難看清前方多岩的海岸。",
+      "options": [],
+      "answer": "fog",
+      "self_check": [
+        "1. 是否拼成三個字母的 CVC 短母音結構 f-o-g？",
+        "2. 是否確認沒有受青蛙 frog 干擾而多加字母 r？",
+        "3. 是否確認沒有誤加複數 -s（不可數名詞）？"
+      ],
+      "trapCodes": [
+        "ENG_SPELLING_PHONICS"
+      ],
+      "triadGroup": {
+        "groupId": "OD3_U17_V1",
+        "tier": "L1-3",
+        "role": "foundation"
+      },
+      "vocab_card": {
+        "word": "fog",
+        "ipa": "/fɑːɡ/",
+        "phonetic": "/fɑɡ/",
+        "syllables": "fog",
+        "pos": "名詞 (Noun，不可數)",
+        "chi": "濃霧",
+        "meaning": "靠近地面或海面、使能見度大幅降低的濃厚水氣霧層",
+        "breakdown": "f + og (標準短母音 CVC 單字結構)",
+        "trick": "諧音「發哥」：清晨山區與海面起了超大濃霧，連「發哥 (fog)」走近兩公尺都看不清他的臉！",
+        "scene": "冬天清晨海面與操場白茫茫一片，船隻與遠山全都躲進濃霧裡不見蹤影。",
+        "collocation": "heavy fog (濃霧), thick fog (濃霧), in a fog (霧煞煞、頭腦糊塗)",
+        "img": "🌫️",
+        "context_eng": "Winter was cold and windy, with fog and hail along the southern coast.",
+        "example": "The thick fog made it hard to see the road ahead.",
+        "context_chi": "南美洲冬季寒冷多風，海面上常籠罩著濃霧與冰雹。",
+        "chant": "f-o-g 短音霧茫茫，青蛙多 r 變 frog，濃霧裡找發哥！",
+        "compare": "fog (濃霧，能見度極低) vs. frog (青蛙，多了樹枝 r) vs. mist (薄霧) vs. haze (薄霾光暈)",
+        "note": "不可數名詞，不可加複數 -s；變成形容詞「有霧的」時必須雙寫 g 成為 foggy。"
+      },
+      "explanation": {
+        "point": "fog 為不可數名詞「濃霧」，為標準短母音 CVC 拼讀結構 f-o-g。",
+        "examPurpose": "評量學生辨識極簡天候名詞 fog 並排除近似音字 frog（青蛙）的干擾。",
+        "correctReason": "形容使海上或道路能見度降低的濃厚水氣稱為 fog，拼作 f-o-g。",
+        "note": "fog [n.] 濃霧（不可數名詞）。",
+        "trap": "聽寫時常與 frog（青蛙）混淆多加一個 r，或誤拼成 fogg。",
+        "commonTraps": [
+          "多加上字母 r，誤拼成青蛙 frog。",
+          "誤以為名詞要雙寫字尾 g 寫成 fogg（只有形容詞 foggy 才雙寫 g）。"
+        ],
+        "steps": [
+          "① 抓取搭配詞：thick ________（厚重的霧）",
+          "② 依自然發音 /fɑɡ/ 拼出 f-o-g",
+          "③ 檢查沒有多餘的 r 或 s ➔ fog ✅"
+        ],
+        "insight": "💡 濃霧 fog 只有三個字母 f-o-g，多了一根樹枝 r 就會變成青蛙 frog！"
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "heavy mist",
+          "dense vapor"
+        ],
+        "grammarCompare": "fog (名詞，不可數：There is heavy fog.) vs. foggy (形容詞，須雙寫 g：It is foggy.)。",
+        "examVariations": "字詞轉換題：fog → foggy（與 sun → sunny 同為短母音單子音字尾雙寫規則）。"
+      }
+    },
+    {
+      "id": "q_w14_od3_u17_03",
+      "book_id": "od3",
+      "unit_id": "od3_17",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★★☆☆☆",
+      "question": "Listen to the pronunciation and sentence: \"There was very little food and water on the ship, so the sailors were not ________.\" Spell the target word for \"健康的\".",
+      "target_chi": "健康的",
+      "target_pos": "形容詞 (Adj.)",
+      "masked_example": "There was very little food and water on the ship, so the sailors were not ________.",
+      "masked_example_chi": "船上的食物與飲水所剩無幾，因此水手們變得不再________。",
+      "options": [],
+      "answer": "healthy",
+      "self_check": [
+        "1. 中間短母音 /ɛ/ 是否拼寫成字母組合 ea（而非只寫 e）？",
+        "2. 是否保留完整的名詞詞根 health 再加上形容詞字尾 -y？",
+        "3. th 氣音是否有正確拼出來（不可漏掉 t 或 h）？"
+      ],
+      "trapCodes": [
+        "ENG_SPELLING_PHONICS"
+      ],
+      "triadGroup": {
+        "groupId": "OD3_U17_V1",
+        "tier": "L1-3",
+        "role": "foundation"
+      },
+      "vocab_card": {
+        "word": "healthy",
+        "ipa": "/ˈhelθi/",
+        "phonetic": "/ˈhɛlθi/",
+        "syllables": "heal·thy",
+        "pos": "形容詞 (Adj.)",
+        "chi": "健康的；有益健康的",
+        "meaning": "身體強壯、沒有生病且充滿活力的狀態（sick 的反義詞）",
+        "breakdown": "heal(治癒) + -th(抽象名詞字尾) + -y(充滿…的) -> 充滿健康狀態的",
+        "trick": "諧音「黑歐西」：「黑歐西 (healthy)」每天吃蔬菜、喝黑豆漿又運動，身體超級健康！",
+        "scene": "遠洋航行缺糧缺水時船員變得虛弱不健康，對比每天均衡飲食保持健康的學生。",
+        "collocation": "stay healthy (保持健康), healthy food (健康食物), healthy habits (健康習慣)",
+        "img": "🥗",
+        "context_eng": "There is very little food and water, so the men are not healthy.",
+        "example": "Eating vegetables and exercising every day keeps us healthy.",
+        "context_chi": "船上食物與飲水極度匱乏，因此船員們都變得不健康。",
+        "chant": "health 加 y 變健康，ea 唸短音 /ɛ/ 別拉長！",
+        "compare": "healthy (adj. 健康的) vs. health (n. 健康) vs. wealthy (adj. 富有的，開頭換 w) vs. sick (反義詞：生病的)",
+        "note": "發音大陷阱：動詞 heal 的 ea 唸長音 /iː/，但名詞 health 與形容詞 healthy 的 ea 要縮短唸成 /ɛ/！"
+      },
+      "explanation": {
+        "point": "healthy 為形容詞「健康的」，由名詞 health 加上字尾 -y 構成，ea 在此發短母音 /ɛ/。",
+        "examPurpose": "考查學生掌握短母音 /ɛ/ 卻需拼成 ea 的高頻不規則發音單字 healthy。",
+        "correctReason": "be 動詞 were not 後方需接形容詞 healthy，注意中間必須寫出字母 a（h-e-a-l-t-h-y）。",
+        "note": "healthy [adj.] 健康的（反義詞為 sick 或 unhealthy）。",
+        "trap": "因 ea 唸短音 /ɛ/，學生拼寫時最常漏掉字母 a 而錯寫成 helthy，或漏掉字尾 -y 寫成名詞 health。",
+        "commonTraps": [
+          "聽音漏寫字母 a，將 healthy 錯拼成 helthy。",
+          "誤填名詞 health（be 動詞後表達身體狀態應填形容詞 healthy）。"
+        ],
+        "steps": [
+          "① 先記動詞 heal（治癒）➔ 含 ea",
+          "② 加上抽象名詞字尾 -th 變成 health",
+          "③ 加上形容詞字尾 -y ➔ healthy ✅"
+        ],
+        "insight": "💡 雖然唸短音 /ɛ/，但源頭是 heal（治癒），所以 a 一定要留下來：h-e-a-l-t-h-y！"
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "fit and strong",
+          "in good health"
+        ],
+        "grammarCompare": "health (不可數名詞：Good health is important.) vs. healthy (形容詞：Stay healthy.)。",
+        "examVariations": "反義詞定義題：This is the opposite of sick. ➔ healthy。"
+      }
+    },
+    {
+      "id": "q_w14_od3_u17_04",
+      "book_id": "od3",
+      "unit_id": "od3_17",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★★☆☆☆",
+      "question": "Listen to the pronunciation and sentence: \"Over 250 brave sailors started the three-year ________, but only 18 men came home.\" Spell the target word for \"旅程；長途旅行\".",
+      "target_chi": "旅程；長途旅行",
+      "target_pos": "名詞 (Noun) / 動詞 (Verb)",
+      "masked_example": "Over 250 brave sailors started the three-year ________, but only 18 men came home.",
+      "masked_example_chi": "超過 250 位勇敢的水手展開了這趟為期三年的________，但只有 18 個人平安返鄉。",
+      "options": [],
+      "answer": "journey",
+      "self_check": [
+        "1. 字首 /dʒ/ 與 /ɜːr/ 音是否拼成 j-o-u-r（而非 j-e-r 或 j-u-r）？",
+        "2. 字尾長音 /i/ 是否拼成 -ney（而非 -ny）？",
+        "3. 是否確認拼寫與日記 journal 有正確區隔？"
+      ],
+      "trapCodes": [
+        "ENG_SPELLING_PHONICS"
+      ],
+      "triadGroup": {
+        "groupId": "OD3_U17_V1",
+        "tier": "L1-3",
+        "role": "foundation"
+      },
+      "vocab_card": {
+        "word": "journey",
+        "ipa": "/ˈdʒɜːrni/",
+        "phonetic": "/ˈdʒɝːni/",
+        "syllables": "jour·ney",
+        "pos": "名詞 (Noun) / 動詞 (Verb)",
+        "chi": "旅程；長途旅行",
+        "meaning": "從起點到終點、特別指距離遙遠或耗時較長的旅行過程",
+        "breakdown": "jour(拉丁字根：一天、白晝) + -ney(名詞字尾) -> 古時候一天所走的遠行路程",
+        "trick": "諧音「遮泥」：展開長途大冒險的旅程走過泥巴路，大家趕快拿雨衣「遮泥 (journey)」！",
+        "scene": "麥哲倫船隊歷時三年橫跨大西洋、太平洋與印度洋的史詩級環球航行旅程。",
+        "collocation": "a long journey (漫長旅程), go on a journey (踏上旅程), safe journey (一路順風)",
+        "img": "🧭",
+        "context_eng": "Over 250 men started the journey, but only 18 men come home.",
+        "example": "The train journey across the island took almost six hours.",
+        "context_chi": "當初超過 250 人展開這趟漫長旅程，最後卻只有 18 個人回到家鄉。",
+        "chant": "jour 是一天 ney 來湊，遮泥踏上長旅程 journey！",
+        "compare": "journey (長途旅程) vs. journal (n. 日記/日誌，同字根 jour) vs. trip (短途旅行)",
+        "note": "字尾為母音 e + y，因此複數直接加 s 成為 journeys（不可去 y 加 ies）；動詞三態為 journey–journeyed–journeyed。"
+      },
+      "explanation": {
+        "point": "journey 為名詞「旅程；長途旅行」，由字根 jour-（一日）與字尾 -ney 組成。",
+        "examPurpose": "測驗學生正確拼寫含 ou 發 /ɜːr/ 音與字尾 -ney 的長途旅行高頻名詞 journey。",
+        "correctReason": "從起點出發前往遙遠目的地的漫長行程稱為 journey，拼作 j-o-u-r-n-e-y。",
+        "note": "journey [n.] 旅程；長途旅行。",
+        "trap": "極易漏掉字母 o 誤拼成 jurney，或將結尾 -ney 漏掉 e 寫成 journy。",
+        "commonTraps": [
+          "字母組合 our 漏掉 o 誤拼成 jurney 或 jerny。",
+          "結尾 -ney 漏掉 e，錯誤拼寫成 journy。"
+        ],
+        "steps": [
+          "① 記住字根 jour（一天、行程，與 journal 同源）",
+          "② 接上字尾 -ney（與 monkey 同字尾）",
+          "③ 合起來就是 journey ✅"
+        ],
+        "insight": "💡 每日寫的是 journal（日記），每日趕路走的是 journey（旅程），開頭都是 j-o-u-r！"
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "long voyage",
+          "expedition"
+        ],
+        "grammarCompare": "journey 複數直接加 s（journeys），不可改成 journies。",
+        "examVariations": "語境定義題：It has a beginning and an end, and it can be short or long. ➔ journey。"
+      }
+    },
+    {
+      "id": "q_w14_od3_u17_05",
+      "book_id": "od3",
+      "unit_id": "od3_17",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★★☆☆☆",
+      "question": "Listen to the pronunciation and sentence: \"My sister helps ________ our cute puppy while I am at school.\" Spell the two-word phrasal verb for \"照顧；照料\".",
+      "target_chi": "照顧；照料",
+      "target_pos": "動詞片語 (Phrasal Verb)",
+      "masked_example": "My sister helps ________ our cute puppy while I am at school.",
+      "masked_example_chi": "我去上學的時候，妹妹會幫忙________我們可愛的小狗。",
+      "options": [],
+      "answer": "look after",
+      "self_check": [
+        "1. 是否寫出完整的兩個英文單字且中間留有空格？",
+        "2. 介系詞是否使用正確的 after（而非 for 或 at）？",
+        "3. 第二個字 a-f-t-e-r 拼寫是否完全正確？"
+      ],
+      "trapCodes": [
+        "ENG_PREP_COLLOCATION"
+      ],
+      "triadGroup": {
+        "groupId": "OD3_U17_V2",
+        "tier": "L1-3",
+        "role": "foundation"
+      },
+      "vocab_card": {
+        "word": "look after",
+        "ipa": "/lʊk ˈæftər/",
+        "phonetic": "/lʊk ˈæftɚ/",
+        "syllables": "look af·ter",
+        "pos": "動詞片語 (Phrasal Verb)",
+        "chi": "照顧；照料",
+        "meaning": "跟在後面細心關注並給予照料，保護人、寵物或植物健康平安",
+        "breakdown": "look(看) + after(在…之後) -> 跟在後面一直看著照顧",
+        "trick": "諧音「路可 愛扶他」：看到小妹妹走路不穩，「路可 (look) 愛扶他 (after)」跟在後面細心照顧！",
+        "scene": "爸媽出門採買時，在家幫忙照料年幼的弟妹或餵養家裡的小狗。",
+        "collocation": "look after a pet (照顧寵物), look after yourself (照顧好自己), look after the garden (照料花園)",
+        "img": "🫂",
+        "context_eng": "On the long voyage, the older sailors helped look after the younger boys on the ship.",
+        "example": "My sister helps look after our puppy while I am at school.",
+        "context_chi": "在漫長的航程中，年長的水手們幫忙照顧船上較年幼的男孩。",
+        "chant": "跟在後面一直看，look after 就是用心照顧！",
+        "compare": "look after (= take care of 照顧) vs. look for (尋找) vs. look at (看著某物)",
+        "note": "不可分片語！代名詞必須放在 after 後面，只能說 look after it / him，絕不可說 look it after。"
+      },
+      "explanation": {
+        "point": "本片語動詞由基礎動詞搭配 after 構成，意為「照顧；照料」，等同於 take care of。",
+        "examPurpose": "考核學生在寵物或照護情境中精準辨聽並拼寫「照顧」片語動詞的能力。",
+        "correctReason": "跟在年幼者或寵物後方保護與照料即為 look after，中間務必保留空格。",
+        "note": "look after [phr. v.] 照顧；照料。",
+        "trap": "常因介系詞混亂而誤寫為 look for（尋找）或把兩字黏成一個字。",
+        "commonTraps": [
+          "與「尋找」片語混淆，將介系詞 after 誤寫成 for。",
+          "拼寫時忘記在兩個單字之間保留空格。"
+        ],
+        "steps": [
+          "① 確認句意為「照顧小狗」（而非尋找）",
+          "② 聯想畫面：跟在後面（after）一直看（look）",
+          "③ 拼出兩個字：look after ✅"
+        ],
+        "insight": "💡 像家長跟在學步寶寶「後面 (after)」看著保護他，就是用心照顧！"
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "take care of",
+          "watch over"
+        ],
+        "grammarCompare": "look after 為不可分片語：look after him (O) / look him after (X)。",
+        "examVariations": "同義替換題：She takes care of her pet. = She looks after her pet."
+      }
+    },
+    {
+      "id": "q_w14_od3_u17_06",
+      "book_id": "od3",
+      "unit_id": "od3_17",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★★☆☆☆",
+      "question": "Listen to the pronunciation and sentence: \"We used a bright flashlight to ________ the missing key in the dark yard.\" Spell the two-word phrasal verb for \"尋找\".",
+      "target_chi": "尋找",
+      "target_pos": "動詞片語 (Phrasal Verb)",
+      "masked_example": "We used a bright flashlight to ________ the missing key in the dark yard.",
+      "masked_example_chi": "我們在漆黑的院子裡用手電筒________不見的鑰匙。",
+      "options": [],
+      "answer": "look for",
+      "self_check": [
+        "1. 是否寫出完整的兩個單字且中間保有空格？",
+        "2. 介系詞是否使用正確的 for（表示為了特定目標）？",
+        "3. 是否確認沒有與「查閱字典」的片語混淆？"
+      ],
+      "trapCodes": [
+        "ENG_PREP_COLLOCATION"
+      ],
+      "triadGroup": {
+        "groupId": "OD3_U17_V2",
+        "tier": "L1-3",
+        "role": "foundation"
+      },
+      "vocab_card": {
+        "word": "look for",
+        "ipa": "/lʊk fɔːr/",
+        "phonetic": "/lʊk fɔr/",
+        "syllables": "look for",
+        "pos": "動詞片語 (Phrasal Verb)",
+        "chi": "尋找",
+        "meaning": "為了尋回遺失的物品或達成特定目標而四處搜尋查看",
+        "breakdown": "look(看) + for(為了某個目標) -> 為了目標而看即尋找",
+        "trick": "諧音「路可 佛」：小狗走失了，大家在「路可 (look)」邊急著祈禱「佛 (for)」祖保佑快點找到牠！",
+        "scene": "出發去探險前發現鑰匙或地圖不見了，拿著手電筒在房間和院子到處翻找。",
+        "collocation": "look for clues (尋找線索), look for a lost key (尋找遺失的鑰匙), look for a new route (尋找新航線)",
+        "img": "🔍",
+        "context_eng": "Captain Magellan sailed west to look for a new route to the spice islands of Indonesia.",
+        "example": "We used a flashlight to look for the missing key in the yard.",
+        "context_chi": "麥哲倫船長向西航行，為的是尋找通往印尼香料群島的新航線。",
+        "chant": "為了目標一直看，look for 就是在尋找！",
+        "compare": "look for (強調「尋找」的動作過程) vs. find (強調「找到」的結果) vs. look up (查閱字典/資料)",
+        "note": "look for 後面直接加尋找的對象名詞或代名詞，不可再多加其他介系詞；正在找常用 I am looking for..."
+      },
+      "explanation": {
+        "point": "本片語動詞以「動詞 + for」表示「為了某樣遺失或渴望的目標而尋找」。",
+        "examPurpose": "測驗學生在尋物與探索航線語境下，精準拼寫「尋找」動詞片語的能力。",
+        "correctReason": "題幹中遺失鑰匙（missing key）需要搜尋動作，對應片語為 look for。",
+        "note": "look for [phr. v.] 尋找。",
+        "trap": "易與「照顧」的 after 或「查資料」的 up 混淆，或受到四這個數字拼法干擾將 for 誤寫成 four。",
+        "commonTraps": [
+          "將介系詞 for 誤拼成同音數字 four。",
+          "與「環顧四周」或「查字典」的片語介系詞混用。"
+        ],
+        "steps": [
+          "① 抓取線索：the missing key（不見的鑰匙）",
+          "② 確定語意：為了找回目標而搜尋 ➔ 介系詞用 for",
+          "③ 拼寫完整兩字：look for ✅"
+        ],
+        "insight": "💡 實體東西不見、新航線沒出現要去搜尋，統一搭配介系詞 for！"
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "search for",
+          "hunt for"
+        ],
+        "grammarCompare": "look for (尋找的過程) vs. find (已經找到的結果)。",
+        "examVariations": "時態題：I looked for my keys everywhere, and finally I found them."
+      }
+    },
+    {
+      "id": "q_w14_od3_u17_07",
+      "book_id": "od3",
+      "unit_id": "od3_17",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★★☆☆☆",
+      "question": "Listen to the pronunciation and sentence: \"She likes to ________ old family photos and travel albums on rainy Sundays.\" Spell the two-word phrasal verb for \"瀏覽；翻閱\".",
+      "target_chi": "瀏覽；翻閱；仔細查看",
+      "target_pos": "動詞片語 (Phrasal Verb)",
+      "masked_example": "She likes to ________ old family photos and travel albums on rainy Sundays.",
+      "masked_example_chi": "她喜歡在下雨的星期天________老舊的家庭照片與旅行相簿。",
+      "options": [],
+      "answer": "look through",
+      "self_check": [
+        "1. 是否寫出完整的兩個單字且中間保有空格？",
+        "2. 第二個字 through 是否包含字母 r（不可誤寫成 though）？",
+        "3. 結尾 -ough 拼寫順序是否正確（t-h-r-o-u-g-h）？"
+      ],
+      "trapCodes": [
+        "ENG_SPELLING_PHONICS",
+        "ENG_PREP_COLLOCATION"
+      ],
+      "triadGroup": {
+        "groupId": "OD3_U17_V2",
+        "tier": "L1-3",
+        "role": "foundation"
+      },
+      "vocab_card": {
+        "word": "look through",
+        "ipa": "/lʊk θruː/",
+        "phonetic": "/lʊk θru/",
+        "syllables": "look through",
+        "pos": "動詞片語 (Phrasal Verb)",
+        "chi": "瀏覽；翻閱；仔細查看",
+        "meaning": "從頭到尾快速翻看書頁、筆記、清單或相簿，或透過窗戶往外看",
+        "breakdown": "look(看) + through(貫穿、從頭到尾穿過) -> 從第一頁一路看到最後一頁",
+        "trick": "諧音「路可 撕路」：翻閱舊相簿或書頁時要溫柔，別把書頁「撕路 (through)」破掉喔！",
+        "scene": "考前十分鐘快速從頭到尾翻看筆記本重點，或雨天翻閱家裡的舊相簿。",
+        "collocation": "look through old photos (瀏覽舊照片), look through notes (翻閱筆記), look through the list (查看清單)",
+        "img": "📖",
+        "context_eng": "Before sailing, Captain Magellan liked to look through his old maps and sea journals.",
+        "example": "She likes to look through old family photos on rainy Sundays.",
+        "context_chi": "出航前，麥哲倫船長喜歡從頭到尾翻閱他的舊地圖與航海日誌。",
+        "chant": "從頭穿過看到尾，look through 翻閱瀏覽最到位！",
+        "compare": "look through (從頭到尾翻看多份資料) vs. look for (鎖定某個不見的東西去尋找) vs. though (少 r 表雖然)",
+        "note": "through 拼寫為 thr- + ough，結尾 gh 不發音；小心不要漏掉 r 拼成 though (雖然) 或 thought (想法)。"
+      },
+      "explanation": {
+        "point": "本片語由動詞搭配貫穿介系詞 through 構成，表示「從頭到尾翻閱、瀏覽整疊照片或資料」。",
+        "examPurpose": "測驗學生區分「翻閱整本資料」的語意，並克服大魔王單字 through 的高難度拼寫。",
+        "correctReason": "一頁頁翻閱相簿、筆記或清單屬於從頭貫穿到尾的動作，應填 look through。",
+        "note": "look through [phr. v.] 瀏覽；翻閱；透過…看。",
+        "trap": "through 拼字極難，學生常漏掉字母 r 寫成 though，或少寫字母 u 寫成 throgh。",
+        "commonTraps": [
+          "漏掉字母 r，把 through 錯誤拼成 though（雖然）。",
+          "把 ough 順序寫錯，或簡化拼成 thru（正式考卷須拼完整 through）。"
+        ],
+        "steps": [
+          "① 確認動作對象：整本相簿或筆記 ➔ 從頭看到尾用 through",
+          "② 拆解大魔王拼字：thr + ough",
+          "③ 確認不漏 r 也不多 t ➔ look through ✅"
+        ],
+        "insight": "💡 看到舊照片（photos）、筆記（notes）或清單（list）從頭看到尾，就是 look through！"
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "browse through",
+          "skim over"
+        ],
+        "grammarCompare": "look through (翻閱整份資料；透過窗戶看) vs. look for (尋找單一失物)。",
+        "examVariations": "拼寫辨析：through (穿過) vs. though (雖然) vs. thought (思考/想法)。"
+      }
+    },
+    {
+      "id": "q_w14_od3_u17_08",
+      "book_id": "od3",
+      "unit_id": "od3_17",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★☆☆☆☆",
+      "question": "Listen to the pronunciation and sentence: \"A long wooden bridge crosses the wide ________ near our quiet town.\" Spell the target word for \"河流；江河\".",
+      "target_chi": "河流；江河",
+      "target_pos": "名詞 (Noun)",
+      "masked_example": "A long wooden bridge crosses the wide ________ near our quiet town.",
+      "masked_example_chi": "我們寧靜小鎮附近有一座長木橋橫跨過寬闊的________。",
+      "options": [],
+      "answer": "river",
+      "self_check": [
+        "1. 中間子音 v 是否為單寫（不可雙寫成 rivver）？",
+        "2. 開頭是否沒有多加 d（避免寫成 driver 司機）？",
+        "3. 字尾是否為 -er？"
+      ],
+      "trapCodes": [
+        "ENG_SPELLING_PHONICS"
+      ],
+      "triadGroup": {
+        "groupId": "OD3_U17_V1",
+        "tier": "L1-3",
+        "role": "foundation"
+      },
+      "vocab_card": {
+        "word": "river",
+        "ipa": "/ˈrɪvər/",
+        "phonetic": "/ˈrɪvɚ/",
+        "syllables": "riv·er",
+        "pos": "名詞 (Noun)",
+        "chi": "河流；江河",
+        "meaning": "在陸地上沿著河床不斷奔流匯入湖泊或大海的天然寬闊水道",
+        "breakdown": "riv(拉丁字根：水流、河岸) + -er(名詞字尾) -> 奔流的水道",
+        "trick": "諧音「哩佛」：站在橋上看著長長的河水，「哩佛 (river)」啊，這條河到底流向哪裡的大海呢？",
+        "scene": "穿梭在青翠森林之間的藍色長河，上頭有木橋橫跨兩岸。",
+        "collocation": "cross the river (渡河), along the river (沿著河流), riverbank (河岸)",
+        "img": "🏞️",
+        "context_eng": "Juan saw many rivers and beautiful waterfalls along the South American land.",
+        "example": "A wooden bridge crosses the wide river near our town.",
+        "context_chi": "Juan 在南美洲陸地上看見了許多河流與美麗的瀑布。",
+        "chant": "短音 i 接單寫 v，沿著河岸 flows the river！",
+        "compare": "stream (小溪) < river (河流) < lake (靜止湖泊) vs. driver (司機，i 發長音 /aɪ/)",
+        "note": "拼字時中間只有單寫一個 v (r-i-v-e-r)，不可雙寫成 rivver；字母 i 發短母音 /ɪ/。"
+      },
+      "explanation": {
+        "point": "river 為可數名詞「河流」，發短音 /ɪ/ 且中間字母 v 不雙寫。",
+        "examPurpose": "考查學生掌握自然地形基礎詞彙 river 的單寫 v 拼寫規則。",
+        "correctReason": "橋樑橫跨於陸地流動水域上方，該地形名詞為 river (r-i-v-e-r)。",
+        "note": "river [n.] 河流；江河。",
+        "trap": "因第一個音節發短音 /ɪ/，少數學生會誤將中間的 v 雙寫成 rivver。",
+        "commonTraps": [
+          "錯誤雙寫字母 v，拼寫成 rivver。",
+          "字尾誤寫成 -or (rivor) 或與 driver（司機）發音混淆。"
+        ],
+        "steps": [
+          "① 拆成兩音節：riv + er",
+          "② 英語單字幾乎不雙寫 v ➔ 只寫一個 v",
+          "③ 拼出 r-i-v-e-r ✅"
+        ],
+        "insight": "💡 英文單字幾乎不會出現 vv 連寫，記住「單寫 v」就不會錯寫 river！"
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "waterway",
+          "large stream"
+        ],
+        "grammarCompare": "river（流動的長形水道）vs. lake（四周受陸地包圍的靜止湖泊）。",
+        "examVariations": "地形分類題：river 屬於 Landforms 地形類別。"
+      }
+    },
+    {
+      "id": "q_w14_od3_u17_09",
+      "book_id": "od3",
+      "unit_id": "od3_17",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★☆☆☆☆",
+      "question": "Listen to the pronunciation and sentence: \"Everyone stayed safely indoors until the violent ________ with heavy rain passed.\" Spell the target word for \"暴風雨；風暴\".",
+      "target_chi": "暴風雨；風暴",
+      "target_pos": "名詞 (Noun)",
+      "masked_example": "Everyone stayed safely indoors until the violent ________ with heavy rain passed.",
+      "masked_example_chi": "每個人都安全地待在室內，直到伴隨大雨的猛烈________過去。",
+      "options": [],
+      "answer": "storm",
+      "self_check": [
+        "1. 結尾是否為鼻音字母 m（而非商店 store 的 e）？",
+        "2. 中間 /ɔr/ 音是否拼成 o-r？",
+        "3. 是否確認開頭為 s-t？"
+      ],
+      "trapCodes": [
+        "ENG_SPELLING_PHONICS"
+      ],
+      "triadGroup": {
+        "groupId": "OD3_U17_V1",
+        "tier": "L1-3",
+        "role": "foundation"
+      },
+      "vocab_card": {
+        "word": "storm",
+        "ipa": "/stɔːrm/",
+        "phonetic": "/stɔrm/",
+        "syllables": "storm",
+        "pos": "名詞 (Noun)",
+        "chi": "暴風雨；風暴",
+        "meaning": "伴隨強風、豪雨、雷電甚至冰雹的劇烈惡劣天氣現象",
+        "breakdown": "st(輔音叢) + orm(韻基：劇烈攪動)",
+        "trick": "諧音「死都悶」：外面下著大暴風雨不能出門騎車，整天關在家裡真是「死都悶 (storm)」啊！",
+        "scene": "大西洋海面上烏雲密布、狂風巨浪拍打船身，海面出現可怕的暴風雨。",
+        "collocation": "a heavy storm (大風暴), thunderstorm (雷雨), weather the storm (渡過難關)",
+        "img": "⛈️",
+        "context_eng": "There are many storms with thunder and lightning, and they lose one ship in a storm.",
+        "example": "Everyone stayed indoors until the big storm passed.",
+        "context_chi": "海上常有伴隨雷電的暴風雨，船隊還在風暴中失去了一艘船。",
+        "chant": "暴風雨來死都悶，st 加上 orm 就是 storm！",
+        "compare": "storm (暴風雨，結尾 -m) vs. store (商店，結尾 -e：暴風雨來了躲進商店) vs. stone (石頭)",
+        "note": "可數名詞（複數 storms）；形容詞為 stormy（暴風雨的）；or 發捲舌音 /ɔr/。"
+      },
+      "explanation": {
+        "point": "storm 為名詞「暴風雨；風暴」，由輔音叢 st- 搭配韻基 -orm 構成。",
+        "examPurpose": "檢驗學生正確區辨字尾鼻音 -m 與相似拼字 store（商店）的聽寫準確度。",
+        "correctReason": "伴隨狂風與暴雨的惡劣天氣即為 storm，注意結尾為字母 m。",
+        "note": "storm [n.] 暴風雨；風暴。",
+        "trap": "聽寫時常因沒有閉緊雙唇唸出 /m/，誤寫成商店 store 或漏寫 r 變成 stom。",
+        "commonTraps": [
+          "字尾鼻音 m 漏寫，或誤拼成相似字 store（商店）。",
+          "漏掉捲舌音字母 r，誤寫成 stom。"
+        ],
+        "steps": [
+          "① 聽開頭雙子音：st-",
+          "② 聽捲舌音 /ɔr/：o-r",
+          "③ 雙唇閉緊收尾音 /m/ ➔ storm ✅"
+        ],
+        "insight": "💡 暴風雨（storm）來了快躲進商店（store）！兩字結尾差在 m 和 e！"
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "tempest",
+          "thunderstorm"
+        ],
+        "grammarCompare": "storm (名詞：a big storm) vs. stormy (形容詞：stormy weather)。",
+        "examVariations": "衍生複合詞：thunderstorm (雷雨)、sandstorm (沙塵暴)、snowstorm (暴風雪)。"
+      }
+    },
+    {
+      "id": "q_w14_od3_u17_10",
+      "book_id": "od3",
+      "unit_id": "od3_17",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★★☆☆☆",
+      "question": "Listen to the pronunciation and sentence: \"We took a joyful group photo in front of the tall silver ________ in the mountains.\" Spell the target word for \"瀑布\".",
+      "target_chi": "瀑布",
+      "target_pos": "名詞 (Noun，複合名詞)",
+      "masked_example": "We took a joyful group photo in front of the tall silver ________ in the mountains.",
+      "masked_example_chi": "我們在山裡高聳銀白的________前面開心地拍了一張團體照。",
+      "options": [],
+      "answer": "waterfall",
+      "self_check": [
+        "1. 是否將 water 與 fall 合併拼成單一個字（中間無空格）？",
+        "2. 結尾 fall 的雙寫 ll 是否完整寫出來？",
+        "3. 題幹為單數（the tall silver），字尾不加 -s？"
+      ],
+      "trapCodes": [
+        "ENG_SPELLING_PHONICS"
+      ],
+      "triadGroup": {
+        "groupId": "OD3_U17_V1",
+        "tier": "L1-3",
+        "role": "foundation"
+      },
+      "vocab_card": {
+        "word": "waterfall",
+        "ipa": "/ˈwɔːtərfɔːl/",
+        "phonetic": "/ˈwɔtɚˌfɔl/",
+        "syllables": "wa·ter·fall",
+        "pos": "名詞 (Noun，複合名詞)",
+        "chi": "瀑布",
+        "meaning": "河水從高聳陡峭的懸崖或岩壁垂直傾瀉落下的自然景觀",
+        "breakdown": "water(水) + fall(落下) -> 大量的水從高處落下來",
+        "trick": "諧音「窩特佛」：站在壯觀瀑布前聽轟隆水聲，驚呼「窩特佛 (waterfall)！水像佛光般從天衝下來！」",
+        "scene": "山谷健行時轉個彎看見銀白色水柱從峭壁傾瀉入潭，水氣清涼撲面。",
+        "collocation": "a tall waterfall (高聳的瀑布), under the waterfall (瀑布下方), hike to a waterfall (健行看瀑布)",
+        "img": "💧",
+        "context_eng": "Winter was cold and windy, but Juan saw many rivers and beautiful waterfalls.",
+        "example": "We took a group photo in front of the famous waterfall.",
+        "context_chi": "雖然冬天寒冷多風，但 Juan 看見了許多河流與美麗的瀑布。",
+        "chant": "水 water 往下掉 fall，連在一起變成瀑布 waterfall！",
+        "compare": "waterfall (天然由上往下流的瀑布) vs. fountain (人工由下往上噴的噴泉) vs. rainfall (降雨)",
+        "note": "複合名詞合寫為單字 waterfall，中間沒有空格或連字號；複數直接加 s 成為 waterfalls。"
+      },
+      "explanation": {
+        "point": "waterfall 為複合名詞「瀑布」，由 water（水）與 fall（落下）無空格連寫而成。",
+        "examPurpose": "測驗學生合併複合名詞時是否正確連寫且保留 fall 字尾雙寫 l。",
+        "correctReason": "水流從高處峭壁落下形成的自然景觀即為 waterfall，合寫為一個字。",
+        "note": "waterfall [n.] 瀑布。",
+        "trap": "常錯將兩字分開寫成 water fall，或漏掉字尾雙寫 l 寫成 waterfal。",
+        "commonTraps": [
+          "誤將複合名詞拆開成兩個字 water fall（課本為連寫單字）。",
+          "漏掉結尾雙寫 ll 寫成 waterfal。"
+        ],
+        "steps": [
+          "① 理解構詞：水 (water) + 落下 (fall)",
+          "② 無空格連寫成一字，注意雙寫 l",
+          "③ 完成拼寫：waterfall ✅"
+        ],
+        "insight": "💡 複合地形詞 waterfall 兩字緊緊黏在一起，沒有空格也沒有連字號！"
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "cascade",
+          "cataract"
+        ],
+        "grammarCompare": "waterfall (天然瀑布，水往下掉) vs. fountain (人造噴泉，水往上噴)。",
+        "examVariations": "構詞家族：waterfall（瀑布）、rainfall（降雨）、snowfall（降雪）。"
+      }
+    },
+    {
+      "id": "q_w14_od3_u17_11",
+      "book_id": "od3",
+      "unit_id": "od3_17",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★★☆☆☆",
+      "question": "Listen to the pronunciation and sentence: \"Many peaceful fishing villages are built along the sunny eastern ________.\" Spell the target word for \"海岸；海濱\".",
+      "target_chi": "海岸；海濱",
+      "target_pos": "名詞 (Noun)",
+      "masked_example": "Many peaceful fishing villages are built along the sunny eastern ________.",
+      "masked_example_chi": "許多寧靜的漁村都沿著陽光普照的東側________興建。",
+      "options": [],
+      "answer": "coast",
+      "self_check": [
+        "1. 中間雙字母 oa 是否都有寫出（不可漏寫 a 變成 cost 花費）？",
+        "2. 結尾是否有字母 s（不可漏寫 s 變成 coat 外套）？",
+        "3. 是否確認開頭為 c？"
+      ],
+      "trapCodes": [
+        "ENG_SPELLING_PHONICS"
+      ],
+      "triadGroup": {
+        "groupId": "OD3_U17_V1",
+        "tier": "L1-3",
+        "role": "foundation"
+      },
+      "vocab_card": {
+        "word": "coast",
+        "ipa": "/koʊst/",
+        "phonetic": "/koʊst/",
+        "syllables": "coast",
+        "pos": "名詞 (Noun)",
+        "chi": "海岸；海濱",
+        "meaning": "陸地與海洋相連接的沿海地帶邊緣",
+        "breakdown": "c + oast (源自拉丁語 costa 側邊，指陸地靠海的側邊)",
+        "trick": "諧音「烤斯特」：夏天在海岸曬日光浴，太陽毒辣到快把人「烤斯特 (coast)」成香脆吐司 (toast)！",
+        "scene": "船隊沿著南美洲東岸綿長海岸線向南航行，右側是陸地左側是大西洋。",
+        "collocation": "along the coast (沿著海岸), east/west coast (東/西岸), off the coast (在近海處)",
+        "img": "🏖️",
+        "context_eng": "The ships reach the coast of South America in December and sail down the coast.",
+        "example": "Many fishing villages are built along the east coast of Taiwan.",
+        "context_chi": "船隊在十二月抵達南美洲海岸，並沿著海岸線向南航行。",
+        "chant": "coast 有 a 又有 s（沙灘），海岸海邊不跟 cost 搞錯！",
+        "compare": "coast (海岸，有 a 有 s) vs. cost (花費，沒 a) vs. beach (可玩沙的沙灘) vs. shore (水陸交界岸邊)",
+        "note": "同音/形似大陷阱：cost（花費）少了字母 a；coat（外套）少了字母 s。海岸有 sea (a) 與 sand (s)！"
+      },
+      "explanation": {
+        "point": "coast 為名詞「海岸；海濱」，由 oa 發長母音 /oʊ/，後接 st 構成。",
+        "examPurpose": "考驗學生在拼寫「海岸」時精準區分 cost（花費）與 coat（外套）的同音／形近干擾。",
+        "correctReason": "陸地與大海交接的沿海地區稱為 coast，拼作 c-o-a-s-t。",
+        "note": "coast [n.] 海岸；海濱。",
+        "trap": "漏掉 a 會變成 cost（花費），漏掉 s 會變成 coat（外套），兩者皆為段考高頻陷阱。",
+        "commonTraps": [
+          "漏掉長母音輔助字母 a，拼成 cost（花費）。",
+          "漏掉字母 s，拼成 coat（外套）。"
+        ],
+        "steps": [
+          "① 海岸靠近大海 (sea ➔ 有 a) 又有沙灘 (sand ➔ 有 s)",
+          "② 拼出長音 /oʊ/：o-a",
+          "③ 加上 st ➔ coast ✅"
+        ],
+        "insight": "💡 記住海岸口訣：「有 a（sea 海）又有 s（sand 沙）」，絕對不跟 cost 和 coat 搞錯！"
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "seashore",
+          "coastline"
+        ],
+        "grammarCompare": "coast（大範圍的海岸地帶）vs. beach（可踩沙戲水的沙灘）vs. shore（河湖海岸邊）。",
+        "examVariations": "形容詞衍生：coastal（沿海的，如 coastal cities）。"
+      }
+    },
+    {
+      "id": "q_w14_od3_u17_12",
+      "book_id": "od3",
+      "unit_id": "od3_17",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★★☆☆☆",
+      "question": "Listen to the pronunciation and sentence: \"The icy ________ hit the wooden roof so loudly that the sailors could barely hear each other.\" Spell the target word for \"冰雹\".",
+      "target_chi": "冰雹",
+      "target_pos": "名詞 (Noun) / 動詞 (Verb)",
+      "masked_example": "The icy ________ hit the wooden roof so loudly that the sailors could barely hear each other.",
+      "masked_example_chi": "冰冷的________猛烈敲打著木造船頂，水手們幾乎聽不見彼此說話。",
+      "options": [],
+      "answer": "hail",
+      "self_check": [
+        "1. 長母音 /eɪ/ 是否拼成 a-i（而非 a_e 或 ay）？",
+        "2. 結尾是否為單寫一個 l（避免寫成 hall 大廳）？",
+        "3. 結尾是否沒有誤寫成 r（hair 頭髮）？"
+      ],
+      "trapCodes": [
+        "ENG_SPELLING_PHONICS"
+      ],
+      "triadGroup": {
+        "groupId": "OD3_U17_V1",
+        "tier": "L1-3",
+        "role": "foundation"
+      },
+      "vocab_card": {
+        "word": "hail",
+        "ipa": "/heɪl/",
+        "phonetic": "/heɪl/",
+        "syllables": "hail",
+        "pos": "名詞 (Noun) / 動詞 (Verb)",
+        "chi": "冰雹；下冰雹",
+        "meaning": "在強烈對流雷雨中從天空降下的固體白色冰粒（名詞）；降冰雹（動詞）",
+        "breakdown": "h + ail (日耳曼古語意為從天而降的小冰粒)",
+        "trick": "諧音「黑喔」：中午天空突然變得「黑喔 (hail) 黑喔」，下一秒天空就砸下白色硬冰雹！",
+        "scene": "南美洲寒冷冬季的暴風雨中，白色硬冰粒劈哩啪啦打在船隻甲板與屋頂上。",
+        "collocation": "cold hail (冰冷的冰雹), hailstone (雹粒), hailstorm (冰雹暴)",
+        "img": "🧊",
+        "context_eng": "Winter was cold and windy, with fog and hail hitting the wooden deck.",
+        "example": "The hail hit the car roof so loudly that we could barely talk.",
+        "context_chi": "冬天又冷又多風，濃霧與冰雹不斷敲打著木頭甲板。",
+        "chant": "天空黑喔下冰雹 hail，同族 rain、tail 都是 -ail！",
+        "compare": "hail (冰雹，中間有 ai 發 /eɪ/) vs. hall (大廳，雙寫 l 發 /ɔː/) vs. hair (頭髮) vs. snow (雪)",
+        "note": "作「冰雹」為不可數名詞；作「下冰雹」為不及物動詞（hail–hailed–hailed），例如 It is hailing."
+      },
+      "explanation": {
+        "point": "hail 為天氣名詞「冰雹」，屬 -ail 韻基家族（與 rain, sail, tail 相同拼讀）。",
+        "examPurpose": "考查學生透過 -ail 發音規則拼寫天氣降水名詞 hail，並區分形似字 hall 與 hair。",
+        "correctReason": "從空中降下、敲打屋頂發出巨響的固體冰粒稱為 hail，拼作 h-a-i-l。",
+        "note": "hail [n./v.] 冰雹；下冰雹。",
+        "trap": "易把 ai 寫成 ay (hayl) 或 a_e (hale)，或混淆成 hall（大廳）與 hair（頭髮）。",
+        "commonTraps": [
+          "忽略字母 i 而拼成 hall（大廳）。",
+          "將長音 /eɪ/ 錯拼成 hale 或 hayl。"
+        ],
+        "steps": [
+          "① 聯想同音家族：下雨 rain / 航行 sail / 冰雹 hail 都是 -ai-",
+          "② 加上首音 h 與尾音 l",
+          "③ 拼出 h-a-i-l ✅"
+        ],
+        "insight": "💡 冰雹 hail 跟雨水 rain 一樣，中間都有 ai（代表從天降下的水氣）！"
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "ice pellets",
+          "hailstones"
+        ],
+        "grammarCompare": "hail (名詞：There was hail. / 動詞：It hailed yesterday.)。",
+        "examVariations": "天氣家族排序：rain（雨）→ sleet（雨夾雪）→ snow（雪）→ hail（固體冰雹）。"
+      }
+    },
+    {
+      "id": "q_w14_od3_u17_13",
+      "book_id": "od3",
+      "unit_id": "od3_17",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★★☆☆☆",
+      "question": "Listen to the pronunciation and sentence: \"After many weeks at sea, the tired sailors finally reached the green ________ of Guam.\" Spell the target word for \"島嶼\".",
+      "target_chi": "島嶼",
+      "target_pos": "名詞 (Noun)",
+      "masked_example": "After many weeks at sea, the tired sailors finally reached the green ________ of Guam.",
+      "masked_example_chi": "在海上航行數週後，疲憊的水手們終於抵達了綠意盎然的關________。",
+      "options": [],
+      "answer": "island",
+      "self_check": [
+        "1. 是否寫出不發音的靜音字母 s（is + land）？",
+        "2. 開頭是否為 i（不可受發音 /aɪ/ 影響寫成 eyland 或 ailand）？",
+        "3. 結尾是否為 land（陸地）？"
+      ],
+      "trapCodes": [
+        "ENG_SPELLING_PHONICS"
+      ],
+      "triadGroup": {
+        "groupId": "OD3_U17_V1",
+        "tier": "L1-3",
+        "role": "foundation"
+      },
+      "vocab_card": {
+        "word": "island",
+        "ipa": "/ˈaɪlənd/",
+        "phonetic": "/ˈaɪlənd/",
+        "syllables": "is·land",
+        "pos": "名詞 (Noun)",
+        "chi": "島嶼",
+        "meaning": "四周完全被海洋或湖水包圍的小塊或大塊陸地",
+        "breakdown": "is(s 不發音：水邊之地) + land(陸地) -> 被水包圍的陸地",
+        "trick": "諧音「愛倫的」：這座風景如畫的秘密島嶼是「愛倫的 (island)」，裡面的 s 害羞躲起來睡覺不發音！",
+        "scene": "太平洋上被湛藍海水環繞的關島與馬克坦島，船員靠岸尋找淡水與食物。",
+        "collocation": "the island of Guam (關島), tropical island (熱帶島嶼), desert island (荒島)",
+        "img": "🏝️",
+        "context_eng": "The three ships reach the island of Guam on March 6, and later visit the island of Mactan.",
+        "example": "We took a small boat to visit a quiet island in the south.",
+        "context_chi": "三艘船於三月六日抵達關島，後來又來到馬克坦島。",
+        "chant": "is 加 land 是島嶼，拉丁害的 s 不發音！",
+        "compare": "island (島嶼，s 不發音 /ˈaɪlənd/) vs. Iceland (冰島，c 發 /s/ 音) vs. inland (內陸)",
+        "note": "頭號拼字魔王：發音絕對不可唸出 /s/，但拼寫時千萬不能漏掉字母 s 而錯寫成 iland！"
+      },
+      "explanation": {
+        "point": "island 為名詞「島嶼」，含不發音的靜音字母 s，發音為 /ˈaɪlənd/。",
+        "examPurpose": "針對國小高年級靜音字母拼寫大魔王 island 進行零漏寫檢核。",
+        "correctReason": "四周被海水包圍的陸地（如關島 Guam、馬克坦島 Mactan）稱為 island，必須包含靜音 s。",
+        "note": "island [n.] 島嶼。",
+        "trap": "因 s 完全不發音，超過半數錯題都是直接漏掉 s 拼成 iland，或受音標影響錯拼成 ailand。",
+        "commonTraps": [
+          "漏掉靜音字母 s，錯誤拼寫成 iland。",
+          "誤拼成雙母音開頭的 ailand 或 iseland。"
+        ],
+        "steps": [
+          "① 切開成兩個已知單字：is + land",
+          "② 記住規則：這是「水中的一塊陸地 (is land)」，s 躲起來睡覺不發音",
+          "③ 拼寫確認：i-s-l-a-n-d ✅"
+        ],
+        "insight": "💡 拆成 `is` + `land` 就永遠不會漏掉那個害羞不發音的 s！",
+        "visualBlock": {
+          "kind": "compare_table",
+          "title": "⚖️ 靜音字母拼寫紅綠燈：island vs. Iceland vs. inland",
+          "data": {
+            "headers": [
+              "單字",
+              "發音",
+              "關鍵字母解析",
+              "記憶口訣"
+            ],
+            "rows": [
+              [
+                "island ✅",
+                "/ˈaɪlənd/",
+                "s 靜音不發音 (is + land)",
+                "害羞的 s 躲在島嶼裡睡覺"
+              ],
+              [
+                "Iceland",
+                "/ˈaɪslənd/",
+                "ice + land (c 發 /s/)",
+                "冰島真的由冰 ice 組成"
+              ],
+              [
+                "inland",
+                "/ˈɪnlənd/",
+                "in + land (沒有 s)",
+                "在陸地裡面 ➔ 內陸"
+              ]
+            ]
+          },
+          "caption": "📊 拆成 `is + land`，再也不會寫成 iland！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "isle",
+          "atoll"
+        ],
+        "grammarCompare": "island (普通名詞「島嶼」，s 不發音) vs. Iceland (專有名詞「冰島」，c 要發 /s/ 音)。",
+        "examVariations": "介系詞用法：live on an island / on the island of Mactan（在島上用 on）。"
+      }
+    },
+    {
+      "id": "q_w14_od3_u17_14",
+      "book_id": "od3",
+      "unit_id": "od3_17",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★★☆☆☆",
+      "question": "Listen to the pronunciation and sentence: \"A bright flash of ________ suddenly lit up the dark sky above the ocean.\" Spell the target word for \"閃電\".",
+      "target_chi": "閃電",
+      "target_pos": "名詞 (Noun，不可數)",
+      "masked_example": "A bright flash of ________ suddenly lit up the dark sky above the ocean.",
+      "masked_example_chi": "一道刺眼的________突然照亮了大洋上方的漆黑夜空。",
+      "options": [],
+      "answer": "lightning",
+      "self_check": [
+        "1. 拼字開頭是否包含不發音的 gh（l-i-g-h-t）？",
+        "2. t 與 ing 之間是否只有兩個 n、且中間「絕對沒有字母 e」？",
+        "3. 是否確認沒有少寫中間的 n 變成 lighting（照明燈光）？"
+      ],
+      "trapCodes": [
+        "ENG_SPELLING_PHONICS"
+      ],
+      "triadGroup": {
+        "groupId": "OD3_U17_V1",
+        "tier": "L1-3",
+        "role": "foundation"
+      },
+      "vocab_card": {
+        "word": "lightning",
+        "ipa": "/ˈlaɪtnɪŋ/",
+        "phonetic": "/ˈlaɪtnɪŋ/",
+        "syllables": "light·ning",
+        "pos": "名詞 (Noun，不可數)",
+        "chi": "閃電",
+        "meaning": "暴風雨雲層之間或雲與地面放電時劃破天空的刺眼強光",
+        "breakdown": "light(光) + -en(動詞字尾去 e) + -ing -> 照亮黑夜的閃電",
+        "trick": "諧音「萊特寧」：閃電速度快到「萊特寧 (lightning)」超人都拍不到，沒 e 只有雙 n！",
+        "scene": "大西洋夜空烏雲翻滾，一道樹枝狀金色閃電劃破黑暗海面，兩秒後傳來雷聲。",
+        "collocation": "thunder and lightning (雷電交加), a flash of lightning (一道閃電), lightning fast (閃電般快速)",
+        "img": "⚡",
+        "context_eng": "The journey is long, and there are many storms with thunder and lightning.",
+        "example": "A bright flash of lightning lit up the dark sky.",
+        "context_chi": "這趟旅程相當漫長，海上有許多伴隨雷聲與閃電的暴風雨。",
+        "chant": "閃電 lightning 沒 e 有雙 n，先見閃電才聞雷聲！",
+        "compare": "lightning (天空閃電，有雙 n 無 e) vs. lighting (照明燈光，少中間 n) vs. lightening (變亮，多了 e)",
+        "note": "不可數名詞，計算次數須用量詞 a flash of lightning；拼字嚴禁在 t 與 n 之間多加字母 e！"
+      },
+      "explanation": {
+        "point": "lightning 為不可數名詞「閃電」，由 light + n + ing 組成（無字母 e，含兩個 n）。",
+        "examPurpose": "考驗學生精準區分 lightning（閃電）、lighting（燈光）與 lightening（減輕/變亮）的拼寫陷阱。",
+        "correctReason": "照亮暴風雨夜空的自然放電強光稱為 lightning，必須為 light + ning。",
+        "note": "lightning [n.] 閃電（不可數）。",
+        "trap": "最常見兩大失誤：多加字母 e 寫成 lightening，或漏掉第一個 n 寫成 lighting（照明）。",
+        "commonTraps": [
+          "多加上字母 e，拼寫成 lightening（變亮／減輕）。",
+          "漏掉字中第一個 n，拼寫成 lighting（室內照明設備）。"
+        ],
+        "steps": [
+          "① 先寫光亮：light",
+          "② 加上連接的 n：lightn",
+          "③ 加上字尾 ing（不加 e）➔ lightning ✅"
+        ],
+        "insight": "💡 閃電快到來不及加 e！直接把 `light` + `ning` 接起來就 100% 正確！",
+        "visualBlock": {
+          "kind": "compare_table",
+          "title": "⚖️ 閃電三胞胎拼寫紅綠燈",
+          "data": {
+            "headers": [
+              "拼法",
+              "詞性與字義",
+              "字母檢查點"
+            ],
+            "rows": [
+              [
+                "lightning ✅",
+                "n. 閃電（不可數）",
+                "light + ning（有兩個 n、無 e）"
+              ],
+              [
+                "lighting",
+                "n. 照明燈光",
+                "少了中間的 n（教室燈光）"
+              ],
+              [
+                "lightening",
+                "v. 變亮；減輕",
+                "多了字母 e（不是閃電）"
+              ]
+            ]
+          },
+          "caption": "📊 天空劃破黑夜的閃電「沒 e 有雙 n」！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "thunderbolt",
+          "electric flash"
+        ],
+        "grammarCompare": "a flash of lightning (不可數名詞需借用量詞 flash)，常與 thunder (雷聲) 成對出現。",
+        "examVariations": "三胞胎辨析：lightning (閃電) vs. lighting (燈光) vs. lightening (變輕)。"
+      }
+    },
+    {
+      "id": "q_w14_od3_u17_15",
+      "book_id": "od3",
+      "unit_id": "od3_17",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★★☆☆☆",
+      "question": "Listen to the pronunciation and sentence: \"Take a moment to ________ the peaceful park and enjoy all the tall green trees.\" Spell the two-word phrasal verb for \"環顧四周；四處張望\".",
+      "target_chi": "環顧四周；四處張望",
+      "target_pos": "動詞片語 (Phrasal Verb)",
+      "masked_example": "Take a moment to ________ the peaceful park and enjoy all the tall green trees.",
+      "masked_example_chi": "花點時間________這座寧靜的公園，好好欣賞這些高大的綠樹吧。",
+      "options": [],
+      "answer": "look around",
+      "self_check": [
+        "1. 是否寫出完整的兩個英文單字且中間保有空格？",
+        "2. 第二個字是否拼為 a-r-o-u-n-d（開頭有 a 且雙母音為 ou）？",
+        "3. 是否確認語意為「朝四面八方觀看」而非尋找失物？"
+      ],
+      "trapCodes": [
+        "ENG_PREP_COLLOCATION",
+        "ENG_SPELLING_PHONICS"
+      ],
+      "triadGroup": {
+        "groupId": "OD3_U17_V2",
+        "tier": "L1-3",
+        "role": "foundation"
+      },
+      "vocab_card": {
+        "word": "look around",
+        "ipa": "/lʊk əˈraʊnd/",
+        "phonetic": "/lʊk əˈraʊnd/",
+        "syllables": "look a·round",
+        "pos": "動詞片語 (Phrasal Verb)",
+        "chi": "環顧四周；四處張望",
+        "meaning": "轉動頭部朝四面八方觀看，打量周遭環境或風景",
+        "breakdown": "look(看) + around(繞一圈、在周圍) -> 頭轉一圈看周圍",
+        "trick": "諧音「路可 額朗德」：「路可 (look)」轉學到新教室，好奇地頭轉「額朗德 (around)」一圈環顧四周！",
+        "scene": "Juan 走上高高的船隻甲板，朝東西南北四面八方張望海面上是否有風吹來。",
+        "collocation": "look around the deck (環顧甲板四周), stop and look around (停下看看四周), look around the museum (逛博物館)",
+        "img": "👀",
+        "context_eng": "I always go up to the deck and look around, and bring back the same news.",
+        "example": "Take a moment to look around the park and enjoy the trees.",
+        "context_chi": "我總是走上甲板環顧四周，卻每次都帶回同樣的消息。",
+        "chant": "around 繞一圈，look around 轉頭環顧四周真新鮮！",
+        "compare": "look around (隨意四處看看，無特定遺失物) vs. look for (鎖定特定失物去尋找) vs. turn around (轉身)",
+        "note": "課本定義：look around = look in all directions（朝各個方向觀看）；英式英語有時寫為 look round。"
+      },
+      "explanation": {
+        "point": "本片語由動詞搭配副詞/介系詞 around（繞一圈）組成，定義為「朝各個方向觀看」。",
+        "examPurpose": "考核學生依據語境拼寫課本核心故事片語「環顧四周」，並注意 around 的拼寫。",
+        "correctReason": "在公園或船甲板上欣賞或觀察四周所有方向，英語為 look around。",
+        "note": "look around [phr. v.] 環顧四周；四處張望。",
+        "trap": "易漏掉開頭字母 a 只寫成 round，或把雙母音 ou 錯寫成 ow (arownd)。",
+        "commonTraps": [
+          "拼寫第二個字時漏掉開頭母音 a，錯寫成 round。",
+          "將雙母音 /aʊ/ 錯拼成 ow (arownd)。"
+        ],
+        "steps": [
+          "① 確認動作：朝四面八方畫圓看一圈",
+          "② 拼寫第二個字：a + round（圓圈）",
+          "③ 完整寫出：look around ✅"
+        ],
+        "insight": "💡 around 就是「a + round（繞一圈）」，頭轉一圈看就是環顧四周！"
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "look in all directions",
+          "glimpse about"
+        ],
+        "grammarCompare": "look around（可單獨結束於句尾：Go up and look around.）也可後接地點名詞。",
+        "examVariations": "英英釋義題：Means to look in all directions. ➔ look around。"
+      }
+    },
+    {
+      "id": "q_w14_od3_u17_16",
+      "book_id": "od3",
+      "unit_id": "od3_17",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★★☆☆☆",
+      "question": "Listen to the pronunciation and sentence: \"________! A fast bicycle is coming right behind you on the narrow path.\" Spell the two-word phrasal verb for \"小心！注意！\".",
+      "target_chi": "小心！注意！／向外看",
+      "target_pos": "動詞片語 (Phrasal Verb)",
+      "masked_example": "________! A fast bicycle is coming right behind you on the narrow path.",
+      "masked_example_chi": "________！一輛快速的腳踏車正從你後方的窄路衝過來。",
+      "options": [],
+      "answer": "look out",
+      "self_check": [
+        "1. 是否寫出完整的兩個英文單字且中間保有空格？",
+        "2. 第二個字 out 是否以 ou 拼寫（而非 ow）？",
+        "3. 若為聽寫單字答案本體，小寫拼成 look out 即可（若帶入句首須大寫 L）？"
+      ],
+      "trapCodes": [
+        "ENG_PREP_COLLOCATION"
+      ],
+      "triadGroup": {
+        "groupId": "OD3_U17_V2",
+        "tier": "L1-3",
+        "role": "foundation"
+      },
+      "vocab_card": {
+        "word": "look out",
+        "ipa": "/lʊk aʊt/",
+        "phonetic": "/lʊk aʊt/",
+        "syllables": "look out",
+        "pos": "動詞片語 (Phrasal Verb)",
+        "chi": "小心！注意！／向外看",
+        "meaning": "警惕並提防周遭突發危險（常作祈使感嘆句），或把頭探向外面觀看",
+        "breakdown": "look(看) + out(往外面) -> 快往外看有沒有危險逼近",
+        "trick": "諧音「路可 凹特」：同學差點撞到電線桿，旁邊的人大喊「路可 凹特 (Look out!) 小心啊！」",
+        "scene": "暴風雨中船員大喊「小心大浪！」，或騎腳踏車轉出巷口時有人大叫提醒來車。",
+        "collocation": "Look out! (小心！), look out for cars (小心來車), look out of the window (往窗外看)",
+        "img": "⚠️",
+        "context_eng": "During the violent storm, the captain shouted, \"Look out! Huge waves are hitting the ship!\"",
+        "example": "Look out! A bicycle is coming fast behind you.",
+        "context_chi": "在猛烈的暴風雨中，船長大喊：「小心！巨浪正打向船身！」",
+        "chant": "快往外看有沒有危險，Look out 就是大喊小心！",
+        "compare": "Look out! (= Watch out! = Be careful! 小心危險) vs. look up (抬頭看/查資料) vs. find out (查明真相)",
+        "note": "提醒小心特定事物時要加介系詞 for：Look out for + N!；表示「往窗外看」則搭配 of：look out of the window。"
+      },
+      "explanation": {
+        "point": "本片語在危險緊急情境中作祈使句使用，意為「小心！注意周遭！」，同義於 Watch out!。",
+        "examPurpose": "測驗學生區分警告危險的感嘆片語與其他方向片語（up / after / for）的能力。",
+        "correctReason": "提醒後方有高速腳踏車接近、須注意安全時，英文警告用語為 look out。",
+        "note": "look out [phr. v.] 小心！注意！；向外看。",
+        "trap": "易受同義詞 watch out 干擾，或誤填為 look up（向上看）。",
+        "commonTraps": [
+          "與「往上看／查資料」混淆，誤寫成 up。",
+          "誤將兩字連寫成 lookout（名詞：瞭望台／守望者）。"
+        ],
+        "steps": [
+          "① 抓取情境：後方有快速來車的緊急警告 (!)",
+          "② 聯想畫面：快往外（out）看四周危險",
+          "③ 拼寫分開兩字：look out ✅"
+        ],
+        "insight": "💡 電影裡只要有人快撞車或被砸到，大家都會大喊 Look out!（等同 Watch out!）"
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "Watch out!",
+          "Be careful!"
+        ],
+        "grammarCompare": "look out（動詞片語，兩字分開）vs. lookout（名詞「瞭望台」，兩字連寫）。",
+        "examVariations": "介系詞補充：Look out for falling rocks!（小心落石！）"
+      }
+    },
+    {
+      "id": "q_w14_od3_u17_17",
+      "book_id": "od3",
+      "unit_id": "od3_17",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★★☆☆☆",
+      "question": "Listen to the pronunciation and sentence: \"You can easily ________ any unfamiliar geography word in this online dictionary.\" Spell the two-word phrasal verb for \"查閱（單字／資料）；抬頭看\".",
+      "target_chi": "抬頭看；查閱（單字／資料）",
+      "target_pos": "動詞片語 (Phrasal Verb)",
+      "masked_example": "You can easily ________ any unfamiliar geography word in this online dictionary.",
+      "masked_example_chi": "你可以輕鬆在這本線上字典裡________任何不熟悉的地理單字。",
+      "options": [],
+      "answer": "look up",
+      "self_check": [
+        "1. 是否寫出完整的兩個英文單字且中間保有空格？",
+        "2. 搭配字典查詢資料時是否使用 up（而非 for）？",
+        "3. 是否記住代名詞 it 的擺放位置（夾在中間）？"
+      ],
+      "trapCodes": [
+        "ENG_PREP_COLLOCATION"
+      ],
+      "triadGroup": {
+        "groupId": "OD3_U17_V2",
+        "tier": "L1-3",
+        "role": "foundation"
+      },
+      "vocab_card": {
+        "word": "look up",
+        "ipa": "/lʊk ʌp/",
+        "phonetic": "/lʊk ʌp/",
+        "syllables": "look up",
+        "pos": "動詞片語 (Phrasal Verb)",
+        "chi": "抬頭看；查閱（單字／資料）",
+        "meaning": "將視線往上看天空或高處，或在字典、書籍、網站中檢索查詢資料",
+        "breakdown": "look(看) + up(向上) -> 視線往上移動看，或向上翻找字典索引",
+        "trick": "諧音「路可 阿普」：遇到看不懂的單字，「路可 阿普 (look up)」把字典或平板往上拿就能立刻查到！",
+        "scene": "在文章裡看見不認識的生字 strait，先抬頭想一想再打開線上字典查閱字義。",
+        "collocation": "look up a word (查單字), look up at the stars (抬頭看星星), look up information (查詢資料)",
+        "img": "📚",
+        "context_eng": "When you read Juan's journal, you can look up unfamiliar geography words in a dictionary.",
+        "example": "You can look up any new word in this online dictionary.",
+        "context_chi": "閱讀 Juan 的航海日記時，你可以在字典裡查閱不熟悉的地理單字。",
+        "chant": "往上抬頭看星空，滑開字典查單字都叫 look up！",
+        "compare": "look up (抬頭看/查資料) vs. look down (往下看) vs. look up to (敬仰崇拜，課文 I really looked up to him.)",
+        "note": "可分片語：名詞可放中間或後面（look up the word / look the word up），但代名詞 it/them 只能夾在中間（look it up）！"
+      },
+      "explanation": {
+        "point": "本片語動詞兼具「抬頭往上看」與「在字典／網路查閱單字資訊」兩層常用涵義。",
+        "examPurpose": "測驗學生在字典查單字情境中精準選用 up 而非 for 的能力。",
+        "correctReason": "在字典或網站搜尋生字解釋、電話號碼或時刻表時，固定片語為 look up。",
+        "note": "look up [phr. v.] 抬頭看；查閱（單字／資料）。",
+        "trap": "受中文「找單字」直譯影響，台灣學生極常誤用成 look for a word in a dictionary！",
+        "commonTraps": [
+          "受中文「找單字」直譯干擾，誤填 look for（找失物）而非 look up。",
+          "使用代名詞 it 時放錯位置寫成 look up it（必須是 look it up）。"
+        ],
+        "steps": [
+          "① 抓關鍵詞：unfamiliar word + dictionary（字典查生字）",
+          "② 排除失物搜尋 for，鎖定查閱資訊 up",
+          "③ 拼寫完整兩字：look up ✅"
+        ],
+        "insight": "💡 鑰匙不見用 look for，字典查字用 look up；加上 to（look up to）則變成「敬仰崇拜」！"
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "search in a dictionary",
+          "check online"
+        ],
+        "grammarCompare": "look up the word = look the word up（名詞可放中間或後面）；look it up（代名詞只能放中間）。",
+        "examVariations": "課文延伸：I really looked up to Captain Magellan.（我非常敬仰麥哲倫船長。）"
+      }
+    },
+    {
+      "id": "q_w14_od3_u17_18",
+      "book_id": "od3",
+      "unit_id": "od3_17",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★☆☆☆☆",
+      "question": "Listen to the pronunciation and sentence: \"The brave Portuguese explorers plan to ________ west across the vast ocean next month.\" Spell the target word for \"航行；駕駛帆船\".",
+      "target_chi": "航行；駕駛帆船",
+      "target_pos": "動詞 (Verb) / 名詞 (Noun)",
+      "masked_example": "The brave Portuguese explorers plan to ________ west across the vast ocean next month.",
+      "masked_example_chi": "這群勇敢的葡萄牙探險家計畫下個月向西________橫越大洋。",
+      "options": [],
+      "answer": "sail",
+      "self_check": [
+        "1. 長母音 /eɪ/ 是否拼寫成 a-i（而非特價 sale 的 a-l-e）？",
+        "2. 開頭是否為 s（而非 ice / hail）？",
+        "3. plan to 後方接原形動詞，不可加 s 或 ed？"
+      ],
+      "trapCodes": [
+        "ENG_SPELLING_PHONICS"
+      ],
+      "triadGroup": {
+        "groupId": "OD3_U17_V1",
+        "tier": "L1-3",
+        "role": "foundation"
+      },
+      "vocab_card": {
+        "word": "sail",
+        "ipa": "/seɪl/",
+        "phonetic": "/seɪl/",
+        "syllables": "sail",
+        "pos": "動詞 (Verb) / 名詞 (Noun)",
+        "chi": "航行；駕駛帆船／船帆",
+        "meaning": "乘風推動船隻在水面上行進（動詞）；掛在桅桿上迎風的布帆（名詞）",
+        "breakdown": "s + ail (古英語 segel 大塊帆布 -> 藉帆航行)",
+        "trick": "諧音「誰喔」：海風把船帆吹得鼓鼓的，岸邊小朋友問「是誰喔 (sail) 開著帆船在海上航行？」",
+        "scene": "五艘西班牙帆船張開白色巨帆，藉著大西洋的海風一路向西航行。",
+        "collocation": "sail across the ocean (橫渡大洋), sail around the world (環遊世界), set sail (啟航), check the sails (檢查船帆)",
+        "img": "⛵",
+        "context_eng": "Magellan wants to sail west to Indonesia, and Juan climbs up to check the sails.",
+        "example": "The brave explorers plan to sail across the ocean next month.",
+        "context_chi": "麥哲倫想向西航行前往印尼，而 Juan 每天上去檢查船帆。",
+        "chant": "大風吹帆航行去，s-a-i-l 唸「誰喔」sail！",
+        "compare": "sail (ai 像海浪：航行/船帆) vs. sale (同音異義：拍賣/特價) vs. sailor (水手，字尾是 -or！)",
+        "note": "動詞三態為規則變化 sail–sailed–sailed；衍生人名「水手」必須拼成 sailor（-or 結尾，非 -er）。"
+      },
+      "explanation": {
+        "point": "sail 為動詞「乘風航行」或名詞「船帆」，與 sale（特價拍賣）為完全同音異義字。",
+        "examPurpose": "考驗學生分辨同音字 sail（海上航行）與 sale（商店特價），並確認不定詞後用原形。",
+        "correctReason": "plan to 後接原形動詞表示乘風渡海「航行」，正確拼寫為 s-a-i-l。",
+        "note": "sail [v./n.] 航行；船帆。",
+        "trap": "聽音極易寫成同音字 sale（拍賣），或誤加上過去式 -ed。",
+        "commonTraps": [
+          "同音異義誤拼：將海上航行 sail 寫成商店特價 sale。",
+          "不定詞 to 後誤加 -ed 或 -ing（plan to sailed）。"
+        ],
+        "steps": [
+          "① 判斷語境：渡過大洋（ocean）➔ 需風吹船帆（ai 像浪花）",
+          "② 排除商店拍賣 sale",
+          "③ 確認 plan to 後接原形 ➔ sail ✅"
+        ],
+        "insight": "💡 海上航行需要水滴和浪花，所以「航行 sail」裡面有 i（一點水滴），拍賣才是 sale！"
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "navigate by wind",
+          "voyage by ship"
+        ],
+        "grammarCompare": "sail (v. 航行 / n. 帆) ➔ sailor (n. 水手，字尾為 -or 而非 -er)。",
+        "examVariations": "課本定義題：You always need wind to do this. ➔ sail。"
+      }
+    },
+    {
+      "id": "q_w14_od3_u17_19",
+      "book_id": "od3",
+      "unit_id": "od3_17",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★★☆☆☆",
+      "question": "Listen to the pronunciation and sentence: \"Large cargo ships pass carefully through the narrow ________ connecting two oceans.\" Spell the target word for \"海峽\".",
+      "target_chi": "海峽",
+      "target_pos": "名詞 (Noun)",
+      "masked_example": "Large cargo ships pass carefully through the narrow ________ connecting two oceans.",
+      "masked_example_chi": "大型貨輪每天都小心翼翼地通過這條連接兩片大洋的狹窄________。",
+      "options": [],
+      "answer": "strait",
+      "self_check": [
+        "1. 是否拼為六個字母的瘦長字 s-t-r-a-i-t（絕不可加上 gh）？",
+        "2. 開頭三輔音叢是否為 s-t-r？",
+        "3. 中間長音 /eɪ/ 是否拼為 a-i（而非 ee 的 street 街道）？"
+      ],
+      "trapCodes": [
+        "ENG_SPELLING_PHONICS"
+      ],
+      "triadGroup": {
+        "groupId": "OD3_U17_V1",
+        "tier": "L1-3",
+        "role": "foundation"
+      },
+      "vocab_card": {
+        "word": "strait",
+        "ipa": "/streɪt/",
+        "phonetic": "/streɪt/",
+        "syllables": "strait",
+        "pos": "名詞 (Noun)",
+        "chi": "海峽",
+        "meaning": "夾在兩塊陸地之間、連接兩片廣大海洋的狹窄天然水道",
+        "breakdown": "str(三輔音叢首音) + ait(與 strict 緊窄同源) -> 又緊又窄的水道",
+        "trick": "諧音「死追特」：海峽水道又瘦又窄，船隻只好「死追特 (strait)」筆直穿過去；少 gh 比較瘦的就是海峽！",
+        "scene": "麥哲倫船隊沿著南美洲南端穿梭在兩側高地夾擊的麥哲倫海峽，進入太平洋。",
+        "collocation": "Strait of Magellan (麥哲倫海峽), Taiwan Strait (台灣海峽), narrow strait (狹窄海峽)",
+        "img": "🌊",
+        "context_eng": "Then they sail through a narrow area of water called a strait and reach the Pacific Ocean.",
+        "example": "Large cargo ships pass through the narrow strait every day.",
+        "context_chi": "接著他們航行穿過一片稱為海峽的狹窄水域，抵達了太平洋。",
+        "chant": "海峽好窄字好瘦，拿掉 gh 的 strait 就是海峽！",
+        "compare": "strait (名詞：狹窄海峽，6 字母) vs. straight (同音：筆直的，8 字母有 gh) vs. street (街道)",
+        "note": "與 straight 發音完全相同 (/streɪt/)！指特定海峽名稱時首字母須大寫（如 the Strait of Magellan）。"
+      },
+      "explanation": {
+        "point": "strait 為地理名詞「海峽」，與形容詞 straight（筆直的）同音但少了不發音的 gh。",
+        "examPurpose": "精準測驗六年級最高頻同音大魔王 strait（海峽）vs. straight（筆直）的拼寫區辨。",
+        "correctReason": "連接兩片海洋的狹窄水道稱為 strait，拼法只有 6 個字母 s-t-r-a-i-t。",
+        "note": "strait [n.] 海峽。",
+        "trap": "高達七成錯誤都是將海峽錯拼成 straight（筆直的），或與街道 street 混淆。",
+        "commonTraps": [
+          "多寫入不發音的 gh，錯拼成同音字 straight（筆直的）。",
+          "把 ai 寫成 ee，變成街道 street。"
+        ],
+        "steps": [
+          "① 抓關鍵詞：narrow（狹窄的）+ connecting two oceans",
+          "② 海峽很窄很瘦 ➔ 拿掉 gh 讓單字變瘦",
+          "③ 寫出 6 字母：s-t-r-a-i-t ✅"
+        ],
+        "insight": "💡 海峽很窄所以字母比較瘦（6 個字母 `strait`）；筆直的線條拉很長才有 `gh`（`straight`）！",
+        "visualBlock": {
+          "kind": "compare_table",
+          "title": "⚖️ 同音異義紅綠燈：strait vs. straight vs. sail vs. sale",
+          "data": {
+            "headers": [
+              "目標字彙",
+              "發音",
+              "詞性與核心意義",
+              "秒殺記憶秘訣"
+            ],
+            "rows": [
+              [
+                "strait ✅",
+                "/streɪt/",
+                "n. 海峽（狹窄水道）",
+                "水道很窄字比較瘦，沒有 gh"
+              ],
+              [
+                "straight",
+                "/streɪt/",
+                "adj./adv. 筆直的",
+                "多了 gh 像拉長的一條直線"
+              ],
+              [
+                "sail ✅",
+                "/seɪl/",
+                "v. 航行 / n. 船帆",
+                "有 i 像海上浪花，靠風航行"
+              ],
+              [
+                "sale",
+                "/seɪl/",
+                "n. 特價；拍賣",
+                "商店 on sale 特價拍賣"
+              ]
+            ]
+          },
+          "caption": "📊 這兩組發音一模一樣的雙胞胎，看清字中字母就能 100% 不寫錯！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "narrow channel",
+          "sea passage"
+        ],
+        "grammarCompare": "strait（天然形成、狹窄的水道）vs. canal（人工開鑿的運河）。",
+        "examVariations": "課本定義題：Ships sail through this from one ocean to another. ➔ strait。"
+      }
+    },
+    {
+      "id": "q_w14_od3_u17_20",
+      "book_id": "od3",
+      "unit_id": "od3_17",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★☆☆☆☆",
+      "question": "Listen to the pronunciation and sentence: \"It is cold and ________ today, so let us fly our colorful kites in the park.\" Spell the target word for \"多風的；刮風的\".",
+      "target_chi": "多風的；刮風的",
+      "target_pos": "形容詞 (Adj.)",
+      "masked_example": "It is cold and ________ today, so let us fly our colorful kites in the park.",
+      "masked_example_chi": "今天又冷又________，我們一起去公園放彩色風箏吧。",
+      "options": [],
+      "answer": "windy",
+      "self_check": [
+        "1. 是否在名詞字根後加上形容詞字尾 -y？",
+        "2. is cold and ___ 需要對稱形容詞，確定不可漏掉 -y？",
+        "3. 是否確認開頭為 w-i-n-d？"
+      ],
+      "trapCodes": [
+        "ENG_POS_CONFUSION",
+        "ENG_SPELLING_PHONICS"
+      ],
+      "triadGroup": {
+        "groupId": "OD3_U17_V1",
+        "tier": "L1-3",
+        "role": "foundation"
+      },
+      "vocab_card": {
+        "word": "windy",
+        "ipa": "/ˈwɪndi/",
+        "phonetic": "/ˈwɪndi/",
+        "syllables": "win·dy",
+        "pos": "形容詞 (Adj.)",
+        "chi": "多風的；刮風的",
+        "meaning": "強風持續吹拂、風勢很大的天氣狀況",
+        "breakdown": "wind(名詞：風) + -y(形容詞字尾：充滿…的) -> 充滿風的",
+        "trick": "諧音「問弟」：外面風大到帽子差點吹飛，哥哥趕快「問弟 (windy)」：今天風這麼大還要去放風箏嗎？",
+        "scene": "冬天南美洲海岸寒風呼嘯吹拂，或是秋天河濱公園風大到適合放風箏的日子。",
+        "collocation": "a windy day (刮風的日子), cold and windy (寒冷多風), get windy (起風了)",
+        "img": "🌬️",
+        "context_eng": "Winter was cold and windy, with fog and hail, before spring arrived.",
+        "example": "It is very windy today, so let us fly our kites at the park.",
+        "context_chi": "在春天到來之前，當地的冬天既寒冷又多風，還常起霧下冰雹。",
+        "chant": "風 wind 加 y 變多風，短音 /ɪ/ 的 windy 放風箏！",
+        "compare": "windy (adj. 多風的) vs. wind (n. 風，i 發短音 /ɪ/) vs. cloudy / rainy / foggy (天氣名詞+y)",
+        "note": "天氣名詞加 -y 成形容詞公式（wind → windy）；描寫天氣主詞須用虛主詞 It：It is windy today.。"
+      },
+      "explanation": {
+        "point": "windy 為天氣形容詞「多風的」，遵守「天氣名詞 + y = 天氣形容詞」構詞規則。",
+        "examPurpose": "考核學生在 be 動詞與並列形容詞 cold and ___ 後正確使用形容詞 windy 而非名詞 wind。",
+        "correctReason": "It is cold and ___ 需要填入形容詞描述天氣狀態，須將 wind 加上 -y 成為 windy。",
+        "note": "windy [adj.] 多風的；刮風的。",
+        "trap": "常漏掉字尾 -y 直接寫成名詞 wind，造成詞性不對稱錯誤。",
+        "commonTraps": [
+          "誤填名詞 wind（It is wind 屬常見詞性誤用）。",
+          "把開頭 w 聽成 r 或雙寫 d 拼成 winddy。"
+        ],
+        "steps": [
+          "① 看句構：It is cold (adj.) and ___ (須接 adj.)",
+          "② 套用天氣構詞公式：wind (風) + -y",
+          "③ 完成拼寫：windy ✅"
+        ],
+        "insight": "💡 「It is + 天氣形容詞」後面絕對要看到字尾 -y（windy, cloudy, rainy, snowy, foggy）！"
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "breezy",
+          "gusty"
+        ],
+        "grammarCompare": "It is windy today.（用形容詞）vs. There is a strong wind today.（用名詞）。",
+        "examVariations": "天氣形容詞家族：wind → windy、cloud → cloudy、fog → foggy（須雙寫 g）。"
+      }
+    },
+    {
+      "id": "q_w14_od3_u17_21",
+      "book_id": "od3",
+      "unit_id": "od3_17",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "choice",
+      "category_tag": "reading",
+      "difficulty": "★★☆☆☆",
+      "triadGroup": {
+        "groupId": "OD3_U17_T4",
+        "tier": "L1-3",
+        "role": "foundation"
+      },
+      "question": "In \"My Journey with Captain Magellan,\" which word describes a narrow area of water connecting two large oceans that Juan's ships sailed through?",
+      "options": [
+        "waterfall",
+        "strait",
+        "coast",
+        "island"
+      ],
+      "answer": "strait",
+      "trapCodes": [
+        "ENG_CHINGLISH_LITERAL"
+      ],
+      "explanation": {
+        "point": "課文 Words in Context 核心定義：strait 指連接兩片海洋的狹窄水道（海峽）。",
+        "examPurpose": "測驗學生掌握課文地理語境詞彙 strait 的英文定義與與其他地形詞的區分。",
+        "correctReason": "課文原句明確定義：Then they sail through a narrow area of water called a strait and reach the Pacific Ocean。",
+        "note": "麥哲倫海峽（Strait of Magellan）即為連接大西洋與太平洋的狹窄水道。",
+        "trap": "易把海岸（coast）或瀑布（waterfall）誤當作連接兩片大洋的水道。",
+        "distractorAnalysis": {
+          "waterfall": "waterfall 是河水從高處懸崖垂直落下的瀑布，並非連接兩片大洋的航海水道。",
+          "coast": "coast 指陸地靠海的海岸邊緣地帶，不是船隻穿過的狹窄水域。",
+          "island": "island 是四周被水包圍的陸地島嶼，並非可以航行穿過的水道。"
+        },
+        "steps": [
+          "① 抓取線索：narrow area of water + connecting two large oceans",
+          "② 對應課文事件：大西洋 ➔ 狹窄水域 ➔ 太平洋",
+          "③ 確認地理名詞：strait（海峽）✅"
+        ],
+        "insight": "💡 船隻能「穿過 (sail through)」且連接兩片海洋的狹窄水道，只有海峽 strait！"
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "narrow sea channel",
+          "water passage"
+        ],
+        "grammarCompare": "strait（狹窄天然水道）vs. island（四周環海的陸地）vs. coast（陸海交界線）。",
+        "examVariations": "課文配對題：Ships sail through this from one ocean to another. ➔ strait。"
+      }
+    },
+    {
+      "id": "q_w14_od3_u17_22",
+      "book_id": "od3",
+      "unit_id": "od3_17",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "choice",
+      "category_tag": "grammar",
+      "difficulty": "★★★☆☆",
+      "triadGroup": {
+        "groupId": "OD3_U17_T3",
+        "tier": "L4-6",
+        "role": "twist"
+      },
+      "question": "To reach the deck of the ship, Juan climbs ________ the wooden ladder and walks ________ the tall pole.",
+      "options": [
+        "up / around",
+        "down / into",
+        "out of / through",
+        "into / down"
+      ],
+      "answer": "up / around",
+      "trapCodes": [
+        "ENG_PREP_COLLOCATION"
+      ],
+      "explanation": {
+        "point": "移動介系詞方向邏輯：爬梯子往上到甲板用 up；繞過柱子外圍用 around。",
+        "examPurpose": "考核學生結合船艙空間動線（從底層爬梯子上甲板再繞過桅桿柱子）選出精準移動介系詞。",
+        "correctReason": "從下方船艙爬梯子前往上方甲板方向為向上 (climb up the ladder)，經過直立圓柱外圍則用繞過 (walk around the pole)。",
+        "note": "呼應課本船艙動線練習第 5 步（up the ladder）與第 6 步（around the pole）。",
+        "trap": "容易把 climb up（往上爬上甲板）誤選為 down（往下走），或把繞柱子誤選為穿過箱子的 through。",
+        "distractorAnalysis": {
+          "down / into": "要從船艙到達最上方的甲板（deck）必須往上爬（up），down 則是往底層走，方向相反。",
+          "out of / through": "梯子是往上攀爬的設施不能用 out of；柱子是實心圓柱，人只能繞著走 around 而無法穿過柱子內部。",
+          "into / down": "into 指進入箱子或房間內部，不能用來爬梯子；走下樓梯才是 down the stairs。"
+        },
+        "steps": [
+          "① 抓目的地：To reach the deck（甲板在船的最上方）➔ 爬梯子必為 up",
+          "② 抓物體形狀：the tall pole（實心圓柱只能繞著走）➔ around",
+          "③ 鎖定組合：up / around ✅"
+        ],
+        "insight": "💡 梯子往上用 up the ladder、樓梯往下用 down the stairs、實心柱子繞一圈用 around the pole！",
+        "visualBlock": {
+          "kind": "prep_ladder",
+          "title": "🧭 船艙到甲板：七大移動介系詞方向圖譜",
+          "data": {
+            "levels": [
+              {
+                "prep": "out of / into",
+                "scope": "內外進出（從內部出來 ➔ 進入內部）",
+                "examples": [
+                  "out of bed",
+                  "into the kitchen"
+                ],
+                "highlight": false
+              },
+              {
+                "prep": "up / down",
+                "scope": "垂直上下或沿線（向上 ➔ 向下）",
+                "examples": [
+                  "up the ladder",
+                  "down the stairs / coast"
+                ],
+                "highlight": true
+              },
+              {
+                "prep": "through",
+                "scope": "從立體空間一端貫穿到另一端",
+                "examples": [
+                  "through the box",
+                  "through a strait / park"
+                ],
+                "highlight": true
+              },
+              {
+                "prep": "around / to",
+                "scope": "繞著外圍畫圈 / 朝向目的地",
+                "examples": [
+                  "around the pole / pond",
+                  "go up to the deck"
+                ],
+                "highlight": true
+              }
+            ]
+          },
+          "caption": "📊 先判別「進出 (into/out of)」、「上下 (up/down)」還是「穿過 vs. 繞圈 (through/around)」！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "ascend the ladder / circle the pole",
+          "climb onto the deck"
+        ],
+        "grammarCompare": "up / down 表垂直方向移動；around 表繞行外圍；through 表貫穿中空空間。",
+        "examVariations": "動線連貫題：get out of bed ➔ into the kitchen ➔ down the stairs ➔ through the box ➔ up the ladder ➔ around the pole。"
+      }
+    },
+    {
+      "id": "q_w14_od3_u17_23",
+      "book_id": "od3",
+      "unit_id": "od3_17",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "choice",
+      "category_tag": "grammar",
+      "difficulty": "★★★☆☆",
+      "triadGroup": {
+        "groupId": "OD3_U17_T2",
+        "tier": "L4-6",
+        "role": "twist"
+      },
+      "question": "Whenever Captain Magellan told Juan to check the wind on the deck, Juan would go up and ________ in all directions across the quiet ocean.",
+      "options": [
+        "look around",
+        "look after",
+        "look through",
+        "look up"
+      ],
+      "answer": "look around",
+      "trapCodes": [
+        "ENG_PREP_COLLOCATION"
+      ],
+      "explanation": {
+        "point": "look 片語動詞語義辨析：look around = look in all directions（環顧四周）。",
+        "examPurpose": "測驗學生在課文原句情境中精準區辨 4 個 look 動詞片語的核心涵義。",
+        "correctReason": "題幹線索「in all directions across the quiet ocean」直接對應 look around（朝四面八方環顧張望）的定義。",
+        "note": "課文原句：I always go up and look around and bring back the same news.",
+        "trap": "若只看到 ocean（大海），可能誤以為是查資料（look up）或照顧（look after）。",
+        "distractorAnalysis": {
+          "look after": "look after 意為「照顧、照料（人或寵物）」，與在甲板上四處張望風向無關。",
+          "look through": "look through 意為「從頭到尾翻閱筆記或相簿」，不能用來搭配 in all directions 觀察海面。",
+          "look up": "look up 意為「抬頭往上看」或「查閱字典資料」，並未包含朝四面八方環視的動作。"
+        },
+        "steps": [
+          "① 圈出關鍵定義：in all directions（朝所有方向）",
+          "② 聯想空間圖像：頭轉一圈繞著看 ➔ around",
+          "③ 確認課文片語：look around ✅"
+        ],
+        "insight": "💡 題幹只要出現 `in all directions`，100% 就是考 `look around`！",
+        "visualBlock": {
+          "kind": "prep_ladder",
+          "title": "🧭 `look` 六大動詞片語空間感記憶階梯",
+          "data": {
+            "levels": [
+              {
+                "prep": "look around",
+                "scope": "頭轉一圈 ➔ 環顧四周 (in all directions)",
+                "examples": [
+                  "go up and look around"
+                ],
+                "highlight": true
+              },
+              {
+                "prep": "look through",
+                "scope": "從頭穿過看到尾 ➔ 翻閱／瀏覽",
+                "examples": [
+                  "look through old photos"
+                ],
+                "highlight": false
+              },
+              {
+                "prep": "look for",
+                "scope": "為了失物目標 ➔ 尋找",
+                "examples": [
+                  "look for a missing key"
+                ],
+                "highlight": false
+              },
+              {
+                "prep": "look up",
+                "scope": "視線往上／翻字典 ➔ 抬頭看；查資料",
+                "examples": [
+                  "look up a new word"
+                ],
+                "highlight": false
+              },
+              {
+                "prep": "look after",
+                "scope": "跟在後面保護 ➔ 照顧；照料",
+                "examples": [
+                  "look after our puppy"
+                ],
+                "highlight": false
+              },
+              {
+                "prep": "look out",
+                "scope": "快往外看危險 ➔ 小心！注意！",
+                "examples": [
+                  "Look out! A bike is coming!"
+                ],
+                "highlight": false
+              }
+            ]
+          },
+          "caption": "📊 記住每個介系詞的空間畫面，六個 look 片語一輩子不再搞混！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "look in all directions",
+          "scan the horizon"
+        ],
+        "grammarCompare": "look around（朝四周看）vs. look up to（敬仰崇拜某人，如 Juan looked up to Magellan）。",
+        "examVariations": "課文細節題：What does Juan do when he goes up to the deck? (He looks around.)"
+      }
+    },
+    {
+      "id": "q_w14_od3_u17_24",
+      "book_id": "od3",
+      "unit_id": "od3_17",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "choice",
+      "category_tag": "vocab",
+      "difficulty": "★★★★☆",
+      "triadGroup": {
+        "groupId": "OD3_U17_T2",
+        "tier": "L7-10",
+        "role": "challenge"
+      },
+      "question": "Before the test, Mia needed to ________ her notes quickly, ________ a difficult word in her dictionary, and ________ her little brother at the same time.",
+      "options": [
+        "look through / look up / look after",
+        "look for / look around / look out",
+        "look up / look through / look for",
+        "look after / look for / look around"
+      ],
+      "answer": "look through / look up / look after",
+      "trapCodes": [
+        "ENG_PREP_COLLOCATION"
+      ],
+      "explanation": {
+        "point": "綜合語境辨析：快速翻閱筆記用 look through，查字典用 look up，照顧弟弟用 look after。",
+        "examPurpose": "透過三格連貫生活情境，測試學生同時區辨三個極易混淆的 look 片語動詞。",
+        "correctReason": "(1) 翻看整份筆記用 look through；(2) 在字典查單字用 look up；(3) 照料弟弟用 look after。",
+        "note": "三個受詞分別鎖定三種完全不同的動作邏輯。",
+        "trap": "最常在「查字典」誤選 look for（尋找失物），或在「看筆記」誤選 look up。",
+        "distractorAnalysis": {
+          "look for / look around / look out": "筆記本就在手邊不用 look for，字典查單字不能用 look around，照顧弟弟也不能用 look out。",
+          "look up / look through / look for": "把前兩格完全寫反，且第三格變成「尋找」走失的弟弟而非「照顧」弟弟，不符合考前讀書情境。",
+          "look after / look for / look around": "不能「照顧」筆記本，字典裡也不是用 look for 找單字。"
+        },
+        "steps": [
+          "① 第一格受詞 her notes quickly（快速從頭翻筆記）➔ look through",
+          "② 第二格受詞 a word in her dictionary（字典查生字）➔ look up",
+          "③ 第三格受詞 her little brother（照料弟弟）➔ look after ✅"
+        ],
+        "insight": "💡 筆記看過去 `through`、字典往上查 `up`、弟弟跟在後頭顧 `after`！",
+        "visualBlock": {
+          "kind": "compare_table",
+          "title": "⚖️ look 動詞片語受詞對照與可分規則表",
+          "data": {
+            "headers": [
+              "片語動詞",
+              "常見搭配受詞",
+              "代名詞位置規則"
+            ],
+            "rows": [
+              [
+                "look through ✅",
+                "notes / old photos / a list",
+                "不可分：look through them"
+              ],
+              [
+                "look up ✅",
+                "a new word / information",
+                "可分：look it up（代名詞放中間）"
+              ],
+              [
+                "look after ✅",
+                "a baby / a puppy / plants",
+                "不可分：look after him"
+              ],
+              [
+                "look for",
+                "missing keys / clues",
+                "不可分：look for it"
+              ]
+            ]
+          },
+          "caption": "📊 看受詞選片語、看代名詞決定位置，再也不踩 grammar trap！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "review / check / care for",
+          "skim / consult / tend"
+        ],
+        "grammarCompare": "look up + 資訊名詞 vs. look for + 遺失物 vs. look after + 人/寵物。",
+        "examVariations": "代名詞測試：look the word up = look it up（可分），但 look after him（不可分）。"
+      }
+    },
+    {
+      "id": "q_w14_od3_u17_25",
+      "book_id": "od3",
+      "unit_id": "od3_17",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "choice",
+      "category_tag": "grammar",
+      "difficulty": "★★★☆☆",
+      "triadGroup": {
+        "groupId": "OD3_U17_T1",
+        "tier": "L4-6",
+        "role": "twist"
+      },
+      "question": "Look at the dark clouds in the sky! Please come inside ________ it starts to rain heavily.",
+      "options": [
+        "before",
+        "after",
+        "around",
+        "through"
+      ],
+      "answer": "before",
+      "trapCodes": [
+        "ENG_TENSE_MISMATCH",
+        "ENG_CHINGLISH_LITERAL"
+      ],
+      "explanation": {
+        "point": "時間連接詞邏輯：before 連接「第二個發生（較晚發生）」的事件（還沒下雨之前先回屋內）。",
+        "examPurpose": "考核學生依據生活邏輯與天色線索，正確判斷 before 與 after 的事件先後關係。",
+        "correctReason": "天空有烏雲表示「雨正要下但還沒下」，必須「先」進屋內（1st），免得「隨後」下大雨（2nd）被淋濕，故填 before。",
+        "note": "改編自課本 Writing Study 隨堂第 3 題：It's dark and cloudy. Please come inside before it rains.",
+        "trap": "若沒判斷前後動作的時間軸，常誤選 after（變成淋完雨才進屋內）。",
+        "distractorAnalysis": {
+          "after": "若填入 after，句意會變成「等開始下大雨之後再進屋內」，與烏雲警示先躲雨的語意矛盾。",
+          "around": "around 是空間介系詞「在周圍」，不能連接完整子句 it starts to rain。",
+          "through": "through 是空間介系詞「穿過」，無法作為時間從屬連接詞引導子句。"
+        },
+        "steps": [
+          "① 排時間軸：1st 趕快進屋內 (come inside) ➔ 2nd 開始下大雨 (starts to rain)",
+          "② 空格後方是第 2 件發生的事（下雨）",
+          "③ 後接 2nd 事件的連接詞是 before ✅"
+        ],
+        "insight": "💡 判斷黃金公式：`[1st] before [2nd]` vs. `[2nd] after [1st]`！先畫出 1st 和 2nd 就絕不會選反！",
+        "visualBlock": {
+          "kind": "timeline",
+          "title": "⏳ Before vs. After 事件順序雙向時間軸",
+          "data": {
+            "events": [
+              {
+                "time": "1st (先發生)",
+                "label": "Come inside / Study hard",
+                "highlight": true
+              },
+              {
+                "time": "2nd (後發生)",
+                "label": "It starts to rain / Take the test",
+                "highlight": false
+              }
+            ],
+            "rule": "before 後面接 2nd（後發生的事）；after 後面接 1st（先發生的事）！"
+          },
+          "caption": "📊 先把兩件事標上 1st 與 2nd，看連接詞緊鄰哪一個就能秒選！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "prior to",
+          "earlier than"
+        ],
+        "grammarCompare": "Please come inside before it rains. = Before it rains, please come inside.（逗號注意）",
+        "examVariations": "時間對調考題：The plant grew faster after I gave it water every day."
+      }
+    },
+    {
+      "id": "q_w14_od3_u17_26",
+      "book_id": "od3",
+      "unit_id": "od3_17",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "choice",
+      "category_tag": "grammar",
+      "difficulty": "★★★★☆",
+      "triadGroup": {
+        "groupId": "OD3_U17_T1",
+        "tier": "L7-10",
+        "role": "challenge"
+      },
+      "question": "Timeline: (1st) The ships sailed through a narrow strait. ➔ (2nd) They reached the Pacific Ocean. Which sentence has the EXACT SAME meaning?",
+      "options": [
+        "Before the ships sailed through a narrow strait, they reached the Pacific Ocean.",
+        "After the ships reached the Pacific Ocean, they sailed through a narrow strait.",
+        "The ships reached the Pacific Ocean after they sailed through a narrow strait.",
+        "The ships sailed through a narrow strait after they reached the Pacific Ocean."
+      ],
+      "answer": "The ships reached the Pacific Ocean after they sailed through a narrow strait.",
+      "trapCodes": [
+        "ENG_TENSE_MISMATCH",
+        "ENG_CHINGLISH_LITERAL"
+      ],
+      "explanation": {
+        "point": "時間複合句精準轉換：將「1st 穿過海峽 ➔ 2nd 抵達太平洋」正確轉換為 `[2nd] after [1st]` 結構。",
+        "examPurpose": "考驗學生在不被文字位置迷惑的情況下，嚴格核對 before / after 與 1st / 2nd 事件配對。",
+        "correctReason": "選項 C 符合 `[2nd 抵達太平洋] after [1st 穿過海峽]` 的時間順序，完全還原歷史航行路線。",
+        "note": "若改用 before 表達相同意思，必須寫成：The ships sailed through a narrow strait before they reached the Pacific Ocean.",
+        "trap": "四個選項都出現相同字詞，極易只看表面字面而把事件先後顛倒。",
+        "distractorAnalysis": {
+          "Before the ships sailed through a narrow strait, they reached the Pacific Ocean.": "意思變成先抵達太平洋、之後才穿過海峽，歷史順序完全顛倒。",
+          "After the ships reached the Pacific Ocean, they sailed through a narrow strait.": "after 後面放的應是 1st 事件，這裡卻把抵達太平洋放進 after 子句，順序反了。",
+          "The ships sailed through a narrow strait after they reached the Pacific Ocean.": "同樣把 2nd 事件放進 after 子句，導致意思變成先到太平洋才穿海峽。"
+        },
+        "steps": [
+          "① 鎖定正確順序：1st = 穿海峽 (strait)，2nd = 到太平洋 (Pacific)",
+          "② 檢查鐵律：before 緊接 2nd / after 緊接 1st",
+          "③ 只有選項 C 的 after 後面緊接「穿海峽 (1st)」➔ 正確 ✅"
+        ],
+        "insight": "💡 四選一時間順序大魔王：別從頭讀，直接圈出 `before / after` 後面的子句檢查對不對就能秒殺！",
+        "visualBlock": {
+          "kind": "compare_table",
+          "title": "⚖️ Before vs. After 邏輯鎖定檢核表",
+          "data": {
+            "headers": [
+              "句型公式",
+              "連接詞後方緊接哪一件事？",
+              "本題正確示範"
+            ],
+            "rows": [
+              [
+                "[1st] before [2nd]",
+                "緊接 2nd（較晚發生的事）",
+                "They sailed through a strait before they reached the Pacific."
+              ],
+              [
+                "[2nd] after [1st] ✅",
+                "緊接 1st（較早發生的事）",
+                "They reached the Pacific after they sailed through a strait."
+              ]
+            ]
+          },
+          "caption": "📊 緊盯 `before / after` 後面跟著哪一個動作，3 秒抓出倒裝錯句！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "Once they had passed the strait, they entered the Pacific.",
+          "They sailed through the strait before reaching the Pacific."
+        ],
+        "grammarCompare": "Before + 2nd, 1st. ⟷ After + 1st, 2nd.（句首有逗號，句中無逗號）。",
+        "examVariations": "歷屆閱讀理解與排序綜合必考「選出時間順序正確的句子」。"
+      }
+    },
+    {
+      "id": "q_w14_od3_u17_27",
+      "book_id": "od3",
+      "unit_id": "od3_17",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "choice",
+      "category_tag": "reading",
+      "difficulty": "★★★★☆",
+      "triadGroup": {
+        "groupId": "OD3_U17_T4",
+        "tier": "L4-6",
+        "role": "twist"
+      },
+      "question": "According to Juan's journal, what is the CORRECT order of his journey around the world from start to finish?",
+      "options": [
+        "Spain ➔ coast of South America ➔ Strait of Magellan ➔ Guam ➔ coast of Africa ➔ Spain",
+        "Spain ➔ Guam ➔ Strait of Magellan ➔ coast of South America ➔ Indonesia ➔ Spain",
+        "Portugal ➔ coast of Africa ➔ Strait of Magellan ➔ Guam ➔ South America ➔ Spain",
+        "Spain ➔ Strait of Magellan ➔ coast of South America ➔ Indonesia ➔ Guam ➔ Spain"
+      ],
+      "answer": "Spain ➔ coast of South America ➔ Strait of Magellan ➔ Guam ➔ coast of Africa ➔ Spain",
+      "trapCodes": [
+        "ENG_TENSE_MISMATCH"
+      ],
+      "explanation": {
+        "point": "閱讀地圖與航海路線時序整合：從西班牙啟航向西繞行地球一圈的五大航段順序。",
+        "examPurpose": "對應課本 Reading Maps 策略與世界航海排序題，考核跨日期與地圖位置的精準整合力。",
+        "correctReason": "路線依序為：(1) 從西班牙橫渡大西洋到南美洲；(2) 沿南美洲海岸向南；(3) 穿過麥哲倫海峽入太平洋；(4) 抵達關島與印尼；(5) 繞行非洲海岸回到西班牙。",
+        "note": "麥哲倫雖出生於葡萄牙，但該船隊是由西班牙啟航並向西行進。",
+        "trap": "容易把麥哲倫的國籍 Portugal 誤當作啟航地，或把關島與麥哲倫海峽的順序弄反。",
+        "distractorAnalysis": {
+          "Spain ➔ Guam ➔ Strait of Magellan ➔ coast of South America ➔ Indonesia ➔ Spain": "船隊必須先經過南美洲與麥哲倫海峽才能進入太平洋到達關島，順序顛倒。",
+          "Portugal ➔ coast of Africa ➔ Strait of Magellan ➔ Guam ➔ South America ➔ Spain": "船隊是從西班牙 (Spain) 啟航且先往南美洲，非洲海岸是最後返航經過的路線。",
+          "Spain ➔ Strait of Magellan ➔ coast of South America ➔ Indonesia ➔ Guam ➔ Spain": "船隊先抵達南美洲海岸停留一年後才南下通過海峽；且太平洋中是先到 Guam 再到 Mactan 與 Indonesia。"
+        },
+        "steps": [
+          "① 起點：Spain（1519/9/20）➔ 橫渡大西洋至南美洲海岸",
+          "② 轉折：穿過 Strait of Magellan 進入太平洋 ➔ Guam ➔ Mactan / Indonesia",
+          "③ 返航：橫渡印度洋繞過非洲海岸（coast of Africa）回到 Spain（1522/9/6）✅"
+        ],
+        "insight": "💡 記住向西環球路徑：歐 (Spain) ➔ 南美 (Strait) ➔ 太平洋 (Guam/印尼) ➔ 繞非洲回西班牙！",
+        "visualBlock": {
+          "kind": "timeline",
+          "title": "⏳ 麥哲倫船隊三年環球航行關鍵座標 (1519–1522)",
+          "data": {
+            "events": [
+              {
+                "time": "1519/09",
+                "label": "Depart Spain (5 ships, 250 men)",
+                "highlight": true
+              },
+              {
+                "time": "1520/11",
+                "label": "Pass Strait of Magellan → Pacific",
+                "highlight": true
+              },
+              {
+                "time": "1521/03–11",
+                "label": "Guam → Mactan (Magellan dies) → Indonesia",
+                "highlight": false
+              },
+              {
+                "time": "1522/09",
+                "label": "Return to Spain (1 ship, 18 survivors)",
+                "highlight": true
+              }
+            ],
+            "rule": "向西跨大西洋 ➔ 麥哲倫海峽 ➔ 太平洋島嶼與香料群島 ➔ 印度洋繞非洲返航！"
+          },
+          "caption": "📊 對照時間軸與地圖位置，五段航線排序題再也不會迷路！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "circumnavigation route",
+          "westward expedition"
+        ],
+        "grammarCompare": "across the ocean（橫跨大洋）、down the coast（沿海岸南下）、through the strait（穿過海峽）、around Africa（繞過非洲）。",
+        "examVariations": "閱讀理解圖表排序題（Number the sentences 1–5）。"
+      }
+    },
+    {
+      "id": "q_w14_od3_u17_28",
+      "book_id": "od3",
+      "unit_id": "od3_17",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "choice",
+      "category_tag": "reading",
+      "difficulty": "★★★★★",
+      "triadGroup": {
+        "groupId": "OD3_U17_T4",
+        "tier": "L7-10",
+        "role": "challenge"
+      },
+      "question": "Why did Captain Magellan NOT return to Spain with Juan in September 1522, and what happened to the ship Trinidad?",
+      "options": [
+        "Magellan died in a battle on the island of Mactan, and the Trinidad was damaged in Indonesia and could not sail.",
+        "Magellan stayed in South America to check the sails, and the Trinidad sailed back to Portugal alone.",
+        "Magellan sailed back to Spain early in 1519 because of hail, and the Trinidad was lost in the strait.",
+        "Magellan decided to live on the island of Guam forever, and the Trinidad carried spices back to Spain."
+      ],
+      "answer": "Magellan died in a battle on the island of Mactan, and the Trinidad was damaged in Indonesia and could not sail.",
+      "trapCodes": [
+        "ENG_TENSE_MISMATCH"
+      ],
+      "explanation": {
+        "point": "歷史紀實小說深層細節核對：麥哲倫戰死於馬克坦島，千里達號因受損留滯印尼無法返航。",
+        "examPurpose": "測驗學生精確檢索多段落跨頁事實（船長命運與各船隻去向）而不受錯誤細節混淆的素養力。",
+        "correctReason": "日記 1521 年 4 月 27 日記載麥哲倫戰死於馬克坦島（Mactan）；隨後 11 月在印尼時，Trinidad 因受損無法航行，最後只有一艘船返抵西班牙。",
+        "note": "當年共有 5 艘船出發：1 艘在風暴失事、1 艘提前返航西班牙、千里達號受損，最終僅剩維多利亞號載著 18 人返航。",
+        "trap": "易把「另一艘船提前回西班牙」或「一艘船在風暴中損失」的情節錯套在麥哲倫本人或 Trinidad 身上。",
+        "distractorAnalysis": {
+          "Magellan stayed in South America to check the sails, and the Trinidad sailed back to Portugal alone.": "麥哲倫並沒有留在南美洲，千里達號也因為受損無法航行，並非獨自開回葡萄牙。",
+          "Magellan sailed back to Spain early in 1519 because of hail, and the Trinidad was lost in the strait.": "1519 年只是剛啟航，麥哲倫在 1521 年仍率隊抵達菲律賓馬克坦島；海峽失去的船不是千里達號。",
+          "Magellan decided to live on the island of Guam forever, and the Trinidad carried spices back to Spain.": "船隊僅在關島短暫補給就繼續向西，麥哲倫並非定居關島；載香料回西班牙的是僅存的那一艘船，不是受損的 Trinidad。"
+        },
+        "steps": [
+          "① 查 1521/04/27 日記：Magellan died in a battle on the island of Mactan",
+          "② 查 1521/11/06 敘述：The Trinidad is damaged and can't sail",
+          "③ 比對完全符合事實的選項 A ✅"
+        ],
+        "insight": "💡 這就是為什麼讀歷史記實日記要抓「日期＋地名＋船名」三個錨點核對！"
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "perished in battle",
+          "too damaged to navigate"
+        ],
+        "grammarCompare": "historical fiction（歷史記實小說：真實歷史事件 + 虛構人物 Juan 的第一人稱日記視角）。",
+        "examVariations": "Open-book 素養簡答題：How many men started the journey, and how many came home?"
+      }
+    },
+    {
+      "id": "q_w14_od3_u17_29",
+      "book_id": "od3",
+      "unit_id": "od3_17",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "choice",
+      "category_tag": "grammar",
+      "difficulty": "★★★★★",
+      "triadGroup": {
+        "groupId": "OD3_U17_T5",
+        "tier": "L4-6",
+        "role": "twist"
+      },
+      "question": "Which sentence uses CORRECT grammar and prepositions to congratulate and compliment your classmate?",
+      "options": [
+        "Congratulations on winning the spelling contest! We are very proud of you.",
+        "Congratulation for win the spelling contest! We are very proud for you.",
+        "Congratulations to win the spelling contest! You did a great job with you.",
+        "Congratulations about winning the spelling contest! We are proud at you."
+      ],
+      "answer": "Congratulations on winning the spelling contest! We are very proud of you.",
+      "trapCodes": [
+        "ENG_PREP_COLLOCATION",
+        "ENG_POS_CONFUSION"
+      ],
+      "explanation": {
+        "point": "祝賀與讚美固定搭配：Congratulations on + V-ing 與 be proud of + 人。",
+        "examPurpose": "綜合檢測學生排除中式「為…感到驕傲 (proud for)」與「恭喜你贏… (for win)」兩大文法陷阱。",
+        "correctReason": "Congratulations 必須用複數且接介系詞 on，後方動詞改動名詞 winning；表示以某人為榮固定搭配 proud of。",
+        "note": "課本口說範例：Congratulations on winning the race. / We're very proud of you.",
+        "trap": "最容易受中文直譯影響而誤選 for 或 to，以及忘記將 win 加上 -ing。",
+        "distractorAnalysis": {
+          "Congratulation for win the spelling contest! We are very proud for you.": "有三處文法錯誤：Congratulation 漏了 s、介系詞誤用 for 且接原形 win、proud 誤搭配 for。",
+          "Congratulations to win the spelling contest! You did a great job with you.": "Congratulations 後不可直接接不定詞 to win；且最後的 with you 語意不通。",
+          "Congratulations about winning the spelling contest! We are proud at you.": "Congratulations 不搭配 about；proud 也不搭配 at（應為 proud of）。"
+        },
+        "steps": [
+          "① 查祝賀公式：Congratulations（必加 s）+ on + V-ing（winning）",
+          "② 查讚美公式：be very proud of you（介系詞必用 of）",
+          "③ 雙槽皆正確的只有選項 A ✅"
+        ],
+        "insight": "💡 祝賀兩大鐵則：Congratulations 必加 s 接 `on V-ing`；驕傲必用 `proud of`！",
+        "visualBlock": {
+          "kind": "slot_box",
+          "title": "📦 祝賀與讚美黃金句構積木槽",
+          "data": {
+            "slots": [
+              {
+                "role": "祝賀詞 (複數)",
+                "text": "Congratulations",
+                "accent": "pri"
+              },
+              {
+                "role": "固定介系詞",
+                "text": "on",
+                "accent": "warn"
+              },
+              {
+                "role": "動名詞 (V-ing)",
+                "text": "winning the contest!",
+                "accent": "ok"
+              },
+              {
+                "role": "讚美搭配 (of)",
+                "text": "We are very proud of you.",
+                "accent": "pri"
+              }
+            ]
+          },
+          "caption": "📊 四格全部對齊，口說與寫作的祝賀句子瞬間變成滿分標準句！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "Well done on winning!",
+          "Way to go!"
+        ],
+        "grammarCompare": "Congratulations on + V-ing / N vs. Great job on + N（兩者皆搭配介系詞 on）。",
+        "examVariations": "手寫造句或改錯題：Great job on your math test! Thank you!"
+      }
+    },
+    {
+      "id": "q_w14_od3_u17_30",
+      "book_id": "od3",
+      "unit_id": "od3_17",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "difficulty": "★★★☆☆",
+      "triadGroup": {
+        "groupId": "OD3_U17_T1",
+        "tier": "L1-3",
+        "role": "foundation"
+      },
+      "part_title": "Part I. Complex Sentences Using Before and After (時間複合句合併)",
+      "part_instructions": "請依兩件事發生的先後順序，分別使用 before 與 after 將下列兩句合併成完整的時間複合句（請先用 before 放句中合併，示範標準句型）。",
+      "sentence_form": "[1st Event Clause] + before + [2nd Event Clause].",
+      "word_bank": [
+        "before"
+      ],
+      "question": "Combine the two events into ONE complex sentence using 'before': (1st) I brushed my teeth. (2nd) I went to bed.",
+      "options": [],
+      "answer": "I brushed my teeth before I went to bed.",
+      "self_check": [
+        "1. 是否將 1st 事件（I brushed my teeth）放在 before 之前，2nd 事件（I went to bed）放在 before 之後？",
+        "2. 前後動詞過去式（brushed / went）是否維持一致？",
+        "3. 當 before 放在句中時，是否沒有多加多餘逗號且句尾加上句號？"
+      ],
+      "trapCodes": [
+        "ENG_TENSE_MISMATCH",
+        "ENG_PUNCT_DICTATION"
+      ],
+      "explanation": {
+        "point": "時間連接詞基本合併結構：[1st 先發生] + before + [2nd 後發生]。",
+        "examPurpose": "訓練學生正確將兩組獨立過去式動作透過時間連接詞 before 合併為複合句。",
+        "correctReason": "先刷牙（1st）、再去睡覺（2nd），因此 1st 子句擺前、before 引導 2nd 子句擺後。",
+        "note": "若改寫為 after 句型則須對調子句：I went to bed after I brushed my teeth.",
+        "trap": "合併時容易忘記保留第二句的主詞 I（誤寫成 before went to bed），或不小心把過去式改回現在式。",
+        "commonTraps": [
+          "合併後漏掉第二個子句的主詞 I，誤寫成 I brushed my teeth before went to bed。",
+          "順序顛倒寫成 I went to bed before I brushed my teeth（意思變成先睡覺再刷牙）。"
+        ],
+        "steps": [
+          "① 確認 1st 動作放前面：I brushed my teeth",
+          "② 接上連接詞：before",
+          "③ 放上完整 2nd 子句（主詞+動詞）：I went to bed. ✅"
+        ],
+        "insight": "💡 複合句兩邊都必須有「主詞＋動詞」，千萬不要在 before 後面把主詞 I 刪掉（除非還沒學分詞構句）！",
+        "visualBlock": {
+          "kind": "timeline",
+          "title": "⏳ 睡前動作先後時間軸：1st 刷牙 ➔ 2nd 上床睡覺",
+          "data": {
+            "events": [
+              {
+                "time": "1st (先發生)",
+                "label": "I brushed my teeth.",
+                "highlight": true
+              },
+              {
+                "time": "2nd (後發生)",
+                "label": "I went to bed.",
+                "highlight": false
+              }
+            ],
+            "rule": "用 before 時：[1st] I brushed my teeth before [2nd] I went to bed."
+          },
+          "caption": "📊 兩邊都是完整過去式「主詞＋動詞」，不可省略第二個主詞 I！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "Before I went to bed, I brushed my teeth.",
+          "I went to bed after I brushed my teeth."
+        ],
+        "grammarCompare": "I brushed my teeth before I went to bed.（句中無逗號）vs. Before I went to bed, I brushed my teeth.（句首有逗號）。",
+        "examVariations": "同義轉換寫作：用 after 重新改寫含 before 的句子。"
+      }
+    },
+    {
+      "id": "q_w14_od3_u17_31",
+      "book_id": "od3",
+      "unit_id": "od3_17",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "difficulty": "★★★★☆",
+      "triadGroup": {
+        "groupId": "OD3_U17_T1",
+        "tier": "L4-6",
+        "role": "twist"
+      },
+      "part_title": "Part I. Complex Sentences Transformation (Before / After 雙向互換改寫)",
+      "part_instructions": "請將下方含有 before 的句子，改寫成以 'After' 開頭（置於句首）的同義時間複合句，務必注意子句順序對調與逗號位置。",
+      "sentence_form": "After + [1st Event Clause] + , + [2nd Event Clause].",
+      "word_bank": [
+        "After"
+      ],
+      "question": "Rewrite the sentence keeping the EXACT same meaning, beginning with 'After': \"I studied hard before I took the test.\"",
+      "options": [],
+      "answer": "After I studied hard, I took the test.",
+      "self_check": [
+        "1. After 後方緊接的是不是先發生的 1st 事件（I studied hard）？",
+        "2. 兩個子句之間是否正確加上了逗號（,）？",
+        "3. 第二個子句 I 是否維持大寫，且動詞過去式（studied / took）是否拼寫正確？"
+      ],
+      "trapCodes": [
+        "ENG_PUNCT_DICTATION",
+        "ENG_TENSE_MISMATCH"
+      ],
+      "explanation": {
+        "point": "before 轉為句首 After 的雙向改寫公式：對調事件順序並補上子句間的逗號。",
+        "examPurpose": "考核學生靈活轉換時間從屬子句位置的能力，並養成「從屬連接詞放句首，中間必加逗號」的標點習慣。",
+        "correctReason": "原句意為「1st 努力讀書 ➔ 2nd 考試」，改以 After 開頭時，必須將 1st 事件（I studied hard）緊接在 After 後方，加上逗號後接 2nd 事件（I took the test）。",
+        "note": "句首從屬子句結尾的逗號是 3C 與 KET 寫作扣分重點。",
+        "trap": "直接把句首 Before 換成 After 卻忘記對調子句，或漏掉兩個子句之間的逗號。",
+        "commonTraps": [
+          "忘記在從屬子句與主要子句之間加上逗號（After I studied hard I took the test.）。",
+          "忘記對調事件順序，誤寫成 After I took the test, I studied hard."
+        ],
+        "steps": [
+          "① 抓出原句先發生的事（1st）：I studied hard",
+          "② 放到句首 After 後並加逗號：After I studied hard,",
+          "③ 補上後發生的事（2nd）：I took the test. ✅"
+        ],
+        "insight": "💡 「After 放句首，逗號跟在後」＋「After 後面永遠放第 1 件事」！",
+        "visualBlock": {
+          "kind": "slot_box",
+          "title": "📦 Before ➔ 句首 After 雙向改寫積木槽",
+          "data": {
+            "slots": [
+              {
+                "role": "句首連接詞",
+                "text": "After",
+                "accent": "warn"
+              },
+              {
+                "role": "1st 事件子句",
+                "text": "I studied hard",
+                "accent": "ok"
+              },
+              {
+                "role": "強制逗號",
+                "text": ",",
+                "accent": "bad"
+              },
+              {
+                "role": "2nd 事件主句",
+                "text": "I took the test.",
+                "accent": "pri"
+              }
+            ]
+          },
+          "caption": "📊 把從屬連接詞搬到最前面時，第 2 格與第 4 格中間那顆紅燈逗號千萬不能漏！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "I took the test after I studied hard.",
+          "I studied hard before taking the test."
+        ],
+        "grammarCompare": "After I studied hard, I took the test.（句首有逗號）vs. I took the test after I studied hard.（句中無逗號）。",
+        "examVariations": "課本 Writing Study 進階改寫題（Before ↔ After 雙向互換）。"
+      }
+    },
+    {
+      "id": "q_w14_od3_u17_32",
+      "book_id": "od3",
+      "unit_id": "od3_17",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "difficulty": "★★★☆☆",
+      "triadGroup": {
+        "groupId": "OD3_U17_T2",
+        "tier": "L4-6",
+        "role": "twist"
+      },
+      "part_title": "Part II. Phrasal Verbs with Look (動詞片語同義改寫)",
+      "part_instructions": "請將句子中劃線的概念片語，替換為本單元學過的 look 動詞片語（注意時態與可分／不可分代名詞規則）。",
+      "sentence_form": "Subject + [look + preposition] + Object.",
+      "word_bank": [
+        "look after",
+        "look up",
+        "look for",
+        "look through"
+      ],
+      "question": "Rewrite the sentence by replacing 'take care of' with the matching phrasal verb with 'look': \"Don't worry. My older sister will take care of our puppy while we are away.\"",
+      "options": [],
+      "answer": "Don't worry. My older sister will look after our puppy while we are away.",
+      "self_check": [
+        "1. 助動詞 will 後方是否使用原形動詞 look（不可加 s 或 ed）？",
+        "2. 介系詞是否寫成正確的 after（而非 for）？",
+        "3. 其餘原句字詞與標點是否完整抄寫正確？"
+      ],
+      "trapCodes": [
+        "ENG_PREP_COLLOCATION",
+        "ENG_TENSE_MISMATCH"
+      ],
+      "explanation": {
+        "point": "片語同義代換：take care of（照顧）= look after（照顧）。",
+        "examPurpose": "測驗學生將日常片語 take care of 轉換為單元核心 phrasal verb 的實作能力與助動詞後原形檢查。",
+        "correctReason": "look after 與 take care of 語意完全相同，且擺在未來式助動詞 will 後方須維持原形 look after。",
+        "note": "若將 our puppy 換成代名詞 it，也必須說 look after it（不可分）。",
+        "trap": "常在主詞 sister 為單數時誤受干擾加上 -s（will looks after），或誤用成 look for。",
+        "commonTraps": [
+          "在助動詞 will 後方誤加動詞字尾 -s（will looks after）。",
+          "把照顧誤寫成尋找（look for）。"
+        ],
+        "steps": [
+          "① 鎖定替換片語：take care of ➔ look after",
+          "② 檢查前方助動詞 will ➔ 接原形 look",
+          "③ 抄寫完整前後句與標點 ✅"
+        ],
+        "insight": "💡 遇到 `take care of`，一秒換成 `look after`；遇到 `check in a dictionary`，一秒換成 `look up`！"
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "care for our puppy",
+          "watch over our puppy"
+        ],
+        "grammarCompare": "will + 原形動詞 (will look after) vs. 現在簡單式三單 (she looks after)。",
+        "examVariations": "延伸改寫：I need to check this word in the dictionary. ➔ I need to look up this word in the dictionary."
+      }
+    },
+    {
+      "id": "q_w14_od3_u17_33",
+      "book_id": "od3",
+      "unit_id": "od3_17",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "difficulty": "★★★★☆",
+      "triadGroup": {
+        "groupId": "OD3_U17_T3",
+        "tier": "L7-10",
+        "role": "challenge"
+      },
+      "part_title": "Part III. Giving Directions with Prepositions of Movement (移動介系詞路徑造句)",
+      "part_instructions": "請運用提示的動作與移動介系詞（out of / into / down / through / up），寫出一句完整且時態一致（現在簡單式）的路徑句子，說明 Juan 如何從床鋪出發到達樓梯下方並穿過木箱爬上梯子。",
+      "sentence_form": "First, Juan gets + [prep] + ..., walks + [prep] + ..., and climbs + [prep] + ...",
+      "word_bank": [
+        "out of bed",
+        "into the kitchen",
+        "down the stairs",
+        "through the box",
+        "up the ladder"
+      ],
+      "question": "Combine the prompt cues into one clear sentence in the simple present tense describing Juan's path to the deck: (First / Juan / get out of bed / go down the stairs / climb up the ladder to the deck)",
+      "options": [],
+      "answer": "First, Juan gets out of bed, goes down the stairs, and climbs up the ladder to the deck.",
+      "self_check": [
+        "1. 主詞 Juan 為第三人稱單數，三個現在式動詞（gets / goes / climbs）是否都有加上 -s/-es？",
+        "2. 三個移動介系詞片語（out of bed / down the stairs / up the ladder to the deck）是否完整無漏字？",
+        "3. 並列三個動作之間的序列逗號（, ... , and ...）是否標點正確？"
+      ],
+      "trapCodes": [
+        "ENG_UNCOUNTABLE_SVA",
+        "ENG_PREP_COLLOCATION"
+      ],
+      "explanation": {
+        "point": "並列動作第三人稱單數動詞變化＋移動介系詞路徑序列寫作。",
+        "examPurpose": "綜合評量學生組織多段路徑介系詞的能力，並把關三個並列動詞的第三人稱單數 -s/-es 一致性。",
+        "correctReason": "主詞為第三人稱單數 Juan，現在式三個並列動詞須一致寫成 gets、goes、climbs，並精確搭配 out of / down / up to。",
+        "note": "特別注意 go 的三單必須加 -es（goes），不可寫成 gos。",
+        "trap": "寫到第二或第三個動詞時忘記繼續配合主詞 Juan 加上三單 -s/-es，或漏掉 out of 中的 of。",
+        "commonTraps": [
+          "平行動詞三單漏字尾：前面寫了 gets，後面卻漏寫成 go down 和 climb up。",
+          "漏掉 out of 中的 of，誤寫成 gets out bed。"
+        ],
+        "steps": [
+          "① 開頭順序詞與主詞：First, Juan",
+          "② 三個三單動詞配移動介系詞：gets out of bed, goes down the stairs, and climbs up the ladder to the deck.",
+          "③ 檢查三個動詞字尾皆為 -s/-es ✅"
+        ],
+        "insight": "💡 只要主詞是單數 Juan（現在式），後面並列的每個動詞都要一起戴上 `-s / -es` 的帽子！",
+        "visualBlock": {
+          "kind": "slot_box",
+          "title": "📦 移動路徑並列三單動詞積木槽",
+          "data": {
+            "slots": [
+              {
+                "role": "主詞 (三單)",
+                "text": "First, Juan",
+                "accent": "pri"
+              },
+              {
+                "role": "動作 1 (-s)",
+                "text": "gets out of bed,",
+                "accent": "ok"
+              },
+              {
+                "role": "動作 2 (-es)",
+                "text": "goes down the stairs,",
+                "accent": "ok"
+              },
+              {
+                "role": "動作 3 (-s)",
+                "text": "and climbs up the ladder to the deck.",
+                "accent": "warn"
+              }
+            ]
+          },
+          "caption": "📊 三個動詞同步加 -s/-es、三個移動介系詞精準對位，路徑寫作無懈可擊！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "First, he leaves his bed, descends the stairs, and climbs to the deck.",
+          "step out of / go down / ascend up to"
+        ],
+        "grammarCompare": "現在簡單式敘述日常動線（gets, goes, climbs）vs. 過去式敘述歷史航海（got, went, climbed）。",
+        "examVariations": "常見手寫題：請用 down, through, around 寫出一句校園指路句。"
+      }
+    },
+    {
+      "id": "q_w14_od3_u17_34",
+      "book_id": "od3",
+      "unit_id": "od3_17",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "difficulty": "★★★★★",
+      "triadGroup": {
+        "groupId": "OD3_U17_T4",
+        "tier": "L7-10",
+        "role": "challenge"
+      },
+      "part_title": "Part IV. Story Reading Comprehension Short Answer (課文閱讀理解簡答)",
+      "part_instructions": "請根據 Juan 的航海日記內容，用一句完整且文法正確的英文句子回答下方問題（注意過去式與原因連接詞 because）。",
+      "sentence_form": "In November 1519, the ships could not move because + [Subject + Verb]...",
+      "word_bank": [
+        "could not move",
+        "because",
+        "no wind",
+        "fill the sails"
+      ],
+      "question": "Answer the question in a complete English sentence based on Juan's journal: \"Why couldn't Captain Magellan's five ships move in November 1519?\"",
+      "options": [],
+      "answer": "In November 1519, the ships could not move because there was no wind to fill the sails.",
+      "self_check": [
+        "1. 是否寫出完整句子（包含主詞 the ships 與動詞 could not move）？",
+        "2. 原因子句是否使用過去式存在句 there was no wind（而非中式英文 have no wind）？",
+        "3. 不定詞片語 to fill the sails 拼寫是否正確？"
+      ],
+      "trapCodes": [
+        "ENG_THERE_BE_VS_HAVE",
+        "ENG_TENSE_MISMATCH"
+      ],
+      "explanation": {
+        "point": "閱讀簡答兼顧過去式存在句（there was no wind）與航行物理因果（風吹動船帆）。",
+        "examPurpose": "測驗學生提取課文日記關鍵因果，並避免台灣學生最常見的「用 had 代替 there was」存在句錯誤。",
+        "correctReason": "課文記載 1519 年 11 月大西洋無風平靜如玻璃，船帆無法鼓起，故以過去式存在句 there was no wind 作答。",
+        "note": "課文原句（現在式日記寫法）：the ships can't move because there is no wind to fill the sails.；回答歷史問題應轉為過去式 could not / was。",
+        "trap": "台灣學生最常把 there was no wind 錯寫成 because it had no wind 或 because no wind（漏動詞）。",
+        "commonTraps": [
+          "存在句誤用 have/had：錯寫成 because it had no wind（英語表示某地某時沒有風應用 there was no wind）。",
+          "殘缺句錯誤：只回答 because no wind，遺漏主詞 there 與動詞 was。"
+        ],
+        "steps": [
+          "① 照問句開頭立主幹：In November 1519, the ships could not move",
+          "② 接原因連接詞：because",
+          "③ 用過去式存在句寫無風：there was no wind to fill the sails. ✅"
+        ],
+        "insight": "💡 回答過去發生的歷史原因，別忘了把日記裡的 `can't / there is` 轉成過去式 `could not / there was`！",
+        "visualBlock": {
+          "kind": "slot_box",
+          "title": "📦 存在句防呆積木槽：there was (✕ it had)",
+          "data": {
+            "slots": [
+              {
+                "role": "時間＋結果主幹",
+                "text": "In November 1519, the ships could not move",
+                "accent": "pri"
+              },
+              {
+                "role": "原因連接詞",
+                "text": "because",
+                "accent": "warn"
+              },
+              {
+                "role": "過去式存在句",
+                "text": "there was no wind",
+                "accent": "ok"
+              },
+              {
+                "role": "不定詞目的",
+                "text": "to fill the sails.",
+                "accent": "pri"
+              }
+            ]
+          },
+          "caption": "📊 中文說「沒有風」千萬別寫 had no wind，英文存在句必須用 there was no wind！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "there was not enough wind to push the sails",
+          "the ocean was completely calm without any wind"
+        ],
+        "grammarCompare": "there is / was no + 名詞（存在句「沒有…」）vs. it has / had no（不可用來表示天氣環境存在）。",
+        "examVariations": "延伸簡答：What does Juan mean when he writes 'The ocean looks like glass'? (There is no wind and no waves.)"
+      }
+    },
+    {
+      "id": "q_w14_od3_u17_35",
+      "book_id": "od3",
+      "unit_id": "od3_17",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "difficulty": "★★★★★",
+      "triadGroup": {
+        "groupId": "OD3_U17_T4",
+        "tier": "L7-10",
+        "role": "challenge"
+      },
+      "part_title": "Part IV. Story Reading Comprehension & Reflection (故事結局與人物情感簡答)",
+      "part_instructions": "請根據 1522 年 9 月 6 日的最終日記，用完整英文句子說明為什麼 Juan 永遠不會忘記麥哲倫船長，以及這趟旅程最終有幾艘船與幾個人回到家鄉。",
+      "sentence_form": "Only one ship and 18 men returned home, and Juan would never forget Captain Magellan because + ...",
+      "word_bank": [
+        "one ship",
+        "18 men",
+        "looked up to",
+        "sailed around the world"
+      ],
+      "question": "Answer the question in complete English sentences based on the end of the story: \"How many ships and men returned to Spain in 1522, and how did Juan feel about Captain Magellan?\"",
+      "options": [],
+      "answer": "Only one ship and 18 men returned to Spain in 1522, and Juan really looked up to Captain Magellan and would never forget him.",
+      "self_check": [
+        "1. 是否精確回答兩個關鍵數字（one ship 與 18 men）？",
+        "2. 是否運用課文核心片語 looked up to（敬仰）表達 Juan 對麥哲倫船長的情感？",
+        "3. 過去式動詞（returned / looked）與助動詞（would never forget）是否正確？"
+      ],
+      "trapCodes": [
+        "ENG_TENSE_MISMATCH",
+        "ENG_VERB_OMISSION"
+      ],
+      "explanation": {
+        "point": "故事結局總結：僅 1 艘船與 18 位倖存者返鄉，Juan 深深敬仰（looked up to）麥哲倫船長。",
+        "examPurpose": "考核學生整合結局雙問句（客觀數據 + 主觀情感）並正確使用過去式片語 looked up to 的長句寫作力。",
+        "correctReason": "結局交代僅 1 艘船與 18 名船員生還返抵西班牙；Juan 在日記最後說 I will never forget Captain Magellan. I really looked up to him.。",
+        "note": "look up（查資料／抬頭看）加上介系詞 to 後即變成「敬重、崇拜某人（look up to someone）」。",
+        "trap": "回答時漏掉其中一個問項（只寫人數沒寫感受），或把 looked up to 誤寫成 looked at。",
+        "commonTraps": [
+          "漏答第二個問句：只寫了 1 ship and 18 men，忘記說明 Juan 對船長的敬仰之情。",
+          "片語漏掉介系詞 to：誤寫成 Juan really looked up Captain Magellan。"
+        ],
+        "steps": [
+          "① 回答第一個問題（數據）：Only one ship and 18 men returned to Spain in 1522,",
+          "② 連接第二個問題（情感）：and Juan really looked up to Captain Magellan",
+          "③ 補上結局回憶：and would never forget him. ✅"
+        ],
+        "insight": "💡 英文雙問句簡答題一定要用「①＋② 兩部分檢查法」，漏掉任何一半都會被扣一半分數！"
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "respected Captain Magellan deeply",
+          "admired his brave captain"
+        ],
+        "grammarCompare": "look up + 單字（查閱）vs. look up to + 人（敬仰崇拜某位人物）。",
+        "examVariations": "人物推論題：Why did Juan say 'I am now 13 years old'? (Because he left at 10 and the journey took 3 years.)"
+      }
+    },
+    {
+      "id": "q_w14_od3_u17_36",
+      "book_id": "od3",
+      "unit_id": "od3_17",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "difficulty": "★★★★★",
+      "triadGroup": {
+        "groupId": "OD3_U17_T5",
+        "tier": "L7-10",
+        "role": "challenge"
+      },
+      "part_title": "Part V. Giving Congratulations and Compliments Writing (祝賀與讚美情境造句)",
+      "part_instructions": "請運用本單元口說專區的祝賀與讚美句型（Congratulations on + V-ing / Great job on ... / We are very proud of you），針對朋友贏得游泳比賽寫出兩句完整的祝賀與讚美。",
+      "sentence_form": "Congratulations on + [V-ing] + ! + You did a great job, and we are very proud of you.",
+      "word_bank": [
+        "Congratulations on",
+        "winning the swimming race",
+        "proud of"
+      ],
+      "question": "Write two polite sentences to congratulate and compliment your friend who just won the swimming race using the cues: (Congratulations on / win the swimming race / proud of)",
+      "options": [],
+      "answer": "Congratulations on winning the swimming race! You did a great job, and we are very proud of you.",
+      "self_check": [
+        "1. Congratulations 字尾是否有加上 -s，且後方接介系詞 on？",
+        "2. 介系詞 on 後方的動詞 win 是否正確改為動名詞 winning（雙寫 n 加 ing）？",
+        "3. proud 後方是否搭配正確介系詞 of（proud of you）？"
+      ],
+      "trapCodes": [
+        "ENG_POS_CONFUSION",
+        "ENG_PREP_COLLOCATION",
+        "ENG_SPELLING_PHONICS"
+      ],
+      "explanation": {
+        "point": "祝賀與讚美實戰造句：介系詞 on 後接雙寫 n 動名詞 winning，搭配 proud of you。",
+        "examPurpose": "全方位檢驗單字複數（Congratulations）、短母音雙寫動名詞（winning）與雙介系詞（on / of）的手寫準確度。",
+        "correctReason": "Congratulations on 後面因為 on 是介系詞，動詞 win 必須雙寫子音 n 變為動名詞 winning；讚美句以 proud of 表達以對方為傲。",
+        "note": "win → winning（CVC 單音節短母音＋單子音，必須雙寫 n 再加 -ing）。",
+        "trap": "三處連環陷阱：漏寫 Congratulations 的 s、漏雙寫 n 寫成 wining、或忘記把 win 變動名詞。",
+        "commonTraps": [
+          "介系詞後誤接原形動詞：寫成 Congratulations on win the swimming race。",
+          "動名詞拼寫漏雙寫：將 winning 錯誤拼成 wining。"
+        ],
+        "steps": [
+          "① 第一句祝賀：Congratulations on winning the swimming race!",
+          "② 檢查 win 短母音雙寫：w-i-n-n-i-n-g",
+          "③ 第二句讚美：You did a great job, and we are very proud of you. ✅"
+        ],
+        "insight": "💡 介系詞 `on` 後面碰上動詞，立刻變身 `V-ing`；單音節短母音 `win` 記得雙寫 n 變成 `winning`！"
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "Great job on winning the swimming race!",
+          "Well done on your first-place finish!"
+        ],
+        "grammarCompare": "on winning (介系詞 + 動名詞) vs. proud of you (形容詞 + 介系詞 + 受格代名詞)。",
+        "examVariations": "口說情境對話補全：A: Congratulations on winning the contest! ➔ B: Thank you!"
+      }
+    },
+    {
+      "id": "q_w14_odg3_u17_01",
+      "book_id": "gra3",
+      "unit_id": "gra3_17",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★☆☆☆☆",
+      "difficulty_level": 1,
+      "question": "🎧 聽力拼字測驗：請仔細聆聽發音，拼寫出表示「颶風；強烈熱帶風暴」的名詞單字（提示：注意中間有雙寫字母 rr，字尾為 -cane）。",
+      "answer": "hurricane",
+      "options": [],
+      "vocab_card": {
+        "word": "hurricane",
+        "ipa": "/ˈhɜːrɪkeɪn/",
+        "phonetic": "/ˈhɜːrɪkeɪn/",
+        "syllables": "hur·ri·cane",
+        "pos": "名詞 (Noun)",
+        "chi": "颶風；強烈熱帶氣旋",
+        "meaning": "伴隨極強狂風與豪大雨的劇烈熱帶風暴，常造成淹水與建物毀損",
+        "breakdown": "hurr-(疾風呼嘯) + i + cane -> 威力強大的旋轉風暴",
+        "trick": "諧音「哈雷肯」-> 強風呼嘯像「哈雷」重機衝過來，連鐵皮都「肯」吹飛！",
+        "scene": "氣象新聞發布警報，居民在窗戶釘上木板並準備罐頭與急救箱",
+        "collocation": "before a hurricane, during a hurricane, hurricane shelter",
+        "img": "🌀",
+        "context_eng": "Stay inside a strong building during a dangerous hurricane.",
+        "example": "Stay inside a strong building during a dangerous hurricane.",
+        "context_chi": "在危險的颶風期間，請待在堅固的建築物室內。",
+        "chant": "Hurricane, hurricane, wind and rain! Stay inside and safe from pain!",
+        "compare": "hurricane (大西洋與東北太平洋的強烈氣旋/颶風) vs typhoon (西北太平洋的颱風)",
+        "note": "拼寫陷阱：中間是雙寫 rr (hur-ri-cane)，結尾為 -cane 而非 -cain。"
+      },
+      "explanation": {
+        "point": "核心防災名詞 hurricane (颶風) 之音節拆解與雙寫字母拼寫",
+        "examPurpose": "考核學生對單元防災核心名詞 hurricane 中雙寫 rr 及 -i-cane 字尾的精確聽音拼寫能力。",
+        "correctReason": "音節拆解為 hur-ri-cane，第一音節結尾與第二音節開頭構成雙寫 rr，第三音節為不發音 e 結尾的 -cane。",
+        "note": "本單元防災閱讀以「颶風前、中、後」為主軸，hurricane 為最高頻拼字題。",
+        "trap": "極容易漏寫一個 r 拼成 *huricane，或把字尾 -cane 誤拼成 *hurricain。",
+        "commonTraps": [
+          "雙寫漏字陷阱（ENG_SPELLING_PHONICS）：常漏掉雙寫字母 r 誤拼為 *huricane。",
+          "字尾音誤導陷阱（ENG_SPELLING_PHONICS）：受 /keɪn/ 發音影響誤拼成 *-cain 或 *-kane，正確必為 -cane。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "typhoon",
+          "cyclone",
+          "severe tropical storm"
+        ],
+        "grammarCompare": "hurricane 與 typhoon 氣象本質相同，僅依發生海域命名不同；為可數名詞，單數前常加冠詞 a。",
+        "examVariations": "題型常見於防災指南克漏字、聽音拼字與看圖寫作核心字彙。"
+      },
+      "target_chi": "颶風；強烈熱帶風暴",
+      "target_pos": "名詞 (Noun)",
+      "masked_example": "Stay inside a strong building during a dangerous ________.",
+      "masked_example_chi": "在危險的颶風期間，請待在堅固的建築物室內。"
+    },
+    {
+      "id": "q_w14_odg3_u17_02",
+      "book_id": "gra3",
+      "unit_id": "gra3_17",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★★☆☆☆",
+      "difficulty_level": 2,
+      "question": "🎧 聽力拼字測驗：請仔細聆聽發音，拼寫出表示「緊急情況；突發危急事件」的名詞單字（提示：字首為 e-，字尾為 -ency）。",
+      "answer": "emergency",
+      "options": [],
+      "vocab_card": {
+        "word": "emergency",
+        "ipa": "/ɪˈmɜːrdʒənsi/",
+        "phonetic": "/ɪˈmɜːrdʒənsi/",
+        "syllables": "e·mer·gen·cy",
+        "pos": "名詞 (Noun)",
+        "chi": "緊急情況；突發危急事件",
+        "meaning": "需要立即採取行動或救援的危險突發狀況，如天災、火災或重傷",
+        "breakdown": "e-(出) + merg(湧現) + -ency(狀態名詞) -> 突然湧現的危急狀況",
+        "trick": "諧音「一沒整死」-> 遇上突發「緊急情況」要冷靜，才能保護自己沒事！",
+        "scene": "在城鎮緊急避難地圖上尋找警察局、消防局、藥局與醫院的位置",
+        "collocation": "in an emergency, emergency kit, emergency shelter",
+        "img": "🚨",
+        "context_eng": "Where can you go in an emergency? Find the hospital and police station on the map.",
+        "example": "Where can you go in an emergency? Find the hospital and police station on the map.",
+        "context_chi": "緊急狀況發生時你可以去哪裡？在地圖上找出醫院和警察局。",
+        "chant": "Emergency, emergency, know the way! Follow the map and stay safe today!",
+        "compare": "in an emergency (在緊急情況下，用介系詞 in + 母音開頭用 an)",
+        "note": "拼寫重點：第二音節為 -mer-，中間為 g (發 /dʒ/ 音)，字尾為 -ency（不可拼成 -ancy）。"
+      },
+      "explanation": {
+        "point": "核心防災名詞 emergency (緊急情況) 之四音節拼寫與冠詞搭配",
+        "examPurpose": "考核學生對四音節高階名詞 emergency 的音節拼寫、軟音 g (/dʒ/) 與 -ency 字尾掌握度。",
+        "correctReason": "音節拆解為 e-mer-gen-cy，字中 g 後接 e 發 /dʒ/ 音，字尾為 -ency 而非 -ancy。",
+        "note": "固定片語為 in an emergency（母音 e 開頭，不定冠詞必用 an）。",
+        "trap": "常因 /dʒ/ 音誤寫成 j (*emerjency)，或字尾誤寫成 *-ancy。",
+        "commonTraps": [
+          "子音字母混淆陷阱（ENG_SPELLING_PHONICS）：/dʒ/ 音在此字拼作 g 而非 j，不可寫成 *emerjency。",
+          "字尾母音混淆陷阱（ENG_SPELLING_PHONICS）：容易誤拼字尾為 *-ancy 或 *-ensy，正確必為 -ency。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "crisis",
+          "urgent situation",
+          "disaster"
+        ],
+        "grammarCompare": "emergency 也可當名詞修飾語放在名詞前，如 emergency exit（緊急出口）、emergency shelter（緊急避難所）。",
+        "examVariations": "常與地圖問路題「Where can you go in an _____?」及急救箱詞彙連結考出。"
+      },
+      "target_chi": "緊急情況；突發危急事件",
+      "target_pos": "名詞 (Noun)",
+      "masked_example": "Where can you go in an ________? Find the hospital and police station on the map.",
+      "masked_example_chi": "緊急狀況發生時你可以去哪裡？在地圖上找出醫院和警察局。"
+    },
+    {
+      "id": "q_w14_odg3_u17_03",
+      "book_id": "gra3",
+      "unit_id": "gra3_17",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★★☆☆☆",
+      "difficulty_level": 2,
+      "question": "🎧 聽力拼字測驗：請仔細聆聽發音，拼寫出表示「穿過；貫穿內部空間」的動態介系詞（提示：字首為 th-，結尾為靜音 -ough）。",
+      "answer": "through",
+      "options": [],
+      "vocab_card": {
+        "word": "through",
+        "ipa": "/θruː/",
+        "phonetic": "/θruː/",
+        "syllables": "through",
+        "pos": "介系詞 (Preposition)",
+        "chi": "穿過；貫穿（內部空間）",
+        "meaning": "表示從隧道、公園、森林或積水等三維空間或區域內部穿行通過",
+        "breakdown": "th-(貫穿氣流音) + rough -> 筆直穿過整段空間到另一端",
+        "trick": "諧音「死路」反義 -> 沒走進死路，而是筆直「穿過」公園大路！",
+        "scene": "踩著大水窪直接走過去、穿過公園小徑前往馬路，或警告災後不可開車穿越淹水路段",
+        "collocation": "walk through the park, drive through flooding water, walk through the tunnel",
+        "img": "🚇",
+        "context_eng": "Don't drive through flooding water after a hurricane.",
+        "example": "Don't drive through flooding water after a hurricane.",
+        "context_chi": "颶風過後切勿開車穿越淹水路段。",
+        "chant": "Through the park, through the door! Never drive through floodwater!",
+        "compare": "through (從立體空間或公園內部穿過) vs over (從表面上方跨過) vs around (繞過外圍)",
+        "note": "拼寫重點：字尾為 -ough，發音 /θruː/，常漏寫 h 或把 ough 寫錯成 thru/throught。"
+      },
+      "explanation": {
+        "point": "核心動態介系詞 through (穿過內部) 之靜音字母拼寫規則",
+        "examPurpose": "考核學生對極易拼錯的介系詞 through（含 th- 與不發音 gh）之拼寫精準度與字義理解。",
+        "correctReason": "正確拼法為 th + r + ough，雖然發音僅為 /θruː/，但標準英文拼寫絕不可簡寫為 thru 或多加字尾 t。",
+        "note": "地圖指路「穿過公園」walk through the park 與災後警告「勿開車穿越積水」don't drive through flooding water 皆必用此字。",
+        "trap": "極容易與 thought（想，過去式）混淆而多寫字尾 t，或漏掉字母 h 寫成 *trough。",
+        "commonTraps": [
+          "形近字混淆陷阱（ENG_SPELLING_PHONICS）：不可與 thought（思考）或 though（雖然）混淆，穿過必含 r 且無字尾 t。",
+          "漏字陷阱（ENG_SPELLING_PHONICS）：常漏寫字首 h（*trough）或字尾 gh（*throu）。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "across the inside of",
+          "straight past",
+          "via"
+        ],
+        "grammarCompare": "through 強調從內部或兩側包圍的空間穿越（如公園、隧道、積水）；over 強調從上方越過（如橋面）。",
+        "examVariations": "題型常見於動態介系詞四選一、地圖路線填空及聽寫拼字。"
+      },
+      "target_chi": "穿過；貫穿內部空間",
+      "target_pos": "介系詞 (Preposition)",
+      "masked_example": "Don't drive ________ flooding water after a hurricane.",
+      "masked_example_chi": "颶風過後切勿開車穿越淹水路段。"
+    },
+    {
+      "id": "q_w14_odg3_u17_04",
+      "book_id": "gra3",
+      "unit_id": "gra3_17",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★☆☆☆☆",
+      "difficulty_level": 1,
+      "question": "🎧 聽力拼字測驗：請仔細聆聽發音，拼寫出表示「繞過；沿著外圍」的動態介系詞（提示：字首為 a-，後方加上「圓形」單字）。",
+      "answer": "around",
+      "options": [],
+      "vocab_card": {
+        "word": "around",
+        "ipa": "/əˈraʊnd/",
+        "phonetic": "/əˈraʊnd/",
+        "syllables": "a·round",
+        "pos": "介系詞 (Preposition)",
+        "chi": "繞過；沿著⋯⋯周圍",
+        "meaning": "表示沿著某個障礙物或區域的外側弧線繞行，不進入其中",
+        "breakdown": "a-(在) + round(圓形/圈) -> 沿著圓圈外圍繞行",
+        "trick": "拆字：a + round（圓圈）-> 畫一個圓圈繞過去就是 around！",
+        "scene": "女孩為了不弄濕鞋子，沿著路邊的大水窪外圍繞過去",
+        "collocation": "walk around the water, run around the park, drive around the fallen tree",
+        "img": "🔄",
+        "context_eng": "She is walking around the puddle so her shoes stay dry.",
+        "example": "She is walking around the puddle so her shoes stay dry.",
+        "context_chi": "她正繞著水窪外圍走，好讓鞋子保持乾燥。",
+        "chant": "Around the water, around the tree! Keep your boots as dry as can be!",
+        "compare": "around (繞過外圍不沾濕) vs through (直接穿過內部通道)",
+        "note": "選擇題極常與 through 同時出現，依情境判斷「繞開避險」選 around，「直接穿越」選 through。"
+      },
+      "explanation": {
+        "point": "核心動態介系詞 around (繞行外圍) 之詞根記憶與拼寫",
+        "examPurpose": "考核學生透過字根 a + round 快速拼出 around 的能力及繞行空間概念。",
+        "correctReason": "由前綴 a- 加上代表圓圈的 round 組成 around，母音雙字母為 ou（發 /aʊ/ 音）。",
+        "note": "與 through 互為重要對比：繞著水窪外圍走以避開積水時用 around。",
+        "trap": "容易受發音影響漏掉開頭 a- 寫成 round，或將 ou 誤寫成 ow (*arownd)。",
+        "commonTraps": [
+          "母音拼寫陷阱（ENG_SPELLING_PHONICS）：/aʊ/ 音在此字拼作 ou 而非 ow，不可誤拼為 *arownd。",
+          "詞性漏字陷阱（ENG_SPELLING_PHONICS）：遺漏字首的 a- 只寫 round，在標準繞行介系詞測驗中必須寫完整 around。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "round",
+          "circling",
+          "bypassing"
+        ],
+        "grammarCompare": "walk around the puddle（繞過水窪外緣）vs walk through the puddle（踩進水窪穿過去）。",
+        "examVariations": "常搭配「keep shoes dry」或「avoid fallen trees」情境考出填空或選擇題。"
+      },
+      "target_chi": "繞過；沿著外圍",
+      "target_pos": "介系詞 (Preposition)",
+      "masked_example": "She is walking ________ the puddle so her shoes stay dry.",
+      "masked_example_chi": "她正繞著水窪外圍走，好讓鞋子保持乾燥。"
+    },
+    {
+      "id": "q_w14_odg3_u17_05",
+      "book_id": "gra3",
+      "unit_id": "gra3_17",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★☆☆☆☆",
+      "difficulty_level": 1,
+      "question": "🎧 聽力拼字測驗：請仔細聆聽發音，拼寫出表示「在⋯⋯下方（穿過或停留）」的動態介系詞（提示：與 over 相對，共 5 個字母）。",
+      "answer": "under",
+      "options": [],
+      "vocab_card": {
+        "word": "under",
+        "ipa": "/ˈʌndər/",
+        "phonetic": "/ˈʌndər/",
+        "syllables": "un·der",
+        "pos": "介系詞 (Preposition)",
+        "chi": "在⋯⋯下方（穿過或停留）",
+        "meaning": "表示移動路徑經過某物體的正下方，或位置處於該物體下方",
+        "breakdown": "un-(下方) + der -> 位於或穿過低處下方",
+        "trick": "拆字：un(下) + der -> 地下鐵叫 underground，走在橋下就是 under！",
+        "scene": "女孩從拱橋底下通道步行經過，或災後警告不可走在搖搖欲墜的斷樹下方",
+        "collocation": "walk under the bridge, don't walk under damaged trees, crawl under the table",
+        "img": "🕳️",
+        "context_eng": "Never walk under damaged trees or bridges after a hurricane.",
+        "example": "Never walk under damaged trees or bridges after a hurricane.",
+        "context_chi": "颶風過後絕對不要走在受損的樹木或橋樑下方。",
+        "chant": "Under the bridge, under the tree! Stay away from danger so you are safe and free!",
+        "compare": "under (從橋下或物體下方穿過) vs over (從橋面或物體上方跨越)",
+        "note": "防災黃金鐵律：Don't walk under damaged trees, buildings, or bridges."
+      },
+      "explanation": {
+        "point": "核心空間介系詞 under (在下方／從下方穿過) 拼寫與防災用法",
+        "examPurpose": "考核學生對基礎空間介系詞 under 的正確拼音能力及「橋下通行／樹下避險」語境掌握。",
+        "correctReason": "音節拆解為 un-der，字首為 u（發短母音 /ʌ/），字尾為 -er。",
+        "note": "與 over 形成垂直上下對比：走橋面用 over the bridge，走橋底用 under the bridge。",
+        "trap": "部分學生易受短母音 /ʌ/ 干擾誤拼成 *ander 或將字尾拼成 *-ar。",
+        "commonTraps": [
+          "短母音誤拼陷阱（ENG_SPELLING_PHONICS）：/ʌ/ 音在此拼為字母 u 而非 a 或 o，不可寫成 *ander。",
+          "字尾誤拼陷阱（ENG_SPELLING_PHONICS）：輕讀音節結尾必為 -er，不可誤寫為 *undar。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "below",
+          "beneath",
+          "underneath"
+        ],
+        "grammarCompare": "under 可兼作靜態位置（The cat is under the table）與動態移動路徑（She is walking under the bridge）。",
+        "examVariations": "常於看圖填空與災後避險否定祈使句（Don't walk _____ damaged trees）中出現。"
+      },
+      "target_chi": "在⋯⋯下方（穿過或停留）",
+      "target_pos": "介系詞 (Preposition)",
+      "masked_example": "Never walk ________ damaged trees or bridges after a hurricane.",
+      "masked_example_chi": "颶風過後絕對不要走在受損的樹木或橋樑下方。"
+    },
+    {
+      "id": "q_w14_odg3_u17_06",
+      "book_id": "gra3",
+      "unit_id": "gra3_17",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★☆☆☆☆",
+      "difficulty_level": 1,
+      "question": "🎧 聽力拼字測驗：請仔細聆聽發音，拼寫出表示「從外部進入⋯⋯裡面」的單字介系詞（提示：由兩個常見小字 in 與 to 合併組成）。",
+      "answer": "into",
+      "options": [],
+      "vocab_card": {
+        "word": "into",
+        "ipa": "/ˈɪntuː/",
+        "phonetic": "/ˈɪntuː/",
+        "syllables": "in·to",
+        "pos": "介系詞 (Preposition)",
+        "chi": "進入⋯⋯裡面",
+        "meaning": "表示人或物體從外部空間移動並進入某個封閉或半封閉區域的內部",
+        "breakdown": "in(在裡面) + to(朝向) -> 朝裡面走進去",
+        "trick": "拆字：in（裡面）+ to（走向）-> 走向裡面就是「進入」！",
+        "scene": "颶風來臨前把戶外花園的椅子搬進客廳，或大雨時走進堅固的建築物",
+        "collocation": "go into a building, bring ... into the house, come into the room",
+        "img": "📥",
+        "context_eng": "Bring garden furniture into the house before the hurricane arrives.",
+        "example": "Bring garden furniture into the house before the hurricane arrives.",
+        "context_chi": "在颶風來臨前，把花園家具搬進屋子裡。",
+        "chant": "Into, into, step inside! Into the building where it is dry!",
+        "compare": "into (動態由外向內進入) vs in (靜態待在裡面) vs out of (動態由內向外離開)",
+        "note": "into 強調「跨越邊界進入內部」的動作，常搭配 go / come / bring / walk。"
+      },
+      "explanation": {
+        "point": "核心動態介系詞 into (進入內部) 拼寫與單字合併規則",
+        "examPurpose": "考核學生正確拼寫複合介系詞 into（單一字詞，不可分開），並區別動態進入與靜態位置。",
+        "correctReason": "into 由 in 與 to 緊密合併為單一介系詞，表示「由外向內進入」的動作方向。",
+        "note": "課文代表句：Bring garden furniture into the house. / Go into a building.",
+        "trap": "容易誤拆成兩字 *in to，或僅填寫靜態介系詞 in。",
+        "commonTraps": [
+          "分合拼寫陷阱（ENG_SPELLING_PHONICS）：表達「進入某空間」時必須寫成單一字詞 into，不可隨意空格分開。",
+          "動靜態混淆陷阱（ENG_PREP_COLLOCATION）：go / bring / come 搭配進入某空間強調動態軌跡，需用 into 而非僅用 in。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "inside",
+          "entering",
+          "inward to"
+        ],
+        "grammarCompare": "Go into the house（動作：從外面走進屋內）vs Stay in the house（狀態：待在屋子裡面不動）。",
+        "examVariations": "題型常與反義片語 out of 並列於建築物進出對比填空題。"
+      },
+      "target_chi": "從外部進入⋯⋯裡面",
+      "target_pos": "介系詞 (Preposition)",
+      "masked_example": "Bring garden furniture ________ the house before the hurricane arrives.",
+      "masked_example_chi": "在颶風來臨前，把花園家具搬進屋子裡。"
+    },
+    {
+      "id": "q_w14_odg3_u17_07",
+      "book_id": "gra3",
+      "unit_id": "gra3_17",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "choice",
+      "category_tag": "grammar",
+      "difficulty": "★★☆☆☆",
+      "difficulty_level": 2,
+      "triadGroup": {
+        "groupId": "ODG3_U17_T1",
+        "tier": "L1-3",
+        "role": "foundation"
+      },
+      "trapCodes": [
+        "ENG_POS_CONFUSION",
+        "ENG_VERB_OMISSION"
+      ],
+      "question": "When a strong hurricane starts, _____ into a safe building and stay there.",
+      "options": [
+        "go",
+        "going",
+        "goes",
+        "to go"
+      ],
+      "answer": "go",
+      "explanation": {
+        "point": "肯定祈使句規則：使用原形動詞 (Base Form) 發出避難指示",
+        "examPurpose": "考核學生在條件子句後方辨識並選用祈使句開頭原形動詞的基礎能力。",
+        "correctReason": "逗號後方為主句，用來直接對讀者發出避難指示，屬於肯定祈使句，因此必須使用原形動詞 go（與後方的 and stay 保持對等原形）。",
+        "note": "可用連接詞 and 觀察平行結構：_____ ... and stay there，stay 為原形，前面也必為原形 go。",
+        "trap": "容易受前方 starts 影響誤選三單 goes，或誤以為祈使句開頭要加 -ing 或 to。",
+        "distractorAnalysis": {
+          "going": "going 為動名詞或現在分詞，若前面沒有 be 動詞無法獨立構成祈使句指令。",
+          "goes": "goes 為第三人稱單數現在式，但祈使句省略的主詞為第二人稱 you，不可使用 -es 結尾。",
+          "to go": "不定詞 to go 不能單獨作為祈使句的主要動詞發出指令。"
+        },
+        "steps": [
+          "① 先看逗號後方結構：沒有主詞，且後方有對等的原形動詞 and stay there",
+          "② 確認語氣為「發出安全指示的祈使句」",
+          "③ 肯定祈使句永遠使用「原形動詞」➔ 選 go"
+        ],
+        "insight": "💡 看到句子沒有主詞、直接要你做某件事，動詞永遠選「最乾淨的原形」！",
+        "visualBlock": {
+          "kind": "slot_box",
+          "title": "📦 肯定祈使句平行結構槽",
+          "data": {
+            "slots": [
+              {
+                "role": "條件子句",
+                "text": "When a strong hurricane starts,",
+                "accent": "pri"
+              },
+              {
+                "role": "原形動詞 ①",
+                "text": "go",
+                "accent": "ok"
+              },
+              {
+                "role": "方向受詞",
+                "text": "into a safe building",
+                "accent": "warn"
+              },
+              {
+                "role": "連接詞＋原形動詞 ②",
+                "text": "and stay there.",
+                "accent": "ok"
+              }
+            ]
+          },
+          "caption": "📊 第 2 格與第 4 格皆使用原形動詞（go / stay）！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "enter",
+          "head into",
+          "move into"
+        ],
+        "grammarCompare": "肯定祈使句（Go into...）使用原形動詞；若改寫為動名詞主詞（Going into a building is safe.）才用 V-ing。",
+        "examVariations": "題型常見於逗號後祈使句動詞型態選擇、防災海報填空及句子改寫。"
+      }
+    },
+    {
+      "id": "q_w14_odg3_u17_08",
+      "book_id": "gra3",
+      "unit_id": "gra3_17",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "choice",
+      "category_tag": "grammar",
+      "difficulty": "★★☆☆☆",
+      "difficulty_level": 2,
+      "triadGroup": {
+        "groupId": "ODG3_U17_T2",
+        "tier": "L1-3",
+        "role": "foundation"
+      },
+      "trapCodes": [
+        "ENG_PREP_COLLOCATION",
+        "ENG_CHINGLISH_LITERAL"
+      ],
+      "question": "A big storm is coming tonight. Please bring all the garden furniture _____ the house.",
+      "options": [
+        "out of",
+        "into",
+        "under",
+        "around"
+      ],
+      "answer": "into",
+      "explanation": {
+        "point": "動態介系詞 into vs out of 空間進出判斷",
+        "examPurpose": "考核學生依據暴風雨防災常識，正確區分「搬進屋內 (into)」與「搬出屋外 (out of)」的能力。",
+        "correctReason": "暴風雨來臨前為了避免庭院家具被強風吹飛，必須把它們從戶外搬「進」屋內，因此選用代表由外入內的介系詞 into。",
+        "note": "本句對應防災核心指示：Bring garden furniture into the house.",
+        "trap": "若未看清暴風雨將至的語境，極容易誤選反義片語 out of。",
+        "distractorAnalysis": {
+          "out of": "out of 表示「從屋內搬到屋外」，暴風雨來前把家具放屋外會非常危險，語意完全相反。",
+          "under": "under 表示「放在某物正下方」，把花園家具放在房子底下不符合正常英語居家表達。",
+          "around": "around 表示「繞著房子外圍」，家具仍留在戶外淋雨吹風，不合防災邏輯。"
+        },
+        "steps": [
+          "① 掌握情境：A big storm is coming（大風暴要來了）",
+          "② 判斷移動方向：花園家具原本在戶外 ➔ 要收進安全室內",
+          "③ 「由外向內進入」固定使用 into ➔ bring ... into the house"
+        ],
+        "insight": "💡 暴風雨前把物品「收進屋裡」用 into；平常把東西「拿出屋外」才用 out of！"
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "inside",
+          "indoors"
+        ],
+        "grammarCompare": "bring ... into the house（從外往內拿進來）vs take ... out of the house（從內往外拿出去）。",
+        "examVariations": "題型常與看圖對比（男進女出建築物）或防災除錯題一起測驗。"
+      }
+    },
+    {
+      "id": "q_w14_odg3_u17_09",
+      "book_id": "gra3",
+      "unit_id": "gra3_17",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "choice",
+      "category_tag": "grammar",
+      "difficulty": "★★☆☆☆",
+      "difficulty_level": 2,
+      "triadGroup": {
+        "groupId": "ODG3_U17_T2",
+        "tier": "L1-3",
+        "role": "foundation"
+      },
+      "trapCodes": [
+        "ENG_PREP_COLLOCATION"
+      ],
+      "question": "If your home is in a low area, go _____ to a higher place right away.",
+      "options": [
+        "down",
+        "under",
+        "up",
+        "through"
+      ],
+      "answer": "up",
+      "explanation": {
+        "point": "垂直方向介系詞 up vs down 避難判斷",
+        "examPurpose": "考核學生依據「低窪地區 (low area) ➔ 高處 (higher place)」線索選用正確方向詞 up 的能力。",
+        "correctReason": "從低窪地區前往地勢較高的安全處（a higher place），垂直方向是由低往高移動，因此必須搭配 up（go up to a higher place）。",
+        "note": "低窪處易積水淹水，避難方向永遠是往高處 (up to a higher place)。",
+        "trap": "受題幹前半句出現的 low（低）干擾而直覺誤選 down（往下）。",
+        "distractorAnalysis": {
+          "down": "受前文 low area 干擾誤選；往高處 (higher place) 方向是向上，絕不可寫 go down to a higher place。",
+          "under": "under 表示位於下方，與前往高處避難的路線完全不符。",
+          "through": "through 表示穿過內部通道，不能與 to a higher place 構成往上移動的方向語意。"
+        },
+        "steps": [
+          "① 圈出目的地關鍵字：a higher place（更高的地方）",
+          "② 判斷起點到終點的高低變化：low area ➔ higher place（往上爬升）",
+          "③ 垂直向上固定用 up ➔ 選 go up to a higher place"
+        ],
+        "insight": "💡 不要被前面的 low 騙了！要看動作「去哪裡」：去 higher place 就必須往 UP！"
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "upward to",
+          "climb up to"
+        ],
+        "grammarCompare": "go up to a higher place（往上前往高處）vs go down the hill（下山坡往低處）。",
+        "examVariations": "題型常見於爬山圖片對比、避難地圖爬階梯（go up the steps）與防災改錯題。"
+      }
+    },
+    {
+      "id": "q_w14_odg3_u17_10",
+      "book_id": "gra3",
+      "unit_id": "gra3_17",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "choice",
+      "category_tag": "grammar",
+      "difficulty": "★★★☆☆",
+      "difficulty_level": 4,
+      "triadGroup": {
+        "groupId": "ODG3_U17_T1",
+        "tier": "L4-6",
+        "role": "twist"
+      },
+      "trapCodes": [
+        "ENG_POS_CONFUSION",
+        "ENG_CHINGLISH_LITERAL"
+      ],
+      "question": "_____ through flooding water, please. The water might be deeper than it looks.",
+      "options": [
+        "Not drive",
+        "Doesn't drive",
+        "Don't driving",
+        "Don't drive"
+      ],
+      "answer": "Don't drive",
+      "explanation": {
+        "point": "否定祈使句標準結構：Don't + 原形動詞",
+        "examPurpose": "考核學生排除中式英文 Not + V、三單 Doesn't 與動名詞 Don't V-ing 等高頻陷阱，正確選出 Don't + 原形動詞。",
+        "correctReason": "否定祈使句告訴對方「不要做某事」，固定結構為 Don't + 原形動詞（Don't drive）。",
+        "note": "句尾加上了「, please」，依然屬於祈使句，不可改變前面的 Don't + 原形動詞公式。",
+        "trap": "中式英文「不要開車」常讓人誤選 *Not drive；或忘記助動詞後接原形而誤選 *Don't driving。",
+        "distractorAnalysis": {
+          "Not drive": "受中文「不要開」字面直譯影響，英語否定祈使句不可單獨用 Not 開頭，必須使用助動詞 Don't。",
+          "Doesn't drive": "祈使句主詞隱含為 you（第二人稱），絕不可使用第三人稱單數助動詞 Doesn't。",
+          "Don't driving": "助動詞 Don't 後方必須搭配原形動詞 drive，不可加上 -ing。"
+        },
+        "steps": [
+          "① 確認句意為禁止危險行為（勿開車涉水）",
+          "② 排除中式直譯 Not drive 與三單 Doesn't drive",
+          "③ 確認助動詞 Don't 後必接原形動詞 ➔ 選 Don't drive"
+        ],
+        "insight": "💡 否定祈使句只有一個公式：「Don't ＋ 原形動詞」，看到 Not / Doesn't / V-ing 直接刪掉！",
+        "visualBlock": {
+          "kind": "compare_table",
+          "title": "⚖️ 否定祈使句四大常錯 vs 正確寫法",
+          "data": {
+            "headers": [
+              "常見失分錯寫 ❌",
+              "正確寫法 ✅",
+              "文法診斷"
+            ],
+            "rows": [
+              [
+                "Not drive through water.",
+                "Don't drive through water.",
+                "不可省助動詞，必用 Don't"
+              ],
+              [
+                "Doesn't drive through water.",
+                "Don't drive through water.",
+                "祈使句對象是 you，不用 Doesn't"
+              ],
+              [
+                "Don't driving through water.",
+                "Don't drive through water.",
+                "Don't 後方動詞必須是原形"
+              ]
+            ]
+          },
+          "caption": "📊 看到否定命令先核對兩點：① Don't ② 原形動詞！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "Do not drive",
+          "Never drive"
+        ],
+        "grammarCompare": "Don't drive（日常口語與海報最常用）與 Do not drive（較正式嚴肅書面警告）文法皆正確，後方皆接原形動詞。",
+        "examVariations": "題型常見於文法四選一、錯題改錯（mistake buster）及句型改寫題。"
+      }
+    },
+    {
+      "id": "q_w14_odg3_u17_11",
+      "book_id": "gra3",
+      "unit_id": "gra3_17",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "choice",
+      "category_tag": "grammar",
+      "difficulty": "★★★☆☆",
+      "difficulty_level": 4,
+      "triadGroup": {
+        "groupId": "ODG3_U17_T1",
+        "tier": "L4-6",
+        "role": "twist"
+      },
+      "trapCodes": [
+        "ENG_PUNCT_DICTATION",
+        "ENG_POS_CONFUSION"
+      ],
+      "question": "Which sentence uses \"please\" correctly to give a polite safety instruction?",
+      "options": [
+        "Stay please inside the shelter.",
+        "Please to stay inside the shelter.",
+        "Stay inside the shelter, please.",
+        "Please staying inside the shelter."
+      ],
+      "answer": "Stay inside the shelter, please.",
+      "explanation": {
+        "point": "禮貌詞 please 在祈使句中的位置與逗號標點規範",
+        "examPurpose": "考核學生精確掌握 please 置於句首或句尾的語序規則，並分辨夾在動詞與副詞中間或後接不定詞的錯誤用法。",
+        "correctReason": "在祈使句中，please 可以放在句首（Please stay inside...）或句尾並加上逗號（Stay inside the shelter, please.），主動詞 stay 維持原形。",
+        "note": "本句對應課文文法規範：Stay there, please. / Please stay there.",
+        "trap": "容易受中文「請你待在裡面」語序或忘記原形動詞規則而誤選 *Please to stay 或 *Stay please inside。",
+        "distractorAnalysis": {
+          "Stay please inside the shelter.": "課本規範 please 只能放在「句首」或「句尾」，不可隨意夾在主要動詞與地點片語之間。",
+          "Please to stay inside the shelter.": "Please 後方必須直接接原形動詞 stay，不可加上不定詞 to。",
+          "Please staying inside the shelter.": "Please 後方不可接動名詞 staying，祈使句必須用原形動詞 stay。"
+        },
+        "steps": [
+          "① 檢查 please 的合法位置：只能放「句首」或「句尾（加逗號）」",
+          "② 檢查主要動詞型態：stay 必須是原形（刪掉 to stay 與 staying）",
+          "③ 確認標點完整無誤 ➔ 選 Stay inside the shelter, please."
+        ],
+        "insight": "💡 記住口訣：「句首 Please 無逗號，句尾逗號加 please；動詞永遠保持原形！」",
+        "visualBlock": {
+          "kind": "slot_box",
+          "title": "📦 please 禮貌祈使句雙位置公式槽",
+          "data": {
+            "slots": [
+              {
+                "role": "句首位置（無逗號）",
+                "text": "Please stay / Please don't move.",
+                "accent": "ok"
+              },
+              {
+                "role": "OR",
+                "text": "↔",
+                "accent": "pri"
+              },
+              {
+                "role": "句尾位置（必加逗號）",
+                "text": "Stay there, please. / Don't move, please.",
+                "accent": "warn"
+              }
+            ]
+          },
+          "caption": "📊 千萬不可把 please 塞在句中，也不可讓動詞變形！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "Please stay inside the shelter.",
+          "Kindly stay inside the shelter."
+        ],
+        "grammarCompare": "肯定與否定祈使句皆適用雙位置原則：Please don't move. ＝ Don't move, please.",
+        "examVariations": "段考常考「選出唯一語法與標點正確的句子」或紙筆重組加標點題。"
+      }
+    },
+    {
+      "id": "q_w14_odg3_u17_12",
+      "book_id": "gra3",
+      "unit_id": "gra3_17",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "choice",
+      "category_tag": "grammar",
+      "difficulty": "★★★☆☆",
+      "difficulty_level": 4,
+      "triadGroup": {
+        "groupId": "ODG3_U17_T2",
+        "tier": "L4-6",
+        "role": "twist"
+      },
+      "trapCodes": [
+        "ENG_PREP_COLLOCATION"
+      ],
+      "question": "Before a hurricane arrives, put strong boards _____ your windows so the glass won't break.",
+      "options": [
+        "over",
+        "under",
+        "through",
+        "out of"
+      ],
+      "answer": "over",
+      "explanation": {
+        "point": "動態空間介系詞 over 表示「覆蓋遮擋於表面上方」",
+        "examPurpose": "考核學生理解 over 不僅指「從上方跨越」，在防災語境中也表示「將防護物覆蓋在表面上方」的延伸空間意義。",
+        "correctReason": "put boards over your windows 意指將厚木板釘蓋遮住窗戶表面，防止狂風或飛散碎石擊破玻璃，因此必用 over。",
+        "note": "課文原句：Put boards over your windows.",
+        "trap": "若只記得 over 是「跳過去」，容易在遮蓋表面語境猶豫而誤選 under 或 through。",
+        "distractorAnalysis": {
+          "under": "把木板放在窗戶下方完全無法保護玻璃，且違反防颱知識。",
+          "through": "put boards through your windows 變成「把木板插穿過窗戶」，會直接打破玻璃。",
+          "out of": "out of 表示移出外部，與固定防護板在窗戶上的動作不符。"
+        },
+        "steps": [
+          "① 理解防颱目的：保護玻璃不破裂（so the glass won't break）",
+          "② 想像空間畫面：把整片木板「覆蓋擋在」窗戶表面",
+          "③ 「覆蓋在⋯⋯上方／表面」固定使用 over ➔ put boards over your windows"
+        ],
+        "insight": "💡 over 有兩個超重要畫面：① 從上方跨過（over the bridge）；② 整片覆蓋擋住（over the windows）！",
+        "visualBlock": {
+          "kind": "prep_ladder",
+          "title": "🧭 over vs under 垂直空間階梯",
+          "data": {
+            "levels": [
+              {
+                "prep": "over",
+                "scope": "上方跨越 ／ 覆蓋表面防護",
+                "examples": [
+                  "put boards over your windows",
+                  "walk over the bridge"
+                ],
+                "highlight": true
+              },
+              {
+                "prep": "under",
+                "scope": "正下方穿行 ／ 位於危險物下方",
+                "examples": [
+                  "walk under the bridge",
+                  "don't walk under damaged trees"
+                ],
+                "highlight": false
+              }
+            ]
+          },
+          "caption": "📊 保護遮蓋用 over，橋底或樹下避險用 under！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "across",
+          "covering"
+        ],
+        "grammarCompare": "put a blanket over the bed（把毯子蓋在床上）與 put boards over windows 皆屬 over 的「表面覆蓋」用法。",
+        "examVariations": "題型常見於防颱除錯題（將錯誤的 under 改為 over）及情境選擇題。"
+      }
+    },
+    {
+      "id": "q_w14_odg3_u17_13",
+      "book_id": "gra3",
+      "unit_id": "gra3_17",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "choice",
+      "category_tag": "grammar",
+      "difficulty": "★★★☆☆",
+      "difficulty_level": 5,
+      "triadGroup": {
+        "groupId": "ODG3_U17_T3",
+        "tier": "L4-6",
+        "role": "twist"
+      },
+      "trapCodes": [
+        "ENG_PREP_COLLOCATION",
+        "ENG_CHINGLISH_LITERAL"
+      ],
+      "question": "Emily is wearing her brand-new white sneakers, so she is walking _____ the big puddle to keep them clean.",
+      "options": [
+        "through",
+        "around",
+        "into",
+        "under"
+      ],
+      "answer": "around",
+      "explanation": {
+        "point": "around (繞行外圍) vs through (穿越內部) 情境邏輯辨析",
+        "examPurpose": "考核學生根據語境線索「to keep them clean（保持鞋子乾淨）」精準判斷行進路線應為繞道而行 (around)。",
+        "correctReason": "穿新白鞋想保持乾淨 (keep them clean)，就必須沿著水窪外圍繞過去而不踩進去，因此固定選用 around。",
+        "note": "若人物穿著雨靴且直接踩進水窪濺起水花，才會使用 walk through the water。",
+        "trap": "未細讀句尾目的子句 to keep them clean，看見 water / puddle 就反射性誤選 through。",
+        "distractorAnalysis": {
+          "through": "walk through the puddle 代表直接踩進水窪中央穿過去，會立刻弄濕弄髒白鞋。",
+          "into": "walk into the puddle 是「走進水窪裡面」，一樣會弄髒新鞋。",
+          "under": "水窪在地面上，人不可能從水窪底下鑽過去，不符合空間常理。"
+        },
+        "steps": [
+          "① 抓取關鍵線索：new white sneakers + to keep them clean",
+          "② 推論合理動作：不能踩進水裡 ➔ 要沿邊緣繞開",
+          "③ 「繞過障礙物外圍」必選 around ➔ walking around the big puddle"
+        ],
+        "insight": "💡 遇到 puddle（水窪）題先看「鞋子想不想濕」：想保持乾淨選 around，直接踩水選 through！",
+        "visualBlock": {
+          "kind": "compare_table",
+          "title": "⚖️ 水窪情境對比：around vs through",
+          "data": {
+            "headers": [
+              "動態介系詞",
+              "行進軌跡",
+              "適用情境線索"
+            ],
+            "rows": [
+              [
+                "around",
+                "沿邊緣外圍繞道",
+                "keep shoes clean / stay dry（不想弄濕）"
+              ],
+              [
+                "through",
+                "從中間直接涉水穿過",
+                "splash water / wear rain boots（直接踩過）"
+              ]
+            ]
+          },
+          "caption": "📊 讀懂上下文線索，一秒分辨 around 與 through！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "bypassing",
+          "circling"
+        ],
+        "grammarCompare": "walk around the puddle（繞過水窪）vs walk through the park（穿過公園內部小徑）。",
+        "examVariations": "題型極常以雙人對照圖或因果句（so ... stay dry）出現在段考選擇題中。"
+      }
+    },
+    {
+      "id": "q_w14_odg3_u17_14",
+      "book_id": "gra3",
+      "unit_id": "gra3_17",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "choice",
+      "category_tag": "grammar",
+      "difficulty": "★★★★☆",
+      "difficulty_level": 6,
+      "triadGroup": {
+        "groupId": "ODG3_U17_T3",
+        "tier": "L4-6",
+        "role": "twist"
+      },
+      "trapCodes": [
+        "ENG_PREP_COLLOCATION"
+      ],
+      "question": "Look at the stone arch bridge over the river: Leo is riding his bike on the top path _____ the bridge, while Amy is walking on the lower riverbank _____ the bridge.",
+      "options": [
+        "under / over",
+        "over / under",
+        "through / around",
+        "into / out of"
+      ],
+      "answer": "over / under",
+      "explanation": {
+        "point": "立體空間雙空對比：over (橋面上方) vs under (拱橋下方)",
+        "examPurpose": "考核學生在雙空格長句中，精準對應「top path（橋頂上方路徑）」與「lower riverbank（橋下河岸通道）」的立體方向能力。",
+        "correctReason": "在頂部橋面路徑騎車是從橋「上方跨越」用 over；在較低河岸通道步行是從拱橋「下方穿行」用 under，依序為 over / under。",
+        "note": "本題對應「走橋上 vs 走橋下」經典對照場景。",
+        "trap": "閱讀雙空時容易把前後兩人的位置看反，而誤選順序顛倒的 under / over。",
+        "distractorAnalysis": {
+          "under / over": "前後順序顛倒！top path 應配 over，lower riverbank 應配 under。",
+          "through / around": "拱橋橋面是從上方跨過 (over) 而非穿過封閉內部 (through)，且橋下河岸也不是繞過外圍 (around)。",
+          "into / out of": "橋樑是開放通道而非進出室內空間，不可使用 into / out of。"
+        },
+        "steps": [
+          "① 圈出第一個位置線索：on the top path（頂部路徑）➔ 選 over",
+          "② 圈出第二個位置線索：on the lower riverbank（低處河岸）➔ 選 under",
+          "③ 核對順序為 over / under"
+        ],
+        "insight": "💡 雙空格題先拿筆把兩個人的「高度關鍵字」圈起來（top ➔ over；lower ➔ under），絕對不會填反！",
+        "visualBlock": {
+          "kind": "prep_ladder",
+          "title": "🧭 拱橋立體雙層通行路徑",
+          "data": {
+            "levels": [
+              {
+                "prep": "over",
+                "scope": "上層橋面通道（on the top path）",
+                "examples": [
+                  "riding a bike over the bridge",
+                  "walking over the stone bridge"
+                ],
+                "highlight": true
+              },
+              {
+                "prep": "under",
+                "scope": "下層橋拱河岸（on the lower riverbank）",
+                "examples": [
+                  "walking under the bridge",
+                  "a boat passing under the bridge"
+                ],
+                "highlight": true
+              }
+            ]
+          },
+          "caption": "📊 一上一下立體分層：橋頂走 over，橋底走 under！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "across the top of / beneath",
+          "above the bridge / underneath the bridge"
+        ],
+        "grammarCompare": "bridge 搭配 over 指走橋面過河；搭配 under 指從橋孔底下經過。",
+        "examVariations": "常見於雙空克漏字與看圖完成句子大題。"
+      }
+    },
+    {
+      "id": "q_w14_odg3_u17_15",
+      "book_id": "gra3",
+      "unit_id": "gra3_17",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "choice",
+      "category_tag": "grammar",
+      "difficulty": "★★★☆☆",
+      "difficulty_level": 4,
+      "triadGroup": {
+        "groupId": "ODG3_U17_T3",
+        "tier": "L4-6",
+        "role": "twist"
+      },
+      "trapCodes": [
+        "ENG_PREP_COLLOCATION",
+        "ENG_CHINGLISH_LITERAL"
+      ],
+      "question": "Excuse me. How do you get _____ the police station _____ the hospital in an emergency?",
+      "options": [
+        "to / from",
+        "into / out of",
+        "from / to",
+        "over / under"
+      ],
+      "answer": "from / to",
+      "explanation": {
+        "point": "問路起點與終點搭配結構：from [起點] to [終點]",
+        "examPurpose": "考核學生詢問兩地路線時對起點介系詞 from 與終點介系詞 to 之正確順序掌握。",
+        "correctReason": "「從起點 A 到達終點 B」固定句型為 How do you get from A to B?，因此起點警察局前用 from，終點醫院前用 to。",
+        "note": "也可以用於採買來源：get money from the bank。",
+        "trap": "常把起始與終點順序弄反選成 to / from，或誤以為進出建築物而選 into / out of。",
+        "distractorAnalysis": {
+          "to / from": "順序完全相反！這會變成「從醫院到警察局」，與題意方向相反。",
+          "into / out of": "get into / out of 指進出單一建物，不能用來串接兩個地點的路線起終點。",
+          "over / under": "over / under 用於跨過橋或經過下方，不能連接起點與目的地名詞。"
+        },
+        "steps": [
+          "① 辨識問路固定公式：How do you get from A to B?",
+          "② 第一格在起點（the police station）前 ➔ 填 from",
+          "③ 第二格在終點（the hospital）前 ➔ 填 to"
+        ],
+        "insight": "💡 只要問「怎麼從 A 去 B」，雙手反射填入「from A to B」，順序絕不對調！"
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "reach ... starting from ...",
+          "go from ... toward ..."
+        ],
+        "grammarCompare": "from A to B 既可用於空間移動（from the school to the firehouse），也可用於時間範圍（from 8:00 to 5:00）。",
+        "examVariations": "題型常見於地圖對話第一句開頭填空與路線問答寫作。"
+      }
+    },
+    {
+      "id": "q_w14_odg3_u17_16",
+      "book_id": "gra3",
+      "unit_id": "gra3_17",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "choice",
+      "category_tag": "reading",
+      "difficulty": "★★★★☆",
+      "difficulty_level": 6,
+      "triadGroup": {
+        "groupId": "ODG3_U17_T4",
+        "tier": "L4-6",
+        "role": "twist"
+      },
+      "trapCodes": [
+        "ENG_PREP_COLLOCATION"
+      ],
+      "question": "On the town safety map, the police station stands below a flight of white steps leading into a park. Beyond the park is a curved road that connects to a bridge right in front of the school. How do you get from the police station to the school?",
+      "options": [
+        "Go down the steps, walk around the park, and go under the bridge.",
+        "Go up the steps, walk through the park, go along the road, and go over the bridge.",
+        "Go into the police station, jump over the fence, and drive through the river.",
+        "Go up the bridge, walk out of the school, and go down the steps."
+      ],
+      "answer": "Go up the steps, walk through the park, go along the road, and go over the bridge.",
+      "explanation": {
+        "point": "緊急地圖路徑閱讀整合：結合 up / through / over 完成連續指令",
+        "examPurpose": "考核學生依據地圖文字描述還原立體移動順序（上階梯 ➔ 穿過公園 ➔ 沿道路 ➔ 過橋）的綜合閱讀理解力。",
+        "correctReason": "警察局位於階梯下方，因此先「上階梯 (go up the steps)」進入公園，沿小徑「穿過公園 (walk through the park)」，沿馬路走並「從橋面上跨越 (go over the bridge)」即抵達學校。",
+        "note": "本題完整對應緊急地圖對話路線：Go up the steps. Walk through the park. Go along the road. Go over the bridge.",
+        "trap": "誘答項常故意把 up 換成 down、through 換成 around、或把過橋 over 換成危險的 under。",
+        "distractorAnalysis": {
+          "Go down the steps, walk around the park, and go under the bridge.": "方向完全錯誤！警察局在階梯下方必須往「上」走 (up)，過橋走橋面用 over，不可鑽橋下 (under)。",
+          "Go into the police station, jump over the fence, and drive through the river.": "不符合實際地圖道路動線與安全常識。",
+          "Go up the bridge, walk out of the school, and go down the steps.": "路線順序錯亂，起點與終點前後顛倒。"
+        },
+        "steps": [
+          "① 起點警察局在階梯下方 ➔ 第一步：Go up the steps",
+          "② 經過公園內部小徑 ➔ 第二步：Walk through the park",
+          "③ 沿弧形馬路跨越橋面到達學校 ➔ 第三步：Go along the road and go over the bridge"
+        ],
+        "insight": "💡 讀地圖路線題就像玩闖關遊戲，把每一關的介系詞方向（up ➔ through ➔ over）連起來對答案就秒殺！",
+        "visualBlock": {
+          "kind": "timeline",
+          "title": "⏳ 警察局 ➔ 學校 四步急救路線軸",
+          "data": {
+            "events": [
+              {
+                "time": "Step 1 (階梯)",
+                "label": "Go up the steps",
+                "highlight": true
+              },
+              {
+                "time": "Step 2 (公園)",
+                "label": "Walk through the park",
+                "highlight": true
+              },
+              {
+                "time": "Step 3 (馬路)",
+                "label": "Go along the road",
+                "highlight": false
+              },
+              {
+                "time": "Step 4 (橋樑)",
+                "label": "Go over the bridge → School",
+                "highlight": true
+              }
+            ],
+            "rule": "從下往上爬階梯用 up，穿過公園內部用 through，走過橋面用 over"
+          },
+          "caption": "📊 四步驟順序與介系詞方向必須 100% 吻合地圖地形！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "climb the stairs / cross the park / cross the bridge",
+          "head up the steps / walk across the park / go across the bridge"
+        ],
+        "grammarCompare": "go along the road（沿著道路走，維持同一條線）vs walk through the park（穿過一片區域）。",
+        "examVariations": "常與反向路線題（從藥局或學校回到警察局）出成題組，測驗介系詞正反轉換。"
+      }
+    },
+    {
+      "id": "q_w14_odg3_u17_17",
+      "book_id": "gra3",
+      "unit_id": "gra3_17",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "choice",
+      "category_tag": "reading",
+      "difficulty": "★★★★☆",
+      "difficulty_level": 6,
+      "triadGroup": {
+        "groupId": "ODG3_U17_T4",
+        "tier": "L4-6",
+        "role": "twist"
+      },
+      "trapCodes": [
+        "ENG_PREP_COLLOCATION"
+      ],
+      "question": "Using the same town safety map, the drugstore sits on the top road above the curved path that passes through the park and leads to the white steps above the police station. How do you get from the drugstore to the police station?",
+      "options": [
+        "Go along the road, walk through the park, and go down the steps.",
+        "Go along the road, walk through the park, and go up the steps.",
+        "Go over the bridge, walk into the hospital, and go up the hill.",
+        "Go out of the drugstore, walk under the park, and drive into the steps."
+      ],
+      "answer": "Go along the road, walk through the park, and go down the steps.",
+      "explanation": {
+        "point": "逆向地圖路線推理：下階梯必須由 up 反轉為 down",
+        "examPurpose": "考核學生在路線起終點對調後，能否靈活將原先的上階梯 (up) 轉換為下階梯 (down) 的空間逆向思維。",
+        "correctReason": "從位於上方道路的藥局出發，沿路進入並穿過公園 (walk through the park) 後，必須「走下」階梯 (go down the steps) 才會抵達底層馬路的警察局。",
+        "note": "正走是 go up the steps，反走回警察局必改為 go down the steps！",
+        "trap": "死背「警察局那段對話是 go up the steps」的學生，會忽略方向已經反轉而錯選 go up the steps。",
+        "distractorAnalysis": {
+          "Go along the road, walk through the park, and go up the steps.": "高頻背誦陷阱！從公園回到警察局是由高往低，階梯必須用 down 而非 up。",
+          "Go over the bridge, walk into the hospital, and go up the hill.": "藥局與警察局都在橋的左側，不需要過橋去醫院，也不存在山坡。",
+          "Go out of the drugstore, walk under the park, and drive into the steps.": "walk under the park（在公園地底走）與 drive into the steps 皆不合常理。"
+        },
+        "steps": [
+          "① 確認起終點反轉：藥局（上方）➔ 警察局（下方）",
+          "② 中段穿過公園不變：Walk through the park",
+          "③ 最後一段階梯由上往下走 ➔ 必須選 go down the steps"
+        ],
+        "insight": "💡 地圖題大忌是死背！起點和終點對調時，up 和 down 一定要跟著對調！"
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "walk down the stairs",
+          "head down the steps"
+        ],
+        "grammarCompare": "go up the steps（由低處上階梯）↔ go down the steps（由高處下階梯）；walk through the park 雙向皆適用。",
+        "examVariations": "題型常見於看圖簡答寫作（How do you get from the drugstore to the police station?）。"
+      }
+    },
+    {
+      "id": "q_w14_odg3_u17_18",
+      "book_id": "gra3",
+      "unit_id": "gra3_17",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "choice",
+      "category_tag": "reading",
+      "difficulty": "★★★☆☆",
+      "difficulty_level": 4,
+      "triadGroup": {
+        "groupId": "ODG3_U17_T4",
+        "tier": "L4-6",
+        "role": "twist"
+      },
+      "trapCodes": [
+        "ENG_CHINGLISH_LITERAL"
+      ],
+      "question": "According to the hurricane safety guide, which instruction should people follow BEFORE a hurricane hits?",
+      "options": [
+        "Listen to the radio and evacuate the area immediately.",
+        "Don't walk under damaged trees, buildings, or bridges.",
+        "Get a first-aid kit, cans of food, and bottles of water from the supermarket.",
+        "Drive through flooding water to check on your neighbors."
+      ],
+      "answer": "Get a first-aid kit, cans of food, and bottles of water from the supermarket.",
+      "explanation": {
+        "point": "閱讀理解時間軸分類：颶風來襲前 (Before a Hurricane) 的防災物資準備",
+        "examPurpose": "考核學生精確區分颶風三階段（Before / During / After）各別對應的安全行動。",
+        "correctReason": "採購急救箱、罐頭食物與瓶裝水（以及領現金、收庭院家具、釘窗戶木板）皆屬於颶風來臨「前 (Before)」必須完成的準備工作。",
+        "note": "閱讀題常把「颶風中」與「颶風後」的正確句子混進選項當誘答項，審題時必圈出 BEFORE。",
+        "trap": "看到「Listen to the radio」和「Don't walk under damaged trees」本身都是正確防災常識，容易忘記確認時間是 BEFORE 而誤選。",
+        "distractorAnalysis": {
+          "Listen to the radio and evacuate the area immediately.": "收聽廣播並撤離屬於「颶風期間 (During a Hurricane)」的應變行動，而非颶風來臨前。",
+          "Don't walk under damaged trees, buildings, or bridges.": "閃避受損樹木、建築與橋樑屬於「颶風過後 (After a Hurricane)」的注意事項。",
+          "Drive through flooding water to check on your neighbors.": "這完全違反防災指示！颶風後絕不可開車穿越積水 (Don't drive through flooding water)。"
+        },
+        "steps": [
+          "① 圈出題幹時間關鍵字：BEFORE a hurricane hits（颶風來前）",
+          "② 排除 During（收聽廣播撤離）與 After（避開斷樹）的選項",
+          "③ 鎖定災前物資採買 ➔ 選 Get a first-aid kit, cans of food..."
+        ],
+        "insight": "💡 閱讀時間分類題的陷阱就是「選項本身沒錯，但時間放錯階段」！看到 BEFORE/DURING/AFTER 先畫線！",
+        "visualBlock": {
+          "kind": "timeline",
+          "title": "⏳ 颶風防災三階段時間軸",
+          "data": {
+            "events": [
+              {
+                "time": "Before (災前準備)",
+                "label": "furniture into house / boards over windows / supplies from supermarket",
+                "highlight": true
+              },
+              {
+                "time": "During (災中避難)",
+                "label": "go into building / go up to shelter / listen to radio",
+                "highlight": false
+              },
+              {
+                "time": "After (災後避險)",
+                "label": "don't drive through floodwater / don't walk under damaged trees",
+                "highlight": false
+              }
+            ],
+            "rule": "先買物資釘木板 (Before) ➔ 進屋收音機撤離 (During) ➔ 勿涉水勿走斷樹下 (After)"
+          },
+          "caption": "📊 對準時間軸，一秒破解三階段閱讀誘答！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "prior to the storm",
+          "prepare emergency supplies"
+        ],
+        "grammarCompare": "cans of food 與 bottles of water 複習了前面單元的量詞搭配結構（Measure Phrases）。",
+        "examVariations": "題型常見於閱讀測驗三階段配對、是非題或資訊整理簡答題。"
+      }
+    },
+    {
+      "id": "q_w14_odg3_u17_19",
+      "book_id": "gra3",
+      "unit_id": "gra3_17",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "choice",
+      "category_tag": "reading",
+      "difficulty": "★★★☆☆",
+      "difficulty_level": 5,
+      "triadGroup": {
+        "groupId": "ODG3_U17_T4",
+        "tier": "L4-6",
+        "role": "twist"
+      },
+      "trapCodes": [
+        "ENG_CHINGLISH_LITERAL"
+      ],
+      "question": "Why does the hurricane guide warn people: \"Don't walk under damaged trees, buildings, or bridges\" after the storm ends?",
+      "options": [
+        "Because the wind will blow garden furniture out of the house.",
+        "Because damaged branches, walls, or stones might suddenly fall down on you.",
+        "Because the supermarket and bank are closed on weekends.",
+        "Because you should listen to CDs inside a low area instead."
+      ],
+      "answer": "Because damaged branches, walls, or stones might suddenly fall down on you.",
+      "explanation": {
+        "point": "閱讀因果推論：理解災後避開受損高處結構物的安全原因",
+        "examPurpose": "考核學生讀懂「damaged（受損的）」與「under（在下方）」的物理危險關聯並做出正確推論。",
+        "correctReason": "經過強風豪雨摧殘的樹木、建物與橋樑結構不穩（damaged），走在下方隨時可能被突然掉落的樹枝、牆塊或石頭砸傷。",
+        "note": "damaged 為過去分詞當形容詞，意為「受損壞的」。",
+        "trap": "容易被課文其他片段字眼（如 garden furniture、supermarket、bank）分散注意力。",
+        "distractorAnalysis": {
+          "Because the wind will blow garden furniture out of the house.": "把庭院家具收進屋內是颶風「來臨前」的預防措施，與災後勿走斷樹下無關。",
+          "Because the supermarket and bank are closed on weekends.": "課文並未提及週末營業與否，屬於無中生有的干擾資訊。",
+          "Because you should listen to CDs inside a low area instead.": "課文明確強調要聽廣播 (radio) 且要離開低窪處前往高處，此選項處處皆錯。"
+        },
+        "steps": [
+          "① 鎖定關鍵詞：damaged（受損的）＋ under（在正下方）",
+          "② 思考物理風險：頭頂上方受損物會發生什麼事？➔ 可能墜落砸人",
+          "③ 對應合理推論 ➔ 選 Because damaged branches, walls, or stones might suddenly fall down on you."
+        ],
+        "insight": "💡 英文閱讀推論題抓住兩個字：damaged（壞掉的）＋ under（在下面）＝ 頭上東西會掉下來！"
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "broken",
+          "unsafe",
+          "unstable"
+        ],
+        "grammarCompare": "damaged trees（被破壞的樹木，被動含意用 -ed）與 flooding water（正在淹上來的水，進行含意用 -ing）都是分詞形容詞。",
+        "examVariations": "題型常見於 Open-book 閱讀問答題（Explain why...）及單字字義推論題。"
+      }
+    },
+    {
+      "id": "q_w14_odg3_u17_20",
+      "book_id": "gra3",
+      "unit_id": "gra3_17",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "choice",
+      "category_tag": "grammar",
+      "difficulty": "★★★★★",
+      "difficulty_level": 8,
+      "triadGroup": {
+        "groupId": "ODG3_U17_T1",
+        "tier": "L7-10",
+        "role": "challenge"
+      },
+      "trapCodes": [
+        "ENG_POS_CONFUSION",
+        "ENG_TENSE_MISMATCH"
+      ],
+      "question": "If the emergency broadcast tells you to get out of the area, please _____ instructions calmly and _____ the town right away.",
+      "options": [
+        "follows / leaves",
+        "to follow / leaving",
+        "following / leave",
+        "follow / leave"
+      ],
+      "answer": "follow / leave",
+      "explanation": {
+        "point": "高階長句平行祈使句結構：Please + 原形動詞 ① + and + 原形動詞 ②",
+        "examPurpose": "考核學生在長篇條件句干擾下，仍能維持 please 與對等連接詞 and 前後皆為原形動詞的高階語法控制力。",
+        "correctReason": "逗號後的主句以 please 引導兩個並列的祈使動作，連接詞 and 兩側必須保持對等的原形動詞，因此兩格皆須填入原形動詞 follow 與 leave。",
+        "note": "對應課文核心長句：If it's time to get out of the area, follow instructions and leave.",
+        "trap": "前面出現第三人稱單數 broadcast tells，極易誘使學生誤以為後方動詞也要加 -s 選成 follows / leaves。",
+        "distractorAnalysis": {
+          "follows / leaves": "受前面主詞 the emergency broadcast tells 的三單動詞干擾而誤選；祈使句不可加 -s。",
+          "to follow / leaving": "Please 後不可接不定詞 to follow，且連接詞 and 前後詞性不一致。",
+          "following / leave": "and 前方使用動名詞 following 而後方用原形 leave，違反對等平行原則與祈使句規則。"
+        },
+        "steps": [
+          "① 切開條件子句：If ... tells you to get out of the area, （完成背景設定）",
+          "② 鎖定主句開頭：please _____ ... and _____ ... ➔ 祈使句雙指令！",
+          "③ 套用對等原形鐵律：前後動詞皆必為原形 ➔ 選 follow / leave"
+        ],
+        "insight": "💡 遇見「If 主詞＋三單動詞，please _____ and _____」別被前面的三單騙走，逗號後沒有主詞就是祈使句！",
+        "visualBlock": {
+          "kind": "slot_box",
+          "title": "📦 條件句＋雙原形祈使句結構槽",
+          "data": {
+            "slots": [
+              {
+                "role": "If 條件子句（含三單）",
+                "text": "If the broadcast tells you...",
+                "accent": "pri"
+              },
+              {
+                "role": "禮貌前導",
+                "text": "please",
+                "accent": "warn"
+              },
+              {
+                "role": "原形動詞 ①",
+                "text": "follow instructions calmly",
+                "accent": "ok"
+              },
+              {
+                "role": "對等連接",
+                "text": "and",
+                "accent": "pri"
+              },
+              {
+                "role": "原形動詞 ②",
+                "text": "leave the town right away.",
+                "accent": "ok"
+              }
+            ]
+          },
+          "caption": "📊 第 3 格與第 5 格鎖定原形對稱，不受第 1 格三單 tells 影響！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "obey / depart",
+          "listen to / exit"
+        ],
+        "grammarCompare": "If 條件子句描述現在事實用現在式（tells），主句給予指令用祈使句（follow and leave），兩者是真實條件句黃金組合。",
+        "examVariations": "屬於 L7-10 跨句型結合考點，常出現在條件句與祈使句混合克漏字中。"
+      }
+    },
+    {
+      "id": "q_w14_odg3_u17_21",
+      "book_id": "gra3",
+      "unit_id": "gra3_17",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "choice",
+      "category_tag": "grammar",
+      "difficulty": "★★★★★",
+      "difficulty_level": 8,
+      "triadGroup": {
+        "groupId": "ODG3_U17_T2",
+        "tier": "L7-10",
+        "role": "challenge"
+      },
+      "trapCodes": [
+        "ENG_PREP_COLLOCATION",
+        "ENG_CHINGLISH_LITERAL"
+      ],
+      "question": "After the storm stops, walk carefully _____ the fallen tree branches on the sidewalk and don't step _____ deep puddles.",
+      "options": [
+        "through / out of",
+        "around / into",
+        "under / over",
+        "from / up"
+      ],
+      "answer": "around / into",
+      "explanation": {
+        "point": "複合情境雙介系詞辨析：繞開障礙物 (around) ＋ 勿踩入水坑 (into)",
+        "examPurpose": "考核學生在真實災後街道情境中，同時處理「避開障礙外圍 (around)」與「避免腳步踏入內部 (into)」的高階空間分辨力。",
+        "correctReason": "人行道上的斷落樹枝要「繞開外圍」避過，用 walk around；後半句是提醒「別一腳踩進」深水坑裡，用 step into。",
+        "note": "注意後半句為否定祈使句 don't step，語意是「不要踏進去」，所以配 into！",
+        "trap": "看見 fallen tree branches 容易錯套「don't walk under trees」而誤選 under；其實樹枝已經掉落 (fallen) 在人行道上，人只能繞過去 (around)！",
+        "distractorAnalysis": {
+          "through / out of": "斷枝堆在地上不應直接硬闖穿過 (through)，且 step out of 表示從水坑走出來，與安全警告矛盾。",
+          "under / over": "樹枝已經「掉落在人行道上 (fallen ... on the sidewalk)」，不可能從貼地的斷枝下方 (under) 鑽過去！",
+          "from / up": "walk from 與 step up 與避開障礙物和勿踩水坑語意毫無關聯。"
+        },
+        "steps": [
+          "① 細讀關鍵形容詞：fallen tree branches on the sidewalk（掉在地上的樹枝）➔ 只能繞過 around",
+          "② 讀懂否定警告：don't step _____ deep puddles（別踩進深水坑）➔ 動作由外入內選 into",
+          "③ 雙重確認語意完全合乎防災邏輯 ➔ 選 around / into"
+        ],
+        "insight": "💡 陷阱破解：掛在樹上的 damaged trees 不可走「under」；已經掉到地上的 fallen branches 則要繞「around」！"
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "detour around / avoid stepping inside",
+          "go around / stay out of"
+        ],
+        "grammarCompare": "walk under damaged trees（樹還立著，危險在頭頂下方）vs walk around fallen branches（樹枝已掉地上，危險在腳邊障礙）。",
+        "examVariations": "常出現於跨情境進階克漏字，測驗學生是否真正讀懂名詞狀態而非死背固定搭配。"
+      }
+    },
+    {
+      "id": "q_w14_odg3_u17_22",
+      "book_id": "gra3",
+      "unit_id": "gra3_17",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "choice",
+      "category_tag": "grammar",
+      "difficulty": "★★★★★",
+      "difficulty_level": 8,
+      "triadGroup": {
+        "groupId": "ODG3_U17_T1",
+        "tier": "L7-10",
+        "role": "challenge"
+      },
+      "trapCodes": [
+        "ENG_POS_CONFUSION",
+        "ENG_PUNCT_DICTATION",
+        "ENG_PREP_COLLOCATION"
+      ],
+      "question": "Which emergency rule is 100% grammatically and logically CORRECT?",
+      "options": [
+        "Please not walk under damaged bridges after the storm.",
+        "Don't walking through flooding water, please.",
+        "Please doesn't leave your hurricane shelter early.",
+        "Please don't walk under damaged bridges after the storm."
+      ],
+      "answer": "Please don't walk under damaged bridges after the storm.",
+      "explanation": {
+        "point": "綜合抓錯力檢核：否定助動詞 don't + 原形動詞 + 禮貌詞位置 + 介系詞邏輯",
+        "examPurpose": "考核學生同時檢查助動詞形式 (don't vs doesn't/not)、動詞型態 (base verb vs V-ing) 與空間介系詞的多維度偵錯能力。",
+        "correctReason": "「Please don't walk under damaged bridges after the storm.」具備完整合法的句首 Please、正確否定助動詞 don't、原形動詞 walk 及合理的災後空間介系詞 under。",
+        "note": "其他三個選項各自藏有一個單元核心文法錯誤（漏 don't / 誤加 -ing / 誤用 doesn't）。",
+        "trap": "四個選項外觀極度相似，考生必須逐字掃描禮貌詞、助動詞、主動詞三個關卡才能選出唯一正解。",
+        "distractorAnalysis": {
+          "Please not walk under damaged bridges after the storm.": "缺少助動詞 do！否定祈使句必須寫 Please don't walk，不可寫 *Please not walk。",
+          "Don't walking through flooding water, please.": "Don't 後方動詞誤加 -ing！必須改為原形動詞 drive 或 walk（Don't walk）。",
+          "Please doesn't leave your hurricane shelter early.": "助動詞誤用第三人稱單數 doesn't！祈使句永遠使用 don't。"
+        },
+        "steps": [
+          "① 第一關掃描否定詞：刪去 *not walk 與 *doesn't leave",
+          "② 第二關掃描動詞型態：刪去 *Don't walking",
+          "③ 第三關確認安全邏輯：災後別走受損橋樑下方（under damaged bridges）完全正確 ➔ 選 D"
+        ],
+        "insight": "💡 「選出唯一正確句」就是把錯題改錯反過來考！用「助動詞 don't ➔ 原形動詞 ➔ 介系詞」三關掃描法穩拿滿分！",
+        "visualBlock": {
+          "kind": "compare_table",
+          "title": "⚖️ 祈使句三關掃描排錯表",
+          "data": {
+            "headers": [
+              "待檢項目",
+              "錯誤示範 ❌",
+              "正確標準 ✅"
+            ],
+            "rows": [
+              [
+                "否定助動詞",
+                "Please not walk / Please doesn't",
+                "Please don't walk"
+              ],
+              [
+                "主動詞型態",
+                "Don't walking",
+                "Don't walk (原形動詞)"
+              ],
+              [
+                "空間邏輯",
+                "walk under (災後禁區)",
+                "don't walk under damaged bridges"
+              ]
+            ]
+          },
+          "caption": "📊 三關全過關，才是唯一正確的祈使句！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "Don't walk under damaged bridges after the storm, please.",
+          "Never walk beneath broken bridges after the storm."
+        ],
+        "grammarCompare": "口語與寫作皆可將句首的 Please don't walk... 換為句尾加逗號的 Don't walk..., please.",
+        "examVariations": "私中與國小進階段考最愛的壓軸單選題型：四句長相接近，考驗細微文法與拼寫敏銳度。"
+      }
+    },
+    {
+      "id": "q_w14_odg3_u17_23",
+      "book_id": "gra3",
+      "unit_id": "gra3_17",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "choice",
+      "category_tag": "reading",
+      "difficulty": "★★★★★",
+      "difficulty_level": 8,
+      "triadGroup": {
+        "groupId": "ODG3_U17_T4",
+        "tier": "L7-10",
+        "role": "challenge"
+      },
+      "trapCodes": [
+        "ENG_PREP_COLLOCATION"
+      ],
+      "question": "On the emergency map, three buildings stand along the eastern vertical street from north to south: the firehouse at the top, the school in the middle, and the hospital at the bottom. How do you get from the firehouse to the hospital?",
+      "options": [
+        "Go out of the firehouse and walk up the road past the school.",
+        "Go into the bridge and walk through the hospital to the park.",
+        "Go out of the firehouse and walk down the road past the school to the hospital.",
+        "Walk down the steps from the park and go over the drugstore."
+      ],
+      "answer": "Go out of the firehouse and walk down the road past the school to the hospital.",
+      "explanation": {
+        "point": "地圖方位綜合推論：由北向南沿縱向街道移動 (out of ... down ... to)",
+        "examPurpose": "考核學生依據建築物南北相對排列（Firehouse 北 ➔ School 中 ➔ Hospital 南），精準組合出門 (out of)、往下 (down) 與抵達 (to) 路線的能力。",
+        "correctReason": "從最北端的消防局出發，先「離開消防局 (go out of the firehouse)」，沿街「由北往南下走 (walk down the road)」經過中間的學校，就會「到達 (to)」南端的醫院。",
+        "note": "地圖習題習慣將「向上／往北」對應 up，「向下／往南」對應 down。",
+        "trap": "容易忽略 firehouse 在最上方 (top)、hospital 在最下方 (bottom)，而誤選 walk up the road。",
+        "distractorAnalysis": {
+          "Go out of the firehouse and walk up the road past the school.": "方向相反！醫院在最下方 (bottom)，從上方消防局出發應向下走 (down) 而非向上 (up)。",
+          "Go into the bridge and walk through the hospital to the park.": "橋不能用 into，且目的地是醫院而非公園。",
+          "Walk down the steps from the park and go over the drugstore.": "方位地點全錯，藥局在上方街區且人不能從藥局屋頂走過去 (over the drugstore)。"
+        },
+        "steps": [
+          "① 確認相對位置：Firehouse (Top) ➔ School (Middle) ➔ Hospital (Bottom)",
+          "② 離開起點建築：Go out of the firehouse",
+          "③ 由上往下移動到達終點：walk down the road past the school to the hospital"
+        ],
+        "insight": "💡 地圖題沒有附圖時，自己快速在紙上畫三個圈圈「北 Fire ➔ 中 School ➔ 南 Hosp」，由上往下必用 down！",
+        "visualBlock": {
+          "kind": "prep_ladder",
+          "title": "🧭 東側街區由北向南路線階梯",
+          "data": {
+            "levels": [
+              {
+                "prep": "out of",
+                "scope": "起點建築出發（Firehouse 北端）",
+                "examples": [
+                  "Go out of the firehouse"
+                ],
+                "highlight": true
+              },
+              {
+                "prep": "down",
+                "scope": "沿縱向馬路往南經過中間學校",
+                "examples": [
+                  "walk down the road past the school"
+                ],
+                "highlight": true
+              },
+              {
+                "prep": "to",
+                "scope": "抵達南端目的地（Hospital）",
+                "examples": [
+                  "to the hospital"
+                ],
+                "highlight": false
+              }
+            ]
+          },
+          "caption": "📊 Top ➔ Bottom = out of ➔ down ➔ to！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "head south along the street",
+          "walk straight down to"
+        ],
+        "grammarCompare": "若方向改為「從醫院前往消防局」，則必須將 down 反轉為 walk up the road past the school。",
+        "examVariations": "題型常與「從醫院到藥局」或「從學校到消防局」連動出現於閱讀寫作問答題。"
+      }
+    },
+    {
+      "id": "q_w14_odg3_u17_24",
+      "book_id": "gra3",
+      "unit_id": "gra3_17",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "choice",
+      "category_tag": "reading",
+      "difficulty": "★★★★★",
+      "difficulty_level": 9,
+      "triadGroup": {
+        "groupId": "ODG3_U17_T4",
+        "tier": "L7-10",
+        "role": "challenge"
+      },
+      "trapCodes": [
+        "ENG_CHINGLISH_LITERAL"
+      ],
+      "question": "Read this hurricane rule carefully: \"Listen to the radio. If it's time to get out of the area, follow instructions and leave.\" What is the main reason for this rule?",
+      "options": [
+        "To let people enjoy relaxing music before going to sleep.",
+        "To help people hear official evacuation updates and leave safely in time.",
+        "To remind people to put wooden boards under their radios.",
+        "To tell people to drive through flooding water as fast as possible."
+      ],
+      "answer": "To help people hear official evacuation updates and leave safely in time.",
+      "explanation": {
+        "point": "閱讀深層推論：理解災中「收聽廣播並配合撤離」的真正目的",
+        "examPurpose": "考核學生整合 get out of the area（撤離該區）與 follow instructions（聽從指示）的字面外深層安全目的。",
+        "correctReason": "颶風期間可能停電斷網，收聽廣播能讓人們接收官方撤離通報 (evacuation updates)，並在危險擴大前安全依照指示撤離。",
+        "note": "get out of the area 在防災語境等同於 evacuate（撤離）。",
+        "trap": "A 選項利用「聽收音機」與日常生活聯想聽音樂作誘答，完全忽略了後方撤離條件句。",
+        "distractorAnalysis": {
+          "To let people enjoy relaxing music before going to sleep.": "颶風期間收聽廣播是為了接收緊急防災新聞，絕非睡前聽音樂放鬆。",
+          "To remind people to put wooden boards under their radios.": "斷章取義拼接課文詞彙（boards / under / radios），毫無邏輯。",
+          "To tell people to drive through flooding water as fast as possible.": "課文明確禁止開車穿越積水（Don't drive through flooding water）。"
+        },
+        "steps": [
+          "① 串聯兩句關鍵動作：Listen to the radio ＋ get out of the area / follow instructions",
+          "② 問自己：為什麼災中要聽廣播？➔ 為了知道何時要撤離",
+          "③ 對應素養選項 ➔ 選 To help people hear official evacuation updates and leave safely in time."
+        ],
+        "insight": "💡 英文閱讀素養題要把「動詞片語」翻譯成真實生活目的：listen to the radio ＋ get out of the area ＝ 聽緊急廣播及時撤離！"
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "evacuate the danger zone",
+          "obey emergency announcements"
+        ],
+        "grammarCompare": "follow instructions（遵照指示，instruction 常用複數表多項步驟指示）。",
+        "examVariations": "常出現於跨單元防災素養閱讀題，搭配 Explain your answer 問答。"
+      }
+    },
+    {
+      "id": "q_w14_odg3_u17_25",
+      "book_id": "gra3",
+      "unit_id": "gra3_17",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "part_title": "Part A: Affirmative to Negative Imperatives",
+      "part_instructions": "請將下方的肯定指令改寫為「否定祈使句（Don't + 原形動詞）」，在紙上寫出完整英文句子後再對答案。",
+      "sentence_form": "Don't + Base Verb + Preposition of Movement + Object.",
+      "difficulty": "★★★☆☆",
+      "difficulty_level": 4,
+      "triadGroup": {
+        "groupId": "ODG3_U17_T1",
+        "tier": "L4-6",
+        "role": "twist"
+      },
+      "trapCodes": [
+        "ENG_POS_CONFUSION",
+        "ENG_CHINGLISH_LITERAL"
+      ],
+      "question": "Rewrite the dangerous action as a negative imperative safety rule: Drive through flooding water.",
+      "answer": "Don't drive through flooding water.",
+      "options": [],
+      "self_check": [
+        "句首是否使用 Don't（包含大寫 D 與縮寫撇號 ' ）而非誤寫成 *Not drive",
+        "Don't 後方的動詞 drive 是否維持小寫與原形",
+        "through flooding water 拼寫與句尾句點是否完整無誤"
+      ],
+      "explanation": {
+        "point": "祈使句肯定轉否定改寫：句首加上 Don't 並保留原形動詞",
+        "examPurpose": "考核學生將肯定句改為否定祈使句時，正確加入助動詞 Don't、調整原主動詞為小寫原形及保留介系詞片語的能力。",
+        "correctReason": "將肯定祈使句「Drive through flooding water.」改為否定警告時，於句首加上 Don't，原先大寫的 Drive 改為小寫原形 drive 即可。",
+        "note": "也可以寫作完整形式 Do not drive through flooding water.，但日常規範與教材多用縮寫 Don't。",
+        "trap": "常見失誤：漏掉縮寫撇號寫成 Dont、忘記把 Drive 的大寫 D 改回小寫 d、或誤寫成 *Not drive。",
+        "commonTraps": [
+          "大小寫與縮寫陷阱（ENG_PUNCT_DICTATION）：加上 Don't 後，原本在句首的 Drive 必須改回小寫 drive，且 Don't 不可漏掉撇號。",
+          "直譯漏助動詞陷阱（ENG_CHINGLISH_LITERAL）：受中文「不要開」影響誤寫成 *Not drive through flooding water。"
+        ],
+        "steps": [
+          "① 句首加入否定助動詞：Don't",
+          "② 將原動詞改回小寫原形：drive（不可加 -ing 或 -s）",
+          "③ 完整抄寫後半段與句點：through flooding water."
+        ],
+        "insight": "💡 肯定祈使句變否定超簡單：前面加「Don't」，原本的大寫動詞改回小寫就行！",
+        "visualBlock": {
+          "kind": "slot_box",
+          "title": "📦 否定祈使句改寫積木槽",
+          "data": {
+            "slots": [
+              {
+                "role": "1. 否定助動詞",
+                "text": "Don't",
+                "accent": "warn"
+              },
+              {
+                "role": "2. 原形動詞（改小寫）",
+                "text": "drive",
+                "accent": "ok"
+              },
+              {
+                "role": "3. 動態介系詞＋受詞",
+                "text": "through flooding water.",
+                "accent": "pri"
+              }
+            ]
+          },
+          "caption": "📊 檢查 Don't 撇號與小寫 drive！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "Do not drive through flooding water.",
+          "Never drive through flooding water."
+        ],
+        "grammarCompare": "Don't + V 為一般禁止警告；若語氣更強烈警告「絕對不要」，可用 Never + V（Never drive through flooding water.）。",
+        "examVariations": "題型常見於句型轉換（Rewrite in the negative）及海報安全標語書寫。"
+      }
+    },
+    {
+      "id": "q_w14_odg3_u17_26",
+      "book_id": "gra3",
+      "unit_id": "gra3_17",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "part_title": "Part A: Polite Negative Imperatives with Please",
+      "part_instructions": "請依題目要求加入 Don't 與句尾的「, please」，在紙上寫出完整的禮貌否定祈使句。",
+      "sentence_form": "Don't + Base Verb + Object, please.",
+      "difficulty": "★★★☆☆",
+      "difficulty_level": 5,
+      "triadGroup": {
+        "groupId": "ODG3_U17_T1",
+        "tier": "L4-6",
+        "role": "twist"
+      },
+      "trapCodes": [
+        "ENG_PUNCT_DICTATION",
+        "ENG_POS_CONFUSION"
+      ],
+      "question": "Rewrite the sentence as a polite negative imperative by putting \"please\" at the END: Leave your home during the storm.",
+      "answer": "Don't leave your home during the storm, please.",
+      "options": [],
+      "self_check": [
+        "句首是否正確使用 Don't leave（小寫原形動詞）",
+        "句尾 please 前方是否確實加上了逗號（, please.）",
+        "during the storm 拼寫與句尾標點符號是否完整"
+      ],
+      "explanation": {
+        "point": "禮貌否定祈使句與句尾逗號規則：Don't + V..., please.",
+        "examPurpose": "考核學生同時執行「肯定轉否定」與「將 please 放於句尾並加逗號」的雙重手寫轉換力。",
+        "correctReason": "先在句首加上否定助動詞 Don't 並將 leave 改為小寫原形，最後在句尾加上逗號與 please 成為「Don't leave your home during the storm, please.」。",
+        "note": "若題目要求將 please 放於句首，則寫成 Please don't leave your home during the storm.（不加逗號）。",
+        "trap": "80% 的學生手寫時會忘記在句尾 please 前面補逗號，寫成 *...during the storm please.。",
+        "commonTraps": [
+          "標點遺漏陷阱（ENG_PUNCT_DICTATION）：please 置於祈使句句尾時，前面必須加上逗號「, please.」，不可省略。",
+          "助動詞與動詞型態陷阱（ENG_POS_CONFUSION）：不可寫成 *Not leave 或 *Don't leaving。"
+        ],
+        "steps": [
+          "① 加上否定開頭與小寫原形：Don't leave your home during the storm",
+          "② 在原句尾位置加上逗號：,",
+          "③ 補上禮貌詞與句點：please."
+        ],
+        "insight": "💡 只要把 please 放在句子最後面，前面一定有個「小逗號 ,」拉著它！"
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "Please don't leave your home during the storm.",
+          "Do not go out of your house while the storm is happening, please."
+        ],
+        "grammarCompare": "「Please don't + V...」與「Don't + V..., please.」語意完全相同，唯獨句尾寫法多一個逗號。",
+        "examVariations": "段考手寫常考「改寫並加入 please 至句尾」以檢驗標點符號意識。"
+      }
+    },
+    {
+      "id": "q_w14_odg3_u17_27",
+      "book_id": "gra3",
+      "unit_id": "gra3_17",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "part_title": "Part B: Complete Hurricane Instructions with Prepositions of Movement",
+      "part_instructions": "請先從字庫選出正確的動態介系詞填入空格，並在紙上寫出完整英文句子後對答案。",
+      "word_bank": [
+        "into",
+        "out of",
+        "over",
+        "under",
+        "from",
+        "to"
+      ],
+      "sentence_form": "Base Verb + Object + Preposition + Place + and + Base Verb + Object + Preposition + Place.",
+      "difficulty": "★★★☆☆",
+      "difficulty_level": 4,
+      "triadGroup": {
+        "groupId": "ODG3_U17_T2",
+        "tier": "L4-6",
+        "role": "twist"
+      },
+      "trapCodes": [
+        "ENG_PREP_COLLOCATION",
+        "ENG_SPELLING_PHONICS"
+      ],
+      "question": "Complete the hurricane preparation sentence using prepositions from the word bank and write the full sentence: Put boards _____ your windows and bring garden furniture _____ the house.",
+      "answer": "Put boards over your windows and bring garden furniture into the house.",
+      "options": [],
+      "self_check": [
+        "窗戶木板是否使用介系詞 over（不可誤填 under）",
+        "花園家具收進屋內是否使用單一單字 into（不可誤填 out of）",
+        "furniture、windows 與句尾句點是否抄寫正確無漏字"
+      ],
+      "explanation": {
+        "point": "防災雙介系詞實戰：put boards OVER windows / bring furniture INTO house",
+        "examPurpose": "考核學生在手寫完整句子時，同時正確填入表面防護介系詞 over 與入內介系詞 into，並兼顧長單字 furniture 抄寫精準度。",
+        "correctReason": "木板須「覆蓋於窗戶表面上方」阻擋狂風，第一格填 over；花園家具須「從戶外搬入屋內」，第二格填 into。",
+        "note": "家具 furniture 為不可數名詞，字尾不可加 -s。",
+        "trap": "第二格容易被分開寫成 *in to，或第一格受「在窗戶邊」誤導填成 under / around。",
+        "commonTraps": [
+          "介系詞空間誤判（ENG_PREP_COLLOCATION）：木板防颱應擋在窗戶上（over），不可放在下方（under）。",
+          "複合介系詞拼寫（ENG_SPELLING_PHONICS）：into 必須連寫為一個字，且抄寫 furniture 時注意為不可數單數形。"
+        ],
+        "steps": [
+          "① 第一空判斷「木板覆蓋窗戶」➔ 填 over",
+          "② 第二空判斷「庭院家具搬進屋」➔ 填 into",
+          "③ 完整謄寫並檢查不可數名詞 furniture 無加 -s"
+        ],
+        "insight": "💡 這兩個防災動作必考搭配：boards OVER windows（木板蓋窗上）、furniture INTO the house（家具搬屋內）！"
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "Cover your windows with boards and move outdoor chairs inside the house.",
+          "Place wooden boards over the glass and carry yard furniture indoors."
+        ],
+        "grammarCompare": "bring ... into（由外拿進屋內）vs take ... out of（由內拿出屋外）；furniture 恆為不可數名詞。",
+        "examVariations": "題型常見於填空改寫、看圖寫作與不可數名詞綜合考題。"
+      }
+    },
+    {
+      "id": "q_w14_odg3_u17_28",
+      "book_id": "gra3",
+      "unit_id": "gra3_17",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "part_title": "Part B: Contrastive Prepositions of Movement Writing",
+      "part_instructions": "請運用對比組的動態介系詞，在紙上寫出描述兩人相反移動方向的完整英文句子。",
+      "word_bank": [
+        "up",
+        "down",
+        "into",
+        "out of",
+        "over",
+        "under",
+        "around",
+        "through"
+      ],
+      "sentence_form": "Subject + be + V-ing + Preposition + the Place, and Subject + be + V-ing + Preposition + the Place.",
+      "difficulty": "★★★★☆",
+      "difficulty_level": 6,
+      "triadGroup": {
+        "groupId": "ODG3_U17_T3",
+        "tier": "L4-6",
+        "role": "twist"
+      },
+      "trapCodes": [
+        "ENG_PREP_COLLOCATION",
+        "ENG_VERB_OMISSION"
+      ],
+      "question": "Write one complete sentence in the present continuous tense using \"up\" and \"down\" to describe Tom climbing a hill and Mia walking back to the bottom.",
+      "answer": "Tom is going up the hill, and Mia is going down the hill.",
+      "options": [],
+      "self_check": [
+        "是否使用現在進行式 is going（不可漏掉 be 動詞 is 而寫成 *Tom going up）",
+        "Tom 爬山是否搭配 up，Mia 走回山腳是否搭配 down",
+        "對等連接詞 and 前方是否加逗號並帶出完整第二子句"
+      ],
+      "explanation": {
+        "point": "現在進行式搭配垂直對比介系詞：is going up ... and ... is going down ...",
+        "examPurpose": "考核學生使用現在進行式描寫圖片動作，同時精準切換上坡 (up) 與下坡 (down) 介系詞的造句能力。",
+        "correctReason": "描述正在發生的登山與下山動作須用現在進行式 is going（不可漏寫 be 動詞 is）；往上爬坡用 up the hill，走回山腳用 down the hill。",
+        "note": "也可以用 climbing up / walking down，但需維持 is + V-ing 結構。",
+        "trap": "學生在看圖造句時極易漏掉 be 動詞 is，寫出中式英文 *Tom going up the hill。",
+        "commonTraps": [
+          "漏寫 be 動詞陷阱（ENG_VERB_OMISSION）：現在進行式必須是「is + V-ing」，不可省略 is 直接寫 *Tom going up。",
+          "上下方向混淆（ENG_PREP_COLLOCATION）：climbing 對應 up，walking back to the bottom 對應 down。"
+        ],
+        "steps": [
+          "① 寫出第一人進行式動作：Tom is going up the hill",
+          "② 加逗號與對等連接詞：, and",
+          "③ 寫出第二人相反動作：Mia is going down the hill.（檢查兩邊都有 is！）"
+        ],
+        "insight": "💡 看圖造句用現在進行式時，心裡一定要默念「主詞 ＋ is ＋ V-ing」，千萬別漏掉 is！",
+        "visualBlock": {
+          "kind": "prep_ladder",
+          "title": "🧭 課本四大對比動作句型階梯",
+          "data": {
+            "levels": [
+              {
+                "prep": "up / down",
+                "scope": "山坡升降（climbing vs back to bottom）",
+                "examples": [
+                  "He's going up the hill.",
+                  "She's going down the hill."
+                ],
+                "highlight": true
+              },
+              {
+                "prep": "into / out of",
+                "scope": "建築進出",
+                "examples": [
+                  "He's going into the building.",
+                  "She's coming out of the building."
+                ],
+                "highlight": false
+              },
+              {
+                "prep": "around / through",
+                "scope": "水窪繞行 vs 涉水",
+                "examples": [
+                  "She's walking around the water.",
+                  "He's walking through the water."
+                ],
+                "highlight": false
+              },
+              {
+                "prep": "over / under",
+                "scope": "拱橋橋面 vs 橋底",
+                "examples": [
+                  "He's walking over the bridge.",
+                  "She's walking under the bridge."
+                ],
+                "highlight": false
+              }
+            ]
+          },
+          "caption": "📊 四組經典對比句型，是看圖造句的標準萬用模板！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "Tom is walking up the hill, while Mia is coming down the hill.",
+          "Tom is climbing upward, whereas Mia is heading downward."
+        ],
+        "grammarCompare": "go up / climb up 皆可表示上坡，但不可寫 *going up to the hill（直接接 the hill 即可，不需要多加 to）。",
+        "examVariations": "題型常見於雙人看圖寫作，可能互換為 into/out of、around/through 或 over/under。"
+      }
+    },
+    {
+      "id": "q_w14_odg3_u17_29",
+      "book_id": "gra3",
+      "unit_id": "gra3_17",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "part_title": "Part C: Emergency Map Directions Completion",
+      "part_instructions": "請依避難地圖位置邏輯，從字庫選出 5 個正確介系詞完成問路與指路對話並寫出完整內容。",
+      "word_bank": [
+        "from",
+        "to",
+        "up",
+        "down",
+        "through",
+        "over",
+        "under"
+      ],
+      "sentence_form": "How do you get from [A] to [B]? Go [up/down] ... Walk [through] ... Go [over] ...",
+      "difficulty": "★★★★☆",
+      "difficulty_level": 6,
+      "triadGroup": {
+        "groupId": "ODG3_U17_T4",
+        "tier": "L4-6",
+        "role": "twist"
+      },
+      "trapCodes": [
+        "ENG_PREP_COLLOCATION",
+        "ENG_SPELLING_PHONICS"
+      ],
+      "question": "Complete the directions from the police station (below the steps) to the school (across the bridge) using five prepositions from the word bank: How do you get _____ the police station _____ the school? Go _____ the steps, walk _____ the park, and go _____ the bridge.",
+      "answer": "How do you get from the police station to the school? Go up the steps, walk through the park, and go over the bridge.",
+      "options": [],
+      "self_check": [
+        "問句中是否依序填入 from 與 to",
+        "警察局在階梯下方，階梯方向是否填入 up",
+        "穿過公園是否正確拼出 through（無漏字母 h 或 r），過橋面是否填入 over"
+      ],
+      "explanation": {
+        "point": "緊急避難地圖五大核心介系詞綜合填寫：from / to / up / through / over",
+        "examPurpose": "考核學生一次整合起終點配對、垂直上階梯、穿過公園與跨過橋面的五格連續空間推理與拼字能力。",
+        "correctReason": "從警察局出發到學校用 from ... to ...；從階梯下方往上走進公園用 go up the steps；穿越公園用 walk through the park；走橋面抵達學校用 go over the bridge。",
+        "note": "手寫時務必檢查 through 的拼寫（t-h-r-o-u-g-h），這是最常扣分的單字。",
+        "trap": "常把 through 拼錯成 *trough / *throught，或在橋樑處誤選 under。",
+        "commonTraps": [
+          "拼字與形近詞陷阱（ENG_SPELLING_PHONICS）：through 極易漏字 h 或誤多加字尾 t，應反覆核對 t-h-r-o-u-g-h。",
+          "方向配對陷阱（ENG_PREP_COLLOCATION）：起點 police station 在階梯下方，因此必須填 up 而非 down。"
+        ],
+        "steps": [
+          "① 問句起終點：from the police station to the school",
+          "② 第一步上階梯進公園：Go up the steps, walk through the park",
+          "③ 最後過橋面到學校：and go over the bridge."
+        ],
+        "insight": "💡 這五個字就是地圖指路全攻略：from ➔ to ➔ up ➔ through ➔ over！",
+        "visualBlock": {
+          "kind": "timeline",
+          "title": "⏳ 五大介系詞串聯路線檢查軸",
+          "data": {
+            "events": [
+              {
+                "time": "起終點",
+                "label": "from Police Station → to School",
+                "highlight": false
+              },
+              {
+                "time": "階梯",
+                "label": "Go up the steps",
+                "highlight": true
+              },
+              {
+                "time": "公園",
+                "label": "Walk through the park",
+                "highlight": true
+              },
+              {
+                "time": "橋樑",
+                "label": "Go over the bridge",
+                "highlight": true
+              }
+            ],
+            "rule": "確認每個地標對應唯一正確介系詞：steps(up)、park(through)、bridge(over)"
+          },
+          "caption": "📊 五空對準地標與方向，手寫滿分不漏接！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "climb up the steps, cross through the park, and cross over the bridge",
+          "walk up the stairs, go through the green park, and go across the bridge"
+        ],
+        "grammarCompare": "「Walk through the park」指沿步道由一端穿至另一端；若說「walk around the park」則是繞著公園外圍圍牆走。",
+        "examVariations": "題型常見於地圖問路對話填空、方向介系詞選擇與完整段落聽寫。"
+      }
+    },
+    {
+      "id": "q_w14_odg3_u17_30",
+      "book_id": "gra3",
+      "unit_id": "gra3_17",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "part_title": "Part C: Hurricane Safety Proofreading & Rewrite",
+      "part_instructions": "下方颶風指示有兩處文法與防災常識錯誤，請將其完全修正並寫出正確的完整英文句子。",
+      "sentence_form": "Base Verb + ... during a hurricane, and Don't + Base Verb + ... after it.",
+      "difficulty": "★★★★☆",
+      "difficulty_level": 6,
+      "triadGroup": {
+        "groupId": "ODG3_U17_T4",
+        "tier": "L4-6",
+        "role": "twist"
+      },
+      "trapCodes": [
+        "ENG_POS_CONFUSION",
+        "ENG_CHINGLISH_LITERAL"
+      ],
+      "question": "Correct the mistakes in both grammar and hurricane safety logic, then rewrite the full sentence: \"Listening to CDs during a hurricane, and walking under damaged bridges after it.\"",
+      "answer": "Listen to the radio during a hurricane, and don't walk under damaged bridges after it.",
+      "options": [],
+      "self_check": [
+        "Listening 是否改回祈使句原形動詞 Listen，且將 CDs 改為 the radio",
+        "walking under damaged bridges 是否改為否定祈使句 don't walk under damaged bridges",
+        "連接詞 and 前是否保留逗號，句尾標點是否完整"
+      ],
+      "explanation": {
+        "point": "文法＋常識雙重除錯：將 -ing 改回原形祈使句、CDs 改 radio、加 don't",
+        "examPurpose": "考核學生同時偵測「祈使句動詞型態錯誤 (-ing)」、「災防內容錯誤 (CDs)」與「遺漏否定詞 (don't)」的綜合除錯寫作能力。",
+        "correctReason": "祈使句不可用 V-ing 開頭，必須改為原形 Listen，且防災應收聽廣播 the radio；後半段災後禁止走在受損橋樑下，須改為否定祈使句 don't walk。",
+        "note": "這是融合課本除錯練習與文法規則的高效複合改寫題。",
+        "trap": "容易只改對常識（把 CDs 改成 radio）卻忘記把開頭 Listening 與 walking 改回祈使句原形。",
+        "commonTraps": [
+          "只改字義忘改文法陷阱（ENG_POS_CONFUSION）：改掉 CDs 後，仍讓 Listening 和 walking 保留 -ing 是極常見的半對半錯失分點。",
+          "遺漏否定詞邏輯陷阱：災後走在受損橋下非常危險，必須補上否定助動詞 don't。"
+        ],
+        "steps": [
+          "① 修前半段：Listening ➔ Listen，CDs ➔ the radio",
+          "② 修後半段：walking ➔ don't walk（補出否定禁令與原形動詞）",
+          "③ 合併檢查逗號與句點 ➔ Listen to the radio during a hurricane, and don't walk under damaged bridges after it."
+        ],
+        "insight": "💡 遇到這種「混合改錯題」，先修文法（去 -ing、加 don't），再修常識（CDs ➔ radio），兩邊都改到才滿分！",
+        "visualBlock": {
+          "kind": "compare_table",
+          "title": "⚖️ 雙重除錯對照表（文法 × 常識）",
+          "data": {
+            "headers": [
+              "原句錯誤處 ❌",
+              "修正後 ✅",
+              "修正理由"
+            ],
+            "rows": [
+              [
+                "Listening to CDs",
+                "Listen to the radio",
+                "祈使句用原形 Listen；災時聽廣播收資訊"
+              ],
+              [
+                "walking under damaged bridges",
+                "don't walk under damaged bridges",
+                "祈使句禁止危險行為必用 don't + 原形"
+              ]
+            ]
+          },
+          "caption": "📊 文法與生活防災常識雙軌並進檢查！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "Turn on the radio during a hurricane, and never walk under broken bridges afterward.",
+          "Listen to emergency broadcasts during the storm, and stay out from under damaged bridges afterward."
+        ],
+        "grammarCompare": "Listen to（專心聽）固定搭配介系詞 to，不可寫成 *Listen the radio。",
+        "examVariations": "常作為短文改錯 (Proofreading) 與防災規則寫作的熱身題。"
+      }
+    },
+    {
+      "id": "q_w14_odg3_u17_31",
+      "book_id": "gra3",
+      "unit_id": "gra3_17",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "part_title": "Part D: Emergency Map Guided Writing",
+      "part_instructions": "請根據題幹提供的建築相對位置，使用祈使句與動態介系詞寫出 1–2 句清楚的指路英文句子。",
+      "sentence_form": "Go out of [Start] ... Walk up/down ... to [Destination].",
+      "difficulty": "★★★★★",
+      "difficulty_level": 7,
+      "triadGroup": {
+        "groupId": "ODG3_U17_T4",
+        "tier": "L7-10",
+        "role": "challenge"
+      },
+      "trapCodes": [
+        "ENG_PREP_COLLOCATION",
+        "ENG_ARTICLE_ERROR"
+      ],
+      "question": "Look at the safety map clues: on the eastern street, the school is in the middle and the firehouse is directly north (at the top). Write directions telling someone how to get from the school to the firehouse.",
+      "answer": "Go out of the school and walk up the road to the firehouse.",
+      "options": [],
+      "self_check": [
+        "離開學校建築是否正確使用 Go out of the school（不可漏掉 of）",
+        "從中間的學校往北端上方走，方向詞是否使用 up（而非 down）",
+        "建築物與道路名詞前是否正確加上定冠詞 the（the school / the road / the firehouse）"
+      ],
+      "explanation": {
+        "point": "地圖指路自由造句：由中段學校往北行至上方消防局 (out of / up / to)",
+        "examPurpose": "考核學生在無填空提示下，獨立組織「出發 ➔ 方向移動 ➔ 抵達終點」完整地圖指路句子的寫作力。",
+        "correctReason": "從學校出發走出建築用 Go out of the school；因為消防局位於地圖正北方（上方），沿街往上移動用 walk up the road，抵達目標建築用 to the firehouse。",
+        "note": "亦可分寫為兩句：Go out of the school and turn onto the road. Walk up the road to the firehouse.",
+        "trap": "常見失誤：漏寫 out of 的 of、忘記 firehouse 在上方誤寫 walk down，或漏掉定冠詞 the。",
+        "commonTraps": [
+          "介系詞漏字陷阱（ENG_PREP_COLLOCATION）：走出建物必須用 out of（不可只寫 *Go out the school）。",
+          "特定建物冠詞陷阱（ENG_ARTICLE_ERROR）：地圖上特定的建築物與馬路前必加定冠詞 the（the school / the road / the firehouse）。"
+        ],
+        "steps": [
+          "① 出發離開學校：Go out of the school",
+          "② 判斷方向（中 ➔ 北上方）：and walk up the road",
+          "③ 標示目的地：to the firehouse."
+        ],
+        "insight": "💡 寫指路作文黃金三部曲：「Go out of 起點 ➔ walk up/down/through 路徑 ➔ to 終點」，任何地圖題都適用！"
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "Leave the school and go north along the road to the firehouse.",
+          "Exit the school building and head up the street to the firehouse."
+        ],
+        "grammarCompare": "walk up the road（在地圖上往上方/北邊走）vs walk down the road（在地圖上往下方/南邊走）。",
+        "examVariations": "題型常見於看地圖寫句子（Write directions）與口語問路對話延伸寫作。"
+      }
+    },
+    {
+      "id": "q_w14_odg3_u17_32",
+      "book_id": "gra3",
+      "unit_id": "gra3_17",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "part_title": "Part D: Multi-Step Emergency Map Writing",
+      "part_instructions": "請根據題幹提示的跨區地形線索，使用 3 個以上動態介系詞寫出從醫院到藥局的完整英文指引。",
+      "sentence_form": "Walk up ... past ... and go over ... Follow ... to ...",
+      "difficulty": "★★★★★",
+      "difficulty_level": 8,
+      "triadGroup": {
+        "groupId": "ODG3_U17_T4",
+        "tier": "L7-10",
+        "role": "challenge"
+      },
+      "trapCodes": [
+        "ENG_PREP_COLLOCATION",
+        "ENG_POS_CONFUSION"
+      ],
+      "question": "Look at the safety map clues: the hospital is at the bottom right, a bridge lies to the left of the middle school, and a curved road runs up from the bridge to the drugstore on the top road. Write directions from the hospital to the drugstore.",
+      "answer": "Go out of the hospital, walk up the road past the school, and go over the bridge. Go along the curved road up to the drugstore.",
+      "options": [],
+      "self_check": [
+        "從右下角醫院出發往中間學校與橋樑方向，是否使用 walk up the road",
+        "跨過橋樑是否使用 go over the bridge（而非 under 或 into）",
+        "所有指示句開頭是否皆維持原形動詞祈使句（Go / Walk）"
+      ],
+      "explanation": {
+        "point": "多步驟跨區地圖寫作：串聯 out of / up / over / along / to",
+        "examPurpose": "考核學生處理四步以上跨街區長程指路的組織力，包含正確銜接過橋與轉彎上行的介系詞連用。",
+        "correctReason": "醫院位於最右下角，首先離開醫院 (out of) 並沿街往北上行經過學校 (up the road past the school)，向左跨過橋面 (go over the bridge) 後，再沿弧形馬路往上到達藥局 (along the curved road up to the drugstore)。",
+        "note": "past 為介系詞，意為「經過⋯⋯旁邊」，因此可寫 walk up the road past the school。",
+        "trap": "容易在過橋處誤用 across / under，或在弧形路段忘記交代終點 to the drugstore。",
+        "commonTraps": [
+          "詞性誤用陷阱（ENG_POS_CONFUSION）：past（經過，介系詞）常被誤寫為 passed（過去式動詞）；在祈使句「walk ... past the school」中應使用介系詞 past。",
+          "跨區介系詞遺漏（ENG_PREP_COLLOCATION）：過橋面必用 over the bridge，抵達終點必帶 to the drugstore。"
+        ],
+        "steps": [
+          "① 起點出發北上：Go out of the hospital and walk up the road past the school.",
+          "② 跨橋銜接左側區：Go over the bridge.",
+          "③ 沿弧形路抵藥局：Go along the curved road up to the drugstore."
+        ],
+        "insight": "💡 寫長路線別慌！先切 3 段：「① 出發上街過學校 ➔ ② 過橋 (over) ➔ ③ 沿路到藥局 (to)」，每段用一個原形動詞搞定！"
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "Walk north from the hospital past the school, cross over the bridge, and follow the road to the drugstore.",
+          "Exit the hospital, head up the street past the school, go across the bridge, and continue to the drugstore."
+        ],
+        "grammarCompare": "walk past the school（路過學校，past 是介系詞）vs passed the school（已經經過學校，passed 是過去式動詞）。",
+        "examVariations": "屬於課本開放式地圖寫作壓軸題型，亦可改考「從學校到住家的路線說明」。"
+      }
+    },
+    {
+      "id": "q_w14_odg3_u17_33",
+      "book_id": "gra3",
+      "unit_id": "gra3_17",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "part_title": "Part D: Conditional + Imperative Synthesis",
+      "part_instructions": "請將提示詞組合成一句包含「If 條件子句＋肯定祈使句＋否定祈使句」的完整英文防災守則。",
+      "sentence_form": "If + Subject + Verb, + Base Verb + ... and + don't + Base Verb + ...",
+      "difficulty": "★★★★★",
+      "difficulty_level": 9,
+      "triadGroup": {
+        "groupId": "ODG3_U17_T1",
+        "tier": "L7-10",
+        "role": "challenge"
+      },
+      "trapCodes": [
+        "ENG_VERB_OMISSION",
+        "ENG_POS_CONFUSION"
+      ],
+      "question": "Combine the prompt cues into one complete safety sentence starting with \"If...\": (your home / in a low area) -> (go up / a higher place) AND (not drive / flooding water).",
+      "answer": "If your home is in a low area, go up to a higher place and don't drive through flooding water.",
+      "options": [],
+      "self_check": [
+        "If 條件子句中是否補上 be 動詞 is（If your home is in a low area）",
+        "肯定指示是否正確使用 go up to a higher place",
+        "否定提示 (not drive / flooding water) 是否正確改為 don't drive through flooding water"
+      ],
+      "explanation": {
+        "point": "高階句構整合：If 條件句 (補 be 動詞) ＋ 肯定祈使句 ＋ and ＋ don't 否定祈使句",
+        "examPurpose": "考核學生在提綱造句中，於條件子句主動補出 be 動詞 is、串接雙向祈使指令並正確填入介系詞 to 與 through 的綜合能力。",
+        "correctReason": "條件子句「your home / in a low area」缺少動詞，必須補上單數 be 動詞 is；主句逗號後接肯定祈使句 go up to a higher place，再用 and 連接否定祈使句 don't drive through flooding water。",
+        "note": "這是融合本單元祈使句、動態介系詞與過去單元「子句不可漏動詞」的高含金量寫作題。",
+        "trap": "高頻失分點有三：(1) 寫出 *If your home in a low area（漏 is）；(2) 照抄 *not drive（漏 don't）；(3) 忘記補介系詞 to 與 through。",
+        "commonTraps": [
+          "子句漏動詞陷阱（ENG_VERB_OMISSION）：介系詞片語 in a low area 不是動詞，必須補上 is 才構成完整子句。",
+          "否定直譯陷阱（ENG_CHINGLISH_LITERAL）：提綱寫 not drive，造句時不可直接寫 *and not drive，必須轉換為 and don't drive。"
+        ],
+        "steps": [
+          "① 補齊 If 子句動詞：If your home is in a low area,",
+          "② 寫出肯定避難指令：go up to a higher place",
+          "③ 連接否定禁令並補介系詞：and don't drive through flooding water."
+        ],
+        "insight": "💡 提綱只給關鍵字不給「is」和「介系詞」時，造句一定要自動檢查：每個子句有動詞嗎？名詞前有補對介系詞嗎？",
+        "visualBlock": {
+          "kind": "slot_box",
+          "title": "📦 If 條件句＋雙祈使指令五格合成槽",
+          "data": {
+            "slots": [
+              {
+                "role": "1. If 子句（補 is）",
+                "text": "If your home is in a low area,",
+                "accent": "pri"
+              },
+              {
+                "role": "2. 肯定原形指令",
+                "text": "go up to a higher place",
+                "accent": "ok"
+              },
+              {
+                "role": "3. 連接詞",
+                "text": "and",
+                "accent": "pri"
+              },
+              {
+                "role": "4. 否定指令",
+                "text": "don't drive",
+                "accent": "warn"
+              },
+              {
+                "role": "5. 補齊介系詞＋受詞",
+                "text": "through flooding water.",
+                "accent": "ok"
+              }
+            ]
+          },
+          "caption": "📊 第 1 格補 is、第 4 格用 don't、第 5 格補 through！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "If you live in a low area, move up to a higher place and never drive through floodwater.",
+          "When your house is on low ground, head up to higher ground and avoid driving through deep water."
+        ],
+        "grammarCompare": "同主詞或並列的祈使句可直接用 and 連接「肯定指令 + and + 否定指令」（Stay inside and don't open the door）。",
+        "examVariations": "常見於期末手寫提綱造句題，同時檢核動詞補全與動態介系詞搭配。"
+      }
+    },
+    {
+      "id": "q_w14_odg3_u17_34",
+      "book_id": "gra3",
+      "unit_id": "gra3_17",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "part_title": "Part D: Three-Stage Hurricane Safety Mini-Guide",
+      "part_instructions": "請綜合運用 Before / During / After 三階段與字庫中的動態介系詞，寫出 3 句完整實用的颶風防災英文指南。",
+      "word_bank": [
+        "into",
+        "over",
+        "from",
+        "up",
+        "through",
+        "under"
+      ],
+      "sentence_form": "Before a hurricane, ... During a hurricane, ... After a hurricane, don't ...",
+      "difficulty": "★★★★★",
+      "difficulty_level": 10,
+      "triadGroup": {
+        "groupId": "ODG3_U17_T2",
+        "tier": "L7-10",
+        "role": "challenge"
+      },
+      "trapCodes": [
+        "ENG_PREP_COLLOCATION",
+        "ENG_POS_CONFUSION",
+        "ENG_PUNCT_DICTATION"
+      ],
+      "question": "Write a 3-sentence hurricane safety guide covering \"Before\", \"During\", and \"After\" a hurricane, using both affirmative and negative imperatives and at least four prepositions from [into, over, from, up, through, under].",
+      "answer": "Before a hurricane, put boards over your windows and get food and water from the supermarket. During a hurricane, go into a building or go up to a hurricane shelter. After a hurricane, don't drive through flooding water or walk under damaged trees.",
+      "options": [],
+      "self_check": [
+        "是否完整涵蓋 Before / During / After 三個時間階段且逗號正確",
+        "是否同時包含肯定祈使句（put / get / go）與否定祈使句（don't drive ... or walk）",
+        "是否精準使用至少 4 個動態介系詞（如 over / from / into / up / through / under）"
+      ],
+      "explanation": {
+        "point": "全單元終極整合寫作：三階段防災祈使句＋六大動態介系詞總匯",
+        "examPurpose": "作為本單元最高階開放寫作壓軸，全面檢核學生將祈使句正反句型與動態方向介系詞轉化為連貫防災短文的能力。",
+        "correctReason": "三句分別以 Before / During / After a hurricane, 引導時間背景，並搭配原形動詞祈使句與對應空間介系詞：over（覆蓋窗戶）、from（超市採購來源）、into（進入建築）、up（往高處避難）、through（勿開車穿過積水）、under（勿走在斷樹下）。",
+        "note": "注意最後一句並列否定結構：「don't drive ... or walk ...」，兩個禁止動作共用 don't 時，連接詞應使用 or（而非 and）！",
+        "trap": "最後一句否定列舉常誤寫為 *don't drive ... and walk ...；或忘記在時間片語（Before a hurricane,）後方加逗號。",
+        "commonTraps": [
+          "否定並列連接詞陷阱（ENG_POS_CONFUSION）：在「don't + A or B」中，兩個都不可以做應使用 or 連接（如 don't drive through water or walk under trees）。",
+          "時間片語逗號遺漏（ENG_PUNCT_DICTATION）：句首時間片語 Before / During / After a hurricane 後方應加逗號分隔主句。"
+        ],
+        "steps": [
+          "① Before：用肯定祈使句寫準備（put boards over... / get ... from...）",
+          "② During：用肯定祈使句寫避難（go into... / go up to...）",
+          "③ After：用否定祈使句寫避險（don't drive through... or walk under...）"
+        ],
+        "insight": "💡 寫完三段式指南記得一個細節：否定句裡「既不能做 A、也不能做 B」，中間要用 OR 連接（don't drive ... or walk ...）！",
+        "visualBlock": {
+          "kind": "prep_ladder",
+          "title": "🧭 颶風三階段六大介系詞總複習階梯",
+          "data": {
+            "levels": [
+              {
+                "prep": "over / from / into",
+                "scope": "Before（災前準備防護與採買）",
+                "examples": [
+                  "put boards over windows",
+                  "get water from the supermarket",
+                  "bring furniture into the house"
+                ],
+                "highlight": true
+              },
+              {
+                "prep": "into / up / to",
+                "scope": "During（災中入室與往高處避難）",
+                "examples": [
+                  "go into a building",
+                  "go up to a hurricane shelter"
+                ],
+                "highlight": true
+              },
+              {
+                "prep": "through / under",
+                "scope": "After（災後雙重禁忌：勿涉水與勿走樹下）",
+                "examples": [
+                  "don't drive through flooding water",
+                  "don't walk under damaged trees"
+                ],
+                "highlight": true
+              }
+            ]
+          },
+          "caption": "📊 一張階梯圖收齊 Unit 17 全課防災重點與動態介系詞！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "Prior to a storm... / While the storm is happening... / Once the storm passes...",
+          "Before the hurricane arrives... / During the hurricane... / After the hurricane ends..."
+        ],
+        "grammarCompare": "Don't drive through water or walk under damaged trees.（兩者皆禁止，否定後用 or）；也可以拆成兩句各用一次 Don't。",
+        "examVariations": "對標素養導向小短文寫作（Mini-Guide Writing），常考於期末綜合評量最後一大題。"
+      }
+    },
+    {
+      "id": "q_w14_wr3_u07_01",
+      "book_id": "wr3",
+      "unit_id": "wr3_7",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★☆☆☆☆",
+      "question": "Listen to the pronunciation and sentence: \"Be careful on the wet stairs so you do not twist or injure the joint connecting your foot and leg.\" Spell the target verb for \"扭傷\".",
+      "options": [],
+      "answer": "sprain",
+      "vocab_card": {
+        "word": "sprain",
+        "ipa": "/spreɪn/",
+        "phonetic": "/spreɪn/",
+        "syllables": "sprain",
+        "pos": "動詞 (Verb)",
+        "chi": "扭傷（過去式 sprained）",
+        "meaning": "關節（如腳踝或手腕）因突然扭轉而拉傷韌帶",
+        "breakdown": "spr- + ain (與 pain 押韻，聯想關節一扭就 pain 痛！)",
+        "trick": "諧音「是痛 (pain)」-> 穿高跟鞋踩空一扭，腳踝就 sprain！",
+        "scene": "脫下紅色鞋子坐在地板上抱著發紅發痛腳踝的女孩。",
+        "collocation": "sprain your ankle, sprained your ankle, sprain your wrist",
+        "img": "🦶",
+        "context_eng": "I heard that you sprained your ankle during PE class yesterday.",
+        "example": "I heard that you sprained your ankle during PE class yesterday.",
+        "context_chi": "我聽說你昨天在體育課時扭傷了腳踝。",
+        "chant": "Twist and turn, ouch, what a pain! Watch your step so you don't sprain!",
+        "compare": "sprain (扭傷關節) vs break (折斷骨頭)",
+        "note": "規則變化動詞，過去式直接加 -ed 成為 sprained；常搭配 ankle (腳踝)。"
+      },
+      "explanation": {
+        "point": "sprain 為動詞「扭傷」，最常與身體關節部位 ankle（腳踝）搭配使用。",
+        "examPurpose": "評量學生依據語音線索與傷害情境精準拼寫傷病核心動詞 sprain 的能力。",
+        "correctReason": "關節韌帶因不當扭轉而拉傷稱為 sprain，注意開頭三個子音群 spr- 與字尾母音組合 -ain。",
+        "note": "sprain [v.] 扭傷；過去式為規則變化 sprained。",
+        "trap": "拼寫時容易漏掉開頭子音群中的 r 或 p（寫成 spain），或誤將 -ain 寫成 -ane。",
+        "commonTraps": [
+          "漏掉開頭三子音群 spr- 中的字母 r，錯誤拼寫成 spain。",
+          "受到相同發音 /eɪn/ 干擾，將字尾 -ain 誤寫為 -ane (sprane)。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "twist",
+          "wrench"
+        ],
+        "grammarCompare": "sprain 指關節韌帶拉傷 (sprain your ankle)；break 則是骨頭斷裂 (break your leg)。",
+        "examVariations": "傷病配對填空：She tripped in her red shoes and _______ her ankle. (正解：sprained)"
+      },
+      "target_chi": "扭傷",
+      "target_pos": "動詞 (Verb)",
+      "masked_example": "I heard that you ________ your ankle during PE class yesterday.",
+      "masked_example_chi": "我聽說你昨天在體育課時扭傷了腳踝。"
+    },
+    {
+      "id": "q_w14_wr3_u07_02",
+      "book_id": "wr3",
+      "unit_id": "wr3_7",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★☆☆☆☆",
+      "question": "Listen to the pronunciation and sentence: \"If you touch a boiling kettle or spill scalding tea on your skin, you might injure your arm with heat.\" Spell the target verb for \"燙傷；燒傷\".",
+      "options": [],
+      "answer": "burn",
+      "vocab_card": {
+        "word": "burn",
+        "ipa": "/bɜːrn/",
+        "phonetic": "/bɜːrn/",
+        "syllables": "burn",
+        "pos": "動詞 (Verb)",
+        "chi": "燙傷；燒傷（過去式 burned）",
+        "meaning": "因接觸高溫火源、熱水或熱蒸氣而使皮膚受傷",
+        "breakdown": "單音節核心動詞，規則過去式加 -ed（亦可見 burnt）",
+        "trick": "聯想熱水壺「噴」出滾水，手臂就被 burn 燙傷！",
+        "scene": "打翻冒著熱氣的熱水壺，滾水潑到手臂紅腫的男孩。",
+        "collocation": "burn your arm, burned your arm, burn your hand",
+        "img": "🔥",
+        "context_eng": "Be careful with hot water so you don't burn your arm.",
+        "example": "Be careful with hot water so you don't burn your arm.",
+        "context_chi": "拿熱水時要小心，才不會燙傷你的手臂。",
+        "chant": "Hot water spills, turn away quick! Don't burn your arm or get sick!",
+        "compare": "burn (高溫燙傷／燒傷) vs spill (打翻液體，如 spill hot water)",
+        "note": "本課標準過去式寫法為 burned。"
+      },
+      "explanation": {
+        "point": "burn 為動詞「燙傷；燒傷」，本課常搭配部位 arm 組成 burn your arm。",
+        "examPurpose": "測驗學生聽辨母音捲舌音 /ɜːr/ 並精確拼寫基礎傷害動詞 burn 的能力。",
+        "correctReason": "接觸火源或滾燙液體造成皮膚灼傷稱為 burn，中間母音字母組合為 ur。",
+        "note": "burn [v.] 燙傷／燒傷；本單元過去式採 burned。",
+        "trap": "容易將母音組合 ur 誤寫成 er (bern) 或 ir (birn)。",
+        "commonTraps": [
+          "受相同發音 /ɜːr/ 影響，將中間字母 ur 誤寫成 er (bern) 或 ir (birn)。",
+          "在過去式時誤與不規則動詞混淆，忽略本課統一採用規則過去式 burned。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "scald",
+          "scorch"
+        ],
+        "grammarCompare": "burn 指皮膚被高溫灼傷；spill 則是把熱水或液體打翻潑出 (spill hot water)。",
+        "examVariations": "因果造句：He spilled hot water and _______ his arm. (正解：burned)"
+      },
+      "target_chi": "燙傷；燒傷",
+      "target_pos": "動詞 (Verb)",
+      "masked_example": "Be careful with hot water so you don't ________ your arm.",
+      "masked_example_chi": "拿熱水時要小心，才不會燙傷你的手臂。"
+    },
+    {
+      "id": "q_w14_wr3_u07_03",
+      "book_id": "wr3",
+      "unit_id": "wr3_7",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★★☆☆☆",
+      "question": "Listen to the pronunciation and sentence: \"After getting hit by a flying baseball during practice, the player ended up with a dark purple mark on his cheek.\" Spell the target verb for \"撞傷瘀青\".",
+      "options": [],
+      "answer": "bruise",
+      "vocab_card": {
+        "word": "bruise",
+        "ipa": "/bruːz/",
+        "phonetic": "/bruːz/",
+        "syllables": "bruise",
+        "pos": "動詞／名詞 (Verb / Noun)",
+        "chi": "撞傷瘀青（過去式 bruised）",
+        "meaning": "皮膚受撞擊後皮下微血管破裂而變成青紫色",
+        "breakdown": "字中有 u-i 組合發 /uː/ 音，字尾有不發音 e，過去式加 -d",
+        "trick": "諧音「不入紫」-> 撞到臉變成青紫一塊就是 bruise！",
+        "scene": "臉頰出現一大塊紫紅色瘀青並貼著OK繃的男孩。",
+        "collocation": "bruise your face, bruised your face, get a bruise",
+        "img": "🤕",
+        "context_eng": "You fell off your bike and bruised your face badly.",
+        "example": "You fell off your bike and bruised your face badly.",
+        "context_chi": "你從腳踏車摔下來，把臉撞得嚴重瘀青。",
+        "chant": "Bump and bruise, purple and blue, put some ice to soothe it too!",
+        "compare": "bruise your face (臉部瘀青) vs get a black eye (眼眶被打成黑青)",
+        "note": "拼寫注意字中的 ui 與字尾 se；過去式直接加 -d 成為 bruised。"
+      },
+      "explanation": {
+        "point": "bruise 為動詞「撞傷瘀青」，本單元核心片語為 bruise your face（過去式 bruised）。",
+        "examPurpose": "考查學生掌握不常見雙母音組合 ui 與字尾靜音字母 e 的高難度傷病單字拼寫。",
+        "correctReason": "受鈍物撞擊導致皮膚青紫腫脹稱為 bruise，拼寫包含 br + ui + se。",
+        "note": "bruise [v./n.] 瘀青；過去式為 bruised。",
+        "trap": "極常將 ui 順序寫反變成 briuse，或寫成 oo (broose) 與 z (bruize)。",
+        "commonTraps": [
+          "將字中的雙母音組合 ui 顛倒寫成 iu (briuse)，或受到發音誤導拼成 oo (broose)。",
+          "因字尾讀音為 /z/，誤將字母 s 改寫為 z (bruize)。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "contusion",
+          "black-and-blue mark"
+        ],
+        "grammarCompare": "bruise 可作動詞 (bruised your face) 也可作可數名詞 (a big bruise on his cheek)。",
+        "examVariations": "聽寫與填空：When the ball hit his cheek, it left a purple mark because he _______ his face. (正解：bruised)"
+      },
+      "target_chi": "撞傷瘀青",
+      "target_pos": "動詞／名詞 (Verb / Noun)",
+      "masked_example": "You fell off your bike and ________ your face badly.",
+      "masked_example_chi": "你從腳踏車摔下來，把臉撞得嚴重瘀青。"
+    },
+    {
+      "id": "q_w14_wr3_u07_04",
+      "book_id": "wr3",
+      "unit_id": "wr3_7",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★★☆☆☆",
+      "question": "Listen to the pronunciation and sentence: \"If harmful germs enter your eye and make it red, itchy, and swollen, the doctor says you have a painful medical condition.\" Spell the target noun for \"感染；發炎\".",
+      "options": [],
+      "answer": "infection",
+      "vocab_card": {
+        "word": "infection",
+        "ipa": "/ɪnˈfekʃən/",
+        "phonetic": "/ɪnˈfekʃən/",
+        "syllables": "in·fec·tion",
+        "pos": "名詞 (Noun)",
+        "chi": "感染；發炎",
+        "meaning": "細菌或病毒侵入身體器官造成紅腫、不適的病症",
+        "breakdown": "in-(進入) + fect-(做/影響) + -ion(名詞) -> 病菌跑進身體引發發炎",
+        "trick": "拆解 in (進入) + fect + tion -> 髒東西跑進眼睛就變成 eye infection！",
+        "scene": "照著鏡子發現自己雙眼紅腫發炎、準備戴上眼罩的男孩。",
+        "collocation": "have an eye infection, ear infection, prevent infection",
+        "img": "👁️",
+        "context_eng": "You had an eye infection and had to wear an eye patch.",
+        "example": "You had an eye infection and had to wear an eye patch.",
+        "context_chi": "你眼睛發炎感染，不得不戴上眼罩。",
+        "chant": "Wash your hands, keep germs away! No infection ruins your day!",
+        "compare": "an eye infection (眼部發炎感染，搭配 an) vs an allergic reaction (過敏反應，搭配 an)",
+        "note": "eye 與 infection 皆為母音開頭，單數片語前面必須使用不定冠詞 an。"
+      },
+      "explanation": {
+        "point": "infection 為名詞「感染；發炎」，與 eye 搭配構成名詞片語 an eye infection。",
+        "examPurpose": "檢驗學生拼寫三音節醫療健康名詞 infection 與字根 -fect- 及字尾 -tion 的能力。",
+        "correctReason": "病原體侵入組織引起的發炎症狀稱為 infection，由字根 in- + fect + -ion 組成。",
+        "note": "infection [n.] 感染；動詞為 infect (傳染)，形容詞為 infected。",
+        "trap": "容易在字尾 -tion 誤拼為 -sion (infecsion)，或漏掉中間的字母 c (infetion)。",
+        "commonTraps": [
+          "受到 /ʃən/ 讀音干擾，將字尾 -tion 誤寫成 -sion 或 -cion。",
+          "連讀時容易忽略子音 c，漏寫成 infetion。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "inflammation",
+          "illness"
+        ],
+        "grammarCompare": "have an eye infection (固定用不定冠詞 an)；wear an eye patch (同樣搭配不定冠詞 an)。",
+        "examVariations": "冠詞考點：I heard that you had _______ eye infection and had to stay home. (正解：an)"
+      },
+      "target_chi": "感染；發炎",
+      "target_pos": "名詞 (Noun)",
+      "masked_example": "You had an eye ________ and had to wear an eye patch.",
+      "masked_example_chi": "你眼睛發炎感染，不得不戴上眼罩。"
+    },
+    {
+      "id": "q_w14_wr3_u07_05",
+      "book_id": "wr3",
+      "unit_id": "wr3_7",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★★☆☆☆",
+      "question": "Listen to the pronunciation and sentence: \"Because Penny suffered a serious fall down the stairs, doctors kept her in a medical clinic for a few days to watch her recovery.\" Spell the target adjective for \"住院治療的\".",
+      "options": [],
+      "answer": "hospitalized",
+      "vocab_card": {
+        "word": "hospitalized",
+        "ipa": "/ˈhɑːspɪtəlaɪzd/",
+        "phonetic": "/ˈhɑːspɪtəlaɪzd/",
+        "syllables": "hos·pi·tal·ized",
+        "pos": "形容詞／過去分詞 (Adjective)",
+        "chi": "住院治療的",
+        "meaning": "因重傷或重病必須留在醫院接受專業照護與治療",
+        "breakdown": "hospital (醫院) + -ize (動詞化：送進醫院) + -d (被動形容詞)",
+        "trick": "核心字根就是 hospital (醫院)，加上 -ized 就是「被送進醫院治療」!",
+        "scene": "佩妮躺在醫院病床上休養幾天，朋友寫卡片表達關心。",
+        "collocation": "be hospitalized, were hospitalized for a few days",
+        "img": "🏥",
+        "context_eng": "I also heard that you were hospitalized for a few days.",
+        "example": "I also heard that you were hospitalized for a few days.",
+        "context_chi": "我也聽說你住院住了幾天。",
+        "chant": "Hospital, hospitalized, doctors help you heal inside!",
+        "compare": "be hospitalized (住院治療) vs visit you at the hospital (去醫院探望你)",
+        "note": "課文與練習中固定搭配 be 動詞構成被動語態：you were hospitalized。"
+      },
+      "explanation": {
+        "point": "hospitalized 為形容詞／過去分詞「住院治療的」，常見句型為 you were hospitalized。",
+        "examPurpose": "評量學生在長單字聽寫中運用基礎名詞 hospital 延伸後綴 -ized 的構詞拼寫能力。",
+        "correctReason": "在 hospital 字根後接動詞字尾 -ize 並加過去分詞 -d，構成美式拼法 hospitalized。",
+        "note": "be hospitalized for + 一段時間 (住院……久)。",
+        "trap": "容易寫錯中間的 -al-（寫成 hospitelized）或漏掉字尾過去分詞的 -d。",
+        "commonTraps": [
+          "受弱讀母音影響，將 hospital 的 -al 誤拼成 -el (hospitelized)。",
+          "忘記這是一個被動過去分詞結構，漏掉字尾的字母 d 寫成 hospitalize。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "admitted to the hospital",
+          "kept in the clinic"
+        ],
+        "grammarCompare": "be hospitalized (表示住院狀態，搭配 were/was) vs go to the hospital (表示前往醫院動作)。",
+        "examVariations": "課文句型填空：I also heard that you _______ hospitalized for a few days. (正解：were)"
+      },
+      "target_chi": "住院治療的",
+      "target_pos": "形容詞／過去分詞 (Adjective)",
+      "masked_example": "I also heard that you were ________ for a few days.",
+      "masked_example_chi": "我也聽說你住院住了幾天。"
+    },
+    {
+      "id": "q_w14_wr3_u07_06",
+      "book_id": "wr3",
+      "unit_id": "wr3_7",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★★☆☆☆",
+      "question": "Listen to the pronunciation and sentence: \"After eating peanuts by mistake, Sam developed itchy red bumps because his body had a strong immune response.\" Spell the target two-word phrase for \"過敏反應\".",
+      "options": [],
+      "answer": "allergic reaction",
+      "vocab_card": {
+        "word": "allergic reaction",
+        "ipa": "/əˈlɜːrdʒɪk riˈækʃən/",
+        "phonetic": "/əˈlɜːrdʒɪk riˈækʃən/",
+        "syllables": "al·ler·gic re·ac·tion",
+        "pos": "名詞片語 (Noun Phrase)",
+        "chi": "過敏反應",
+        "meaning": "身體對特定食物、花粉或藥物產生紅疹、發癢等免疫排斥現象",
+        "breakdown": "allergic (過敏的，allergy 變化) + reaction (反應，re-回 + act 動作)",
+        "trick": "吃了海鮮或花生產生紅疹反應 (reaction)，前面母音開頭要用 an！",
+        "scene": "誤食過敏食材後手臂起疹子並趕緊前往保健室的學生。",
+        "collocation": "have an allergic reaction, had an allergic reaction, allergic to",
+        "img": "🤧",
+        "context_eng": "I heard that you had an allergic reaction and got a rash.",
+        "example": "I heard that you had an allergic reaction and got a rash.",
+        "context_chi": "我聽說你產生了過敏反應而且起了紅疹。",
+        "chant": "Check the food before you eat! No allergic reaction, feel so sweet!",
+        "compare": "have an allergic reaction (產生過敏反應) vs have a rash (身上起紅疹)",
+        "note": "allergic 以母音音素 /ə/ 開頭，不定冠詞必用 an；注意 double l (al-lergic)。"
+      },
+      "explanation": {
+        "point": "allergic reaction 為複合名詞片語「過敏反應」，前接不定冠詞 an。",
+        "examPurpose": "測驗學生拼寫課本補充高頻醫療片語 allergic reaction 的雙寫 ll 與詞尾變化。",
+        "correctReason": "身體對食物或環境因子產生的不適排斥現象稱為 allergic reaction，兩字中間須保留空格。",
+        "note": "have an allergic reaction (產生過敏反應)。",
+        "trap": "容易漏掉 allergic 中的雙寫 ll（寫成 alergic），或把 g 誤拼為 j。",
+        "commonTraps": [
+          "漏寫開頭雙子音 ll，錯誤拼寫成單個 l (alergic reaction)。",
+          "受讀音 /dʒ/ 誤導，將 allergic 中的字母 g 錯寫為 j (allerjic)。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "allergy flare-up",
+          "hypersensitivity"
+        ],
+        "grammarCompare": "have an allergic reaction (名詞片語，冠詞用 an) vs be allergic to + N (形容詞片語：對某物過敏)。",
+        "examVariations": "冠詞與動詞：I heard that you _______ _______ allergic reaction yesterday. (正解：had an)"
+      },
+      "target_chi": "過敏反應",
+      "target_pos": "名詞片語 (Noun Phrase)",
+      "masked_example": "I heard that you had an ________ and got a rash.",
+      "masked_example_chi": "我聽說你產生了過敏反應而且起了紅疹。"
+    },
+    {
+      "id": "q_w14_wr3_u07_07",
+      "book_id": "wr3",
+      "unit_id": "wr3_7",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★☆☆☆☆",
+      "question": "Listen to the pronunciation and sentence: \"At the very bottom of a get-well card, right under 'Get well soon!', you always write your own name.\" Spell the target noun for \"署名；簽名\".",
+      "options": [],
+      "answer": "signature",
+      "vocab_card": {
+        "word": "signature",
+        "ipa": "/ˈsɪɡnətʃər/",
+        "phonetic": "/ˈsɪɡnətʃər/",
+        "syllables": "sig·na·ture",
+        "pos": "名詞 (Noun)",
+        "chi": "署名；簽名",
+        "meaning": "在卡片、信件或文件最下方親筆寫上的名字",
+        "breakdown": "sign (簽名/記號) + -ature (名詞後綴)",
+        "trick": "前半部就是 sign (簽名)，注意裡面有不發音的 g (sig-na-ture)！",
+        "scene": "寫完卡片最後一行祝福語 Get well soon! 後在右下角簽下名字 Danny。",
+        "collocation": "Greeting, Body, Closing, Signature",
+        "img": "✍️",
+        "context_eng": "Don't forget to write your signature at the bottom of the card.",
+        "example": "Don't forget to write your signature at the bottom of the card.",
+        "context_chi": "別忘了在卡片最下方寫上你的署名。",
+        "chant": "Greeting at the top, Closing near the end, Signature shows the name of your friend!",
+        "compare": "Closing (結尾祝福語如 Get well soon!) vs Signature (寄卡人署名如 Danny)",
+        "note": "卡片寫作四大要素：Greeting（問候）→ Body（內文）→ Closing（祝福語）→ Signature（署名）。"
+      },
+      "explanation": {
+        "point": "signature 為名詞「署名；簽名」，屬於英文書信與慰問卡四大結構的最後一部分。",
+        "examPurpose": "評量學生精確拼寫卡片結構專有名詞 signature 及其名詞字尾 -ture 的能力。",
+        "correctReason": "信末親筆寫上寄件人姓名的欄位稱為 signature，由 sign 衍生加上 -ature 構成。",
+        "note": "卡片四大欄位：Greeting / Body / Closing / Signature。",
+        "trap": "在 sign 讀音影響下，常將 -g- 遺漏或把 -ture 誤拼成 -cher (signacher)。",
+        "commonTraps": [
+          "根據字尾發音 /tʃər/ 猜測拼字，誤將 -ture 拼寫成 -cher 或 -tur。",
+          "把動詞 sign 中的靜音 g 誤以為不需要寫而拼成 sinature。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "autograph",
+          "sign-off name"
+        ],
+        "grammarCompare": "sign (動詞：簽名) vs signature (名詞：簽名／署名欄位)。",
+        "examVariations": "結構排序題：Put the four parts of a card in order: Greeting -> Body -> Closing -> _______."
+      },
+      "target_chi": "署名；簽名",
+      "target_pos": "名詞 (Noun)",
+      "masked_example": "Don't forget to write your ________ at the bottom of the card.",
+      "masked_example_chi": "別忘了在卡片最下方寫上你的署名。"
+    },
+    {
+      "id": "q_w14_wr3_u07_08",
+      "book_id": "wr3",
+      "unit_id": "wr3_7",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★★☆☆☆",
+      "question": "Listen to the pronunciation and sentence: \"My parents celebrated twenty happy years of marriage by reading the warm card we made for their special yearly milestone.\" Spell the target noun for \"週年紀念日\".",
+      "options": [],
+      "answer": "anniversary",
+      "vocab_card": {
+        "word": "anniversary",
+        "ipa": "/ˌænɪˈvɜːrsəri/",
+        "phonetic": "/ˌænɪˈvɜːrsəri/",
+        "syllables": "an·ni·ver·sa·ry",
+        "pos": "名詞 (Noun)",
+        "chi": "週年紀念日",
+        "meaning": "每年定期紀念重要日子（如結婚或創校）的紀念日",
+        "breakdown": "ann-(年，annual) + vers-(轉動) + -ary(名詞) -> 地球轉回一年的紀念日",
+        "trick": "字首 anni- 聯想 annual (每年的)，注意有雙寫 nn！",
+        "scene": "寫卡片祝賀父母結婚十週年紀念日的溫馨家庭畫面。",
+        "collocation": "wedding anniversary, congratulate someone's anniversary",
+        "img": "💐",
+        "context_eng": "With a nice card, you can congratulate someone's birthday or anniversary.",
+        "example": "With a nice card, you can congratulate someone's birthday or anniversary.",
+        "context_chi": "透過一張漂亮的卡片，你可以祝賀某人的生日或週年紀念日。",
+        "chant": "Anniversary comes once a year, send a warm card full of cheer!",
+        "compare": "anniversary (週年紀念日) vs wedding (結婚典禮當日)",
+        "note": "雙寫 nn 與單寫 s 容易拼錯：an-ni-ver-sa-ry。"
+      },
+      "explanation": {
+        "point": "anniversary 為名詞「週年紀念日」，是本單元卡片書寫技巧中的五大祝賀場合之一。",
+        "examPurpose": "考查學生掌握五音節長名詞 anniversary 中雙寫 nn 與字尾 -ary 的拼寫準確度。",
+        "correctReason": "每年重複慶祝結婚、建校或公司成立的紀念日稱為 anniversary，字首為 ann-。",
+        "note": "congratulate someone's birthday, anniversary, graduation, wedding, or new job。",
+        "trap": "最常少寫一個 n 拼成 aniversary，或將字尾 -ary 誤寫成 -ery。",
+        "commonTraps": [
+          "漏寫開頭雙子音 nn，錯誤拼寫成單個 n (aniversary)。",
+          "受到讀音影響，將字尾 -ary 誤寫為 -ery (anniversery) 或將 i 誤寫為 e。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "yearly milestone",
+          "commemoration"
+        ],
+        "grammarCompare": "wedding (結婚典禮當天) vs wedding anniversary (每年的結婚週年紀念日)。",
+        "examVariations": "寫作提示填空：You can congratulate someone's birthday, _______, graduation, or wedding."
+      },
+      "target_chi": "週年紀念日",
+      "target_pos": "名詞 (Noun)",
+      "masked_example": "With a nice card, you can congratulate someone's birthday or ________.",
+      "masked_example_chi": "透過一張漂亮的卡片，你可以祝賀某人的生日或週年紀念日。"
+    },
+    {
+      "id": "q_w14_wr3_u07_09",
+      "book_id": "wr3",
+      "unit_id": "wr3_7",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★☆☆☆☆",
+      "question": "Listen to the pronunciation and sentence: \"After finishing all six years of elementary school, Leo received a warm card congratulating him on completing his studies.\" Spell the target noun for \"畢業\".",
+      "options": [],
+      "answer": "graduation",
+      "vocab_card": {
+        "word": "graduation",
+        "ipa": "/ˌɡrædʒuˈeɪʃən/",
+        "phonetic": "/ˌɡrædʒuˈeɪʃən/",
+        "syllables": "grad·u·a·tion",
+        "pos": "名詞 (Noun)",
+        "chi": "畢業；畢業典禮",
+        "meaning": "順利完成學校學業並獲得學位或畢業證書的儀式與時刻",
+        "breakdown": "gradu-(步/階級，grade) + -ation(名詞後綴) -> 踏出校門邁向下一階段",
+        "trick": "前面是 grad-（聯想 grade 年級），讀完所有年級就是 graduation！",
+        "scene": "穿著畢業禮服、戴學士帽收到親友祝賀畢業卡片的學生。",
+        "collocation": "congratulate someone's graduation, graduation card",
+        "img": "🎓",
+        "context_eng": "My friends gave me a wonderful card for my graduation.",
+        "example": "My friends gave me a wonderful card for my graduation.",
+        "context_chi": "我的朋友們在我的畢業典禮時送了我一張很棒的卡片。",
+        "chant": "Graduation day is finally here! Send your wishes loud and clear!",
+        "compare": "graduation (畢業，名詞) vs graduate (畢業，動詞／畢業生)",
+        "note": "動詞為 graduate from + 學校名稱。"
+      },
+      "explanation": {
+        "point": "graduation 為名詞「畢業；畢業典禮」，由動詞 graduate 加上名詞字尾 -ion 構成。",
+        "examPurpose": "評量學生辨識音節 /dʒu/ 對應字母組合 du 與名詞後綴 -ation 的拼寫能力。",
+        "correctReason": "完成特定學程並領取證書的重大典禮與時刻稱為 graduation，中間不可漏寫 u。",
+        "note": "graduation [n.] 畢業；動詞為 graduate。",
+        "trap": "因語音 /dʒu/ 容易誤將 du 寫成 ju (grajuaion) 或漏掉 u (gradution)。",
+        "commonTraps": [
+          "受讀音 /dʒ/ 影響，誤將字母 d 寫成 j 或 g (grajuation)。",
+          "漏寫中間母音字母 u 或 a，錯誤拼寫成 gradution。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "commencement",
+          "diploma ceremony"
+        ],
+        "grammarCompare": "graduation (名詞：畢業典禮) vs graduate (動詞：從某校畢業，graduate from...)。",
+        "examVariations": "生活卡片配對：Send a card to congratulate a sixth grader on their _______."
+      },
+      "target_chi": "畢業",
+      "target_pos": "名詞 (Noun)",
+      "masked_example": "My friends gave me a wonderful card for my ________.",
+      "masked_example_chi": "我的朋友們在我的畢業典禮時送了我一張很棒的卡片。"
+    },
+    {
+      "id": "q_w14_wr3_u07_10",
+      "book_id": "wr3",
+      "unit_id": "wr3_7",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "spelling_listen",
+      "category_tag": "listening",
+      "difficulty": "★★☆☆☆",
+      "question": "Listen to the pronunciation and sentence: \"Standing too long under the hot sun without drinking water can make someone suddenly lose consciousness and faint.\" Spell the two-word phrasal verb for \"昏倒；短暫失去意識\".",
+      "options": [],
+      "answer": "black out",
+      "vocab_card": {
+        "word": "black out",
+        "ipa": "/blæk aʊt/",
+        "phonetic": "/blæk aʊt/",
+        "syllables": "black out",
+        "pos": "動詞片語 (Phrasal Verb)",
+        "chi": "昏倒；短暫失去意識（過去式 blacked out）",
+        "meaning": "突然眼前一黑而暈厥、失去知覺",
+        "breakdown": "black (漆黑) + out (完全失去) -> 眼前一片漆黑昏過去",
+        "trick": "眼前「全黑 (black) 斷電 (out)」就是昏倒失去意識！",
+        "scene": "在炎熱朝會上站立過久突然頭暈昏倒被送去保健室的同學。",
+        "collocation": "blacked out, faint suddenly",
+        "img": "😵",
+        "context_eng": "I heard that you blacked out during morning assembly.",
+        "example": "I heard that you blacked out during morning assembly.",
+        "context_chi": "我聽說你在朝會時昏倒了。",
+        "chant": "Drink enough water and rest in the shade, never black out or feel afraid!",
+        "compare": "black out (昏倒、眼前發黑) vs faint (暈厥，兩者同義，過去式 fainted / blacked out)",
+        "note": "規則變化片語動詞，過去式為 blacked out。"
+      },
+      "explanation": {
+        "point": "black out 為雙字動詞片語「昏倒；失去意識」，過去式為 blacked out。",
+        "examPurpose": "測驗學生拼寫課本補充表達片語 black out 及區分動詞片語空格的能力。",
+        "correctReason": "形容突然眼前一片漆黑並昏厥過去的動詞片語為 black out，兩字間須空一格。",
+        "note": "black out [phr. v.] 昏倒；blackout (連寫名詞) 則指「停電；燈火管制」。",
+        "trap": "容易把兩字黏在一起寫成名詞 blackout，或直接寫成過去式 blacked out。",
+        "commonTraps": [
+          "忘記動詞片語兩字之間需要留白空格，直接連寫成名詞 blackout。",
+          "誤將題目要求的原形動詞片語寫成過去式 blacked out。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "faint",
+          "pass out"
+        ],
+        "grammarCompare": "black out (動詞片語：昏倒，過去式 blacked out) vs blackout (名詞：大停電)。",
+        "examVariations": "轉述傷病填空：I heard that you _______ out on the sports field. (正解：blacked)"
+      },
+      "target_chi": "昏倒；短暫失去意識（過去式 ________）",
+      "target_pos": "動詞片語 (Phrasal Verb)",
+      "masked_example": "I heard that you ________ during morning assembly.",
+      "masked_example_chi": "我聽說你在朝會時昏倒了。"
+    },
+    {
+      "id": "q_w14_wr3_u07_11",
+      "book_id": "wr3",
+      "unit_id": "wr3_7",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "choice",
+      "category_tag": "grammar",
+      "difficulty": "★☆☆☆☆",
+      "trapCodes": [
+        "ENG_TENSE_MISMATCH"
+      ],
+      "triadGroup": {
+        "groupId": "WR3_U07_T1",
+        "tier": "L1-3",
+        "role": "foundation"
+      },
+      "question": "Choose the correct past-tense verb pair to complete the get-well card sentence: \"Then I heard from Jean that you _______ down the stairs and _______ your leg.\"",
+      "options": [
+        "fell / broke",
+        "falled / breaked",
+        "fall / broke",
+        "fell / broken"
+      ],
+      "answer": "fell / broke",
+      "explanation": {
+        "point": "不規則過去式連用：fall 的過去式為 fell，break 的過去式為 broke。",
+        "examPurpose": "評量學生在敘述過去摔倒與骨折事件時精準選用不規則過去式動詞的能力。",
+        "correctReason": "heard 為過去式動詞，後方 that 子句描述過去發生的連續動作，fall 須改為 fell、break 須改為 broke。",
+        "note": "fall -> fell -> fallen；break -> broke -> broken。",
+        "trap": "最容易誤選規則加 -ed 的錯誤假字 falled / breaked，或把過去分詞 broken 當過去式。",
+        "distractorAnalysis": {
+          "falled / breaked": "fall 與 break 均為不規則動詞，英語中並不存在 falled 與 breaked 這兩個字。",
+          "fall / broke": "and 連接兩個發生於過去的並列動作，前半句 fall 漏未改成過去式 fell。",
+          "fell / broken": "broken 是過去分詞，不能單獨當作主動句的過去式主要動詞使用。"
+        },
+        "steps": [
+          "① 看主句時態：I heard from Jean（過去聽說）決定後方受傷事件是過去式",
+          "② 查 fall 的變化：fall - fell - fallen ➔ 選 fell",
+          "③ 查 break 的變化：break - broke - broken ➔ 選 broke"
+        ],
+        "insight": "💡 「跌下樓梯摔斷腿」是過去發生的事，兩個不規則動詞同時變過去式：fell & broke！",
+        "visualBlock": {
+          "kind": "compare_table",
+          "title": "⚖️ 傷病不規則動詞「原形 vs 過去式 vs 常見錯字」紅綠燈",
+          "data": {
+            "headers": [
+              "原形動詞",
+              "正確過去式 ✅",
+              "常見誤寫 ❌"
+            ],
+            "rows": [
+              [
+                "fall",
+                "fell",
+                "falled"
+              ],
+              [
+                "break",
+                "broke",
+                "breaked / broken"
+              ],
+              [
+                "catch",
+                "caught",
+                "catched"
+              ],
+              [
+                "cut / hurt",
+                "cut / hurt",
+                "cutted / hurted"
+              ]
+            ]
+          },
+          "caption": "📊 寫慰問卡前先掃描這 4 列不規則與三態同形動詞！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "tumbled down and fractured",
+          "slipped and injured"
+        ],
+        "grammarCompare": "broke 為簡單過去式 (you broke your leg)；broken 為過去分詞或形容詞 (a broken leg)。",
+        "examVariations": "改錯題：I heard that you fall down the stairs and breaked your leg. (fall -> fell; breaked -> broke)"
+      }
+    },
+    {
+      "id": "q_w14_wr3_u07_12",
+      "book_id": "wr3",
+      "unit_id": "wr3_7",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "choice",
+      "category_tag": "grammar",
+      "difficulty": "★★☆☆☆",
+      "trapCodes": [
+        "ENG_TENSE_MISMATCH",
+        "ENG_SPELLING_PHONICS"
+      ],
+      "triadGroup": {
+        "groupId": "WR3_U07_T1",
+        "tier": "L1-3",
+        "role": "foundation"
+      },
+      "question": "Choose the grammatically correct sentence to report a winter accident in a get-well card:",
+      "options": [
+        "I heard that you slipped on the ice and hurt your knee.",
+        "I heard that you sliped on the ice and hurted your knee.",
+        "I heard that you slipped on the ice and hurting your knee.",
+        "I heard that you slip on the ice and hurt your knee."
+      ],
+      "answer": "I heard that you slipped on the ice and hurt your knee.",
+      "explanation": {
+        "point": "過去式拼寫與三態同形動詞：slip 須雙寫 p 加 -ed (slipped)，hurt 過去式同形不變 (hurt)。",
+        "examPurpose": "評量學生同步辨識「短母音雙寫規則過去式」與「三態同形不規則動詞」的混合考點。",
+        "correctReason": "slip 過去式雙寫字尾子音 p 成為 slipped；hurt 屬於三態同形動詞，過去式仍寫 hurt。",
+        "note": "slip -> slipped；hurt -> hurt (無 hurted)。",
+        "trap": "容易選到少寫一個 p 的 sliped，或誤以為 hurt 要加 -ed 寫成 hurted。",
+        "distractorAnalysis": {
+          "I heard that you sliped on the ice and hurted your knee.": "sliped 漏寫雙寫字母 p，且 hurt 三態同形不可寫成 hurted。",
+          "I heard that you slipped on the ice and hurting your knee.": "and 連接過去式並列動作，不可無助動詞直接使用現在分詞 hurting。",
+          "I heard that you slip on the ice and hurt your knee.": "滑倒發生在過去，slip 漏未改為過去式 slipped。"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "bumped your knee",
+          "injured your knee"
+        ],
+        "grammarCompare": "slip -> slipped（短母音雙寫 p）vs bruise -> bruised（字尾有 e 直接加 d）。",
+        "examVariations": "同類三態同形考點：cut -> cut（非 cutted）、hit -> hit（非 hitted）。"
+      }
+    },
+    {
+      "id": "q_w14_wr3_u07_13",
+      "book_id": "wr3",
+      "unit_id": "wr3_7",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "choice",
+      "category_tag": "grammar",
+      "difficulty": "★★☆☆☆",
+      "trapCodes": [
+        "ENG_ARTICLE_ERROR",
+        "ENG_TENSE_MISMATCH"
+      ],
+      "triadGroup": {
+        "groupId": "WR3_U07_T2",
+        "tier": "L1-3",
+        "role": "foundation"
+      },
+      "question": "Choose the correct words to complete the sentence: \"I also heard that you _______ _______ x-ray taken at the hospital.\"",
+      "options": [
+        "had / an",
+        "had / a",
+        "have / an",
+        "got / a"
+      ],
+      "answer": "had / an",
+      "explanation": {
+        "point": "過去式動詞與母音開頭不定冠詞：have an x-ray taken 轉過去式為 had an x-ray taken。",
+        "examPurpose": "測驗學生辨識縮寫字 x-ray 以母音音素 /ɛ/ 起首而須搭配 an 的高頻冠詞陷阱。",
+        "correctReason": "I also heard 引導過去事件用 had；x-ray 第一個音素是 /ɛ/（母音音素），前方不定冠詞必須用 an。",
+        "note": "an x-ray / an eye infection / an allergic reaction vs a cast / a rash / a black eye。",
+        "trap": "看見字母 x 是子音字母就直覺選 a，忽略了英文冠詞 a/an 是看「發音音素」而非拼寫字母。",
+        "distractorAnalysis": {
+          "had / a": "x-ray 發音為 /ˈɛksreɪ/，以母音音素 /ɛ/ 開頭，不可搭配不定冠詞 a。",
+          "have / an": "前面 I also heard 為過去式，描述過去就醫經歷必須用過去式 had，不可用現在式 have。",
+          "got / a": "課本固定片語為 have an x-ray taken，且 x-ray 前面不能用 a。"
+        },
+        "steps": [
+          "① 看主要動詞時態：I also heard ➔ 後方動作改過去式 had",
+          "② 讀出名詞開頭音：x-ray 唸作 /ˈɛksreɪ/，是母音 /ɛ/ 起首",
+          "③ 決定冠詞：母音音素開頭必用 an ➔ had an x-ray taken"
+        ],
+        "insight": "💡 決定用 a 還是 an，是「聽發音」不是「看字母」！x-ray 唸 /ɛks/ 所以用 an！",
+        "visualBlock": {
+          "kind": "compare_table",
+          "title": "⚖️ Unit 7 醫療詞組「a vs an」冠詞紅綠燈表",
+          "data": {
+            "headers": [
+              "用 an（母音音素起首）✅",
+              "用 a（子音音素起首）✅",
+              "零冠詞（不可數）✅"
+            ],
+            "rows": [
+              [
+                "an eye infection",
+                "a cast on your leg",
+                "surgery (had surgery)"
+              ],
+              [
+                "an x-ray taken",
+                "a rash / a black eye",
+                "hot water (spilled hot water)"
+              ],
+              [
+                "an allergic reaction",
+                "a car accident",
+                "rotten food (ate rotten food)"
+              ]
+            ]
+          },
+          "caption": "📊 把這 3 欄背起來，冠詞填空與改錯題就能一秒得分！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "underwent an x-ray",
+          "received a medical scan"
+        ],
+        "grammarCompare": "an x-ray（母音音素 /ɛ/ 起首）vs a uniform（字母 u 但發子音 /j/ 起首）。",
+        "examVariations": "綜合改錯：I heard you had a eye infection and got an cast on your leg. (a -> an; an -> a)"
+      }
+    },
+    {
+      "id": "q_w14_wr3_u07_14",
+      "book_id": "wr3",
+      "unit_id": "wr3_7",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "choice",
+      "category_tag": "grammar",
+      "difficulty": "★★★☆☆",
+      "trapCodes": [
+        "ENG_PREP_COLLOCATION"
+      ],
+      "triadGroup": {
+        "groupId": "WR3_U07_T3",
+        "tier": "L4-6",
+        "role": "twist"
+      },
+      "question": "Choose the correct prepositions to complete the Writing Tip rule: \"You can send a nice card _______ Christmas, _______ Valentine's Day, or _______ Mother's Day.\"",
+      "options": [
+        "at / on / on",
+        "on / on / on",
+        "at / at / at",
+        "in / on / at"
+      ],
+      "answer": "at / on / on",
+      "explanation": {
+        "point": "節日介系詞黃金對比：Christmas（無 Day）用 at；Valentine's Day 與 Mother's Day（含 Day）用 on。",
+        "examPurpose": "考查學生對本課 Writing Tip 中節日卡片時間介系詞 at 與 on 精準切換規則的掌握。",
+        "correctReason": "不含 Day 的節慶期間 Christmas 使用 at；只要節日名稱帶有具體指某天的 Day（Valentine's Day / Mother's Day / New Year's Day）一律使用 on。",
+        "note": "at Christmas vs on Valentine's Day / on Mother's Day / on New Year's Day。",
+        "trap": "最常受中文「在……節」一律用同一介系詞影響而全填 on 或全填 at。",
+        "distractorAnalysis": {
+          "on / on / on": "Christmas 後面未加 Day，指整個聖誕假期期間時英文固定使用 at Christmas，不可填 on。",
+          "at / at / at": "Valentine's Day 與 Mother's Day 明確含有 Day（指特定那一天），必須使用 on 而非 at。",
+          "in / on / at": "節日名稱前面不用 in（in 用於月份或年份），且 Mother's Day 含有 Day 須用 on。"
+        },
+        "steps": [
+          "① 看第一個節日 Christmas：後面沒有 Day ➔ 用 at",
+          "② 看第二個節日 Valentine's Day：有 Day ➔ 用 on",
+          "③ 看第三個節日 Mother's Day：有 Day ➔ 用 on"
+        ],
+        "insight": "💡 節日介系詞口訣：「沒 Day 用 at（at Christmas），有 Day 用 on（on Mother's Day / New Year's Day）」！",
+        "visualBlock": {
+          "kind": "prep_ladder",
+          "title": "🧭 節日賀卡時間介系詞階梯 (at vs on)",
+          "data": {
+            "levels": [
+              {
+                "prep": "at",
+                "scope": "無 Day 之節慶期間",
+                "examples": [
+                  "at Christmas",
+                  "at Easter"
+                ],
+                "highlight": true
+              },
+              {
+                "prep": "on",
+                "scope": "含 Day 之特定節日（某一天）",
+                "examples": [
+                  "on Valentine's Day",
+                  "on Mother's Day",
+                  "on New Year's Day"
+                ],
+                "highlight": true
+              },
+              {
+                "prep": "in",
+                "scope": "月份 / 季節 / 年份",
+                "examples": [
+                  "in December",
+                  "in winter"
+                ],
+                "highlight": false
+              }
+            ]
+          },
+          "caption": "📊 先找節日最後一個字有沒有 Day：有 Day 用 on，沒 Day 用 at！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "during the Christmas season",
+          "on that holiday"
+        ],
+        "grammarCompare": "at Christmas（指聖誕節期數日）vs on Christmas Day（特別指 12 月 25 日當天）。",
+        "examVariations": "介系詞改錯：We always send cards to grandparents at New Year's Day. (at -> on)"
+      }
+    },
+    {
+      "id": "q_w14_wr3_u07_15",
+      "book_id": "wr3",
+      "unit_id": "wr3_7",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "choice",
+      "category_tag": "grammar",
+      "difficulty": "★★★☆☆",
+      "trapCodes": [
+        "ENG_TENSE_MISMATCH"
+      ],
+      "triadGroup": {
+        "groupId": "WR3_U07_T4",
+        "tier": "L4-6",
+        "role": "twist"
+      },
+      "question": "Choose the correct sentence using the \"I was wondering why...\" pattern:",
+      "options": [
+        "I was wondering why you went to the nurse's office and left school early.",
+        "I was wondering why you go to the nurse's office and leave school early.",
+        "I was wondering why did you go to the nurse's office yesterday.",
+        "I am wondering why you gone to the nurse's office yesterday."
+      ],
+      "answer": "I was wondering why you went to the nurse's office and left school early.",
+      "explanation": {
+        "point": "間接問句語序與過去式動詞：I was wondering why + 主詞 + 過去式動詞（不可倒裝加 did）。",
+        "examPurpose": "檢驗學生掌握 go→went 與 leave→left 的過去式，並維持間接問句直述語序的能力。",
+        "correctReason": "why 引導名詞子句作為 wondering 受詞，應採「主詞 you + 過去式動詞 went / left」的正常語序。",
+        "note": "I was wondering why you + went / left / fainted / were crying / were taken。",
+        "trap": "容易受直接問句習慣影響，在 why 後誤加助動詞 did 造成倒裝錯誤。",
+        "distractorAnalysis": {
+          "I was wondering why you go to the nurse's office and leave school early.": "動詞 go 與 leave 未依照過去情境轉為過去式 went 與 left。",
+          "I was wondering why did you go to the nurse's office yesterday.": "I was wondering why... 為間接問句，主詞 you 與動詞之間不可插進助動詞 did 倒裝。",
+          "I am wondering why you gone to the nurse's office yesterday.": "gone 是過去分詞，不能單獨在主詞 you 後充當過去式主要動詞。"
+        },
+        "steps": [
+          "① 確認句型結構：I was wondering why + 主詞 you + 動詞（不加 did 倒裝）",
+          "② 檢查動詞過去式：go -> went；leave -> left",
+          "③ 驗證並列一致：and 前後兩個動作同為過去式 went ... and left"
+        ],
+        "insight": "💡 I was wondering why 後面直接接「主詞 you + 過去式動詞」，千萬別寫 why did you！",
+        "visualBlock": {
+          "kind": "slot_box",
+          "title": "📦 「好奇為何缺席」間接問句積木槽",
+          "data": {
+            "slots": [
+              {
+                "role": "起手片語",
+                "text": "I was wondering",
+                "accent": "pri"
+              },
+              {
+                "role": "疑問詞",
+                "text": "why",
+                "accent": "warn"
+              },
+              {
+                "role": "收卡人主詞",
+                "text": "you",
+                "accent": "pri"
+              },
+              {
+                "role": "過去式動詞",
+                "text": "went / left / fainted",
+                "accent": "ok"
+              },
+              {
+                "role": "受詞／時間",
+                "text": "school early.",
+                "accent": "pri"
+              }
+            ]
+          },
+          "caption": "📊 第 2 格與第 3 格中間沒有 did，第 4 格立刻變過去式！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "I wanted to know why",
+          "I asked myself why"
+        ],
+        "grammarCompare": "直接問句 Why did you leave early? vs 間接問句 I was wondering why you left early.",
+        "examVariations": "句型改寫：(be taken to the hospital) -> I was wondering why you were taken to the hospital."
+      }
+    },
+    {
+      "id": "q_w14_wr3_u07_16",
+      "book_id": "wr3",
+      "unit_id": "wr3_7",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "choice",
+      "category_tag": "grammar",
+      "difficulty": "★★★☆☆",
+      "trapCodes": [
+        "ENG_POS_CONFUSION",
+        "ENG_CHINGLISH_LITERAL"
+      ],
+      "triadGroup": {
+        "groupId": "WR3_U07_T4",
+        "tier": "L4-6",
+        "role": "twist"
+      },
+      "question": "Choose the correct adjective to complete the empathy sentence: \"You must be _______ after staying up all night to finish your science report.\"",
+      "options": [
+        "sleepy",
+        "excited",
+        "embarrassed",
+        "bored"
+      ],
+      "answer": "sleepy",
+      "explanation": {
+        "point": "語境推測形容詞：熬夜整晚 (staying up all night) 後合理的身體感受為 sleepy（想睡的）。",
+        "examPurpose": "評量學生將課本「You must be + 形容詞」推測句型精準對應具體生活情境的能力。",
+        "correctReason": "staying up all night（熬夜整晚）會讓人睡眠不足而感到昏昏欲睡，故應選 sleepy。",
+        "note": "sleepy after staying up all night / hurting after hitting your head / excited to travel abroad / sad to transfer to another school / embarrassed to have a stain on your shirt。",
+        "trap": "忽略後半句原因 after staying up all night，隨意填入課文最常見的 bored。",
+        "distractorAnalysis": {
+          "excited": "excited（興奮的）通常搭配令人期待的好事如 to travel abroad，與熬夜後的疲憊不符。",
+          "embarrassed": "embarrassed（尷尬的）適用於如衣服沾到污漬 (have a stain on your shirt) 等出糗情境。",
+          "bored": "bored（無聊的）適用於整天待在家無事可做 (staying at home all day)，而非熬夜之後。"
+        },
+        "visualBlock": {
+          "kind": "compare_table",
+          "title": "⚖️ You must be + 情緒形容詞與原因結構對照表",
+          "data": {
+            "headers": [
+              "情緒形容詞",
+              "連接方式",
+              "課本情境範例"
+            ],
+            "rows": [
+              [
+                "bored",
+                "+ V-ing",
+                "You must be bored staying at home all day."
+              ],
+              [
+                "excited / sad / embarrassed",
+                "+ to + 原形V",
+                "You must be excited to travel abroad."
+              ],
+              [
+                "sleepy / hurting",
+                "+ after + V-ing",
+                "You must be sleepy after staying up all night."
+              ]
+            ]
+          },
+          "caption": "📊 先看後面的介系詞或動作，再挑對應的心情形容詞！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "drowsy",
+          "tired"
+        ],
+        "grammarCompare": "You must be + 形容詞 + to V（即將面對某事：excited to travel）vs after V-ing（經歷某事之後：sleepy after staying up）。",
+        "examVariations": "情境配對：You must be _______ after hitting your head on the door. (正解：hurting)"
+      }
+    },
+    {
+      "id": "q_w14_wr3_u07_17",
+      "book_id": "wr3",
+      "unit_id": "wr3_7",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "choice",
+      "category_tag": "grammar",
+      "difficulty": "★★★☆☆",
+      "trapCodes": [
+        "ENG_POS_CONFUSION",
+        "ENG_TENSE_MISMATCH"
+      ],
+      "triadGroup": {
+        "groupId": "WR3_U07_T4",
+        "tier": "L4-6",
+        "role": "twist"
+      },
+      "question": "Choose the grammatically correct sentence offering help in a get-well card:",
+      "options": [
+        "If you want, I can bring you your homework after school.",
+        "If you want, I can brought you your homework after school.",
+        "If you wanted, I can bringing you your homework after school.",
+        "If you want, I am can bring you your homework after school."
+      ],
+      "answer": "If you want, I can bring you your homework after school.",
+      "explanation": {
+        "point": "條件句與情態助動詞：If you want, I can + 原形動詞（bring）。",
+        "examPurpose": "考查學生掌握情態助動詞 can 後接原形動詞，且不可與 be 動詞並用的基本文法。",
+        "correctReason": "條件子句表達現在意願用 If you want，主要子句情態助動詞 can 後面必須接原形動詞 bring。",
+        "note": "If you want, I can + bring / play / chat / visit / come by。",
+        "trap": "受到上一段全用過去式的慣性影響，誤把 can 後面的 bring 寫成過去式 brought。",
+        "distractorAnalysis": {
+          "If you want, I can brought you your homework after school.": "情態助動詞 can 後面只能接原形動詞 bring，絕不可接過去式 brought。",
+          "If you wanted, I can bringing you your homework after school.": "時態混亂且 can 後方不可接現在分詞 bringing。",
+          "If you want, I am can bring you your homework after school.": "be 動詞 am 與情態助動詞 can 不可直接連用。"
+        },
+        "visualBlock": {
+          "kind": "slot_box",
+          "title": "📦 If you want, I can + 原形動作積木槽",
+          "data": {
+            "slots": [
+              {
+                "role": "條件從句",
+                "text": "If you want,",
+                "accent": "pri"
+              },
+              {
+                "role": "主詞＋情態助動詞",
+                "text": "I can",
+                "accent": "warn"
+              },
+              {
+                "role": "原形動詞（非 brought）",
+                "text": "bring / play / chat / visit",
+                "accent": "ok"
+              },
+              {
+                "role": "對象與內容",
+                "text": "you your homework.",
+                "accent": "pri"
+              }
+            ]
+          },
+          "caption": "📊 第 2 格的 can 是情態助動詞，第 3 格永遠放原形動詞！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "If you would like, I can",
+          "Let me know if you want me to"
+        ],
+        "grammarCompare": "bring + 人 + 物 (bring you your homework) = bring + 物 + to + 人 (bring your homework to you)。",
+        "examVariations": "詞組填空：If you want, I can _______ you at the hospital. (正解：visit)"
+      }
+    },
+    {
+      "id": "q_w14_wr3_u07_18",
+      "book_id": "wr3",
+      "unit_id": "wr3_7",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "choice",
+      "category_tag": "grammar",
+      "difficulty": "★★★★☆",
+      "trapCodes": [
+        "ENG_UNCOUNTABLE_SVA",
+        "ENG_POS_CONFUSION"
+      ],
+      "triadGroup": {
+        "groupId": "WR3_U07_T4",
+        "tier": "L4-6",
+        "role": "twist"
+      },
+      "question": "Choose the correct words to complete the closing paragraph of a get-well card: \"Everyone in our class _______ you. We all want you _______ back.\"",
+      "options": [
+        "misses / to come",
+        "miss / come",
+        "misses / coming",
+        "miss / to come"
+      ],
+      "answer": "misses / to come",
+      "explanation": {
+        "point": "單數主詞一致與不定詞結構：Everyone 配單數動詞 misses；want + 人 + to + 原形動詞 (to come)。",
+        "examPurpose": "綜合檢測本課最容易在考場雙重扣分的兩大核心語法：Everyone 單數動詞與 want you to。",
+        "correctReason": "不定代名詞 Everyone 永遠作單數使用，故 miss 須加 -es 為 misses；want 後接人當受詞須接不定詞 to come。",
+        "note": "Everyone in our class misses you. / We all want you to come back.",
+        "trap": "看到 class 或前面講我們全班就直覺選複數 miss，並因中式直譯漏掉 want you to 的 to。",
+        "distractorAnalysis": {
+          "miss / come": "犯了雙重錯誤：Everyone 須搭配單數動詞 misses，且 want you 後漏寫不定詞 to。",
+          "misses / coming": "want 不可接 V-ing 作為受詞補語，必須使用不定詞 to come。",
+          "miss / to come": "Everyone 是第三人稱單數主詞，不可搭配原形動詞 miss。"
+        },
+        "steps": [
+          "① 抓主詞 Everyone：Everyone = 單數 ➔ 動詞加 -es 選 misses",
+          "② 查動詞搭配 want + 人：固定公式 want + you + to + 原形動詞",
+          "③ 合併確認：misses / to come"
+        ],
+        "insight": "💡 慰問卡倒數第三句兩大鐵律：Everyone 「misses」you（加 es），We all want you 「to」come back（加 to）！",
+        "visualBlock": {
+          "kind": "slot_box",
+          "title": "📦 慰問卡結尾「想念＋盼望歸隊」雙句積木槽",
+          "data": {
+            "slots": [
+              {
+                "role": "單數不定代名詞",
+                "text": "Everyone in our class",
+                "accent": "warn"
+              },
+              {
+                "role": "單數動詞 (-es)",
+                "text": "misses you.",
+                "accent": "ok"
+              },
+              {
+                "role": "眾人主詞＋動詞",
+                "text": "We all want",
+                "accent": "pri"
+              },
+              {
+                "role": "受詞＋不定詞 to",
+                "text": "you to",
+                "accent": "warn"
+              },
+              {
+                "role": "原形動詞",
+                "text": "come back / feel better.",
+                "accent": "ok"
+              }
+            ]
+          },
+          "caption": "📊 第 2 格一定要有 -es，第 4 格絕對不能漏寫 to！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "Everyone hopes you will return",
+          "We are all waiting for you to"
+        ],
+        "grammarCompare": "We all want you to come back (want + 人 + to V) vs I hope you come back soon (hope + that 子句，不用 hope you to)。",
+        "examVariations": "動詞變化：We all want you _______ healthy again and _______ to school. (正解：to be / return)"
+      }
+    },
+    {
+      "id": "q_w14_wr3_u07_19",
+      "book_id": "wr3",
+      "unit_id": "wr3_7",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "choice",
+      "category_tag": "vocab",
+      "difficulty": "★★★☆☆",
+      "trapCodes": [
+        "ENG_CHINGLISH_LITERAL",
+        "ENG_TENSE_MISMATCH"
+      ],
+      "triadGroup": {
+        "groupId": "WR3_U07_T2",
+        "tier": "L4-6",
+        "role": "twist"
+      },
+      "question": "Choose the best expression to complete the sentence: \"I heard that you _______ during the basketball game and _______, so the coach carried you to the nurse's office.\"",
+      "options": [
+        "were hit by a ball / blacked out",
+        "hit a ball / blacked in",
+        "bumped your knee / had an x-ray",
+        "got a rash / ate rotten food"
+      ],
+      "answer": "were hit by a ball / blacked out",
+      "explanation": {
+        "point": "課本延伸傷病片語：were hit by a ball（被球擊中）與 blacked out（昏倒失去意識）。",
+        "examPurpose": "測驗學生區分被動受傷結構（were hit by）與「昏倒」片語動詞（blacked out）的語境應用。",
+        "correctReason": "教練把學生抱去保健室（carried you）是因為「被球打到」並「昏倒失去意識」，語意與文法完全吻合。",
+        "note": "More Expressions: had a rash, blacked out, were hit by a ball, got a black eye, had an allergic reaction, bumped your knee。",
+        "trap": "容易選到主動語態 hit a ball（打中球），忽略了這裡是「被球打中」。",
+        "distractorAnalysis": {
+          "hit a ball / blacked in": "主動打出球不至於讓人昏倒被抱走，且英語沒有 blacked in 這個片語。",
+          "bumped your knee / had an x-ray": "照 X 光是在醫院進行的檢查，不會先在球場完成後才由教練抱去學校保健室。",
+          "got a rash / ate rotten food": "起疹子與吃壞肚子與籃球比賽過程中的意外毫無因果關聯。"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "struck by a ball / fainted",
+          "knocked unconscious"
+        ],
+        "grammarCompare": "hit a ball (主動打球) vs were hit by a ball (被球打到；hit 過去分詞同形)。",
+        "examVariations": "傷病配對：Because she was hit in the face by a basketball, she _______ a black eye. (正解：got)"
+      }
+    },
+    {
+      "id": "q_w14_wr3_u07_20",
+      "book_id": "wr3",
+      "unit_id": "wr3_7",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "choice",
+      "category_tag": "vocab",
+      "difficulty": "★★★☆☆",
+      "trapCodes": [
+        "ENG_PREP_COLLOCATION",
+        "ENG_CHINGLISH_LITERAL"
+      ],
+      "triadGroup": {
+        "groupId": "WR3_U07_T2",
+        "tier": "L4-6",
+        "role": "twist"
+      },
+      "question": "Choose the most accurate phrase to complete the medical sentence: \"After eating seafood he wasn't used to, Leo had _______ and got a red _______ all over his arms.\"",
+      "options": [
+        "an allergic reaction / rash",
+        "a cast / eye patch",
+        "rotten food / flu",
+        "an eye infection / surgery"
+      ],
+      "answer": "an allergic reaction / rash",
+      "explanation": {
+        "point": "課本補充傷病搭配：have an allergic reaction（產生過敏反應）與 have/get a rash（起紅疹）。",
+        "examPurpose": "評量學生辨析過敏症狀相關詞彙與不定冠詞搭配（an allergic reaction vs a rash）的能力。",
+        "correctReason": "吃海鮮引發的免疫反應稱為 an allergic reaction，皮膚表面出現的紅色斑疹稱為 a red rash。",
+        "note": "an allergic reaction + a rash（兩者皆為課本 More Expressions 高頻片語）。",
+        "trap": "容易把眼部感染 (eye infection) 與皮膚過敏紅疹混用。",
+        "distractorAnalysis": {
+          "a cast / eye patch": "石膏 (cast) 用於骨折腿部、眼罩 (eye patch) 用於眼傷，與吃海鮮手臂起疹無關。",
+          "rotten food / flu": "吃腐壞食物會引起腸胃不適，流感 (flu) 則是病毒傳染，不會單純在手臂出現紅疹。",
+          "an eye infection / surgery": "眼部感染與外科手術皆不符合食用海鮮後手臂出現紅斑的症狀描述。"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "skin allergy / hives",
+          "allergy symptom / redness"
+        ],
+        "grammarCompare": "had an allergic reaction（母音音素開頭用 an）vs got a rash（子音開頭用 a）。",
+        "examVariations": "生活應對：If you have an allergic reaction, you should go to the nurse's office right away."
+      }
+    },
+    {
+      "id": "q_w14_wr3_u07_21",
+      "book_id": "wr3",
+      "unit_id": "wr3_7",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "choice",
+      "category_tag": "vocab",
+      "difficulty": "★★★★☆",
+      "trapCodes": [
+        "ENG_CHINGLISH_LITERAL"
+      ],
+      "triadGroup": {
+        "groupId": "WR3_U07_T3",
+        "tier": "L4-6",
+        "role": "twist"
+      },
+      "question": "According to the Writing Tip on card occasions, which occasion does NOT call for a congratulatory card, but rather a get-well or farewell card with \"best wishes\"?",
+      "options": [
+        "When a close friend is sick in the hospital or going away.",
+        "When your cousin celebrates her graduation from college.",
+        "When your aunt and uncle celebrate their tenth wedding anniversary.",
+        "When your older brother gets a great new job."
+      ],
+      "answer": "When a close friend is sick in the hospital or going away.",
+      "explanation": {
+        "point": "卡片語用功能辨析：birthday / anniversary / graduation / wedding / new job 用祝賀 (congratulate)；sick / going away 用祝福 (best wishes)。",
+        "examPurpose": "考查學生閱讀與分辨不同人生場合該寄送「祝賀卡」還是「慰問／送別祝福卡」的語用常識。",
+        "correctReason": "課本 Writing Tip 明言：祝賀 (congratulate) 用於生日、紀念日、畢業、婚禮或新工作；當有人生病 (sick) 或要遠行 (going away) 時則寄送 best wishes。",
+        "note": "congratulate（喜慶祝賀）vs send your best wishes（生病／遠行祝福）。",
+        "trap": "忽略題目關鍵字「NOT call for a congratulatory card」，誤選了畢業或結婚週年等喜慶場合。",
+        "distractorAnalysis": {
+          "When your cousin celebrates her graduation from college.": "畢業 (graduation) 是喜慶成就場合，課文明確歸類為可用卡片祝賀 (congratulate) 的對象。",
+          "When your aunt and uncle celebrate their tenth wedding anniversary.": "結婚週年紀念日 (anniversary) 屬於快樂紀念場合，適合寫祝賀卡。",
+          "When your older brother gets a great new job.": "找到新工作 (new job) 為值得慶祝的好消息，應寄祝賀卡而非慰問卡。"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "farewell and recovery",
+          "sympathy and support"
+        ],
+        "grammarCompare": "congratulate someone on + 喜慶事件 vs send best wishes when someone is sick or going away。",
+        "examVariations": "情境選答：Which phrase is NOT suitable for a get-well card? -> Congratulations on your wedding!"
+      }
+    },
+    {
+      "id": "q_w14_wr3_u07_22",
+      "book_id": "wr3",
+      "unit_id": "wr3_7",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "choice",
+      "category_tag": "reading",
+      "difficulty": "★★★★★",
+      "trapCodes": [
+        "ENG_TENSE_MISMATCH"
+      ],
+      "triadGroup": {
+        "groupId": "WR3_U07_T5",
+        "tier": "L7-10",
+        "role": "challenge"
+      },
+      "question": "Based on Danny's get-well card to Penny, how did Danny find out what happened to Penny, and what were the two main events he heard about?",
+      "options": [
+        "He heard from Jean that Penny fell down the stairs, broke her leg, and was hospitalized for a few days.",
+        "He saw Penny fall at school and immediately carried her to the nurse's office himself.",
+        "Penny called Danny from the hospital to ask him to bring her math homework.",
+        "He heard from their teacher that Penny caught the flu and had an eye infection."
+      ],
+      "answer": "He heard from Jean that Penny fell down the stairs, broke her leg, and was hospitalized for a few days.",
+      "explanation": {
+        "point": "課文細節擷取與整合：消息來源為 Jean（I heard from Jean that...），事件為從樓梯摔落骨折並住院數日。",
+        "examPurpose": "評量學生精讀 Model Text 並精確整合「消息來源、事故原因與就醫結果」三項細節的能力。",
+        "correctReason": "Danny 在第一段明確寫道：\"Then I heard from Jean that you fell down the stairs and broke your leg. I also heard that you were hospitalized for a few days.\"",
+        "note": "Danny's Card 課文核心脈絡與 Answer the Questions 標準答案來源。",
+        "trap": "混淆 Danny 帶漫畫書 (comic books) 與其他練習句（如帶作業、得流感或去保健室）。",
+        "distractorAnalysis": {
+          "He saw Penny fall at school and immediately carried her to the nurse's office himself.": "Danny 一開始不清楚原因 (I was wondering why)，是後來才從 Jean 口中得知經過，並非親眼目睹。",
+          "Penny called Danny from the hospital to ask him to bring her math homework.": "是 Danny 主動詢問需要什麼並提議帶漫畫書 (comic books)，並非 Penny 打電話要作業。",
+          "He heard from their teacher that Penny caught the flu and had an eye infection.": "消息來源是 Jean 而非老師，且傷病內容是摔斷腿與住院，並非流感或眼睛感染。"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "learned through a classmate",
+          "was informed by Jean"
+        ],
+        "grammarCompare": "hear from + 人 (從某人那裡聽說／收到消息) vs hear about + 事 (聽說某件事)。",
+        "examVariations": "課後簡答題：How did Penny break her leg? -> She fell down the stairs."
+      }
+    },
+    {
+      "id": "q_w14_wr3_u07_23",
+      "book_id": "wr3",
+      "unit_id": "wr3_7",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "choice",
+      "category_tag": "reading",
+      "difficulty": "★★★★★",
+      "trapCodes": [
+        "ENG_CHINGLISH_LITERAL"
+      ],
+      "triadGroup": {
+        "groupId": "WR3_U07_T5",
+        "tier": "L7-10",
+        "role": "challenge"
+      },
+      "question": "In the second body paragraph of Danny's get-well card, why does Danny offer to bring Penny some comic books?",
+      "options": [
+        "Because he guesses Penny must be bored staying at home all day and wants to help.",
+        "Because Penny forgot to hand in her comic book art project to the teacher.",
+        "Because Danny wants Penny to lend him her comic books while she is in the hospital.",
+        "Because the doctor ordered Penny to read comic books to heal her broken leg."
+      ],
+      "answer": "Because he guesses Penny must be bored staying at home all day and wants to help.",
+      "explanation": {
+        "point": "篇章段落邏輯推理：推測處境 (must be bored) ➔ 銜接具體行動幫助 (bring comic books)。",
+        "examPurpose": "測驗學生理解慰問卡第二段「體諒對方處境 → 主動提出協助」之間的深層邏輯連貫性。",
+        "correctReason": "Danny 先寫 \"You must be bored staying at home all day. Do you need anything?\" 接著才提出 \"If you want, I can bring you some comic books.\"，顯示其體貼解悶的心意。",
+        "note": "Organizing 對應關係：Her condition (must be bored) -> My offer (can bring you comic books)。",
+        "trap": "誤以為是要交作業或把方向搞反（變成向 Penny 借書）。",
+        "distractorAnalysis": {
+          "Because Penny forgot to hand in her comic book art project to the teacher.": "課文並未提及任何美術報告，漫畫書是為了替在家休養的 Penny 解悶。",
+          "Because Danny wants Penny to lend him her comic books while she is in the hospital.": "語意完全相反，是 Danny 主動要帶漫畫書給 Penny 看（bring you），不是向她借。",
+          "Because the doctor ordered Penny to read comic books to heal her broken leg.": "醫生不可能開立讀漫畫書來治療腿部骨折的醫囑，該選項不合常理。"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "keep her entertained",
+          "cheer her up at home"
+        ],
+        "grammarCompare": "bring + 人 + 物（從別處帶去給對方）表達貼心主動幫忙。",
+        "examVariations": "結構對應題：In a get-well card organizer, \"can bring you comic books\" belongs to the \"My offer\" slot."
+      }
+    },
+    {
+      "id": "q_w14_wr3_u07_24",
+      "book_id": "wr3",
+      "unit_id": "wr3_7",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "choice",
+      "category_tag": "reading",
+      "difficulty": "★★★★★",
+      "trapCodes": [
+        "ENG_CHINGLISH_LITERAL"
+      ],
+      "triadGroup": {
+        "groupId": "WR3_U07_T5",
+        "tier": "L7-10",
+        "role": "challenge"
+      },
+      "question": "If you organize a standard get-well card following the four-part template (Greeting, Body, Closing, Signature), which sentence belongs in the \"Closing\" slot rather than the \"Body\"?",
+      "options": [
+        "Get well soon!",
+        "I hope your leg doesn't hurt too much.",
+        "We all want you to come back.",
+        "Hi Penny! How are you feeling?"
+      ],
+      "answer": "Get well soon!",
+      "explanation": {
+        "point": "慰問卡四結構辨識：Closing 為獨立於內文最後的簡短祝福語（如 Get well soon! / Take care!）。",
+        "examPurpose": "考查學生精確區分 Greeting、Body（My hopes / Classmates）與 Closing 三個不同寫作欄位的能力。",
+        "correctReason": "在 Organizing 與 Drafting 模板中，Get well soon! 位於整張卡片最末段正文之後，專屬 Closing 祝福語欄位。",
+        "note": "Greeting = Hi Penny! How are you feeling? | Body = I hope... / We all want you to... | Closing = Get well soon! | Signature = Danny。",
+        "trap": "容易把正文第一段的 I hope your leg doesn't hurt too much 或第二段的 We all want you to come back 誤認為 Closing。",
+        "distractorAnalysis": {
+          "I hope your leg doesn't hurt too much.": "這句在 Organizing 表格中屬於 Body（Paragraph 1）的 \"My hopes\" 欄位，並非 Closing。",
+          "We all want you to come back.": "這句在 Organizing 表格中屬於 Body（Paragraph 2）的 \"Friends / Classmates\" 欄位。",
+          "Hi Penny! How are you feeling?": "這句位於卡片最開頭，屬於 Greeting（問候語）欄位。"
+        },
+        "steps": [
+          "① 排除開頭：Hi Penny! How are you feeling? ➔ Greeting",
+          "② 排除內文：I hope... (My hopes) 與 We all want you to... (Classmates) ➔ Body",
+          "③ 鎖定收尾祝福語：Get well soon! ➔ Closing（緊接在 Signature 前面）"
+        ],
+        "insight": "💡 卡片結構別搞混：「I hope...」在 Body 裡面；真正獨立收尾的「Get well soon!」才是 Closing！",
+        "visualBlock": {
+          "kind": "slot_box",
+          "title": "📦 慰問卡四大結構積木槽 (4-Part Card Map)",
+          "data": {
+            "slots": [
+              {
+                "role": "1. Greeting 問候",
+                "text": "Hi [Name]! How are you feeling?",
+                "accent": "pri"
+              },
+              {
+                "role": "2. Body P1 關切",
+                "text": "wondering why + heard that + I hope...",
+                "accent": "warn"
+              },
+              {
+                "role": "3. Body P2 助念",
+                "text": "must be + If you want, I can + want you to...",
+                "accent": "ok"
+              },
+              {
+                "role": "4. Closing 祝福",
+                "text": "Get well soon! / Take care!",
+                "accent": "warn"
+              },
+              {
+                "role": "5. Signature 署名",
+                "text": "[Your Name]",
+                "accent": "pri"
+              }
+            ]
+          },
+          "caption": "📊 寫卡片和批改卡片順序時，先依序對齊這 5 格位置！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "sign-off phrase",
+          "warm farewell wish"
+        ],
+        "grammarCompare": "Closing (簡短結尾祝福：Get well soon! / Best wishes,) vs Signature (親筆署名：Danny / Cindy)。",
+        "examVariations": "模板填空：In the card organizer, \"your leg doesn't hurt too much\" goes into the _______ slot. (正解：My hopes)"
+      }
+    },
+    {
+      "id": "q_w14_wr3_u07_25",
+      "book_id": "wr3",
+      "unit_id": "wr3_7",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "difficulty": "★★★☆☆",
+      "trapCodes": [
+        "ENG_TENSE_MISMATCH"
+      ],
+      "triadGroup": {
+        "groupId": "WR3_U07_T4",
+        "tier": "L4-6",
+        "role": "twist"
+      },
+      "part_title": "Part I. Guided Sentence Writing (傷病關懷句型改寫)",
+      "part_instructions": "Use the prompt in parentheses to write a complete sentence beginning with \"I was wondering why you...\". Remember to change all verbs into the past tense.",
+      "sentence_form": "I was wondering why you + [Past Tense Verb]...",
+      "question": "[Week 14 Handwritten Practice · Pattern 1] Write a complete sentence using the cue: \"(go to the nurse's office / and / faint suddenly)\". Make sure all verbs are in the simple past tense.",
+      "options": [],
+      "answer": "I was wondering why you went to the nurse's office and fainted suddenly.",
+      "self_check": [
+        "1. 是否保留正確的間接問句語序 `I was wondering why you...`（不可多加 `did`）？",
+        "2. `go` 是否改為不規則過去式 `went`？",
+        "3. `faint` 是否改為規則過去式 `fainted`，且 `nurse's` 所有格與句尾句點拼寫完整？"
+      ],
+      "explanation": {
+        "point": "雙動詞過去式轉換：`go` 變為不規則過去式 `went`，`faint` 變為規則過去式 `fainted`。",
+        "examPurpose": "評量學生在手寫改寫題中同步轉換不規則與規則過去式動詞並維持間接問句語序的能力。",
+        "correctReason": "I was wondering why 引導名詞子句，主詞 you 後直接接過去式並列動詞 went to the nurse's office and fainted suddenly。",
+        "note": "go -> went；faint -> fainted；leave -> left；be crying -> were crying；be taken -> were taken。",
+        "trap": "容易忘記把 go 改成 went，或忘記將 and 後方的 faint 同步加上 -ed。",
+        "commonTraps": [
+          "受直接問句影響多加助動詞 did，錯誤寫成 I was wondering why did you go...。",
+          "只改了第一個動詞 went，卻忘記把並列連接詞 and 後面的 faint 改成過去式 fainted。"
+        ],
+        "visualBlock": {
+          "kind": "timeline",
+          "title": "⏳ 間接問句雙過去式時間軸 (went ... and fainted)",
+          "data": {
+            "events": [
+              {
+                "time": "Past Event (昨天發生)",
+                "label": "why you went to the nurse's office and fainted suddenly",
+                "highlight": true
+              },
+              {
+                "time": "Speaker's Thought (先前好奇)",
+                "label": "I was wondering (直述語序，不加 did)",
+                "highlight": false
+              }
+            ],
+            "rule": "I was wondering why you + 過去式動詞；and 連接兩個過去動作須同時轉過去式"
+          },
+          "caption": "📊 看到 and 連接兩個動作，前後都要變過去式：went ... and fainted！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "blacked out suddenly",
+          "visited the school clinic"
+        ],
+        "grammarCompare": "go to the nurse's office (過去式 went) vs be taken to the hospital (過去式 were taken)。",
+        "examVariations": "課本同源提示：(be crying in pain) -> I was wondering why you were crying in pain."
+      }
+    },
+    {
+      "id": "q_w14_wr3_u07_26",
+      "book_id": "wr3",
+      "unit_id": "wr3_7",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "difficulty": "★★★☆☆",
+      "trapCodes": [
+        "ENG_TENSE_MISMATCH",
+        "ENG_ARTICLE_ERROR"
+      ],
+      "triadGroup": {
+        "groupId": "WR3_U07_T1",
+        "tier": "L4-6",
+        "role": "twist"
+      },
+      "part_title": "Part I. Guided Sentence Writing (傷病報告句型改寫)",
+      "part_instructions": "Write a complete sentence beginning with \"I heard that you...\" using the cues provided. Change every verb into the past tense and check articles (a / an).",
+      "sentence_form": "I heard that you + [Past Tense Verb / were] + ... and + [Past Tense Verb]...",
+      "question": "[Week 14 Handwritten Practice · Pattern 2] Write a complete sentence using the cues: \"(be in a car accident / and / get a cast on your leg)\".",
+      "options": [],
+      "answer": "I heard that you were in a car accident and got a cast on your leg.",
+      "self_check": [
+        "1. `be` 動詞搭配主詞 `you` 是否改為過去式 `were`（不可寫 `was` 或 `are`）？",
+        "2. `get` 是否改為不規則過去式 `got`（不可寫 `getted`）？",
+        "3. 冠詞 `a car accident` 與 `a cast on your leg` 拼寫正確且句尾有句號？"
+      ],
+      "explanation": {
+        "point": "過去式 be 動詞與不規則動詞：`be` 配 `you` 改為 `were`，`get` 改為 `got`。",
+        "examPurpose": "檢驗學生於手寫句子中正確搭配 `you were`（非 `you was`）與 `got` 的準確性。",
+        "correctReason": "主詞為 you 時過去式 be 動詞只能用 were；get 的不規則過去式為 got。",
+        "note": "were in a car accident / were hospitalized / got a cast on your leg / got a black eye。",
+        "trap": "容易將 `you be` 錯寫成 `you was` 或漏改 `get` 為 `got`。",
+        "commonTraps": [
+          "主詞動詞不一致：看到只有一個人就誤把 you 的過去式 be 動詞寫成 was。",
+          "誤以為 get 規則加 -ed 而寫出錯誤字形 getted。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "suffered a traffic crash",
+          "had a cast put on"
+        ],
+        "grammarCompare": "you were in a car accident（狀態用 be 動詞 were）vs you had surgery（動作或醫療處置用 had）。",
+        "examVariations": "同組練習：(eat rotten food / and / have surgery) -> I heard that you ate rotten food and had surgery."
+      }
+    },
+    {
+      "id": "q_w14_wr3_u07_27",
+      "book_id": "wr3",
+      "unit_id": "wr3_7",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "difficulty": "★★★☆☆",
+      "trapCodes": [
+        "ENG_TENSE_MISMATCH",
+        "ENG_ARTICLE_ERROR"
+      ],
+      "triadGroup": {
+        "groupId": "WR3_U07_T2",
+        "tier": "L4-6",
+        "role": "twist"
+      },
+      "part_title": "Part I. Guided Sentence Writing (醫療處置句型改寫)",
+      "part_instructions": "Write a complete sentence beginning with \"I also heard that you...\" using the cues provided. Remember to change the verb into the past tense and check \"an\" before vowel sounds.",
+      "sentence_form": "I also heard that you + had + [medical treatment].",
+      "question": "[Week 14 Handwritten Practice · Pattern 3] Write a complete sentence using the cues: \"(have an eye infection / and / have to wear an eye patch)\".",
+      "options": [],
+      "answer": "I also heard that you had an eye infection and had to wear an eye patch.",
+      "self_check": [
+        "1. 兩個 `have` 是否均正確轉為過去式 `had`（`had an eye infection` 與 `had to wear`）？",
+        "2. `had to` 後面的動詞 `wear` 是否維持原形？",
+        "3. `an eye infection` 與 `an eye patch` 兩處不定冠詞均使用 `an`？"
+      ],
+      "explanation": {
+        "point": "雙重過去式與不定詞：`have` 與 `have to` 皆轉為 `had` / `had to`，後接原形動詞 `wear`。",
+        "examPurpose": "評量學生在較長醫療句中正確轉換兩個 `have` 為 `had` 並維持 `an` 冠詞一致性的能力。",
+        "correctReason": "過去式描述生病與醫囑：have an eye infection 轉為 had an eye infection，半助動詞 have to 轉為 had to，後面 wear 保持原形。",
+        "note": "had to + 原形動詞 (had to wear an eye patch)。",
+        "trap": "容易在 `had to` 後面也把 `wear` 改成 `wore`，或漏掉其中一個 `an`。",
+        "commonTraps": [
+          "過度修正時態：將不定詞符號 to 後面的 wear 誤改為過去式 wore (had to wore)。",
+          "冠詞遺漏或錯寫：將 an eye infection 或 an eye patch 誤寫成 a eye infection。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "needed to cover your eye",
+          "suffered from an eye inflammation"
+        ],
+        "grammarCompare": "had to wear（過去必須穿戴，to 後接原形）vs had an x-ray taken（過去去照 X 光）。",
+        "examVariations": "改錯練習：She had to wore an eye patch for five days. (wore -> wear)"
+      }
+    },
+    {
+      "id": "q_w14_wr3_u07_28",
+      "book_id": "wr3",
+      "unit_id": "wr3_7",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "difficulty": "★★★☆☆",
+      "trapCodes": [
+        "ENG_POS_CONFUSION",
+        "ENG_UNCOUNTABLE_SVA"
+      ],
+      "triadGroup": {
+        "groupId": "WR3_U07_T4",
+        "tier": "L4-6",
+        "role": "twist"
+      },
+      "part_title": "Part I. Guided Sentence Writing (主動幫忙與期盼句型合併)",
+      "part_instructions": "Combine the two cues into two smooth get-well card sentences using \"If you want, I can...\" and \"We all want you to...\".",
+      "sentence_form": "If you want, I can + [Base Verb]... We all want you to + [Base Verb]...",
+      "question": "[Week 14 Handwritten Practice · Pattern 4] Combine the cues into two complete card sentences: \"(offer: visit you at the hospital) + (wish: get over your cold and return to school)\".",
+      "options": [],
+      "answer": "If you want, I can visit you at the hospital. We all want you to get over your cold and return to school.",
+      "self_check": [
+        "1. 第一句是否寫成 `If you want, I can visit you at the hospital.`（逗號位置正確，`can` 後接原形）？",
+        "2. 第二句是否寫成 `We all want you to get over...`（沒有漏掉 `to`）？",
+        "3. `get over your cold and return to school` 兩個原形動詞對稱無誤？"
+      ],
+      "explanation": {
+        "point": "協助與期盼雙句組合：`If you want, I can + 原形 V` 與 `We all want you to + 原形 V`。",
+        "examPurpose": "訓練學生在慰問卡第二段將「個人幫忙提議」與「眾人康復期盼」流暢寫成兩句正確句型。",
+        "correctReason": "第一句用條件句提出具體協助（visit you at the hospital），第二句用 want + 受詞 + to V 連接兩個並列的原形片語（get over your cold and return to school）。",
+        "note": "visit you at the hospital（在醫院探望，地點介系詞用 at）。",
+        "trap": "常在 `We all want you` 後漏掉 `to`，或將 `return` 誤寫成 `returning`。",
+        "commonTraps": [
+          "中式直譯漏掉不定詞：寫出 We all want you get over your cold。",
+          "在 visit you 與 the hospital 之間漏寫地點介系詞 at。"
+        ],
+        "steps": [
+          "① 主動幫忙句：If you want, I can + visit you at the hospital.",
+          "② 眾人期盼句：We all want you to + get over your cold and return to school.",
+          "③ 檢查雙動詞原形：get over 與 return 同受不定詞 to 引導，皆維持原形"
+        ],
+        "insight": "💡 只要記住「If you want, I can + 原形」接「We all want you to + 原形」，卡片第二段就穩拿滿分！",
+        "visualBlock": {
+          "kind": "slot_box",
+          "title": "📦 協助＋期盼雙句組裝積木槽",
+          "data": {
+            "slots": [
+              {
+                "role": "條件起手",
+                "text": "If you want,",
+                "accent": "pri"
+              },
+              {
+                "role": "能力＋原形動作",
+                "text": "I can visit you at the hospital.",
+                "accent": "ok"
+              },
+              {
+                "role": "眾人主詞",
+                "text": "We all want",
+                "accent": "pri"
+              },
+              {
+                "role": "受詞＋不定詞",
+                "text": "you to",
+                "accent": "warn"
+              },
+              {
+                "role": "並列原形希望",
+                "text": "get over your cold and return to school.",
+                "accent": "ok"
+              }
+            ]
+          },
+          "caption": "📊 第 4 格的 to 絕不可省，且第 5 格兩個動詞都要維持原形！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "recover from your cold",
+          "come back to class"
+        ],
+        "grammarCompare": "visit you at the hospital (在醫院探病) vs come by your house (去你家順道探望)。",
+        "examVariations": "單句改寫：(feel better / be healthy again) -> We all want you to feel better and be healthy again."
+      }
+    },
+    {
+      "id": "q_w14_wr3_u07_29",
+      "book_id": "wr3",
+      "unit_id": "wr3_7",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "difficulty": "★★★☆☆",
+      "trapCodes": [
+        "ENG_PREP_COLLOCATION",
+        "ENG_SPELLING_PHONICS"
+      ],
+      "triadGroup": {
+        "groupId": "WR3_U07_T3",
+        "tier": "L4-6",
+        "role": "twist"
+      },
+      "part_title": "Part I. Writing Tip Application (賀卡節日場合與介系詞書寫)",
+      "part_instructions": "Combine the prompt words into one complete, grammatically accurate sentence about sending greeting cards on different holidays and occasions. Check prepositions (at vs. on) carefully.",
+      "sentence_form": "You can congratulate someone's [occasion], or send a card at Christmas, on [Holiday Day], and on [Holiday Day].",
+      "question": "[Week 14 Handwritten Practice · Holiday Prepositions] Write a complete sentence combining these cues: \"(You can / send cards / for / birthday / anniversary / graduation / and / send a card / Christmas / Valentine's Day / New Year's Day)\".",
+      "options": [],
+      "answer": "You can send cards for a birthday, an anniversary, or a graduation, and send a card at Christmas, on Valentine's Day, or on New Year's Day.",
+      "self_check": [
+        "1. `Christmas` 前方是否正確使用介系詞 `at`（`at Christmas`）？",
+        "2. `Valentine's Day` 與 `New Year's Day` 前方是否均使用 `on` 與大寫專有名詞及所有格撇號 `'s`？",
+        "3. `birthday / anniversary / graduation` 拼寫無誤，冠詞 `a / an` 使用正確？"
+      ],
+      "explanation": {
+        "point": "賀卡場合名詞與節日介系詞總合應用：`at Christmas` 對比 `on Valentine's Day` / `on New Year's Day`。",
+        "examPurpose": "測驗學生在完整句寫作中同時統整多種祝賀場合拼寫與 `at / on` 節日介系詞的能力。",
+        "correctReason": "anniversary 母音起首用 an；節慶期間無 Day 的 Christmas 搭配 at；含有 Day 的節日 Valentine's Day 與 New Year's Day 搭配 on，且專有名詞首字母大寫。",
+        "note": "at Christmas / on Valentine's Day / on Mother's Day / on New Year's Day。",
+        "trap": "容易把三個節日通通寫成 on，或漏寫 Valentine's 與 New Year's 的撇號 `'s`。",
+        "commonTraps": [
+          "介系詞混用：誤寫成 on Christmas 與 at New Year's Day。",
+          "專有名詞大小寫與撇號遺漏：漏掉 Valentine's Day 或 New Year's Day 中的大寫或 `'s`。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "send warm wishes on holidays",
+          "write greeting cards for celebrations"
+        ],
+        "grammarCompare": "congratulate someone's anniversary (直接受詞) vs send a card for an anniversary (介系詞 for)。",
+        "examVariations": "克漏字改錯：We send cards on Christmas and at Mother's Day. (on -> at; at -> on)"
+      }
+    },
+    {
+      "id": "q_w14_wr3_u07_30",
+      "book_id": "wr3",
+      "unit_id": "wr3_7",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "difficulty": "★★★★☆",
+      "trapCodes": [
+        "ENG_TENSE_MISMATCH",
+        "ENG_POS_CONFUSION",
+        "ENG_UNCOUNTABLE_SVA"
+      ],
+      "triadGroup": {
+        "groupId": "WR3_U07_T6",
+        "tier": "L4-6",
+        "role": "twist"
+      },
+      "part_title": "Part II. Outline to Complete Get-Well Card Writing (提綱轉寫完整慰問卡實戰)",
+      "part_instructions": "Use the Organizing Outline below to write a complete 4-part Get-Well Card (Greeting, Body Paragraph 1, Body Paragraph 2, Closing, and Signature). Convert all base-form verbs in the Outline into accurate past-tense forms where needed.",
+      "sentence_form": "Greeting: Hi [Name]! How are you feeling? | Body P1: I was wondering why... Then I heard from... that you... I also heard that you... How awful! I hope... | Body P2: You must be... Do you need anything? If you want, I can... Everyone in our class misses you. We all want you to... | Closing: [Wish]! | Signature: [Sender]",
+      "question": "[Week 14 Outline-to-Card Writing #1 · Penny's Get-Well Card]\nUse the Organizing Outline below to write a complete Get-Well Card with all four parts (Greeting, Body, Closing, Signature). Remember to convert base verbs into past tense!\n\n【Get-Well Card Outline】\n• Greeting (To whom?): Penny\n• Body — What happened to Penny (base cues): miss school this past week / hear from Jean / fall down the stairs / break your leg / be hospitalized for a few days\n• Body — My hopes: your leg doesn't hurt too much\n• Body — Her condition: be bored staying at home all day\n• Body — My offer: bring you some comic books\n• Body — Friends / Classmates: everyone in our class miss you / want you come back\n• Closing & Signature: Get well soon! / Danny",
+      "options": [],
+      "answer": "Hi Penny! How are you feeling?\nI was wondering why you missed school this past week. Then I heard from Jean that you fell down the stairs and broke your leg. I also heard that you were hospitalized for a few days. How awful! I hope your leg doesn't hurt too much.\nYou must be bored staying at home all day. Do you need anything? If you want, I can bring you some comic books. Everyone in our class misses you. We all want you to come back.\nGet well soon!\nDanny",
+      "self_check": [
+        "1. 四大結構檢查：是否完整寫出 Greeting、兩段 Body、Closing（Get well soon!）與 Signature（Danny）？",
+        "2. 過去式轉換檢查：`missed`、`heard`、`fell`、`broke`、`were hospitalized` 是否全數轉成過去式？",
+        "3. 核心句型檢查：是否寫對 `doesn't hurt`、`must be bored staying`、`If you want, I can bring...`、`Everyone... misses you` 與 `want you to come back`？"
+      ],
+      "explanation": {
+        "point": "標準提綱轉寫完整慰問卡（佩妮篇）：落實四大結構與過去式、推測形容詞、協助與期盼句型。",
+        "examPurpose": "對標寫作考卷完整卡片寫作考法，檢驗學生將原形提綱轉為地道兩段式慰問卡的能力。",
+        "correctReason": "開頭 Greeting 問候 Penny 感受；第一段將提綱原形動詞全轉為過去式（missed / heard / fell / broke / were）並接現在式希望（doesn't hurt）；第二段用 must be bored、If you want, I can、misses 與 want you to 收束；最後加上 Closing 與 Signature。",
+        "note": "Outline 寫作第一步先把所有「過去發生事件」動詞圈起來轉過去式！",
+        "trap": "實戰最容易把提綱裡的 fall / break / miss 直接原形抄進句子，或漏寫 want you to 的 to。",
+        "commonTraps": [
+          "直接照抄提綱原形動詞：寫出 you fall down the stairs and break your leg。",
+          "忽略不定詞與單數一致：漏寫 Everyone misses 的 -es，或把 want you to come back 漏寫 to。"
+        ],
+        "steps": [
+          "① Greeting：寫出 Hi Penny! How are you feeling?",
+          "② Body 第 1 段（全過去式轉述＋現在希望）：missed / heard from Jean / fell down / broke / were hospitalized ➔ I hope your leg doesn't hurt too much.",
+          "③ Body 第 2 段（推測＋幫忙＋想念）：You must be bored staying... Do you need anything? If you want, I can... Everyone... misses you. We all want you to come back.",
+          "④ Closing & Signature：Get well soon! / Danny"
+        ],
+        "insight": "💡 Outline 給你的都是原形提示字，寫進卡片第一段時「事件動詞通通變過去式」！",
+        "visualBlock": {
+          "kind": "timeline",
+          "title": "⏳ 慰問卡「過去事故 ➔ 當下關懷與未來康復」時態時間軸",
+          "data": {
+            "events": [
+              {
+                "time": "Past (上週事故與住院)",
+                "label": "missed / heard / fell / broke / were hospitalized",
+                "highlight": true
+              },
+              {
+                "time": "Now (現在猜測與心情)",
+                "label": "I hope... doesn't hurt / You must be bored / Everyone misses you",
+                "highlight": true
+              },
+              {
+                "time": "Near Future (幫忙與歸隊)",
+                "label": "If you want, I can bring... / We all want you to come back",
+                "highlight": false
+              }
+            ],
+            "rule": "第一段轉述意外與就醫用過去式；表達希望、現在無聊心情與同學想念用現在式；主動幫忙與期望用原形動詞"
+          },
+          "caption": "📊 一張卡片三種時間感：先過去（受傷）➔ 再現在（關懷）➔ 再願望（康復）！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "card outline expansion",
+          "get-well letter composition"
+        ],
+        "grammarCompare": "第一段敘事過去式 (broke / fell / were hospitalized) vs 第二段當下感同身受 (must be bored / misses)。",
+        "examVariations": "換角寫作：若對象改為 Chris 或 Sam，務必將 Greeting 與 Signature 同步替換，切忌照抄 Penny / Danny。"
+      }
+    },
+    {
+      "id": "q_w14_wr3_u07_31",
+      "book_id": "wr3",
+      "unit_id": "wr3_7",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "difficulty": "★★★★☆",
+      "trapCodes": [
+        "ENG_TENSE_MISMATCH",
+        "ENG_ARTICLE_ERROR",
+        "ENG_CHINGLISH_LITERAL"
+      ],
+      "triadGroup": {
+        "groupId": "WR3_U07_T6",
+        "tier": "L4-6",
+        "role": "twist"
+      },
+      "part_title": "Part II. Outline to Complete Get-Well Card Writing (提綱轉寫完整慰問卡實戰)",
+      "part_instructions": "Use the variant Organizing Outline below to write Cindy's complete Get-Well Card to Chris (including Greeting, Body Paragraph 1, Body Paragraph 2, Closing, and Signature). Watch out for past-tense verbs, articles (an allergic reaction / a rash), and accurate sender/receiver names!",
+      "sentence_form": "Greeting: Hi Chris! ... | Body P1: I was wondering... Then I heard from... that you... I also heard that you... | Body P2: You must be... If you want, I can... Everyone... We all want you to... | Closing & Signature",
+      "question": "[Week 14 Outline-to-Card Writing #2 · Cindy's Get-Well Card to Chris]\nUse the variant Organizing Outline below to write a complete 4-part Get-Well Card from Cindy to Chris. Convert all base verbs into past tense and check articles and pronouns carefully.\n\n【Variant Get-Well Card Outline】\n• Greeting (To whom?): Chris\n• Body — What happened to Chris: go to the nurse's office and leave school early yesterday / hear from our teacher / have an allergic reaction after lunch / have a rash on your arms\n• Body — My hopes: you feel better soon\n• Body — His condition: be uncomfortable resting at home\n• Body — My offer: bring you your homework after school\n• Body — Friends / Classmates: everyone in our class miss you / want you get well soon\n• Closing & Signature: Take care! / Cindy",
+      "options": [],
+      "answer": "Hi Chris! How are you feeling?\nI was wondering why you went to the nurse's office and left school early yesterday. Then I heard from our teacher that you had an allergic reaction after lunch. I also heard that you had a rash on your arms. How awful! I hope you feel better soon.\nYou must be uncomfortable resting at home. Do you need anything? If you want, I can bring you your homework after school. Everyone in our class misses you. We all want you to get well soon.\nTake care!\nCindy",
+      "self_check": [
+        "1. 人名防呆檢查：開頭收卡人寫 `Chris`，結尾署名寫 `Cindy`（沒有誤背課文寫成 Penny / Danny）？",
+        "2. 過去式與冠詞檢查：`went`、`left`、`had an allergic reaction`（用 `an`）、`had a rash`（用 `a`）是否全對？",
+        "3. 結構與語法檢查：`You must be uncomfortable resting`、`If you want, I can bring you your homework`、`Everyone... misses you` 與 `want you to get well soon` 完整無誤？"
+      ],
+      "explanation": {
+        "point": "變式提綱慰問卡（Cindy 寫給 Chris）：整合保健室／過敏紅疹情境與防模板誤抄人名檢核。",
+        "examPurpose": "測驗學生脫離課本 Danny/Penny 原題人名後，獨立套用四段結構與過去式語法完成全新慰問卡的能力。",
+        "correctReason": "正確將去保健室與早退轉為 went / left；將過敏與起疹轉為 had an allergic reaction（母音開頭用 an）與 had a rash；主動提議帶作業（bring you your homework），並用 Chris 與 Cindy 首尾呼應。",
+        "note": "an allergic reaction (用 an) vs a rash (用 a)；go -> went；leave -> left。",
+        "trap": "考場最高頻扣分陷阱：寫到一半習慣性背出 Penny / Danny、把 leave 誤寫成 leaved，或漏掉 allergic 前面的 an。",
+        "commonTraps": [
+          "背誦模板慣性誤抄：開頭寫 Hi Chris，結尾卻習慣性簽上 Danny 或內文寫成 broke your leg。",
+          "不規則過去式與冠詞失誤：將 leave 寫成 leaved、將 go 寫成 goed，或寫成 a allergic reaction。"
+        ],
+        "steps": [
+          "① 鎖定收寄件人：收卡人 Chris（Greeting）、寄卡人 Cindy（Signature）",
+          "② 轉過去式＋檢核冠詞：went / left / had an allergic reaction / had a rash",
+          "③ 組裝關懷與協助：You must be uncomfortable resting at home. / If you want, I can bring you your homework after school.",
+          "④ 結尾一致：Everyone... misses you. We all want you to get well soon. Take care! Cindy"
+        ],
+        "insight": "💡 換題寫卡片最怕「頭寫 Chris、尾簽 Danny」！交卷前務必先核對 Greeting 與 Signature 人名！",
+        "visualBlock": {
+          "kind": "compare_table",
+          "title": "⚖️ 變式慰問卡「換人換病不抄錯」紅綠燈檢核表",
+          "data": {
+            "headers": [
+              "常見背模板扣分 ❌",
+              "本題正確寫法 ✅",
+              "檢查項目"
+            ],
+            "rows": [
+              [
+                "Hi Penny! ... / Danny",
+                "Hi Chris! ... / Cindy",
+                "收卡人與寄卡人名字須依 Outline 替換"
+              ],
+              [
+                "you leaved school early",
+                "you left school early",
+                "leave 為不規則動詞，過去式為 left"
+              ],
+              [
+                "a allergic reaction",
+                "an allergic reaction",
+                "allergic 母音開頭必須搭配 an"
+              ],
+              [
+                "want you get well soon",
+                "want you to get well soon",
+                "want + 人 + to + 原形動詞，不可漏 to"
+              ]
+            ]
+          },
+          "caption": "📊 寫完 Cindy 給 Chris 的卡片，用這 4 行做最後確認！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "developed skin bumps",
+          "left campus early"
+        ],
+        "grammarCompare": "bring you your homework (帶作業給你) vs bring you comic books (帶漫畫書給你)。",
+        "examVariations": "如果提綱將對象改為 Sam 並給予 sports injury，同樣依此檢查表逐項代換人名與傷病詞彙。"
+      }
+    },
+    {
+      "id": "q_w14_wr3_u07_32",
+      "book_id": "wr3",
+      "unit_id": "wr3_7",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "difficulty": "★★★★★",
+      "trapCodes": [
+        "ENG_TENSE_MISMATCH",
+        "ENG_ARTICLE_ERROR",
+        "ENG_POS_CONFUSION",
+        "ENG_UNCOUNTABLE_SVA"
+      ],
+      "triadGroup": {
+        "groupId": "WR3_U07_T6",
+        "tier": "L7-10",
+        "role": "challenge"
+      },
+      "part_title": "Part II. Outline to Complete Get-Well Card Writing (提綱轉寫完整慰問卡實戰)",
+      "part_instructions": "Independently write Mia's complete 4-part Get-Well Card to Sam based on the Outline below. Pay special attention to passive past tense (were hit by a ball), irregular verbs (got / had / had to), articles (a black eye / an x-ray / an eye patch), and infinitives (want you to).",
+      "sentence_form": "4-Part Get-Well Card: Greeting -> Body P1 (wondering + heard + also heard + hope) -> Body P2 (must be + offer + classmates) -> Closing -> Signature",
+      "question": "[Week 14 Outline-to-Card Writing #3 · Mia's Get-Well Card to Sam]\nIndependently write a full 4-part Get-Well Card from Mia to Sam using every detail in the Outline below:\n\n【Advanced Get-Well Card Outline】\n• Greeting (To whom?): Sam\n• Body — What happened to Sam: miss basketball practice this week / hear from Mike / be hit by a ball / get a black eye / have an x-ray taken / have to wear an eye patch\n• Body — My hopes: your face doesn't hurt too much\n• Body — His condition: be hurting after hitting your head\n• Body — My offer: chat online with you tonight\n• Body — Friends / Classmates: everyone on the team miss you / want you return to school\n• Closing & Signature: Get well soon! / Mia",
+      "options": [],
+      "answer": "Hi Sam! How are you feeling?\nI was wondering why you missed basketball practice this week. Then I heard from Mike that you were hit by a ball and got a black eye. I also heard that you had an x-ray taken and had to wear an eye patch. How awful! I hope your face doesn't hurt too much.\nYou must be hurting after hitting your head. Do you need anything? If you want, I can chat online with you tonight. Everyone on the team misses you. We all want you to return to school.\nGet well soon!\nMia",
+      "self_check": [
+        "1. 被動與不規則動詞檢查：`were hit by a ball`、`got a black eye`、`had an x-ray taken`、`had to wear` 是否完全寫對？",
+        "2. 三組冠詞檢查：`a black eye`（用 `a`）、`an x-ray`（用 `an`）、`an eye patch`（用 `an`）無一混用？",
+        "3. 難點句型檢查：`Your face doesn't hurt`（不用 isn't hurt）、`You must be hurting after hitting your head`、`Everyone on the team misses you`、`We all want you to return to school` 與 `Sam / Mia` 署名齊全？"
+      ],
+      "explanation": {
+        "point": "高階綜合提綱慰問卡（Mia 寫給 Sam）：融合被動傷病、雙重冠詞辨析與動名詞介系詞片語。",
+        "examPurpose": "評量學生在無句型框架挖空下，獨立統整所有 Unit 7 高難度文法點並產出無瑕完整慰問卡的能力。",
+        "correctReason": "文章依序涵蓋 Greeting (Sam)、Body P1（missed / heard from Mike / were hit by a ball / got a black eye / had an x-ray taken / had to wear an eye patch / doesn't hurt）、Body P2（must be hurting after hitting your head / If you want, I can chat online with you tonight / misses / want you to return to school）、Closing (Get well soon!) 與 Signature (Mia)。",
+        "note": "after + V-ing (after hitting your head，雙寫 t)；wear an eye patch；had an x-ray taken。",
+        "trap": "高階失分陷阱多點齊發：把 were hit 寫成主動 hit、把 an x-ray 寫成 a x-ray、把 hitting 漏雙寫 t 寫成 hiting、或將 hurt 誤寫為 isn't hurt。",
+        "commonTraps": [
+          "被動與介系詞後動名詞錯誤：漏掉 were 而寫成 you hit by a ball，或 after hit 忘記轉成雙寫動名詞 hitting。",
+          "冠詞與所有格混淆：把 an x-ray 寫成 a x-ray、把 an eye patch 寫成 a eye patch，或署名誤寫他人名字。"
+        ],
+        "steps": [
+          "① Greeting：Hi Sam! How are you feeling?",
+          "② Body P1：missed basketball practice -> heard from Mike that you were hit by a ball and got a black eye -> had an x-ray taken and had to wear an eye patch -> I hope your face doesn't hurt too much.",
+          "③ Body P2：You must be hurting after hitting your head. -> If you want, I can chat online with you tonight. -> Everyone on the team misses you. We all want you to return to school.",
+          "④ Closing & Signature：Get well soon! / Mia"
+        ],
+        "insight": "💡 這題一次串起「were hit by（被動）+ an x-ray（發音冠詞）+ after hitting（雙寫動名詞）+ misses / want you to」！",
+        "visualBlock": {
+          "kind": "slot_box",
+          "title": "📦 高階慰問卡「五大必檢文法槽」",
+          "data": {
+            "slots": [
+              {
+                "role": "1. 被動傷勢",
+                "text": "were hit by a ball",
+                "accent": "warn"
+              },
+              {
+                "role": "2. 發音冠詞",
+                "text": "had an x-ray & an eye patch",
+                "accent": "ok"
+              },
+              {
+                "role": "3. 介系詞＋V-ing",
+                "text": "hurting after hitting",
+                "accent": "warn"
+              },
+              {
+                "role": "4. 主詞單數",
+                "text": "Everyone ... misses you",
+                "accent": "ok"
+              },
+              {
+                "role": "5. 不定詞＋署名",
+                "text": "want you to return / Mia",
+                "accent": "pri"
+              }
+            ]
+          },
+          "caption": "📊 寫完這 5 槽逐一核對，就能輕鬆拿下最高難度大綱寫作題！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "got struck by a basketball",
+          "had a medical scan"
+        ],
+        "grammarCompare": "Your face doesn't hurt (動詞 hurt 表示痛) vs You must be hurting (be + 形容詞 hurting 表示正在劇痛)。",
+        "examVariations": "動詞拼寫補充：hit -> hitting（短母音雙寫 t）、slip -> slipped（短母音雙寫 p）。"
+      }
+    },
+    {
+      "id": "q_w14_wr3_u07_33",
+      "book_id": "wr3",
+      "unit_id": "wr3_7",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "difficulty": "★★★★★",
+      "trapCodes": [
+        "ENG_TENSE_MISMATCH",
+        "ENG_ARTICLE_ERROR",
+        "ENG_PREP_COLLOCATION",
+        "ENG_POS_CONFUSION"
+      ],
+      "triadGroup": {
+        "groupId": "WR3_U07_T7",
+        "tier": "L7-10",
+        "role": "challenge"
+      },
+      "part_title": "Part III. Get-Well Card Proofreading — Correct the 12 Errors",
+      "part_instructions": "Correct the 12 errors in the get-well card below. Rewrite the fully corrected card and list each of the 12 corrections clearly (Check irregular past verbs, doubled consonants, articles a/an, bored/boring, want + O + to V, SVA, and holiday prepositions!).",
+      "sentence_form": "Proofreading Checklist: [1] missed | [2] fell | [3] broke | [4] were hospitalized | [5] an eye infection | [6] cut | [7] bored | [8] bring | [9] misses | [10] to come | [11] at Christmas | [12] on Valentine's Day",
+      "question": "[Week 14 · 12-Error Get-Well Card Proofreading #1]\nThe get-well card below contains exactly 12 grammatical and writing errors. Find all 12 errors and write out the fully corrected card:\n\n\"Hi Penny! How are you feeling?\nI was wondering why you miss school this past week. Then I heard from Jean that you falled down the stairs and breaked your leg. I also heard that you was hospitalized for a few days and had a eye infection. I am glad you did not cutted your finger too! How awful! I hope your leg doesn't hurt too much.\nYou must be boring staying at home all day. Do you need anything? If you want, I can brought you some comic books. Everyone in our class miss you. We all want you come back before we send cards on Christmas and at Valentine's Day.\nGet well soon!\nDanny\"",
+      "options": [],
+      "answer": "【Corrected Get-Well Card】\nHi Penny! How are you feeling?\nI was wondering why you missed school this past week. Then I heard from Jean that you fell down the stairs and broke your leg. I also heard that you were hospitalized for a few days and had an eye infection. I am glad you did not cut your finger too! How awful! I hope your leg doesn't hurt too much.\nYou must be bored staying at home all day. Do you need anything? If you want, I can bring you some comic books. Everyone in our class misses you. We all want you to come back before we send cards at Christmas and on Valentine's Day.\nGet well soon!\nDanny\n\n【12 Corrections List】\n(1) miss -> missed (過去一週缺席用過去式)\n(2) falled -> fell (fall 不規則過去式為 fell)\n(3) breaked -> broke (break 不規則過去式為 broke)\n(4) was -> were (you 搭配過去式複數形 be 動詞 were)\n(5) a -> an (eye 母音開頭用 an eye infection)\n(6) cutted -> cut (did not 後接原形且 cut 三態同形)\n(7) boring -> bored (形容人感到無聊用 bored)\n(8) brought -> bring (助動詞 can 後接原形動詞 bring)\n(9) miss -> misses (Everyone 為單數主詞，動詞加 -es)\n(10) come -> to come (want + 受詞 + to + 原形動詞，補上 to)\n(11) on Christmas -> at Christmas (無 Day 的聖誕節期用 at)\n(12) at Valentine's Day -> on Valentine's Day (含 Day 的節日用 on)",
+      "self_check": [
+        "1. 是否找齊全部 12 處錯誤，沒有漏掉第 (4) 處 `was -> were`、第 (6) 處 `cutted -> cut` 與第 (10) 處 `come -> to come`？",
+        "2. 是否修正所有不規則過去式（`missed`, `fell`, `broke`）與助動詞原形（`can bring`）？",
+        "3. 是否精準對調第 (11)–(12) 處的節日介系詞（`at Christmas` 與 `on Valentine's Day`）及第 (5) 處 `an eye infection`？"
+      ],
+      "explanation": {
+        "point": "Week 14 實戰短文改錯（12 錯綜合體檢 #1）：涵蓋 Unit 7 過去式、冠詞、形容詞、主謂一致、不定詞與節日介系詞全部核心考點。",
+        "examPurpose": "完整模擬小六期末／模擬考長篇短文改錯（Proofreading）題型，訓練學生逐字抓漏與分類除錯實力。",
+        "correctReason": "依序修正：過去式（missed / fell / broke / were / cut）、冠詞（an eye infection）、情緒分詞（bored）、助動詞原形（bring）、主詞單數（misses）、不定詞（to come）及節日介系詞（at Christmas / on Valentine's Day），共 12 處無遺漏。",
+        "note": "短文改錯 6 掃描關卡：①過去式 ②be動詞一致 ③a/an ④-ed/-ing形容詞 ⑤want to/can V ⑥節日 at/on。",
+        "trap": "學生在長文中極易漏抓「did not cutted」（雙重錯誤）、「you was hospitalized」以及最後一句對調錯放的「on Christmas / at Valentine's Day」。",
+        "commonTraps": [
+          "在 `Everyone in our class miss you` 漏抓主詞單數一致，或只改了一半沒發現 `want you come back` 漏掉 `to`。",
+          "把節日介系詞 `on Christmas` 與 `at Valentine's Day` 誤以為正確而跳過不改。"
+        ],
+        "steps": [
+          "① 掃描所有過去事件動詞：miss->missed, falled->fell, breaked->broke, was->were, cutted->cut",
+          "② 掃描名詞冠詞與情緒詞：a eye->an eye, boring->bored",
+          "③ 掃描句型公式：can brought->can bring, Everyone miss->misses, want you come->want you to come",
+          "④ 掃描節日介系詞：on Christmas->at Christmas, at Valentine's Day->on Valentine's Day"
+        ],
+        "insight": "💡 改錯不是靠感覺！拿鉛筆按照「動詞時態 ➔ 冠詞 ➔ 句型公式 ➔ 節日介系詞」四關逐行掃描！",
+        "visualBlock": {
+          "kind": "compare_table",
+          "title": "⚖️ 12 錯改錯四大掃描分類表",
+          "data": {
+            "headers": [
+              "四大掃描關卡",
+              "文中陷阱錯字 ❌",
+              "正確訂正 ✅"
+            ],
+            "rows": [
+              [
+                "1. 動詞時態與一致",
+                "miss / falled / breaked / was / cutted",
+                "missed / fell / broke / were / cut"
+              ],
+              [
+                "2. 冠詞與情緒形容詞",
+                "a eye infection / must be boring",
+                "an eye infection / must be bored"
+              ],
+              [
+                "3. 句型公式與 SVA",
+                "can brought / Everyone miss / want you come",
+                "can bring / Everyone misses / want you to come"
+              ],
+              [
+                "4. 節日介系詞",
+                "on Christmas / at Valentine's Day",
+                "at Christmas / on Valentine's Day"
+              ]
+            ]
+          },
+          "caption": "📊 把 12 個錯歸類到這 4 格，檢查時一個也不會漏！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "error identification",
+          "proofreading editing"
+        ],
+        "grammarCompare": "did not + 原形動詞 (did not cut) 與 I hope it doesn't hurt (doesn't 後接原形 hurt)。",
+        "examVariations": "改錯變體：若將本題主角改為 Chris 或 Sam，同樣檢查上述四大掃描關卡與人名一致性。"
+      }
+    },
+    {
+      "id": "q_w14_wr3_u07_34",
+      "book_id": "wr3",
+      "unit_id": "wr3_7",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "difficulty": "★★★★★",
+      "trapCodes": [
+        "ENG_TENSE_MISMATCH",
+        "ENG_ARTICLE_ERROR",
+        "ENG_PREP_COLLOCATION",
+        "ENG_SPELLING_PHONICS"
+      ],
+      "triadGroup": {
+        "groupId": "WR3_U07_T7",
+        "tier": "L7-10",
+        "role": "challenge"
+      },
+      "part_title": "Part III. Get-Well Card Proofreading — Correct the 12 Errors",
+      "part_instructions": "Correct the 12 errors in the card below. Rewrite the fully corrected text and list all 12 corrections clearly (Check doubled past verbs, irregular past verbs, a/an, infinitives after had to / want you to, and holiday prepositions!).",
+      "sentence_form": "Proofreading Checklist: [1] went | [2] left | [3] slipped | [4] hurt | [5] catched | [6] an allergic reaction | [7] an x-ray | [8] wear | [9] excited | [10] to get | [11] on Mother's Day | [12] on New Year's Day",
+      "question": "[Week 14 · 12-Error Get-Well & Holiday Card Proofreading #2]\nThe card below contains exactly 12 grammatical and spelling errors. Find all 12 errors and write out the fully corrected card:\n\n\"Hi Chris! How are you feeling?\nI was wondering why you go to the nurse's office and leaved school early yesterday. Then I heard that you sliped on the ice, hurted your knee, and catched the flu! I also heard that you had a allergic reaction, got a x-ray taken, and had to wore an eye patch. How awful!\nI know you must be exciting to travel abroad next month after you recover. If you want, I can bring you your homework. We all want you get well soon so we can celebrate together at Mother's Day and at New Year's Day.\nTake care!\nCindy\"",
+      "options": [],
+      "answer": "【Corrected Card】\nHi Chris! How are you feeling?\nI was wondering why you went to the nurse's office and left school early yesterday. Then I heard that you slipped on the ice, hurt your knee, and caught the flu! I also heard that you had an allergic reaction, got an x-ray taken, and had to wear an eye patch. How awful!\nI know you must be excited to travel abroad next month after you recover. If you want, I can bring you your homework. We all want you to get well soon so we can celebrate together on Mother's Day and on New Year's Day.\nTake care!\nCindy\n\n【12 Corrections List】\n(1) go -> went (yesterday 過去式)\n(2) leaved -> left (leave 不規則過去式為 left)\n(3) sliped -> slipped (短母音雙寫 p 加 -ed)\n(4) hurted -> hurt (hurt 三態同形)\n(5) catched -> caught (catch 不規則過去式為 caught)\n(6) a allergic -> an allergic (母音開頭用 an)\n(7) a x-ray -> an x-ray (x-ray 發音 /ɛks/ 為母音音素起首，用 an)\n(8) wore -> wear (had to 後面必須接原形動詞 wear)\n(9) exciting -> excited (形容人感到興奮用過去分詞 excited)\n(10) get -> to get (want + 受詞 + to + 原形動詞，補上 to)\n(11) at Mother's Day -> on Mother's Day (含 Day 的特定節日用 on)\n(12) at New Year's Day -> on New Year's Day (含 Day 的特定節日用 on)",
+      "self_check": [
+        "1. 是否修正 `go -> went`、`leaved -> left`、`sliped -> slipped`、`hurted -> hurt` 與 `catched -> caught`？",
+        "2. 是否修正雙冠詞錯誤 `a allergic -> an allergic` 與 `a x-ray -> an x-ray`？",
+        "3. 是否修正 `had to wore -> had to wear`、`must be exciting -> excited`、`want you get -> want you to get` 以及兩處 `at ... Day -> on ... Day`？"
+      ],
+      "explanation": {
+        "point": "Week 14 實戰短文改錯（12 錯進階體檢 #2）：重點鎖定 `slipped` 雙寫、`an x-ray` 語音冠詞、`had to wear` 原形與 `excited / bored` 情緒分詞。",
+        "examPurpose": "深化訓練學生針對第二輪高頻錯點（`x-ray`、`leaved`、`hurted`、`catched`、`had to wear`、`excited`）的實戰校正能力。",
+        "correctReason": "所有過去事實動作轉為正確規則／不規則過去式（went, left, slipped, hurt, caught）；母音音素起首詞組補用 an（an allergic reaction, an x-ray）；had to 後接原形 wear；人感到興奮用 excited；want you 後補 to；兩處含 Day 節日均改用 on。",
+        "note": "x-ray 雖是子音字母開頭，但發音為母音 /ɛ/ 起首，必用 an x-ray！",
+        "trap": "容易忽略 a x-ray 與 must be exciting to travel abroad 這兩處隱蔽錯誤。",
+        "commonTraps": [
+          "字母視覺陷阱：看見 x-ray 以 x 開頭就以為 a x-ray 是對的，忘記它唸 /ˈɛksreɪ/ 要用 an。",
+          "情感分詞混淆：看見 travel abroad 很有趣就以為 exciting 是對的，忘記主詞 you 是人要用 excited。"
+        ],
+        "visualBlock": {
+          "kind": "compare_table",
+          "title": "⚖️ 12 錯進階改錯「三大隱蔽雷區」對照表",
+          "data": {
+            "headers": [
+              "隱蔽錯寫 ❌",
+              "正確寫法 ✅",
+              "考場抓漏秘訣"
+            ],
+            "rows": [
+              [
+                "a x-ray / a allergic",
+                "an x-ray / an allergic",
+                "看「發音」不看拼字：x-ray 唸 /ɛks/ 要用 an"
+              ],
+              [
+                "had to wore / sliped",
+                "had to wear / slipped",
+                "to 後用原形 wear；slip 雙寫 p 變 slipped"
+              ],
+              [
+                "at Mother's Day / at New Year's Day",
+                "on Mother's Day / on New Year's Day",
+                "節日名稱有 Day 就改用介系詞 on"
+              ]
+            ]
+          },
+          "caption": "📊 這三列是 12 錯改錯中最容易漏抓的高分關鍵！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "proofreading mastery",
+          "grammatical precision"
+        ],
+        "grammarCompare": "had to wear（過去必須戴，to 後接原形）vs excited to travel（人感到興奮，用 -ed 形容詞）。",
+        "examVariations": "獨立單句改錯：I was wondering why you leaved school early and hurted your ankle. (leaved -> left; hurted -> hurt)"
+      }
+    },
+    {
+      "id": "q_w14_wr3_u07_35",
+      "book_id": "wr3",
+      "unit_id": "wr3_7",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "difficulty": "★★★★☆",
+      "trapCodes": [
+        "ENG_POS_CONFUSION",
+        "ENG_CHINGLISH_LITERAL"
+      ],
+      "triadGroup": {
+        "groupId": "WR3_U07_T4",
+        "tier": "L4-6",
+        "role": "twist"
+      },
+      "part_title": "Part IV. Paragraph Synthesis (慰問卡第二段整合寫作)",
+      "part_instructions": "Combine the three cues below into a cohesive second body paragraph of a get-well card, using \"You must be...\", \"Do you need anything? If you want, I can...\", and \"Everyone... We all want you to...\".",
+      "sentence_form": "You must be + [adj] + [to V / after V-ing]. Do you need anything? If you want, I can + [V]... Everyone in our class misses you. We all want you to + [V]...",
+      "question": "[Week 14 Handwritten Practice · Body Paragraph 2 Synthesis] Write a smooth 5-sentence Body Paragraph 2 using these cues: \"(condition: sad / transfer to another school) + (offer: play games with you / chat online with you) + (classmates: be healthy again)\".",
+      "options": [],
+      "answer": "You must be sad to transfer to another school. Do you need anything? If you want, I can play games with you or chat online with you. Everyone in our class misses you. We all want you to be healthy again.",
+      "self_check": [
+        "1. 第一句是否寫成 `You must be sad to transfer to another school.`？",
+        "2. 主動協助句是否正確連接 `If you want, I can play games with you or chat online with you.`（兩者皆用原形動詞）？",
+        "3. 結尾兩句是否完整寫出 `Everyone in our class misses you.` 與 `We all want you to be healthy again.`？"
+      ],
+      "explanation": {
+        "point": "第二段語篇統整：`must be sad to` + `If you want, I can... or...` + `Everyone misses you` + `want you to be healthy again`。",
+        "examPurpose": "評量學生把「推測情緒」、「多元協助提議」與「班級期盼」整合成連貫段落的寫作流暢度。",
+        "correctReason": "依序完成情感體諒（sad to transfer）、提出兩種幫忙方式（play games or chat online）、表達同學想念（misses）與期盼（want you to be healthy again），注意 be healthy 的原形 be 不可遺漏。",
+        "note": "We all want you to be healthy again（healthy 是形容詞，不定詞 to 後面必須有連綴動詞 be）。",
+        "trap": "最常寫成 `We all want you to healthy again`，在不定詞 `to` 後面漏掉連綴動詞 `be`！",
+        "commonTraps": [
+          "漏掉連綴動詞 be：受到中文「希望你再次健康」影響，誤寫成 We all want you to healthy again。",
+          "情態助動詞後接動詞不對稱：在 or 後方誤寫成 chatting online。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "stay in touch online",
+          "wish you good health"
+        ],
+        "grammarCompare": "want you to be healthy（healthy 為形容詞，前須有 be）vs want you to feel better（feel 為感官動詞，直接接比較級）。",
+        "examVariations": "單句訓練：(embarrassed / have a stain on your shirt) -> You must be embarrassed to have a stain on your shirt."
+      }
+    },
+    {
+      "id": "q_w14_wr3_u07_36",
+      "book_id": "wr3",
+      "unit_id": "wr3_7",
+      "is_midterm": true,
+      "is_week12": false,
+      "is_week13": false,
+      "is_week14": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "difficulty": "★★★★★",
+      "trapCodes": [
+        "ENG_TENSE_MISMATCH",
+        "ENG_PREP_COLLOCATION",
+        "ENG_POS_CONFUSION"
+      ],
+      "triadGroup": {
+        "groupId": "WR3_U07_T5",
+        "tier": "L7-10",
+        "role": "challenge"
+      },
+      "part_title": "Part IV. Holiday & Recovery Card Extension (節日問候與康復祝福整合)",
+      "part_instructions": "Rewrite and correct the mixed-error mini card below so that all past injury verbs, card-occasion nouns, and holiday prepositions are 100% accurate.",
+      "sentence_form": "Hi [Name]! ... I heard that you [past injury]... You can still enjoy time at Christmas and on New Year's Day. We all want you to...",
+      "question": "[Week 14 Handwritten Challenge · Mini Card Error Fix & Rewrite] Find and fix all 4 errors in this mini card and rewrite the full correct paragraph:\n\"Hi Ben! I heard that you burned your arm and were hit by a ball last week. You must be hurt after hitting your arm, so I made you a card on Christmas. We all want you feel better before we celebrate at New Year's Day!\"",
+      "options": [],
+      "answer": "Hi Ben! I heard that you burned your arm and were hit by a ball last week. You must be hurting after hitting your arm, so I made you a card at Christmas. We all want you to feel better before we celebrate on New Year's Day!",
+      "self_check": [
+        "1. `must be hurt` 是否依照課本句型改為 `must be hurting after hitting your arm`？",
+        "2. `on Christmas` 是否改為 `at Christmas`？",
+        "3. `want you feel better` 是否補上 `to` 成為 `want you to feel better`，且 `at New Year's Day` 改為 `on New Year's Day`？"
+      ],
+      "explanation": {
+        "point": "綜合語法修正：區分 `must be hurting`、節日介系詞 `at Christmas` vs `on New Year's Day` 與 `want you to feel better`。",
+        "examPurpose": "檢驗學生綜合辨識動名詞／進行狀態形容詞 hurting、不定詞 to 與雙節日介系詞的綜合除錯力。",
+        "correctReason": "課本標準句型為 You must be hurting after hitting...；Christmas 無 Day 用 at；want + 人 + to V 補 to；New Year's Day 含 Day 用 on。",
+        "note": "本題包含 4 個高頻期末考陷阱，須同時訂正完成。",
+        "trap": "容易只改了兩個節日介系詞，卻忽略 `must be hurt`（應為 `hurting`）與 `want you feel`（應為 `want you to feel`）。",
+        "commonTraps": [
+          "漏掉 `want you to` 的 `to`：閱讀過快時大腦自動腦補 `to`，導致沒看出 `want you feel better` 少字。",
+          "誤以為 `must be hurt` 可以接 `after hitting`，忽略課本精確搭配為 `must be hurting after hitting`。"
+        ]
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "in pain after hitting",
+          "during the holiday season"
+        ],
+        "grammarCompare": "at Christmas (無 Day) vs on New Year's Day / on Mother's Day / on Valentine's Day (含 Day)。",
+        "examVariations": "填空題：I made a card for you _______ Christmas, and I will visit you _______ New Year's Day. (正解：at / on)"
       }
     }
   ]

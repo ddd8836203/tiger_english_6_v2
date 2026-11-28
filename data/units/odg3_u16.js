@@ -13,6 +13,7 @@ module.exports = {
   "is_midterm": true,
   "is_week12": true,
   "is_week13": true,
+  "is_week14": true,
   "page_images": [
     "六年級上/課本/02_Oxford_Discover_Grammar_3/images/odg3_pdf_p070.png",
     "六年級上/課本/02_Oxford_Discover_Grammar_3/images/odg3_pdf_p071.png",
@@ -3423,6 +3424,288 @@ module.exports = {
         ],
         "grammarCompare": "be good at（擅長某技藝）vs be good for（對健康有益，如 Milk is good for you）vs be good of sb（某人真好，如 good of you to help）。",
         "examVariations": "大考極常將 good at（擅長）、good for（有益）與 good of（人品好）放在同一題組進行介系詞辨析。"
+      }
+    },
+    {
+      "id": "q_w14_odg3_u16_37",
+      "book_id": "gra3",
+      "unit_id": "gra3_16",
+      "is_midterm": true,
+      "is_week12": true,
+      "is_week13": true,
+      "is_week14": true,
+      "type": "choice",
+      "category_tag": "grammar",
+      "question_tag": "跨單元辨析：U16 情緒介系詞 × U17 移動介系詞",
+      "difficulty": "★★★★★",
+      "difficulty_level": 8,
+      "triadGroup": {
+        "groupId": "ODG3_U16_W14_X1",
+        "tier": "L7-10",
+        "role": "challenge"
+      },
+      "trapCode": "ENG_PREP_COLLOCATION",
+      "trapCodes": [
+        "ENG_PREP_COLLOCATION",
+        "ENG_CHINGLISH_LITERAL"
+      ],
+      "question": "During a hurricane, people who are afraid _____ lightning should bring garden furniture _____ the house, because stormy weather is very different from calm days.",
+      "options": [
+        "of / into",
+        "from / through",
+        "about / over",
+        "of / through"
+      ],
+      "answer": "of / into",
+      "explanation": {
+        "point": "跨單元介系詞辨析：U16 靜態恐懼搭配 afraid of × U17 動態方向進入室內 bring ... into",
+        "examPurpose": "測驗學生區分 U16 靜態心理感受介系詞（afraid of / different from）與 U17 動態空間移動介系詞（into / through / over / around）的精準判斷力。",
+        "correctReason": "第一空「害怕閃電」屬於 U16 固定搭配 be afraid of；第二空「把庭院家具搬進屋內」是由戶外進入封閉空間的移動方向，必用 U17 動態介系詞 into。",
+        "note": "句尾 different from（與...不同）也是 U16 常考固定搭配，不要跟 afraid of 搞混。",
+        "trap": "易把 afraid of 誤與 different from 混為 *afraid from，或把「搬進屋內 (into)」誤選成「穿過 (through)」或「覆蓋上方 (over)」。",
+        "distractorAnalysis": {
+          "from / through": "afraid 不能搭配 from（different 才配 from）；且搬家具進屋內是進入室內空間 (into)，不是穿過屋子 (through)。",
+          "about / over": "害怕某物應為 afraid of（worried 才配 about）；over 表示在正上方或覆蓋表面（如 put boards over windows），不符搬進屋內語意。",
+          "of / through": "第一空 afraid of 正確，但第二空 through 指從一端穿越到另一端（如 drive through water），搬入室內空間必用 into。"
+        },
+        "steps": [
+          "① 先判第一空（靜態心理形容詞）：afraid 固定搭配 of（對比：different 搭配 from）",
+          "② 再判第二空（動態移動方向）：把家具從室外移動到屋內「裡面」➔ 選 into",
+          "③ 驗證全句語意：afraid of lightning + bring ... into the house ➔ 正解 of / into"
+        ],
+        "insight": "💡 靜態情緒「害怕」看形容詞配對（afraid OF）；動態「從外到內」看空間路線（bring ... INTO）！",
+        "visualBlock": {
+          "kind": "prep_ladder",
+          "title": "🧭 U16 靜態形容詞介系詞 × U17 動態移動介系詞階梯",
+          "data": {
+            "levels": [
+              {
+                "prep": "afraid of / different from",
+                "scope": "U16 靜態狀態與差異（固定搭配，不表空間移動）",
+                "examples": [
+                  "afraid of lightning",
+                  "different from calm days"
+                ],
+                "highlight": true
+              },
+              {
+                "prep": "into",
+                "scope": "U17 動態移動：由外向內進入封閉空間",
+                "examples": [
+                  "bring furniture into the house",
+                  "go into a building"
+                ],
+                "highlight": true
+              },
+              {
+                "prep": "through",
+                "scope": "U17 動態移動：從一側穿過內部到達另一側",
+                "examples": [
+                  "don't drive through flooding water"
+                ],
+                "highlight": false
+              },
+              {
+                "prep": "over / around",
+                "scope": "U17 動態移動：覆蓋跨過上方 / 繞行周圍",
+                "examples": [
+                  "put boards over windows",
+                  "walk around trees"
+                ],
+                "highlight": false
+              }
+            ]
+          },
+          "caption": "📊 先分清「心理/特質搭配」還是「身體/物體移動路線」，就不會選錯介系詞！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "scared of ... / carry ... inside",
+          "frightened of ... / move ... into"
+        ],
+        "grammarCompare": "afraid of（害怕某事）與 worried about（擔憂某事）介系詞不同；U17 的 into（進入裡面）與 out of（走出外面）則構成空間反義組。",
+        "examVariations": "Week 14 期末衝刺高頻將 U16 固定介系詞與 U17 方向介系詞合併出在單題雙空克漏字中。"
+      }
+    },
+    {
+      "id": "q_w14_odg3_u16_38",
+      "book_id": "gra3",
+      "unit_id": "gra3_16",
+      "is_midterm": true,
+      "is_week12": true,
+      "is_week13": true,
+      "is_week14": true,
+      "type": "choice",
+      "category_tag": "grammar",
+      "question_tag": "跨單元辨析：U16 famous for / good at × U17 否定祈使句",
+      "difficulty": "★★★★★",
+      "difficulty_level": 8,
+      "triadGroup": {
+        "groupId": "ODG3_U16_W14_X2",
+        "tier": "L7-10",
+        "role": "challenge"
+      },
+      "trapCode": "ENG_VERB_OMISSION",
+      "trapCodes": [
+        "ENG_PREP_COLLOCATION",
+        "ENG_POS_CONFUSION",
+        "ENG_VERB_OMISSION"
+      ],
+      "question": "Even in a coastal town famous _____ strong bridges, _____ walk through flooding water—stay inside even if you are good at swimming!",
+      "options": [
+        "for / don't",
+        "about / not",
+        "for / doesn't",
+        "of / don't"
+      ],
+      "answer": "for / don't",
+      "explanation": {
+        "point": "跨單元辨析：U16 名聲搭配 famous for / good at × U17 否定祈使句 Don't + 原形動詞 + through",
+        "examPurpose": "綜合檢核 U16 形容詞介系詞搭配（famous for / good at）與 U17 否定祈使句結構（Don't + 原形動詞，不可用 Not 或 Doesn't）。",
+        "correctReason": "第一空「以堅固橋樑聞名」必用 U16 固定搭配 famous for；第二空為對民眾發出的 U17 安全警告「不要涉水穿過洪水」，否定祈使句一律以 Don't + 原形動詞（walk）開頭。",
+        "note": "句尾 good at swimming 同步複習 U16「擅長某技能用 at，且介系詞後動詞加 -ing」。",
+        "trap": "中文「關於...很有名」常誤選 famous about；中文「不要走」常直譯成 *not walk 或誤套第三人稱單數 *doesn't walk。",
+        "distractorAnalysis": {
+          "about / not": "famous 固定搭配 for，不可受中文干擾寫成 famous about；否定祈使句不可只放 not，必須使用助動詞 don't。",
+          "for / doesn't": "第一空 famous for 正確，但祈使句省略的主詞固定為第二人稱 you，否定形式永遠是 don't，絕不能用 doesn't。",
+          "of / don't": "第二空否定祈使句 don't 正確，但表達「以某特色聞名」必用 famous for，不可誤用 of（full 才配 of）。"
+        },
+        "steps": [
+          "① 看第一空前形容詞 famous：以某事物聞名 ➔ 固定配 for（famous for）",
+          "② 看第二空後方原形動詞 walk through flooding water：這是安全警告祈使句",
+          "③ 否定祈使句唯一寫法 ➔ don't + 原形動詞（絕不寫 not 或 doesn't）"
+        ],
+        "insight": "💡 「以特色聞名」用 famous FOR；「發出禁止指令」一律用 Don't ＋ 原形動詞（沒有 Doesn't 祈使句）！",
+        "visualBlock": {
+          "kind": "compare_table",
+          "title": "⚖️ U16 形容詞搭配 × U17 否定祈使句 易錯對照表",
+          "data": {
+            "headers": [
+              "考點項目",
+              "常見失分錯寫 ❌",
+              "滿分正確寫法 ✅"
+            ],
+            "rows": [
+              [
+                "U16 名聲特色",
+                "famous about / of bridges",
+                "famous for strong bridges"
+              ],
+              [
+                "U16 擅長技能",
+                "good in swim",
+                "good at swimming"
+              ],
+              [
+                "U17 否定祈使句",
+                "Not walk / Doesn't walk through",
+                "Don't walk through flooding water"
+              ]
+            ]
+          },
+          "caption": "📊 先鎖定 famous FOR 與 good AT，再確認否定祈使句永遠用 Don't！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "well-known for / never walk through",
+          "famous for / do not walk through"
+        ],
+        "grammarCompare": "否定祈使句 Don't walk through...（直接命令禁止）vs 動名詞主詞 Walking through flooding water is dangerous（陳述事實，動詞用單數 is）。",
+        "examVariations": "常考於颱風防災海報填空、Don't 與 Doesn't 祈使句辨析及 U16 介系詞綜合選填。"
+      }
+    },
+    {
+      "id": "q_w14_odg3_u16_39",
+      "book_id": "gra3",
+      "unit_id": "gra3_16",
+      "is_midterm": true,
+      "is_week12": true,
+      "is_week13": true,
+      "is_week14": true,
+      "type": "paper_rewrite",
+      "category_tag": "rewrite",
+      "question_tag": "跨單元綜合造句：U16 interested in + V-ing × U17 祈使句與 over / around",
+      "part_title": "Part D: Cross-Unit Writing (U16 Adj + Prep + V-ing × U17 Imperatives & Movement Prepositions)",
+      "part_instructions": "Combine the prompts into one complete safety instruction sentence using U16 [interested + prep + V-ing] and U17 imperatives with [over] and [around].",
+      "word_bank": "interested in   famous for   afraid of   different from   |   into   over   around   through",
+      "sentence_form": "If you are <interested + prep + V-ing> ..., <Imperative V> ... <over> ... and <Imperative V> ... <around> ...",
+      "tense_hint": "Check U16 preposition + gerund (in + V-ing) AND U17 imperative base verbs (no subject 'you' or '-s' before Put/Walk)!",
+      "difficulty": "★★★★★",
+      "difficulty_level": 9,
+      "triadGroup": {
+        "groupId": "ODG3_U16_W14_X3",
+        "tier": "L7-10",
+        "role": "challenge"
+      },
+      "trapCode": "ENG_POS_CONFUSION",
+      "trapCodes": [
+        "ENG_PREP_COLLOCATION",
+        "ENG_POS_CONFUSION",
+        "ENG_CHINGLISH_LITERAL"
+      ],
+      "question": "Combine the prompts into one complete sentence using [interested] + the correct preposition + V-ing, and two U17 imperatives with [over] and [around]: (1) You / interested / stay safe in a hurricane. (2) Put boards / your windows and walk / damaged trees.",
+      "answer": "If you are interested in staying safe in a hurricane, put boards over your windows and walk around damaged trees.",
+      "options": [],
+      "self_check": [
+        "U16 條件子句是否寫成 interested in staying（不可寫成 *interested about stay）",
+        "U17 主要子句是否直接以原形動詞祈使句 put 與 walk 開頭（不可多寫 *you put 或 *puts）",
+        "移動/位置介系詞是否正確使用 over（覆蓋窗戶）與 around（繞過倒塌樹木），且逗號與句號標點完整"
+      ],
+      "explanation": {
+        "point": "跨單元綜合手寫：If you are interested in + V-ing + U17 祈使句（put ... over ... and walk around ...）",
+        "examPurpose": "整合測驗學生在一句中同時掌握 U16「形容詞＋介系詞＋動名詞（interested in staying）」與 U17「祈使句原形動詞＋空間動態介系詞（put ... over / walk around）」的實戰書寫能力。",
+        "correctReason": "條件子句表達興趣必用 interested in，且介系詞 in 後接動詞 stay 須改為動名詞 staying；主要子句為安全指示，使用原形動詞祈使句 put（把木板蓋在窗戶上方用 over）與 walk（繞過受損樹木周圍用 around）。",
+        "note": "若將祈使句改寫為否定警告，亦可延伸為 Don't walk under damaged trees 或 Don't drive through flooding water。",
+        "trap": "高頻雙重扣分：把 interested in stay 寫成原形或誤用 about；在 If 子句後方寫出 *you put 或誤把 around（繞過）寫成 through（穿過危險樹木）。",
+        "commonTraps": [
+          "U16 介系詞與動名詞雙雷（ENG_PREP_COLLOCATION / ENG_POS_CONFUSION）：interested 必配 in（不用 about），且 in 後方動詞 stay 必須加 -ing 變成 staying。",
+          "U17 祈使句與空間方向誤用（ENG_CHINGLISH_LITERAL）：祈使句不可加主詞 you 或三單 -s；覆蓋窗戶用 over，繞開倒樹用 around（不可用 through）。"
+        ],
+        "steps": [
+          "① 寫條件子句：If you are interested in staying safe in a hurricane,（檢查 in + V-ing）",
+          "② 接第一組 U17 祈使句：put boards over your windows（原形動詞 put ＋ 覆蓋上方 over）",
+          "③ 用 and 接第二組 U17 祈使句：and walk around damaged trees.（原形動詞 walk ＋ 繞過周圍 around）"
+        ],
+        "insight": "💡 一句串聯兩個單元：前半段靠「interested IN ＋ stayING」，後半段靠「原形祈使句 put OVER / walk AROUND」！",
+        "visualBlock": {
+          "kind": "compare_table",
+          "title": "⚖️ U16 情緒介系詞＋V-ing × U17 祈使句＋動態介系詞 雙關檢核表",
+          "data": {
+            "headers": [
+              "寫作關卡",
+              "常見扣分錯寫 ❌",
+              "滿分標準寫法 ✅"
+            ],
+            "rows": [
+              [
+                "關卡 1：U16 興趣＋動名詞",
+                "interested about stay safe",
+                "interested in staying safe"
+              ],
+              [
+                "關卡 2：U17 覆蓋防護祈使句",
+                "you putting boards under windows",
+                "put boards over your windows"
+              ],
+              [
+                "關卡 3：U17 避開障礙動態介系詞",
+                "walk through damaged trees",
+                "walk around damaged trees"
+              ]
+            ]
+          },
+          "caption": "📊 寫完對照三道關卡：in + V-ing、原形祈使句、over/around 方向一次拿滿分！"
+        }
+      },
+      "extensionStudy": {
+        "synonyms": [
+          "keen on staying safe ... / cover your windows with boards",
+          "curious about staying safe ... / go around fallen trees"
+        ],
+        "grammarCompare": "U16 的介系詞（interested in / afraid of / good at / famous for / different from）緊接在形容詞後並要求名詞或 V-ing；U17 的動態介系詞（into / through / over / around）緊接在動作動詞後表示移動路線。",
+        "examVariations": "常見於 Week 14 期末綜合造句、安全指示海報改寫及看圖合併句子題。"
       }
     }
   ]

@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Write Right 3｜第 7～8 課背誦與考前重點（A4 正反兩面大字版）</title>
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 7.5mm 10mm;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Segoe UI", "Microsoft JhengHei", "Noto Sans TC", sans-serif;
+      color: #1e293b;
+      background: #e2e8f0;
+      line-height: 1.4;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .toolbar {
+      max-width: 210mm;
+      margin: 12px auto 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 9px 15px;
+      background: #0f172a;
+      color: #f8fafc;
+      border-radius: 8px;
+      font-size: 13.5px;
+    }
+
+    .toolbar button {
+      background: #2563eb;
+      color: #fff;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 13.5px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .toolbar button:hover {
+      background: #1d4ed8;
+    }
+
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 0 auto 20px;
+      background: #ffffff;
+      padding: 7.5mm 10mm;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.14);
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      page-break-after: always;
+      break-after: page;
+    }
+
+    .page:last-of-type {
+      page-break-after: auto;
+      break-after: auto;
+    }
+
+    /* Header */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2.5px solid #1e3a8a;
+      padding-bottom: 4.5px;
+      gap: 8px;
+    }
+
+    .header.u8 {
+      border-bottom-color: #065f46;
+    }
+
+    .header-title {
+      font-size: 17.2px;
+      font-weight: 800;
+      color: #1e3a8a;
+      letter-spacing: 0.1px;
+      white-space: nowrap;
+    }
+
+    .header.u8 .header-title {
+      color: #065f46;
+    }
+
+    .header-sub {
+      font-size: 10.5px;
+      color: #475569;
+      margin-top: 1.5px;
+    }
+
+    .check-strip {
+      display: flex;
+      gap: 9px;
+      font-size: 11px;
+      font-weight: 700;
+      color: #0f172a;
+      background: #f1f5f9;
+      padding: 4.5px 10px;
+      border-radius: 6px;
+      border: 1.5px solid #cbd5e1;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    /* Passage Card */
+    .passage-card {
+      border: 2px solid #cbd5e1;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #fff;
+    }
+
+    .card-header {
+      padding: 5px 11px;
+      font-weight: 800;
+      font-size: 13.5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .u7-header {
+      background: #eff6ff;
+      color: #1e40af;
+      border-bottom: 1.5px solid #bfdbfe;
+    }
+
+    .u8-header {
+      background: #ecfdf5;
+      color: #065f46;
+      border-bottom: 1.5px solid #a7f3d0;
+    }
+
+    .tag {
+      font-size: 10.5px;
+      font-weight: 700;
+      padding: 1.5px 8px;
+      border-radius: 999px;
+      background: #fff;
+      border: 1.5px solid currentColor;
+      white-space: nowrap;
+    }
+
+    .card-body {
+      padding: 7px 12px;
+    }
+
+    .sent-block {
+      margin-bottom: 4.5px;
+      padding-bottom: 3.5px;
+      border-bottom: 1px dashed #e2e8f0;
+    }
+
+    .sent-block:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .en {
+      font-size: 13.6px;
+      font-weight: 600;
+      color: #0f172a;
+      line-height: 1.38;
+    }
+
+    .zh {
+      font-size: 11.6px;
+      color: #475569;
+      line-height: 1.34;
+      margin-top: 1px;
+    }
+
+    .kw {
+      text-decoration: underline;
+      text-decoration-color: #ef4444;
+      text-decoration-thickness: 1.5px;
+      text-underline-offset: 2px;
+      font-weight: 700;
+      color: #991b1b;
+    }
+
+    /* Unit 8 Ingredients & Steps */
+    .ing-box {
+      background: #f8fafc;
+      border: 1.5px dashed #94a3b8;
+      border-radius: 6px;
+      padding: 5.5px 10px;
+      margin-bottom: 6px;
+    }
+
+    .sub-label {
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.4px;
+      color: #065f46;
+      margin-bottom: 3px;
+    }
+
+    .ing-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5px 14px;
+      font-size: 11.8px;
+      line-height: 1.35;
+    }
+
+    .ing-item b {
+      color: #0f172a;
+    }
+
+    .ing-item span {
+      color: #475569;
+    }
+
+    .steps-list {
+      display: flex;
+      flex-direction: column;
+      gap: 3.5px;
+    }
+
+    .step-row {
+      padding-bottom: 3px;
+      border-bottom: 1px dashed #e2e8f0;
+    }
+
+    .step-row:last-child {
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .step-row .en {
+      font-size: 13.4px;
+    }
+
+    .step-row .zh {
+      font-size: 11.5px;
+    }
+
+    /* Focus Section */
+    .focus-section {
+      border: 2px solid #334155;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .focus-banner {
+      background: #1e293b;
+      color: #ffffff;
+      padding: 4.5px 11px;
+      font-size: 12.5px;
+      font-weight: 800;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .focus-banner span:last-child {
+      font-size: 10.5px;
+      font-weight: 500;
+      color: #cbd5e1;
+    }
+
+    .focus-body {
+      padding: 6.5px 11px;
+      display: flex;
+      flex-direction: column;
+      gap: 5.5px;
+    }
+
+    .focus-block-title {
+      font-size: 11.8px;
+      font-weight: 800;
+      color: #1e3a8a;
+      margin-bottom: 2px;
+      border-left: 4px solid #2563eb;
+      padding-left: 6px;
+    }
+
+    .focus-block-title.green {
+      color: #065f46;
+      border-left-color: #10b981;
+    }
+
+    .focus-text {
+      font-size: 11px;
+      line-height: 1.4;
+      color: #1e293b;
+    }
+
+    .verb-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 10.8px;
+    }
+
+    .verb-table th,
+    .verb-table td {
+      border: 1px solid #cbd5e1;
+      padding: 2.5px 6px;
+      text-align: left;
+    }
+
+    .verb-table th {
+      background: #f1f5f9;
+      font-weight: 800;
+      color: #1e293b;
+    }
+
+    .pill {
+      display: inline-block;
+      background: #fef2f2;
+      color: #991b1b;
+      border: 1px solid #fecaca;
+      border-radius: 4px;
+      padding: 0 4.5px;
+      font-weight: 700;
+      font-size: 10.4px;
+    }
+
+    .pill-blue {
+      background: #eff6ff;
+      color: #1e40af;
+      border-color: #bfdbfe;
+    }
+
+    .pill-green {
+      background: #ecfdf5;
+      color: #065f46;
+      border-color: #a7f3d0;
+    }
+
+    .two-col-mini {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .exam-bar {
+      background: #fffbeb;
+      border: 1.5px solid #f59e0b;
+      border-radius: 7px;
+      padding: 5.5px 10px;
+    }
+
+    .exam-bar-title {
+      font-size: 11.6px;
+      font-weight: 800;
+      color: #92400e;
+      margin-bottom: 2px;
+    }
+
+    .exam-bar-text {
+      font-size: 10.9px;
+      line-height: 1.4;
+      color: #1e293b;
+    }
+
+    .footer-note {
+      margin-top: auto;
+      font-size: 9.5px;
+      color: #64748b;
+      display: flex;
+      justify-content: space-between;
+      border-top: 1px solid #e2e8f0;
+      padding-top: 3px;
+    }
+
+    @media print {
+      body {
+        background: #fff;
+      }
+      .toolbar {
+        display: none !important;
+      }
+      .page {
+        width: auto;
+        min-height: auto;
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="toolbar">
+    <div>📄 <b>A4 正反兩面大字版</b>（正面：Unit 7 ／ 反面：Unit 8，雙面列印選「沿長邊翻轉」）</div>
+    <button onclick="window.print()">🖨️ 列印正反兩面（2 頁 A4）</button>
+  </div>
+
+  <!-- ==================== PAGE 1: UNIT 7 ==================== -->
+  <section class="page">
+    <header class="header">
+      <div>
+        <div class="header-title">Write Right 3｜Unit 7：Hope You Feel Better (正面)</div>
+        <div class="header-sub">紅底線＝考試高頻挖空／過去式／改錯關鍵字　｜　課本 p.54–61</div>
+      </div>
+      <div class="check-strip">
+        <span>□ 朗讀 3 遍</span>
+        <span>□ 遮中文背出</span>
+        <span>□ 默寫零錯字</span>
+      </div>
+    </header>
+
+    <article class="passage-card">
+      <div class="card-header u7-header">
+        <span>課文背誦：Danny's Card（丹尼的慰問卡）</span>
+        <span class="tag">Model Text p.55</span>
+      </div>
+      <div class="card-body">
+        <div class="sent-block">
+          <div class="en">Hi Penny! How are you feeling?</div>
+          <div class="zh">嗨，佩妮！你現在感覺怎麼樣？</div>
+        </div>
+
+        <div class="sent-block">
+          <div class="en">
+            <span class="kw">I was wondering why</span> you <span class="kw">missed</span> school this past week.
+          </div>
+          <div class="zh">我一直在想你過去這一週為什麼沒來上學。</div>
+        </div>
+
+        <div class="sent-block">
+          <div class="en">
+            Then <span class="kw">I heard from Jean that</span> you <span class="kw">fell down the stairs</span> and <span class="kw">broke your leg</span>.
+          </div>
+          <div class="zh">後來我從珍那裡聽說你從樓梯摔下來而且摔斷了腿。</div>
+        </div>
+
+        <div class="sent-block">
+          <div class="en">
+            I also heard that you <span class="kw">were hospitalized</span> for a few days. How awful!
+          </div>
+          <div class="zh">我也聽說你住院住了幾天。真糟糕！</div>
+        </div>
+
+        <div class="sent-block">
+          <div class="en">I hope your leg <span class="kw">doesn't hurt</span> too much.</div>
+          <div class="zh">我希望你的腿不會太痛。</div>
+        </div>
+
+        <div class="sent-block">
+          <div class="en">
+            You <span class="kw">must be bored staying</span> at home all day. Do you need anything?
+          </div>
+          <div class="zh">你整天待在家一定很無聊。你需要什麼嗎？</div>
+        </div>
+
+        <div class="sent-block">
+          <div class="en">
+            <span class="kw">If you want, I can</span> bring you some comic books.
+          </div>
+          <div class="zh">如果你想要的話，我可以帶一些漫畫書給你。</div>
+        </div>
+
+        <div class="sent-block">
+          <div class="en">
+            <span class="kw">Everyone</span> in our class <span class="kw">misses</span> you. <span class="kw">We all want you to</span> come back.
+          </div>
+          <div class="zh">我們班上每個人都很想你。我們都希望你趕快回來。</div>
+        </div>
+
+        <div class="sent-block" style="display:flex; justify-content:space-between; align-items:flex-end;">
+          <div>
+            <div class="en">Get well soon!</div>
+            <div class="zh">祝你早日康復！</div>
+          </div>
+          <div style="text-align:right;">
+            <div class="en">Danny</div>
+            <div class="zh">丹尼 敬上</div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <section class="focus-section">
+      <div class="focus-banner">
+        <span>🎯 Unit 7 考試高頻必背重點（課本練習 p.54–61 ＋ 寫作實戰）</span>
+        <span>考題最常考「過去式變化」與「提綱寫慰問卡」</span>
+      </div>
+
+      <div class="focus-body">
+        <div>
+          <div class="focus-block-title">1. 慰問卡 4 大寫作結構 (p.60–61)</div>
+          <div class="focus-text">
+            <b>① Greeting（問候稱謂）</b>：<i>Hi ____, How are you feeling?</i> →
+            <b>② Body（內文兩段）</b>：第 1 段寫「聽聞事故＋希望早日康復」；第 2 段寫「推測對方狀態＋主動幫忙＋班級想念」→
+            <b>③ Closing（祝福語）</b>：<i>Get well soon!</i> →
+            <b>④ Signature（署名）</b>
+          </div>
+        </div>
+
+        <div>
+          <div class="focus-block-title">2. 傷病／事故動詞「原形 → 過去式」必背表 (p.56–57, 60 考題明令改過去式)</div>
+          <table class="verb-table">
+            <thead>
+              <tr>
+                <th>原形 → 過去式</th>
+                <th>傷病片語與中文</th>
+                <th>原形 → 過去式</th>
+                <th>事故／就醫片語與中文</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>break → <b>broke</b></td>
+                <td>broke your leg 摔斷腿</td>
+                <td>fall → <b>fell</b></td>
+                <td>fell down the stairs 跌下樓梯</td>
+              </tr>
+              <tr>
+                <td>catch → <b>caught</b></td>
+                <td>caught the flu 得流感</td>
+                <td>eat → <b>ate</b></td>
+                <td>ate rotten food 吃腐壞食物</td>
+              </tr>
+              <tr>
+                <td>cut / hurt → <b>同形</b></td>
+                <td>cut your finger / hurt your knee</td>
+                <td>be → <b>were / was</b></td>
+                <td>were hospitalized 住院 / in a car accident</td>
+              </tr>
+              <tr>
+                <td>have → <b>had</b></td>
+                <td>had an eye infection / surgery / an x-ray</td>
+                <td>get → <b>got</b></td>
+                <td>got a cast on your leg 打石膏 / a black eye</td>
+              </tr>
+              <tr>
+                <td>sprain / burn / bruise</td>
+                <td>皆規則加 <b>-ed</b>（扭傷/燙傷/瘀青）</td>
+                <td>slip / spill / bump</td>
+                <td><b>slipped</b> on ice / spilled hot water / bumped</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="focus-text" style="margin-top:3px;">
+            <b>p.60 補充詞組：</b>had a rash（起疹子）、blacked out（昏倒）、were hit by a ball（被球打到）、had an allergic reaction（過敏反應）。
+          </div>
+        </div>
+
+        <div>
+          <div class="focus-block-title">3. Unit 7 五大必背句型公式 (p.58–59)</div>
+          <div class="focus-text">
+            ① <span class="pill pill-blue">I was wondering why you + 過去式...</span>（go→<b>went</b> to the nurse's office、leave→<b>left</b> early、faint→<b>fainted</b> suddenly）<br/>
+            ② <span class="pill pill-blue">I (also) heard that you + 過去式...</span>（敘述過去發生的事，動詞必改過去式）<br/>
+            ③ <span class="pill pill-blue">You must be + 形容詞 + V-ing / after V-ing</span>（bored staying / <b>sleepy</b> after staying up / <b>hurting</b> after hitting / <b>excited</b> to travel）<br/>
+            ④ <span class="pill pill-blue">If you want, I can + 原形V</span>（bring you your homework / play games with you / chat online / visit you at the hospital / come by）<br/>
+            ⑤ <span class="pill pill-blue">We all want you to + 原形V</span>（注意 <b>want + 人 + to V</b>；Everyone 當主詞動詞加 -s：Everyone <b>misses</b> you）
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="exam-bar">
+      <div class="exam-bar-title">⚡ 3C Quiz《Write Right 3》考場防扣分提醒（Unit 7 適用）</div>
+      <div class="exam-bar-text">
+        ① <b>提綱（Outline）給的是原形動詞</b>，寫進慰問卡描述「過去受傷／就醫」時，<b>務必全數轉成過去式</b>！<br/>
+        ② 注意冠詞 <b>an</b>（母音開頭：<b>an</b> eye infection、<b>an</b> x-ray taken、<b>an</b> allergic reaction）與 <b>a</b>（<b>a</b> cast、<b>a</b> rash）。<br/>
+        ③ 寫完用手指逐字檢查：<b>有沒有把課本的 Penny / Danny 抄進新題目？</b>有沒有漏寫 <i>want you <b>to</b></i> 的 <b>to</b>？
+      </div>
+    </section>
+
+    <footer class="footer-note">
+      <span>Write Right 3 正反雙面背誦單（第 1 面／共 2 面）</span>
+      <span>翻到背面繼續背 Unit 8：How to Make Spaghetti ➔</span>
+    </footer>
+  </section>
+
+  <!-- ==================== PAGE 2: UNIT 8 ==================== -->
+  <section class="page">
+    <header class="header u8">
+      <div>
+        <div class="header-title">Write Right 3｜Unit 8：How to Make Spaghetti (反面)</div>
+        <div class="header-sub">紅底線＝考試高頻挖空／文法改錯關鍵字　｜　課本 p.62–69（全書共 8 課）</div>
+      </div>
+      <div class="check-strip">
+        <span>□ 朗讀 3 遍</span>
+        <span>□ 遮中文背出</span>
+        <span>□ 默寫零錯字</span>
+      </div>
+    </header>
+
+    <article class="passage-card">
+      <div class="card-header u8-header">
+        <span>課文背誦：How to Make Spaghetti（如何做義大利麵）</span>
+        <span class="tag">Model Text p.63 · serves 4 people（四人份）</span>
+      </div>
+      <div class="card-body">
+        <div class="ing-box">
+          <div class="sub-label">INGREDIENTS 材料（單位詞與名詞單複數必背）</div>
+          <div class="ing-grid">
+            <div class="ing-item"><b>1 large onion</b> <span>1 顆大洋蔥</span></div>
+            <div class="ing-item"><b>2 cloves of garlic</b> <span>2 瓣大蒜</span></div>
+            <div class="ing-item"><b>1/2 kilogram of ground beef</b> <span>半公斤牛絞肉</span></div>
+            <div class="ing-item"><b>600 grams of tomato sauce</b> <span>600 克番茄醬</span></div>
+            <div class="ing-item"><b>1/2 kilogram of pasta noodles</b> <span>半公斤義大利麵條</span></div>
+            <div class="ing-item"><b>1 teaspoon of salt</b> <span>1 茶匙鹽</span></div>
+          </div>
+        </div>
+
+        <div class="sub-label">DIRECTIONS 做法步驟（1～7 步驟與轉折詞順序）</div>
+        <div class="steps-list">
+          <div class="step-row">
+            <div class="en">1. First, <span class="kw">chop</span> the onion and garlic.</div>
+            <div class="zh">1. 首先，把洋蔥和大蒜切碎。</div>
+          </div>
+          <div class="step-row">
+            <div class="en">2. Then, <span class="kw">stir-fry</span> the <span class="kw">chopped</span> onion and garlic <span class="kw">in a frying pan</span>.</div>
+            <div class="zh">2. 接著，在平底鍋裡快炒切碎的洋蔥和大蒜。</div>
+          </div>
+          <div class="step-row">
+            <div class="en">3. Next, put the onion, garlic and ground beef <span class="kw">in a pot</span> with the tomato sauce.</div>
+            <div class="zh">3. 再來，把洋蔥、大蒜和牛絞肉連同番茄醬放進鍋裡。</div>
+          </div>
+          <div class="step-row">
+            <div class="en">4. Stir the sauce and <span class="kw">let it simmer</span>.</div>
+            <div class="zh">4. 攪拌醬汁並讓它小火慢燉。</div>
+          </div>
+          <div class="step-row">
+            <div class="en">5. <span class="kw">While the sauce is simmering</span>, put the pasta noodles in a pot of <span class="kw">boiling water</span>.</div>
+            <div class="zh">5. 當醬汁正在慢燉時，把義大利麵條放進一鍋滾水裡。</div>
+          </div>
+          <div class="step-row">
+            <div class="en">6. <span class="kw">When</span> the noodles <span class="kw">get soft</span>, place them <span class="kw">on a dish</span>.</div>
+            <div class="zh">6. 當麵條變軟時，把它們盛放到盤子上。</div>
+          </div>
+          <div class="step-row">
+            <div class="en">7. Finally, <span class="kw">pour</span> the sauce <span class="kw">on</span> the noodles and serve.</div>
+            <div class="zh">7. 最後，把醬汁淋在麵條上即可上桌。</div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <section class="focus-section">
+      <div class="focus-banner">
+        <span>🎯 Unit 8 考試高頻必背重點（課本練習 p.62–69 ＋ p.67 改錯考題）</span>
+        <span>考題必考「祈使句原形」、「While / When」與「改錯」</span>
+      </div>
+
+      <div class="focus-body">
+        <div class="two-col-mini">
+          <div>
+            <div class="focus-block-title green">1. 料理動詞與食材單字 (p.62, 65, 68)</div>
+            <div class="focus-text">
+              <b>核心料理動詞：</b><b>stir</b> 攪拌、<b>fry</b> 油炸、<b>chop</b> 切碎、<b>boil</b> 水煮、<b>peel</b> 削皮、<b>stir-fry</b> 快炒、<b>pour</b> 倒、<b>slice</b> 切片、<b>spread</b> 塗抹、<b>simmer</b> 小火慢燉、<b>scramble</b> 炒蛋。<br/>
+              <b>p.68 蛋炒飯高頻字：</b><b>heat</b> 加熱、<b>crack in</b> 打入蛋、<b>sprinkle</b> 撒（鹽）、<b>thoroughly</b> 徹底均勻地、<b>tablespoons</b> of oil（大匙油）、<b>cups</b> of rice（杯白飯）。
+            </div>
+          </div>
+          <div>
+            <div class="focus-block-title green">2. 順序轉折詞 Sequence Words (p.68 Tip)</div>
+            <div class="focus-text">
+              <b>開頭：</b><i>First / At first / First of all / To begin with / In the first place / For one thing</i><br/>
+              <b>過程：</b><i>Next / Then / Later on / Afterward</i><br/>
+              <b>結尾：</b><i>Finally</i><br/>
+              <b>寫作口訣：</b>食譜步驟句全用<b>「原形動詞」開頭（祈使句）</b>，絕不加 -s 或 -ed！
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="focus-block-title green">3. 課本 p.66–67「句型合併 ＆ 短文改錯」四大必考陷阱（直接考出來！）</div>
+          <table class="verb-table">
+            <thead>
+              <tr>
+                <th style="width:24%;">考點類型</th>
+                <th style="width:39%;">正確寫法（課本標準句）</th>
+                <th style="width:37%;">❌ 考試常見錯誤陷阱</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="pill">過去分詞當形容詞</span></td>
+                <td>Stir-fry the <b>chopped</b> onion and garlic.</td>
+                <td>❌ the <b>chop</b> onion（切碎「的」要加 -ped）</td>
+              </tr>
+              <tr>
+                <td><span class="pill">介系詞精準搭配</span></td>
+                <td>Put them <b>in</b> a pot. / Place them <b>on</b> a dish.</td>
+                <td>❌ <b>for</b> a pot / <b>in</b> a frying pan 寫錯介系詞</td>
+              </tr>
+              <tr>
+                <td><span class="pill">使役動詞 let</span></td>
+                <td>Stir the sauce and <b>let it simmer</b>.</td>
+                <td>❌ let it <b>simmering</b>（let＋受詞＋<b>原形V</b>）</td>
+              </tr>
+              <tr>
+                <td><span class="pill">時間詞 While vs When</span></td>
+                <td><b>While</b> the sauce <b>is simmering</b>, ... / <b>When</b> the noodles get soft, ...</td>
+                <td>❌ <b>At</b> the noodles get soft / While 漏寫 <b>is V-ing</b></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="exam-bar">
+      <div class="exam-bar-title">🔍 3C Quiz 短文改錯 Proofreading ＆ 考前 5 秒總檢查（適用 Write Right 3 全冊）</div>
+      <div class="exam-bar-text">
+        寫完食譜作文或 10～14 錯短文改錯，用手指逐字掃描以下 <b>7 關</b>：<br/>
+        <b>① 大小寫與標點（句首／專有名詞）→ ② 動詞形式（步驟祈使句用原形；過去事用過去式）→ ③ 名詞單複數 -s（two cloves / noodles）→ ④ 冠詞 a / an / the（a pot / an onion / the sauce）→ ⑤ 介系詞（in / on / to / for）→ ⑥ 代名詞與所有格（them / our 非 us's）→ ⑦ 跨行有沒有重複寫字或同音誤寫</b>
+      </div>
+    </section>
+
+    <footer class="footer-note">
+      <span>Write Right 3 正反雙面背誦單（第 2 面／共 2 面）</span>
+      <span>書末 p.72–79 為對應 U1/3/4/5 之 4 篇手作 Writing Projects 範例</span>
+    </footer>
+  </section>
+</body>
+</html>

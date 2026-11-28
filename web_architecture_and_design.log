@@ -1,10 +1,10 @@
 # 六年級英語特訓網頁 — 詳細設計架構、目標與設計原因 (web_architecture_and_design.log)
 
 ⚡ 0. 當下狀態快照 (TL;DR Current Snapshot)
-- **最後更新**：2026-11-26
-- **架構版本**：Zero-Build Vanilla SPA (`v2.5.0-week13-4d-sprint` — **Phase 12 `SPRINT_WEEKS`、4D 視覺圖解、`passage_dictation` 段落盲聽 ＋ 統一 AI 匯出核心 `ai_export_core.js` 與 `g6_english_logs` v2 補齊**)
-- **前端核心檔案**：`index.html` (`?v=20261126_2`), `style.css`, `app.js`, `ai_export_core.js`, `english_data.js`, `midterm_data.js`, `build_exam_bank.js`, `data/units/*.js`, `data/exams/tea_w12.js`
-- **設計鐵律提醒**：保留雙速 TTS 防抖 cancel、顯式三態自評計分（翻牌與選選項皆不自動計分，僅點擊 `[data-rate]` 寫入）、零鍵盤打字 Mistake Buster、純淨英文例句 TTS 清洗 (`extractCleanEnglishForSpeech`)、聽寫與 `passage_dictation` 翻牌前雙層零洩漏防護、Topbar 與 `@media print` 嚴格鎖定 `--text-scale: 1`、Firebase + LocalStorage 雙向同步。
+- **最後更新**：2026-11-28
+- **架構版本**：Zero-Build Vanilla SPA (`v2.6.0-week14-4d` — **Phase 13 Week 14 四科衝刺、W14/W13/W12 三週膠囊切換 (`eng_sprint_week_v2`) 與 `ODG3_U16×U17` 跨單元辨析 ＋ 既有 `ai_export_core.js` 與 4D 視覺圖解**)
+- **前端核心檔案**：`index.html` (`?v=20261128_p13`), `style.css`, `app.js`, `ai_export_core.js`, `english_data.js`, `midterm_data.js`, `build_exam_bank.js`, `data/units/*.js`, `data/exams/tea_w12.js`
+- **設計鐵律提醒**：保留雙速 TTS 防抖 cancel、顯式三態自評計分（翻牌與選選項皆不自動計分，僅點擊 `[data-rate]` 寫入）、零鍵盤打字 Mistake Buster、純淨英文例句 TTS 清洗 (`extractCleanEnglishForSpeech`)、聽寫（含 6 個 `look` 片語動詞完整 `________` 遮罩）與 `passage_dictation` 翻牌前雙層零洩漏防護、Topbar 與 `@media print` 嚴格鎖定 `--text-scale: 1`、Firebase + LocalStorage 雙向同步。
 
 ---
 
@@ -20,6 +20,7 @@
 - [#SPEC-5] Phase 11 10.2" iPad 橫向響應式排版、雙層字體縮放與 A/B 可切換課文架構：以 `--text-scale`/`--ui-scale` 驅動全內容縮放並隔離 Topbar 與 A4 列印；實作 A 雙欄逐句聯動／B 單欄逐句條列切換、專注閱讀、護眼暖紙底、1150px 文法單欄、2×2 選項與抓錯 CSS 補完。
 - [#SPEC-6] Phase 12 `SPRINT_WEEKS` 週次切換膠囊、D4 英文科視覺圖解 (`visualBlock`) 與 `passage_dictation` 段落逐句盲聽架構：將衝刺橫幅改為資料驅動切換並持久化於 `eng_sprint_week_v1`，實作 4 種視覺圖解渲染器與零洩漏段落盲聽／A4 多行橫線列印。
 - [#SPEC-AI-EXPORT] 統一「匯出給 AI（Gemini Canvas 4D 互動網頁）」與做法 B+ `*_logs` 時間紀錄規格：透過共用核心 `ai_export_core.js` 支援時間區間篩選、逐題勾選、自動分卷/整份切換與雲端 `$key` 按需拉取。
+- [#SPEC-7] Phase 13 Week 14 四科衝刺、三週切換 (`eng_sprint_week_v2`) 與 `gra3_*` 識別對齊架構：`SPRINT_WEEKS` 首位預設 `'w14'` 並支援 `week14_all`（145 題），確立 `Oxford Discover Grammar 3` 全站統一 `book_id: 'gra3'`／`unit_id: 'gra3_17'`，並以 `is_week12/13/14` 三旗標嚴格隔離各週題數。
 
 ---
 
@@ -424,3 +425,17 @@
   - `logsNode`: `'g6_english_logs'`
   - 入口函式：`app.js` 綁定 `#nav-export`，呼叫 `window.AIExportCore.openExportModal(...)` 彈窗模式，匯入 `allQuestionsMap`、`errorBook`、`errorCounts`、`slowCounts`、`slowIds`、本機 `recent_answer_logs` 與舊版 `fullHistory`。
 - **`g6_english_logs` v2 補齊與做法 B+ 能力**：`recordQuestionAttempt` 除保留原有追蹤欄位外，同步補齊做法 B+ `v: 2` 標準欄位（`ts`, `t`, `subj: 'g6_english'`, `id`, `unit`, `cat`, `q`, `opts`, `correct`, `ans`, `res`, `trap`, `concept`），經 `AIExportCore.saveLocalAnswerLog(..., 300)` 與 `pushAnswerLog` 寫入 `/g6_english_logs/{uid}`，供 `openExportModal` 支援時間區間篩選、逐題勾選、自動分卷/整份切換與雲端 `$key` 按需拉取。
+
+---
+
+================================================================================
+### [#SPEC-7] 十五、Phase 13 Week 14 四科衝刺、三週切換與 `gra3_*` 識別對齊架構 (2026-11-28 新增)
+================================================================================
+
+### 15.1 `book_id` / `unit_id` 唯一真實來源與三週隔離 (`is_week12/13/14`)
+- `Oxford Discover Grammar 3` 在全站 `BOOK_META` 與編譯管線中之識別鍵一律為 `book_id: 'gra3'`（Unit 16 = `gra3_16`、Unit 17 = `gra3_17`），不可使用縮寫 `odg3` 以免首頁/課本頁路由失配。
+- `build_exam_bank.js` 之 `MODULAR_UNIT_SPECS` 擴充至 9 單元並透過 `is_week12`、`is_week13`、`is_week14` 三獨立布林旗標分別編譯 `WEEK12_ALL` (177 題)、`WEEK13_ALL` (109 題)、`WEEK14_ALL` (145 題)；`ODG3_U16` 設為三週共用且維持既有 12 單字不變，確保 `WEEK12_ALL` 71 字不變。
+
+### 15.2 三週膠囊切換 (`eng_sprint_week_v2`) 與 `look` 片語動詞防洩漏
+- `GLOBAL_KEYS.sprintWeek` 升版為 `'eng_sprint_week_v2'`（預設 `'w14'`），讓曾保存舊版 `'eng_sprint_week_v1'` 的平板裝置自動對齊最新 **Week 14 (`12/02`)**，同時支援切換 **W13 (`11/25`)** 與 **W12 (`11/18`)** 並連動 `#btn-launch-sprint-print` 一鍵出卷。
+- `OD3_U17` 之 6 個 `look` 片語動詞 (`look after / around / for / out / through / up`) 在 `spelling_listen` 題型之 `question` / `masked_example` / `target_chi` / `target_pos` 全程以完整 `________` 遮罩整組片語（不殘留 `look` 或介系詞），並由 `verify_phase_13.js` 逐題斷言把關；靜態資源全面更新至 `index.html?v=20261128_p13`。

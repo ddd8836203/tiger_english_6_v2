@@ -1,14 +1,15 @@
 # 六年級上學期英語高效特訓系統 — 專案目標與路線圖 (goals_and_roadmap.log)
 
 ⚡ 0. 當下狀態快照 (TL;DR Current Snapshot)
-- **最後更新**：2026-11-22
-- **目前版本狀態**：**Phase 12（Week 13 衝刺週次切換膠囊、4D 英文科視覺圖解積木、RWW6 U6 段落逐句盲聽與 Week 12 實體真卷 Page 25–26 閉環校正）已完成並通過 `verify_phase_1/2/3/12.js`（PASS 191 / FAIL 0）與 1080×680 實機瀏覽器驗收（分支 `feat/w13-4d-sprint`）**
-- **遠端與部署**：GitHub Repo `ddd8836203/tiger_english_6_v2`（Zero-Build 靜態 SPA；當前位於本機 `feat/w13-4d-sprint`，基準 tag `pre-w13-4d-sprint`，待使用者確認後推送）
-- **本週核心考試範圍**：**Week 13 Quiz（11/25 三，*EL-3C）** — Reading with Writing 6 (Unit 6 段落盲聽)、Oxford Discover Grammar 3 (Unit 16 `because` 造句強化)、Write Right 3 (Unit 6 傳記寫作與改錯預測)（共 3 單元、**106 題**；同時可透過首頁膠囊切換回 **Week 12** 174 題 + `tea_w12` 真卷 38/46 抓錯複習）
+- **最後更新**：2026-11-28
+- **目前版本狀態**：**Phase 13（Week 14 12/02 小考四科全範圍衝刺：`OD3 U17` 20 字精準對齊 Spelling Bee + 零洩漏 `look` 片語、`ODG3 U17` 祈使句與 10 動態介系詞、`ODG3 U16` 跨單元辨析升級、`WR3 U7` 慰問卡寫作與改錯，及首頁 W14/W13/W12 三週膠囊切換）已完成並通過 `verify_phase_1/2/3/13.js`（0 Failures）與 `1080×680` 實機瀏覽器驗收（分支 `feat/w14-4d-sprint`）**
+- **遠端與部署**：GitHub Repo `ddd8836203/tiger_english_6_v2`（Zero-Build 靜態 SPA；當前位於本機 `feat/w14-4d-sprint`，基準 tag `pre-w14-4d-sprint`，待使用者確認後合併推送）
+- **本週核心考試範圍**：**Week 14 Quiz（12/02 三，\*EL-3C）** — Oxford Discover 3 (Unit 17 Spelling 20 字, `36` 題)、Oxford Discover Grammar 3 (Unit 17 `34` 題 & Unit 16 `39` 題)、Write Right 3 (Unit 7 `36` 題)（共 4 單元、**145 題**；同時可透過首頁膠囊切換回 **Week 13** `109/110` 題與 **Week 12** `177` 題 + `tea_w12` 真卷複習）
 - **下一步待辦 (Next Actions)**：
   1. `[✅ Phase 1~11]` 完成素材轉正、4-Log、Week 12 五大單元 156 題 4D、視覺文法積木、聽寫零洩漏、10.2" iPad 橫向字體縮放與 A/B 雙模式課文。
-  2. `[✅ Phase 12 (2026-11-22)]` 完成 Week 12 實體真卷（`38/46`）四層數位化與 18 道抓錯入庫；建立 `4D_英文科_出題與詳解規範.md`；新建 `RWW6_U06` 段落逐句盲聽 (`passage_dictation`)；依真卷升級 `ODG3_U16` (`36題`)、`WR3_U06` (`37題`)、`SPACE_CH06` (`37題`)；上線首頁可切換週次膠囊 (`SPRINT_WEEKS`) 與 4 種 D4 視覺圖解渲染器，通過全套自動化與實機檢核。
-  3. `[⏸️ 後續規劃]`（待使用者確認後啟動）補完 `OD3 U13~15`、期中舊單元 4D 升級，以及視需求推送 `feat/w13-4d-sprint` 至遠端。
+  2. `[✅ Phase 12 (2026-11-22)]` 完成 Week 12 實體真卷（`38/46`）四層數位化與 18 道抓錯入庫；建立 `4D_英文科_出題與詳解規範.md`；新建 `RWW6_U06` 段落逐句盲聽 (`passage_dictation`)；上線 `SPRINT_WEEKS` 與 4 種視覺圖解渲染器。
+  3. `[✅ Phase 13 (2026-11-28)]` 完成 Week 14 四科衝刺（`OD3_U17` / `ODG3_U17` / `ODG3_U16` / `WR3_U07`，145 題含 `WEEK14_ALL`、`?v=20261128_p13` 與 W14/W13/W12 三週膠囊切換）。
+  4. `[⏸️ 後續規劃]`（待使用者確認後啟動）補完 `OD3 U13~15`、期中舊單元 4D 升級，以及推送 `feat/w14-4d-sprint` 至遠端。
 
 ---
 
@@ -24,6 +25,7 @@
 - [#GOAL-9] 2026-11-14 Phase 9~10 題庫逐題健檢去洩漏與三層呼吸感題幹重構：完成全庫 2,580 檢驗項與 368 道聽寫雙層零洩漏防護、`RWW6_U06/U08` 行號原文補齊、三層積木式題幹排版與五書完整名稱統一（`verify_phase_1..10.js` 全過）。
 - [#GOAL-10] 2026-11-18 Phase 11 10.2 吋 iPad 橫向易讀排版與字體控制器升級：實作雙層字體縮放（1.0x~1.45x，平板預設 1.15x）、課文 A 雙欄／B 單欄即時切換、專注閱讀模式、護眼暖紙底、1080px 文法單欄寬卡、2×2 測驗選項與抓錯 CSS 修復。
 - [#GOAL-11] 2026-11-22 Phase 12 Week 13 衝刺、4D 英文科視覺圖解與 Week 12 真卷閉環：建立 `4D_英文科_出題與詳解規範.md` 與 `SPRINT_WEEKS` 可切換週次膠囊，上線 `RWW6_U06` 段落逐句盲聽、4 種 D4 視覺圖解積木、Week 12 真卷 (`38/46`) 入庫並依真卷失分校正 `ODG3 U16` / `WR3 U6` / `SPACE Ch6` 模擬考。
+- [#GOAL-12] 2026-11-28 Phase 13 Week 14 (12/02 三) 四科衝刺上線：新增 `OD3_U17`（20 字 100% 唯讀對齊 Spelling Bee `d3_u17` 並零洩漏遮罩 6 個 `look` 片語動詞）、`ODG3_U17`（祈使句＋10 動態介系詞）、`WR3_U07`（補抽 p.60–61 含 8 傷病過去式＋3 慰問卡寫作＋2 改錯），升級 `ODG3_U16` 跨單元辨析至 39 題，並上線 W14/W13/W12 三週切換膠囊（`WEEK14_ALL` 145 題）。
 
 ---
 
@@ -297,3 +299,13 @@
   2. 將首頁衝刺區改為資料驅動 `SPRINT_WEEKS` 週次膠囊切換（預設 **Week 13** `11/25` 三科 106 題，可一鍵切回 **Week 12** `11/18` 五科 174 題＋真卷抓錯回顧入口），並連動 A4 出卷。
   3. 數位化 Week 12 實體真卷 Page 25–26（Rex `38/46`），並把實戰盲點（`because` 子句漏動詞、介系詞誤搭、冠詞濫加 `the Italy / the Mars`、不可數主謂一致與傳記過去式）直接寫回模擬考與 Mistake Buster，同時預判 W13 `WR3 U6` 傳記 12–14 錯改錯與新增 `RWW6 U6` 段落逐句盲聽 (`passage_dictation`)。
 - **驗收結果**：`verify_phase_1/2/3/12.js`（PASS 191 / FAIL 0）及 `1080×680` iPad 橫向實機瀏覽器 Console 0 Error 全數通過。
+
+---
+
+### [#GOAL-12] 26. Phase 13 Week 14 四科衝刺、Spelling Bee 20 字對齊與三週膠囊切換 (2026-11-28 定案並完成)
+- **核心目標**：
+  1. 完整納管 **Week 14 Quiz (12/02 三，\*EL-3C)** 四大考試範圍：**Discover 3 (Unit 17 Spelling)**、**Grammar 3 (Unit 17)**、**Grammar 3 (Unit 16)**、**Write Right 3 (Unit 7)**，讓 `WEEK14_ALL` 成為首頁預設大模考（`145` 題）。
+  2. **跨專案單一真實來源唯讀對齊**：`OD3_U17` 20 個字彙與 `Tiger_spelling Bee_6 年級` (`d3_u17`) 集合 100% 一致，並針對 `look after / around / for / out / through / up` 6 個片語動詞實施完整 `________` 防洩漏遮罩，確保聽寫與紙筆卷絕不外露 `look` 字根。
+  3. **Write Right 3 Unit 7 完整補齊**：從 `Write right 3_05_08.pdf` 補抽 p.60–61 (`wr3_u5_pdf_p23~24.png`)，產出含 8 大傷病過去式、慰問卡結構、3 題完整大綱寫作與 2 題短文改錯的 4D 題庫；並將 `ODG3_U16` 增補 3 題 U16×U17 跨單元介系詞＆祈使句辨析（總計 `39` 題）。
+  4. **三週無縫切換體驗**：升級 `SPRINT_WEEKS` 註冊表為 W14 (`12/02`) → W13 (`11/25`) → W12 (`11/18`)，透過 `eng_sprint_week_v2` 自動預設導向最新 Week 14，同時保留 W13 與 W12 真卷復習一鍵直達。
+- **驗收結果**：`verify_phase_1/2/3/13.js` 全數 `0 Failures`（`1,899` 題渲染 0 錯誤），`1080×680` Chromium 實機 Console `0` Error、`1.30x` 字體零溢位、W14 A4 出卷正常。

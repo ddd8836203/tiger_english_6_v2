@@ -35,7 +35,7 @@
     fullHistory: [],
     currentSubtab: 'reading',      // 'reading' | 'mistake' | 'quiz' | 'braingym'
     ttsSpeed: 1.0,                 // 1.0 | 0.8
-    sprintWeek: 'w13',             // 'w13' | 'w12' (首頁小考衝刺週次切換)
+    sprintWeek: 'w14',             // 'w14' | 'w13' | 'w12' (首頁小考衝刺週次切換)
     fontScale: '1.15',             // '1' | '1.15' | '1.3' | '1.45'
     readingLayout: 'split',        // 'split' (樣式 A 雙欄) | 'focus' (樣式 B 單欄逐句)
     warmPaper: false,              // 護眼暖紙底開關
@@ -98,7 +98,7 @@
     fontScale: 'tiger6_eng_font_scale',
     readingLayout: 'tiger6_eng_reading_layout',
     warmPaper: 'tiger6_eng_warm_paper',
-    sprintWeek: 'eng_sprint_week_v1'
+    sprintWeek: 'eng_sprint_week_v2'
   };
 
 
@@ -858,16 +858,16 @@
       state.readingLayout = (savedLayout === 'focus' || savedLayout === 'split') ? savedLayout : 'split';
       state.warmPaper = localStorage.getItem(GLOBAL_KEYS.warmPaper) === '1';
       const savedWeek = localStorage.getItem(GLOBAL_KEYS.sprintWeek);
-      if (savedWeek === 'w12' || savedWeek === 'w13') {
+      if (savedWeek === 'w12' || savedWeek === 'w13' || savedWeek === 'w14') {
         state.sprintWeek = savedWeek;
       } else {
-        state.sprintWeek = 'w13';
+        state.sprintWeek = 'w14';
       }
     } catch (e) {
       state.fontScale = '1.15';
       state.readingLayout = 'split';
       state.warmPaper = false;
-      state.sprintWeek = 'w13';
+      state.sprintWeek = 'w14';
     }
     applyDisplayPreferences();
   }
@@ -1300,7 +1300,7 @@
       id: 'tea_midterm',
       name: '🏆 岱崙美語 3C Quiz 歷史考券',
       shortName: '岱崙歷史考券',
-      desc: 'Week 2~12 實戰小考 1:1 復原重測、紅黑對照與 Week 12/13 全週次大模考',
+      desc: 'Week 2~12 實戰小考 1:1 復原重測、紅黑對照與 Week 12 / 13 / 14 全週次大模考',
       hue: 45,
       isMidterm: true,
       category: '岱崙週考'
@@ -1309,7 +1309,7 @@
       id: 'gra3',
       name: '📘 Oxford Discover Grammar 3',
       shortName: 'Oxford Discover Grammar 3',
-      desc: '全冊 12 單元：時態變化、倒裝附和句、副詞三級比較、名詞計量、動名詞與飲食事實',
+      desc: '全冊 13 單元：時態變化、倒裝附和句、副詞三級比較、名詞計量、飲食事實與 Unit 17 祈使句＋動態介系詞',
       hue: 245,
       isMidterm: true,
       category: '文法專修'
@@ -1318,7 +1318,7 @@
       id: 'wr3',
       name: '📝 Write Right 3',
       shortName: 'Write Right 3',
-      desc: '全冊 6 單元：出國旅遊、最愛課堂、朋友爭執、社區空間、假設語氣與歷史偉人傳記',
+      desc: '全冊 7 單元：出國旅遊、最愛課堂、朋友爭執、社區空間、假設語氣、歷史偉人傳記與 Unit 7 慰問卡寫作',
       hue: 285,
       isMidterm: true,
       category: '寫作專攻'
@@ -1345,7 +1345,7 @@
       id: 'od3',
       name: '📚 Oxford Discover 3',
       shortName: 'Oxford Discover 3',
-      desc: '核心課本：時間與地球 (Unit 7)、茉莉醫生 (Unit 8)、快樂花園 (Unit 16) 深度閱讀與字彙',
+      desc: '核心課本：時間與地球 (Unit 7)、茉莉醫生 (Unit 8)、快樂花園 (Unit 16) 與麥哲倫航海 (Unit 17) 深度閱讀與拼字',
       hue: 200,
       isMidterm: true,
       category: '課本閱讀'
@@ -1361,12 +1361,29 @@
     }
   };
 
-  // 小考週次衝刺註冊表 (未來新增 W14+ 僅需於此擴充)
+  // 小考週次衝刺註冊表 (未來新增 W15+ 僅需於此擴充)
   const SPRINT_WEEKS = [
     {
+      id: 'w14',
+      shortLabel: '🚨 W14 (12/02)',
+      badgeLabel: '🚨 下週三 12/02 (W14) *EL-3C 小考總衝刺',
+      title: 'Week 14 必考四大範圍',
+      subtitle: '含 Oxford Discover 3 (Unit 17 Spelling 20字)＋Oxford Discover Grammar 3 (Unit 17 祈使句與動態介系詞 & Unit 16)＋Write Right 3 (Unit 7 慰問卡寫作與改錯)。',
+      mockUnitId: 'week14_all',
+      mockBtnLabel: '🚀 四合一模擬大考',
+      reviewUnitId: null,
+      reviewBtnLabel: '',
+      units: [
+        { bookId: 'od3', unitId: 'od3_17', icon: '📚', bookName: 'Oxford Discover 3', title: 'Unit 17：Spelling 20字 & Look 片語' },
+        { bookId: 'gra3', unitId: 'gra3_17', icon: '📘', bookName: 'Oxford Discover Grammar 3', title: 'Unit 17：祈使句 & 動態介系詞' },
+        { bookId: 'gra3', unitId: 'gra3_16', icon: '📘', bookName: 'Oxford Discover Grammar 3', title: 'Unit 16：情緒介系詞 & 跨單元辨析' },
+        { bookId: 'wr3', unitId: 'wr3_7', icon: '📝', bookName: 'Write Right 3', title: 'Unit 7：慰問卡寫作 & 傷病過去式' }
+      ]
+    },
+    {
       id: 'w13',
-      shortLabel: '🚨 W13 (11/25)',
-      badgeLabel: '🚨 下週三 11/25 (W13) *EL-3C 小考總衝刺',
+      shortLabel: '✅ W13 (11/25)',
+      badgeLabel: '✅ 第 13 週 11/25 (W13) *EL-3C 已考複習',
       title: 'Week 13 必考三大範圍',
       subtitle: '含 Reading with Writing 6 (Unit 6) 段落盲聽＋Oxford Discover Grammar 3 (Unit 16) because 造句＋Write Right 3 (Unit 6) 傳記寫作與改錯預判。',
       mockUnitId: 'week13_all',
@@ -1422,18 +1439,30 @@
   // 取得某課本下的單元列表 (Units List，涵蓋全書所有單元)
   function getUnitsForBook(bookId) {
     if (bookId === 'tea_midterm') {
+      const w14Unit = getMidtermDataUnit('WEEK14_ALL');
       const w13Unit = getMidtermDataUnit('WEEK13_ALL');
       const w12Unit = getMidtermDataUnit('WEEK12_ALL');
-      const w13Count = (w13Unit && w13Unit.quizzes) ? w13Unit.quizzes.length : 106;
-      const w12Count = (w12Unit && w12Unit.quizzes) ? w12Unit.quizzes.length : 174;
+      const w14Count = (w14Unit && w14Unit.quizzes) ? w14Unit.quizzes.length : 145;
+      const w13Count = (w13Unit && w13Unit.quizzes) ? w13Unit.quizzes.length : 109;
+      const w12Count = (w12Unit && w12Unit.quizzes) ? w12Unit.quizzes.length : 177;
       return [
+        {
+          id: 'week14_all',
+          bookId: 'tea_midterm',
+          title: '🚨 Week 14 (12/02 三) 小考四合一總複習模擬考',
+          desc: `Oxford Discover 3 (U17 Spelling) + Oxford Discover Grammar 3 (U17 & U16) + Write Right 3 (U7 慰問卡寫作)（共 ${w14Count} 題 KET-4D 實戰題）`,
+          week: 'W14',
+          badge: '🚨 Week 14 必考',
+          is_midterm: true,
+          is_week14: true
+        },
         {
           id: 'week13_all',
           bookId: 'tea_midterm',
-          title: '🚨 Week 13 (11/25 三) 小考三合一總複習模擬考',
+          title: '✅ Week 13 (11/25 三) 小考三合一總複習模擬考',
           desc: `Reading with Writing 6 (U6 段落聽寫) + Oxford Discover Grammar 3 (U16) + Write Right 3 (U6)（共 ${w13Count} 題 KET-4D 實戰題）`,
           week: 'W13',
-          badge: '🚨 Week 13 必考',
+          badge: '✅ Week 13 已考',
           is_midterm: true,
           is_week13: true
         },
@@ -1520,15 +1549,21 @@
     
     const WEEK12_UNIT_IDS = ['gra3_16', 'od3_16', 'rw6_9', 'rd6_6', 'wr3_6'];
     const WEEK13_UNIT_IDS = ['rw6_6', 'gra3_16', 'wr3_6'];
+    const WEEK14_UNIT_IDS = ['od3_17', 'gra3_17', 'gra3_16', 'wr3_7'];
     return list.map(u => {
       const isWeek12 = !!(u.is_week12 || WEEK12_UNIT_IDS.includes(u.unit_id));
       const isWeek13 = !!(u.is_week13 || WEEK13_UNIT_IDS.includes(u.unit_id));
-      let badge = isWeek13 ? '🚨 Week 13 必考' : (isWeek12 ? '✅ Week 12 必考' : (u.is_midterm ? '🔥 期中核心' : '📚 實力精熟'));
+      const isWeek14 = !!(u.is_week14 || WEEK14_UNIT_IDS.includes(u.unit_id));
+      let badge = isWeek14 ? '🚨 Week 14 必考' : (isWeek13 ? '✅ Week 13 已考' : (isWeek12 ? '✅ Week 12 必考' : (u.is_midterm ? '🔥 期中核心' : '📚 實力精熟')));
       const uNumMatch = u.unit_id.match(/_(\d+)$/);
-      if (isWeek13 && isWeek12) {
-        badge = '🚨 Week 12·13 必考';
+      if (isWeek14 && isWeek13 && isWeek12) {
+        badge = '🚨 Week 12–14 必考';
+      } else if (isWeek14) {
+        badge = '🚨 Week 14 必考';
+      } else if (isWeek13 && isWeek12) {
+        badge = '✅ Week 12·13 必考';
       } else if (isWeek13) {
-        badge = '🚨 Week 13 必考';
+        badge = '✅ Week 13 已考';
       } else if (isWeek12) {
         badge = '✅ Week 12 必考';
       } else if (uNumMatch) {
@@ -1545,7 +1580,8 @@
         badge: badge,
         is_midterm: !!u.is_midterm,
         is_week12: isWeek12,
-        is_week13: isWeek13
+        is_week13: isWeek13,
+        is_week14: isWeek14
       };
     });
   }
@@ -1589,6 +1625,9 @@
   // 取得某單元之單字庫清單 (7 大錨點單字卡)
   function getVocabsForUnit(bookId, unitId) {
     if (!window.ENGLISH_DATA || !window.ENGLISH_DATA.vocabulary) return [];
+    if (unitId === 'week14_all') {
+      return window.ENGLISH_DATA.vocabulary.filter(v => v.is_week14 || ['od3_17', 'gra3_17', 'gra3_16', 'wr3_7'].includes(v.unit_id));
+    }
     if (unitId === 'week13_all') {
       return window.ENGLISH_DATA.vocabulary.filter(v => v.is_week13 || ['rw6_6', 'gra3_16', 'wr3_6'].includes(v.unit_id));
     }
@@ -1610,6 +1649,9 @@
   // 取得某單元之文法焦點清單
   function getGrammarForUnit(bookId, unitId) {
     if (!window.ENGLISH_DATA || !window.ENGLISH_DATA.grammar) return [];
+    if (unitId === 'week14_all') {
+      return window.ENGLISH_DATA.grammar.filter(g => g.is_week14 || ['od3_17', 'gra3_17', 'gra3_16', 'wr3_7'].includes(g.unit_id));
+    }
     if (unitId === 'week13_all') {
       return window.ENGLISH_DATA.grammar.filter(g => g.is_week13 || ['rw6_6', 'gra3_16', 'wr3_6'].includes(g.unit_id));
     }
@@ -1630,8 +1672,8 @@
 
   // 取得某單元之課文清單 (優先取完整課文，若來自 MIDTERM_DATABASE 則自動組合句子)
   function getPassagesForUnit(bookId, unitId) {
-    if (unitId === 'week13_all' || unitId === 'week12_all') {
-      const targetId = unitId === 'week13_all' ? 'WEEK13_ALL' : 'WEEK12_ALL';
+    if (unitId === 'week14_all' || unitId === 'week13_all' || unitId === 'week12_all') {
+      const targetId = unitId === 'week14_all' ? 'WEEK14_ALL' : (unitId === 'week13_all' ? 'WEEK13_ALL' : 'WEEK12_ALL');
       const comp = getMidtermDataUnit(targetId);
       if (!comp || !comp.passages) return [];
       return comp.passages.map((p, idx) => ({
@@ -1697,6 +1739,10 @@
   }
 
   function getMistakesForUnit(bookId, unitId) {
+    if (unitId === 'week14_all') {
+      const w14 = getMidtermDataUnit('WEEK14_ALL');
+      return (w14 && w14.mistake_buster) ? w14.mistake_buster : [];
+    }
     if (unitId === 'week13_all') {
       const w13 = getMidtermDataUnit('WEEK13_ALL');
       return (w13 && w13.mistake_buster) ? w13.mistake_buster : [];
@@ -1730,6 +1776,14 @@
 
   // 取得某單元之測驗題庫清單 (支援全題庫 + 考券真題)
   function getQuizzesForUnit(bookId, unitId) {
+    if (unitId === 'week14_all') {
+      const w14 = getMidtermDataUnit('WEEK14_ALL');
+      if (w14 && w14.quizzes && w14.quizzes.length > 0) return w14.quizzes;
+      if (window.ENGLISH_DATA && window.ENGLISH_DATA.quizzes) {
+        return window.ENGLISH_DATA.quizzes.filter(q => q.is_week14 || ['od3_17', 'gra3_17', 'gra3_16', 'wr3_7'].includes(q.unit_id));
+      }
+      return [];
+    }
     if (unitId === 'week13_all') {
       const w13 = getMidtermDataUnit('WEEK13_ALL');
       if (w13 && w13.quizzes && w13.quizzes.length > 0) return w13.quizzes;
@@ -4197,7 +4251,8 @@
       const teaReview = getQuizzesForUnit('tea_midterm', 'tea_all');
       const w12 = getQuizzesForUnit('tea_midterm', 'week12_all');
       const w13 = getQuizzesForUnit('tea_midterm', 'week13_all');
-      const pool = [...teaReview, ...w12, ...w13];
+      const w14 = getQuizzesForUnit('tea_midterm', 'week14_all');
+      const pool = [...teaReview, ...w12, ...w13, ...w14];
       selectedQuizzes = shuffleArrayCopy(pool).slice(0, maxCount);
       title = isContrast
         ? '國小六年級英語 ｜ 岱崙 3C 考券批改與錯因對照卷'
